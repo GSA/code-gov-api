@@ -1,0 +1,29 @@
+{
+  "name": "code-gov-api",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "version": "0.0.1",
+  "dependencies": {
+    "body-parser": "*",
+    "cookie-parser": "*",
+    "dotenv": "2.0.0",
+    "express": "4.0.0",
+    "jquery": "3.1.0",
+    "mongodb": "2.1.18",
+    "mongodb-core": "2.0.12",
+    "mongoosastic": "4.0.2",
+    "mongoose": "4.4.12",
+    "morgan": "1.7.0",
+    "path": "0.12.7",
+    "pug": "2.0.0-beta5",
+    "querystring": "0.2.0",
+    "request": "2.73.0",
+    "elasticsearch":"11.0.1",
+    "mongoosastic":"4.0.2"
+  },
+  "engines": {
+    "node": "4.4.7",
+    "npm": "3.8.5"
+  }
+}

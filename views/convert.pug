@@ -1,0 +1,15 @@
+extends ./index.pug
+block body
+  .usa-grid
+    .usa-width-one-whole
+      h2 Convert        
+      form(action='convert', method='post')
+        div(role='search')
+          label(for="input-type-text" Text) URL for GITHUB API JSON (ex: https://api.github.com/orgs/presidential-innovation-fellows/repos)
+          input(id="input-type-text" name="jsonurl" type="text")
+
+          button(type='submit')
+            span.usa-search-submit-text Convert Github repo listing to schema
+      hr
+
+
