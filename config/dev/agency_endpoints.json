@@ -1,0 +1,139 @@
+[{
+  "id": 1,
+  "name": "Department of Agriculture",
+  "acronym": "USDA",
+  "website": "https://usda.gov/",
+  "repos_url": "https://fakeagency.apps.cloud.gov/fakeusda.json"
+}, {
+  "id": 2,
+  "name": "Department of Commerce",
+  "acronym": "DOC",
+  "website": "https://www.commerce.gov/",
+  "repos_url": "https://fakeagency.apps.cloud.gov/fakedoc.json"
+}, {
+  "id": 3,
+  "name": "Department of Defense",
+  "acronym": "DOD",
+  "website": "https://www.defense.gov/",
+  "repos_url": "https://fakeagency.apps.cloud.gov/fakedod.json"
+}, {
+  "id": 4,
+  "name": "Department of Education",
+  "acronym": "ED",
+  "website": "https://ed.gov/",
+  "repos_url": "https://fakeagency.apps.cloud.gov/fakeed.json"
+}, {
+  "id": 5,
+  "name": "Department of Energy",
+  "acronym": "DOE",
+  "website": "https://energy.gov/",
+  "repos_url": "https://fakeagency.apps.cloud.gov/fakedoe.json"
+}, {
+  "id": 6,
+  "name": "Department of Health and Human Services",
+  "acronym": "HHS",
+  "website": "https://hhs.gov",
+  "repos_url": "https://fakeagency.apps.cloud.gov/fakehhs.json"
+}, {
+  "id": 7,
+  "name": "Department of Housing and Urban Development",
+  "acronym": "HUD",
+  "website": "https://www.hud.gov/",
+  "repos_url": "https://fakeagency.apps.cloud.gov/fakehud.json"
+}, {
+  "id": 8,
+  "name": "Department of Interior",
+  "acronym": "DOI",
+  "website": "https://data.doi.gov/",
+  "repos_url": "https://fakeagency.apps.cloud.gov/fakedoi.json"
+}, {
+  "id": 9,
+  "name": "Department of Justice",
+  "acronym": "DOJ",
+  "website": "https://justice.gov",
+  "repos_url": "https://fakeagency.apps.cloud.gov/fakedoj.json"
+}, {
+  "id": 10,
+  "name": "Department of Labor",
+  "acronym": "DOL",
+  "website": "https://www.dol.gov",
+  "repos_url": "https://fakeagency.apps.cloud.gov/fakedol.json"
+}, {
+  "id": 11,
+  "name": "Department of State",
+  "acronym": "DOS",
+  "website": "https://state.gov/",
+  "repos_url": "https://fakeagency.apps.cloud.gov/fakedos.json"
+}, {
+  "id": 12,
+  "name": "Department of Transportation",
+  "acronym": "DOT",
+  "website": "https://www.transportation.gov/",
+  "repos_url": "https://fakeagency.apps.cloud.gov/fakedot.json"
+}, {
+  "id": 13,
+  "name": "Department of Treasury",
+  "acronym": "TRE",
+  "website": "https://www.treasury.gov/",
+  "repos_url": "https://fakeagency.apps.cloud.gov/faketre.json"
+}, {
+  "id": 14,
+  "name": "Department of Veterans Affairs",
+  "acronym": "VA",
+  "website": "https://va.gov/",
+  "repos_url": "https://fakeagency.apps.cloud.gov/fakeva.json"
+}, {
+  "id": 15,
+  "name": "Environmental Protection Agency",
+  "acronym": "EPA",
+  "website": "https://epa.gov/",
+  "repos_url": "https://fakeagency.apps.cloud.gov/fakeepa.json"
+}, {
+  "id": 16,
+  "name": "National Aeronautics and Space Administration",
+  "acronym": "NASA",
+  "website": "https://nasa.gov/",
+  "repos_url": "https://fakeagency.apps.cloud.gov/fakenasa.json"
+}, {
+  "id": 17,
+  "name": "Agency for International Development",
+  "acronym": "AID",
+  "website": "https://usaid.gov/",
+  "repos_url": "https://fakeagency.apps.cloud.gov/fakeaid.json"
+}, {
+  "id": 18,
+  "name": "Federal Emergency Management Agency",
+  "acronym": "FEMA",
+  "website": "https://fema.gov/",
+  "repos_url": "https://fakeagency.apps.cloud.gov/fakefema.json"
+}, {
+  "id": 19,
+  "name": "General Services Administration",
+  "acronym": "GSA",
+  "website": "https://gsa.gov/",
+  "repos_url": "https://fakeagency.apps.cloud.gov/fakegsa.json"
+}, {
+  "id": 20,
+  "name": "National Science Foundation",
+  "acronym": "NSF",
+  "website": "https://nsf.gov/",
+  "repos_url": "https://fakeagency.apps.cloud.gov/fakensf.json"
+}, {
+  "id": 21,
+  "name": "Nuclear Regulatory Commission",
+  "acronym": "NRC",
+  "website": "https://nrc.gov/",
+  "repos_url": "https://fakeagency.apps.cloud.gov/fakenrc.json"
+}, {
+  "id": 22,
+  "name": "Office of Personnel Management",
+  "acronym": "OPM",
+  "website": "https://opm.gov/",
+  "repos_url": "https://fakeagency.apps.cloud.gov/fakeopm.json"
+}, {
+  "id": 23,
+  "name": "Small Business Administration",
+  "acronym": "SBA",
+  "website": "https://sba.gov/",
+  "repos_url": "https://fakeagency.apps.cloud.gov/fakesba.json"
+}]
