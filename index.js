@@ -1,12 +1,7 @@
 /*
   TODOS/RECS:
-    * should probably use mongoose
-    * clean up string concatenation (can build json, then toString())
-    * pull out tools into separate project
     * tests
     * lint/githook rules
-    * use a logger
-    * remove hardcoded vars and use env variables (or config) instead
 */
 
 var express           = require("express");
