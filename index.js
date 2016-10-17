@@ -113,8 +113,8 @@ router.route('/repos/:agency').get(function(req, res) {
   });
 })
 
-// all of our routes will be prefixed with /api
-app.use('/api', router);
+// all of our routes will be prefixed with /api/<version>/
+app.use('/api/1.0', router);
 
 
 /* ------------------------------------------------------------------ *
