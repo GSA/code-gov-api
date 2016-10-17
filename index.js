@@ -7,24 +7,16 @@
 var express           = require("express");
 var request           = require("request");
 var path              = require("path");
-var MongoClient       = require("mongodb").MongoClient;
-var bodyParser        = require("body-parser");
+var favicon           = require('serve-favicon');
+var cookieParser      = require('cookie-parser');
+var bodyParser        = require('body-parser');
+var cors              = require('cors');
 var pug               = require("pug");
-var dotenv            = require("dotenv");
+var Logger            = require("./utils/logger");
 
-var stopwords         = require("./utils/stopwords");
-var agencyEndpoints   = require("./agency_endpoints.json");
-var repo              = require("./models/repo.js");
-
-// load the mongo `repo` model and synchronize it
-var stream = repo.synchronize();
-
-// load environment vars
-// dotenv.load();
-// NOTE: loads the mongo uri from the env variable MONGOURI
-//       make sure your env has the right uri in the form of
-//       mongodb://username:password@host:port/testdatabase
-var mongoDetails = process.env.MONGOURI;
+/* ------------------------------------------------------------------ *
+                            API CONFIG
+ * ------------------------------------------------------------------ */
 
 // define and configure express
 var app = express();
@@ -34,9 +26,50 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(cors());
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 app.set('json spaces', 2);
+
+// logging setup
+let logger = new Logger({name: "code-gov-api"});
+// app.use(bunyanMiddleware({
+//   headerName: 'X-Request-Id',
+//   propertyName: 'reqId',
+//   logName: 'req_id',
+//   obscureHeaders: [],
+//   logger: logger
+// }));
+
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  var err = new Error('Not Found');
+  err.status = 404;
+  next(err);
+});
+
+// development error handler (prints stacktrace)
+if (app.get('env') === 'development') {
+  app.use(function(err, req, res, next) {
+    res.status(err.status || 500);
+    res.render('error', {
+      message: err.message,
+      error: err
+    });
+  });
+}
+
+// production error handler (prints generic error message)
+app.use(function(err, req, res, next) {
+  res.status(err.status || 500);
+  res.render('error', {
+    message: err.message,
+    error: {}
+  });
+});
 
 
 /* ------------------------------------------------------------------ *
@@ -44,12 +77,6 @@ app.set('json spaces', 2);
  * ------------------------------------------------------------------ */
 
 var router = express.Router(); // get an instance of the express Router
-// middleware to use for all requests
-router.use(function(req, res, next) {
-  // do logging
-  console.log('Hey, someone is using this!');
-  next(); // make sure we go to the next routes and don't stop here
-});
 
 // test route to make sure everything is working (accessed at GET http://localhost:[portnum]/api)
 router.get('/', function(req, res) {
