@@ -11,177 +11,176 @@
           }
         }
       },
-      "projects": {
-        "properties": {
-          "status": {
+      "status": {
+        "type": "string",
+        "analyzer": "keyword_ci"
+      },
+      "vcs": {
+        "type": "string",
+        "analyzer": "keyword_ci"
+      },
+      "repository": {
+        "type": "string",
+        "analyzer": "keyword_ci"
+      },
+      "name": {
+        "type": "string",
+        "analyzer": "keyword_ci"
+      },
+      "repoID": {
+        "type": "string",
+        "index": "not_analyzed"
+      },
+      "homepage": {
+        "type": "string",
+        "analyzer": "keyword_ci"
+      },
+      "downloadURL": {
+        "type": "string",
+        "analyzer": "keyword_ci"
+      },
+      "description": {
+        "type": "string",
+        "analyzer": "keyword_ci",
+        "fields": {
+          "_fulltext": {
             "type": "string",
-            "analyzer": "keyword_ci"
-          },
-          "vcs": {
-            "type": "string",
-            "analyzer": "keyword_ci"
-          },
-          "repository": {
-            "type": "string",
-            "analyzer": "keyword_ci"
-          },
-          "name": {
-            "type": "string",
-            "analyzer": "keyword_ci"
-          },
-          "repoID": {
-            "type": "string",
-            "index": "not_analyzed"
-          },
-          "homepage": {
-            "type": "string",
-            "analyzer": "keyword_ci"
-          },
-          "downloadURL": {
-            "type": "string",
-            "analyzer": "keyword_ci"
-          },
-          "description": {
-            "type": "string",
-            "analyzer": "keyword_ci",
-            "fields": {
-              "_fulltext": {
-                "type": "string",
-                "analyzer": "englishfulltext"
-              }
-            }
-          },
-          "projectTags": {
-            "type": "string",
-            "analyzer": "keyword_ci"
-          },
-          "codeLanguage": {
-            "type": "string",
-            "analyzer": "keyword_ci",
-            "fields": {
-              "_fulltext": {
-                "type": "string",
-                "analyzer": "englishfulltext"
-              }
-            }
-          },
-          "updated": {
-            "properties": {
-              "metadataLastUpdated": {
-                "type": "date",
-                "format": "strict_date_optional_time||epoch_millis"
-              },
-              "lastCommit": {
-                "type": "date",
-                "format": "strict_date_optional_time||epoch_millis"
-              },
-              "sourceCodeLastModified": {
-                "type": "date",
-                "format": "strict_date_optional_time||epoch_millis"
-              }
-            }
-          },
-          "contact": {
-            "properties": {
-              "name": {
-                "type": "string",
-                "analyzer": "keyword_ci",
-                "fields": {
-                  "_fulltext": {
-                    "type": "string",
-                    "analyzer": "englishfulltext"
-                  }
-                }
-              },
-              "email": {
-                "type": "string",
-                "analyzer": "keyword_ci",
-                "fields": {
-                  "_fulltext": {
-                    "type": "string",
-                    "analyzer": "englishfulltext"
-                  }
-                }
-              },
-              "twitter": {
-                "type": "string",
-                "analyzer": "keyword_ci",
-                "fields": {
-                  "_fulltext": {
-                    "type": "string",
-                    "analyzer": "englishfulltext"
-                  }
-                }
-              },
-              "phone": {
-                "type": "string",
-                "analyzer": "keyword_ci",
-                "fields": {
-                  "_fulltext": {
-                    "type": "string",
-                    "analyzer": "englishfulltext"
-                  }
-                }
-              }
-            }
-          },
-          "partners": {
-            "properties": {
-              "name": {
-                "type": "string",
-                "analyzer": "keyword_ci",
-                "fields": {
-                  "_fulltext": {
-                    "type": "string",
-                    "analyzer": "englishfulltext"
-                  }
-                }
-              },
-              "email": {
-                "type": "string",
-                "analyzer": "keyword_ci",
-                "fields": {
-                  "_fulltext": {
-                    "type": "string",
-                    "analyzer": "englishfulltext"
-                  }
-                }
-              }
-            }
-          },
-          "codeLanguage": {
-            "type": "string",
-            "analyzer": "keyword_ci",
-            "fields": {
-              "_fulltext": {
-                "type": "string",
-                "analyzer": "englishfulltext"
-              }
-            }
-          },
-          "license": {
-            "type": "string",
-            "analyzer": "keyword_ci",
-            "fields": {
-              "_fulltext": {
-                "type": "string",
-                "analyzer": "englishfulltext"
-              }
-            }
-          },
-          "openSourceProject": {
-            "type": "boolean"
-          },
-          "govwideReuseproject": {
-            "type": "boolean"
-          },
-          "closedProject": {
-            "type": "boolean"
-          },
-          "exemption": {
-            "type": "byte"
+            "analyzer": "englishfulltext"
           }
         }
+      },
+      "projectTags": {
+        "type": "nested",
+        "properties": {
+          "tag": {
+            "type": "string",
+            "analyzer": "keyword_ci"
+          }
+        }
+      },
+      "codeLanguage": {
+        "type": "nested",
+        "properties": {
+          "language": {
+            "type": "string",
+            "analyzer": "keyword_ci",
+            "fields": {
+              "_fulltext": {
+                "type": "string",
+                "analyzer": "englishfulltext"
+              }
+            }
+          }
+        }
+      },
+      "updated": {
+        "type": "nested",
+        "properties": {
+          "metadataLastUpdated": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis"
+          },
+          "lastCommit": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis"
+          },
+          "sourceCodeLastModified": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis"
+          }
+        }
+      },
+      "contact": {
+        "type": "nested",
+        "properties": {
+          "name": {
+            "type": "string",
+            "analyzer": "keyword_ci",
+            "fields": {
+              "_fulltext": {
+                "type": "string",
+                "analyzer": "englishfulltext"
+              }
+            }
+          },
+          "email": {
+            "type": "string",
+            "analyzer": "keyword_ci",
+            "fields": {
+              "_fulltext": {
+                "type": "string",
+                "analyzer": "englishfulltext"
+              }
+            }
+          },
+          "twitter": {
+            "type": "string",
+            "analyzer": "keyword_ci",
+            "fields": {
+              "_fulltext": {
+                "type": "string",
+                "analyzer": "englishfulltext"
+              }
+            }
+          },
+          "phone": {
+            "type": "string",
+            "analyzer": "keyword_ci",
+            "fields": {
+              "_fulltext": {
+                "type": "string",
+                "analyzer": "englishfulltext"
+              }
+            }
+          }
+        }
+      },
+      "partners": {
+        "type": "nested",
+        "properties": {
+          "name": {
+            "type": "string",
+            "analyzer": "keyword_ci",
+            "fields": {
+              "_fulltext": {
+                "type": "string",
+                "analyzer": "englishfulltext"
+              }
+            }
+          },
+          "email": {
+            "type": "string",
+            "analyzer": "keyword_ci",
+            "fields": {
+              "_fulltext": {
+                "type": "string",
+                "analyzer": "englishfulltext"
+              }
+            }
+          }
+        }
+      },
+      "license": {
+        "type": "string",
+        "analyzer": "keyword_ci",
+        "fields": {
+          "_fulltext": {
+            "type": "string",
+            "analyzer": "englishfulltext"
+          }
+        }
+      },
+      "openSourceProject": {
+        "type": "boolean"
+      },
+      "govwideReuseproject": {
+        "type": "boolean"
+      },
+      "closedProject": {
+        "type": "boolean"
+      },
+      "exemption": {
+        "type": "byte"
       }
     }
   }
