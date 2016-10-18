@@ -10,12 +10,10 @@ This repository is home to the code powering code.gov. To learn more about the p
 ## Summary
 
 We've created a suite of tools available at localhost:3001/
-```
 * Search repos: (localhost:3001/) search available repos that have been harvested into the database
 * harvest JSON files: (localhost:3001/harvest) pull the latest set of agency repositories as defined in agency_endpoint.json
 * Run API: (localhost:3001/api) an api to browse various agency repo json files in full
 * Create/convert inventories: (localhost:3001/convert) tools to create/convert code repository schemas into the latest metadata schema
-```
 
 ## Install
 Please install [Node.js](http://nodejs.org/) first
