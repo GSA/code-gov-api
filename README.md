@@ -7,35 +7,26 @@
 
 This repository is home to the code powering code.gov. To learn more about the project, check out the main [Code.gov project README](https://github.com/presidential-innovation-fellows/code-gov-pm/blob/master/README.md)
 
-## Summary
+## Installation
+Please install the following dependencies before running this project...
 
-We've created a suite of tools available at localhost:3001/
-* Search repos: (localhost:3001/) search available repos that have been harvested into the database
-* harvest JSON files: (localhost:3001/harvest) pull the latest set of agency repositories as defined in agency_endpoint.json
-* Run API: (localhost:3001/api) an api to browse various agency repo json files in full
-* Create/convert inventories: (localhost:3001/convert) tools to create/convert code repository schemas into the latest metadata schema
+* [Node.js](https://nodejs.org/en/download/)
+* [Elasticsearch](https://www.elastic.co/downloads/elasticsearch)
 
-## Install
-Please install [Node.js](http://nodejs.org/) first
-```
-npm install
-npm start
-```
+Once node is installed, install the local npm dependencies...
 
-## Configuration
-1. In `/index.js`, you'll need to update the credentials for your local MongoDB server and create a database (e.g., "testdatabase").
+`cd code-gov-api && npm install`
 
-Find the line the says:
-```
-/* REPLACE 'process.env.MONGURI' with the URI for your local MongoDB instance */
-var mongoDetails = process.env.MONGOURI;
-```
-2. Update the URI for mongoDB to match this format
-```
-mongodb://username:password@host:port/testdatabase
-```
+## Running
+This project uses elasticsearch to store code repositories. As such, it is necessary to run an indexing process which will populate an elasticsearch index. Make sure that elasticsearch is running, then
 
-3.  Create a collection called 'repos' to house the repositories.
+`npm run index`
+
+After the indexing process runs, you can fire up the server by running npm start...
+
+`npm start`
+
+The API should now be accessible via the browser (or curl) at [http://localhost:3001/api/0.1/](http://localhost:3001/api/0.1/).
 
 ## Contributing
 
