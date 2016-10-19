@@ -35,9 +35,12 @@ class AgencyJsonStream extends Transform {
       }
 
       let agencyData = JSON.parse(body);
-      agencyData.projects.forEach((repo) => {
-        this.push(repo);
-      });
+      if (agencyData.projects && agencyData.projects.length) {
+        agencyData.projects.forEach((project) => {
+          project.agency = agencyData.agency;
+          this.push(project);
+        });
+      }
       return next();
     });
   }
