@@ -390,7 +390,7 @@ class Searcher {
 
     query = body.build();
 
-    logger.info(query);
+    // logger.info(query);
     return query;
   }
 
