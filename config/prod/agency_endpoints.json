@@ -136,4 +136,24 @@
   "acronym": "SBA",
   "website": "https://sba.gov/",
   "repos_url": "https://sba.gov/code.json"
+},{
+  "id": 24,
+  "name": "National Archives",
+  "acronym": "NARA",
+  "website": "https://archives.gov/",
+  "repos_url": "https://archives.gov/code.json"
+},
+{
+  "id": 25,
+  "name": "Consumer Financial Protection Bureau",
+  "acronym": "CFPB",
+  "website": "https://consumerfinance.gov/",
+  "repos_url": "https://consumerfinance.gov/code.json"
+},
+{
+  "id": 26,
+  "name": "White House - Executive Office of the President",
+  "acronym": "EOP",
+  "website": "https://whitehouse.gov/",
+  "repos_url": "https://whitehouse.gov/code.json"
 }]

@@ -136,4 +136,25 @@
   "acronym": "SBA",
   "website": "https://sba.gov/",
   "repos_url": "https://fakeagency.apps.cloud.gov/fakesba.json"
+},
+{
+  "id": 24,
+  "name": "National Archives",
+  "acronym": "NARA",
+  "website": "https://archives.gov/",
+  "repos_url": "https://fakeagency.apps.cloud.gov/fakenara.json"
+},
+{
+  "id": 25,
+  "name": "Consumer Financial Protection Bureau",
+  "acronym": "CFPB",
+  "website": "https://consumerfinance.gov/",
+  "repos_url": "https://fakeagency.apps.cloud.gov/fakecfpb.json"
+},
+{
+  "id": 26,
+  "name": "White House - Executive Office of the President",
+  "acronym": "EOP",
+  "website": "https://whitehouse.gov/",
+  "repos_url": "https://fakeagency.apps.cloud.gov/fakeeop.json"
 }]
