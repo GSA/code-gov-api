@@ -1,8 +1,9 @@
 {
 	"agency": "EPA",
-	"status": "code.gov schema 1.0",
+	"organization":" ",
 	"projects": [{
-		"vcs": "git",
+		"status": " ",
+    "vcs": "git",
 		"repository": "git://github.com/USEPA/WNTR.git",
 		"name": "WNTR",
 		"repoID": "63262591",
@@ -35,7 +36,8 @@
 			"lastModified": "2016-10-17T19:54:56Z"
 		}
 	}, {
-		"vcs": "git",
+		"status": " ",
+    "vcs": "git",
 		"repository": "git://github.com/USEPA/My-Right-To-Know--MyRTK-.git",
 		"name": "My-Right-To-Know--MyRTK-",
 		"repoID": "10644334",
@@ -104,7 +106,8 @@
 			"lastModified": "2013-06-19T21:46:47Z"
 		}
 	}, {
-		"vcs": "git",
+		"status": " ",
+    "vcs": "git",
 		"repository": "git://github.com/USEPA/E-Enterprise-Portal.git",
 		"name": "E-Enterprise-Portal",
 		"repoID": "36677210",

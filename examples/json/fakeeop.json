@@ -1,8 +1,9 @@
 {
 	"agency": "EOP",
-	"status": "code.gov schema 1.0",
+	"organization":" ",
 	"projects": [{
-		"vcs": "git",
+		"status": " ",
+    "vcs": "git",
 		"repository": "git://github.com/WhiteHouse/petitions.git",
 		"name": "petitions",
 		"repoID": "5532200",
@@ -51,7 +52,8 @@
 			"lastModified": "2016-09-30T14:25:59Z"
 		}
 	}, {
-		"vcs": "git",
+		"status": " ",
+    "vcs": "git",
 		"repository": "git://github.com/WhiteHouse/wh-app-android.git",
 		"name": "wh-app-android",
 		"repoID": "5662026",
@@ -84,7 +86,8 @@
 			"lastModified": "2015-12-19T08:10:50Z"
 		}
 	}, {
-		"vcs": "git",
+		"status": " ",
+    "vcs": "git",
 		"repository": "git://github.com/WhiteHouse/fb_messenger_bot.git",
 		"name": "fb_messenger_bot",
 		"repoID": "70825196",

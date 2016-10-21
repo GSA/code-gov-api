@@ -1,7 +1,8 @@
 {
-    "agency": "VA ",
-    "status": "code.gov schema 1.0",
+    "agency": "VA",
+    "organization":" ",
     "projects": [{
+        "status":" ", 
         "vcs": "git",
         "repository": "git://github.com/department-of-veterans-affairs/vets-website.git",
         "name": "vets-website",
@@ -43,6 +44,7 @@
             "lastModified": "2016-10-20T22:56:47Z"
         }
     }, {
+        "status":" ", 
         "vcs": "git",
         "repository": "git://github.com/department-of-veterans-affairs/vets-api.git",
         "name": "vets-api",
@@ -82,6 +84,7 @@
             "lastModified": "2016-10-20T23:22:17Z"
         }
     }, {
+        "status":" ", 
         "vcs": "git",
         "repository": "git://github.com/department-of-veterans-affairs/sniffybara.git",
         "name": "sniffybara",
@@ -133,6 +136,7 @@
             "lastModified": "2016-09-23T15:25:11Z"
         }
     }, {
+        "status":" ", 
         "vcs": "git",
         "repository": "git://github.com/department-of-veterans-affairs/roadrunner-rails.git",
         "name": "roadrunner-rails",

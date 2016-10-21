@@ -1,8 +1,9 @@
 {
 	"agency": "CFPB",
-	"status": "code.gov schema 1.0",
+	"organization":" ",
 	"projects": [{
-		"vcs": "git",
+		"status": " ",
+    "vcs": "git",
 		"repository": "git://github.com/cfpb/college-costs.git",
 		"name": "college-costs",
 		"repoID": "43300650",
@@ -53,7 +54,8 @@
 			"lastModified": "2016-10-20T16:31:59Z"
 		}
 	}, {
-		"vcs": "git",
+		"status": " ",
+    "vcs": "git",
 		"repository": "git://github.com/cfpb/owning-a-home.git",
 		"name": "owning-a-home",
 		"repoID": "15999442",
@@ -96,7 +98,8 @@
 			"lastModified": "2016-10-20T20:05:10Z"
 		}
 	}, {
-		"vcs": "git",
+		"status": " ",
+    "vcs": "git",
 		"repository": "git://github.com/eregs/eregs.github.io.git",
 		"name": "eregs.github.io",
 		"repoID": "22834612",

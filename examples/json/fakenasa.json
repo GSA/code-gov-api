@@ -1,8 +1,8 @@
 {
 	"agency": "NASA",
-	"status": "code.gov schema 1.0",
+	"organization":" ",
 	"projects": [{
-		"vcs": "git",
+		"status":" ", "vcs": "git",
 		"repository": "git://github.com/nasa/openmct.git",
 		"name": "openmct",
 		"repoID": "36753839",
@@ -47,7 +47,8 @@
 			"lastModified": "2016-10-20T21:38:07Z"
 		}
 	}, {
-		"vcs": "git",
+		"status":" ", 
+    "vcs": "git",
 		"repository": "git://github.com/nasa/NASA-3D-Resources.git",
 		"name": "NASA-3D-Resources",
 		"repoID": "22180681",
@@ -104,7 +105,8 @@
 			"lastModified": "2016-10-19T00:05:55Z"
 		}
 	}, {
-		"vcs": "git",
+		"status":" ", 
+    "vcs": "git",
 		"repository": "git://github.com/nasa/trick.git",
 		"name": "trick",
 		"repoID": "30925311",
@@ -165,7 +167,8 @@
 			"lastModified": "2016-10-20T19:55:48Z"
 		}
 	}, {
-		"vcs": "git",
+		"status":" ", 
+    "vcs": "git",
 		"repository": "git://github.com/nasa/earthdata-search.git",
 		"name": "earthdata-search",
 		"repoID": "40671758",

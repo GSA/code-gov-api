@@ -1,8 +1,9 @@
 {
 	"agency": "USDA",
-	"status": "Alpha",
+	"organization":" ",
 	"projects": [{
-		"vcs": "git",
+		"status": " ",
+    "vcs": "git",
 		"repository": "git://github.com/USDA/USDA-APIs.git",
 		"name": "USDA-APIs",
 		"repoID": "10064296",
@@ -54,7 +55,8 @@
 		}],
 		"codeLanguage": []
 	}, {
-		"vcs": "git",
+		"status": " ",
+    "vcs": "git",
 		"repository": "git://github.com/USDA/RIDB.git",
 		"name": "RIDB",
 		"repoID": "29924484",
@@ -88,7 +90,8 @@
 			"language": "HTML"
 		}]
 	}, {
-		"vcs": "git",
+		"status": " ",
+    "vcs": "git",
 		"repository": "git://github.com/USDA/data-standards.git",
 		"name": "data-standards",
 		"repoID": "64396310",

@@ -1,8 +1,9 @@
 {
 	"agency": "TRE",
-	"status": "code.gov schema 1.0",
+	"organization":" ",
 	"projects": [{
-		"vcs": "git",
+		"status": " ",
+    "vcs": "git",
 		"repository": "git://github.com/fedspendingtransparency/fedspendingtransparency.github.io.git",
 		"name": "fedspendingtransparency.github.io",
 		"repoID": "24609061",
@@ -41,7 +42,8 @@
 			"lastModified": "2016-10-04T20:29:08Z"
 		}
 	}, {
-		"vcs": "git",
+		"status": " ",
+    "vcs": "git",
 		"repository": "git://github.com/fedspendingtransparency/data-act-broker-backend.git",
 		"name": "data-act-broker-backend",
 		"repoID": "57313310",
@@ -74,7 +76,8 @@
 			"lastModified": "2016-10-20T19:46:35Z"
 		}
 	}, {
-		"vcs": "git",
+		"status": " ",
+    "vcs": "git",
 		"repository": "git://github.com/fedspendingtransparency/data-act-broker-web-app.git",
 		"name": "data-act-broker-web-app",
 		"repoID": "47277547",

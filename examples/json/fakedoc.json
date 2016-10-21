@@ -1,8 +1,9 @@
 {
 	"agency": "DOC",
-	"status": "Alpha",
+	"organization": " ",
 	"projects": [{
-		"vcs": "git",
+		"status": " ",
+    "vcs": "git",
 		"repository": "git://github.com/CommerceGov/CommerceGov.github.io.git",
 		"name": "CommerceGov.github.io",
 		"repoID": "13225017",
@@ -32,7 +33,8 @@
 			"language": "CSS"
 		}]
 	}, {
-		"vcs": "git",
+		"status": " ",
+    "vcs": "git",
 		"repository": "git://github.com/CommerceGov/Policies-and-Guidance.git",
 		"name": "Policies-and-Guidance",
 		"repoID": "33949902",
@@ -76,7 +78,8 @@
 		}],
 		"codeLanguage": []
 	}, {
-		"vcs": "git",
+		"status": " ",
+    "vcs": "git",
 		"repository": "git://github.com/CommerceGov/commerce.gov-api.git",
 		"name": "commerce.gov-api",
 		"repoID": "43393077",

@@ -1,8 +1,9 @@
 {
 	"agency": "NARA",
-	"status": "code.gov schema 1.0",
+	"organization":" ",
 	"projects": [{
-		"vcs": "git",
+		"status": " ",
+    "vcs": "git",
 		"repository": "git://github.com/usnationalarchives/federalregister-api-core.git",
 		"name": "federalregister-api-core",
 		"repoID": "607511",
@@ -49,7 +50,8 @@
 			"lastModified": "2016-07-26T19:27:05Z"
 		}
 	}, {
-		"vcs": "git",
+		"status": " ",
+    "vcs": "git",
 		"repository": "git://github.com/usnationalarchives/File-Analyzer.git",
 		"name": "File-Analyzer",
 		"repoID": "2533400",
@@ -92,7 +94,8 @@
 			"lastModified": "2016-02-16T21:50:49Z"
 		}
 	}, {
-		"vcs": "git",
+		"status": " ",
+    "vcs": "git",
 		"repository": "git://github.com/usnationalarchives/federal_register.git",
 		"name": "federal_register",
 		"repoID": "2138478",

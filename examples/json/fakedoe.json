@@ -1,8 +1,9 @@
 {
 	"agency": "DOE",
-	"status": "code.gov schema 1.0",
+	"organization":" ",
 	"projects": [{
-		"vcs": "git",
+		"status": " ",
+    "vcs": "git",
 		"repository": "git://github.com/samilliken/openDCIM.git",
 		"name": "openDCIM",
 		"repoID": "4059172",
@@ -57,7 +58,8 @@
 			"lastModified": "2016-10-18T20:04:22Z"
 		}
 	}, {
-		"vcs": "git",
+		"status": " ",
+    "vcs": "git",
 		"repository": "git://github.com/bro/bro.git",
 		"name": "bro",
 		"repoID": "4930716",
@@ -126,7 +128,8 @@
 			"lastModified": "2016-10-20T15:53:52Z"
 		}
 	}, {
-		"vcs": "git",
+		"status": " ",
+    "vcs": "git",
 		"repository": "git://github.com/dun/munge.git",
 		"name": "munge",
 		"repoID": "35699486",
@@ -169,7 +172,8 @@
 			"lastModified": "2016-10-08T07:37:01Z"
 		}
 	}, {
-		"vcs": "git",
+		"status": " ",
+    "vcs": "git",
 		"repository": "git://github.com/dun/conman.git",
 		"name": "conman",
 		"repoID": "32411476",

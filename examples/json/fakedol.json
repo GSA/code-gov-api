@@ -1,8 +1,9 @@
 {
 	"agency": "DOL",
-	"status": "code.gov schema 1.0",
+	"organization":" ",
 	"projects": [{
-		"vcs": "git",
+		"status": " ",
+    "vcs": "git",
 		"repository": "git://github.com/USDepartmentofLabor/Child-Labor.git",
 		"name": "Child-Labor",
 		"repoID": "37860521",
@@ -35,7 +36,8 @@
 			"lastModified": "2016-10-18T18:27:45Z"
 		}
 	}, {
-		"vcs": "git",
+		"status": " ",
+    "vcs": "git",
 		"repository": "git://github.com/USDepartmentofLabor/Swift-Federal-Data-SDK.git",
 		"name": "Swift-Federal-Data-SDK",
 		"repoID": "20970680",
@@ -90,7 +92,8 @@
 			"lastModified": "2016-04-15T13:12:04Z"
 		}
 	}, {
-		"vcs": "git",
+		"status": " ",
+    "vcs": "git",
 		"repository": "git://github.com/USDepartmentofLabor/OSHA-Heat-Safety-iOS.git",
 		"name": "OSHA-Heat-Safety-iOS",
 		"repoID": "9076547",

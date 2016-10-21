@@ -1,8 +1,9 @@
 {
 	"agency": "GSA",
-	"status": "code.gov schema 1.0",
+	"organization":" ",
 	"projects": [{
-		"vcs": "git",
+		"status": " ",
+    "vcs": "git",
 		"repository": "git://github.com/presidential-innovation-fellows/apps-gov.git",
 		"name": "apps-gov",
 		"repoID": "50465059",
@@ -39,7 +40,8 @@
 			"lastModified": "2016-10-20T21:47:26Z"
 		}
 	}, {
-		"vcs": "git",
+		"status": " ",
+    "vcs": "git",
 		"repository": "git://github.com/18F/vote-gov.git",
 		"name": "vote-gov",
 		"repoID": "57156495",
@@ -92,7 +94,8 @@
 			"lastModified": "2016-10-11T18:16:56Z"
 		}
 	}, {
-		"vcs": "git",
+		"status": " ",
+    "vcs": "git",
 		"repository": "git://github.com/presidential-innovation-fellows/code-gov-web.git",
 		"name": "code-gov-web",
 		"repoID": "65018281",
@@ -137,7 +140,8 @@
 			"lastModified": "2016-10-20T19:03:31Z"
 		}
 	}, {
-		"vcs": "git",
+		"status": " ",
+    "vcs": "git",
 		"repository": "git://github.com/18F/web-design-standards.git",
 		"name": "web-design-standards",
 		"repoID": "35968578",
