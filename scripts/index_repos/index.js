@@ -1,15 +1,15 @@
 const async                 = require("async");
 const path                  = require("path");
-const config                = require("../config");
-const RepoIndexer           = require("../services/indexer/repo");
-const AliasSwapper          = require("../services/indexer/alias_swapper");
-const IndexCleaner          = require("../services/indexer/index_cleaner");
-const IndexOptimizer        = require("../services/indexer/index_optimizer");
-const Logger                = require("../utils/logger");
-const elasticsearchAdapter  = require("../utils/search_adapters/elasticsearch_adapter");
+const config                = require("../../config");
+const RepoIndexer           = require("../../services/indexer/repo");
+const AliasSwapper          = require("../../services/indexer/alias_swapper");
+const IndexCleaner          = require("../../services/indexer/index_cleaner");
+const IndexOptimizer        = require("../../services/indexer/index_optimizer");
+const Logger                = require("../../utils/logger");
+const elasticsearchAdapter  = require("../../utils/search_adapters/elasticsearch_adapter");
 
 const DAYS_TO_KEEP = 7;
-const AGENCY_ENDPOINTS_FILE = path.join(__dirname, "../", config.AGENCY_ENDPOINTS_FILE);
+const AGENCY_ENDPOINTS_FILE = path.join(__dirname, "../../", config.AGENCY_ENDPOINTS_FILE);
 
 /**
  * Defines the class responsible for creating and managing the elasticsearch indexes
