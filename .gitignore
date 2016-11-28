@@ -6,4 +6,5 @@ logs
 npm-debug.log*
 .npm
 .DS_STORE
-
+github-config.json
+/tmp
