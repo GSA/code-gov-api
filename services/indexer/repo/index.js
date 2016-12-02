@@ -1,4 +1,5 @@
 const fs                  = require("fs");
+const path                = require("path");
 const request             = require("request");
 const async               = require("async");
 const _                   = require("lodash");
@@ -26,27 +27,62 @@ class AgencyJsonStream extends Transform {
     this.logger = repoIndexer.logger;
   }
 
-  _fetchAgencyRepo(agencyUrl, next) {
-    this.logger.info(agencyUrl);
+  _fetchAgencyReposRemote(agencyUrl, callback) {
+    this.logger.info(`Fetching remote agency repos from ${agencyUrl}...`);
+
     request(agencyUrl, (err, response, body) => {
       if (err) {
         this.logger.error(err);
-        return next(null, null);
+        return callback(null, {});
       }
 
       let agencyData = JSON.parse(body);
+      return callback(null, agencyData);
+    });
+  }
+
+  _fetchAgencyReposLocal(agencyUrl, callback) {
+    const filePath = path.join(__dirname, "../../..", agencyUrl);
+    this.logger.info(`Fetching local agency repos from ${filePath}...`);
+
+    // TODO: double-check this fs call
+    fs.readFile(filePath, 'utf8', (err, data) => {
+      if (err) {
+        this.logger.error(err);
+        return callback(null, {});
+      }
+
+      // TODO: potentially use streams? file might be too large
+      let agencyData = JSON.parse(data);
+      return callback(null, agencyData);
+    });
+  }
+
+  _fetchAgencyRepos(agencyUrl, next) {
+    this.logger.info(agencyUrl);
+
+    const _processAgencyData = (err, agencyData) => {
       if (agencyData.projects && agencyData.projects.length) {
         agencyData.projects.forEach((project) => {
           project.agency = agencyData.agency;
           this.push(project);
         });
       }
+
       return next();
-    });
+    };
+
+    // Crude detection of whether the url is a remote or local reference.
+    // If remote, make a request, otherwise, read the file.
+    if (agencyUrl.substring(0, 5) === "http") {
+      this._fetchAgencyReposRemote(agencyUrl, _processAgencyData);
+    } else {
+      this._fetchAgencyReposLocal(agencyUrl, _processAgencyData);
+    }
   }
 
   _transform(agency, enc, next) {
-    this._fetchAgencyRepo(agency.repos_url, next);
+    this._fetchAgencyRepos(agency.repos_url, next);
   }
 
 }
@@ -61,7 +97,7 @@ class AgencyRepoIndexerStream extends Writable {
 
   _indexRepo(repo, done) {
     this.logger.info(
-      `Indexing repo with repoID (${repo.repoID}).`);
+      `Indexing repository (${repo.repository}).`);
 
     this.repoIndexer.indexDocument({
       "index": this.repoIndexer.esIndex,
