@@ -45,7 +45,6 @@ class AgencyJsonStream extends Transform {
     const filePath = path.join(__dirname, "../../..", agencyUrl);
     this.logger.info(`Fetching local agency repos from ${filePath}...`);
 
-    // TODO: double-check this fs call
     fs.readFile(filePath, 'utf8', (err, data) => {
       if (err) {
         this.logger.error(err);
