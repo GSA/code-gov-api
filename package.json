@@ -23,7 +23,7 @@
     "cookie-parser": "1.4.3",
     "cors": "2.7.1",
     "dtrace-provider": "0.7.0",
-    "elasticsearch": "11.0.1",
+    "elasticsearch": "12.1.0",
     "event-stream": "3.3.2",
     "express": "4.0.0",
     "git-rev": "0.2.1",
