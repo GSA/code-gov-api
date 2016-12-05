@@ -17,7 +17,7 @@
     "JSONStream": "1.1.4",
     "async": "2.0.1",
     "body-parser": "1.15.2",
-    "bodybuilder": "1.17.0",
+    "bodybuilder": "1.22.0",
     "bunyan": "1.8.1",
     "bunyan-middleware": "0.3.1",
     "cookie-parser": "1.4.3",
