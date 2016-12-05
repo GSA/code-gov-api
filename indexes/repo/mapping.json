@@ -1,6 +1,10 @@
 {
   "repo": {
     "properties": {
+      "repoID": {
+        "type": "string",
+        "index": "not_analyzed"
+      },
       "agency": {
         "type": "string",
         "analyzer": "keyword_ci",
@@ -27,21 +31,17 @@
         "type": "string",
         "analyzer": "keyword_ci"
       },
-      "repoID": {
-        "type": "string",
-        "index": "not_analyzed"
-      },
       "homepage": {
         "type": "string",
         "analyzer": "keyword_ci"
       },
       "downloadURL": {
         "type": "string",
-        "analyzer": "keyword_ci"
+        "index": "not_analyzed"
       },
       "description": {
         "type": "string",
-        "analyzer": "keyword_ci",
+        "analyzer": "englishfulltext",
         "fields": {
           "_fulltext": {
             "type": "string",
@@ -49,27 +49,17 @@
           }
         }
       },
-      "projectTags": {
-        "type": "nested",
-        "properties": {
-          "tag": {
-            "type": "string",
-            "analyzer": "keyword_ci"
-          }
-        }
+      "tags": {
+        "type": "string",
+        "analyzer": "keyword_ci"
       },
-      "codeLanguage": {
-        "type": "nested",
-        "properties": {
-          "language": {
+      "languages": {
+        "type": "string",
+        "analyzer": "keyword_ci",
+        "fields": {
+          "_fulltext": {
             "type": "string",
-            "analyzer": "keyword_ci",
-            "fields": {
-              "_fulltext": {
-                "type": "string",
-                "analyzer": "englishfulltext"
-              }
-            }
+            "analyzer": "englishfulltext"
           }
         }
       },
