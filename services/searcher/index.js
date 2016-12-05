@@ -121,7 +121,9 @@ class Searcher {
       this._addMatchForFullText(ftBody, q, "contact.twitter._fulltext", 4);
       this._addMatchForFullText(ftBody, q, "license._fulltext", 4);
 
-      body.query("bool", "must", ftBody.build("v2"));
+      let ftQuery = ftBody.build("v2")["query"];
+
+      body.query("bool", "must", ftQuery);
     }
   }
 
@@ -155,7 +157,7 @@ class Searcher {
   //       let boolMustContents = new Bodybuilder();
   //
   //       this._addFieldFilters(nestedBodyQuery, paramsForNesting);
-  //       body.query("nested", nestedfield, 'avg', nestedBodyQuery.build("v2"));
+  //       body.query("nested", nestedfield, 'avg', nestedBodyQuery.build());
   //
   //       //Now that we have added the keys, we need to remove the params
   //       //from the original request params so we don't add duplicate
@@ -393,9 +395,9 @@ class Searcher {
     // logger.info(query);
     return query;
   }
-
   searchRepos(q, callback) {
     logger.info("Repo searching", q);
+
     this.client.search({
       index: 'repos',
       type: 'repo',
