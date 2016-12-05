@@ -129,6 +129,7 @@ const queryReposAndSendResponse = (q, res, next) => {
   searcher.searchRepos(q, (err, repos) => {
     // TODO: add better error handling
     if(err) {
+      logger.error(err);
       return res.sendStatus(500);
     }
     // TODO: format repos
