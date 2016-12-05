@@ -12,8 +12,11 @@ class Validator {
   validateRepo(repo, callback) {
     this.logger.info(`Validating repo (${repo.repository})...`);
 
-    // TODO: fill this out
+    // TODO: add validate logic
 
+    return callback(null, repo);
   }
 
 }
+
+module.exports = new Validator();

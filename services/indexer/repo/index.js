@@ -8,6 +8,8 @@ const Transform           = require("stream").Transform;
 const JSONStream          = require("JSONStream");
 const moment              = require("moment");
 
+const Validator           = require("../../validator");
+const Formatter           = require("../../formatter");
 const AbstractIndexer     = require("../abstract_indexer");
 
 const ES_MAPPING = require("../../../indexes/repo/mapping.json");
@@ -18,6 +20,8 @@ const ES_PARAMS = {
   "esMapping": ES_MAPPING,
   "esSettings": ES_SETTINGS
 };
+
+// TODO: need to supplement with events
 
 class AgencyJsonStream extends Transform {
 
@@ -63,8 +67,23 @@ class AgencyJsonStream extends Transform {
     const _processAgencyData = (err, agencyData) => {
       if (agencyData.projects && agencyData.projects.length) {
         agencyData.projects.forEach((project) => {
-          project.agency = agencyData.agency;
-          this.push(project);
+          async.waterfall([
+            (next) => {
+              // validate
+              Validator.validateRepo(project, next);
+            },
+            (project, next) => {
+              // add agency to project (we need it later)
+              project.agency = agencyData.agency;
+              // format
+              Formatter.formatRepo(project, next);
+            }
+          ], (err, project) => {
+            if (err) {
+              this.logger.error(err);
+            }
+            this.push(project);
+          });
         });
       }
 
