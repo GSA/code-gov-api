@@ -28,7 +28,7 @@ class Searcher {
     let body = new Bodybuilder();
 
     body.query("match", "repoID", id);
-    let query = body.build();
+    let query = body.build("v2");
     // logger.info(query);
 
     return query;
@@ -121,7 +121,7 @@ class Searcher {
       this._addMatchForFullText(ftBody, q, "contact.twitter._fulltext", 4);
       this._addMatchForFullText(ftBody, q, "license._fulltext", 4);
 
-      body.query("bool", "must", ftBody.build());
+      body.query("bool", "must", ftBody.build("v2"));
     }
   }
 
@@ -155,7 +155,7 @@ class Searcher {
   //       let boolMustContents = new Bodybuilder();
   //
   //       this._addFieldFilters(nestedBodyQuery, paramsForNesting);
-  //       body.query("nested", nestedfield, 'avg', nestedBodyQuery.build());
+  //       body.query("nested", nestedfield, 'avg', nestedBodyQuery.build("v2"));
   //
   //       //Now that we have added the keys, we need to remove the params
   //       //from the original request params so we don't add duplicate
@@ -175,7 +175,7 @@ class Searcher {
         logger.info(filterElement);
         orBody.orFilter("term", field, filterElement.toLowerCase());
       });
-      body.filter("bool", "and", orBody.build());
+      body.filter("bool", "and", orBody.build("v2"));
     } else {
       body.filter("term", field, filter.toLowerCase());
     }
@@ -305,7 +305,7 @@ class Searcher {
         filter.forEach((filterEl) => {
           orBody.orFilter("term", field, _stringToBool(filterEl));
         });
-        body.filter("bool", "and", orBody.build());
+        body.filter("bool", "and", orBody.build("v2"));
       } else {
         body.filter("term", field, _stringToBool(filter));
       }
@@ -388,7 +388,7 @@ class Searcher {
 
     this._addSortOrder(body, q);
 
-    query = body.build();
+    query = body.build("v2");
 
     // logger.info(query);
     return query;

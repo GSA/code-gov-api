@@ -58,8 +58,7 @@ class IndexCleaner extends AbstractIndexTool {
 
     this.client.indices.getSettings({
         index: (aliasName + '*'),
-        name: 'index.creation_date', //Only get creation date field
-        flatSettings: true
+        name: 'index.creation_date' //Only get creation date field
     }, (err, response, status) => {
       if(err) {
           this.logger.error(err);
@@ -71,7 +70,7 @@ class IndexCleaner extends AbstractIndexTool {
           let cutoffTime = currTime - daysToKeep;
 
           _.forEach(response, (value, key) => {
-              let index_date = this._toDays(value.settings["index.creation_date"]);
+              let index_date = this._toDays(value["settings"]["index"]["creation_date"]);
               if (index_date < cutoffTime) {
                 indices.push(key);
               }

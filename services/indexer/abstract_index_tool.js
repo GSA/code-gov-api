@@ -46,7 +46,7 @@ class AbstractIndexTool {
     this.logger.info(
       `Getting indexes for alias (${aliasName}).`);
     this.client.indices.getAlias({
-      alias: aliasName
+      name: aliasName
     }, (err, response, status) => {
       let indices = new Array();
       if(err) { this.logger.error(err); }
