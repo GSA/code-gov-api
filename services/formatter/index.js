@@ -1,5 +1,11 @@
-const _                   = require("lodash");
+/******************************************************************************
 
+  FORMATTER: a service which formats json objects, adding new fields and mod-
+  ifying existing ones as necessary for consumption by the API
+
+******************************************************************************/
+
+const _                   = require("lodash");
 const Utils               = require("../../utils");
 const Logger              = require("../../utils/logger");
 
