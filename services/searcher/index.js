@@ -297,28 +297,28 @@ class Searcher {
   //
   // }
 
-  _addBooleanFilters(body, q) {
-    const _addBooleanFilter = (field, filter) => {
-      const _stringToBool = (string) => {
-        return string === "true" || string === "1";
-      }
-      if(filter instanceof Array) {
-        let orBody = new Bodybuilder();
-        filter.forEach((filterEl) => {
-          orBody.orFilter("term", field, _stringToBool(filterEl));
-        });
-        body.filter("bool", "and", orBody.build("v2"));
-      } else {
-        body.filter("term", field, _stringToBool(filter));
-      }
-    };
-
-    searchPropsByType["boolean"].forEach((field) => {
-      if(q[field]) {
-        _addBooleanFilter(field, q[field]);
-      }
-    });
-  }
+  // _addBooleanFilters(body, q) {
+  //   const _addBooleanFilter = (field, filter) => {
+  //     const _stringToBool = (string) => {
+  //       return string === "true" || string === "1";
+  //     }
+  //     if(filter instanceof Array) {
+  //       let orBody = new Bodybuilder();
+  //       filter.forEach((filterEl) => {
+  //         orBody.orFilter("term", field, _stringToBool(filterEl));
+  //       });
+  //       body.filter("bool", "and", orBody.build("v2"));
+  //     } else {
+  //       body.filter("term", field, _stringToBool(filter));
+  //     }
+  //   };
+  //
+  //   searchPropsByType["boolean"].forEach((field) => {
+  //     if(q[field]) {
+  //       _addBooleanFilter(field, q[field]);
+  //     }
+  //   });
+  // }
 
   _addSizeFromParams(body, q) {
     q.size = q.size ? q.size : REPO_RESULT_SIZE_DEFAULT;
@@ -365,7 +365,7 @@ class Searcher {
     this._addDateRangeFilters(body, q);
     this._addByteRangeFilters(body, q);
     // this._addGeoDistanceFilters(body, q);
-    this._addBooleanFilters(body, q);
+    // this._addBooleanFilters(body, q);
   }
 
   /**
