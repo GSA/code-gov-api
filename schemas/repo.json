@@ -2,6 +2,23 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
+    "agency": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "acronym": {
+          "type": "string"
+        },
+        "website": {
+          "type": "string"
+        },
+        "repos_url": {
+          "type": "string"
+        }
+      }
+    },
     "organization": {
       "type": ["string", "null"]
     },
