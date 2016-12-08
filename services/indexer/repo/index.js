@@ -10,6 +10,7 @@ const moment              = require("moment");
 
 const Validator           = require("../../validator");
 const Formatter           = require("../../formatter");
+const Reporter            = require("../../reporter");
 const AbstractIndexer     = require("../abstract_indexer");
 
 const ES_MAPPING = require("../../../indexes/repo/mapping.json");
@@ -31,17 +32,27 @@ class AgencyJsonStream extends Transform {
     this.logger = repoIndexer.logger;
   }
 
+  _handleResponse(data, callback) {
+    let agencyData = {};
+    try {
+      agencyData = JSON.parse(data);
+    } catch(err) {
+      this.logger.error(err);
+      return callback(err);
+    }
+    return callback(null, agencyData);
+  }
+
   _fetchAgencyReposRemote(agencyUrl, callback) {
     this.logger.info(`Fetching remote agency repos from ${agencyUrl}...`);
 
     request(agencyUrl, (err, response, body) => {
       if (err) {
         this.logger.error(err);
-        return callback(null, {});
+        return callback(err, {});
       }
 
-      let agencyData = JSON.parse(body);
-      return callback(null, agencyData);
+      this._handleResponse(body, callback);
     });
   }
 
@@ -52,47 +63,63 @@ class AgencyJsonStream extends Transform {
     fs.readFile(filePath, 'utf8', (err, data) => {
       if (err) {
         this.logger.error(err);
-        return callback(null, {});
+        return callback(err, {});
       }
 
-      // TODO: potentially use streams? file might be too large
-      let agencyData = JSON.parse(data);
-      return callback(null, agencyData);
+      this._handleResponse(data, callback);
     });
   }
 
-  _fetchAgencyRepos(agencyUrl, next) {
-    this.logger.info(agencyUrl);
+  _fetchAgencyRepos(agency, next) {
+    let agencyUrl = agency.repos_url;
+    let agencyName = agency.acronym;
+    // TODO: need to incorporate fallback data
 
     const _processAgencyData = (err, agencyData) => {
-      if (agencyData.projects && agencyData.projects.length) {
-        agencyData.projects.forEach((project) => {
-          async.waterfall([
-            (next) => {
-              // validate
-              Validator.validateRepo(project, next);
-            },
-            (project, next) => {
-              // add agency to project (we need it later)
-              project.agency = agencyData.agency;
-              // format
-              Formatter.formatRepo(project, next);
-            }
-          ], (err, project) => {
+      if (err) {
+        this.logger.error(`Error when fetching (${agencyUrl}).`);
+        Reporter.reportStatus(agencyName, "FAILURE: FETCH FAILED");
+        return next();
+      } else if (agencyData === {}) {
+        this.logger.warning(`Missing data in (${agencyUrl}).`);
+        Reporter.reportStatus(agencyName, "FAILURE: MISSING DATA");
+        return next();
+      } else if (agencyData.projects && agencyData.projects.length > 0) {
+        this.logger.info(`Processing data from (${agencyUrl}).`);
+        Reporter.reportStatus(agencyName, "SUCCESS");
+        async.eachSeries(agencyData.projects, (project, done) => {
+          // add agency to project (we need it later)
+          project.agency = agency.acronym;
+          Validator.validateRepo(project, (err, validationResult) => {
+            Reporter.reportWarnings(agencyName, validationResult.warnings);
+            Reporter.reportErrors(agencyName, validationResult.errors);
             if (err) {
-              this.logger.error(err);
+              // swallow the error and continue to process other projects
+              return done();
             }
-            this.push(project);
+            // format as a repo
+            Formatter.formatRepo(project, (err, formattedProject) => {
+              if (err) {
+                // swallow the error and continue to process other projects
+                return done();
+              }
+              this.push(formattedProject);
+              return done();
+            });
           });
-        });
+        }, next);
+      } else {
+        this.logger.warning(
+          `Missing projects for agency (${agencyData.agency}).`
+        );
+        Reporter.reportStatus(agencyName, "FAILURE: MISSING PROJECTS DATA");
+        return next();
       }
-
-      return next();
     };
 
     // Crude detection of whether the url is a remote or local reference.
     // If remote, make a request, otherwise, read the file.
-    if (agencyUrl.substring(0, 5) === "http") {
+    if (agencyUrl.substring(0, 4) === "http") {
       this._fetchAgencyReposRemote(agencyUrl, _processAgencyData);
     } else {
       this._fetchAgencyReposLocal(agencyUrl, _processAgencyData);
@@ -100,7 +127,7 @@ class AgencyJsonStream extends Transform {
   }
 
   _transform(agency, enc, next) {
-    this._fetchAgencyRepos(agency.repos_url, next);
+    this._fetchAgencyRepos(agency, next);
   }
 
 }
@@ -115,7 +142,7 @@ class AgencyRepoIndexerStream extends Writable {
 
   _indexRepo(repo, done) {
     this.logger.info(
-      `Indexing repository (${repo.repository}).`);
+      `Indexing repository (${repo.repository || repo.name}).`);
 
     this.repoIndexer.indexDocument({
       "index": this.repoIndexer.esIndex,
@@ -175,11 +202,12 @@ class RepoIndexer extends AbstractIndexer {
       },
       (response, next) => { indexer.initIndex(next); },
       (response, next) => { indexer.initMapping(next); },
-      (response, next) => { indexer.indexRepos(next); }
+      (response, next) => { indexer.indexRepos(next); },
+      (next) => { Reporter.writeReportToFile(next); }
     ], (err) => {
       if(err) { indexer.logger.error(err); }
       indexer.logger.info(`Finished indexing (${indexer.esType}) indices.`);
-      return callback(err,{
+      return callback(err, {
         esIndex: indexer.esIndex,
         esAlias: indexer.esAlias
       });
