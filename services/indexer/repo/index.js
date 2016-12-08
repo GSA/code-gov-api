@@ -71,7 +71,7 @@ class AgencyJsonStream extends Transform {
   }
 
   _fetchAgencyRepos(agency, next) {
-    let agencyUrl = agency.repos_url;
+    let agencyUrl = agency.code_url;
     let agencyName = agency.acronym;
     // TODO: need to incorporate fallback data
 

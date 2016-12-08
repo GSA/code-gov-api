@@ -14,7 +14,7 @@
         "website": {
           "type": "string"
         },
-        "repos_url": {
+        "code_url": {
           "type": "string"
         }
       }

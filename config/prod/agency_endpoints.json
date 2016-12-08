@@ -3,157 +3,157 @@
   "name": "Department of Agriculture",
   "acronym": "USDA",
   "website": "https://usda.gov/",
-  "repos_url": "https://usda.gov/code.json"
+  "code_url": "https://usda.gov/code.json"
 }, {
   "id": 2,
   "name": "Department of Commerce",
   "acronym": "DOC",
   "website": "https://www.commerce.gov/",
-  "repos_url": "https://www.commerce.gov/code.json"
+  "code_url": "https://www.commerce.gov/code.json"
 }, {
   "id": 3,
   "name": "Department of Defense",
   "acronym": "DOD",
   "website": "https://www.defense.gov/",
-  "repos_url": "https://www.defense.gov/code.json"
+  "code_url": "https://www.defense.gov/code.json"
 }, {
   "id": 4,
   "name": "Department of Education",
   "acronym": "ED",
   "website": "https://ed.gov/",
-  "repos_url": "https://ed.gov/code.json"
+  "code_url": "https://ed.gov/code.json"
 }, {
   "id": 5,
   "name": "Department of Energy",
   "acronym": "DOE",
   "website": "https://energy.gov/",
-  "repos_url": "https://energy.gov/code.json"
+  "code_url": "https://energy.gov/code.json"
 }, {
   "id": 6,
   "name": "Department of Health and Human Services",
   "acronym": "HHS",
   "website": "https://hhs.gov",
-  "repos_url": "https://hhs.gov/code.json"
+  "code_url": "https://hhs.gov/code.json"
 }, {
   "id": 7,
   "name": "Department of Housing and Urban Development",
   "acronym": "HUD",
   "website": "https://www.hud.gov/",
-  "repos_url": "https://www.hud.gov/code.json"
+  "code_url": "https://www.hud.gov/code.json"
 }, {
   "id": 8,
   "name": "Department of Interior",
   "acronym": "DOI",
   "website": "https://data.doi.gov/",
-  "repos_url": "https://data.doi.gov/code.json"
+  "code_url": "https://data.doi.gov/code.json"
 }, {
   "id": 9,
   "name": "Department of Justice",
   "acronym": "DOJ",
   "website": "https://justice.gov",
-  "repos_url": "https://justice.gov/code.json"
+  "code_url": "https://justice.gov/code.json"
 }, {
   "id": 10,
   "name": "Department of Labor",
   "acronym": "DOL",
   "website": "https://www.dol.gov",
-  "repos_url": "https://www.dol.gov/code.json"
+  "code_url": "https://www.dol.gov/code.json"
 }, {
   "id": 11,
   "name": "Department of State",
   "acronym": "DOS",
   "website": "https://state.gov/",
-  "repos_url": "https://state.gov/code.json"
+  "code_url": "https://state.gov/code.json"
 }, {
   "id": 12,
   "name": "Department of Transportation",
   "acronym": "DOT",
   "website": "https://www.transportation.gov/",
-  "repos_url": "https://www.transportation.gov/code.json"
+  "code_url": "https://www.transportation.gov/code.json"
 }, {
   "id": 13,
   "name": "Department of Treasury",
   "acronym": "TRE",
   "website": "https://www.treasury.gov/",
-  "repos_url": "https://www.treasury.gov/code.json"
+  "code_url": "https://www.treasury.gov/code.json"
 }, {
   "id": 14,
   "name": "Department of Veterans Affairs",
   "acronym": "VA",
   "website": "https://va.gov/",
-  "repos_url": "https://va.gov/code.json"
+  "code_url": "https://va.gov/code.json"
 }, {
   "id": 15,
   "name": "Environmental Protection Agency",
   "acronym": "EPA",
   "website": "https://epa.gov/",
-  "repos_url": "https://epa.gov/code.json"
+  "code_url": "https://epa.gov/code.json"
 }, {
   "id": 16,
   "name": "National Aeronautics and Space Administration",
   "acronym": "NASA",
   "website": "https://nasa.gov/",
-  "repos_url": "https://code.nasa.gov/code.json"
+  "code_url": "https://code.nasa.gov/code.json"
 }, {
   "id": 17,
   "name": "Agency for International Development",
   "acronym": "AID",
   "website": "https://usaid.gov/",
-  "repos_url": "https://usaid.gov/code.json"
+  "code_url": "https://usaid.gov/code.json"
 }, {
   "id": 18,
   "name": "Federal Emergency Management Agency",
   "acronym": "FEMA",
   "website": "https://fema.gov/",
-  "repos_url": "https://fema.gov/code.json"
+  "code_url": "https://fema.gov/code.json"
 }, {
   "id": 19,
   "name": "General Services Administration",
   "acronym": "GSA",
   "website": "https://gsa.gov/",
-  "repos_url": "https://gsa.gov/code.json"
+  "code_url": "https://gsa.gov/code.json"
 }, {
   "id": 20,
   "name": "National Science Foundation",
   "acronym": "NSF",
   "website": "https://nsf.gov/",
-  "repos_url": "https://nsf.gov/code.json"
+  "code_url": "https://nsf.gov/code.json"
 }, {
   "id": 21,
   "name": "Nuclear Regulatory Commission",
   "acronym": "NRC",
   "website": "https://nrc.gov/",
-  "repos_url": "https://nrc.gov/code.json"
+  "code_url": "https://nrc.gov/code.json"
 }, {
   "id": 22,
   "name": "Office of Personnel Management",
   "acronym": "OPM",
   "website": "https://opm.gov/",
-  "repos_url": "https://opm.gov/code.json"
+  "code_url": "https://opm.gov/code.json"
 }, {
   "id": 23,
   "name": "Small Business Administration",
   "acronym": "SBA",
   "website": "https://sba.gov/",
-  "repos_url": "https://sba.gov/code.json"
+  "code_url": "https://sba.gov/code.json"
 },{
   "id": 24,
   "name": "National Archives",
   "acronym": "NARA",
   "website": "https://archives.gov/",
-  "repos_url": "https://archives.gov/code.json"
+  "code_url": "https://archives.gov/code.json"
 },
 {
   "id": 25,
   "name": "Consumer Financial Protection Bureau",
   "acronym": "CFPB",
   "website": "https://consumerfinance.gov/",
-  "repos_url": "https://consumerfinance.gov/code.json"
+  "code_url": "https://consumerfinance.gov/code.json"
 },
 {
   "id": 26,
   "name": "White House - Executive Office of the President",
   "acronym": "EOP",
   "website": "https://whitehouse.gov/",
-  "repos_url": "https://whitehouse.gov/code.json"
+  "code_url": "https://whitehouse.gov/code.json"
 }]

@@ -33,7 +33,7 @@
             "type": "string",
             "index": "not_analyzed"
           },
-          "repos_url": {
+          "code_url": {
             "type": "string",
             "index": "not_analyzed"
           }

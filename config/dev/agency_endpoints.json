@@ -3,158 +3,158 @@
   "name": "Department of Agriculture",
   "acronym": "USDA",
   "website": "https://usda.gov/",
-  "repos_url": "/data/fallback/USDA.json"
+  "code_url": "/data/fallback/USDA.json"
 }, {
   "id": 2,
   "name": "Department of Commerce",
   "acronym": "DOC",
   "website": "https://www.commerce.gov/",
-  "repos_url": "/data/fallback/DOC.json"
+  "code_url": "/data/fallback/DOC.json"
 }, {
   "id": 3,
   "name": "Department of Defense",
   "acronym": "DOD",
   "website": "https://www.defense.gov/",
-  "repos_url": "/data/fallback/DOD.json"
+  "code_url": "/data/fallback/DOD.json"
 }, {
   "id": 4,
   "name": "Department of Education",
   "acronym": "ED",
   "website": "https://ed.gov/",
-  "repos_url": "/data/fallback/ED.json"
+  "code_url": "/data/fallback/ED.json"
 }, {
   "id": 5,
   "name": "Department of Energy",
   "acronym": "DOE",
   "website": "https://energy.gov/",
-  "repos_url": "/data/fallback/DOE.json"
+  "code_url": "/data/fallback/DOE.json"
 }, {
   "id": 6,
   "name": "Department of Health and Human Services",
   "acronym": "HHS",
   "website": "https://hhs.gov",
-  "repos_url": "/data/fallback/HHS.json"
+  "code_url": "/data/fallback/HHS.json"
 }, {
   "id": 7,
   "name": "Department of Housing and Urban Development",
   "acronym": "HUD",
   "website": "https://www.hud.gov/",
-  "repos_url": "/data/fallback/HUD.json"
+  "code_url": "/data/fallback/HUD.json"
 }, {
   "id": 8,
   "name": "Department of Interior",
   "acronym": "DOI",
   "website": "https://data.doi.gov/",
-  "repos_url": "/data/fallback/DOI.json"
+  "code_url": "/data/fallback/DOI.json"
 }, {
   "id": 9,
   "name": "Department of Justice",
   "acronym": "DOJ",
   "website": "https://justice.gov",
-  "repos_url": "/data/fallback/DOJ.json"
+  "code_url": "/data/fallback/DOJ.json"
 }, {
   "id": 10,
   "name": "Department of Labor",
   "acronym": "DOL",
   "website": "https://www.dol.gov",
-  "repos_url": "/data/fallback/DOL.json"
+  "code_url": "/data/fallback/DOL.json"
 }, {
   "id": 11,
   "name": "Department of State",
   "acronym": "DOS",
   "website": "https://state.gov/",
-  "repos_url": "/data/fallback/DOS.json"
+  "code_url": "/data/fallback/DOS.json"
 }, {
   "id": 12,
   "name": "Department of Transportation",
   "acronym": "DOT",
   "website": "https://www.transportation.gov/",
-  "repos_url": "/data/fallback/DOT.json"
+  "code_url": "/data/fallback/DOT.json"
 }, {
   "id": 13,
   "name": "Department of Treasury",
   "acronym": "TRE",
   "website": "https://www.treasury.gov/",
-  "repos_url": "/data/fallback/TRE.json"
+  "code_url": "/data/fallback/TRE.json"
 }, {
   "id": 14,
   "name": "Department of Veterans Affairs",
   "acronym": "VA",
   "website": "https://va.gov/",
-  "repos_url": "/data/fallback/VA.json"
+  "code_url": "/data/fallback/VA.json"
 }, {
   "id": 15,
   "name": "Environmental Protection Agency",
   "acronym": "EPA",
   "website": "https://epa.gov/",
-  "repos_url": "/data/fallback/EPA.json"
+  "code_url": "/data/fallback/EPA.json"
 }, {
   "id": 16,
   "name": "National Aeronautics and Space Administration",
   "acronym": "NASA",
   "website": "https://nasa.gov/",
-  "repos_url": "/data/fallback/NASA.json"
+  "code_url": "/data/fallback/NASA.json"
 }, {
   "id": 17,
   "name": "Agency for International Development",
   "acronym": "AID",
   "website": "https://usaid.gov/",
-  "repos_url": "/data/fallback/AID.json"
+  "code_url": "/data/fallback/AID.json"
 }, {
   "id": 18,
   "name": "Federal Emergency Management Agency",
   "acronym": "FEMA",
   "website": "https://fema.gov/",
-  "repos_url": "/data/fallback/FEMA.json"
+  "code_url": "/data/fallback/FEMA.json"
 }, {
   "id": 19,
   "name": "General Services Administration",
   "acronym": "GSA",
   "website": "https://gsa.gov/",
-  "repos_url": "/data/fallback/GSA.json"
+  "code_url": "/data/fallback/GSA.json"
 }, {
   "id": 20,
   "name": "National Science Foundation",
   "acronym": "NSF",
   "website": "https://nsf.gov/",
-  "repos_url": "/data/fallback/NSF.json"
+  "code_url": "/data/fallback/NSF.json"
 }, {
   "id": 21,
   "name": "Nuclear Regulatory Commission",
   "acronym": "NRC",
   "website": "https://nrc.gov/",
-  "repos_url": "/data/fallback/NRC.json"
+  "code_url": "/data/fallback/NRC.json"
 }, {
   "id": 22,
   "name": "Office of Personnel Management",
   "acronym": "OPM",
   "website": "https://opm.gov/",
-  "repos_url": "/data/fallback/OPM.json"
+  "code_url": "/data/fallback/OPM.json"
 }, {
   "id": 23,
   "name": "Small Business Administration",
   "acronym": "SBA",
   "website": "https://sba.gov/",
-  "repos_url": "/data/fallback/SBA.json"
+  "code_url": "/data/fallback/SBA.json"
 },
 {
   "id": 24,
   "name": "National Archives",
   "acronym": "NARA",
   "website": "https://archives.gov/",
-  "repos_url": "/data/fallback/NARA.json"
+  "code_url": "/data/fallback/NARA.json"
 },
 {
   "id": 25,
   "name": "Consumer Financial Protection Bureau",
   "acronym": "CFPB",
   "website": "https://consumerfinance.gov/",
-  "repos_url": "/data/fallback/CFPB.json"
+  "code_url": "/data/fallback/CFPB.json"
 },
 {
   "id": 26,
   "name": "White House - Executive Office of the President",
   "acronym": "EOP",
   "website": "https://whitehouse.gov/",
-  "repos_url": "/data/fallback/EOP.json"
+  "code_url": "/data/fallback/EOP.json"
 }]
