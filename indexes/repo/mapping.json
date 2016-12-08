@@ -146,13 +146,13 @@
         }
       },
       "openSourceProject": {
-        "type": "boolean"
+        "type": "byte"
       },
-      "govwideReuseproject": {
-        "type": "boolean"
+      "governmentWideReuseProject": {
+        "type": "byte"
       },
       "closedProject": {
-        "type": "boolean"
+        "type": "byte"
       },
       "exemption": {
         "type": "byte"
