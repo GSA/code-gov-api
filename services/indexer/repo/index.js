@@ -88,17 +88,16 @@ class AgencyJsonStream extends Transform {
         this.logger.info(`Processing data from (${agencyUrl}).`);
         Reporter.reportStatus(agencyName, "SUCCESS");
         async.eachSeries(agencyData.projects, (project, done) => {
-          // add agency to project (we need it later)
-          project.agency = agency.acronym;
-          Validator.validateRepo(project, (err, validationResult) => {
-            Reporter.reportWarnings(agencyName, validationResult.warnings);
-            Reporter.reportErrors(agencyName, validationResult.errors);
+          // add agency to project (we need it for formatting)
+          project.agency = agency;
+          Formatter.formatRepo(project, (err, formattedProject) => {
             if (err) {
               // swallow the error and continue to process other projects
               return done();
             }
-            // format as a repo
-            Formatter.formatRepo(project, (err, formattedProject) => {
+            Validator.validateRepo(project, (err, validationResult) => {
+              Reporter.reportWarnings(agencyName, validationResult.warnings);
+              Reporter.reportErrors(agencyName, validationResult.errors);
               if (err) {
                 // swallow the error and continue to process other projects
                 return done();
@@ -142,7 +141,7 @@ class AgencyRepoIndexerStream extends Writable {
 
   _indexRepo(repo, done) {
     this.logger.info(
-      `Indexing repository (${repo.repository || repo.name}).`);
+      `Indexing repository (${repo.repoID}).`);
 
     this.repoIndexer.indexDocument({
       "index": this.repoIndexer.esIndex,
