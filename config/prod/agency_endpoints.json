@@ -33,7 +33,7 @@
   "name": "Department of Health and Human Services",
   "acronym": "HHS",
   "website": "https://hhs.gov",
-  "repos_url": "https://hhs.govcode.json"
+  "repos_url": "https://hhs.gov/code.json"
 }, {
   "id": 7,
   "name": "Department of Housing and Urban Development",
@@ -51,13 +51,13 @@
   "name": "Department of Justice",
   "acronym": "DOJ",
   "website": "https://justice.gov",
-  "repos_url": "https://justice.govcode.json"
+  "repos_url": "https://justice.gov/code.json"
 }, {
   "id": 10,
   "name": "Department of Labor",
   "acronym": "DOL",
   "website": "https://www.dol.gov",
-  "repos_url": "https://www.dol.govcode.json"
+  "repos_url": "https://www.dol.gov/code.json"
 }, {
   "id": 11,
   "name": "Department of State",
@@ -93,7 +93,7 @@
   "name": "National Aeronautics and Space Administration",
   "acronym": "NASA",
   "website": "https://nasa.gov/",
-  "repos_url": "https://nasa.gov/code.json"
+  "repos_url": "https://code.nasa.gov/code.json"
 }, {
   "id": 17,
   "name": "Agency for International Development",
