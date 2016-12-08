@@ -126,27 +126,12 @@
         }
       },
       "partners": {
-        "type": "nested",
-        "properties": {
-          "name": {
+        "type": "string",
+        "analyzer": "keyword_ci",
+        "fields": {
+          "_fulltext": {
             "type": "string",
-            "analyzer": "keyword_ci",
-            "fields": {
-              "_fulltext": {
-                "type": "string",
-                "analyzer": "englishfulltext"
-              }
-            }
-          },
-          "email": {
-            "type": "string",
-            "analyzer": "keyword_ci",
-            "fields": {
-              "_fulltext": {
-                "type": "string",
-                "analyzer": "englishfulltext"
-              }
-            }
+            "analyzer": "englishfulltext"
           }
         }
       },
