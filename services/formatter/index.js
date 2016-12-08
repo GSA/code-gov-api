@@ -18,14 +18,19 @@ class Formatter {
   formatRepo(repo, callback) {
     this.logger.info(`Formatting repo (${repo.repository})...`);
 
-    // add repoId using a combination of agency, organization, and repository
-    // url fields
+    // add repoId using a combination of agency acronym, organization, and
+    // project name fields
     let repoId = Utils.transformStringToKey([
-      repo.agency,
+      repo.agency.acronym,
       repo.organization,
-      repo.repository
+      repo.name
     ].join("_"));
     repo["repoID"] = repoId;
+
+    // remove `id` from agency object
+    if (repo.agency && repo.agency.id) {
+      delete repo.agency.id;
+    }
 
     // TODO: error handling
     return callback(null, repo);
