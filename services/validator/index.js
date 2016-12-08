@@ -29,7 +29,7 @@ class Validator {
   }
 
   validateRepo(repo, callback) {
-    this.logger.info(`Validating agency data for (${repo.agency})...`);
+    this.logger.info(`Validating repo data for ${repo.name} (${repo.repoID})...`);
 
     let err = null;
     let result = {
@@ -40,13 +40,13 @@ class Validator {
     // validate
     let valid = this.validators["repo"](repo);
     if (!valid) {
-      this.logger.info(`Encountered errors when validating agency data for (${repo.agency}).`);
+      this.logger.info(`Encountered errors when validating repo data for ${repo.name} (${repo.repoID}).`);
       let errors = this.validators["repo"].errors
       this.logger.error(errors);
       result.errors = errors;
       err = new Error("Repo Validation Error");
     } else {
-      this.logger.info(`Successfully validated agency data for (${repo.agency}).`);
+      this.logger.info(`Successfully validated repo data for ${repo.name} (${repo.repoID}).`);
     }
 
     // TODO: add validation warnings
