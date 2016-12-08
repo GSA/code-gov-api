@@ -98,22 +98,19 @@
       "type": "object",
       "properties": {
         "metadataLastUpdated": {
-          "type": "string",
-          "format": "date-time"
+          "type": "string"
         },
         "lastCommit": {
-          "type": "string",
-          "format": "date-time"
+          "type": "string"
         },
         "sourceCodeLastModified": {
-          "type": "string",
-          "format": "date-time"
+          "type": "string"
         }
       }
     }
   },
   "required": [
-    "agency", "name", "description", "license", "openSourceProject",
+    "name", "description", "license", "openSourceProject",
     "governmentWideReuseProject", "tags", "contact"
   ]
 }
