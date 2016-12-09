@@ -20,8 +20,8 @@
   "id": 4,
   "name": "Department of Education",
   "acronym": "ED",
-  "website": "https://ed.gov/",
-  "code_url": "https://ed.gov/code.json"
+  "website": "http://ed.gov/",
+  "code_url": "http://ed.gov/code.json"
 }, {
   "id": 5,
   "name": "Department of Energy",
@@ -156,4 +156,11 @@
   "acronym": "EOP",
   "website": "https://whitehouse.gov/",
   "code_url": "https://whitehouse.gov/code.json"
+},
+{
+  "id": 27,
+  "name": "Social Security Administration",
+  "acronym": "SSA",
+  "website": "https://www.ssa.gov",
+  "code_url": "https://www.ssa.gov/code.json"
 }]
