@@ -86,6 +86,10 @@ class Utils {
     return _.cloneDeepWith(collection, omitFn);
   }
 
+  static removeDupes(collection1, collection2) {
+    return _.filter(collection1, (obj) => { return !_.find(collection2, obj); });
+  }
+
 }
 
 module.exports = Utils;

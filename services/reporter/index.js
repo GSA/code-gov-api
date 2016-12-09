@@ -26,8 +26,7 @@ class Reporter {
     if (this.report[itemName] === undefined) {
       this.report[itemName] = {
         status: "",
-        warnings: [],
-        errors: []
+        issues: []
       };
     }
   }
@@ -37,14 +36,9 @@ class Reporter {
     this.report[itemName]["status"] = status;
   }
 
-  reportWarnings(itemName, warnings) {
+  reportIssues(itemName, issuesObj) {
     this._createReportItemIfDoesntExist(itemName)
-    this.report[itemName]["warnings"] = warnings;
-  }
-
-  reportErrors(itemName, errors) {
-    this._createReportItemIfDoesntExist(itemName)
-    this.report[itemName]["errors"] = errors;
+    this.report[itemName]["issues"].push(issuesObj)
   }
 
   writeReportToFile(callback) {

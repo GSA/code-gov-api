@@ -88,7 +88,8 @@ class AgencyJsonStream extends Transform {
         return next();
       } else if (agencyData.projects && agencyData.projects.length > 0) {
         this.logger.info(`Processing data from (${agencyUrl}).`);
-        Reporter.reportStatus(agencyName, "SUCCESS");
+        let numValidationErrors = 0;
+        let numValidationWarnings = 0;
         async.eachSeries(agencyData.projects, (project, done) => {
           // add agency to project (we need it for formatting)
           project.agency = agency;
@@ -98,8 +99,16 @@ class AgencyJsonStream extends Transform {
               return done();
             }
             Validator.validateRepo(project, (err, validationResult) => {
-              Reporter.reportWarnings(agencyName, validationResult.warnings);
-              Reporter.reportErrors(agencyName, validationResult.errors);
+              if (validationResult.issues) {
+                if (validationResult.issues.errors.length ||
+                  validationResult.issues.warnings.length) {
+                    Reporter.reportIssues(agencyName, validationResult);
+                    numValidationErrors +=
+                      validationResult.issues.errors.length;
+                    numValidationWarnings +=
+                      validationResult.issues.warnings.length;
+                }
+              }
               if (err) {
                 // swallow the error and continue to process other projects
                 return done();
@@ -108,10 +117,21 @@ class AgencyJsonStream extends Transform {
               return done();
             });
           });
-        }, next);
+        }, () => {
+          if (numValidationErrors > 0) {
+            Reporter.reportStatus(agencyName,
+              `PARTIAL SUCCESS: ${numValidationErrors} ERRORS`);
+          } else if (numValidationWarnings > 0) {
+            Reporter.reportStatus(agencyName,
+              `PARTIAL SUCCESS: ${numValidationWarnings} WARNINGS`);
+          } else {
+            Reporter.reportStatus(agencyName, "SUCCESS");
+          }
+          next();
+        });
       } else {
-        this.logger.warning(
-          `Missing projects for agency (${agencyData.agency}).`
+        this.logger.error(
+          `Missing projects for agency (${agencyName}).`
         );
         Reporter.reportStatus(agencyName, "FAILURE: MISSING PROJECTS DATA");
         return next();
@@ -151,7 +171,9 @@ class AgencyRepoIndexerStream extends Writable {
       "id": repo.repoID,
       "body": repo
     }, (err, response, status) => {
-      if(err) { this.logger.error(err); }
+      if(err) {
+        this.logger.error(err);
+      }
       this.repoIndexer.indexCounter++;
 
       return done(err, response);
