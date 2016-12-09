@@ -1,4 +1,4 @@
 {
   "AGENCY_ENDPOINTS_FILE": "/config/prod/agency_endpoints.json",
-  "REPORT_FILEPATH": "/tmp"
+  "REPORT_FILEPATH": "tmp/status_report.json"
 }
