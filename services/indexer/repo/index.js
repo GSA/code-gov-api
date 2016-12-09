@@ -46,14 +46,16 @@ class AgencyJsonStream extends Transform {
   _fetchAgencyReposRemote(agencyUrl, callback) {
     this.logger.info(`Fetching remote agency repos from ${agencyUrl}...`);
 
-    request(agencyUrl, (err, response, body) => {
-      if (err) {
-        this.logger.error(err);
-        return callback(err, {});
-      }
+    request({ followAllRedirects: true, url: agencyUrl },
+      (err, response, body) => {
+        if (err) {
+          this.logger.error(err);
+          return callback(err, {});
+        }
 
-      this._handleResponse(body, callback);
-    });
+        this._handleResponse(body, callback);
+      }
+    );
   }
 
   _fetchAgencyReposLocal(agencyUrl, callback) {
