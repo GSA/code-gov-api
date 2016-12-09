@@ -16,8 +16,6 @@ class Formatter {
   }
 
   formatRepo(repo, callback) {
-    this.logger.info(`Formatting repo (${repo.repository})...`);
-
     // add repoId using a combination of agency acronym, organization, and
     // project name fields
     let repoId = Utils.transformStringToKey([
@@ -31,6 +29,8 @@ class Formatter {
     if (repo.agency && repo.agency.id) {
       delete repo.agency.id;
     }
+
+    this.logger.info(`Formatted repo ${repo.name} (${repo.repoID}).`);
 
     // TODO: error handling
     return callback(null, repo);
