@@ -4,23 +4,25 @@
     * lint/githook rules
 */
 
-const _                 = require("lodash");
-const express           = require("express");
-const request           = require("request");
-const path              = require("path");
-const md                = require("marked");
-const git               = require("git-rev");
-const favicon           = require('serve-favicon');
-const cookieParser      = require('cookie-parser');
-const bodyParser        = require('body-parser');
-const cors              = require('cors');
-const pug               = require("pug");
-const searcherAdapter   = require("./utils/search_adapters/elasticsearch_adapter");
-const Searcher          = require("./services/searcher");
-const Utils             = require("./utils");
-const Logger            = require("./utils/logger");
-const repoMapping       = require("./indexes/repo/mapping.json");
-const pkg               = require("./package.json");
+const _                   = require("lodash");
+const fs                  = require("fs");
+const express             = require("express");
+const request             = require("request");
+const path                = require("path");
+const md                  = require("marked");
+const git                 = require("git-rev");
+const favicon             = require('serve-favicon');
+const cookieParser        = require('cookie-parser');
+const bodyParser          = require('body-parser');
+const cors                = require('cors');
+const pug                 = require("pug");
+const config              = require("./config");
+const searcherAdapter     = require("./utils/search_adapters/elasticsearch_adapter");
+const Searcher            = require("./services/searcher");
+const Utils               = require("./utils");
+const Logger              = require("./utils/logger");
+const repoMapping         = require("./indexes/repo/mapping.json");
+const pkg                 = require("./package.json");
 
 /* ------------------------------------------------------------------ *
                             API CONFIG
@@ -157,6 +159,16 @@ router.get('/repo.json', (req, res, next) => {
   ]
   repoJson = Utils.omitDeepKeys(repoJson, excludeKeys);
   res.json(repoJson["repo"]["properties"]);
+});
+
+router.get('/status.json', (req, res, next) => {
+  fs.readFile(config.REPORT_FILEPATH, (err, data) => {
+    if (err) {
+      logger.error(err);
+      return res.sendStatus(500);
+    }
+    res.json(JSON.parse(data));
+  });
 });
 
 router.get('/version', (req, res, next) => {
