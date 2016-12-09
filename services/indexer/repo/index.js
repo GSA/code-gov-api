@@ -113,6 +113,7 @@ class AgencyJsonStream extends Transform {
                 // swallow the error and continue to process other projects
                 return done();
               }
+              // TODO: only push if no errors
               this.push(formattedProject);
               return done();
             });
