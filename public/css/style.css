@@ -1,11 +1,24 @@
 body {
-  padding: 50px;
+  padding: 0px;
+  margin: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  max-width: 600px;
+  /*max-width: 600px;*/
 }
 
 a {
   color: #2b7bba;
+}
+
+.failure {
+  color: #800;
+}
+
+.warning {
+  color: #880;
+}
+
+.success {
+  color: #080;
 }
 
 h1 {
@@ -16,4 +29,24 @@ hr {
   border: 0;
   border-bottom: 1px dashed #ccc;
   background: #999;
+}
+
+table {
+  border-spacing: 0px;
+}
+
+th, td {
+  vertical-align: top;
+  text-align: left;
+  padding: 10px;
+  border: 1px solid #eee;
+}
+
+th {
+  background-color: #333;
+  color: #fff;
+}
+
+pre {
+  margin: 0px;
 }
