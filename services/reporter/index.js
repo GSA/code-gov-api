@@ -26,7 +26,8 @@ class Reporter {
     if (this.report[itemName] === undefined) {
       this.report[itemName] = {
         status: "",
-        issues: []
+        issues: [],
+        metadata: {}
       };
     }
   }
@@ -37,8 +38,13 @@ class Reporter {
   }
 
   reportIssues(itemName, issuesObj) {
-    this._createReportItemIfDoesntExist(itemName)
-    this.report[itemName]["issues"].push(issuesObj)
+    this._createReportItemIfDoesntExist(itemName);
+    this.report[itemName]["issues"].push(issuesObj);
+  }
+
+  reportMetadata(itemName, metadata) {
+    this._createReportItemIfDoesntExist(itemName);
+    this.report[itemName]["metadata"] = metadata;
   }
 
   writeReportToFile(callback) {

@@ -78,6 +78,7 @@ class AgencyJsonStream extends Transform {
     // TODO: need to incorporate fallback data
 
     const _processAgencyData = (err, agencyData) => {
+      Reporter.reportMetadata(agencyName, { agency });
       if (err) {
         this.logger.error(`Error when fetching (${agencyUrl}).`);
         Reporter.reportStatus(agencyName, "FAILURE: FETCH FAILED");
@@ -128,9 +129,17 @@ class AgencyJsonStream extends Transform {
             });
           });
         }, () => {
-          if (numValidationErrors > 0) {
-            Reporter.reportStatus(agencyName,
-              `PARTIAL SUCCESS: ${numValidationErrors} ERRORS`);
+          if (numValidationErrors || numValidationWarnings) {
+            let reportString = "PARTIAL SUCCESS: ";
+            let reportDetails = [];
+            if (numValidationErrors) {
+              reportDetails.push(`${numValidationErrors} ERRORS`);
+            }
+            if (numValidationWarnings) {
+              reportDetails.push(`${numValidationWarnings} WARNINGS`);
+            }
+            reportString += reportDetails.join(" AND ");
+            Reporter.reportStatus(agencyName, reportString);
           } else if (numValidationWarnings > 0) {
             Reporter.reportStatus(agencyName,
               `PARTIAL SUCCESS: ${numValidationWarnings} WARNINGS`);
