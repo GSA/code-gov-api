@@ -171,6 +171,35 @@ router.get('/status.json', (req, res, next) => {
   });
 });
 
+router.get(`/status`, (req, res, next) => {
+  fs.readFile(config.REPORT_FILEPATH, (err, data) => {
+    if (err) {
+      logger.error(err);
+      return res.sendStatus(500);
+    }
+    let title = "Code.gov API Status";
+    let statusData = JSON.parse(data);
+    res.render('status', { title, statusData });
+  });
+});
+
+router.get(`/status/:agency`, (req, res, next) => {
+  let agency = req.params.agency;
+  fs.readFile(config.REPORT_FILEPATH, (err, data) => {
+    if (err) {
+      logger.error(err);
+      return res.sendStatus(500);
+    }
+    let title = "Code.gov API Status for " + agency;
+    let statusData = JSON.parse(data)[agency];
+    if (statusData) {
+      return res.render('status_for_agency', { title, statusData });
+    } else {
+      return res.sendStatus(404);
+    }
+  });
+});
+
 router.get('/version', (req, res, next) => {
   const _sendVersionResponse = (gitHash) => {
     res.json({
@@ -187,7 +216,7 @@ router.get('/version', (req, res, next) => {
 
 router.get('/', (req, res, next) => {
   let title = "Code.gov API";
-  res.render('index', { filters: [ md, title ] });
+  res.render('index', { filters: [ md ], title: title });
 });
 
 // all of our routes will be prefixed with /api/<version>/
