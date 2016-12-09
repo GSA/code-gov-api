@@ -96,6 +96,11 @@ class AgencyJsonStream extends Transform {
           Formatter.formatRepo(project, (err, formattedProject) => {
             if (err) {
               // swallow the error and continue to process other projects
+              this.logger.error(
+                `Encountered an error when formatting repo with name ` +
+                `${project.name}. Throwing it out of the indexing process.`
+              );
+              // TODO: add issue to reporter for this case
               return done();
             }
             Validator.validateRepo(project, (err, validationResult) => {
@@ -111,9 +116,13 @@ class AgencyJsonStream extends Transform {
               }
               if (err) {
                 // swallow the error and continue to process other projects
+                this.logger.error(
+                  `Encountered an error when validating repo with repoID ` +
+                  `${project.repoID}. Throwing it out of the indexing process.`
+                );
                 return done();
               }
-              // TODO: only push if no errors
+              // only push if we haven't encountered errors
               this.push(formattedProject);
               return done();
             });

@@ -95,6 +95,14 @@ class Validator {
     ], (err) => {
       if (err) {
         this.logger.error(err);
+      } else {
+        // check to see if we encountered any validation errors
+        if (result.issues.errors.length) {
+          // if we encountered any, make a new error to return in the callback
+          err = new Error(
+            `Encountered ${result.issues.errors.length} validation errors.`
+          );
+        }
       }
       // NOTE: need to buffer because ajs' promises don't work
       setTimeout(() => { callback(err, result); }, 10);
