@@ -52,7 +52,7 @@ class Reporter {
     let file = `${config.REPORT_FILEPATH}`;
     Jsonfile.writeFile(file, this.report, (err) => {
       if (err) {
-        logger.error(err);
+        this.logger.error(err);
       }
       return callback(err);
     })
