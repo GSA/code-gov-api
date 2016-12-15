@@ -81,7 +81,8 @@ class AgencyJsonStream extends Transform {
       Reporter.reportMetadata(agencyName, { agency });
       if (err) {
         this.logger.error(`Error when fetching (${agencyUrl}).`);
-        Reporter.reportStatus(agencyName, "FAILURE: FETCH FAILED");
+        Reporter.reportStatus(agencyName,
+          `FAILURE: ERROR WHEN FETCHING (${err.message})`);
         return next();
       } else if (agencyData === {}) {
         this.logger.warning(`Missing data in (${agencyUrl}).`);
