@@ -48,7 +48,11 @@ function fetchReposForOrg(org, callback) {
       return callback(err);
     }
 
-    repos = repos.concat(res);
+    // filter out the forks
+    let nonForkedRepos = res.filter((repo) => {
+      return !repo.fork;
+    });
+    repos = repos.concat(nonForkedRepos);
     if (github.hasNextPage(res)) {
       setTimeout(() => {
         logger.info(`Fetching another page of repos for org [${ghOrgName}]...`);
