@@ -8,23 +8,25 @@ block content
       th Type
       th Issue
     each project in statusData.issues
-      each error in project.issues.errors
-        tr
-          td
-            =project.organization
-          td
-            =project.project_name
-          td.failure ERROR
-          td
-            pre
-              =JSON.stringify(error, null, 2)
-      each warning in project.issues.warnings
-        tr
-          td
-            =project.organization
-          td
-            =project.project_name
-          td.warning WARNING
-          td
-            pre
-              =JSON.stringify(warning, null, 2)
+      if project.issues.errors
+        each error in project.issues.errors
+          tr
+            td
+              =project.organization
+            td
+              =project.project_name
+            td.failure ERROR
+            td
+              pre
+                =JSON.stringify(error, null, 2)
+      if project.issues.warnings
+        each warning in project.issues.warnings
+          tr
+            td
+              =project.organization
+            td
+              =project.project_name
+            td.warning WARNING
+            td
+              pre
+                =JSON.stringify(warning, null, 2)
