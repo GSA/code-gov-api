@@ -16,6 +16,7 @@ const cookieParser        = require('cookie-parser');
 const bodyParser          = require('body-parser');
 const cors                = require('cors');
 const pug                 = require("pug");
+const diff                = require("diff");
 const config              = require("./config");
 const searcherAdapter     = require("./utils/search_adapters/elasticsearch_adapter");
 const Searcher            = require("./services/searcher");
