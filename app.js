@@ -204,6 +204,33 @@ router.get(`/status/:agency`, (req, res, next) => {
   });
 });
 
+// router.get(`/status/:agency/suggestions`, (req, res, next) => {
+//   let agency = req.params.agency;
+//   async.parallel([
+//     (next) => {
+//       fs.readFile(config.)
+//     },
+//     (next) => {
+//
+//     }
+//   ], (err, jsonObjectsToDiff) => {
+//
+//   });
+//   fs.readFile(config.REPORT_FILEPATH, (err, data) => {
+//     if (err) {
+//       logger.error(err);
+//       return res.sendStatus(500);
+//     }
+//     let title = "Code.gov API Status for " + agency;
+//     let statusData = JSON.parse(data)[agency];
+//     if (statusData) {
+//       return res.render('status_for_agency', { title, statusData });
+//     } else {
+//       return res.sendStatus(404);
+//     }
+//   });
+// });
+
 router.get('/version', (req, res, next) => {
   const _sendVersionResponse = (gitHash) => {
     res.json({
