@@ -126,6 +126,9 @@ class AgencyJsonStream extends Transform {
               }
               // only push if we haven't encountered errors
               this.push(formattedProject);
+              // write the file to the `fetched`
+              // TODO: add logic here
+              // TODO: create an elasticsearch query response reader
               return done();
             });
           });
