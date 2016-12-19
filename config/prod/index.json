@@ -1,4 +1,5 @@
 {
   "AGENCY_ENDPOINTS_FILE": "/config/prod/agency_endpoints.json",
-  "REPORT_FILEPATH": "tmp/status_report.json"
+  "REPORT_FILEPATH": "tmp/status_report.json",
+  "AGENCIES_TO_OMIT_FROM_STATUS": ["EOP"]
 }

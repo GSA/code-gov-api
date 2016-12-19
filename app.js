@@ -167,7 +167,9 @@ router.get('/status.json', (req, res, next) => {
       logger.error(err);
       return res.sendStatus(500);
     }
-    res.json(JSON.parse(data));
+    let statusData = _.omit(JSON.parse(data),
+      config.AGENCIES_TO_OMIT_FROM_STATUS);
+    res.json(statusData);
   });
 });
 
@@ -178,7 +180,8 @@ router.get(`/status`, (req, res, next) => {
       return res.sendStatus(500);
     }
     let title = "Code.gov API Status";
-    let statusData = JSON.parse(data);
+    let statusData = _.omit(JSON.parse(data),
+      config.AGENCIES_TO_OMIT_FROM_STATUS);
     res.render('status', { title, statusData });
   });
 });
