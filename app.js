@@ -165,7 +165,10 @@ router.get('/repo.json', (req, res, next) => {
 });
 
 router.get('/status.json', (req, res, next) => {
-  fs.readFile(config.REPORT_FILEPATH, (err, data) => {
+  const reportFilepath = path.join(
+    __dirname, config.REPORT_FILEPATH
+  );
+  fs.readFile(reportFilepath, (err, data) => {
     if (err) {
       logger.error(err);
       return res.sendStatus(500);
