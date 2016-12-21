@@ -6,6 +6,7 @@
 
 const _                   = require("lodash");
 const fs                  = require("fs");
+const async               = require("async");
 const express             = require("express");
 const request             = require("request");
 const path                = require("path");
@@ -16,6 +17,7 @@ const cookieParser        = require('cookie-parser');
 const bodyParser          = require('body-parser');
 const cors                = require('cors');
 const pug                 = require("pug");
+const Jsonfile            = require("jsonfile");
 const diff                = require("diff");
 const config              = require("./config");
 const searcherAdapter     = require("./utils/search_adapters/elasticsearch_adapter");
