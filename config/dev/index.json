@@ -1,5 +1,10 @@
 {
   "AGENCY_ENDPOINTS_FILE": "/config/dev/agency_endpoints.json",
-  "REPORT_FILEPATH": "tmp/status_report.json",
-  "AGENCIES_TO_OMIT_FROM_STATUS": []
+  "REPORT_FILEPATH": "/data/status/report.json",
+  "DISCOVERED_DIR": "/data/discovered",
+  "FETCHED_DIR": "/data/fetched",
+  "DIFFED_DIR": "/data/diffed",
+  "AGENCIES_TO_OMIT_FROM_STATUS": [],
+  "ES_HOST": "localhost",
+  "ES_PORT": "9200"
 }
