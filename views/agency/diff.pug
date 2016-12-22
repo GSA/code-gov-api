@@ -1,0 +1,8 @@
+extends ../layout
+
+block content
+  div(style='white-space:pre; padding:10px')
+    each part in diffChunks
+      - var color = part.added ? "green" : part.removed ? "red" : "grey";
+      span(class=color)
+        =part.value
