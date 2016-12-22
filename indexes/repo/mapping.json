@@ -75,7 +75,13 @@
       },
       "tags": {
         "type": "string",
-        "analyzer": "keyword_ci"
+        "analyzer": "keyword_ci",
+        "fields": {
+          "_fulltext": {
+            "type": "string",
+            "analyzer": "englishfulltext"
+          }
+        }
       },
       "languages": {
         "type": "string",
@@ -152,12 +158,28 @@
         }
       },
       "partners": {
-        "type": "string",
-        "analyzer": "keyword_ci",
-        "fields": {
-          "_fulltext": {
+        "type": "nested",
+        "include_in_root": true,
+        "properties": {
+          "name": {
             "type": "string",
-            "analyzer": "englishfulltext"
+            "analyzer": "keyword_ci",
+            "fields": {
+              "_fulltext": {
+                "type": "string",
+                "analyzer": "englishfulltext"
+              }
+            }
+          },
+          "email": {
+            "type": "string",
+            "analyzer": "keyword_ci",
+            "fields": {
+              "_fulltext": {
+                "type": "string",
+                "analyzer": "englishfulltext"
+              }
+            }
           }
         }
       },
@@ -182,6 +204,9 @@
       },
       "exemption": {
         "type": "byte"
+      },
+      "exemption_text": {
+        "type": "string"
       }
     }
   }

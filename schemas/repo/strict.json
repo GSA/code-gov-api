@@ -2,9 +2,6 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
-    "version": {
-      "type": "string"
-    },
     "agency": {
       "type": "object",
       "properties": {
@@ -125,36 +122,27 @@
     },
     "exemption_text": {
       "type": "string"
-    }
+    },
     "updated": {
       "type": "object",
       "properties": {
         "metadataLastUpdated": {
           "type": "string",
-          "oneOf": [
-            { "format": "date" },
-            { "format": "date-time" }
-          ]
+          "format": "date-time"
         },
         "lastCommit": {
           "type": "string",
-          "oneOf": [
-            { "format": "date" },
-            { "format": "date-time" }
-          ]
+          "format": "date-time"
         },
         "sourceCodeLastModified": {
           "type": "string",
-          "oneOf": [
-            { "format": "date" },
-            { "format": "date-time" }
-          ]
+          "format": "date-time"
         }
       }
     }
   },
   "required": [
-    "version", "name", "description", "license", "openSourceProject",
+    "name", "description", "license", "openSourceProject",
     "governmentWideReuseProject", "tags", "contact", "repository", "homepage"
   ]
 }
