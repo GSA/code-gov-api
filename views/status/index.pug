@@ -1,4 +1,4 @@
-extends layout
+extends ../layout
 
 block content
   p(style="padding: 10px; width: 720px;")
@@ -24,7 +24,8 @@ block content
       th(colspan=2) Agency
       th Code.json Link
       th(style="width:400px;") Status
-      th More
+      th Issues
+      th Discovered
     each data in statusDataArr
       tr
         td
@@ -48,4 +49,6 @@ block content
             =data.status
         td
           if data.issues.length
-            a(href="status/" + data.metadata.agency.acronym) view issues &rarr;
+            a(href="status/" + data.metadata.agency.acronym + "/issues") view issues &rarr;
+        td
+          a(href="status/" + data.metadata.agency.acronym + "/discovered") view discovered repos &rarr;

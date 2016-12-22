@@ -195,7 +195,7 @@ router.get(`/status`, (req, res, next) => {
   });
 });
 
-router.get(`/status/:agency`, (req, res, next) => {
+router.get(`/status/:agency/issues`, (req, res, next) => {
   let agency = req.params.agency.toUpperCase();
   const reportFilepath = _getRelativeFilepath(config.REPORT_FILEPATH);
   fs.readFile(reportFilepath, (err, data) => {
@@ -206,7 +206,7 @@ router.get(`/status/:agency`, (req, res, next) => {
     let title = "Code.gov API Status for " + agency;
     let statusData = JSON.parse(data)[agency];
     if (statusData) {
-      return res.render('agency/status', { title, statusData });
+      return res.render('status/agency/issues', { title, statusData });
     } else {
       return res.sendStatus(404);
     }
