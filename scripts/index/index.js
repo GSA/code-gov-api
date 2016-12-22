@@ -3,6 +3,8 @@ const async                 = require("async");
 const RepoIndexer           = require("./repo/index.js");
 const TermIndexer           = require("./term/index.js");
 
+const Logger                = require("../../utils/logger");
+
 /**
  * Defines the class responsible for creating and managing the elasticsearch indexes
  *
