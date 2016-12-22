@@ -1,7 +1,7 @@
 const request             = require("request");
 const async               = require("async");
 const _                   = require("lodash");
-const Writable            = require("stream").Readable;
+const Readable            = require("stream").Readable;
 const JSONStream          = require("JSONStream");
 const moment              = require("moment");
 
@@ -17,16 +17,23 @@ class SearchStream extends Readable {
     this.searchQuery = searchQuery;
     this.logger = logger;
     this.from = 0;
+    this.current = -1;
   }
 
   _read() {
+    // avoid making extra calls
+    if (this.current === this.from) {
+      return;
+    }
+
     let searchQuery = _.merge(this.searchQuery, {
       "body": {
         "from": this.from
       }
     });
-    this.logger.info(`Streaming search for ${searchQuery}...`);
-    this.client.searchQuery(searchQuery, (err, res) => {
+    this.logger.info(`Streaming search for:`, searchQuery);
+    this.current = this.from;
+    this.client.search(searchQuery, (err, res) => {
       if (err) {
         this.logger.error(err);
         return this.push(null);
@@ -40,9 +47,14 @@ class SearchStream extends Readable {
       let results = res.hits.hits.map((result) => {
         return result._source;
       });
-      this.push(results);
       this.from += results.length;
+
+      results.forEach((result) => {
+        this.push(result);
+      });
     });
   }
 
 }
+
+module.exports = SearchStream;
