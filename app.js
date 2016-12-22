@@ -164,10 +164,12 @@ router.get('/repo.json', (req, res, next) => {
   res.json(repoJson["repo"]["properties"]);
 });
 
+const _getRelativeFilepath = (filepath) => {
+  return path.join(__dirname, filepath);
+}
+
 router.get('/status.json', (req, res, next) => {
-  const reportFilepath = path.join(
-    __dirname, config.REPORT_FILEPATH
-  );
+  const reportFilepath = _getRelativeFilepath(config.REPORT_FILEPATH);
   fs.readFile(reportFilepath, (err, data) => {
     if (err) {
       logger.error(err);
@@ -180,7 +182,8 @@ router.get('/status.json', (req, res, next) => {
 });
 
 router.get(`/status`, (req, res, next) => {
-  fs.readFile(config.REPORT_FILEPATH, (err, data) => {
+  const reportFilepath = _getRelativeFilepath(config.REPORT_FILEPATH);
+  fs.readFile(reportFilepath, (err, data) => {
     if (err) {
       logger.error(err);
       return res.sendStatus(500);
@@ -194,7 +197,8 @@ router.get(`/status`, (req, res, next) => {
 
 router.get(`/status/:agency`, (req, res, next) => {
   let agency = req.params.agency.toUpperCase();
-  fs.readFile(config.REPORT_FILEPATH, (err, data) => {
+  const reportFilepath = _getRelativeFilepath(config.REPORT_FILEPATH);
+  fs.readFile(reportFilepath, (err, data) => {
     if (err) {
       logger.error(err);
       return res.sendStatus(500);
@@ -211,7 +215,10 @@ router.get(`/status/:agency`, (req, res, next) => {
 
 router.get(`/status/:agency/fetched`, (req, res, next) => {
   let agency = req.params.agency.toUpperCase();
-  Jsonfile.readFile(`${config.FETCHED_DIR}/${agency}.json`, (err, data) => {
+  const fetchedFilepath = _getRelativeFilepath(
+    `${config.FETCHED_DIR}/${agency}.json`
+  );
+  Jsonfile.readFile(fetchedFilepath, (err, data) => {
     if (err) {
       logger.error(err);
       return res.sendStatus(500);
@@ -223,7 +230,10 @@ router.get(`/status/:agency/fetched`, (req, res, next) => {
 
 router.get(`/status/:agency/discovered`, (req, res, next) => {
   let agency = req.params.agency.toUpperCase();
-  Jsonfile.readFile(`${config.DISCOVERED_DIR}/${agency}.json`, (err, data) => {
+  const discoveredFilepath = _getRelativeFilepath(
+    `${config.DISCOVERED_DIR}/${agency}.json`
+  );
+  Jsonfile.readFile(discoveredFilepath, (err, data) => {
     if (err) {
       logger.error(err);
       return res.sendStatus(500);
