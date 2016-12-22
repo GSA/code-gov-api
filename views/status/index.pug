@@ -49,6 +49,6 @@ block content
             =data.status
         td
           if data.issues.length
-            a(href=data.metadata.agency.acronym + "/issues") view issues &rarr;
+            a(href="status/" + data.metadata.agency.acronym + "/issues") view issues &rarr;
         td
-          a(href=data.metadata.agency.acronym + "/discovered") view discovered repos &rarr;
+          a(href="status/" + data.metadata.agency.acronym + "/discovered") view discovered repos &rarr;
