@@ -2,6 +2,7 @@ const _                   = require("lodash");
 const Bodybuilder         = require("bodybuilder");
 const moment              = require("moment");
 
+const config              = require("../../config");
 const Utils               = require("../../utils");
 const Logger              = require("../../utils/logger");
 const repoMapping         = require("../../indexes/repo/mapping.json");
@@ -9,6 +10,8 @@ const repoMapping         = require("../../indexes/repo/mapping.json");
 const DATE_FORMAT = "YYYY-MM-DD";
 const REPO_RESULT_SIZE_MAX = 50;
 const REPO_RESULT_SIZE_DEFAULT = 10;
+const TERM_RESULT_SIZE_MAX = 100;
+const TERM_RESULT_SIZE_DEFAULT = 5;
 const searchPropsByType =
   Utils.getFlattenedMappingPropertiesByType(repoMapping["repo"]);
 
@@ -420,6 +423,125 @@ class Searcher {
         repos: repos
       }
       return callback(null, formattedRes);
+    });
+  }
+
+  /***********************************************************************
+                              SEARCH FOR TERMS
+   ***********************************************************************/
+
+  _searchTermsQuery(q) {
+    // TODO: use BodyBuilder more
+    let body = new Bodybuilder();
+
+    // add query terms (boost when phrase is matched)
+    if (q.term) {
+      body.query("match", "term_suggest", q.term);
+      body.query("match", "term_suggest", q.term, {type: "phrase"});
+    }
+
+    // set the term types (use defaults if not supplied)
+    let termTypes = config.TERM_TYPES_TO_SEARCH;
+    if (q.term_type) {
+      if (q.term_type instanceof Array) {
+        termTypes = q.term_type;
+      } else {
+        termTypes = [q.term_type];
+      }
+    }
+    termTypes.forEach((termType) => {
+      body.orFilter("term", "term_type", termType);
+    });
+
+    // build the query and add custom fields (that bodyparser can't handle)
+    let functionQuery = body.build("v2");
+    // boost exact match
+    if (q.term) {
+      functionQuery.query.bool.should = {
+        "match": {
+          "term": q.term
+        }
+      };
+    }
+
+    // add scoring function
+    functionQuery.functions = [{
+      "field_value_factor": {
+        "field": "count_normalized",
+        "factor": .25
+      }
+    }];
+    functionQuery.boost_mode = "multiply";
+
+    // set the size, from
+    let size = q.size || TERM_RESULT_SIZE_DEFAULT;
+    size = size > TERM_RESULT_SIZE_MAX ? TERM_RESULT_SIZE_MAX : size;
+    let from = q.from ? q.from : 0;
+
+    // finalize the query
+    let query = {
+      "query": { "function_score": functionQuery },
+      "size": size,
+      "from": from
+    };
+
+     //logger.info(query);
+    return query;
+  }
+
+  searchTerms(q, callback) {
+    // logger.info("Term searching", q);
+    this.client.search({
+      index: 'terms',
+      type: 'term',
+      body: this._searchTermsQuery(q)
+    }, (err, res) => {
+      if(err) {
+        logger.error(err);
+        return callback(err);
+      }
+      // return callback(null, res);
+      let formattedRes = {
+        total: res.hits.total,
+        terms: _.map(res.hits.hits, (hit) => {
+          let source = hit._source;
+          source.score = hit._score;
+          return source;
+        })
+      }
+      return callback(null, formattedRes);
+    });
+  }
+
+  _searchTermByKey(key) {
+    let body = new Bodybuilder();
+
+    body.query("match", "term_key", key);
+
+    let query = body.build("v2");
+    // logger.info(query);
+
+    return query;
+  }
+
+  // queries on term key
+  getTermByKey(key, callback) {
+    logger.info("Getting term", {key});
+    this.client.search({
+      index: 'terms',
+      type: 'term',
+      body: this._searchTermByKey(key)
+    }, (err, res) => {
+      if(err) {
+        logger.error(err);
+        return callback(err);
+      }
+      // return callback(null, res);
+      if(!res.hits || !res.hits.hits || !res.hits.hits[0]) {
+        return callback(null, {});
+      }
+      let term = Utils.omitPrivateKeys(res.hits.hits[0]._source);
+      return callback(null, term);
     });
   }
 

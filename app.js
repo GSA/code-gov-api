@@ -153,6 +153,31 @@ router.post('/repos', (req, res, next) => {
   queryReposAndSendResponse(q, res, next);
 });
 
+/* get key terms that can be used to search through repos */
+router.get('/terms', (req, res, next) => {
+  let q = _.pick(req.query, ["term", "term_type", "size", "from"]);
+
+  searcher.searchTerms(q, (err, terms) => {
+    // TODO: add better error handling
+    if(err) {
+      return res.sendStatus(500);
+    }
+    res.json(terms);
+  });
+});
+
+router.post('/terms', (req, res, next) => {
+  let q = _.pick(req.body, ["term", "term_type", "size", "from"]);
+
+  searcher.searchTerms(q, (err, terms) => {
+    // TODO: add better error handling
+    if(err) {
+      return res.sendStatus(500);
+    }
+    res.json(terms);
+  });
+});
+
 router.get('/repo.json', (req, res, next) => {
   let repoJson = Utils.omitPrivateKeys(repoMapping);
   let excludeKeys = [
