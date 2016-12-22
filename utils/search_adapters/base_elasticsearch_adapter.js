@@ -1,4 +1,4 @@
-const CONFIG                        = require("../config_loader");
+const CONFIG                        = require("../../config");
 const AbstractSearchAdapter         = require("./abstract_search_adapter");
 
 /**

@@ -6,7 +6,7 @@ const ElasticSearch       = require("elasticsearch");
 const moment              = require("moment");
 
 const Logger              = require("../../utils/logger");
-const CONFIG              = require("../../utils/config_loader");
+const CONFIG              = require("../../config");
 
 class ElasticSearchLogger extends Logger {
   get DEFAULT_LOGGER_NAME() {
