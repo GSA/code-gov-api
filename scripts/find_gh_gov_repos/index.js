@@ -14,7 +14,7 @@ const Logger               = require("../../utils/logger");
 const agenciesToCrawl      = require("./agencies_to_crawl.json").agencies;
 
 const API_CALL_PAUSE_AMOUNT = 2500;
-const OUTPUT_DIR = 'tmp';
+const OUTPUT_DIR = 'data/discovered';
 
 let logger = new Logger({ name: "find-gh-gov-repos" });
 
