@@ -1,6 +1,6 @@
 {
   "USDA": {
-    "status": "FAILURE: ERROR WHEN FETCHING (connect ECONNREFUSED 162.79.29.12:443)",
+    "status": "FAILURE: ERROR WHEN FETCHING (connect ETIMEDOUT 162.79.29.12:443)",
     "issues": [],
     "metadata": {
       "agency": {
