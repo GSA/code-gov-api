@@ -9,16 +9,20 @@ a {
   color: #2b7bba;
 }
 
-.failure {
+.failure, .red {
   color: #800;
 }
 
-.warning {
+.warning, .yellow {
   color: #880;
 }
 
-.success {
+.success, .green {
   color: #080;
+}
+
+.grey {
+  color: #666;
 }
 
 h1 {
