@@ -26,6 +26,12 @@ const ES_PARAMS = {
 
 // TODO: need to supplement with events
 
+/**
+ * Fetches code.json from agency endpoint and processes it into the appropriate
+ * format.
+ *
+ * @class AgencyJsonStream
+ */
 class AgencyJsonStream extends Transform {
 
   constructor(repoIndexer) {
@@ -202,6 +208,11 @@ class AgencyJsonStream extends Transform {
 
 }
 
+/**
+ * Indexes the repo in elasticsearch.
+ *
+ * @class AgencyRepoIndexerStream
+ */
 class AgencyRepoIndexerStream extends Writable {
 
   constructor(repoIndexer) {

@@ -9,13 +9,15 @@
   },
   "scripts": {
     "start": "node app.js | ./node_modules/bunyan/bin/bunyan",
-    "index": "node ./scripts/index_repos/index.js | ./node_modules/bunyan/bin/bunyan",
+    "index": "node ./scripts/index/index.js | ./node_modules/bunyan/bin/bunyan",
+    "index-repos": "node ./scripts/index/repo/index.js | ./node_modules/bunyan/bin/bunyan",
+    "index-terms": "node ./scripts/index/term/index.js | ./node_modules/bunyan/bin/bunyan",
     "create-diffs": "node ./scripts/create_diffs/index.js --max_old_space_size=8192 | ./node_modules/bunyan/bin/bunyan",
     "find-gh-gov-orgs": "node ./scripts/find_gh_gov_orgs/index.js | ./node_modules/bunyan/bin/bunyan",
     "find-gh-gov-repos": "node ./scripts/find_gh_gov_repos/index.js | ./node_modules/bunyan/bin/bunyan"
   },
   "dependencies": {
-    "JSONStream": "1.1.4",
+    "JSONStream": "1.3.0",
     "ajv": "4.9.2",
     "async": "2.0.1",
     "body-parser": "1.15.2",

@@ -1,15 +1,15 @@
 const async                 = require("async");
 const path                  = require("path");
-const config                = require("../../config");
-const RepoIndexer           = require("../../services/indexer/repo");
-const AliasSwapper          = require("../../services/indexer/alias_swapper");
-const IndexCleaner          = require("../../services/indexer/index_cleaner");
-const IndexOptimizer        = require("../../services/indexer/index_optimizer");
-const Logger                = require("../../utils/logger");
-const elasticsearchAdapter  = require("../../utils/search_adapters/elasticsearch_adapter");
+const config                = require("../../../config");
+const RepoIndexer           = require("../../../services/indexer/repo");
+const AliasSwapper          = require("../../../services/indexer/alias_swapper");
+const IndexCleaner          = require("../../../services/indexer/index_cleaner");
+const IndexOptimizer        = require("../../../services/indexer/index_optimizer");
+const Logger                = require("../../../utils/logger");
+const elasticsearchAdapter  = require("../../../utils/search_adapters/elasticsearch_adapter");
 
 const DAYS_TO_KEEP = 7;
-const AGENCY_ENDPOINTS_FILE = path.join(__dirname, "../../", config.AGENCY_ENDPOINTS_FILE);
+const AGENCY_ENDPOINTS_FILE = path.join(__dirname, "../../../", config.AGENCY_ENDPOINTS_FILE);
 
 /**
  * Defines the class responsible for creating and managing the elasticsearch indexes
@@ -23,13 +23,13 @@ class Indexer {
    *
    */
   constructor() {
-    this.logger = new Logger({name: "indexer"});
+    this.logger = new Logger({name: "repo-index-script"});
   }
 
   /**
-   * Index the trials contained in the trials file
+   * Index the repos contained in the agency endpoints file
    */
-  index() {
+  index(callback) {
 
     this.logger.info("Started indexing.");
 
@@ -38,7 +38,7 @@ class Indexer {
     async.waterfall([
       (next) => { RepoIndexer.init(elasticsearchAdapter, AGENCY_ENDPOINTS_FILE, next); },
       (info, next) => {
-        // save out alias and trial index name
+        // save out alias and repo index name
         repoIndexInfo = info;
         return next(null);
       },
@@ -54,15 +54,20 @@ class Indexer {
       } else {
         this.logger.info("Finished indexing.");
       }
+      return callback(err);
     });
   }
 }
 
 // If we are running this module directly from Node this code will execute.
-// This will index all trials taking our default input.
+// This will index all repos taking our default input.
 if (require.main === module) {
   let indexer = new Indexer();
-  indexer.index(AGENCY_ENDPOINTS_FILE);
+  indexer.index((err) => {
+    if (err) {
+      indexer.logger.error(err);
+    }
+  });
 }
 
 module.exports = Indexer;
