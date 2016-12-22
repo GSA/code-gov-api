@@ -10,6 +10,7 @@
   "scripts": {
     "start": "node app.js | ./node_modules/bunyan/bin/bunyan",
     "index": "node ./scripts/index_repos/index.js | ./node_modules/bunyan/bin/bunyan",
+    "create-diffs": "node ./scripts/create_diffs/index.js --max_old_space_size=8192 | ./node_modules/bunyan/bin/bunyan",
     "find-gh-gov-orgs": "node ./scripts/find_gh_gov_orgs/index.js | ./node_modules/bunyan/bin/bunyan",
     "find-gh-gov-repos": "node ./scripts/find_gh_gov_repos/index.js | ./node_modules/bunyan/bin/bunyan"
   },
