@@ -7,7 +7,9 @@ const Writable            = require("stream").Writable;
 const Transform           = require("stream").Transform;
 const JSONStream          = require("JSONStream");
 const moment              = require("moment");
+const Jsonfile            = require("jsonfile");
 
+const config              = require("../../../config");
 const Validator           = require("../../validator");
 const Formatter           = require("../../formatter");
 const Reporter            = require("../../reporter");
@@ -32,15 +34,33 @@ class AgencyJsonStream extends Transform {
     this.logger = repoIndexer.logger;
   }
 
+  _saveFetchedToFile(jsonData, callback) {
+    Jsonfile.spaces = 2;
+    let fetchedFilepath = path.join(
+      __dirname,
+      "../../..",
+      config.FETCHED_DIR,
+      `${jsonData.agency}.json`
+    );
+    this.logger.info(`Writing fetched output to ${fetchedFilepath}...`);
+    Jsonfile.writeFile(fetchedFilepath, jsonData, (err) => {
+      if (err) {
+        this.logger.error(err);
+        return callback(err);
+      }
+      callback(null, jsonData);
+    });
+  }
+
   _handleResponse(data, callback) {
     let agencyData = {};
     try {
       agencyData = JSON.parse(data);
     } catch(err) {
       this.logger.error(err);
-      return callback(err);
+      return this._saveFetchedToFile({}, callback);
     }
-    return callback(null, agencyData);
+    return this._saveFetchedToFile(agencyData, callback);
   }
 
   _fetchAgencyReposRemote(agencyUrl, callback) {
