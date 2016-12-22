@@ -395,6 +395,7 @@ class Searcher {
     // logger.info(query);
     return query;
   }
+
   searchRepos(q, callback) {
     logger.info("Repo searching", q);
 
