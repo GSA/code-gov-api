@@ -49,8 +49,12 @@ class Reporter {
 
   writeReportToFile(callback) {
     this.logger.info("Writing report to file...");
-    let file = `${config.REPORT_FILEPATH}`;
-    Jsonfile.writeFile(file, this.report, (err) => {
+    const reportFilepath = path.join(
+      __dirname,
+      "../../",
+      config.REPORT_FILEPATH
+    );
+    Jsonfile.writeFile(reportFilepath, this.report, (err) => {
       if (err) {
         this.logger.error(err);
       }
