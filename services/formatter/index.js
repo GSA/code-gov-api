@@ -37,7 +37,7 @@ class Formatter {
     }
   }
 
-  formatRepo(repo, callback) {
+  _formatRepo(repo) {
     // add repoId using a combination of agency acronym, organization, and
     // project name fields
     let repoId = Utils.transformStringToKey([
@@ -54,9 +54,19 @@ class Formatter {
 
     this._formatDates(repo);
 
-    this.logger.info(`Formatted repo ${repo.name} (${repo.repoID}).`);
+    return repo;
+  }
 
-    // TODO: error handling
+  formatRepo(repo, callback) {
+    var formattedRepo;
+    try {
+      formattedRepo = this._formatRepo(repo);
+    } catch (err) {
+      this.logger.error(`Error when formatting repo: ${err}`);
+      return callback(err, repo);
+    }
+
+    this.logger.info(`Formatted repo ${repo.name} (${repo.repoID}).`);
     return callback(null, repo);
   }
 
