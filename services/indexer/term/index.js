@@ -55,8 +55,6 @@ class RepoTermLoaderStream extends Transform {
     config.TERM_TYPES_TO_INDEX.forEach((termType) => {
       this.termMaxes[termType] = 0;
     });
-
-    this.count = 0;
   }
 
   _loadTermsFromRepo(repo, callback) {
@@ -85,7 +83,6 @@ class RepoTermLoaderStream extends Transform {
       }
     });
 
-    this.count++;
     return callback();
   }
 
@@ -119,7 +116,6 @@ class RepoTermLoaderStream extends Transform {
   }
 
   _transform(repo, enc, callback) {
-    this.logger.warning(this.count);
     this._loadTermsFromRepo(repo, callback);
   }
 
