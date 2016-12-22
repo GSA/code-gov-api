@@ -1,6 +1,6 @@
 {
   "USDA": {
-    "status": "FAILURE: ERROR WHEN FETCHING (connect ETIMEDOUT 162.79.29.12:443)",
+    "status": "FAILURE: ERROR WHEN FETCHING (connect ECONNREFUSED 162.79.29.12:443)",
     "issues": [],
     "metadata": {
       "agency": {
@@ -32912,11 +32912,467 @@
     }
   },
   "NSF": {
-    "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token \t in JSON at position 16621)",
-    "issues": [],
+    "status": "PARTIAL SUCCESS: 24 WARNINGS",
+    "issues": [
+      {
+        "repoID": "nsf_ember_common_components",
+        "agency": "National Science Foundation",
+        "project_name": "ember-common-components",
+        "issues": {
+          "warnings": [
+            {
+              "keyword": "required",
+              "dataPath": "",
+              "schemaPath": "#/required",
+              "params": {
+                "missingProperty": "homepage"
+              },
+              "message": "should have required property 'homepage'"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "repoID": "nsf_access_management_service",
+        "agency": "National Science Foundation",
+        "project_name": "access-management-service",
+        "issues": {
+          "warnings": [
+            {
+              "keyword": "required",
+              "dataPath": "",
+              "schemaPath": "#/required",
+              "params": {
+                "missingProperty": "repository"
+              },
+              "message": "should have required property 'repository'"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "repoID": "nsf_adhoc_review_service",
+        "agency": "National Science Foundation",
+        "project_name": "adhoc-review-service",
+        "issues": {
+          "warnings": [
+            {
+              "keyword": "required",
+              "dataPath": "",
+              "schemaPath": "#/required",
+              "params": {
+                "missingProperty": "repository"
+              },
+              "message": "should have required property 'repository'"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "repoID": "nsf_award_budget_service",
+        "agency": "National Science Foundation",
+        "project_name": "award-budget-service",
+        "issues": {
+          "warnings": [
+            {
+              "keyword": "required",
+              "dataPath": "",
+              "schemaPath": "#/required",
+              "params": {
+                "missingProperty": "repository"
+              },
+              "message": "should have required property 'repository'"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "repoID": "nsf_award_service",
+        "agency": "National Science Foundation",
+        "project_name": "award-service",
+        "issues": {
+          "warnings": [
+            {
+              "keyword": "required",
+              "dataPath": "",
+              "schemaPath": "#/required",
+              "params": {
+                "missingProperty": "repository"
+              },
+              "message": "should have required property 'repository'"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "repoID": "nsf_enterprise_reporting_service",
+        "agency": "National Science Foundation",
+        "project_name": "enterprise-reporting-service",
+        "issues": {
+          "warnings": [
+            {
+              "keyword": "required",
+              "dataPath": "",
+              "schemaPath": "#/required",
+              "params": {
+                "missingProperty": "repository"
+              },
+              "message": "should have required property 'repository'"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "repoID": "nsf_meeting_service",
+        "agency": "National Science Foundation",
+        "project_name": "meeting-service",
+        "issues": {
+          "warnings": [
+            {
+              "keyword": "required",
+              "dataPath": "",
+              "schemaPath": "#/required",
+              "params": {
+                "missingProperty": "repository"
+              },
+              "message": "should have required property 'repository'"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "repoID": "nsf_proposal_service",
+        "agency": "National Science Foundation",
+        "project_name": "proposal-service",
+        "issues": {
+          "warnings": [
+            {
+              "keyword": "required",
+              "dataPath": "",
+              "schemaPath": "#/required",
+              "params": {
+                "missingProperty": "repository"
+              },
+              "message": "should have required property 'repository'"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "repoID": "nsf_proposal_data_service",
+        "agency": "National Science Foundation",
+        "project_name": "proposal-data-service",
+        "issues": {
+          "warnings": [
+            {
+              "keyword": "required",
+              "dataPath": "",
+              "schemaPath": "#/required",
+              "params": {
+                "missingProperty": "repository"
+              },
+              "message": "should have required property 'repository'"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "repoID": "nsf_reviewer_service",
+        "agency": "National Science Foundation",
+        "project_name": "reviewer-service",
+        "issues": {
+          "warnings": [
+            {
+              "keyword": "required",
+              "dataPath": "",
+              "schemaPath": "#/required",
+              "params": {
+                "missingProperty": "repository"
+              },
+              "message": "should have required property 'repository'"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "repoID": "nsf_solicitation_data_service",
+        "agency": "National Science Foundation",
+        "project_name": "solicitation-data-service",
+        "issues": {
+          "warnings": [
+            {
+              "keyword": "required",
+              "dataPath": "",
+              "schemaPath": "#/required",
+              "params": {
+                "missingProperty": "repository"
+              },
+              "message": "should have required property 'repository'"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "repoID": "nsf_proposal_management_service",
+        "agency": "National Science Foundation",
+        "project_name": "proposal-management-service",
+        "issues": {
+          "warnings": [
+            {
+              "keyword": "required",
+              "dataPath": "",
+              "schemaPath": "#/required",
+              "params": {
+                "missingProperty": "repository"
+              },
+              "message": "should have required property 'repository'"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "repoID": "nsf_profile_service",
+        "agency": "National Science Foundation",
+        "project_name": "profile-service",
+        "issues": {
+          "warnings": [
+            {
+              "keyword": "required",
+              "dataPath": "",
+              "schemaPath": "#/required",
+              "params": {
+                "missingProperty": "repository"
+              },
+              "message": "should have required property 'repository'"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "repoID": "nsf_reference_data_service",
+        "agency": "National Science Foundation",
+        "project_name": "reference-data-service",
+        "issues": {
+          "warnings": [
+            {
+              "keyword": "required",
+              "dataPath": "",
+              "schemaPath": "#/required",
+              "params": {
+                "missingProperty": "repository"
+              },
+              "message": "should have required property 'repository'"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "repoID": "nsf_system_advisory_service",
+        "agency": "National Science Foundation",
+        "project_name": "system-advisory-service",
+        "issues": {
+          "warnings": [
+            {
+              "keyword": "required",
+              "dataPath": "",
+              "schemaPath": "#/required",
+              "params": {
+                "missingProperty": "repository"
+              },
+              "message": "should have required property 'repository'"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "repoID": "nsf_template_service",
+        "agency": "National Science Foundation",
+        "project_name": "template-service",
+        "issues": {
+          "warnings": [
+            {
+              "keyword": "required",
+              "dataPath": "",
+              "schemaPath": "#/required",
+              "params": {
+                "missingProperty": "repository"
+              },
+              "message": "should have required property 'repository'"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "repoID": "nsf_toggle_service",
+        "agency": "National Science Foundation",
+        "project_name": "toggle-service",
+        "issues": {
+          "warnings": [
+            {
+              "keyword": "required",
+              "dataPath": "",
+              "schemaPath": "#/required",
+              "params": {
+                "missingProperty": "repository"
+              },
+              "message": "should have required property 'repository'"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "repoID": "nsf_document_generation_service",
+        "agency": "National Science Foundation",
+        "project_name": "document-generation-service",
+        "issues": {
+          "warnings": [
+            {
+              "keyword": "required",
+              "dataPath": "",
+              "schemaPath": "#/required",
+              "params": {
+                "missingProperty": "repository"
+              },
+              "message": "should have required property 'repository'"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "repoID": "nsf_file_upload_service",
+        "agency": "National Science Foundation",
+        "project_name": "file-upload-service",
+        "issues": {
+          "warnings": [
+            {
+              "keyword": "required",
+              "dataPath": "",
+              "schemaPath": "#/required",
+              "params": {
+                "missingProperty": "repository"
+              },
+              "message": "should have required property 'repository'"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "repoID": "nsf_search_program_officer_service",
+        "agency": "National Science Foundation",
+        "project_name": "search-program-officer-service",
+        "issues": {
+          "warnings": [
+            {
+              "keyword": "required",
+              "dataPath": "",
+              "schemaPath": "#/required",
+              "params": {
+                "missingProperty": "repository"
+              },
+              "message": "should have required property 'repository'"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "repoID": "nsf_get_user_data_service",
+        "agency": "National Science Foundation",
+        "project_name": "get-user-data-service",
+        "issues": {
+          "warnings": [
+            {
+              "keyword": "required",
+              "dataPath": "",
+              "schemaPath": "#/required",
+              "params": {
+                "missingProperty": "repository"
+              },
+              "message": "should have required property 'repository'"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "repoID": "nsf_search_user_data_service",
+        "agency": "National Science Foundation",
+        "project_name": "search-user-data-service",
+        "issues": {
+          "warnings": [
+            {
+              "keyword": "required",
+              "dataPath": "",
+              "schemaPath": "#/required",
+              "params": {
+                "missingProperty": "repository"
+              },
+              "message": "should have required property 'repository'"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "repoID": "nsf_export_user_service",
+        "agency": "National Science Foundation",
+        "project_name": "export-user-service",
+        "issues": {
+          "warnings": [
+            {
+              "keyword": "required",
+              "dataPath": "",
+              "schemaPath": "#/required",
+              "params": {
+                "missingProperty": "repository"
+              },
+              "message": "should have required property 'repository'"
+            }
+          ],
+          "errors": []
+        }
+      },
+      {
+        "repoID": "nsf_search_divsion_org_service",
+        "agency": "National Science Foundation",
+        "project_name": "search-divsion-org-service",
+        "issues": {
+          "warnings": [
+            {
+              "keyword": "required",
+              "dataPath": "",
+              "schemaPath": "#/required",
+              "params": {
+                "missingProperty": "repository"
+              },
+              "message": "should have required property 'repository'"
+            }
+          ],
+          "errors": []
+        }
+      }
+    ],
     "metadata": {
       "agency": {
-        "id": 20,
         "name": "National Science Foundation",
         "acronym": "NSF",
         "website": "https://nsf.gov/",
