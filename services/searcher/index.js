@@ -109,8 +109,8 @@ class Searcher {
       this._addCommonCutoffForFullText(ftBody, q, "agency._fulltext", 4);
       this._addMatchPhraseForFullText(ftBody, q, "description._fulltext");
       this._addCommonCutoffForFullText(ftBody, q, "description._fulltext");
-      this._addMatchPhraseForFullText(ftBody, q, "projectTags.tag", 4);
-      this._addCommonCutoffForFullText(ftBody, q, "projectTags.tag", 4);
+      this._addMatchPhraseForFullText(ftBody, q, "tags", 4);
+      this._addCommonCutoffForFullText(ftBody, q, "tags", 4);
       this._addMatchForFullText(ftBody, q, "codeLanguage.language", 4);
       this._addMatchForFullText(ftBody, q, "contact.name._fulltext", 4);
       this._addMatchForFullText(ftBody, q, "contact.email._fulltext", 4);

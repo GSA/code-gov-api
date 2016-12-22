@@ -94,7 +94,7 @@ class Validator {
       }
     ], (err) => {
       if (err) {
-        this.logger.error(err);
+        // this.logger.error(err);
       } else {
         // check to see if we encountered any validation errors
         if (result.issues.errors.length) {

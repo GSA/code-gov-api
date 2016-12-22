@@ -6,6 +6,7 @@
 ******************************************************************************/
 
 const _                   = require("lodash");
+const moment              = require("moment");
 const Utils               = require("../../utils");
 const Logger              = require("../../utils/logger");
 
@@ -13,6 +14,27 @@ class Formatter {
 
   constructor() {
     this.logger = new Logger({ name: "formatter" });
+  }
+
+  _formatDate(date) {
+    return moment(date).toJSON();
+  }
+
+  _formatDates(repo) {
+    if (repo.updated) {
+      if (repo.updated.metadataLastUpdated) {
+        repo.updated.metadataLastUpdated =
+          this._formatDate(repo.updated.metadataLastUpdated);
+      }
+      if (repo.updated.lastCommit) {
+        repo.updated.lastCommit =
+          this._formatDate(repo.updated.lastCommit);
+      }
+      if (repo.updated.sourceCodeLastModified) {
+        repo.updated.sourceCodeLastModified =
+          this._formatDate(repo.updated.sourceCodeLastModified);
+      }
+    }
   }
 
   formatRepo(repo, callback) {
@@ -29,6 +51,8 @@ class Formatter {
     if (repo.agency && repo.agency.id) {
       delete repo.agency.id;
     }
+
+    this._formatDates(repo);
 
     this.logger.info(`Formatted repo ${repo.name} (${repo.repoID}).`);
 
