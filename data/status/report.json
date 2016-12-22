@@ -13,7 +13,7 @@
     }
   },
   "DOC": {
-    "status": "FAILURE: MISSING PROJECTS DATA",
+    "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token < in JSON at position 0)",
     "issues": [],
     "metadata": {
       "agency": {
@@ -26,7 +26,7 @@
     }
   },
   "DOD": {
-    "status": "FAILURE: MISSING PROJECTS DATA",
+    "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token < in JSON at position 0)",
     "issues": [],
     "metadata": {
       "agency": {
@@ -39,7 +39,7 @@
     }
   },
   "ED": {
-    "status": "FAILURE: MISSING PROJECTS DATA",
+    "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token ﻿ in JSON at position 0)",
     "issues": [],
     "metadata": {
       "agency": {
@@ -52,7 +52,7 @@
     }
   },
   "DOE": {
-    "status": "FAILURE: MISSING PROJECTS DATA",
+    "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token < in JSON at position 0)",
     "issues": [],
     "metadata": {
       "agency": {
@@ -211,7 +211,7 @@
     }
   },
   "HUD": {
-    "status": "FAILURE: MISSING PROJECTS DATA",
+    "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token < in JSON at position 0)",
     "issues": [],
     "metadata": {
       "agency": {
@@ -237,7 +237,7 @@
     }
   },
   "DOJ": {
-    "status": "FAILURE: MISSING PROJECTS DATA",
+    "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token < in JSON at position 0)",
     "issues": [],
     "metadata": {
       "agency": {
@@ -250,7 +250,7 @@
     }
   },
   "DOL": {
-    "status": "FAILURE: MISSING PROJECTS DATA",
+    "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token < in JSON at position 4)",
     "issues": [],
     "metadata": {
       "agency": {
@@ -339,7 +339,7 @@
     }
   },
   "TRE": {
-    "status": "FAILURE: MISSING PROJECTS DATA",
+    "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token < in JSON at position 2)",
     "issues": [],
     "metadata": {
       "agency": {
@@ -365,7 +365,7 @@
     }
   },
   "EPA": {
-    "status": "FAILURE: MISSING PROJECTS DATA",
+    "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token < in JSON at position 0)",
     "issues": [],
     "metadata": {
       "agency": {
@@ -17738,7 +17738,7 @@
     }
   },
   "AID": {
-    "status": "FAILURE: MISSING PROJECTS DATA",
+    "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token < in JSON at position 0)",
     "issues": [],
     "metadata": {
       "agency": {
@@ -17751,7 +17751,7 @@
     }
   },
   "FEMA": {
-    "status": "FAILURE: MISSING PROJECTS DATA",
+    "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token < in JSON at position 0)",
     "issues": [],
     "metadata": {
       "agency": {
@@ -32912,7 +32912,7 @@
     }
   },
   "NSF": {
-    "status": "FAILURE: MISSING PROJECTS DATA",
+    "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token \t in JSON at position 16621)",
     "issues": [],
     "metadata": {
       "agency": {
@@ -32938,7 +32938,7 @@
     }
   },
   "OPM": {
-    "status": "FAILURE: MISSING PROJECTS DATA",
+    "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token < in JSON at position 1)",
     "issues": [],
     "metadata": {
       "agency": {
@@ -32951,7 +32951,7 @@
     }
   },
   "SBA": {
-    "status": "FAILURE: MISSING PROJECTS DATA",
+    "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token { in JSON at position 2)",
     "issues": [],
     "metadata": {
       "agency": {
@@ -32990,7 +32990,7 @@
     }
   },
   "EOP": {
-    "status": "FAILURE: MISSING PROJECTS DATA",
+    "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token < in JSON at position 1)",
     "issues": [],
     "metadata": {
       "agency": {
