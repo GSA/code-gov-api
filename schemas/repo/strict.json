@@ -2,6 +2,9 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
+    "version": {
+      "type": "string"
+    },
     "agency": {
       "type": "object",
       "properties": {
@@ -88,7 +91,16 @@
     "partners": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string",
+            "format": "email"
+          }
+        }
       }
     },
     "openSourceProject": {
@@ -111,6 +123,9 @@
       "minimum": 1,
       "maximum": 5
     },
+    "exemption_text": {
+      "type": "string"
+    }
     "updated": {
       "type": "object",
       "properties": {
@@ -139,7 +154,7 @@
     }
   },
   "required": [
-    "name", "description", "license", "openSourceProject",
+    "version", "name", "description", "license", "openSourceProject",
     "governmentWideReuseProject", "tags", "contact", "repository", "homepage"
   ]
 }
