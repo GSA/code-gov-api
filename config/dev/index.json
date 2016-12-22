@@ -5,6 +5,16 @@
   "FETCHED_DIR": "/data/fetched",
   "DIFFED_DIR": "/data/diffed",
   "AGENCIES_TO_OMIT_FROM_STATUS": [],
+  "TERM_TYPES_TO_INDEX": [
+    "agency.name",
+    "agency.acronym",
+    "tags",
+    "languages"],
+  "TERM_TYPES_TO_SEARCH": [
+    "agency.name",
+    "agency.acronym",
+    "tags",
+    "languages"],
   "ES_HOST": "localhost",
   "ES_PORT": "9200"
 }
