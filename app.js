@@ -255,7 +255,7 @@ router.get(`/status/:agency/discovered`, (req, res, next) => {
 //       return res.sendStatus(500);
 //     }
 //     let title = "Code.gov API Diff for " + agency;
-//     return res.render('agency/diff', { title, diffChunks });
+//     return res.render('status/agency/diff', { title, diffChunks });
 //   });
 // });
 
