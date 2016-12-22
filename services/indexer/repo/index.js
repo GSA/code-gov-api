@@ -34,61 +34,67 @@ class AgencyJsonStream extends Transform {
     this.logger = repoIndexer.logger;
   }
 
-  _saveFetchedToFile(jsonData, callback) {
+  _saveFetchedToFile(agency, jsonData, callback) {
+    let agencyName = agency.acronym;
     Jsonfile.spaces = 2;
     let fetchedFilepath = path.join(
       __dirname,
       "../../..",
       config.FETCHED_DIR,
-      `${jsonData.agency}.json`
+      `${agencyName}.json`
     );
     this.logger.info(`Writing fetched output to ${fetchedFilepath}...`);
     Jsonfile.writeFile(fetchedFilepath, jsonData, (err) => {
       if (err) {
         this.logger.error(err);
-        return callback(err);
       }
-      callback(null, jsonData);
+      return callback();
     });
   }
 
-  _handleResponse(data, callback) {
+  _handleResponse(err, agency, data, callback) {
+    const _handleError = (e) => {
+      return this._saveFetchedToFile(agency, {}, () => {
+        return callback(e, {});
+      });
+    };
+
+    const _handleSuccess = (data) => {
+      return this._saveFetchedToFile(agency, data, () => {
+        return callback(null, data);
+      })
+    }
+
+    if (err) { return _handleError(err); }
     let agencyData = {};
     try {
       agencyData = JSON.parse(data);
     } catch(err) {
-      this.logger.error(err);
-      return this._saveFetchedToFile({}, callback);
+      // this.logger.error(err);
+      if (err) { return _handleError(err); }
     }
-    return this._saveFetchedToFile(agencyData, callback);
+
+    return _handleSuccess(agencyData);
   }
 
-  _fetchAgencyReposRemote(agencyUrl, callback) {
+  _fetchAgencyReposRemote(agency, callback) {
+    let agencyUrl = agency.code_url;
     this.logger.info(`Fetching remote agency repos from ${agencyUrl}...`);
 
     request({ followAllRedirects: true, url: agencyUrl },
       (err, response, body) => {
-        if (err) {
-          this.logger.error(err);
-          return callback(err, {});
-        }
-
-        this._handleResponse(body, callback);
+        this._handleResponse(err, agency, body, callback);
       }
     );
   }
 
-  _fetchAgencyReposLocal(agencyUrl, callback) {
+  _fetchAgencyReposLocal(agency, callback) {
+    let agencyUrl = agency.code_url;
     const filePath = path.join(__dirname, "../../..", agencyUrl);
     this.logger.info(`Fetching local agency repos from ${filePath}...`);
 
     fs.readFile(filePath, 'utf8', (err, data) => {
-      if (err) {
-        this.logger.error(err);
-        return callback(err, {});
-      }
-
-      this._handleResponse(data, callback);
+      this._handleResponse(err, agency, data, callback);
     });
   }
 
@@ -100,7 +106,7 @@ class AgencyJsonStream extends Transform {
     const _processAgencyData = (err, agencyData) => {
       Reporter.reportMetadata(agencyName, { agency });
       if (err) {
-        this.logger.error(`Error when fetching (${agencyUrl}).`);
+        this.logger.error(`Error when fetching (${agencyUrl}): ${err}`);
         Reporter.reportStatus(agencyName,
           `FAILURE: ERROR WHEN FETCHING (${err.message})`);
         return next();
@@ -184,9 +190,9 @@ class AgencyJsonStream extends Transform {
     // Crude detection of whether the url is a remote or local reference.
     // If remote, make a request, otherwise, read the file.
     if (agencyUrl.substring(0, 4) === "http") {
-      this._fetchAgencyReposRemote(agencyUrl, _processAgencyData);
+      this._fetchAgencyReposRemote(agency, _processAgencyData);
     } else {
-      this._fetchAgencyReposLocal(agencyUrl, _processAgencyData);
+      this._fetchAgencyReposLocal(agency, _processAgencyData);
     }
   }
 
