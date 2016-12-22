@@ -193,7 +193,7 @@ router.get(`/status`, (req, res, next) => {
 });
 
 router.get(`/status/:agency`, (req, res, next) => {
-  let agency = req.params.agency;
+  let agency = req.params.agency.toUpperCase();
   fs.readFile(config.REPORT_FILEPATH, (err, data) => {
     if (err) {
       logger.error(err);
@@ -202,37 +202,50 @@ router.get(`/status/:agency`, (req, res, next) => {
     let title = "Code.gov API Status for " + agency;
     let statusData = JSON.parse(data)[agency];
     if (statusData) {
-      return res.render('status_for_agency', { title, statusData });
+      return res.render('agency/status', { title, statusData });
     } else {
       return res.sendStatus(404);
     }
   });
 });
 
-// router.get(`/status/:agency/suggestions`, (req, res, next) => {
-//   let agency = req.params.agency;
-//   async.parallel([
-//     (next) => {
-//       fs.readFile(config.)
-//     },
-//     (next) => {
-//
-//     }
-//   ], (err, jsonObjectsToDiff) => {
-//
-//   });
-//   fs.readFile(config.REPORT_FILEPATH, (err, data) => {
+router.get(`/status/:agency/fetched`, (req, res, next) => {
+  let agency = req.params.agency.toUpperCase();
+  Jsonfile.readFile(`${config.FETCHED_DIR}/${agency}.json`, (err, data) => {
+    if (err) {
+      logger.error(err);
+      return res.sendStatus(500);
+    }
+    let title = "Code.gov API Status for " + agency;
+    return res.json(data);
+  });
+});
+
+router.get(`/status/:agency/discovered`, (req, res, next) => {
+  let agency = req.params.agency.toUpperCase();
+  Jsonfile.readFile(`${config.DISCOVERED_DIR}/${agency}.json`, (err, data) => {
+    if (err) {
+      logger.error(err);
+      return res.sendStatus(500);
+    }
+    let title = "Code.gov API Status for " + agency;
+    return res.json(data);
+  });
+});
+
+// router.get(`/status/:agency/diff`, (req, res, next) => {
+//   let agency = req.params.agency.toUpperCase();
+//   Jsonfile.readFile(path.join(
+//     __dirname,
+//     config.DIFFED_DIR,
+//     `${agency}.json`
+//   ), (err, diffChunks) => {
 //     if (err) {
 //       logger.error(err);
 //       return res.sendStatus(500);
 //     }
-//     let title = "Code.gov API Status for " + agency;
-//     let statusData = JSON.parse(data)[agency];
-//     if (statusData) {
-//       return res.render('status_for_agency', { title, statusData });
-//     } else {
-//       return res.sendStatus(404);
-//     }
+//     let title = "Code.gov API Diff for " + agency;
+//     return res.render('agency/diff', { title, diffChunks });
 //   });
 // });
 
