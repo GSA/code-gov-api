@@ -68,7 +68,7 @@ class AgencyJsonStream extends Transform {
     const _handleSuccess = (data) => {
       return this._saveFetchedToFile(agency, data, () => {
         return callback(null, data);
-      })
+      });
     }
 
     if (err) { return _handleError(err); }
@@ -76,7 +76,6 @@ class AgencyJsonStream extends Transform {
     try {
       agencyData = JSON.parse(data);
     } catch(err) {
-      // this.logger.error(err);
       if (err) { return _handleError(err); }
     }
 
@@ -104,40 +103,65 @@ class AgencyJsonStream extends Transform {
     });
   }
 
-  _fetchAgencyRepos(agency, next) {
+  _fetchAgencyReposFallback(agency, callback) {
+    let agencyUrl = `${agency.acronym}.json`;
+    const filePath = path.join(
+      __dirname,
+      "../../..",
+      config.FALLBACK_DIR,
+      agencyUrl
+    );
+    this.logger.warning(
+      `[FALLBACK] Fetching local agency repos from ${filePath}...`
+    );
+
+    // NOTE: dan't handle as usual...
+    fs.readFile(filePath, 'utf8', (err, data) => {
+      const _handleError = (e) => {
+        return callback(e, {});
+      };
+
+      const _handleSuccess = (data) => {
+        return callback(null, data);
+      }
+
+      if (err) { return _handleError(err); }
+      let agencyData = {};
+      try {
+        agencyData = JSON.parse(data);
+      } catch(err) {
+        if (err) { return _handleError(err); }
+      }
+
+      return _handleSuccess(agencyData);
+    });
+  }
+
+  _fetchAgencyRepos(agency, callback) {
     let agencyUrl = agency.code_url;
     let agencyName = agency.acronym;
-    // TODO: need to incorporate fallback data
 
     const _processAgencyData = (err, agencyData) => {
-      Reporter.reportMetadata(agencyName, { agency });
-      if (err) {
-        this.logger.error(`Error when fetching (${agencyUrl}): ${err}`);
-        Reporter.reportStatus(agencyName,
-          `FAILURE: ERROR WHEN FETCHING (${err.message})`);
-        return next();
-      } else if (agencyData === {}) {
-        this.logger.warning(`Missing data in (${agencyUrl}).`);
-        Reporter.reportStatus(agencyName, "FAILURE: MISSING DATA");
-        return next();
-      } else if (agencyData.projects && agencyData.projects.length > 0) {
-        this.logger.info(`Processing data from (${agencyUrl}).`);
-        let numValidationErrors = 0;
-        let numValidationWarnings = 0;
-        async.eachSeries(agencyData.projects, (project, done) => {
-          // add agency to project (we need it for formatting)
-          project.agency = agency;
-          Formatter.formatRepo(project, (err, formattedProject) => {
+      const _processAgencyDataSuccess = (finished) => {
+        // SUCCESS (or PARTIAL SUCCESS) CASE: process the data we received,
+        // throwing out the repos that have errors and keeping those which
+        // only have warnings (or no errors and warnings at all)...
+
+        const _processRepo = (repo, done) => {
+          this.logger.info(`Processing repo ${repo.name}...`);
+          // add agency to repo (we need it for formatting)
+          repo.agency = agency;
+          Formatter.formatRepo(repo, (err, formattedRepo) => {
             if (err) {
-              // swallow the error and continue to process other projects
+              // swallow the error and continue to process other repos
               this.logger.error(
                 `Encountered an error when formatting repo with name ` +
-                `${project.name}. Throwing it out of the indexing process.`
+                `${repo.name}. Throwing it out of the indexing process.`
               );
               // TODO: add issue to reporter for this case
               return done();
             }
-            Validator.validateRepo(project, (err, validationResult) => {
+            Validator.validateRepo(repo, (err, validationResult) => {
               if (validationResult.issues) {
                 if (validationResult.issues.errors.length ||
                   validationResult.issues.warnings.length) {
@@ -149,19 +173,21 @@ class AgencyJsonStream extends Transform {
                 }
               }
               if (err) {
-                // swallow the error and continue to process other projects
+                // swallow the error and continue to process other repos
                 this.logger.error(
                   `Encountered an error when validating repo with repoID ` +
-                  `${project.repoID}. Throwing it out of the indexing process.`
+                  `${repo.repoID}. Throwing it out of the indexing process.`
                 );
                 return done();
               }
               // only push if we haven't encountered errors
-              this.push(formattedProject);
+              this.push(formattedRepo);
               return done();
             });
           });
-        }, () => {
+        };
+
+        const _finishedProcessing = () => {
           if (numValidationErrors || numValidationWarnings) {
             let reportString = "PARTIAL SUCCESS: ";
             let reportDetails = [];
@@ -179,14 +205,70 @@ class AgencyJsonStream extends Transform {
           } else {
             Reporter.reportStatus(agencyName, "SUCCESS");
           }
-          next();
-        });
+          return finished();
+        };
+
+        let numValidationErrors = 0;
+        let numValidationWarnings = 0;
+        async.eachSeries(
+          agencyData.projects,
+          _processRepo,
+          _finishedProcessing
+        );
+      };
+
+      const _processAgencyDataFailure = (finished) => {
+        // FAILURE CASE: don't process any agency data, fallback to data
+        // located in the FALLBACK_DIR...
+
+        const _processRepo = (repo, done) => {
+          this.logger.info(`[FALLBACK] Processing repo ${repo.name}...`);
+          // add agency to repo (we need it for formatting)
+          repo.agency = agency;
+          Formatter.formatRepo(repo, (err, formattedRepo) => {
+            if (err) {
+              // swallow the error and continue to process other repos
+              this.logger.error(
+                `[FALLBACK] Encountered an error when formatting repo with name ` +
+                `${repo.name}. Throwing it out of the indexing process.`
+              );
+              return done();
+            }
+            this.push(formattedRepo);
+            return done();
+          });
+        };
+
+        this._fetchAgencyReposFallback(agency, (err, agencyData) => {
+          if (err) { return finished(); }
+
+          async.eachSeries(
+            agencyData.projects,
+            _processRepo,
+            finished
+          );
+        })
+      };
+
+      Reporter.reportMetadata(agencyName, { agency });
+      if (err) {
+        this.logger.error(`Error when fetching (${agencyUrl}): ${err}`);
+        Reporter.reportStatus(agencyName,
+          `FAILURE: ERROR WHEN FETCHING (${err.message})`);
+        return _processAgencyDataFailure(callback);
+      } else if (agencyData === {}) {
+        this.logger.warning(`Missing data in (${agencyUrl}).`);
+        Reporter.reportStatus(agencyName, "FAILURE: MISSING DATA");
+        return _processAgencyDataFailure(callback);
+      } else if (agencyData.projects && agencyData.projects.length > 0) {
+        this.logger.info(`Processing data from (${agencyUrl}).`);
+        return _processAgencyDataSuccess(callback);
       } else {
         this.logger.error(
           `Missing projects for agency (${agencyName}).`
         );
         Reporter.reportStatus(agencyName, "FAILURE: MISSING PROJECTS DATA");
-        return next();
+        return _processAgencyDataFailure(callback);
       }
     };
 
@@ -199,8 +281,8 @@ class AgencyJsonStream extends Transform {
     }
   }
 
-  _transform(agency, enc, next) {
-    this._fetchAgencyRepos(agency, next);
+  _transform(agency, enc, callback) {
+    this._fetchAgencyRepos(agency, callback);
   }
 
 }
