@@ -4,7 +4,6 @@
     "issues": [],
     "metadata": {
       "agency": {
-        "id": 1,
         "name": "Department of Agriculture",
         "acronym": "USDA",
         "website": "https://usda.gov/",
@@ -17,7 +16,6 @@
     "issues": [],
     "metadata": {
       "agency": {
-        "id": 2,
         "name": "Department of Commerce",
         "acronym": "DOC",
         "website": "https://www.commerce.gov/",
@@ -30,7 +28,6 @@
     "issues": [],
     "metadata": {
       "agency": {
-        "id": 3,
         "name": "Department of Defense",
         "acronym": "DOD",
         "website": "https://www.defense.gov/",
@@ -43,7 +40,6 @@
     "issues": [],
     "metadata": {
       "agency": {
-        "id": 4,
         "name": "Department of Education",
         "acronym": "ED",
         "website": "http://ed.gov/",
@@ -56,7 +52,6 @@
     "issues": [],
     "metadata": {
       "agency": {
-        "id": 5,
         "name": "Department of Energy",
         "acronym": "DOE",
         "website": "https://energy.gov/",
@@ -228,7 +223,6 @@
     "issues": [],
     "metadata": {
       "agency": {
-        "id": 8,
         "name": "Department of Interior",
         "acronym": "DOI",
         "website": "https://data.doi.gov/",
@@ -254,7 +248,6 @@
     "issues": [],
     "metadata": {
       "agency": {
-        "id": 10,
         "name": "Department of Labor",
         "acronym": "DOL",
         "website": "https://www.dol.gov",
@@ -267,7 +260,6 @@
     "issues": [],
     "metadata": {
       "agency": {
-        "id": 11,
         "name": "Department of State",
         "acronym": "DOS",
         "website": "https://state.gov/",
@@ -343,7 +335,6 @@
     "issues": [],
     "metadata": {
       "agency": {
-        "id": 13,
         "name": "Department of Treasury",
         "acronym": "TRE",
         "website": "https://www.treasury.gov/",
@@ -356,7 +347,6 @@
     "issues": [],
     "metadata": {
       "agency": {
-        "id": 14,
         "name": "Department of Veterans Affairs",
         "acronym": "VA",
         "website": "https://va.gov/",
@@ -369,7 +359,6 @@
     "issues": [],
     "metadata": {
       "agency": {
-        "id": 15,
         "name": "Environmental Protection Agency",
         "acronym": "EPA",
         "website": "https://epa.gov/",
@@ -17742,7 +17731,6 @@
     "issues": [],
     "metadata": {
       "agency": {
-        "id": 17,
         "name": "Agency for International Development",
         "acronym": "AID",
         "website": "https://usaid.gov/",
@@ -33398,7 +33386,6 @@
     "issues": [],
     "metadata": {
       "agency": {
-        "id": 22,
         "name": "Office of Personnel Management",
         "acronym": "OPM",
         "website": "https://opm.gov/",
@@ -33424,7 +33411,6 @@
     "issues": [],
     "metadata": {
       "agency": {
-        "id": 24,
         "name": "National Archives",
         "acronym": "NARA",
         "website": "https://archives.gov/",
@@ -33433,11 +33419,10 @@
     }
   },
   "CFPB": {
-    "status": "FAILURE: ERROR WHEN FETCHING (Hostname/IP doesn't match certificate's altnames: \"Host: www.consumerfinance.gov. is not in the cert's altnames: DNS:a248.e.akamai.net, DNS:*.akamaized.net, DNS:*.akamaihd-staging.net, DNS:*.akamaihd.net, DNS:*.akamaized-staging.net\")",
+    "status": "FAILURE: ERROR WHEN FETCHING (Hostname/IP doesn't match certificate's altnames: \"Host: www.consumerfinance.gov. is not in the cert's altnames: DNS:*.akamaihd.net, DNS:*.akamaihd-staging.net, DNS:*.akamaized-staging.net, DNS:*.akamaized.net, DNS:a248.e.akamai.net\")",
     "issues": [],
     "metadata": {
       "agency": {
-        "id": 25,
         "name": "Consumer Financial Protection Bureau",
         "acronym": "CFPB",
         "website": "https://consumerfinance.gov/",
@@ -33450,7 +33435,6 @@
     "issues": [],
     "metadata": {
       "agency": {
-        "id": 26,
         "name": "White House - Executive Office of the President",
         "acronym": "EOP",
         "website": "https://whitehouse.gov/",
