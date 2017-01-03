@@ -21,7 +21,7 @@
   "name": "Department of Education",
   "acronym": "ED",
   "website": "http://www.ed.gov/",
-  "code_url": "http://www.ed.gov/code.json"
+  "code_url": "https://www2.ed.gov/code.json"
 }, {
   "id": 5,
   "name": "Department of Energy",
