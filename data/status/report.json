@@ -7,7 +7,7 @@
         "name": "Department of Agriculture",
         "acronym": "USDA",
         "website": "https://usda.gov/",
-        "code_url": "https://usda.gov/code.json"
+        "code_url": "https://www.usda.gov/code.json"
       }
     }
   },
@@ -43,7 +43,7 @@
         "name": "Department of Education",
         "acronym": "ED",
         "website": "http://ed.gov/",
-        "code_url": "http://ed.gov/code.json"
+        "code_url": "https://www.ed.gov/code.json"
       }
     }
   },
