@@ -7,11 +7,13 @@
   "FALLBACK_DIR": "/data/fallback",
   "AGENCIES_TO_OMIT_FROM_STATUS": ["EOP"],
   "TERM_TYPES_TO_INDEX": [
+    "name",
     "agency.name",
     "agency.acronym",
     "tags",
     "languages"],
   "TERM_TYPES_TO_SEARCH": [
+    "name",
     "agency.name",
     "agency.acronym",
     "tags",
