@@ -210,6 +210,7 @@ class AgencyJsonStream extends Transform {
 
         let numValidationErrors = 0;
         let numValidationWarnings = 0;
+
         async.eachSeries(
           agencyData.projects,
           _processRepo,
@@ -267,7 +268,7 @@ class AgencyJsonStream extends Transform {
         this.logger.error(
           `Missing projects for agency (${agencyName}).`
         );
-        Reporter.reportStatus(agencyName, "FAILURE: MISSING PROJECTS DATA");
+        Reporter.reportStatus(agencyName, "FAILURE: MISSING PROJECTS FIELD");
         return _processAgencyDataFailure(callback);
       }
     };
