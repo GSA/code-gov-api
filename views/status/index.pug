@@ -42,7 +42,7 @@ block content
           else if data.status.includes("PARTIAL SUCCESS:")
             .warning
               =data.status
-          else if data.status.includes("SUCCESS:")
+          else if data.status.includes("SUCCESS")
             .success
               =data.status
           else
