@@ -120,7 +120,7 @@
       "minimum": 1,
       "maximum": 5
     },
-    "exemption_text": {
+    "exemptionText": {
       "type": "string"
     },
     "updated": {

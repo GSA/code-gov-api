@@ -60,6 +60,23 @@ class Validator {
     }
   }
 
+  _removeSpecialCaseWarnings(repo, warnings) {
+    // NOTE: it is possible to handle these case(s) by altering the json-schema,
+    // but since it would require a lot of duplication of the schema definition
+    // (in some cases), it is more convenient to strip out warning which do not
+    // apply here...
+    return warnings.filter((warning) => {
+      // if this isn't an open source project, remove warnings due to a missing
+      // `repository` field
+      if (!repo.openSourceProject) {
+        if (warning.params && warning.params.missingProperty === "repository") {
+          return false;
+        }
+      }
+      return true;
+    });
+  }
+
   validateRepo(repo, callback) {
     this.logger.info(`Validating repo data for ${repo.name} (${repo.repoID})...`);
 
@@ -85,6 +102,9 @@ class Validator {
       (validationWarnings, next) => {
         // remove errors from warnings
         let warnings = Utils.removeDupes(validationWarnings, result.issues.errors);
+        // remove special case warnings
+        warnings = this._removeSpecialCaseWarnings(repo, warnings);
+
         result.issues.warnings = warnings;
 
         // TODO: remove fields which have warnings from the repo object

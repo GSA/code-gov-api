@@ -102,6 +102,9 @@
     "exemption": {
       "type": ["integer", "null"]
     },
+    "exemptionText": {
+      "type": ["string", "null"]
+    },
     "updated": {
       "type": "object",
       "properties": {

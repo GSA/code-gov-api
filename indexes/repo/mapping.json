@@ -205,7 +205,7 @@
       "exemption": {
         "type": "byte"
       },
-      "exemption_text": {
+      "exemptionText": {
         "type": "string"
       }
     }
