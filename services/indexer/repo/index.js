@@ -211,6 +211,8 @@ class AgencyJsonStream extends Transform {
         let numValidationErrors = 0;
         let numValidationWarnings = 0;
 
+        // TODO: not currently checking for version field
+
         async.eachSeries(
           agencyData.projects,
           _processRepo,

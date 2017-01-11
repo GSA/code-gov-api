@@ -18,13 +18,16 @@ class Reporter {
   constructor() {
     this.logger = new Logger({ name: "reporter" });
 
-    this.report = {};
+    this.report = {
+      timestamp: (new Date()).toString(),
+      statuses: {}
+    };
   }
 
   _createReportItemIfDoesntExist(itemName) {
     // creates the report item if it doesn't already exist
-    if (this.report[itemName] === undefined) {
-      this.report[itemName] = {
+    if (this.report.statuses[itemName] === undefined) {
+      this.report.statuses[itemName] = {
         status: "",
         issues: [],
         metadata: {}
@@ -34,17 +37,17 @@ class Reporter {
 
   reportStatus(itemName, status) {
     this._createReportItemIfDoesntExist(itemName);
-    this.report[itemName]["status"] = status;
+    this.report.statuses[itemName]["status"] = status;
   }
 
   reportIssues(itemName, issuesObj) {
     this._createReportItemIfDoesntExist(itemName);
-    this.report[itemName]["issues"].push(issuesObj);
+    this.report.statuses[itemName]["issues"].push(issuesObj);
   }
 
   reportMetadata(itemName, metadata) {
     this._createReportItemIfDoesntExist(itemName);
-    this.report[itemName]["metadata"] = metadata;
+    this.report.statuses[itemName]["metadata"] = metadata;
   }
 
   writeReportToFile(callback) {

@@ -229,7 +229,7 @@ router.get(`/status/:agency/issues`, (req, res, next) => {
       return res.sendStatus(500);
     }
     let title = "Code.gov API Status for " + agency;
-    let statusData = JSON.parse(data)[agency];
+    let statusData = JSON.parse(data).statuses[agency];
     if (statusData) {
       return res.render('status/agency/issues', { title, statusData });
     } else {
