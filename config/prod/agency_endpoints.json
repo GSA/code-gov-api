@@ -122,8 +122,8 @@
   "id": 21,
   "name": "Nuclear Regulatory Commission",
   "acronym": "NRC",
-  "website": "https://nrc.gov/",
-  "code_url": "https://nrc.gov/code.json"
+  "website": "https://www.nrc.gov/",
+  "code_url": "https://www.nrc.gov/code.json"
 }, {
   "id": 22,
   "name": "Office of Personnel Management",
