@@ -74,7 +74,10 @@ class AgencyJsonStream extends Transform {
     if (err) { return _handleError(err); }
     let agencyData = {};
     try {
-      agencyData = JSON.parse(data);
+      // strip the BOM character
+      let formattedData = data.replace(/^\uFEFF/, '');
+      // parse
+      agencyData = JSON.parse(formattedData);
     } catch(err) {
       if (err) { return _handleError(err); }
     }
