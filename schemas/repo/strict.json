@@ -142,7 +142,7 @@
     }
   },
   "required": [
-    "name", "description", "organization", "license", "openSourceProject",
+    "name", "description", "license", "openSourceProject",
     "governmentWideReuseProject", "tags", "contact", "repository", "homepage"
   ]
 }
