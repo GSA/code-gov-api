@@ -143,6 +143,6 @@
   },
   "required": [
     "name", "description", "license", "openSourceProject",
-    "governmentWideReuseProject", "tags", "contact", "repository", "homepage"
+    "governmentWideReuseProject", "tags", "contact", "repository"
   ]
 }
