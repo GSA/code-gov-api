@@ -163,4 +163,11 @@
   "acronym": "SSA",
   "website": "https://www.ssa.gov",
   "code_url": "https://www.ssa.gov/code.json"
+},
+{
+  "id": 28,
+  "name": "Department of Homeland Security",
+  "acronym": "DHS",
+  "website": "https://www.dhs.gov",
+  "code_url": "https://www.dhs.gov/code.json"
 }]

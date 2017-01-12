@@ -157,4 +157,11 @@
   "acronym": "EOP",
   "website": "https://whitehouse.gov/",
   "code_url": "/data/fallback/EOP.json"
+},
+{
+  "id": 28,
+  "name": "Department of Homeland Security",
+  "acronym": "DHS",
+  "website": "https://www.dhs.gov",
+  "code_url": "/data/fallback/DHS.json"
 }]
