@@ -247,7 +247,7 @@ router.get(`/agencies`, (req, res, next) => {
         name: agencyData.name,
         website: agencyData.website,
         codeUrl: agencyData.codeUrl,
-        num_repos: term.count
+        numRepos: term.count
       });
     });
 
