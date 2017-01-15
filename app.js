@@ -258,6 +258,31 @@ router.get(`/agencies`, (req, res, next) => {
   });
 });
 
+router.get(`/languages`, (req, res, next) => {
+  // NOTE: this relies on the terms endpoint and the `languages` term type
+
+  let q = _.pick(req.query, ["acronym", "size", "from"]);
+  q.term_type = "languages";
+  q.size = q.size ? q.size : 100;
+
+  searcher.searchTerms(q, (err, terms) => {
+    if (err) { return next(err); }
+
+    let languages = [];
+    terms.terms.forEach((term) => {
+      languages.push({
+        name: term.term,
+        numRepos: term.count
+      });
+    });
+
+    res.json({
+      total: languages.length,
+      languages: languages
+    });
+  });
+});
+
 router.get('/repo.json', (req, res, next) => {
   let repoJson = Utils.omitPrivateKeys(repoMapping);
   let excludeKeys = [
