@@ -86,7 +86,7 @@ class AgencyJsonStream extends Transform {
   }
 
   _fetchAgencyReposRemote(agency, callback) {
-    let agencyUrl = agency.code_url;
+    let agencyUrl = agency.codeUrl;
     this.logger.info(`Fetching remote agency repos from ${agencyUrl}...`);
 
     request({ followAllRedirects: true, url: agencyUrl },
@@ -97,7 +97,7 @@ class AgencyJsonStream extends Transform {
   }
 
   _fetchAgencyReposLocal(agency, callback) {
-    let agencyUrl = agency.code_url;
+    let agencyUrl = agency.codeUrl;
     const filePath = path.join(__dirname, "../../..", agencyUrl);
     this.logger.info(`Fetching local agency repos from ${filePath}...`);
 
@@ -141,7 +141,7 @@ class AgencyJsonStream extends Transform {
   }
 
   _fetchAgencyRepos(agency, callback) {
-    let agencyUrl = agency.code_url;
+    let agencyUrl = agency.codeUrl;
     let agencyName = agency.acronym;
 
     const _processAgencyData = (err, agencyData) => {

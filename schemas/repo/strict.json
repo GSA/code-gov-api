@@ -15,7 +15,7 @@
           "type": "string",
           "format": "uri"
         },
-        "code_url": {
+        "codeUrl": {
           "type": "string",
           "format": "uri"
         }

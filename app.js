@@ -246,7 +246,7 @@ router.get(`/agencies`, (req, res, next) => {
         acronym: acronym,
         name: agencyData.name,
         website: agencyData.website,
-        code_url: agencyData.code_url,
+        codeUrl: agencyData.codeUrl,
         num_repos: term.count
       });
     });

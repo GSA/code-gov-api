@@ -33,7 +33,7 @@
             "type": "string",
             "index": "not_analyzed"
           },
-          "code_url": {
+          "codeUrl": {
             "type": "string",
             "index": "not_analyzed"
           }
