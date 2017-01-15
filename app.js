@@ -142,6 +142,21 @@ const queryReposAndSendResponse = (q, res, next) => {
   });
 }
 
+const _readStatusReportFile = (next) => {
+  const reportFilepath = _getRelativeFilepath(config.REPORT_FILEPATH);
+  fs.readFile(reportFilepath, (err, data) => {
+    if (err) {
+      return next(err);
+    }
+    let statusData = JSON.parse(data);
+    statusData.statuses = _.omit(
+      statusData.statuses,
+      config.AGENCIES_TO_OMIT_FROM_STATUS
+    );
+    return next(null, statusData);
+  });
+}
+
 /* get repos that match supplied search criteria */
 router.get('/repos', (req, res, next) => {
   let q = req.query;
@@ -189,39 +204,23 @@ router.get('/repo.json', (req, res, next) => {
   res.json(repoJson["repo"]["properties"]);
 });
 
-const _getRelativeFilepath = (filepath) => {
-  return path.join(__dirname, filepath);
-}
-
 router.get('/status.json', (req, res, next) => {
-  const reportFilepath = _getRelativeFilepath(config.REPORT_FILEPATH);
-  fs.readFile(reportFilepath, (err, data) => {
+  _readStatusReportFile((err, statusData) => {
     if (err) {
       logger.error(err);
       return res.sendStatus(500);
     }
-    let statusData = JSON.parse(data);
-    statusData.statuses = _.omit(
-      statusData.statuses,
-      config.AGENCIES_TO_OMIT_FROM_STATUS
-    );
     res.json(statusData);
   });
 });
 
 router.get(`/status`, (req, res, next) => {
-  const reportFilepath = _getRelativeFilepath(config.REPORT_FILEPATH);
-  fs.readFile(reportFilepath, (err, data) => {
+  _readStatusReportFile((err, statusData) => {
     if (err) {
       logger.error(err);
       return res.sendStatus(500);
     }
     let title = "Code.gov API Status";
-    let statusData = JSON.parse(data);
-    statusData.statuses = _.omit(
-      statusData.statuses,
-      config.AGENCIES_TO_OMIT_FROM_STATUS
-    );
     res.render('status', { title, statusData });
   });
 });
