@@ -223,7 +223,10 @@ router.get(`/agencies`, (req, res, next) => {
       });
     },
     terms: (next) => {
-      let q = _.pick(req.query, ["acronym", "size", "from"]);
+      let q = _.pick(req.query, ["size", "from"]);
+      if (req.query.acronym) {
+        q.term = req.query.acronym;
+      }
       q.term_type = "agency.acronym";
       q.size = q.size ? q.size : 100;
 
@@ -261,7 +264,10 @@ router.get(`/agencies`, (req, res, next) => {
 router.get(`/languages`, (req, res, next) => {
   // NOTE: this relies on the terms endpoint and the `languages` term type
 
-  let q = _.pick(req.query, ["acronym", "size", "from"]);
+  let q = _.pick(req.query, ["size", "from"]);
+  if (req.query.language) {
+    q.term = req.query.language;
+  }
   q.term_type = "languages";
   q.size = q.size ? q.size : 100;
 
