@@ -66,6 +66,10 @@ let router = express.Router();
 
 let searcher = new Searcher(searcherAdapter);
 
+const _getRelativeFilepath = (filepath) => {
+  return path.join(__dirname, filepath);
+}
+
 const searchPropsByType =
   Utils.getFlattenedMappingPropertiesByType(repoMapping["repo"]);
 
@@ -157,6 +161,17 @@ const _readStatusReportFile = (next) => {
   });
 }
 
+const _readAgencyEndpointsFile = (next) => {
+  const agencyEndpointsFilepath = _getRelativeFilepath(config.AGENCY_ENDPOINTS_FILE);
+  fs.readFile(agencyEndpointsFilepath, (err, data) => {
+    if (err) {
+      return next(err);
+    }
+    let agencyEndpoints = JSON.parse(data);
+    return next(null, agencyEndpoints);
+  });
+}
+
 /* get repos that match supplied search criteria */
 router.get('/repos', (req, res, next) => {
   let q = req.query;
@@ -190,6 +205,56 @@ router.post('/terms', (req, res, next) => {
       return res.sendStatus(500);
     }
     res.json(terms);
+  });
+});
+
+router.get(`/agencies`, (req, res, next) => {
+  // NOTE: this relies on the terms endpoint and the `agency.acronym` term type
+
+  async.parallel({
+    agencyDataHash: (next) => {
+      _readAgencyEndpointsFile((err, agencyEndpoints) => {
+        if (err) { return next(err); }
+        let agencyDataHash = {};
+        agencyEndpoints.forEach((agencyEndpoint) => {
+          agencyDataHash[agencyEndpoint.acronym] = agencyEndpoint;
+        });
+        return next(null, agencyDataHash);
+      });
+    },
+    terms: (next) => {
+      let q = _.pick(req.query, ["acronym", "size", "from"]);
+      q.term_type = "agency.acronym";
+      q.size = q.size ? q.size : 100;
+
+      searcher.searchTerms(q, (err, terms) => {
+        if (err) { return next(err); }
+        return next(null, terms.terms);
+      });
+    }
+  }, (err, {agencyDataHash, terms}) => {
+    if(err) {
+      logger.error(err);
+      return res.sendStatus(500);
+    }
+
+    let agencies = [];
+    terms.forEach((term) => {
+      let acronym = term.term.toUpperCase();
+      let agencyData = agencyDataHash[acronym];
+      agencies.push({
+        acronym: acronym,
+        name: agencyData.name,
+        website: agencyData.website,
+        code_url: agencyData.code_url,
+        num_repos: term.count
+      });
+    });
+
+    res.json({
+      total: agencies.length,
+      agencies: agencies
+    });
   });
 });
 
