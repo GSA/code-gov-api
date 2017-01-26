@@ -323,20 +323,24 @@ router.get(`/status`, (req, res, next) => {
 
 router.get(`/status/:agency/issues`, (req, res, next) => {
   let agency = req.params.agency.toUpperCase();
+
+
   const reportFilepath = _getRelativeFilepath(config.REPORT_FILEPATH);
   fs.readFile(reportFilepath, (err, data) => {
     if (err) {
       logger.error(err);
       return res.sendStatus(500);
     }
-    let title = "Code.gov API Status for " + agency;
+    let title = "Code.gov API Status for " + agency;    
     let statusData = JSON.parse(data).statuses[agency];
     if (statusData) {
-      return res.render('status/agency/issues', { title, statusData });
+      return res.render('status/agency/issues', { title, statusData});
     } else {
       return res.sendStatus(404);
     }
+
   });
+
 });
 
 router.get(`/status/:agency/fetched`, (req, res, next) => {

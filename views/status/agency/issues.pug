@@ -19,6 +19,9 @@ block content
             td
               pre
                 =JSON.stringify(error, null, 2)
+              br
+              a.item(href="/api/0.1/repos?repoID=" + project.repoID)
+                View repository information
       if project.issues.warnings
         each warning in project.issues.warnings
           tr
@@ -30,3 +33,20 @@ block content
             td
               pre
                 =JSON.stringify(warning, null, 2)
+              br
+              a.item(href="/api/0.1/repos?repoID=" + project.repoID)
+                View repository information
+      if project.issues.enhancements
+        each enhancement in project.issues.enhancements
+          tr
+            td
+              =project.organization
+            td
+              =project.project_name
+            td.enhancement REQUESTED ENHANCEMENT
+            td
+              pre
+                =JSON.stringify(enhancement, null, 2)
+              br
+              a.item(href="/api/0.1/repos?repoID=" + project.repoID)
+                View repository information

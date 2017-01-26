@@ -51,9 +51,11 @@ class Searcher {
       }
       // return callback(null, res);
       if(!res.hits || !res.hits.hits || !res.hits.hits[0]) {
+        logger.info("No hits");
         return callback(null, {});
       }
       let repo = Utils.omitPrivateKeys(res.hits.hits[0]._source);
+      //logger.info(repo);
       return callback(null, repo);
     });
   }

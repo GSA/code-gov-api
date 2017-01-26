@@ -167,12 +167,15 @@ class AgencyJsonStream extends Transform {
             Validator.validateRepo(repo, (err, validationResult) => {
               if (validationResult.issues) {
                 if (validationResult.issues.errors.length ||
-                  validationResult.issues.warnings.length) {
+                  validationResult.issues.warnings.length ||
+                  validationResult.issues.enhancements.length ) {
                     Reporter.reportIssues(agencyName, validationResult);
                     numValidationErrors +=
                       validationResult.issues.errors.length;
                     numValidationWarnings +=
                       validationResult.issues.warnings.length;
+                    numValidationEnhancements +=
+                      validationResult.issues.enhancements.length;
                 }
               }
               if (err) {
@@ -191,7 +194,7 @@ class AgencyJsonStream extends Transform {
         };
 
         const _finishedProcessing = () => {
-          if (numValidationErrors || numValidationWarnings) {
+          if (numValidationErrors || numValidationWarnings || numValidationEnhancements) {
             let reportString = "PARTIAL SUCCESS: ";
             let reportDetails = [];
             if (numValidationErrors) {
@@ -200,7 +203,10 @@ class AgencyJsonStream extends Transform {
             if (numValidationWarnings) {
               reportDetails.push(`${numValidationWarnings} WARNINGS`);
             }
-            reportString += reportDetails.join(" AND ");
+            if (numValidationEnhancements) {
+              reportDetails.push(`${numValidationEnhancements} REQUESTED ENHANCEMENTS`);
+            }
+            reportString += reportDetails.join(", ");
             Reporter.reportStatus(agencyName, reportString);
           } else if (numValidationWarnings > 0) {
             Reporter.reportStatus(agencyName,
@@ -213,6 +219,7 @@ class AgencyJsonStream extends Transform {
 
         let numValidationErrors = 0;
         let numValidationWarnings = 0;
+        let numValidationEnhancements = 0;
 
         // TODO: not currently checking for version field
 

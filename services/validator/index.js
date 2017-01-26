@@ -27,7 +27,8 @@ class Validator {
       let pathToSchemas = `${PATH_TO_SCHEMAS}/${schemaName}`;
       this.validators[schemaName] = {
         relaxed: ajv.compile(require(`${pathToSchemas}/relaxed.json`)),
-        strict: ajv.compile(require(`${pathToSchemas}/strict.json`))
+        strict: ajv.compile(require(`${pathToSchemas}/strict.json`)),
+        enhanced: ajv.compile(require(`${pathToSchemas}/enhanced.json`))
       }
     });
   }
@@ -60,6 +61,22 @@ class Validator {
     }
   }
 
+
+  _validateRepoEnhanced(repo, callback) {
+    // validate for enhancements
+    let valid = this.validators["repo"]["enhanced"](repo);
+    if (valid) {
+      // this.logger.info(`Didn't find any warnings for ${repo.name} (${repo.repoID}).`);
+      callback(null, []);
+    } else {
+      this.logger.info(`Encountered potential enhancements when validating repo data for ${repo.name} (${repo.repoID}).`);
+      let enhancements = this.validators["repo"]["enhanced"].errors;
+      this.logger.warning(enhancements);
+      callback(null, enhancements);
+    }
+  }
+
+
   _removeSpecialCaseWarnings(repo, warnings) {
     // NOTE: it is possible to handle these case(s) by altering the json-schema,
     // but since it would require a lot of duplication of the schema definition
@@ -72,7 +89,20 @@ class Validator {
         if (warning.params && warning.params.missingProperty === "repository") {
           return false;
         }
+        if (warning.dataPath === ".license" && repo.license === null) {
+          return false;
+          this.logger("removing warning for closed source repo with repository===null");
+        }
+        if (warning.dataPath === ".repository" && repo.repository === null) {
+          return false;
+          this.logger("removing warning for closed source repo with license===null");
+        }
+        this.logger.info(warning.dataPath);       
+        //if (warning.params && warning.dataPath === ".description" && warning.params.type === "string"){
+        //  return false;
+       
       }
+
       return true;
     });
   }
@@ -86,6 +116,7 @@ class Validator {
       "organization": repo.organization,
       "project_name": repo.name,
       issues: {
+        enhancements: [],
         warnings: [],
         errors: []
       }
@@ -109,7 +140,13 @@ class Validator {
 
         // TODO: remove fields which have warnings from the repo object
         // (possibly necessary to avoid indexing issues)
-
+        this._validateRepoEnhanced(repo, next);
+      },
+      (validationEnhancements, next) => {
+        // remove errors and warnings from enhancements
+        let enhancements = Utils.removeDupes(validationEnhancements, result.issues.errors);
+        enhancements = Utils.removeDupes(enhancements, result.issues.warnings);
+        result.issues.enhancements = enhancements;
         next();
       }
     ], (err) => {
