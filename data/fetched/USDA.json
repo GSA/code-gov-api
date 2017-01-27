@@ -2,80 +2,13 @@
   "agency": "USDA",
   "projects": [
     {
-      "organization": "OCIO",
-      "name": "DigitalGov Analytics",
-      "description": "A Drupal Module that implements all features defined within the DAP Implementation Guide",
-      "license": "http: //www.gnu.org/licenses/old-licenses/gpl-2.0.html",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 1,
-      "tags": [
-        "Drupal",
-        "DigitalGov",
-        "analytics",
-        "DAP"
-      ],
-      "contact": {
-        "email": "rone.williams@oc.usda.gov",
-        "name": "Ron Williams"
-      },
-      "status": "Production",
-      "homepage": "https://www.drupal.org/project/gov_analytics",
-      "vcs": "git",
-      "repository": "https://www.drupal.org/project/gov_analytics",
-      "languages": [
-        "Drupal",
-        "php"
-      ],
-      "updated": {
-        "metadataLastUpdated": "2016-12-22",
-        "lastModified": "2015-06-01"
-      }
-    },
-    {
-      "organization": "APHIS",
-      "name": "Animal Disease Spread Model",
-      "description": "A simulation of disease spread in livestock populations. Includes detection and containment simulation.",
-      "license": "https: //github.com/NAVADMC/ADSM/blob/master/LICENSE",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 1,
-      "tags": [
-        "USDA",
-        "source code",
-        "animal",
-        "disease",
-        "herds",
-        "livestock",
-        "simulation"
-      ],
-      "contact": {
-        "email": "Melissa.Schoenbaum@aphis.usda.gov",
-        "name": "Missy Schoenbaum"
-      },
-      "status": "Beta",
-      "homepage": "https://github.com/NAVADMC/ADSM",
-      "vcs": "git",
-      "repository": "https://github.com/NAVADMC/ADSM",
-      "languages": [
-        "C",
-        "python"
-      ],
-      "updated": {
-        "metadataLastUpdated": "2016-12-22",
-        "lastModified": "2016-11-18"
-      }
-    },
-    {
       "organization": "USDA",
       "name": "USDA-APIs",
       "description": "Do you have feedback, ideas, or questions for USDA APIs? Use this repository's Issue Tracker to join the discussion. ",
       "license": "",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
-      "tags": [
-        "USDA",
-        "API",
-        "APIs"
-      ],
+      "tags": [],
       "contact": {
         "email": null,
         "name": null,
@@ -103,11 +36,7 @@
       "license": "",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
-      "tags": [
-        "USDA",
-        "source code",
-        "recreation"
-      ],
+      "tags": [],
       "contact": {
         "email": null,
         "name": null,
@@ -135,12 +64,7 @@
       "license": "",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
-      "tags": [
-        "USDA",
-        "source code",
-        "data",
-        "standards"
-      ],
+      "tags": [],
       "contact": {
         "email": null,
         "name": null,
