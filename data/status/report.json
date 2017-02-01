@@ -1,5 +1,5 @@
 {
-  "timestamp": "Wed Feb 01 2017 13:49:30 GMT-0500 (EST)",
+  "timestamp": "Wed Feb 01 2017 16:53:47 GMT-0500 (EST)",
   "statuses": {
     "USDA": {
       "status": "PARTIAL SUCCESS: 27 WARNINGS",
@@ -15651,7 +15651,7 @@
       }
     },
     "CFPB": {
-      "status": "FAILURE: ERROR WHEN FETCHING (Hostname/IP doesn't match certificate's altnames: \"Host: www.consumerfinance.gov. is not in the cert's altnames: DNS:*.akamaihd.net, DNS:*.akamaihd-staging.net, DNS:*.akamaized-staging.net, DNS:*.akamaized.net, DNS:a248.e.akamai.net\")",
+      "status": "FAILURE: ERROR WHEN FETCHING (Hostname/IP doesn't match certificate's altnames: \"Host: www.consumerfinance.gov. is not in the cert's altnames: DNS:*.akamaihd.net, DNS:*.akamaized-staging.net, DNS:*.akamaized.net, DNS:*.akamaihd-staging.net, DNS:a248.e.akamai.net\")",
       "issues": [],
       "version": "",
       "metadata": {
