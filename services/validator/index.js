@@ -77,6 +77,26 @@ class Validator {
   }
 
 
+
+  _removeSpecialCaseErrors(repo, errors) {
+    // NOTE: it is possible to handle these case(s) by altering the json-schema,
+    // but since it would require a lot of duplication of the schema definition
+    // (in some cases), it is more convenient to strip out warning which do not
+    // apply here...
+    return errors.filter((error) => {
+      // if this isn't an open source project, remove warnings due to a missing
+      // `repository` field
+      if (!repo.openSourceProject) {
+        if (error.params && error.params.missingProperty === "repository") {
+          return false;
+        }
+        
+      }
+      return true;
+    });
+  }
+
+
   _removeSpecialCaseWarnings(repo, warnings) {
     // NOTE: it is possible to handle these case(s) by altering the json-schema,
     // but since it would require a lot of duplication of the schema definition
@@ -89,10 +109,6 @@ class Validator {
         if (warning.params && warning.params.missingProperty === "repository") {
           return false;
         }
-        if (warning.dataPath === ".license" && repo.license === null) {
-          return false;
-          this.logger("removing warning for closed source repo with repository===null");
-        }
         if (warning.dataPath === ".repository" && repo.repository === null) {
           return false;
           this.logger("removing warning for closed source repo with license===null");
@@ -102,10 +118,50 @@ class Validator {
         //  return false;
        
       }
+      if (warning.dataPath === ".license" && repo.license === null) {
+          return false;
+          this.logger("removing warning for closed source repo with repository===null");
+      }
+
+
 
       return true;
     });
   }
+
+  _removeSpecialCaseEnhancements(repo, enhancements) {
+    // NOTE: it is possible to handle these case(s) by altering the json-schema,
+    // but since it would require a lot of duplication of the schema definition
+    // (in some cases), it is more convenient to strip out warning which do not
+    // apply here...
+    return enhancements.filter((enhancement) => {
+      // if this isn't an open source project, remove warnings due to a missing
+      // `repository` field
+      if (!repo.openSourceProject) {
+        if (enhancement.params && enhancement.params.missingProperty === "repository") {
+          return false;
+        }
+        //schema v1.0.1 requires the license element but technically allows it to be null, even for OSS. 
+        //nudge here to include license info for OSS
+        if (enhancement.dataPath === ".license" && repo.license === null) {
+          return false;
+          this.logger("removing enhancement request for closed source repo with repository===null");
+        }
+        if (enhancement.dataPath === ".repository" && repo.repository === null) {
+          return false;
+          this.logger("removing enhancement request for closed source repo with license===null");
+        }
+        this.logger.info(enhancement.dataPath);       
+        //if (warning.params && warning.dataPath === ".description" && warning.params.type === "string"){
+        //  return false;
+       
+      }
+
+      return true;
+    });
+  }
+
+
 
   validateRepo(repo, callback) {
     this.logger.info(`Validating repo data for ${repo.name} (${repo.repoID})...`);
@@ -127,7 +183,8 @@ class Validator {
         this._validateRepoRelaxed(repo, next);
       },
       (validationErrors, next) => {
-        result.issues.errors = validationErrors;
+        let errors = this._removeSpecialCaseErrors(repo, validationErrors);
+        result.issues.errors = errors;
         this._validateRepoStrict(repo, next);
       },
       (validationWarnings, next) => {
@@ -145,7 +202,12 @@ class Validator {
       (validationEnhancements, next) => {
         // remove errors and warnings from enhancements
         let enhancements = Utils.removeDupes(validationEnhancements, result.issues.errors);
+        
         enhancements = Utils.removeDupes(enhancements, result.issues.warnings);
+        
+        // remove special case enhancements
+        enhancements = this._removeSpecialCaseEnhancements(repo, enhancements);
+
         result.issues.enhancements = enhancements;
         next();
       }

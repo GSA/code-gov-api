@@ -149,7 +149,8 @@ class AgencyJsonStream extends Transform {
         // SUCCESS (or PARTIAL SUCCESS) CASE: process the data we received,
         // throwing out the repos that have errors and keeping those which
         // only have warnings (or no errors and warnings at all)...
-
+        Reporter.reportVersion(agencyName, agencyData.version);
+        
         const _processRepo = (repo, done) => {
           this.logger.info(`Processing repo ${repo.name}...`);
           // add agency to repo (we need it for formatting)

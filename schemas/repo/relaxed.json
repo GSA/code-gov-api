@@ -122,6 +122,6 @@
   },
   "required": [
     "name", "description", "license", "openSourceProject",
-    "governmentWideReuseProject", "tags", "contact"
+    "governmentWideReuseProject", "tags", "contact", "repository"
   ]
 }

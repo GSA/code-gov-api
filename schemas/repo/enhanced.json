@@ -39,7 +39,7 @@
       "type": "string"
     },
     "repository": {
-      "type": "string",
+      "type": ["string","null"],
       "format": "uri"
     },
     "license": {

@@ -1,9 +1,10 @@
 {
+  "version": "1.0.1",
   "agency": "DHHS",
-  "organization": "Department of Health and Human Services",
   "projects": [
     {
       "name": "ckanext-datajson",
+      "organization": "Department of Health and Human Services",
       "description": "Custom CKAN extension for HealthData.gov",
       "license": "http://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
@@ -22,6 +23,7 @@
     },
     {
       "name": "ckanext-harvest",
+      "organization": "Department of Health and Human Services",
       "description": "CKAN remote harvesting extension",
       "license": null,
       "openSourceProject": 1,
@@ -40,6 +42,7 @@
     },
     {
       "name": "lodestar",
+      "organization": "Department of Health and Human Services",
       "description": "Linked Data explorer and SPARQL endpoint",
       "license": "http://www.apache.org/licenses/LICENSE-2.0",
       "openSourceProject": 1,
@@ -58,6 +61,7 @@
     },
     {
       "name": "Healthcare Fraud Prevention",
+      "organization": "Centers for Medicare and Medicaid Services",
       "description": "Code from the Healthcare Fraud Prevention Partnership challenge",
       "license": "http://www.apache.org/licenses/LICENSE-2.0",
       "openSourceProject": 1,
@@ -71,10 +75,11 @@
         "name": "Office of the Chief Information Officer"
       },
       "vcs": "git",
-      "repository": "https://github.com/HHS/lodestar"
+      "repository": "https://github.com/HHS/CoECI-CMS-Healthcare-Fraud-Prevention"
     },
     {
       "name": "FNMS",
+      "organization": "Department of Health and Human Services",
       "description": "Foreign National Management System",
       "license": null,
       "openSourceProject": 0,
@@ -93,6 +98,7 @@
     },
     {
       "name": "ARAPS",
+      "organization": "Department of Health and Human Services",
       "description": "Automated Reasonable Accomodation Processing System",
       "license": null,
       "openSourceProject": 0,
@@ -110,6 +116,7 @@
     },
     {
       "name": "MMS",
+      "organization": "Department of Health and Human Services",
       "description": "Menotoring Matching System",
       "license": null,
       "openSourceProject": 0,

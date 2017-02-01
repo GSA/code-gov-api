@@ -23,7 +23,8 @@ block content
     tr
       th(colspan=2) Agency
       th Code.json Link
-      th(style="width:400px;") Status
+      th Schema Version
+      th(style="width:400px;") Notes
       th Issues
       th Discovered
     each data in statusDataArr
@@ -35,6 +36,8 @@ block content
         td
           a(href=data.metadata.agency.codeUrl)
             =data.metadata.agency.codeUrl
+        td
+          =data.version
         td
           if data.status.includes("FAILURE:")
             .failure
