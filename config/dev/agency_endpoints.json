@@ -35,6 +35,12 @@
   "website": "https://hhs.gov",
   "codeUrl": "/data/fallback/HHS.json"
 }, {
+  "id": 29,
+  "name": "Department of Homeland Security",
+  "acronym": "DHS",
+  "website": "https://dhs.gov",
+  "codeUrl": "https://dhs.gov/code.json"
+}, {
   "id": 7,
   "name": "Department of Housing and Urban Development",
   "acronym": "HUD",
