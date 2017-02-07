@@ -18,6 +18,8 @@
     "agency.acronym",
     "tags",
     "languages"],
-  "ES_HOST": "localhost",
-  "ES_PORT": "9200"
+  "ES_HOST": "10.10.3.111",
+  "ES_PORT": "32850",
+  "ES_USER": "es",
+  "ES_PASS": "4mswxoha9tahtjl6"
 }

@@ -42,6 +42,7 @@
     "moment": "2.13.0",
     "nan": "2.4.0",
     "pug": "2.0.0-beta6",
+    "request":"2.79.0",
     "serve-favicon": "2.3.0"
   },
   "devDependencies": {
@@ -54,7 +55,7 @@
     "mocha": "2.4.5"
   },
   "engines": {
-    "node": "6.9.3",
+    "node": "6.9.4",
     "npm": "3.8.5"
   }
 }
