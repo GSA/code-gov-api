@@ -1,5 +1,5 @@
 {
-  "timestamp": "Fri Feb 03 2017 17:09:08 GMT-0500 (EST)",
+  "timestamp": "Sat Feb 11 2017 10:34:52 GMT-0500 (EST)",
   "statuses": {
     "USDA": {
       "status": "PARTIAL SUCCESS: 27 WARNINGS",
@@ -677,6 +677,7 @@
       "version": "",
       "metadata": {
         "agency": {
+          "id": 2,
           "name": "Department of Commerce",
           "acronym": "DOC",
           "website": "https://www.commerce.gov/",
@@ -690,6 +691,7 @@
       "version": "",
       "metadata": {
         "agency": {
+          "id": 3,
           "name": "Department of Defense",
           "acronym": "DOD",
           "website": "https://www.defense.gov/",
@@ -716,6 +718,7 @@
       "version": "",
       "metadata": {
         "agency": {
+          "id": 5,
           "name": "Department of Energy",
           "acronym": "DOE",
           "website": "https://energy.gov/",
@@ -776,6 +779,7 @@
       "version": "",
       "metadata": {
         "agency": {
+          "id": 28,
           "name": "Department of Homeland Security",
           "acronym": "DHS",
           "website": "https://www.dhs.gov",
@@ -789,6 +793,7 @@
       "version": "",
       "metadata": {
         "agency": {
+          "id": 8,
           "name": "Department of Interior",
           "acronym": "DOI",
           "website": "https://data.doi.gov/",
@@ -816,6 +821,7 @@
       "version": "",
       "metadata": {
         "agency": {
+          "id": 10,
           "name": "Department of Labor",
           "acronym": "DOL",
           "website": "https://www.dol.gov",
@@ -829,6 +835,7 @@
       "version": "",
       "metadata": {
         "agency": {
+          "id": 11,
           "name": "Department of State",
           "acronym": "DOS",
           "website": "https://state.gov/",
@@ -3364,6 +3371,7 @@
       "version": "",
       "metadata": {
         "agency": {
+          "id": 13,
           "name": "Department of Treasury",
           "acronym": "TRE",
           "website": "https://www.treasury.gov/",
@@ -3377,6 +3385,7 @@
       "version": "",
       "metadata": {
         "agency": {
+          "id": 14,
           "name": "Department of Veterans Affairs",
           "acronym": "VA",
           "website": "https://va.gov/",
@@ -3390,6 +3399,7 @@
       "version": "",
       "metadata": {
         "agency": {
+          "id": 15,
           "name": "Environmental Protection Agency",
           "acronym": "EPA",
           "website": "https://epa.gov/",
@@ -7701,6 +7711,7 @@
       "version": "",
       "metadata": {
         "agency": {
+          "id": 17,
           "name": "Agency for International Development",
           "acronym": "AID",
           "website": "https://usaid.gov/",
@@ -16716,6 +16727,7 @@
       "version": "",
       "metadata": {
         "agency": {
+          "id": 22,
           "name": "Office of Personnel Management",
           "acronym": "OPM",
           "website": "https://opm.gov/",
@@ -16729,7 +16741,6 @@
       "version": "",
       "metadata": {
         "agency": {
-          "id": 23,
           "name": "Small Business Administration",
           "acronym": "SBA",
           "website": "https://sba.gov/",
@@ -17003,11 +17014,12 @@
       }
     },
     "CFPB": {
-      "status": "FAILURE: ERROR WHEN FETCHING (Hostname/IP doesn't match certificate's altnames: \"Host: www.consumerfinance.gov. is not in the cert's altnames: DNS:a248.e.akamai.net, DNS:*.akamaized.net, DNS:*.akamaihd-staging.net, DNS:*.akamaihd.net, DNS:*.akamaized-staging.net\")",
+      "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token < in JSON at position 0)",
       "issues": [],
       "version": "",
       "metadata": {
         "agency": {
+          "id": 25,
           "name": "Consumer Financial Protection Bureau",
           "acronym": "CFPB",
           "website": "https://consumerfinance.gov/",
@@ -17021,6 +17033,7 @@
       "version": "",
       "metadata": {
         "agency": {
+          "id": 26,
           "name": "White House - Executive Office of the President",
           "acronym": "EOP",
           "website": "https://whitehouse.gov/",
