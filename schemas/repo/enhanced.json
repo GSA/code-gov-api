@@ -43,7 +43,7 @@
       "format": "uri"
     },
     "license": {
-      "type": ["string","null"],
+      "type": "string",
       "format": "uri"
     },
     "homepage": {

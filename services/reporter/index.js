@@ -30,6 +30,7 @@ class Reporter {
       this.report.statuses[itemName] = {
         status: "",
         issues: [],
+        version: "",
         metadata: {}
       };
     }
@@ -43,6 +44,12 @@ class Reporter {
   reportIssues(itemName, issuesObj) {
     this._createReportItemIfDoesntExist(itemName);
     this.report.statuses[itemName]["issues"].push(issuesObj);
+  }
+
+
+  reportVersion(itemName, version) {
+    this._createReportItemIfDoesntExist(itemName);
+    this.report.statuses[itemName]["version"] = version;
   }
 
   reportMetadata(itemName, metadata) {

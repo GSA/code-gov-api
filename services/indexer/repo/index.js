@@ -149,7 +149,8 @@ class AgencyJsonStream extends Transform {
         // SUCCESS (or PARTIAL SUCCESS) CASE: process the data we received,
         // throwing out the repos that have errors and keeping those which
         // only have warnings (or no errors and warnings at all)...
-
+        Reporter.reportVersion(agencyName, agencyData.version);
+        
         const _processRepo = (repo, done) => {
           this.logger.info(`Processing repo ${repo.name}...`);
           // add agency to repo (we need it for formatting)
@@ -167,12 +168,15 @@ class AgencyJsonStream extends Transform {
             Validator.validateRepo(repo, (err, validationResult) => {
               if (validationResult.issues) {
                 if (validationResult.issues.errors.length ||
-                  validationResult.issues.warnings.length) {
+                  validationResult.issues.warnings.length ||
+                  validationResult.issues.enhancements.length ) {
                     Reporter.reportIssues(agencyName, validationResult);
                     numValidationErrors +=
                       validationResult.issues.errors.length;
                     numValidationWarnings +=
                       validationResult.issues.warnings.length;
+                    numValidationEnhancements +=
+                      validationResult.issues.enhancements.length;
                 }
               }
               if (err) {
@@ -191,7 +195,7 @@ class AgencyJsonStream extends Transform {
         };
 
         const _finishedProcessing = () => {
-          if (numValidationErrors || numValidationWarnings) {
+          if (numValidationErrors || numValidationWarnings || numValidationEnhancements) {
             let reportString = "PARTIAL SUCCESS: ";
             let reportDetails = [];
             if (numValidationErrors) {
@@ -200,7 +204,10 @@ class AgencyJsonStream extends Transform {
             if (numValidationWarnings) {
               reportDetails.push(`${numValidationWarnings} WARNINGS`);
             }
-            reportString += reportDetails.join(" AND ");
+            if (numValidationEnhancements) {
+              reportDetails.push(`${numValidationEnhancements} REQUESTED ENHANCEMENTS`);
+            }
+            reportString += reportDetails.join(", ");
             Reporter.reportStatus(agencyName, reportString);
           } else if (numValidationWarnings > 0) {
             Reporter.reportStatus(agencyName,
@@ -213,6 +220,7 @@ class AgencyJsonStream extends Transform {
 
         let numValidationErrors = 0;
         let numValidationWarnings = 0;
+        let numValidationEnhancements = 0;
 
         // TODO: not currently checking for version field
 

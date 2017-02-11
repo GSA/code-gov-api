@@ -40,6 +40,13 @@
   "acronym": "HUD",
   "website": "https://www.hud.gov/",
   "codeUrl": "https://www.hud.gov/code.json"
+}, 
+{
+  "id": 29,
+  "name": "Department of Homeland Security",
+  "acronym": "DHS",
+  "website": "https://dhs.gov",
+  "codeUrl": "https://dhs.gov/code.json"
 }, {
   "id": 8,
   "name": "Department of Interior",
