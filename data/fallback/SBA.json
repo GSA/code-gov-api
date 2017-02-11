@@ -1,6 +1,6 @@
 {
   "agency": "SBA",
-  "projects": {
+  "projects": [{
     "name": "OracletoSQL",
     "description": "A standalone CFM code to move data from Oracle Database to SQL Server Database.",
     "license": "",
@@ -30,5 +30,5 @@
       "metadataLastUpdated": "2016-12-02",
       "lastModified": "2016-12-02"
     }
-  }
+  }]
 }
