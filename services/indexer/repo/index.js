@@ -150,7 +150,7 @@ class AgencyJsonStream extends Transform {
         // throwing out the repos that have errors and keeping those which
         // only have warnings (or no errors and warnings at all)...
         Reporter.reportVersion(agencyName, agencyData.version);
-        
+            
         const _processRepo = (repo, done) => {
           this.logger.info(`Processing repo ${repo.name}...`);
           // add agency to repo (we need it for formatting)
@@ -168,17 +168,17 @@ class AgencyJsonStream extends Transform {
             Validator.validateRepo(repo, (err, validationResult) => {
               if (validationResult.issues) {
                 if (validationResult.issues.errors.length ||
-                  validationResult.issues.warnings.length ||
-                  validationResult.issues.enhancements.length ) {
+                  validationResult.issues.warnings.length ) {
                     Reporter.reportIssues(agencyName, validationResult);
-                    numValidationErrors +=
-                      validationResult.issues.errors.length;
-                    numValidationWarnings +=
-                      validationResult.issues.warnings.length;
-                    numValidationEnhancements +=
-                      validationResult.issues.enhancements.length;
+                    numValidationErrors += validationResult.issues.errors.length;
+                    numValidationWarnings += validationResult.issues.warnings.length;
                 }
+                //if (validationResult.issues.enhancements.length ) {
+                numValidationEnhancements += validationResult.issues.enhancements.length;
+                //}
               }
+              
+
               if (err) {
                 // swallow the error and continue to process other repos
                 this.logger.error(
@@ -195,26 +195,34 @@ class AgencyJsonStream extends Transform {
         };
 
         const _finishedProcessing = () => {
-          if (numValidationErrors || numValidationWarnings || numValidationEnhancements) {
-            let reportString = "PARTIAL SUCCESS: ";
-            let reportDetails = [];
-            if (numValidationErrors) {
-              reportDetails.push(`${numValidationErrors} ERRORS`);
-            }
-            if (numValidationWarnings) {
-              reportDetails.push(`${numValidationWarnings} WARNINGS`);
-            }
-            if (numValidationEnhancements) {
-              reportDetails.push(`${numValidationEnhancements} REQUESTED ENHANCEMENTS`);
-            }
-            reportString += reportDetails.join(", ");
-            Reporter.reportStatus(agencyName, reportString);
-          } else if (numValidationWarnings > 0) {
-            Reporter.reportStatus(agencyName,
-              `PARTIAL SUCCESS: ${numValidationWarnings} WARNINGS`);
-          } else {
-            Reporter.reportStatus(agencyName, "SUCCESS");
+          let reportDetails = [];
+          //let reportString = "PARTIALLY COMPLIANT: ";
+          agency.requirements.schemaFormat = .5;
+
+          let errorCount = 0;
+
+          if (numValidationErrors) {
+            errorCount += numValidationErrors;
+            //reportDetails.push(`${numValidationErrors} ERRORS`);
           }
+          if (numValidationWarnings) {
+            errorCount += numValidationWarnings
+            //reportDetails.push(`${numValidationWarnings} WARNINGS`);
+          }
+          reportDetails.push(`${errorCount} validation errors`);
+          reportString += reportDetails.join(", ");
+          Reporter.reportStatus(agencyName, reportString);
+        
+          if(errorCount==0){
+            agency.requirements.schemaFormat = 1;
+            Reporter.reportStatus(agencyName, "FULLY COMPLIANT");
+          }
+      
+          if (numValidationEnhancements) {
+            reportDetails.push(`${numValidationEnhancements} REQUESTED ENHANCEMENTS`);
+          }
+          agency.requirements.overallCompliance = this._calculateOverallCompliance(agency.requirements);
+          Reporter.reportRequirements(agencyName, agency.requirements);
           return finished();
         };
 
@@ -234,7 +242,10 @@ class AgencyJsonStream extends Transform {
       const _processAgencyDataFailure = (finished) => {
         // FAILURE CASE: don't process any agency data, fallback to data
         // located in the FALLBACK_DIR...
-
+        agency.requirements.schemaFormat = 0;
+        agency.requirements.overallCompliance = this._calculateOverallCompliance(agency.requirements);
+        Reporter.reportRequirements(agencyName, agency.requirements);
+        
         const _processRepo = (repo, done) => {
           this.logger.info(`[FALLBACK] Processing repo ${repo.name}...`);
           // add agency to repo (we need it for formatting)
@@ -297,6 +308,17 @@ class AgencyJsonStream extends Transform {
 
   _transform(agency, enc, callback) {
     this._fetchAgencyRepos(agency, callback);
+  }
+
+  _calculateOverallCompliance(requirements){
+    //overallCompliance should be the average of the other requirements.
+    //TODO: align this approach with project-open-data's approach
+    let overallCompliance = 0;
+    for (var req in requirements){
+      overallCompliance += requirements[req];
+    }
+    overallCompliance /= _.size(requirements);
+    return overallCompliance;
   }
 
 }

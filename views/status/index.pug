@@ -21,18 +21,82 @@ block content
     });
   table
     tr
-      th(colspan=2) Agency
+      th(colspan=2) Agency or Organization
+      th Agency Policy Updated
+      th Inventory Published, Compliant
       th Code.json Link
       th Schema Version
-      th(style="width:400px;") Notes
+      th(style="width:400px;") Technical Notes
       th Issues
       th Discovered
     each data in statusDataArr
       tr
-        td
-          =data.metadata.agency.acronym
-        td
-          =data.metadata.agency.name
+        
+        if data.metadata.agency.requirements.overallCompliance <=0
+          if data.metadata.agency.requirements.overallCompliance == 0  
+            td.failure
+              =data.metadata.agency.acronym 
+            td.failure
+              =data.metadata.agency.name              
+          else
+            td
+              =data.metadata.agency.acronym
+            td
+              =data.metadata.agency.name
+        else if data.metadata.agency.requirements.overallCompliance <1
+          td.warning
+            =data.metadata.agency.acronym 
+          td.warning
+            =data.metadata.agency.name
+        else if data.metadata.agency.requirements.overallCompliance >=1
+          td.success
+            =data.metadata.agency.acronym 
+          td.success
+            =data.metadata.agency.name
+        else
+          td
+            =data.metadata.agency.acronym
+          td
+            =data.metadata.agency.name
+        
+        if data.metadata.agency.requirements.agencyWidePolicy <=0
+          if data.metadata.agency.requirements.agencyWidePolicy
+            td(style="background:none")
+              .failure.bold
+                ="Incomplete"
+          else
+            td
+              .grey
+                ="N/A"
+        else if data.metadata.agency.requirements.agencyWidePolicy <1
+          td(style="background:none")
+            .warning.bold
+              ="Partially complete"   
+        else 
+          td(style="background:none")
+            .success.bold
+              ="Complete"        
+        
+
+
+        if data.metadata.agency.requirements.schemaFormat <=0
+          if data.metadata.agency.requirements.schemaFormat == 0  
+            td(style="background:none")
+              .failure.bold
+                ="Incomplete"
+          else
+            td
+              .grey
+                ="N/A"
+        else if data.metadata.agency.requirements.schemaFormat <1
+          td(style="background:none")
+            .warning.bold
+              ="Partially complete"   
+        else 
+          td(style="background:none")
+            .success.bold
+              ="Complete"
+        
         td
           a(href=data.metadata.agency.codeUrl)
             =data.metadata.agency.codeUrl
