@@ -196,7 +196,7 @@ class AgencyJsonStream extends Transform {
 
         const _finishedProcessing = () => {
           let reportDetails = [];
-          //let reportString = "PARTIALLY COMPLIANT: ";
+          let reportString = "";
           agency.requirements.schemaFormat = .5;
 
           let errorCount = 0;
