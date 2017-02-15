@@ -168,13 +168,15 @@ class AgencyJsonStream extends Transform {
             Validator.validateRepo(repo, (err, validationResult) => {
               if (validationResult.issues) {
                 if (validationResult.issues.errors.length ||
-                  validationResult.issues.warnings.length ) {
+                  validationResult.issues.warnings.length || 
+                  validationResult.issues.enhancements.length) {
                     Reporter.reportIssues(agencyName, validationResult);
                     numValidationErrors += validationResult.issues.errors.length;
                     numValidationWarnings += validationResult.issues.warnings.length;
+                    numValidationEnhancements += validationResult.issues.enhancements.length;
                 }
                 //if (validationResult.issues.enhancements.length ) {
-                numValidationEnhancements += validationResult.issues.enhancements.length;
+                
                 //}
               }
               
@@ -203,26 +205,33 @@ class AgencyJsonStream extends Transform {
 
           if (numValidationErrors) {
             errorCount += numValidationErrors;
-            //reportDetails.push(`${numValidationErrors} ERRORS`);
+            reportDetails.push(`${numValidationErrors} ERRORS`);
           }
           if (numValidationWarnings) {
             errorCount += numValidationWarnings
-            //reportDetails.push(`${numValidationWarnings} WARNINGS`);
+            reportDetails.push(`${numValidationWarnings} WARNINGS`);
           }
           reportDetails.push(`${errorCount} validation errors`);
-          reportString += reportDetails.join(", ");
-          Reporter.reportStatus(agencyName, reportString);
         
-          if(errorCount==0){
-            agency.requirements.schemaFormat = 1;
-            Reporter.reportStatus(agencyName, "FULLY COMPLIANT");
-          }
-      
           if (numValidationEnhancements) {
             reportDetails.push(`${numValidationEnhancements} REQUESTED ENHANCEMENTS`);
           }
+
+          if(errorCount==0){
+            agency.requirements.schemaFormat = 1;
+            reportString = "FULLY COMPLIANT: ";
+            //Reporter.reportStatus(agencyName, "FULLY COMPLIANT");
+          }
+          else{
+            reportString= "NOT FULLY COMPLIANT: ";
+          }
+
+          reportString += reportDetails.join(", ");
+          Reporter.reportStatus(agencyName, reportString);
+        
           agency.requirements.overallCompliance = this._calculateOverallCompliance(agency.requirements);
           Reporter.reportRequirements(agencyName, agency.requirements);
+        
           return finished();
         };
 

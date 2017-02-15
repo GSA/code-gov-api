@@ -119,17 +119,7 @@ block content
         td
           =data.version
         td
-          if data.status.includes("FAILURE:")
-            .failure
-              =data.status
-          else if data.status.includes("PARTIAL SUCCESS:")
-            .warning
-              =data.status
-          else if data.status.includes("SUCCESS")
-            .success
-              =data.status
-          else
-            =data.status
+          =data.status
         td
           if data.issues.length
             a(href="status/" + data.metadata.agency.acronym + "/issues") view issues &rarr;
