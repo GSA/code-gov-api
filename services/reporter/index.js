@@ -36,6 +36,7 @@ class Reporter {
     }
   }
 
+  //deprecated
   reportStatus(itemName, status) {
     this._createReportItemIfDoesntExist(itemName);
     this.report.statuses[itemName]["status"] = status;
@@ -55,6 +56,11 @@ class Reporter {
   reportMetadata(itemName, metadata) {
     this._createReportItemIfDoesntExist(itemName);
     this.report.statuses[itemName]["metadata"] = metadata;
+  }
+
+  reportRequirements(itemName, requirements) {
+    this._createReportItemIfDoesntExist(itemName);
+    this.report.statuses[itemName]["requirements"] = requirements;
   }
 
   writeReportToFile(callback) {
