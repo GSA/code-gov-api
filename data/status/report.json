@@ -1,8 +1,16 @@
 {
-  "timestamp": "Sat Feb 11 2017 10:34:52 GMT-0500 (EST)",
+<<<<<<< HEAD
+<<<<<<< HEAD
+  "timestamp": "Thu Feb 02 2017 09:52:22 GMT-0500 (EST)",
+=======
+  "timestamp": "Wed Feb 01 2017 16:53:47 GMT-0500 (EST)",
+>>>>>>> origin/filter-fixes
+=======
+  "timestamp": "Wed Feb 15 2017 18:00:25 GMT-0500 (EST)",
+>>>>>>> origin/filter-fixes
   "statuses": {
     "USDA": {
-      "status": "PARTIAL SUCCESS: 27 WARNINGS",
+      "status": "NOT FULLY COMPLIANT: 27 WARNINGS, 27 validation errors",
       "issues": [
         {
           "repoID": "usda_ocio_digitalgov_analytics",
@@ -667,8 +675,18 @@
           "name": "Department of Agriculture",
           "acronym": "USDA",
           "website": "https://usda.gov/",
-          "codeUrl": "https://www.usda.gov/code.json"
+          "codeUrl": "https://www.usda.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": 0,
+            "schemaFormat": 0.5,
+            "overallCompliance": 0.25
+          }
         }
+      },
+      "requirements": {
+        "agencyWidePolicy": 0,
+        "schemaFormat": 0.5,
+        "overallCompliance": 0.25
       }
     },
     "DOC": {
@@ -681,8 +699,18 @@
           "name": "Department of Commerce",
           "acronym": "DOC",
           "website": "https://www.commerce.gov/",
-          "codeUrl": "https://www.commerce.gov/code.json"
+          "codeUrl": "https://www.commerce.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": 1,
+            "schemaFormat": 0,
+            "overallCompliance": 0.5
+          }
         }
+      },
+      "requirements": {
+        "agencyWidePolicy": 1,
+        "schemaFormat": 0,
+        "overallCompliance": 0.5
       }
     },
     "DOD": {
@@ -695,12 +723,22 @@
           "name": "Department of Defense",
           "acronym": "DOD",
           "website": "https://www.defense.gov/",
-          "codeUrl": "https://www.defense.gov/code.json"
+          "codeUrl": "https://www.defense.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": 0,
+            "schemaFormat": 0,
+            "overallCompliance": 0
+          }
         }
+      },
+      "requirements": {
+        "agencyWidePolicy": 0,
+        "schemaFormat": 0,
+        "overallCompliance": 0
       }
     },
     "ED": {
-      "status": "SUCCESS",
+      "status": "FULLY COMPLIANT: 0 validation errors",
       "issues": [],
       "version": "1.0.1",
       "metadata": {
@@ -708,8 +746,18 @@
           "name": "Department of Education",
           "acronym": "ED",
           "website": "http://www.ed.gov/",
-          "codeUrl": "https://www2.ed.gov/code.json"
+          "codeUrl": "https://www2.ed.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": 1,
+            "schemaFormat": 1,
+            "overallCompliance": 1
+          }
         }
+      },
+      "requirements": {
+        "agencyWidePolicy": 1,
+        "schemaFormat": 1,
+        "overallCompliance": 1
       }
     },
     "DOE": {
@@ -722,12 +770,22 @@
           "name": "Department of Energy",
           "acronym": "DOE",
           "website": "https://energy.gov/",
-          "codeUrl": "https://energy.gov/code.json"
+          "codeUrl": "https://energy.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": 0.5,
+            "schemaFormat": 0,
+            "overallCompliance": 0.25
+          }
         }
+      },
+      "requirements": {
+        "agencyWidePolicy": 0.5,
+        "schemaFormat": 0,
+        "overallCompliance": 0.25
       }
     },
     "HHS": {
-      "status": "PARTIAL SUCCESS: 1 REQUESTED ENHANCEMENTS",
+      "status": "FULLY COMPLIANT: 0 validation errors, 1 REQUESTED ENHANCEMENTS",
       "issues": [
         {
           "repoID": "hhs_department_health_human_services_ckanext_harvest",
@@ -757,20 +815,40 @@
           "name": "Department of Health and Human Services",
           "acronym": "HHS",
           "website": "https://hhs.gov",
-          "codeUrl": "https://hhs.gov/code.json"
+          "codeUrl": "https://hhs.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": 1,
+            "schemaFormat": 1,
+            "overallCompliance": 1
+          }
         }
+      },
+      "requirements": {
+        "agencyWidePolicy": 1,
+        "schemaFormat": 1,
+        "overallCompliance": 1
       }
     },
     "HUD": {
-      "status": "SUCCESS",
+      "status": "FULLY COMPLIANT: 0 validation errors",
       "issues": [],
       "metadata": {
         "agency": {
           "name": "Department of Housing and Urban Development",
           "acronym": "HUD",
           "website": "https://www.hud.gov/",
-          "codeUrl": "https://www.hud.gov/code.json"
+          "codeUrl": "https://www.hud.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": 0.5,
+            "schemaFormat": 1,
+            "overallCompliance": 0.75
+          }
         }
+      },
+      "requirements": {
+        "agencyWidePolicy": 0.5,
+        "schemaFormat": 1,
+        "overallCompliance": 0.75
       }
     },
     "DHS": {
@@ -783,8 +861,18 @@
           "name": "Department of Homeland Security",
           "acronym": "DHS",
           "website": "https://www.dhs.gov",
-          "codeUrl": "https://www.dhs.gov/code.json"
+          "codeUrl": "https://www.dhs.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": 0.5,
+            "schemaFormat": 0,
+            "overallCompliance": 0.25
+          }
         }
+      },
+      "requirements": {
+        "agencyWidePolicy": 0.5,
+        "schemaFormat": 0,
+        "overallCompliance": 0.25
       }
     },
     "DOI": {
@@ -797,8 +885,18 @@
           "name": "Department of Interior",
           "acronym": "DOI",
           "website": "https://data.doi.gov/",
-          "codeUrl": "https://data.doi.gov/code.json"
+          "codeUrl": "https://data.doi.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": 0.5,
+            "schemaFormat": 0,
+            "overallCompliance": 0.25
+          }
         }
+      },
+      "requirements": {
+        "agencyWidePolicy": 0.5,
+        "schemaFormat": 0,
+        "overallCompliance": 0.25
       }
     },
     "DOJ": {
@@ -811,8 +909,18 @@
           "name": "Department of Justice",
           "acronym": "DOJ",
           "website": "https://justice.gov",
-          "codeUrl": "https://justice.gov/code.json"
+          "codeUrl": "https://justice.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": 0.5,
+            "schemaFormat": 0,
+            "overallCompliance": 0.25
+          }
         }
+      },
+      "requirements": {
+        "agencyWidePolicy": 0.5,
+        "schemaFormat": 0,
+        "overallCompliance": 0.25
       }
     },
     "DOL": {
@@ -825,8 +933,18 @@
           "name": "Department of Labor",
           "acronym": "DOL",
           "website": "https://www.dol.gov",
-          "codeUrl": "https://www.dol.gov/code.json"
+          "codeUrl": "https://www.dol.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": 0,
+            "schemaFormat": 0,
+            "overallCompliance": 0
+          }
         }
+      },
+      "requirements": {
+        "agencyWidePolicy": 0,
+        "schemaFormat": 0,
+        "overallCompliance": 0
       }
     },
     "DOS": {
@@ -839,12 +957,22 @@
           "name": "Department of State",
           "acronym": "DOS",
           "website": "https://state.gov/",
-          "codeUrl": "https://state.gov/code.json"
+          "codeUrl": "https://state.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": 0,
+            "schemaFormat": 0,
+            "overallCompliance": 0
+          }
         }
+      },
+      "requirements": {
+        "agencyWidePolicy": 0,
+        "schemaFormat": 0,
+        "overallCompliance": 0
       }
     },
     "DOT": {
-      "status": "PARTIAL SUCCESS: 14 ERRORS, 82 WARNINGS",
+      "status": "NOT FULLY COMPLIANT: 14 ERRORS, 82 WARNINGS, 96 validation errors",
       "issues": [
         {
           "repoID": "dot_ost_ptbs_development",
@@ -3361,8 +3489,18 @@
           "name": "Department of Transportation",
           "acronym": "DOT",
           "website": "https://www.transportation.gov/",
-          "codeUrl": "https://www.transportation.gov/code.json"
+          "codeUrl": "https://www.transportation.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": 0.5,
+            "schemaFormat": 0.5,
+            "overallCompliance": 0.5
+          }
         }
+      },
+      "requirements": {
+        "agencyWidePolicy": 0.5,
+        "schemaFormat": 0.5,
+        "overallCompliance": 0.5
       }
     },
     "TRE": {
@@ -3375,8 +3513,18 @@
           "name": "Department of Treasury",
           "acronym": "TRE",
           "website": "https://www.treasury.gov/",
-          "codeUrl": "https://www.treasury.gov/code.json"
+          "codeUrl": "https://www.treasury.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": 0,
+            "schemaFormat": 0,
+            "overallCompliance": 0
+          }
         }
+      },
+      "requirements": {
+        "agencyWidePolicy": 0,
+        "schemaFormat": 0,
+        "overallCompliance": 0
       }
     },
     "VA": {
@@ -3389,8 +3537,18 @@
           "name": "Department of Veterans Affairs",
           "acronym": "VA",
           "website": "https://va.gov/",
-          "codeUrl": "https://va.gov/code.json"
+          "codeUrl": "https://va.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": 0,
+            "schemaFormat": 0,
+            "overallCompliance": 0
+          }
         }
+      },
+      "requirements": {
+        "agencyWidePolicy": 0,
+        "schemaFormat": 0,
+        "overallCompliance": 0
       }
     },
     "EPA": {
@@ -3403,12 +3561,22 @@
           "name": "Environmental Protection Agency",
           "acronym": "EPA",
           "website": "https://epa.gov/",
-          "codeUrl": "https://epa.gov/code.json"
+          "codeUrl": "https://epa.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": 0,
+            "schemaFormat": 0,
+            "overallCompliance": 0
+          }
         }
+      },
+      "requirements": {
+        "agencyWidePolicy": 0,
+        "schemaFormat": 0,
+        "overallCompliance": 0
       }
     },
     "NASA": {
-      "status": "PARTIAL SUCCESS: 204 WARNINGS",
+      "status": "NOT FULLY COMPLIANT: 204 WARNINGS, 204 validation errors",
       "issues": [
         {
           "repoID": "nasa_arc_nasa_tensegrity_robotics_toolkit_ntrt_v1",
@@ -7701,8 +7869,18 @@
           "name": "National Aeronautics and Space Administration",
           "acronym": "NASA",
           "website": "https://nasa.gov/",
-          "codeUrl": "https://code.nasa.gov/code.json"
+          "codeUrl": "https://code.nasa.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": 1,
+            "schemaFormat": 0.5,
+            "overallCompliance": 0.75
+          }
         }
+      },
+      "requirements": {
+        "agencyWidePolicy": 1,
+        "schemaFormat": 0.5,
+        "overallCompliance": 0.75
       }
     },
     "AID": {
@@ -7715,8 +7893,18 @@
           "name": "Agency for International Development",
           "acronym": "AID",
           "website": "https://usaid.gov/",
-          "codeUrl": "https://usaid.gov/code.json"
+          "codeUrl": "https://usaid.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": 1,
+            "schemaFormat": 0,
+            "overallCompliance": 0.5
+          }
         }
+      },
+      "requirements": {
+        "agencyWidePolicy": 1,
+        "schemaFormat": 0,
+        "overallCompliance": 0.5
       }
     },
     "FEMA": {
@@ -7729,12 +7917,22 @@
           "name": "Federal Emergency Management Agency",
           "acronym": "FEMA",
           "website": "https://fema.gov/",
-          "codeUrl": "https://fema.gov/code.json"
+          "codeUrl": "https://fema.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": null,
+            "schemaFormat": 0,
+            "overallCompliance": 0
+          }
         }
+      },
+      "requirements": {
+        "agencyWidePolicy": null,
+        "schemaFormat": 0,
+        "overallCompliance": 0
       }
     },
     "GSA": {
-      "status": "PARTIAL SUCCESS: 435 REQUESTED ENHANCEMENTS",
+      "status": "FULLY COMPLIANT: 0 validation errors, 435 REQUESTED ENHANCEMENTS",
       "issues": [
         {
           "repoID": "gsa_18f_xavier",
@@ -16692,24 +16890,44 @@
           "name": "General Services Administration",
           "acronym": "GSA",
           "website": "https://gsa.gov/",
-          "codeUrl": "https://gsa.gov/code.json"
+          "codeUrl": "https://gsa.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": 1,
+            "schemaFormat": 1,
+            "overallCompliance": 1
+          }
         }
+      },
+      "requirements": {
+        "agencyWidePolicy": 1,
+        "schemaFormat": 1,
+        "overallCompliance": 1
       }
     },
     "NSF": {
-      "status": "SUCCESS",
+      "status": "FULLY COMPLIANT: 0 validation errors",
       "issues": [],
       "metadata": {
         "agency": {
           "name": "National Science Foundation",
           "acronym": "NSF",
           "website": "https://nsf.gov/",
-          "codeUrl": "https://nsf.gov/code.json"
+          "codeUrl": "https://nsf.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": 1,
+            "schemaFormat": 1,
+            "overallCompliance": 1
+          }
         }
+      },
+      "requirements": {
+        "agencyWidePolicy": 1,
+        "schemaFormat": 1,
+        "overallCompliance": 1
       }
     },
     "NRC": {
-      "status": "SUCCESS",
+      "status": "FULLY COMPLIANT: 0 validation errors",
       "issues": [],
       "version": "1.0.1",
       "metadata": {
@@ -16717,8 +16935,18 @@
           "name": "Nuclear Regulatory Commission",
           "acronym": "NRC",
           "website": "https://www.nrc.gov/",
-          "codeUrl": "https://www.nrc.gov/code.json"
+          "codeUrl": "https://www.nrc.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": 1,
+            "schemaFormat": 1,
+            "overallCompliance": 1
+          }
         }
+      },
+      "requirements": {
+        "agencyWidePolicy": 1,
+        "schemaFormat": 1,
+        "overallCompliance": 1
       }
     },
     "OPM": {
@@ -16731,8 +16959,18 @@
           "name": "Office of Personnel Management",
           "acronym": "OPM",
           "website": "https://opm.gov/",
-          "codeUrl": "https://opm.gov/code.json"
+          "codeUrl": "https://opm.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": 0.5,
+            "schemaFormat": 0,
+            "overallCompliance": 0.25
+          }
         }
+      },
+      "requirements": {
+        "agencyWidePolicy": 0.5,
+        "schemaFormat": 0,
+        "overallCompliance": 0.25
       }
     },
     "SBA": {
@@ -16744,12 +16982,22 @@
           "name": "Small Business Administration",
           "acronym": "SBA",
           "website": "https://sba.gov/",
-          "codeUrl": "https://sba.gov/code.json"
+          "codeUrl": "https://sba.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": 1,
+            "schemaFormat": 0,
+            "overallCompliance": 0.5
+          }
         }
+      },
+      "requirements": {
+        "agencyWidePolicy": 1,
+        "schemaFormat": 0,
+        "overallCompliance": 0.5
       }
     },
     "NARA": {
-      "status": "PARTIAL SUCCESS: 11 WARNINGS, 2 REQUESTED ENHANCEMENTS",
+      "status": "NOT FULLY COMPLIANT: 11 WARNINGS, 11 validation errors, 2 REQUESTED ENHANCEMENTS",
       "issues": [
         {
           "repoID": "nara_national_archives_records_administration_avi_metaedit",
@@ -17009,12 +17257,26 @@
           "name": "National Archives",
           "acronym": "NARA",
           "website": "https://archives.gov/",
-          "codeUrl": "https://archives.gov/code.json"
+          "codeUrl": "https://archives.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": 1,
+            "schemaFormat": 0.5,
+            "overallCompliance": 0.75
+          }
         }
+      },
+      "requirements": {
+        "agencyWidePolicy": 1,
+        "schemaFormat": 0.5,
+        "overallCompliance": 0.75
       }
     },
     "CFPB": {
+<<<<<<< HEAD
+      "status": "FAILURE: ERROR WHEN FETCHING (Hostname/IP doesn't match certificate's altnames: \"Host: www.consumerfinance.gov. is not in the cert's altnames: DNS:*.akamaihd.net, DNS:*.akamaized-staging.net, DNS:*.akamaized.net, DNS:*.akamaihd-staging.net, DNS:a248.e.akamai.net\")",
+=======
       "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token < in JSON at position 0)",
+>>>>>>> origin/filter-fixes
       "issues": [],
       "version": "",
       "metadata": {
@@ -17023,8 +17285,18 @@
           "name": "Consumer Financial Protection Bureau",
           "acronym": "CFPB",
           "website": "https://consumerfinance.gov/",
-          "codeUrl": "https://consumerfinance.gov/code.json"
+          "codeUrl": "https://consumerfinance.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": null,
+            "schemaFormat": 0,
+            "overallCompliance": 0
+          }
         }
+      },
+      "requirements": {
+        "agencyWidePolicy": null,
+        "schemaFormat": 0,
+        "overallCompliance": 0
       }
     },
     "EOP": {
@@ -17037,12 +17309,22 @@
           "name": "White House - Executive Office of the President",
           "acronym": "EOP",
           "website": "https://whitehouse.gov/",
-          "codeUrl": "https://whitehouse.gov/code.json"
+          "codeUrl": "https://whitehouse.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": null,
+            "schemaFormat": 0,
+            "overallCompliance": 0
+          }
         }
+      },
+      "requirements": {
+        "agencyWidePolicy": null,
+        "schemaFormat": 0,
+        "overallCompliance": 0
       }
     },
     "SSA": {
-      "status": "SUCCESS",
+      "status": "FULLY COMPLIANT: 0 validation errors",
       "issues": [],
       "version": "1.0.1",
       "metadata": {
@@ -17050,8 +17332,18 @@
           "name": "Social Security Administration",
           "acronym": "SSA",
           "website": "https://www.ssa.gov",
-          "codeUrl": "https://www.ssa.gov/code.json"
+          "codeUrl": "https://www.ssa.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": 1,
+            "schemaFormat": 1,
+            "overallCompliance": 1
+          }
         }
+      },
+      "requirements": {
+        "agencyWidePolicy": 1,
+        "schemaFormat": 1,
+        "overallCompliance": 1
       }
     }
   }

@@ -1,9 +1,25 @@
 extends ../layout
 
 block content
-  p(style="padding: 10px; width: 720px;")
-    b NOTE:
-    |&nbsp;The following table shows the API retrieval status of each agency's code.json. A FAILURE status indicates that either the code.json does not exist, or it had severe errors which prevented the API from consuming it. A PARTIAL SUCCESS status indicates that the API was successful in finding and consuming the code.json, but that some errors and/or warnings might exist. Each error in a PARTIAL SUCCESS status indicates that an individual project had to be thrown out of processing because it was either missing required fields or did not adhere to the schema in a critical way. Each warning in a PARTIAL SUCCESS indicates that an individual project will still be consumed by the API, but that it is strongly suggested that a change be made to the project's json object for the future. You may view a detailed list of these errors and/or warnings by clicking on the "view issues" link (in the right-most column). A SUCCESS status indicates that the agency's code.json has been fully consumed without any issues.
+  h1(style="padding: 10px 10px 0 10px; margin: 10px 10px 0 10px;")
+    ="Alpha Source Code Policy Compliance Dashboard"
+  p(style="padding: 10px 10px 0 10px; margin: 10px 10px 0 10px;")
+    ="This page shows each agency's status with regards to compliance with the Federal Source Code Policy. It is not publicly available and is designed for technical points of contact at agencies as they help their agencies achieve compliance. Portions of this information will be made available in the future publicly on code.gov."
+    br
+    br
+    ul(style="margin-top: 0;")
+      li
+        ="RED status indicates that an agency has not completely met the requirement to update its agency policy AND that its code.json is not fully compliant."
+      li
+        ="YELLOW status indicates that an agency has not completely met the requirement to update its agency policy OR that its code.json is not fully compliant."
+      li
+        ="GREEN status means that both topline requirements have been met."
+    p(style="padding: 10px; margin: 10px;")
+      ="The technical notes and Issues page now include 'Requested Enhancements' which are not mandatory and do not impact agencies' green/yellow/red status."
+    p(style="padding: 10px; margin: 10px;")
+      i Last Updated:&nbsp;
+        =statusData.timestamp  
+
   -
     var statusDataArr = [];
     for (var agency in statusData.statuses) {
@@ -21,35 +37,89 @@ block content
     });
   table
     tr
-      th(colspan=2) Agency
+      th(colspan=2) Agency or Organization
+      th Agency Policy Updated
+      th Inventory Published, Compliant
       th Code.json Link
       th Schema Version
-      th(style="width:400px;") Notes
+      th(style="width:400px;") Technical Notes
       th Issues
       th Discovered
     each data in statusDataArr
       tr
-        td
-          =data.metadata.agency.acronym
-        td
-          =data.metadata.agency.name
+        
+        if data.metadata.agency.requirements.overallCompliance <=0
+          if data.metadata.agency.requirements.overallCompliance == 0  
+            td.failure
+              =data.metadata.agency.acronym 
+            td.failure
+              =data.metadata.agency.name              
+          else
+            td
+              =data.metadata.agency.acronym
+            td
+              =data.metadata.agency.name
+        else if data.metadata.agency.requirements.overallCompliance <1
+          td.warning
+            =data.metadata.agency.acronym 
+          td.warning
+            =data.metadata.agency.name
+        else if data.metadata.agency.requirements.overallCompliance >=1
+          td.success
+            =data.metadata.agency.acronym 
+          td.success
+            =data.metadata.agency.name
+        else
+          td
+            =data.metadata.agency.acronym
+          td
+            =data.metadata.agency.name
+        
+        if data.metadata.agency.requirements.agencyWidePolicy <=0
+          if data.metadata.agency.requirements.agencyWidePolicy
+            td(style="background:none")
+              .failure.bold
+                ="Incomplete"
+          else
+            td
+              .grey
+                ="N/A"
+        else if data.metadata.agency.requirements.agencyWidePolicy <1
+          td(style="background:none")
+            .warning.bold
+              ="Partially complete"   
+        else 
+          td(style="background:none")
+            .success.bold
+              ="Complete"        
+        
+
+
+        if data.metadata.agency.requirements.schemaFormat <=0
+          if data.metadata.agency.requirements.schemaFormat == 0  
+            td(style="background:none")
+              .failure.bold
+                ="Incomplete"
+          else
+            td
+              .grey
+                ="N/A"
+        else if data.metadata.agency.requirements.schemaFormat <1
+          td(style="background:none")
+            .warning.bold
+              ="Partially complete"   
+        else 
+          td(style="background:none")
+            .success.bold
+              ="Complete"
+        
         td
           a(href=data.metadata.agency.codeUrl)
             =data.metadata.agency.codeUrl
         td
           =data.version
         td
-          if data.status.includes("FAILURE:")
-            .failure
-              =data.status
-          else if data.status.includes("PARTIAL SUCCESS:")
-            .warning
-              =data.status
-          else if data.status.includes("SUCCESS")
-            .success
-              =data.status
-          else
-            =data.status
+          =data.status
         td
           if data.issues.length
             a(href="status/" + data.metadata.agency.acronym + "/issues") view issues &rarr;
