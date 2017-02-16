@@ -33,7 +33,8 @@ class ElasticsearchAdapter extends BaseElasticsearchAdapter {
         let hosts = this.getHostsFromConfig();
 
         this.client = new ElasticSearch.Client({
-            host: hosts,
+            host: process.env.ES_HOST,
+            httpAuth: process.env.ES_AUTH,
             log: SearchLogger
         });
     }
