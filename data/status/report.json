@@ -1,13 +1,5 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "timestamp": "Thu Feb 02 2017 09:52:22 GMT-0500 (EST)",
-=======
-  "timestamp": "Wed Feb 01 2017 16:53:47 GMT-0500 (EST)",
->>>>>>> origin/filter-fixes
-=======
-  "timestamp": "Wed Feb 15 2017 18:00:25 GMT-0500 (EST)",
->>>>>>> origin/filter-fixes
+  "timestamp": "Thu Feb 16 2017 10:50:57 GMT-0500 (EST)",
   "statuses": {
     "USDA": {
       "status": "NOT FULLY COMPLIANT: 27 WARNINGS, 27 validation errors",
@@ -17272,11 +17264,7 @@
       }
     },
     "CFPB": {
-<<<<<<< HEAD
-      "status": "FAILURE: ERROR WHEN FETCHING (Hostname/IP doesn't match certificate's altnames: \"Host: www.consumerfinance.gov. is not in the cert's altnames: DNS:*.akamaihd.net, DNS:*.akamaized-staging.net, DNS:*.akamaized.net, DNS:*.akamaihd-staging.net, DNS:a248.e.akamai.net\")",
-=======
       "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token < in JSON at position 0)",
->>>>>>> origin/filter-fixes
       "issues": [],
       "version": "",
       "metadata": {
