@@ -359,7 +359,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "TRANServe VSS",
-      "status": "Testing",
+      "status": "Alpha",
       "license": null,
       "homepage": "http://transparkdev.ost.dot.gov",
       "tags": [
@@ -384,7 +384,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "TRANServe VSS",
-      "status": "Testing",
+      "status": "Alpha",
       "license": null,
       "homepage": "https://transparktest.ost.dot.gov",
       "tags": [
@@ -409,7 +409,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "OST, SharePoint, MSTFS",
-      "status": "Testing",
+      "status": "Alpha",
       "license": null,
       "homepage": "http://our.dot.gov/apps/lms/SitePages/Home.aspx",
       "tags": [
@@ -434,7 +434,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "OST, SharePoint, MSTFS",
-      "status": "Testing",
+      "status": "Alpha",
       "license": null,
       "homepage": "http://ourstage.dot.gov/apps/lrd/SitePages/LRDHome.aspx",
       "tags": [
@@ -459,7 +459,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "OST, SharePoint, MSTFS",
-      "status": "Testing",
+      "status": "Alpha",
       "license": null,
       "homepage": "http://ourstage.dot.gov/apps/oGC-Correspondence/SiteAssets/Home.aspx",
       "tags": [
@@ -484,7 +484,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "OST, SharePoint, MSTFS",
-      "status": "Testing",
+      "status": "Alpha",
       "license": null,
       "homepage": "http://ourstage.dot.gov/apps/gls/SitePages/Home.aspx",
       "tags": [
@@ -509,7 +509,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "OST, SharePoint, MSTFS",
-      "status": "Testing",
+      "status": "Alpha",
       "license": null,
       "homepage": "http://ourstage.dot.gov/apps/CTS/SitePages/CTSHome.aspx",
       "tags": [
@@ -534,7 +534,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "OST, Visual SourceSafe",
-      "status": "Testing",
+      "status": "Alpha",
       "license": null,
       "homepage": "http://ccmtraining.ost.dot.gov",
       "tags": [
@@ -834,7 +834,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "maps.bts.dot.gov ; explore.dot.gov",
       "tags": [
@@ -853,7 +853,7 @@
       }
     },
     {
-      "name": "air_carrier_traffic_statistics",
+      "name": "Air Carrier Traffic",
       "organization": "OST",
       "description": "Air Carrier Traffic Statistics -Features",
       "openSourceProject": 1,
@@ -878,7 +878,7 @@
       }
     },
     {
-      "name": "air_travel_price_index",
+      "name": "Air Travel Price Index",
       "organization": "OST",
       "description": "Air Travel Price Index (ATPI)-Features",
       "openSourceProject": 1,
@@ -903,7 +903,7 @@
       }
     },
     {
-      "name": "average_air_fares",
+      "name": "Average Air Fares",
       "organization": "OST",
       "description": "Average Air Fares - Features",
       "openSourceProject": 1,
@@ -928,7 +928,7 @@
       }
     },
     {
-      "name": "bts_dictionary",
+      "name": "BTS Dictionary",
       "organization": "OST",
       "description": "BTS Dictionary - Features",
       "openSourceProject": 1,
@@ -953,7 +953,7 @@
       }
     },
     {
-      "name": "bulk_delete",
+      "name": "Bulk Delete OST",
       "organization": "OST",
       "description": "This Module will provide interface for deleting nodes that are no longer required",
       "openSourceProject": 1,
@@ -978,7 +978,7 @@
       }
     },
     {
-      "name": "major_pub",
+      "name": "Major Pub",
       "organization": "OST",
       "description": "This Module will Import The two major publications without menu",
       "openSourceProject": 1,
@@ -1003,7 +1003,7 @@
       }
     },
     {
-      "name": "multi_import",
+      "name": "Multi Import OST",
       "organization": "OST",
       "description": "This Module will provide interface for uploading multiple levels html files which are 508 ",
       "openSourceProject": 1,
@@ -1028,7 +1028,7 @@
       }
     },
     {
-      "name": "recursive_import",
+      "name": "Recruisive Impact",
       "organization": "OST",
       "description": "This Module will provide interface for uploading multiple levels html files which are 508 ",
       "openSourceProject": 1,
@@ -1053,7 +1053,7 @@
       }
     },
     {
-      "name": "subject_areas",
+      "name": "Subject Areas DOT ",
       "organization": "OST",
       "description": "This Module will Import all the subject areas under subject areas menu",
       "openSourceProject": 1,
@@ -1078,7 +1078,7 @@
       }
     },
     {
-      "name": "subject_areas_wom",
+      "name": "Subject Areas WOM",
       "organization": "OST",
       "description": "This Module will Import all the subject areas under subject areas without menu",
       "openSourceProject": 1,
@@ -1103,7 +1103,7 @@
       }
     },
     {
-      "name": "transportation_services_index",
+      "name": "Transportation Services Index",
       "organization": "OST",
       "description": "Transportation Services Index - Features",
       "openSourceProject": 1,
@@ -1128,7 +1128,7 @@
       }
     },
     {
-      "name": "custom_search",
+      "name": "Custom Search DOT",
       "organization": "OST",
       "description": "Customize the default search, change labels, default texts, ordering, and display content ",
       "openSourceProject": 1,
@@ -1153,7 +1153,7 @@
       }
     },
     {
-      "name": "rita_book",
+      "name": "RITA Book",
       "organization": "OST",
       "description": "This Module will provide additional functionality for uploading html tables into Book ",
       "openSourceProject": 1,
@@ -1178,7 +1178,7 @@
       }
     },
     {
-      "name": "addressfield_2abstate",
+      "name": "Address 2 Abstate",
       "organization": "OST",
       "description": "Extend address field module to format US state as two letter abbreviation",
       "openSourceProject": 1,
@@ -1209,7 +1209,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://dotostprism.compusearch.com/prism.net/Security/logon.aspx",
       "tags": [
@@ -1355,7 +1355,7 @@
     {
       "name": "Contact Us Tool (CUT) - Admin",
       "organization": "FTA",
-      "description": "a web-based application that provides timely responses to inquiries submitted through FTA’s public website. The tool measures FTA’s responsiveness and promotes accountability of FTA staff. The tool is accessible to designated Program Office Contacts (POCs), who are responsible for responding to inquiries submitted through the tool. ​",
+      "description": "a web-based application that provides timely responses to inquiries submitted through FTA’s public website. The tool measures FTA’s responsiveness and promotes accountability of FTA staff. The tool is accessible to designated Program Office Contacts (POCs), who are responsible for responding to inquiries submitted through the tool. ?",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "on-premise",
@@ -1380,7 +1380,7 @@
     {
       "name": "Contact Us Tool (CUT) - Public",
       "organization": "FTA",
-      "description": "a web-based application that provides timely responses to inquiries submitted through FTA’s public website. The tool measures FTA’s responsiveness and promotes accountability of FTA staff. The tool is accessible to designated Program Office Contacts (POCs), who are responsible for responding to inquiries submitted through the tool. ​",
+      "description": "a web-based application that provides timely responses to inquiries submitted through FTA’s public website. The tool measures FTA’s responsiveness and promotes accountability of FTA staff. The tool is accessible to designated Program Office Contacts (POCs), who are responsible for responding to inquiries submitted through the tool. ?",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "on-premise",
@@ -1455,7 +1455,7 @@
     {
       "name": "Oversight Tracking System (OTrak) - User Acceptance",
       "organization": "FTA",
-      "description": "Used for User Acceptance Testing",
+      "description": "Used for User Acceptance Alpha",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "on-premise",
@@ -1559,7 +1559,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "?",
-      "status": "",
+      "status": "Production",
       "license": null,
       "homepage": "https://www.transit.dot.gov/ccam/",
       "tags": [
@@ -1584,7 +1584,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "?",
-      "status": "",
+      "status": "Production",
       "license": null,
       "homepage": "https://www.transit.dot.gov/ccam/",
       "tags": [
@@ -1755,7 +1755,7 @@
     {
       "name": "Change Tracking System (CTS/CMDB/IM)",
       "organization": "FTA",
-      "description": "Change Tracking System (CTS) is a web-based application FTA uses to review and adjudicate all Software Change Requests (SCRs) made to agency applications and Configuration Change Requests (CCRs) that relate to security, infrastructure, and network resources.​",
+      "description": "Change Tracking System (CTS) is a web-based application FTA uses to review and adjudicate all Software Change Requests (SCRs) made to agency applications and Configuration Change Requests (CCRs) that relate to security, infrastructure, and network resources.?",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "on-premise",
@@ -2434,7 +2434,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "FRA TFS",
-      "status": "Testing",
+      "status": "Alpha",
       "license": null,
       "homepage": "",
       "tags": [
@@ -2459,7 +2459,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "on-premise",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
@@ -2484,7 +2484,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "on-premise",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "http://opsweb.phmsa.dot.gov/downloads/ears_81/",
       "tags": [
@@ -2509,7 +2509,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "on-premise",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
@@ -2534,7 +2534,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "on-premise",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
@@ -2559,7 +2559,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "on-premise",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
@@ -2584,7 +2584,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "on-premise",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
@@ -2609,7 +2609,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "on-premise",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
@@ -2634,7 +2634,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "on-premise",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
@@ -2659,7 +2659,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "on-premise",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
@@ -2684,7 +2684,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "on-premise",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
@@ -2709,7 +2709,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "on-premise",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
@@ -2734,7 +2734,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "on-premise",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
@@ -2759,7 +2759,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "on-premise",
-      "status": "Not ooperational ",
+      "status": "Archival",
       "license": null,
       "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
@@ -2784,7 +2784,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "on-premise",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "SSO  -  https://portal.phmsa.dot.gov/PHMSAPortal2/ or non-SSO  -  http://hmis.phmsa.dot.gov/hmis",
       "tags": [
@@ -2809,7 +2809,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "on-premise",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "SSO  -  https://portal.phmsa.dot.gov/PHMSAPortal2/ or non-SSO  -  http://hmis.phmsa.dot.gov/DOT_Approvals",
       "tags": [
@@ -2834,7 +2834,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "on-premise",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
@@ -2859,7 +2859,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "on-premise",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
@@ -2884,7 +2884,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "on-premise",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
@@ -2909,7 +2909,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "on-premise",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
@@ -2934,7 +2934,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "on-premise",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
@@ -2959,7 +2959,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "on-premise",
-      "status": "Not operational",
+      "status": "Archival",
       "license": null,
       "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
@@ -2984,7 +2984,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "CDAN TFS",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://Geolocator.cdan.dot.gov",
       "tags": [
@@ -3009,7 +3009,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "CDAN TFS",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://vin.cdan.dot.gov",
       "tags": [
@@ -3030,11 +3030,11 @@
     {
       "name": "PARSE",
       "organization": "NHTSA",
-      "description": "Police Accident Report Sampling Engine (PARSE) is a web application operating within CDAN to collect, manage, store and make available to CDAN data acquisition projects, Police Accident Reports (PAR) data collected via electronic or physical methods for the purposes of selection within a appropriate NHTSA data collection program.",
+      "description": "Police Accident Report Sampling Engine (PARSE) is a web application Production within CDAN to collect, manage, store and make available to CDAN data acquisition projects, Police Accident Reports (PAR) data collected via electronic or physical methods for the purposes of selection within a appropriate NHTSA data collection program.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "CDAN TFS",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://parse.cdan.dot.gov",
       "tags": [
@@ -3059,7 +3059,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "CDAN TFS",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://ciss.cdan.dot.gov, ",
       "tags": [
@@ -3084,7 +3084,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "CDAN TFS",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://toolbox.cdan.dot.gov",
       "tags": [
@@ -3109,7 +3109,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "CDAN TFS",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://helpdesk.cdan.dot.gov",
       "tags": [
@@ -3134,7 +3134,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "CDAN TFS",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://upsa.cdan.dot.gov",
       "tags": [
@@ -3159,7 +3159,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "CDAN TFS",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://vr.cdan.dot.gov",
       "tags": [
@@ -3184,7 +3184,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "CDAN TFS",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://mdecurrent.cdan.dot.gov, https://mdeprev.cdan.dot.gov",
       "tags": [
@@ -3209,7 +3209,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "CDAN TFS",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://gesintranet.cdan.dot.gov, https://farsintranet.cdan.dot.gov",
       "tags": [
@@ -3234,7 +3234,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "CDAN TFS",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://gesintranet.cdan.dot.gov/query, https://farsintranet.cdan.dot.gov/query/query.aspx",
       "tags": [
@@ -3259,7 +3259,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "CDAN TFS",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://sso.cdan.dot.gov",
       "tags": [
@@ -3284,7 +3284,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "CDAN TFS",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://edtadmin.cdan.dot.gov",
       "tags": [
@@ -3309,7 +3309,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "CDAN TFS",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://statecaseviewer.cdan.dot.gov",
       "tags": [
@@ -3334,7 +3334,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "CDAN TFS",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://en.cdan.dot.gov",
       "tags": [
@@ -3359,7 +3359,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "CDAN TFS",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://reports.cdan.dot.gov",
       "tags": [
@@ -3384,7 +3384,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "CDAN TFS",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://editchecks.cdan.dot.gov",
       "tags": [
@@ -3409,7 +3409,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "on-premise",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://irex.nhtsa.gov",
       "tags": [
@@ -3434,7 +3434,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "on-premise",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://naf.nhtsa.gov",
       "tags": [
@@ -3459,7 +3459,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "on-premise",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "http://data.nhtsa.gov",
       "tags": [
@@ -3484,7 +3484,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "on-premise",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "http://travelontrack.nhtsa.gov",
       "tags": [
@@ -3509,7 +3509,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "NHTSA Public Web",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "http://www.nhtsa.gov/Research/SISAME-Software-&-Documentation-Downloads",
       "tags": [
@@ -3534,7 +3534,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "on-premise (DOT SFC Data Center)",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://vpic.nhtsa.dot.gov/",
       "tags": [
@@ -3559,7 +3559,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "CDAN TFS",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://www-fars.nhtsa.dot.gov/",
       "tags": [
@@ -3584,7 +3584,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "CDAN TFS",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://forms.cdan.dot.gov/mfs",
       "tags": [
@@ -3609,7 +3609,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "N/A",
-      "status": "Prototype",
+      "status": "Beta",
       "license": null,
       "homepage": "N/A",
       "tags": [
@@ -3634,7 +3634,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "TFS, FHWA",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
       "tags": [
@@ -3659,7 +3659,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "TFS, FHWA",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
       "tags": [
@@ -3684,7 +3684,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "TFS, FHWA",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
       "tags": [
@@ -3709,7 +3709,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "TFS, FHWA",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
       "tags": [
@@ -3734,7 +3734,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "TFS, FHWA",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
       "tags": [
@@ -3759,7 +3759,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "TFS, FHWA",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
       "tags": [
@@ -3784,7 +3784,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "TFS, FHWA",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
       "tags": [
@@ -3809,7 +3809,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "TFS, FHWA",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
       "tags": [
@@ -3834,7 +3834,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "TFS, FHWA",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
       "tags": [
@@ -3859,7 +3859,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "TFS, FHWA",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
       "tags": [
@@ -3884,7 +3884,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "TFS, FHWA",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
       "tags": [
@@ -3909,7 +3909,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "N/A",
-      "status": "Prototype",
+      "status": "Alpha",
       "license": null,
       "homepage": "N/A",
       "tags": [
@@ -3934,7 +3934,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "N/A",
-      "status": "Prototype",
+      "status": "Alpha",
       "license": null,
       "homepage": "N/A",
       "tags": [
@@ -3959,7 +3959,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "Subversion",
-      "status": "Prototype",
+      "status": "Alpha",
       "license": null,
       "homepage": "TBD",
       "tags": [
@@ -3980,11 +3980,11 @@
     {
       "name": "D&ADB",
       "organization": "FMSCA",
-      "description": "Drug and Alcohol Clearinghouse Database will be used to store and transfer information about drug and alcohol program violations and testing results",
+      "description": "Drug and Alcohol Clearinghouse Database will be used to store and transfer information about drug and alcohol program violations and Alpha results",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "Subversion",
-      "status": "Prototype",
+      "status": "Alpha",
       "license": null,
       "homepage": "TBD",
       "tags": [
@@ -4009,7 +4009,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "Subversion",
-      "status": "Prototype",
+      "status": "Alpha",
       "license": null,
       "homepage": "N/A not web based",
       "tags": [
@@ -4034,7 +4034,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "http://aedt.visualstudio.com",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "aedt.faa.gov",
       "tags": [
@@ -4059,7 +4059,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "Available as part of download (password protected)",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://www.volpe.dot.gov/infrastructure-systems-and-technology/advanced-vehicle-technology/safetyhat-transportation-system",
       "tags": [
@@ -4080,11 +4080,11 @@
     {
       "name": "Unmanned Aircraft Systems Registration Service (UASRS)",
       "organization": "FAA",
-      "description": "The Unmanned Aircraft Systems Registration Service (UASRS) is used by the Federal Aviation Administration (FAA) to provide small Unmanned Aircraft System (sUAS) operators/owners a service to register all sUAS for the purpose of operating sUAS in U.S. air space. sUAS are defined as those aircraft that weigh more than 0.55 pounds but less than 55 pounds. This service educates new operators about airspace rules so they can use their unmanned aircraft safely. As part of the registration process, registrants acknowledge that they have read, understand, and intend to follow the safety guidance. The service allows the FAA to identify and take enforcement action against those who intentionally violate the rules or operate unsafely.",
+      "description": "The Unmanned Aircraft Systems Registration Service (UASRS) is used by the Federal Aviation Administration (FAA) to provide small Unmanned Aircraft System (sUAS) operators/owners a service to register all sUAS for the purpose of Production sUAS in U.S. air space. sUAS are defined as those aircraft that weigh more than 0.55 pounds but less than 55 pounds. This service educates new operators about airspace rules so they can use their unmanned aircraft safely. As part of the registration process, registrants acknowledge that they have read, understand, and intend to follow the safety guidance. The service allows the FAA to identify and take enforcement action against those who intentionally violate the rules or operate unsafely.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "Amazon EC2 is hosted in multiple locations worldwide. These locations are composed of regions and Availability Zones. Each region is a separate geographic area. Each region has multiple, isolated locations known as Availability Zones. ",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://registermyuas.faa.gov/restricted#/",
       "tags": [
@@ -4109,7 +4109,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "General public can download this app from the App Store for iOS or Google Play store",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "",
       "tags": [
@@ -4134,7 +4134,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": " https://en.wikipedia.org/wiki/Application_programming_interface",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": "https://app.swaggerhub.com/api/FAA/APRA/1.1.0",
       "tags": [
@@ -4159,7 +4159,7 @@
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": " Hosted in Atlantic City Data Center, Code base is in Bitbucket at the AIT Vendor facility,In process of moving code to AIT Git Repository.",
-      "status": "Operating",
+      "status": "Production",
       "license": null,
       "homepage": " https://employees.faa.gov/portal/edcs/",
       "tags": [
