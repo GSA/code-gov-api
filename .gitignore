@@ -7,4 +7,5 @@ npm-debug.log*
 .npm
 .DS_STORE
 github-config.json
+StatusDashboardScript
 /tmp

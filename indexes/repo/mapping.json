@@ -73,6 +73,16 @@
           }
         }
       },
+      "events": {
+        "type": "string",
+        "analyzer": "keyword_ci",
+        "fields": {
+          "_fulltext": {
+            "type": "string",
+            "analyzer": "englishfulltext"
+          }
+        }
+      },
       "tags": {
         "type": "string",
         "analyzer": "keyword_ci",
