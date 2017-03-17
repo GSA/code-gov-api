@@ -178,6 +178,12 @@ router.get('/repos', (req, res, next) => {
   queryReposAndSendResponse(q, res, next);
 });
 
+/* get repos that match supplied search criteria */
+router.get('/repos.json', (req, res, next) => {
+  let q = req.query;
+  queryReposAndSendResponse(q, res, next);
+});
+
 router.post('/repos', (req, res, next) => {
   let q = req.body;
   queryReposAndSendResponse(q, res, next);
