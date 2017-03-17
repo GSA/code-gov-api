@@ -103,7 +103,7 @@
   "name": "Department of State",
   "acronym": "DOS",
   "website": "https://state.gov/",
-  "codeUrl": "https://state.gov/code.json",
+  "codeUrl": "http://state.gov/code.json",
   "requirements": {
     "agencyWidePolicy": 0
   }
