@@ -1,0 +1,6 @@
+#!/bin/bash
+
+export NODE_ENV=prod
+npm run index
+cf target -o gsa-code-gov -s prod
+cf push code-api
