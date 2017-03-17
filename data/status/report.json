@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "timestamp": "Wed Mar 15 2017 12:58:31 GMT-0400 (EDT)",
-=======
   "timestamp": "Fri Mar 17 2017 12:21:55 GMT-0400 (EDT)",
->>>>>>> agency-status-updates
   "statuses": {
     "USDA": {
       "status": "NOT FULLY COMPLIANT: 25 WARNINGS, 25 validation errors, 25 REQUESTED ENHANCEMENTS",
@@ -1104,25 +1100,18 @@
           "website": "https://state.gov/",
           "codeUrl": "http://state.gov/code.json",
           "requirements": {
-<<<<<<< HEAD
-            "agencyWidePolicy": 0,
-            "schemaFormat": 0.5,
-=======
+
+
             "agencyWidePolicy": 0.5,
             "schemaFormat": 0,
->>>>>>> agency-status-updates
             "overallCompliance": 0.25
           }
         }
       },
       "requirements": {
-<<<<<<< HEAD
-        "agencyWidePolicy": 0,
-        "schemaFormat": 0.5,
-=======
         "agencyWidePolicy": 0.5,
         "schemaFormat": 0,
->>>>>>> agency-status-updates
+
         "overallCompliance": 0.25
       }
     },
