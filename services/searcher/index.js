@@ -8,7 +8,7 @@ const Logger              = require("../../utils/logger");
 const repoMapping         = require("../../indexes/repo/mapping.json");
 
 const DATE_FORMAT = "YYYY-MM-DD";
-const REPO_RESULT_SIZE_MAX = 50;
+const REPO_RESULT_SIZE_MAX = 3000;
 const REPO_RESULT_SIZE_DEFAULT = 10;
 const TERM_RESULT_SIZE_MAX = 100;
 const TERM_RESULT_SIZE_DEFAULT = 5;
