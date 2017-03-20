@@ -1,5 +1,5 @@
 {
-  "version": "1.0.1",
+  "version": "1.0.2",
   "agency": "DOS",
   "projects": [
     {
@@ -35,7 +35,6 @@
       "vcs": "git",
       "repository": "https://github.com/USStateDept/BIDS",
       "homepage": "https://bids.state.gov/",
-      "downloadURL": null,
       "languages": [
         "JavaScript",
         "HTML",
@@ -45,7 +44,6 @@
       "exemption": null,
       "exemptionText": "No exemption requested",
       "updated": {
-        "lastCommit": null,
         "metadataLastUpdated": "2017-03-02",
         "sourceCodeLastModified": null
       }
