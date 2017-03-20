@@ -76,7 +76,7 @@ block content
             =data.metadata.agency.name
         
         if data.metadata.agency.requirements.agencyWidePolicy <=0
-          if data.metadata.agency.requirements.agencyWidePolicy
+          if data.metadata.agency.requirements.agencyWidePolicy == 0
             td(style="background:none")
               .failure.bold
                 ="Incomplete"
