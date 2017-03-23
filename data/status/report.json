@@ -1,5 +1,5 @@
 {
-  "timestamp": "Fri Mar 17 2017 16:19:43 GMT-0400 (EDT)",
+  "timestamp": "Tue Mar 21 2017 13:09:28 GMT-0400 (EDT)",
   "statuses": {
     "USDA": {
       "status": "NOT FULLY COMPLIANT: 25 WARNINGS, 25 validation errors, 25 REQUESTED ENHANCEMENTS",
@@ -1058,41 +1058,9 @@
       }
     },
     "DOS": {
-      "status": "NOT FULLY COMPLIANT: 1 ERRORS, 1 WARNINGS, 2 validation errors",
-      "issues": [
-        {
-          "repoID": "dos_department_state_information_resource_management_s_office_of_ediplomacy_bids",
-          "agency": "Department of State",
-          "organization": "Department of State, Information Resource Management's Office of eDiplomacy",
-          "project_name": "BIDS",
-          "issues": {
-            "enhancements": [],
-            "warnings": [
-              {
-                "keyword": "type",
-                "dataPath": ".exemption",
-                "schemaPath": "#/properties/exemption/type",
-                "params": {
-                  "type": "integer"
-                },
-                "message": "should be integer"
-              }
-            ],
-            "errors": [
-              {
-                "keyword": "type",
-                "dataPath": ".updated.sourceCodeLastModified",
-                "schemaPath": "#/properties/updated/properties/sourceCodeLastModified/type",
-                "params": {
-                  "type": "string"
-                },
-                "message": "should be string"
-              }
-            ]
-          }
-        }
-      ],
-      "version": "1.0.2",
+      "status": "FULLY COMPLIANT: 0 validation errors",
+      "issues": [],
+      "version": "1.0.3",
       "metadata": {
         "agency": {
           "name": "Department of State",
@@ -1101,315 +1069,20 @@
           "codeUrl": "http://state.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 0.5,
-            "schemaFormat": 0.5,
-            "overallCompliance": 0.5
+            "schemaFormat": 1,
+            "overallCompliance": 0.75
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 0.5,
-        "schemaFormat": 0.5,
-        "overallCompliance": 0.5
+        "schemaFormat": 1,
+        "overallCompliance": 0.75
       }
     },
     "DOT": {
-      "status": "NOT FULLY COMPLIANT: 14 ERRORS, 14 validation errors",
-      "issues": [
-        {
-          "repoID": "dot_ost_air_carrier_traffic",
-          "agency": "Department of Transportation",
-          "organization": "OST",
-          "project_name": "Air Carrier Traffic",
-          "issues": {
-            "enhancements": [],
-            "warnings": [],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "repository"
-                },
-                "message": "should have required property 'repository'"
-              }
-            ]
-          }
-        },
-        {
-          "repoID": "dot_ost_air_travel_price_index",
-          "agency": "Department of Transportation",
-          "organization": "OST",
-          "project_name": "Air Travel Price Index",
-          "issues": {
-            "enhancements": [],
-            "warnings": [],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "repository"
-                },
-                "message": "should have required property 'repository'"
-              }
-            ]
-          }
-        },
-        {
-          "repoID": "dot_ost_average_air_fares",
-          "agency": "Department of Transportation",
-          "organization": "OST",
-          "project_name": "Average Air Fares",
-          "issues": {
-            "enhancements": [],
-            "warnings": [],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "repository"
-                },
-                "message": "should have required property 'repository'"
-              }
-            ]
-          }
-        },
-        {
-          "repoID": "dot_ost_bts_dictionary",
-          "agency": "Department of Transportation",
-          "organization": "OST",
-          "project_name": "BTS Dictionary",
-          "issues": {
-            "enhancements": [],
-            "warnings": [],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "repository"
-                },
-                "message": "should have required property 'repository'"
-              }
-            ]
-          }
-        },
-        {
-          "repoID": "dot_ost_bulk_delete_ost",
-          "agency": "Department of Transportation",
-          "organization": "OST",
-          "project_name": "Bulk Delete OST",
-          "issues": {
-            "enhancements": [],
-            "warnings": [],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "repository"
-                },
-                "message": "should have required property 'repository'"
-              }
-            ]
-          }
-        },
-        {
-          "repoID": "dot_ost_major_pub",
-          "agency": "Department of Transportation",
-          "organization": "OST",
-          "project_name": "Major Pub",
-          "issues": {
-            "enhancements": [],
-            "warnings": [],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "repository"
-                },
-                "message": "should have required property 'repository'"
-              }
-            ]
-          }
-        },
-        {
-          "repoID": "dot_ost_multi_import_ost",
-          "agency": "Department of Transportation",
-          "organization": "OST",
-          "project_name": "Multi Import OST",
-          "issues": {
-            "enhancements": [],
-            "warnings": [],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "repository"
-                },
-                "message": "should have required property 'repository'"
-              }
-            ]
-          }
-        },
-        {
-          "repoID": "dot_ost_recruisive_impact",
-          "agency": "Department of Transportation",
-          "organization": "OST",
-          "project_name": "Recruisive Impact",
-          "issues": {
-            "enhancements": [],
-            "warnings": [],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "repository"
-                },
-                "message": "should have required property 'repository'"
-              }
-            ]
-          }
-        },
-        {
-          "repoID": "dot_ost_subject_areas_dot_",
-          "agency": "Department of Transportation",
-          "organization": "OST",
-          "project_name": "Subject Areas DOT ",
-          "issues": {
-            "enhancements": [],
-            "warnings": [],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "repository"
-                },
-                "message": "should have required property 'repository'"
-              }
-            ]
-          }
-        },
-        {
-          "repoID": "dot_ost_subject_areas_wom",
-          "agency": "Department of Transportation",
-          "organization": "OST",
-          "project_name": "Subject Areas WOM",
-          "issues": {
-            "enhancements": [],
-            "warnings": [],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "repository"
-                },
-                "message": "should have required property 'repository'"
-              }
-            ]
-          }
-        },
-        {
-          "repoID": "dot_ost_transportation_services_index",
-          "agency": "Department of Transportation",
-          "organization": "OST",
-          "project_name": "Transportation Services Index",
-          "issues": {
-            "enhancements": [],
-            "warnings": [],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "repository"
-                },
-                "message": "should have required property 'repository'"
-              }
-            ]
-          }
-        },
-        {
-          "repoID": "dot_ost_custom_search_dot",
-          "agency": "Department of Transportation",
-          "organization": "OST",
-          "project_name": "Custom Search DOT",
-          "issues": {
-            "enhancements": [],
-            "warnings": [],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "repository"
-                },
-                "message": "should have required property 'repository'"
-              }
-            ]
-          }
-        },
-        {
-          "repoID": "dot_ost_rita_book",
-          "agency": "Department of Transportation",
-          "organization": "OST",
-          "project_name": "RITA Book",
-          "issues": {
-            "enhancements": [],
-            "warnings": [],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "repository"
-                },
-                "message": "should have required property 'repository'"
-              }
-            ]
-          }
-        },
-        {
-          "repoID": "dot_ost_address_2_abstate",
-          "agency": "Department of Transportation",
-          "organization": "OST",
-          "project_name": "Address 2 Abstate",
-          "issues": {
-            "enhancements": [],
-            "warnings": [],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "repository"
-                },
-                "message": "should have required property 'repository'"
-              }
-            ]
-          }
-        }
-      ],
+      "status": "FULLY COMPLIANT: 0 validation errors",
+      "issues": [],
       "version": "1.0.1",
       "metadata": {
         "agency": {
@@ -1419,15 +1092,15 @@
           "codeUrl": "https://www.transportation.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 0.5,
-            "schemaFormat": 0.5,
-            "overallCompliance": 0.5
+            "schemaFormat": 1,
+            "overallCompliance": 0.75
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 0.5,
-        "schemaFormat": 0.5,
-        "overallCompliance": 0.5
+        "schemaFormat": 1,
+        "overallCompliance": 0.75
       }
     },
     "TRE": {
@@ -5859,7 +5532,7 @@
       }
     },
     "GSA": {
-      "status": "FULLY COMPLIANT: 0 validation errors, 435 REQUESTED ENHANCEMENTS",
+      "status": "FULLY COMPLIANT: 0 validation errors, 434 REQUESTED ENHANCEMENTS",
       "issues": [
         {
           "repoID": "gsa_18f_xavier",
@@ -12734,26 +12407,6 @@
           "repoID": "gsa_crowdsource_testing_central_artifact_repository",
           "agency": "General Services Administration",
           "project_name": "Crowdsource-Testing-Central-Artifact-Repository",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "type",
-                "dataPath": ".license",
-                "schemaPath": "#/properties/license/type",
-                "params": {
-                  "type": "string"
-                },
-                "message": "should be string"
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "gsa_digitalgov_search_content_assets",
-          "agency": "General Services Administration",
-          "project_name": "DigitalGov Search Content Assets",
           "issues": {
             "enhancements": [
               {

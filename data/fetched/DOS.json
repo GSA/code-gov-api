@@ -1,5 +1,5 @@
 {
-  "version": "1.0.2",
+  "version": "1.0.3",
   "agency": "DOS",
   "projects": [
     {
@@ -41,11 +41,8 @@
         "CSS"
       ],
       "partners": [],
-      "exemption": null,
-      "exemptionText": "No exemption requested",
       "updated": {
-        "metadataLastUpdated": "2017-03-02",
-        "sourceCodeLastModified": null
+        "metadataLastUpdated": "2017-03-02"
       }
     }
   ]

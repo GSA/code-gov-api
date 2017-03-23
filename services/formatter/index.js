@@ -41,7 +41,8 @@ class Formatter {
   _formatEvents(repo) {
      // add event activity to repo for GitHub repos
     var eventsurl = repo.repository;
-    var limit = 6, jsoninventory, eventsfeed=[], eventsfeed_start, eventsfeed_projects;
+    var limit = 1, jsoninventory, eventsfeed=[], eventsfeed_start, eventsfeed_end=']', eventsfeed_projects="";
+    
     
     if (!eventsurl.includes("github.com")){
       repo["events"] = [];
@@ -51,32 +52,33 @@ class Formatter {
       eventsurl+="/events";
       
       var options =  {
-        url: eventsurl+"?clientID="+process.env.CLIENTID+"&clientSecret="+process.env.CLIENTSECRET,
+        url: eventsurl+"?client_id="+process.env.CLIENT_ID+"&client_secret="+process.env.CLIENT_SECRET,
         headers: { 'User-Agent':'request', 'Accept': 'application/vnd.github.full+json'}
         }
       
       request (options, function(error,response,body){
+        console.log("URL="+options.url);
         eventsfeed='test';
         console.log('error: ', error);
         console.log('statuscode: ', response && response.statusCode);
         //console.log('body: ',body);
         if (response.statusCode!=404 && response.statusCode!=403)
         { jsoninventory = JSON.parse(body);  
-        eventsfeed_start = "[<br><br>";
+        eventsfeed_start = "[";
         
         for (var i = 0; i < Math.min(limit,jsoninventory.length); i++) {
-              console.log(jsoninventory[i].type);
+              //console.log(jsoninventory[i].type);
       eventsfeed_projects +=
-        "{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"id\": \""+jsoninventory[i].repo.id +"\",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"name\": \"" + jsoninventory[i].repo.name + "\",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"type\":\"" +
-        (jsoninventory[i].type).replace("Event","") + "\",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"user\":\"" + jsoninventory[i].actor.display_login +
-        "\",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"time\": \"" + jsoninventory[i].created_at +"\"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+        "{\"id\": \""+jsoninventory[i].repo.id +"\",\"name\": \"" + jsoninventory[i].repo.name + "\",\"type\":\"" +
+        (jsoninventory[i].type).replace("Event","") + "\",\"user\":\"" + jsoninventory[i].actor.display_login +
+        "\",\"time\": \"" + jsoninventory[i].created_at +"\"";
 
       //loop through type of event
       if (jsoninventory[i].type == "PushEvent")
 
       {
         
-          eventsfeed_projects += ",\"message\": \""+jsoninventory[i].payload.commits[0].message+"\",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"url\":\""+jsoninventory[i].payload.commits[0].url+"\"";
+          eventsfeed_projects += ",\"message\": \""+jsoninventory[i].payload.commits[0].message+"\", \"url\":\""+jsoninventory[i].payload.commits[0].url+"\"";
 
 
        
@@ -85,7 +87,7 @@ class Formatter {
 
       {
         console.log(jsoninventory[i].payload.pull_request.title);
-          eventsfeed_projects += ",\"message\": \""+jsoninventory[i].payload.pull_request.title+"\",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"url\":\""+jsoninventory[i].payload.pull_request.url+"\"";
+          eventsfeed_projects += ",\"message\": \""+jsoninventory[i].payload.pull_request.title+"\", \"url\":\""+jsoninventory[i].payload.pull_request.url+"\"";
 
 
        
@@ -94,24 +96,35 @@ class Formatter {
 
       {
         
-          eventsfeed_projects += ",\"message\": \""+jsoninventory[i].payload.issue.title+"\",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"url\":\""+jsoninventory[i].payload.issue.url+"\"";
+          eventsfeed_projects += ",\"message\": \""+jsoninventory[i].payload.issue.title+"\", \"url\":\""+jsoninventory[i].payload.issue.url+"\"";
        
       }
-eventsfeed_projects += "<br>}";
+eventsfeed_projects += "}";
       
         if (i + 1 < Math.min(limit,jsoninventory.length)) {
         eventsfeed_projects += ',';
       }
     }
-       eventsfeed = eventsfeed_start + eventsfeed_projects + ']';
+       eventsfeed = eventsfeed_start + eventsfeed_projects + eventsfeed_end;
+         console.log("eventsfeed: "+eventsfeed_projects);
+      if(eventsfeed_projects!=undefined) {
+        repo.events=JSON.parse(eventsfeed_projects);
       
+         console.log("repo name: "+repo["name"]);
+         console.log("events desc: "+repo["events"]);
+         console.log(JSON.parse(eventsfeed_projects));
+      }
+         
         } //if no error
         else{
-          repo["events"] = [];
+          // this never runs: repo["events"] = ['{x}'];
+          
         }
         
         })
-      repo["events"] = eventsfeed + ']';
+      //repo["events"] = eventsfeed + ']';
+      repo.events=JSON.parse(eventsfeed);
+      //repo["events"] = ['{y}'];
       
     } //else
     
@@ -135,7 +148,7 @@ eventsfeed_projects += "<br>}";
     if (repo.agency && repo.agency.id) {
       delete repo.agency.id;
     }
-    //this._formatEvents(repo);
+    this._formatEvents(repo);
     this._formatDates(repo);
 
     return repo;

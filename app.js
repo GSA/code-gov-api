@@ -39,7 +39,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
@@ -142,6 +142,9 @@ const queryReposAndSendResponse = (q, res, next) => {
       return res.sendStatus(500);
     }
     // TODO: format repos
+
+  
+
     res.json(repos);
   });
 }
@@ -439,7 +442,7 @@ if (app.get('env') === 'development') {
 
 // production error handler (prints generic error message)
 app.use(function(err, req, res, next) {
-  res.status(err.status || 500);
+    res.status(err.status || 500);
   logger.error(err);
   res.render('error', {
     message: err.message,
