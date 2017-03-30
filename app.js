@@ -25,6 +25,7 @@ const Searcher            = require("./services/searcher");
 const Utils               = require("./utils");
 const Logger              = require("./utils/logger");
 const repoMapping         = require("./indexes/repo/mapping.json");
+const Indexer             = require("./scripts/index/index.js");
 const pkg                 = require("./package.json");
 
 /* ------------------------------------------------------------------ *
@@ -49,6 +50,8 @@ app.set('json spaces', 2);
 
 // logging setup
 let logger = new Logger({name: "code-gov-api"});
+let indexer = new Indexer();
+
 // app.use(bunyanMiddleware({
 //   headerName: 'X-Request-Id',
 //   propertyName: 'reqId',
@@ -454,4 +457,11 @@ app.use(function(err, req, res, next) {
 
 // start the server
 app.listen(port);
+// schedule the interval at which indexings should happen
+index_interval = config.INDEX_INTERVAL_SECONDS;
+if (index_interval) {
+  indexer.schedule(index_interval);
+  logger.info(`Production: re-indexing every ${index_interval} seconds`);
+}
+
 logger.info(`Started API server at http://localhost:${port}/`);
