@@ -10,6 +10,7 @@
   "scripts": {
     "start": "node app.js | ./node_modules/bunyan/bin/bunyan",
     "index": "node ./scripts/index/index.js | ./node_modules/bunyan/bin/bunyan",
+    "index-debug": "node --debug-brk=5858 ./scripts/index/index.js | ./node_modules/bunyan/bin/bunyan",
     "index-repos": "node ./scripts/index/repo/index.js | ./node_modules/bunyan/bin/bunyan",
     "index-terms": "node ./scripts/index/term/index.js | ./node_modules/bunyan/bin/bunyan",
     "create-diffs": "node ./scripts/create_diffs/index.js --max_old_space_size=8192 | ./node_modules/bunyan/bin/bunyan",
@@ -18,7 +19,7 @@
   },
   "dependencies": {
     "JSONStream": "1.3.0",
-    "ajv": "4.9.2",
+    "ajv": "^4.9.2",
     "async": "2.0.1",
     "body-parser": "1.15.2",
     "bodybuilder": "1.22.0",
@@ -51,7 +52,7 @@
     "babel-plugin-lodash": "2.0.1",
     "babel-preset-es2015": "6.5.0",
     "chai": "3.2.0",
-    "eslint": "1.10.2",
+    "eslint": "^3.18.0",
     "mocha": "2.4.5"
   },
   "engines": {
