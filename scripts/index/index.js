@@ -35,6 +35,15 @@ class Indexer {
     });
   }
 
+  schedule(delayInSeconds) {
+    setInterval(this.index, delayInSeconds * 1000,
+                (err) => {
+                  if (err) {
+                    this.logger.error(err);
+                  }
+                });
+  }
+
 }
 
 // If we are running this module directly from Node this code will execute.
