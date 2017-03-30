@@ -1,5 +1,5 @@
 {
-  "timestamp": "Tue Mar 21 2017 13:09:28 GMT-0400 (EDT)",
+  "timestamp": "Thu Mar 30 2017 11:27:48 GMT-0400 (EDT)",
   "statuses": {
     "USDA": {
       "status": "NOT FULLY COMPLIANT: 25 WARNINGS, 25 validation errors, 25 REQUESTED ENHANCEMENTS",
@@ -1128,7 +1128,7 @@
       }
     },
     "VA": {
-      "status": "FAILURE: ERROR WHEN FETCHING (Hostname/IP doesn't match certificate's altnames: \"Host: va.gov. is not in the cert's altnames: DNS:www.va.gov\")",
+      "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token < in JSON at position 0)",
       "issues": [],
       "version": "",
       "metadata": {
