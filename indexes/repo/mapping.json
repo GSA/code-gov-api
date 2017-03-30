@@ -203,6 +203,16 @@
           }
         }
       },
+      "license_name": {
+        "type": "string",
+        "analyzer": "keyword_ci",
+        "fields": {
+          "_fulltext": {
+            "type": "string",
+            "analyzer": "englishfulltext"
+          }
+        }
+      },
       "openSourceProject": {
         "type": "byte"
       },
