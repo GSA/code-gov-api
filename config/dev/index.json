@@ -6,6 +6,7 @@
   "DIFFED_DIR": "/data/diffed",
   "FALLBACK_DIR": "/data/fallback",
   "AGENCIES_TO_OMIT_FROM_STATUS": [],
+  "INDEX_INTERVAL_SECONDS": false,
   "TERM_TYPES_TO_INDEX": [
     "name",
     "agency.name",
