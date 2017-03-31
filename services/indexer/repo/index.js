@@ -89,7 +89,8 @@ class AgencyJsonStream extends Transform {
     let agencyUrl = agency.codeUrl;
     this.logger.info(`Fetching remote agency repos from ${agencyUrl}...`);
 
-    request({ followAllRedirects: true, url: agencyUrl },
+    request({ followAllRedirects: true, url: agencyUrl, 
+              headers: {'User-Agent': 'curl'} },
       (err, response, body) => {
         this._handleResponse(err, agency, body, callback);
       }
