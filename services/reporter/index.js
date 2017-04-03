@@ -65,6 +65,7 @@ class Reporter {
 
   writeReportToFile(callback) {
     this.logger.info("Writing report to file...");
+    this.report.timestamp = (new Date()).toString();
     const reportFilepath = path.join(
       __dirname,
       "../../",
