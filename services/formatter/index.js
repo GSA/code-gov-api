@@ -22,6 +22,9 @@ class Formatter {
     return moment(date).toJSON();
   }
 
+  
+ 
+
   _formatDates(repo) {
     if (repo.updated) {
       if (repo.updated.metadataLastUpdated) {
@@ -136,6 +139,7 @@ eventsfeed_projects += "<br>}";
       delete repo.agency.id;
     }
     //this._formatEvents(repo);
+   
     this._formatDates(repo);
 
     return repo;
