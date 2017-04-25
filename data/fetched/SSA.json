@@ -3,1871 +3,2724 @@
   "agency": "SSA",
   "projects": [
     {
+      "organization": "Social Security Administration",
       "name": "Disability Case Adjudication and Review System",
       "description": "Disability Case Adjudication and Review System (DICARS) is the legacy system supporting business processes in the Disability Quality Branches (DQBs) and the simultaneous, blind, pre-effectuation consistency review of initial Disability Determination Service (DDS) clearances processed in Division of Disability Quality Operations DDQO). Works in conjunction with the Disability Quality Review (DQR) application which will eventually replace it.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Case Processing",
-        "Disability"
+        "Disability",
+        "Case Processing"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Disability Predictive Model",
       "description": "Dual score card application based on the Predictive Model design architecture written by IBM. It is called when initial adjudicative disability cases are transferred to the DDS for a medical determination. It will analyze the date electronically and produce two values, each between 0 and 1. The first value will express the confidence that a favorable determination will be made (known as SSAL - SSA Allowance). The second (known as SSPT - SSA Processing Time) will express the confidence that the determination can be reached quickly.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Predictive",
-        "Disability"
+        "Disability",
+        "Predictive"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Front End Capture System",
       "description": "Front-end document capture system for DMA. Processes unstructured data and sends a receipt notification to the requesting application.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "exemption": null,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": null,
       "tags": [
-        "Document Capture",
-        "Document Management"
+        "Document Management",
+        "Document Capture"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Analyst Case Processing System",
       "description": "Legacy Disability system used by the NY DDS.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Case Processing",
-        "Disability"
+        "Disability",
+        "Case Processing"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Cornhusker",
       "description": "Legacy Disability system used by the Nebraska DDS.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Case Processing",
-        "Disability"
+        "Disability",
+        "Case Processing"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Electronic Claims Analysis Tool",
       "description": "eCAT is a web-based application that guides Disability Examiners and Medical Consultants through the sequential evaluation of a disability claim. The tool aids in documenting, analyzing, and adjudicating the claim in accordance with SSA regulations.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
         "Disability"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Enumeration Verification System",
       "description": "A batch application that provides SSN, corresponding name, DOB, and/or gender match validation to federal, state, local and foreign government agencies, private companies and internal SSA customers and systems.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 2,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
         "Verification"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": [
+        "COBOL"
+      ]
     },
     {
+      "organization": "Social Security Administration",
       "name": "Acquisition Planning and Reporting System",
       "description": "An application used mainly by the DCS and OTSO budget staff to manage and report the ITS budget. Self employment Income (SEI) and project data is also entered using APRS.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "exemption": null,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": null,
       "tags": [
-        "Reporting",
+        "Administrative",
         "Planning",
-        "Administrative"
+        "Reporting"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Administrative Payments Information Network",
       "description": "A web based inquiry system that allows SSA employees and vendors within SSA firewall to receive the status of invoices, vouchers and claims submitted for payment to the Office of Finance for the past eighteen months.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "exemption": null,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": null,
       "tags": [
-        "Claims",
+        "Administrative",
         "Payments",
-        "Administrative"
+        "Claims"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": [
+        ".NET"
+      ]
     },
     {
+      "organization": "Social Security Administration",
       "name": "eTravel",
       "description": "An on-demand/full travel service providing capabilities to make travel reservations and create, route and approve travel documents. Travel reimbursements are generated through an interface between the eTravel system and the Social Security Online Accounting Reporting System (SSOARS).",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "exemption": null,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": null,
       "tags": [
         "Administrative"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "GIS Direct Deposit Maps",
       "description": "GISSDD maps application creates U.S. and State/County maps and reports, to provide the percentage of Title II and Title XVI payments made through direct deposit in those areas. The information is updated monthly and uploaded to the SSA Internet site.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "exemption": null,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": null,
       "tags": [
-        "Maps",
-        "Geospatial"
+        "Geospatial",
+        "Maps"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Social Security Online Accounting and Reporting System - MF Batch",
       "description": "SSOARS is SSA's centralized accounting system for recording, classifying and summarizing information on SSA's financial position and operation.  It maintains a variety of financial information including, but not limited to, funding data, commitments, obligations, receivables, and payables.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 3,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Reporting",
-        "Accounting"
+        "Accounting",
+        "Reporting"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": [
+        "COBOL"
+      ]
     },
     {
+      "organization": "Social Security Administration",
       "name": "Mini Learning Management System",
       "description": "This LMS supports the Seattle Region Studio 6 in managing course content that they are responsible for, mainly the Transition to Leadership Courses, Core, and ASC/SLC training.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "exemption": null,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": null,
       "tags": [
         "Learning Management"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Third Party Payment System",
       "description": "The Third Party Payment System (TPPS) is a register of paper checks that are known as Third Party Drafts.  These drafts are issued to vendors for goods and services, to SSA employees for reimbursement of payments and to beneficiaries for Programmatic Immediate Payments (IPs) and Emergency Advance Payments (EAPs).  TPPS enforces payment limits, maintains office draft stock, records and validates accounting data, and generates daily activity and monthly accountability reports.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 3,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Reimbursements",
+        "Payment",
         "Third Party",
-        "Payment"
+        "Reimbursements"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Death Information Processing System Web",
       "description": "The Death Information Processing System (DIPS) is a web-based iMain application used to add, change, or delete death data on the NUMIDENT. It replaced the Death Alert Control and Update System (DACUS) CICS screens in PCOM.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 2,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
         "Death"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Earnings Modernization Itemized Statement of Earnings Requests",
       "description": "Earnings Modernization Itemized Statement of Earnings Report (EMISER) is an interactive CICS control system that processes requests for Itemized Statements of Earnings (SSA-1826).",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Earnings Requests",
-        "Earnings"
+        "Earnings",
+        "Earnings Requests"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Volume Death",
       "description": "Updates the SSA Death Master File.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
         "Death"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": [
+        "COBOL"
+      ]
     },
     {
+      "organization": "Social Security Administration",
       "name": "Rep Payee System",
       "description": "The Representative Payee System (RPS) is an online system used to store and process current and prior Rep Payee applications (both approved and denied). Data is stored on the Master Rep Payee File (MRPF) as applicants, beneficiaries, or recipients, and the relationship between the Rep Payee and beneficiary.  The RPS data is also useful to adjudicators in processing subsequent actions.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
         "Representative Payee"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "VIEWS - Data Exchange Inventory",
       "description": "DEXI is an inventory database that contains information about data exchanges between SSA and various partners.  It interfaces with external applications to retrieve project code data, financial accounting data, management information data, and electronic reimbursable agreement documentation, and can be queried in various ways.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "exemption": null,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": null,
       "tags": [
         "Data Exchange"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Numident Online Verification Utility",
       "description": "A mainframe application that accesses the NUMIDENT to perform real-time SSN verifications. This program is called by other SSA online programs that serve as interfaces to end-users.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
         "Verification"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Work Experience Reporting System",
       "description": "WERS is an MI system that captures and reports workload volumes and the hours needed to process items in each workload category.  Weekly, monthly, quarterly, and yearly reports are produced for the Office of Budget, Finance and Management (OBFM).",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "exemption": null,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": null,
       "tags": [
-        "Administrative",
-        "Reporting"
+        "Reporting",
+        "Administrative"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": [
+        "COBOL"
+      ]
     },
     {
+      "organization": "Social Security Administration",
       "name": "Medicare Non-Utilization Project",
       "description": "The Medicare Non-Usage Project (MNUP) objective is to use Medicare non-utilization information furnished to us by CMS as an indicator to select and prioritize cases for review to determine continued eligibility to SSA Title II benefits.  We will obtain an initial data extract of individuals age 90 or over who are living in the United States, in current pay status and have not used Medicare during the previous three years.  Subsequent data extracts will be obtained bi-annually.  The data received from CMS will include Title II beneficiaries who reside in  nursing homes, are enrolled in HMOs, or have private health insurance.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
         "Medicare"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Medicare - IRMAA",
       "description": "Imposes higher Medicare Part B and Part D premium rates on high-income earners as defined by statute, adjusts those additional amounts on the basis of beneficiary allegations, and verifies the accuracy of those allegations.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
         "medicare"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Military Service Reimbursement",
       "description": "The Military Service Reimbursement System (MSRS) was developed to replace the process within the Title II AERO system that calculates Primary Insurance Amounts (PIA) for the Office of the Chief Actuary (OCACT).",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Reimbursement",
-        "Military"
+        "Military",
+        "Reimbursement"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": [
+        "COBOL"
+      ]
     },
     {
+      "organization": "Social Security Administration",
       "name": "Legal Automated Workflow System",
       "description": "A new system replacing the Program Litigation functions in the National Docketing Management Information System (NDMIS). LAWS electronically receives information contained in the Certified Administrative Record (CAR), interacts with Electronic Folder, allows OGC users access to historical data, accurately captures workloads, and enables users to produce and communicate management information.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
         "Workflow"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": [
+        "COBOL"
+      ]
     },
     {
+      "organization": "Social Security Administration",
       "name": "Cost Analysis System",
       "description": "The Cost Analysis System gathers workload counts and costs.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
         "Cost Analysis"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Federal Assistance Award Data System",
       "description": "A central collection of selected, computer-based domestic financial assistance programs data for the Federal Government mandated by the Federal Funding Accountability and Transparency Act and is compiled quarterly.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "exemption": null,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": null,
       "tags": [
         "Federal Assistance"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": [
+        "COBOL",
+        "UNIX Shell Script"
+      ]
     },
     {
+      "organization": "Social Security Administration",
       "name": "Quality Performance Management System / DARES",
-      "description": "Performance management data extracted from multiple sources is consolidated into the QPMS data warehouse, providing a \"one-stop\" source for generating quality performance measures.  The Disability Adjudication Review Evaluation System (DARES) provides a dashboard display of necessary management/decision support and risk information to Office of Disability Adjudication and Review (ODAR) officials, allowing them to effectively monitor and control the hearings backlog reduction initiatives and to determine the health of the overall hearings backlog reduction program at SSA. DARES also serves as the front-end starting point for QPMS DARES, which offers web-based, parameter-driven reports that are based on the breakdown of ODAR workloads within the context of how they relate to key hearing backlog initiatives.Â ",
+      "description": "Performance management data extracted from multiple sources is consolidated into the QPMS data warehouse, providing a \"one-stop\" source for generating quality performance measures.  The Disability Adjudication Review Evaluation System (DARES) provides a dashboard display of necessary management/decision support and risk information to Office of Disability Adjudication and Review (ODAR) officials, allowing them to effectively monitor and control the hearings backlog reduction initiatives and to determine the health of the overall hearings backlog reduction program at SSA. DARES also serves as the front-end starting point for QPMS DARES, which offers web-based, parameter-driven reports that are based on the breakdown of ODAR workloads within the context of how they relate to key hearing backlog initiatives.Ã‚ ",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 3,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Review",
-        "Disability"
+        "Disability",
+        "Review"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Case Processing Management System",
       "description": "An intranet application used by the Office of Disability Adjudication and Review's (ODAR) hearing offices to process cases and manage office workloads.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Case Management",
-        "Workload Management"
+        "Workload Management",
+        "Case Management"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Electronic Work Reporting Front End",
       "description": "A Web-based application used by all SSA technicians (TSC, FO, PC, and OCO), which fully automates the initiation, development, adjudication, and effectuation of Title II Work CDRs.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Work Reporting",
-        "Title II"
+        "Title II",
+        "Work Reporting"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Consent Based Social Security Number Verification",
       "description": "A fee-based SSN verification service that permits private businesses, as well as Federal, State and Local  governments, to use the Internet or a Web Service to verify an individual's SSN once a valid signed consent form is obtained from the SSN holder.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 3,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
         "Verification"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Social Security Number Verification",
       "description": "An application within Business Services Online (BSO).  SSNVS allows registered users to verify names and SSNs of their employees against SSA's master files via the Internet.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 3,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Internet",
-        "Verification"
+        "Verification",
+        "Internet"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "National Instant Criminal Background Check System",
       "description": "The purpose of the National Instant Criminal Background Check System (NICS) is to process potential NICS candidates for inclusion to the FBI, prohibiting firearm ownership.\nThis is an Intranet application for CRs to gather information from potential candidates who are identified by EDCS. CRs will then process the candidates who are legally incompetent and provide notification of NICS determinations to the appropriate parties, such as legal guardians, appointed representatives, and representative payees. All candidates found eligible will have identifying information submitted to the FBI.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 3,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Criminal",
-        "Background Check"
+        "Background Check",
+        "Criminal"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Internet Ticket Operations Provider Support System",
       "description": "An automated system that allows users to award contracts, provide ticket assignment/unassignment, and payments for Employment Networks (EN). It allows users to process, verify, and cancel payments before they reach Treasury.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 3,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Payments",
+        "Disability",
         "Employment Networks",
-        "Disability"
+        "Payments"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Internet Application Status",
       "description": "An application that allows an individual to enter their Social Security Number (SSN) and follow the progress of all available claims using the Internet.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 3,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Claim Status",
-        "Internet"
+        "Internet",
+        "Claim Status"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Audit Trail System",
       "description": "Collects application-specific transaction data and provides search capability for the Center Directors for Security and Integrity and their staffs for the purpose of deterring, detecting, and investigating instances of fraud and abuse.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 3,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Fraud Prevention",
+        "Audit",
         "Security",
-        "Audit"
+        "Fraud Prevention"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": [
+        "COBOL"
+      ]
     },
     {
+      "organization": "Social Security Administration",
       "name": "UniForms",
       "description": "UniForms is a replacement for eForms, allowing Agency-wide retrieval of administrative forms.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "exemption": null,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": null,
       "tags": [
-        "Administrative",
-        "Forms"
+        "Forms",
+        "Administrative"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Manual Adjustment Credit & Award Data Entry",
       "description": "CICS data collection system consists of data entered/received via MACADE or data that comes to MACADE via A101, and propagates information into the SPS database to create a payment record.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
         "Payment"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Processing Center Action Control System",
       "description": "PCACS provides timely, accurate, and detailed online information regarding the status and location of actions and folders in progress in all processing centers (PCs).",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
-      "exemption": 0,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemption": 4,
+      "exemptionText": "#N/A",
       "tags": [
-        "Workload Management",
-        "Processing Center"
+        "Processing Center",
+        "Workload Management"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Social Security Electronic Remittance System",
       "description": "The Social Security Electronic Remittance System (SERS) collects standard fees for non-program-related requests for information. The system allows field office personnel to quickly process payments and eliminates the need to bundle and send payment requests to the Office of Finance at headquarters.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 3,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
         "Fee Collection"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Returned Check Action",
       "description": "The program generates an electronic alert file to the servicing Processing Center (PC) when Title II benefit payments are returned, indicating the beneficiary is deceased. It will automatically send a call-in letter to each beneficiary indicating the stop payment and the reason why.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Death",
+        "Processing Center",
         "Title II",
-        "Processing Center"
+        "Death"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": [
+        "COBOL"
+      ]
     },
     {
+      "organization": "Social Security Administration",
       "name": "Fugitive Felon Matching Agreements",
       "description": "APPLICATION TO COLLECT INFORMATION ON SSA EFFORTS TO NEGOTIATE MATCHING AGREEMENTS WITH LAW ENFORCEMENT AGENCIES TO IDENTIFY FUGITIVE FELONS AND PAROLE AND PROBATION VIOLATORS",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 2,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
         "Felon"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "National Docketing Management Information System",
       "description": "Centralized system for tracking and managing legal matters as a system-of-record for all OGC regions and at OGC headquarters. Tracks due dates to ensure that responsive documents are filed in a timely manner.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
-      "exemption": 0,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemption": 2,
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Workload Management",
+        "Docket Management",
         "Legal",
-        "Docket Management"
+        "Workload Management"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Employee Retirement Income Security Act",
       "description": "Produces notices to inform retirees of their possible eligibility for pensions under a private pension plan. There is also an online system for users in OCO and the field offices to query the ERISA master files.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Private Pensions",
-        "Notices"
+        "Notices",
+        "Private Pensions"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Modernized Integrated Disability Adjudicative System",
       "description": "A federal disability case processing system used in Disability Determination Services, Disability Processing Branches, and some federal components that process disability claims.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Claims",
-        "Disability"
+        "Disability",
+        "Claims"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Target Notice Architecture - Mainframe",
       "description": "TNA is the agency's standard for the systems development of 508-compliant notice language.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "exemption": null,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": null,
       "tags": [
-        "508",
-        "Notices"
+        "Notices",
+        "508"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Earnings Case Management System",
       "description": "This is a case management system which tracks many different earnings workloads.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 3,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Workload Management",
+        "Case Management",
         "Earnings Requests",
-        "Case Management"
+        "Workload Management"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Electronic Disability Collection System (EDCS\\eView)",
       "description": "An automated system for SSA field personnel to electronically collect information about the applicant and his or her medical condition, and transfer the data to the EF for use by a local case management system.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Case Management",
-        "Disability"
+        "Disability",
+        "Case Management"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Electronic Folder Interface",
       "description": "An interface between the electronic folder and the case processing systems (CPMS for ODAR).  Enables transactions that allow: Messages and alerts to be sent to case processing systems; Electronic cases to be transferred between processing locations and closed when processing is complete; and Case processing systems to electronically send data to the CEF when case processing actions are complete.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
         "Disability"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Access for Cross-Platform Intranet Services",
       "description": "Access to Cross-Platform Intranet Services (AXIS), a Web Service environment, is a part of Core Services for security logon. It allows ColdFusion applications to leverage the security infrastructure in order to access mainframe resources on z/OS.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 3,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Security",
-        "Web Services"
+        "Web Services",
+        "Security"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Work History Assistant Tool",
       "description": "A web-based application, available on a need-to-know basis, that retrieves Detail Earnings Query (DEQY) data and makes it easier to interpret.wh",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "exemption": null,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": null,
       "tags": [
         "Employment"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Employee Office Sampler",
       "description": "Capture/store/manage end-user work activities at designated times as needed for DOWS sampling",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "exemption": null,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": null,
       "tags": [
-        "Workload Management",
-        "Field Office"
+        "Field Office",
+        "Workload Management"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Medical Evidence Gathering & Analysis Health Information Technology",
       "description": "An application called through Health IT that requests, receives, and analyzes electronic medical records in a fully automated manner. Upon transfer of a claim to a disability case processing unit, MEGAHIT automatically identifies a health IT participating source and gathers electronic medical records.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
         "Medical Records"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Document Generation System",
       "description": "DGS is a Windows-based application used to create Office of Hearings and Appeals (OHA) Distributed Online Correspondence System (DOCS) and notices.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Notices",
-        "Document Management"
+        "Document Management",
+        "Notices"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Access Control Utility",
       "description": "Access Control Utility (ACU) provides access only to applications that employ Knowledge Based Authentication (KBA).",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Authentication",
-        "Security"
+        "Security",
+        "Authentication"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Electronic Access - (RIR)",
       "description": "ID Proofing and Authentication system for SSA online applications.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 3,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Security",
-        "Authentication"
+        "Authentication",
+        "Security"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "EMR-Framework",
       "description": "The Enterprise Metadata Repository Framework is built on an open architecture using relational databases and provides an infrastructure for retrieving data to load to the EMR, as well as controlling the load process.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "exemption": null,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": null,
       "tags": [
-        "Framework",
+        "Metadata Management",
         "Data",
-        "Metadata Management"
+        "Framework"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": [
+        "COBOL"
+      ]
     },
     {
+      "organization": "Social Security Administration",
       "name": "EMR-UI/API",
       "description": "Provides front-end and API access to the Enterprise Metadata Repository, which stores metadata about SSA's applications and databases. The Enterprise Metadata Repository (EMR) is a data management tool used to coordinate enterprise-wide information. It ties physical and logical metadata which may be used in data administration and application development efforts. The EMR is built on an open architecture using relational databases. It serves as a central location for documentation of SSA's data infrastructure.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 3,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Front End",
+        "Metadata Management",
         "Data",
-        "Metadata Management"
+        "Front End"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": [
+        "JAVA"
+      ]
     },
     {
+      "organization": "Social Security Administration",
       "name": "Health informationTechnology management information",
       "description": "Health IT Management Information (HIT MI) is part of the WebFocus Business Intelligence Dashboard. It provides data analysis to monitor work loads and trend analysis and information on a variety of variables such as time and location, allowing users to make further improvements and enhancements to the disability process.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
         "HealthIT"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": [
+        "COBOL"
+      ]
     },
     {
+      "organization": "Social Security Administration",
       "name": "WMI for IC and Appeals",
       "description": "Legacy Workload Management Information (WMI) for IC and appeals batch programs and CICS screens.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 3,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Appeals",
-        "Workload Management"
+        "Workload Management",
+        "Appeals"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "VIEWS - Agreement Workflow Tool",
       "description": "AWT is a workflow tool and repository for the reimbursable agreement documents. The agreement process begins in AWT, which allows related documentation to be circulated electronically for approval and signature.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "exemption": null,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": null,
       "tags": [
-        "Agreements",
-        "Workflow Management"
+        "Workflow Management",
+        "Agreements"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "MI Central",
       "description": "Facilitates access to management information and workload control reports by providing centralized access to workload counts, workload control listings, processing time reports, performance measurement reports and managerial cost analysis data/reports.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "exemption": null,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": null,
       "tags": [
         "Management Information"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Detailed Office Organization Resource System",
       "description": "The Detailed Office/Organization Resource System (DOORS) is SSA's official Agency repository of office information, such as location and phone numbers, for all SSA offices. DOORS has a user and customer base of all SSA employees, hundreds of SSA systems, and members of the public who use SSA.GOV on the Internet.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 3,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Inventory Management",
+        "Administrative",
         "Office",
-        "Administrative"
+        "Inventory Management"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Automatic Earnings Reappraisal Operation",
       "description": "The process that \"automatically\" screens the earning records of Retirement, Survivors, and Disability Insurance (RSDI) beneficiaries for additional earnings and computes necessary changes. The beneficiary does NOT have to initiate this process.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Automated",
+        "Earnings",
         "Disability",
-        "Earnings"
+        "Automated"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": [
+        "COBOL"
+      ]
     },
     {
+      "organization": "Social Security Administration",
       "name": "Social Security Number Application Process",
       "description": "An Enumeration software application that will perform a cross-reference check of a new SSN.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 3,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Application",
-        "Enumeration"
+        "Enumeration",
+        "Application"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Verifications Account Management System",
       "description": "Verification Account Management System (VAMS) is a centralized location for maintaining Enumeration Verification Systems (EVS) accounts.  VAMS allows users to create new accounts, search for existing accounts, update current accounts, and generate MI count reports.  DEVO interfaces with VAMS to perform the administrative functions of registration, access control and tracking, and to manage assignment of the functional processes.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
         "Account Management"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Integrated Client Database System",
       "description": "The Integrated Client Database (ICDB) System allows data to be shared among SSA's major application systems (e.g., Title II and Title XVI Claims Processing). ICDB is comprised of a set of databases, common screens and access software that collects, maintains, and provides access to common Client data.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
         "Client"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Earnings Use - SEQY",
       "description": "A Master File online query request screen that adds earnings from up to 10 SSNs to the query response.  The system then combines the earnings from the SSNs in the yearly totals on the query response.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
         "Earnings"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Person Information",
       "description": "The Person Information web application was created to provide a common set of screens to display and collect person data.  It is available as an independent application through the Person Information link on iMain.  It can also be included in another application's path.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
         "Person"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Electronic Folder Interface - Data Access",
       "description": "Allows shared access via eView to legacy information and documents within a case.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Document",
-        "Disability"
+        "Disability",
+        "Document"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "AccuWage",
       "description": "AccuWage is used for testing the Electronic Filing of Wage and Tax Statement (EFW2). The software is downloaded from the SSA Web site by a submitter and used to check the format of a wage report submission file.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Taxes",
-        "Employment"
+        "Employment",
+        "Taxes"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Comprehensive Integrity Review Process - Mainframe",
       "description": "Collects and evaluates electronic transactions entered into the programmatic systems. Identifies those transactions that may indicate abuse or fraudulent activity involving SSA employees or the public.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 3,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Review",
-        "Fraud Prevention"
+        "Fraud Prevention",
+        "Review"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "DCS Budget Tracking System",
-      "description": "Tracks \"Other Objectsâ€ budget allocations for the Office of Systems and tracks some Information Technology budgets. Monitors and tracks allocations, expenditures and generates Management Information (MI) reports for planning budget requests and allocations.",
+      "description": "Tracks \"Other ObjectsÃ¢â‚¬Â budget allocations for the Office of Systems and tracks some Information Technology budgets. Monitors and tracks allocations, expenditures and generates Management Information (MI) reports for planning budget requests and allocations.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "exemption": null,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": null,
       "tags": [
-        "Management Information",
+        "Budget Tracking",
         "Administrative",
-        "Budget Tracking"
+        "Management Information"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Internet Special Notices Option",
       "description": "An Internet/Intranet application designed to collect notice preferences from applicants, beneficiaries, recipients, and representative payees who allege blindness or visual impairment. These individuals can select to receive all notices and written communication from SSA via a Microsoft Word CD or in Braille.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 2,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "SNO",
-        "Notices"
+        "Notices",
+        "SNO"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Performance Assessment and Communication System",
       "description": "PACS assists supervisors in preparing employee performance plans, documenting expectations and progress reviews and preparing performance appraisals.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "exemption": null,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": null,
       "tags": [
-        "Performance Appraisals",
-        "Human Resources"
+        "Human Resources",
+        "Performance Appraisals"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Security Administration Reports Application",
       "description": "SARA is the automated solution to an existing manual review\nprocess, and it will provide the ability to capture trending data to\nassist in management decisions. Yes, The Security Administration Reports\nApplication SARA will allow Information Security Officers ISOs,\nAlternate Information Security Officers ALT ISOs and Management Designee\nMD to access, review and take appropriate action on Security\nAdministration Reports.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "exemption": null,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": null,
       "tags": [
-        "Reporting",
+        "Security",
         "Management Information",
-        "Security"
+        "Reporting"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Document Processing System",
       "description": "The Document Processing System (DPS) is an SSA developed, browser based application that will provide the user with functionality similar to the client server based system, Distributed Online Correspondence System (DOCS).",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Document Processing",
-        "Document Management"
+        "Document Management",
+        "Document Processing"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Electronic Personal Enrollment Credential System",
       "description": "The HSPD-12 Electronic Personal Enrollment Credential System (EPECS) supports the HSPD-12 credentialing process at SSA. It automates the sponsoring, vetting, and issuing of HSPD-12 credentials. It interfaces with other SSA systems for compliance with various directives.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 3,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
         "Security"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Electronic Bench Book",
       "description": "A web-based application used by the office of Disability Adjudication and Review/ODAR to aid with documentation, analysis, and adjudication of disability cases.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 3,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Workload Management",
+        "Disability",
         "Adjudication",
-        "Disability"
+        "Workload Management"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Visitor Intake Process - Rewrite",
       "description": "Manages appointments and walk-ins for Field Office (FO) and assigns them to the FO staff in an effective way to minimize the wait time of the users.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "exemption": null,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": null,
       "tags": [
-        "Scheduling",
-        "Workload Management"
+        "Workload Management",
+        "Scheduling"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Hires and Losses Tracking System",
       "description": "This application tracks the hires and losses of employees to the Office of Systems. It provides an automated way of approving hires and tracking both hires and losses in Systems.  It also provides many reports from captured data on individuals joining the Office of Systems, leaving the Office of Systems, or moving from one Associate Commissioner's office within Systems to another Associate Commissioner's office within Systems. The data from these reports are used by management to make budget decisions.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "exemption": null,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": null,
       "tags": [
         "Human Resources"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "GSO - Interim Assistance Reimbursement",
       "description": "An online mechanism for state agencies to report to SSA the amount of state or local assistance the agencies paid to individuals who are now eligible for SSI payments.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 3,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Data Exchanges",
-        "Payments"
+        "Payments",
+        "Data Exchanges"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Modernized Supplemental Security Income Claims System",
       "description": "Web-based Intranet pages that collect and document application information about the claimant, provide a modernized data-collection environment for most post-eligibility (PE) events - regardless of whether the action taken is an initial claim or a PE event - and allow online claims initiation for the majority of SSI claims.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 3,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Internet",
+        "SSI",
         "Claim",
-        "SSI"
+        "Internet"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Affordable Care Act - Batch Redetermination/Renewal Process",
       "description": "A batch application exchanges data with CMS related to eligibility Redeterminations and Renewal decisions for Insurance Affordability Programs.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 3,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Medical",
-        "Insurance"
+        "Insurance",
+        "Medical"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Electronic Freedom of Information Act System -Intranet",
       "description": "An Intranet application used by the Office of Public Disclosure (OPD) and the Division of Earnings Record Operations (DERO) to process the different types of FOIA requests that are received.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "exemption": null,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": null,
       "tags": [
-        "Intranet",
-        "FOIA"
+        "FOIA",
+        "Intranet"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Direct Deposit Fraud Prevention",
       "description": "An intranet web application developed to collect and processes requests to block direct deposit auto-enrollment changes that are received and processed in the SSA Notification of Change (SANOC) System.  The DDFP web application also requires input of the reason for the block - Fraud Alleged or Preventive Measure.  Both the adding and removal of the block are updated in real time allowing the application to access the data for display the block request history.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 3,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Direct Deposit",
-        "Fraud Prevention"
+        "Fraud Prevention",
+        "Direct Deposit"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "SSI Claims System - Web",
       "description": "Enables SSI claim submissions via a web-based intranet data collection process. It replaces the previous set of CICS MSSICS screens.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 3,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Data Collection",
+        "Internet",
         "Claim",
-        "Internet"
+        "Data Collection"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Access to Financial Institutions",
       "description": "Electronically verifies depository account balances for Supplemental Security Income (SSI) applicants, recipients, and deemors. It also searches for undisclosed depository accounts and detects unreported excess resources, reducing improper SSI payments.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 3,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Direct Deposit",
-        "Financial"
+        "Financial",
+        "Direct Deposit"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "electronic Representative Payee System",
       "description": "The Electronic Representative Payee Accounting (eRPA) system is an intranet-based system that has automated the processing of Representative Payee Accounting forms.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Forms",
+        "Representative Payee",
         "Intranet",
-        "Representative Payee"
+        "Forms"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Data Exchange and Verification Online",
       "description": "DEVO is the back-end application for processing SSN verifications and data exchanges. DEVO uses modern technology for parameter driven processing of both batch and real time requests. DEVO provides the capability for SSA to accurately and rapidly respond to customized requests, legislative mandates, and court orders. Legacy verification and data exchange applications (Enumeration Verification System (EVS), Numident Online Verification Utility (NOVU), State Verification Exchange System (SVES), and State Online Query System (SOLQ)) are methodically being reengineered into DEVO, which will make use of reusable, flexible software. DEVO interfaces with the Verification Account Management System (VAMS) to determine account status, obtain processing parameters, and store transaction counts for Management Information (MI).",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 3,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Administrative",
+        "Data Exchange",
         "Verification",
-        "Data Exchange"
+        "Administrative"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Core Services",
       "description": "A suite of Intranet-based utilities designed to simplify central or common routines required by many web based applications. The utilities leverage open, accessible technologies eliminating the drawbacks commonly seen in proprietary coding techniques. They help prevent duplication of effort by reusing what already exists.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "exemption": null,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": null,
       "tags": [
-        "Intranet",
-        "Services"
+        "Services",
+        "Intranet"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "StaRZ & Stripes - The Next Generation",
       "description": "StarRZ and Stripes the Next Generation (SSTNG) provides the full range of detailed workload monitoring, management reports and listings used by Claims Reps, Operation Supervisors and FO Managers to identify, track and successfully complete their annual Redetermination/Limited (RZ/LI) workloads.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 3,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
         "Workload Management"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "MI for Debt Management System",
       "description": "Provides an summary of the financial Debt Management screens at the regional field offices and the processing center levels",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 3,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Processing Center",
-        "Debt Management"
+        "Debt Management",
+        "Processing Center"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": [
+        "COBOL"
+      ]
     },
     {
+      "organization": "Social Security Administration",
       "name": "Customer Help and Information Program",
       "description": "CHIP is an Intranet application currently used by National 800 Number (N8NN) Agents to respond to inquiries made by the public.  Provides instant access to facts, policies and reference material found in the Teleservice Center Operating Guide (TSCOG), as well as information from certain mainframe records.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Policy",
+        "Phone",
         "Call Center",
-        "Phone"
+        "Policy"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Prisoner Tracking MI",
       "description": "The Prisoner Tracking Management Information (PTMI) provides aggregate and workload data for Title II and Title XVI prisoner transactions processed in SSA field offices (FO's) and Processing Service Centers (PSC's), provides correctional facility names, and correctional facility reporting and incentive payment information.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 3,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Management Information",
-        "Prisoner"
+        "Prisoner",
+        "Management Information"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": [
+        "COBOL"
+      ]
     },
     {
+      "organization": "Social Security Administration",
       "name": "Social Security Access to State Records Online",
       "description": "Social Security Access to State Records Online (SASRO) provides authorized SSA employees access to state agency benefit information, in order to correctly process many of its entitlement and post-entitlement actions.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 3,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Entitlments",
+        "State",
         "Benefits",
-        "State"
+        "Entitlments"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "My Human Resources",
       "description": "This application is part of the application hub, Human Resources Services Portal. The e7B creates a secure, electronic centralized repository accessed through the agency's Intranet for all information maintained in the 7B, 7B Extension File, and holding file to reduce the amount of required time and expenditures associated with file maintenance.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
         "Human Resources"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Security Oversight Command & Control System",
       "description": "SOCCS is utilized to coordinate disaster planning, evacuation and security.\n\nSOCCS is used for security oversight and disaster planning for SSA HQ complex, leased buildings and facilities assigned to SSA HQ.\n\nOffice of Security and Emergency Preparedness (OSEP) will capitalize on SOCCS ability to read and receive live data feeds, ensuring the safety of SSA personnel and the public.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 3,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Safety",
-        "Disaster Planning"
+        "Disaster Planning",
+        "Safety"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": [
+        ".NET"
+      ]
     },
     {
+      "organization": "Social Security Administration",
       "name": "Integrated Registration Services - Internet",
       "description": "An internet application that provides registration, authentication and authorization gateway services for the Business Services Online (BSO) suite of Business-to-Government (B2G) services.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 3,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Registration",
-        "Internet"
+        "Internet",
+        "Registration"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Disability Quality Review",
       "description": "The Disability Quality Review system is an JAVA web-based application that allows in-line quality reviews of cases/claims adjudicated by the Disability Determination Services.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 3,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Claims Review",
+        "Disability",
         "Review",
-        "Disability"
+        "Claims Review"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Official Union Time Tracking System",
       "description": "OUTTS will collect and load into MTAS the number and type of regular hours, as well as the number and type of credit hours that were worked on official union time for the current pay period or amended union activity for a prior pay period.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Human Resources",
+        "Union",
         "Time and Attendance",
-        "Union"
+        "Human Resources"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "National Disability Determination Services System",
       "description": "NDDSS is a software application that provides case control management and reporting capabilities. NDDSS gives the state Disability Determination Services offices the ability to track the receipt, development and closures of claims.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Case Management",
+        "Disability",
         "Determination",
-        "Disability"
+        "Case Management"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Disability Case Processing System",
       "description": "The Disability Case Processing System is used by disability determination components to process disability claims.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 3,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Claims Processing",
+        "Case Management",
         "Disability",
-        "Case Management"
+        "Claims Processing"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Employer Balancing Intranet Processing System",
       "description": "The Annual Wage reporting (AWR) Employer Balancing Intranet Processing System (EBIPS) enables users to view submitter, employer, submission, W-3, W-2, and report of contact information.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Wage Reporting",
-        "Employer"
+        "Employer",
+        "Wage Reporting"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "myAPS Web Application",
       "description": "As part of the mySSA suite of applications, myAPS provides detailed status information for all pending T2, T16, and T18 claims, including Appeals up to the Hearing Request level for denied claims.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 3,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Claims",
+        "Internet",
         "Claims Tracking",
-        "Internet"
+        "Claims"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": [
+        "JAVA",
+        "XML"
+      ]
     },
     {
+      "organization": "Social Security Administration",
       "name": "Global Reference Table Portal",
       "description": "Application used to collect data to update the Global Reference Tables, which store common information used throughout SSA, and standardize code structures and code usage of SSA business and Policy-approved values.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "exemption": null,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": null,
       "tags": [
-        "Metadata Management",
+        "Common",
         "Data",
-        "Common"
+        "Metadata Management"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": [
+        "COBOL",
+        "JavaScript"
+      ]
     },
     {
+      "organization": "Social Security Administration",
       "name": "Workload Action Center",
       "description": "The Workload Action Center (WAC) allows users to view, analyze, and work initial claims and appeals pending lists, as well as mainframe tickle lists. It consumes Programmatic Workload data to provide information to the 1,394 field offices to assist SSA employees in adjudicating initial disability claims.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Disability",
-        "Workload Management"
+        "Workload Management",
+        "Disability"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "MySSA Benefit Verification - Backend",
       "description": "Accessed through the MySocialSecurity portal, it provides instant verification of SSA benefits for proof of income purposes. It also provides immediate view, print, and save of benefit verification letters to prove receipt/non-receipt of SSA benefits, Supplemental Income (SSI) or Medicare.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Registration",
-        "Internet"
+        "Internet",
+        "Registration"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "iAppeals (i3441)",
       "description": "Allows electronic submission of requests from individuals and/or third parties for the Request for Reconsideration (SSA-561), Request for Hearing (HA-501) on medically denied claims for both Title II and Title XVI claims, and allows an individual to appeal the decision directly on-line.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Appeals",
+        "Forms",
         "Medical",
-        "Forms"
+        "Appeals"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     },
     {
+      "organization": "Social Security Administration",
       "name": "Social Security Number Verification - BSO",
       "description": "Allows employers to verify name/SSNs for wage reporting purposes.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "exemption": 4,
-      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it contains sensitive information related to the agency's operations, and/or a code assessment has not been completed.",
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
       "tags": [
-        "Identity",
-        "Verification"
+        "Verification",
+        "Identity"
       ],
       "contact": {
-        "name": "Code Administrator",
-        "email": "Code.Administrator@ssa.gov"
-      }
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
+    },
+    {
+      "organization": "Social Security Administration",
+      "name": "Manual Adjustment Credit and Award Process",
+      "description": "The Manual Adjustment Credit and Award Processes (MADCAP) reformatted from MACADE in a batch process to create MBR finders. It establishes, modifies and deletes most of the elements on the Master Beneficiary Record.",
+      "license": null,
+      "openSourceProject": 0,
+      "governmentWideReuseProject": 0,
+      "exemption": 4,
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
+      "tags": [
+        "Batch Process"
+      ],
+      "contact": {
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
+    },
+    {
+      "organization": "Social Security Administration",
+      "name": "Systems Integrity Fiscal Totals",
+      "description": "Intranet application that replaces the current Feeder CAS system. The system creates postentitlement fiscal control accounting totals.  It maint ains accumulated fiscal totals, produces worksheets, and generates credit/debi t totals for subsequent balancing of the monthly update totals.",
+      "license": null,
+      "openSourceProject": 0,
+      "governmentWideReuseProject": 1,
+      "exemption": null,
+      "exemptionText": null,
+      "tags": [
+        "Intranet",
+        "Accounting"
+      ],
+      "contact": {
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": [
+        "COBOL"
+      ]
+    },
+    {
+      "organization": "Social Security Administration",
+      "name": "My Social Security Application",
+      "description": "The MySocialSecurity portal provides a consolidated web interface that allows registered and authenticated users to access personal SSA-related information and to update appropriate information with SSA.",
+      "license": null,
+      "openSourceProject": 0,
+      "governmentWideReuseProject": 0,
+      "exemption": 2,
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
+      "tags": [
+        "Personal Information",
+        "Web Interface",
+        "access "
+      ],
+      "contact": {
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
+    },
+    {
+      "organization": "Social Security Administration",
+      "name": "Mobile Technologies for SSI Wage Reporting",
+      "description": "The Supplemental Security Income Telephone Wage Reporting (SSITWR) allows certain beneficiaries, their spouses, parents and representative payees to report the total gross monthly wages for the prior month to SSA over the telephone.  \nThe SSI Mobile Wage Reporting (SSIMWR) application allows reporting of the total gross monthly wages for the prior month using a mobile device. Wage reporters can download and install the free SSIMWR application on an Apple or Android mobile device.",
+      "license": null,
+      "openSourceProject": 0,
+      "governmentWideReuseProject": 0,
+      "exemption": 4,
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
+      "tags": [
+        "Supplementary Security Income",
+        "Mobile Device",
+        "Monthly Wage Reporting"
+      ],
+      "contact": {
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
+    },
+    {
+      "organization": "Social Security Administration",
+      "name": "Internet Medicare Replacement Card",
+      "description": "Provides beneficiaries an optional method to request replacement Medicare cards via the Internet a without assistance from an SSA employees.",
+      "license": null,
+      "openSourceProject": 0,
+      "governmentWideReuseProject": 0,
+      "exemption": 2,
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
+      "tags": [
+        "Request Replacement",
+        "Medicare Card",
+        "Internet"
+      ],
+      "contact": {
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
+    },
+    {
+      "organization": "Social Security Administration",
+      "name": "mySSA Change of Address",
+      "description": "Allows registered users to update their Title II benefits address and phone number via MySSA.",
+      "license": null,
+      "openSourceProject": 0,
+      "governmentWideReuseProject": 0,
+      "exemption": 2,
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
+      "tags": [
+        "Registered Users",
+        "Title II",
+        "Benefits"
+      ],
+      "contact": {
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
+    },
+    {
+      "organization": "Social Security Administration",
+      "name": "Death Alert Tracking System",
+      "description": "Provides listings of Pending and Cleared Death Alerts.  Allows update of information about actions taken to clear Death Alerts.  Version 2 includes a listing of DACUS Exceptions.  Version 3 adds a new class of data to the application and a match between the Numident and the SSR/MBR pay records and identifies instances where there is a death posted to the Numident and either no death or a discrepant date on the pay record.",
+      "license": null,
+      "openSourceProject": 0,
+      "governmentWideReuseProject": 0,
+      "exemption": 2,
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
+      "tags": [
+        "Death Alerts",
+        "Pending ",
+        "cleared"
+      ],
+      "contact": {
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": [
+        "C#",
+        "SQL"
+      ]
+    },
+    {
+      "organization": "Social Security Administration",
+      "name": "Appeals Review Processing System",
+      "description": "A web-based, user-friendly case processing application that can handle the administrative appeals process at the Appeals Council Level.",
+      "license": null,
+      "openSourceProject": 0,
+      "governmentWideReuseProject": 0,
+      "exemption": 4,
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
+      "tags": [
+        "Case Processing",
+        "Administrative Appeals",
+        "web based"
+      ],
+      "contact": {
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
+    },
+    {
+      "organization": "Social Security Administration",
+      "name": "National Medical Contractors Tracking System",
+      "description": "The National Medical Contractors Tracking System (NMCTS) application is a web-based application tool that will identify, track and report of the various workloads that are carried out by the RMCs within each Region.  This tool will also capture critical data, providing Management Information Reports that are necessary for workload oversight and projections of the Nation's disability reviews.",
+      "license": null,
+      "openSourceProject": 0,
+      "governmentWideReuseProject": 1,
+      "exemption": null,
+      "exemptionText": null,
+      "tags": [
+        "Workload Management",
+        "Tracking System",
+        "Reporting"
+      ],
+      "contact": {
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
+    },
+    {
+      "organization": "Social Security Administration",
+      "name": "Employer Customer Help and Information Program",
+      "description": "An intranet-based decision support application used to assist the Division of Employer Services' (DES) technicians when responding to telephone inquiries from the nation's employers and/or their representatives. The tool provides quick access to Social Security Administration (SSA) records, facts, policies, procedures, and reference.",
+      "license": null,
+      "openSourceProject": 0,
+      "governmentWideReuseProject": 0,
+      "exemption": 3,
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
+      "tags": [
+        "Telephone Inquieries",
+        "Quick Access",
+        "Records"
+      ],
+      "contact": {
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
+    },
+    {
+      "organization": "Social Security Administration",
+      "name": "Integrated Disability Management System - CICS Mainframe Interface",
+      "description": "The Integrated Disability Management System (IDMS) uses as its master file the Disability Control File System (DCFS), which is the master repository containing the permanent adjudication history for all SSA's Title II (Retirement, Survivors, Disability Insurance) and Title XVI (Supplemental Security Income) programs' disability claims, including denied, terminated and active claims.",
+      "license": null,
+      "openSourceProject": 0,
+      "governmentWideReuseProject": 0,
+      "exemption": 4,
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
+      "tags": [
+        "Disability"
+      ],
+      "contact": {
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
+    },
+    {
+      "organization": "Social Security Administration",
+      "name": "WEBRecon",
+      "description": "This purpose of this application is to analyze pending Reconsiderations using the Appeals ODS. Pending medical and non-medical reconsiderations are both shown. WebRecon has a very similar interace and functionality as Atlanta*s WEBALJ application.",
+      "license": null,
+      "openSourceProject": 0,
+      "governmentWideReuseProject": 0,
+      "exemption": 4,
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
+      "tags": [
+        "Appeals",
+        "Disability"
+      ],
+      "contact": {
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
+    },
+    {
+      "organization": "Social Security Administration",
+      "name": "Report Correction",
+      "description": "RCOR is a Mainframe/CICS/Batch system that performs blanket corrections to employer reports (W3) where information (like the EIN or report year) is incorrect on individual W2 reports.  These corrections are reflected on the MEF.",
+      "license": null,
+      "openSourceProject": 0,
+      "governmentWideReuseProject": 0,
+      "exemption": 4,
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
+      "tags": [
+        "Earnings",
+        "Corrections"
+      ],
+      "contact": {
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
+    },
+    {
+      "organization": "Social Security Administration",
+      "name": "Consolidated Enterprise Database (CED)",
+      "description": "The Enterprise Operational Datastore builds a new database that integrates data from a variety of sources into a standard, organized structure. The new database will be highly scalable, capable of servicing on-line transactions and operational reporting without requiring programmers to include data integration logic.",
+      "license": null,
+      "openSourceProject": 0,
+      "governmentWideReuseProject": 0,
+      "exemption": 2,
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
+      "tags": [
+        "Enterprise Data"
+      ],
+      "contact": {
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": [
+        "COBOL"
+      ]
+    },
+    {
+      "organization": "Social Security Administration",
+      "name": "Appeals Review Processing System - Management Information",
+      "description": "Management information regarding the evidence needed to determine the general status of a case in ODAR.",
+      "license": null,
+      "openSourceProject": 0,
+      "governmentWideReuseProject": 0,
+      "exemption": 2,
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
+      "tags": [
+        "Appeals",
+        "Case Management",
+        "Management Information"
+      ],
+      "contact": {
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": [
+        "FOCUS"
+      ]
+    },
+    {
+      "organization": "Social Security Administration",
+      "name": "Internet Social Security Number Replacement Card",
+      "description": "Online Request for replacement SSN Card.",
+      "license": null,
+      "openSourceProject": 0,
+      "governmentWideReuseProject": 0,
+      "exemption": 2,
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
+      "tags": [
+        "Replacement Request",
+        "Social Security Card"
+      ],
+      "contact": {
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": [
+        "COBOL",
+        "JCL"
+      ]
+    },
+    {
+      "organization": "Social Security Administration",
+      "name": "Medicare Application Processing System",
+      "description": "Provides help to process Medicare Prescription Drug Plan Costs, and to correct and verify data on existing applications. It provides access to query information about applicants and applications, and provides online appeal request capability.",
+      "license": null,
+      "openSourceProject": 0,
+      "governmentWideReuseProject": 0,
+      "exemption": 2,
+      "exemptionText": "This code asset cannot be shared because of one of the following reasons: it contains sensitive information related to the agency's infrastructure,  it constains sensitive information related to the agency's operations, or a code assessment has not been completed.",
+      "tags": [],
+      "contact": {
+        "email": "Code.Administrator@ssa.gov",
+        "name": "SSA Code Administrator",
+        "URL": null,
+        "phone": null
+      },
+      "languages": []
     }
   ]
 }

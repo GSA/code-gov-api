@@ -1,1 +1,41 @@
-{}
+{
+  "version": "1.0",
+  "agency": "USAID",
+  "projects": [
+    {
+      "name": "Gmail Imap Pop Disable",
+      "repository": "https://github.com/USAID-MCIO/USAIDGmailImapPopDisable-",
+      "description": "Allows a gmail enterprise to authorize only a limited number of users the ability to connect to Gmail using POP or IMAP. Any other users who configure that option which are not in the authorized list will have the connection disabled.",
+      "license": "null",
+      "openSourceProject": 0,
+      "governmentWideReuseProject": 0,
+      "tags": [
+        "Gmail",
+        "Imap"
+      ],
+      "contact": {
+        "email": "mdicko@usaid.gov",
+        "name": "Malcolm Dicko",
+        "phone": "703-666-1215"
+      }
+    },
+    {
+      "name": "Save Gmail",
+      "repository": "https://github.com/USAID-MCIO/USAIDGmailSaveMessageExtension-",
+      "manifest_version": 2,
+      "description": "USAID Gmail extension to save messages to local disk",
+      "license": "null",
+      "openSourceProject": 0,
+      "governmentWideReuseProject": 0,
+      "tags": [
+        "SAVE",
+        "GMAIL"
+      ],
+      "contact": {
+        "email": "mdicko@usaid.gov",
+        "name": "Malcolm Dicko",
+        "phone": "703-666-1215"
+      }
+    }
+  ]
+}
