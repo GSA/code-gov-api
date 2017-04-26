@@ -9,3 +9,8 @@ npm-debug.log*
 github-config.json
 StatusDashboardScript
 /tmp
+data/diffed/*
+data/discovered/*
+data/fallback/*
+data/fetched/*
+data/status/*
