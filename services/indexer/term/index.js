@@ -62,7 +62,7 @@ class RepoTermLoaderStream extends Transform {
 
     const _loadTerm = (termType, termVal) => {
       // TODO: might not want to be so forceful about lower case
-      termVal = termVal.toLowerCase();
+      if(termVal!=null){termVal = termVal.toLowerCase();}
       if (typeof this.terms[termType][termVal] === "undefined") {
         this.terms[termType][termVal] = 1;
       } else {
