@@ -1,5 +1,5 @@
 {
-  "timestamp": "Fri Apr 28 2017 16:14:09 GMT-0400 (EDT)",
+  "timestamp": "Mon May 01 2017 14:40:46 GMT-0400 (EDT)",
   "statuses": {
     "USDA": {
       "status": "NOT FULLY COMPLIANT: 25 WARNINGS, 25 validation errors, 25 REQUESTED ENHANCEMENTS",
@@ -940,8 +940,9 @@
       }
     },
     "HUD": {
-      "status": "FULLY COMPLIANT: 0 validation errors",
+      "status": "FAILURE: ERROR WHEN FETCHING (socket hang up)",
       "issues": [],
+      "version": "",
       "metadata": {
         "agency": {
           "name": "Department of Housing and Urban Development",
@@ -950,15 +951,15 @@
           "codeUrl": "https://www.hud.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 0.5,
-            "schemaFormat": 1,
-            "overallCompliance": 0.75
+            "schemaFormat": 0,
+            "overallCompliance": 0.25
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 0.5,
-        "schemaFormat": 1,
-        "overallCompliance": 0.75
+        "schemaFormat": 0,
+        "overallCompliance": 0.25
       }
     },
     "DHS": {
