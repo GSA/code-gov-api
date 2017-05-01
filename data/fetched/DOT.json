@@ -11,7 +11,7 @@
       "vcs": "TRANServe VSS",
       "status": "Beta",
       "license": null,
-      "homepage": "https://transpark.ost.dot.gov",
+      "repository": "https://transpark.ost.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -36,7 +36,7 @@
       "vcs": "OST, SharePoint, MSTFS",
       "status": "Beta",
       "license": null,
-      "homepage": "http://our.dot.gov/rc/ogc/c10/SitePages/Home.aspx",
+      "repository": "http://our.dot.gov/rc/ogc/c10/SitePages/Home.aspx",
       "tags": [
         "transportation",
         "code"
@@ -61,7 +61,7 @@
       "vcs": "OST, SharePoint, MSTFS",
       "status": "Beta",
       "license": null,
-      "homepage": "http://our.dot.gov/apps/oGC-Correspondence/SiteAssets/Home.aspx",
+      "repository": "http://our.dot.gov/apps/oGC-Correspondence/SiteAssets/Home.aspx",
       "tags": [
         "transportation",
         "code"
@@ -86,7 +86,7 @@
       "vcs": "OST, Visual SourceSafe",
       "status": "Production",
       "license": null,
-      "homepage": "https://www.cts.ost.dot.gov",
+      "repository": "https://www.cts.ost.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -111,7 +111,7 @@
       "vcs": "OST, Visual SourceSafe",
       "status": "Production",
       "license": null,
-      "homepage": "http://cca.ost.dot.gov",
+      "repository": "http://cca.ost.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -136,7 +136,7 @@
       "vcs": "OST, Visual SourceSafe",
       "status": "Production",
       "license": null,
-      "homepage": "http://gns.ost.dot.gov",
+      "repository": "http://gns.ost.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -161,7 +161,7 @@
       "vcs": "OST, Visual SourceSafe",
       "status": "Production",
       "license": null,
-      "homepage": "http://rms.ost.dot.gov",
+      "repository": "http://rms.ost.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -186,7 +186,7 @@
       "vcs": "OST, Visual SourceSafe",
       "status": "Production",
       "license": null,
-      "homepage": "http://ccm.dot.gov",
+      "repository": "http://ccm.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -211,7 +211,7 @@
       "vcs": "OST, SharePoint, MSTFS",
       "status": "Production",
       "license": null,
-      "homepage": "http://our.dot.gov/apps/lms/SitePages/Home.aspx",
+      "repository": "http://our.dot.gov/apps/lms/SitePages/Home.aspx",
       "tags": [
         "transportation",
         "code"
@@ -236,7 +236,7 @@
       "vcs": "OST, SharePoint, MSTFS",
       "status": "Production",
       "license": null,
-      "homepage": "http://our.dot.gov/site/sd/SitePages/Home.aspx",
+      "repository": "http://our.dot.gov/site/sd/SitePages/Home.aspx",
       "tags": [
         "transportation",
         "code"
@@ -261,7 +261,7 @@
       "vcs": "OST, SharePoint, MSTFS",
       "status": "Production",
       "license": null,
-      "homepage": "http://our.dot.gov/office/ost.c/GCLI/SitePages/Home.aspx",
+      "repository": "http://our.dot.gov/office/ost.c/GCLI/SitePages/Home.aspx",
       "tags": [
         "transportation",
         "code"
@@ -286,7 +286,7 @@
       "vcs": "OST, SharePoint, MSTFS",
       "status": "Production",
       "license": null,
-      "homepage": "http://our.dot.gov/apps/lrd/SitePages/LRDHome.aspx",
+      "repository": "http://our.dot.gov/apps/lrd/SitePages/LRDHome.aspx",
       "tags": [
         "transportation",
         "code"
@@ -311,7 +311,7 @@
       "vcs": "OST, Visual SourceSafe",
       "status": "Production",
       "license": null,
-      "homepage": "http://ccm.dot.gov",
+      "repository": "http://ccm.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -336,7 +336,7 @@
       "vcs": "OST TFS",
       "status": "Production",
       "license": null,
-      "homepage": "https://osthqnwas030vg.ad.dot.gov:8890/forms/frmservlet?config=jpi755",
+      "repository": "https://osthqnwas030vg.ad.dot.gov:8890/forms/frmservlet?config=jpi755",
       "tags": [
         "transportation",
         "code"
@@ -361,7 +361,7 @@
       "vcs": "TRANServe VSS",
       "status": "Alpha",
       "license": null,
-      "homepage": "http://transparkdev.ost.dot.gov",
+      "repository": "http://transparkdev.ost.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -386,7 +386,7 @@
       "vcs": "TRANServe VSS",
       "status": "Alpha",
       "license": null,
-      "homepage": "https://transparktest.ost.dot.gov",
+      "repository": "https://transparktest.ost.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -411,7 +411,7 @@
       "vcs": "OST, SharePoint, MSTFS",
       "status": "Alpha",
       "license": null,
-      "homepage": "http://our.dot.gov/apps/lms/SitePages/Home.aspx",
+      "repository": "http://our.dot.gov/apps/lms/SitePages/Home.aspx",
       "tags": [
         "transportation",
         "code"
@@ -436,7 +436,7 @@
       "vcs": "OST, SharePoint, MSTFS",
       "status": "Alpha",
       "license": null,
-      "homepage": "http://ourstage.dot.gov/apps/lrd/SitePages/LRDHome.aspx",
+      "repository": "http://ourstage.dot.gov/apps/lrd/SitePages/LRDHome.aspx",
       "tags": [
         "transportation",
         "code"
@@ -461,7 +461,7 @@
       "vcs": "OST, SharePoint, MSTFS",
       "status": "Alpha",
       "license": null,
-      "homepage": "http://ourstage.dot.gov/apps/oGC-Correspondence/SiteAssets/Home.aspx",
+      "repository": "http://ourstage.dot.gov/apps/oGC-Correspondence/SiteAssets/Home.aspx",
       "tags": [
         "transportation",
         "code"
@@ -486,7 +486,7 @@
       "vcs": "OST, SharePoint, MSTFS",
       "status": "Alpha",
       "license": null,
-      "homepage": "http://ourstage.dot.gov/apps/gls/SitePages/Home.aspx",
+      "repository": "http://ourstage.dot.gov/apps/gls/SitePages/Home.aspx",
       "tags": [
         "transportation",
         "code"
@@ -511,7 +511,7 @@
       "vcs": "OST, SharePoint, MSTFS",
       "status": "Alpha",
       "license": null,
-      "homepage": "http://ourstage.dot.gov/apps/CTS/SitePages/CTSHome.aspx",
+      "repository": "http://ourstage.dot.gov/apps/CTS/SitePages/CTSHome.aspx",
       "tags": [
         "transportation",
         "code"
@@ -536,7 +536,7 @@
       "vcs": "OST, Visual SourceSafe",
       "status": "Alpha",
       "license": null,
-      "homepage": "http://ccmtraining.ost.dot.gov",
+      "repository": "http://ccmtraining.ost.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -561,7 +561,7 @@
       "vcs": "TRANServe VSS",
       "status": "Production",
       "license": null,
-      "homepage": "https://transitapp.ost.dot.gov",
+      "repository": "https://transitapp.ost.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -586,7 +586,7 @@
       "vcs": "TRANServe VSS",
       "status": "Production",
       "license": null,
-      "homepage": "https://parkingapp.ost.dot.gov",
+      "repository": "https://parkingapp.ost.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -611,7 +611,7 @@
       "vcs": "TRANServe VSS",
       "status": "Production",
       "license": null,
-      "homepage": "https://transitapptraining.ost.dot.gov",
+      "repository": "https://transitapptraining.ost.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -636,7 +636,7 @@
       "vcs": "OST, Visual SourceSafe",
       "status": "Production",
       "license": null,
-      "homepage": "http://airconsumer.dot.gov",
+      "repository": "http://airconsumer.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -661,7 +661,7 @@
       "vcs": "OST, Visual SourceSafe",
       "status": "Production",
       "license": null,
-      "homepage": "http://382reporting.ost.dot.gov",
+      "repository": "http://382reporting.ost.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -686,7 +686,7 @@
       "vcs": "OST, Visual SourceSafe",
       "status": "Production",
       "license": null,
-      "homepage": "http://animalreport.ost.dot.gov",
+      "repository": "http://animalreport.ost.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -711,7 +711,7 @@
       "vcs": "OST, Visual SourceSafe",
       "status": "Production",
       "license": null,
-      "homepage": "http://filingtarmacdelayplan.dot.gov",
+      "repository": "http://filingtarmacdelayplan.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -736,7 +736,7 @@
       "vcs": "OST, Visual SourceSafe",
       "status": "Production",
       "license": null,
-      "homepage": "http://websiteaccessibility.dot.gov",
+      "repository": "http://websiteaccessibility.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -761,7 +761,7 @@
       "vcs": "OST, Visual SourceSafe",
       "status": "Production",
       "license": null,
-      "homepage": "http://prs.ost.dot.gov",
+      "repository": "http://prs.ost.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -786,7 +786,7 @@
       "vcs": "OST, Visual SourceSafe",
       "status": "Production",
       "license": null,
-      "homepage": "http://grants.ost.dot.gov",
+      "repository": "http://grants.ost.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -811,7 +811,7 @@
       "vcs": "OST, Visual SourceSafe",
       "status": "Production",
       "license": null,
-      "homepage": "http://eas.dot.gov",
+      "repository": "http://eas.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -836,7 +836,7 @@
       "vcs": "",
       "status": "Production",
       "license": null,
-      "homepage": "maps.bts.dot.gov ; explore.dot.gov",
+      "repository": "maps.bts.dot.gov ; explore.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -861,7 +861,7 @@
       "vcs": "Acquia",
       "status": "Production",
       "license": null,
-      "homepage": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/air_carrier_traffic_statistics/",
+      "repository": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/air_carrier_traffic_statistics/",
       "tags": [
         "transportation",
         "code"
@@ -886,7 +886,7 @@
       "vcs": "Acquia",
       "status": "Production",
       "license": null,
-      "homepage": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/air_travel_price_index/",
+      "repository": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/air_travel_price_index/",
       "tags": [
         "transportation",
         "code"
@@ -911,7 +911,7 @@
       "vcs": "Acquia",
       "status": "Production",
       "license": null,
-      "homepage": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/average_air_fares/",
+      "repository": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/average_air_fares/",
       "tags": [
         "transportation",
         "code"
@@ -936,7 +936,7 @@
       "vcs": "Acquia",
       "status": "Production",
       "license": null,
-      "homepage": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/bts_dictionary/",
+      "repository": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/bts_dictionary/",
       "tags": [
         "transportation",
         "code"
@@ -961,7 +961,7 @@
       "vcs": "Acquia",
       "status": "Production",
       "license": null,
-      "homepage": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/bulk_delete/",
+      "repository": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/bulk_delete/",
       "tags": [
         "transportation",
         "code"
@@ -986,7 +986,7 @@
       "vcs": "Acquia",
       "status": "Production",
       "license": null,
-      "homepage": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/major_pub/",
+      "repository": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/major_pub/",
       "tags": [
         "transportation",
         "code"
@@ -1011,7 +1011,7 @@
       "vcs": "Acquia",
       "status": "Production",
       "license": null,
-      "homepage": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/multi_import/",
+      "repository": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/multi_import/",
       "tags": [
         "transportation",
         "code"
@@ -1036,7 +1036,7 @@
       "vcs": "Acquia",
       "status": "Production",
       "license": null,
-      "homepage": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/recursive_import/",
+      "repository": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/recursive_import/",
       "tags": [
         "transportation",
         "code"
@@ -1061,7 +1061,7 @@
       "vcs": "Acquia",
       "status": "Production",
       "license": null,
-      "homepage": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/subject_areas/",
+      "repository": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/subject_areas/",
       "tags": [
         "transportation",
         "code"
@@ -1086,7 +1086,7 @@
       "vcs": "Acquia",
       "status": "Production",
       "license": null,
-      "homepage": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/subject_areas_wom/",
+      "repository": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/subject_areas_wom/",
       "tags": [
         "transportation",
         "code"
@@ -1111,7 +1111,7 @@
       "vcs": "Acquia",
       "status": "Production",
       "license": null,
-      "homepage": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/transportation_services_index/",
+      "repository": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/transportation_services_index/",
       "tags": [
         "transportation",
         "code"
@@ -1136,7 +1136,7 @@
       "vcs": "Acquia",
       "status": "Production",
       "license": null,
-      "homepage": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom_search/",
+      "repository": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom_search/",
       "tags": [
         "transportation",
         "code"
@@ -1161,7 +1161,7 @@
       "vcs": "Acquia",
       "status": "Production",
       "license": null,
-      "homepage": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/rita_book/",
+      "repository": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/rita_book/",
       "tags": [
         "transportation",
         "code"
@@ -1186,7 +1186,7 @@
       "vcs": "Acquia",
       "status": "Production",
       "license": null,
-      "homepage": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/addressfield_2abstate/",
+      "repository": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/addressfield_2abstate/",
       "tags": [
         "transportation",
         "code"
@@ -1211,7 +1211,7 @@
       "vcs": "",
       "status": "Production",
       "license": null,
-      "homepage": "https://dotostprism.compusearch.com/prism.net/Security/logon.aspx",
+      "repository": "https://dotostprism.compusearch.com/prism.net/Security/logon.aspx",
       "tags": [
         "transportation",
         "code"
@@ -1236,7 +1236,7 @@
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "homepage": "http://ftanet.ad.dot.gov/ames/",
+      "repository": "http://ftanet.ad.dot.gov/ames/",
       "tags": [
         "transportation",
         "code"
@@ -1261,7 +1261,7 @@
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "homepage": "http://ftanet.ad.dot.gov/CharterRegistrationAdmin",
+      "repository": "http://ftanet.ad.dot.gov/CharterRegistrationAdmin",
       "tags": [
         "transportation",
         "code"
@@ -1286,7 +1286,7 @@
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "homepage": "http://ftawebprod.fta.dot.gov/CharterRegistration/",
+      "repository": "http://ftawebprod.fta.dot.gov/CharterRegistration/",
       "tags": [
         "transportation",
         "code"
@@ -1311,7 +1311,7 @@
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "homepage": "https://ftanet.ad.dot.gov/CharterReporting",
+      "repository": "https://ftanet.ad.dot.gov/CharterReporting",
       "tags": [
         "transportation",
         "code"
@@ -1336,7 +1336,7 @@
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "homepage": "https://ftawebprod.fta.dot.gov/CharterReporting",
+      "repository": "https://ftawebprod.fta.dot.gov/CharterReporting",
       "tags": [
         "transportation",
         "code"
@@ -1361,7 +1361,7 @@
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "homepage": "http://ftanet.ad.dot.gov/ContactUsToolAdmin/",
+      "repository": "http://ftanet.ad.dot.gov/ContactUsToolAdmin/",
       "tags": [
         "transportation",
         "code"
@@ -1386,7 +1386,7 @@
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "homepage": "https://ftawebprod.fta.dot.gov/ContactUsTool/Public/FAQs.aspx",
+      "repository": "https://ftawebprod.fta.dot.gov/ContactUsTool/Public/FAQs.aspx",
       "tags": [
         "transportation",
         "code"
@@ -1411,7 +1411,7 @@
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "homepage": "https://ftanet.ad.dot.gov/OASIS/",
+      "repository": "https://ftanet.ad.dot.gov/OASIS/",
       "tags": [
         "transportation",
         "code"
@@ -1436,7 +1436,7 @@
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "homepage": "https://ftawebprod.fta.dot.gov/OTrak/",
+      "repository": "https://ftawebprod.fta.dot.gov/OTrak/",
       "tags": [
         "transportation",
         "code"
@@ -1461,7 +1461,7 @@
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "homepage": "https://ftawebprod.fta.dot.gov/Otrak_UA",
+      "repository": "https://ftawebprod.fta.dot.gov/Otrak_UA",
       "tags": [
         "transportation",
         "code"
@@ -1486,7 +1486,7 @@
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "homepage": "https://ftawebprod.fta.dot.gov/Otraktraining",
+      "repository": "https://ftawebprod.fta.dot.gov/Otraktraining",
       "tags": [
         "transportation",
         "code"
@@ -1511,7 +1511,7 @@
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "homepage": "http://ftanet.ad.dot.gov/PhoneDirectory",
+      "repository": "http://ftanet.ad.dot.gov/PhoneDirectory",
       "tags": [
         "transportation",
         "code"
@@ -1536,7 +1536,7 @@
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "homepage": "http://ftanet.ad.dot.gov/ProgramGuidance/GuidanceRequestSearch.aspx",
+      "repository": "http://ftanet.ad.dot.gov/ProgramGuidance/GuidanceRequestSearch.aspx",
       "tags": [
         "transportation",
         "code"
@@ -1561,7 +1561,7 @@
       "vcs": "?",
       "status": "Production",
       "license": null,
-      "homepage": "https://www.transit.dot.gov/ccam/",
+      "repository": "https://www.transit.dot.gov/ccam/",
       "tags": [
         "transportation",
         "code"
@@ -1586,7 +1586,7 @@
       "vcs": "?",
       "status": "Production",
       "license": null,
-      "homepage": "https://www.transit.dot.gov/ccam/",
+      "repository": "https://www.transit.dot.gov/ccam/",
       "tags": [
         "transportation",
         "code"
@@ -1611,7 +1611,7 @@
       "vcs": "FHWA SharePoint/Grants.gov",
       "status": "Production",
       "license": null,
-      "homepage": "https://ftawebapps.fta.dot.gov/apps/DGS/",
+      "repository": "https://ftawebapps.fta.dot.gov/apps/DGS/",
       "tags": [
         "transportation",
         "code"
@@ -1636,7 +1636,7 @@
       "vcs": "FHWA SharePoint",
       "status": "Production",
       "license": null,
-      "homepage": "https://ftawebapps.fta.dot.gov/apps/FTA_Conference_Calendar",
+      "repository": "https://ftawebapps.fta.dot.gov/apps/FTA_Conference_Calendar",
       "tags": [
         "transportation",
         "code"
@@ -1661,7 +1661,7 @@
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "homepage": "http://one10.dot.gov/office/fta/Pages/default.aspx",
+      "repository": "http://one10.dot.gov/office/fta/Pages/default.aspx",
       "tags": [
         "transportation",
         "code"
@@ -1686,7 +1686,7 @@
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "homepage": "http://one10.dot.gov/office/fta/Pages/default.aspx",
+      "repository": "http://one10.dot.gov/office/fta/Pages/default.aspx",
       "tags": [
         "transportation",
         "code"
@@ -1711,7 +1711,7 @@
       "vcs": "Appian Cloud",
       "status": "Production",
       "license": null,
-      "homepage": "https://faces.fta.dot.gov/suite/",
+      "repository": "https://faces.fta.dot.gov/suite/",
       "tags": [
         "transportation",
         "code"
@@ -1736,7 +1736,7 @@
       "vcs": "Appian Cloud",
       "status": "Production",
       "license": null,
-      "homepage": "https://faces.fta.dot.gov/suite/",
+      "repository": "https://faces.fta.dot.gov/suite/",
       "tags": [
         "transportation",
         "code"
@@ -1761,7 +1761,7 @@
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "homepage": "https://ftanet.ad.dot.gov/tmtrack/tmtrack.dll?",
+      "repository": "https://ftanet.ad.dot.gov/tmtrack/tmtrack.dll?",
       "tags": [
         "transportation",
         "code"
@@ -1786,7 +1786,7 @@
       "vcs": "Acquia hosted (AWS Cloud)",
       "status": "Production",
       "license": null,
-      "homepage": "https://www.transit.dot.gov/",
+      "repository": "https://www.transit.dot.gov/",
       "tags": [
         "transportation",
         "code"
@@ -1811,7 +1811,7 @@
       "vcs": "FRA TFS",
       "status": "Beta",
       "license": null,
-      "homepage": "http://apps.fra.dot.gov/dataloading/",
+      "repository": "http://apps.fra.dot.gov/dataloading/",
       "tags": [
         "transportation",
         "code"
@@ -1836,7 +1836,7 @@
       "vcs": "FRA TFS",
       "status": "Production",
       "license": null,
-      "homepage": "www.fra.dot.gov/cms.fra.dot.gov",
+      "repository": "www.fra.dot.gov/cms.fra.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -1861,7 +1861,7 @@
       "vcs": "FRA TFS",
       "status": "Production",
       "license": null,
-      "homepage": "www.railroadersleep.org",
+      "repository": "www.railroadersleep.org",
       "tags": [
         "transportation",
         "code"
@@ -1886,7 +1886,7 @@
       "vcs": "FRA TFS",
       "status": "Production",
       "license": null,
-      "homepage": "rsac.fra.dot.gov",
+      "repository": "rsac.fra.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -1911,7 +1911,7 @@
       "vcs": "FRA TFS",
       "status": "Production",
       "license": null,
-      "homepage": "http://www.fra.dot.gov/Page/P0185",
+      "repository": "http://www.fra.dot.gov/Page/P0185",
       "tags": [
         "transportation",
         "code"
@@ -1936,7 +1936,7 @@
       "vcs": "FRA TFS",
       "status": "Production",
       "license": null,
-      "homepage": "http://www.fra.dot.gov/onlinetests/",
+      "repository": "http://www.fra.dot.gov/onlinetests/",
       "tags": [
         "transportation",
         "code"
@@ -1961,7 +1961,7 @@
       "vcs": "FRA TFS",
       "status": "Production",
       "license": null,
-      "homepage": "http://www.fra.dot.gov/training/sat",
+      "repository": "http://www.fra.dot.gov/training/sat",
       "tags": [
         "transportation",
         "code"
@@ -1986,7 +1986,7 @@
       "vcs": "SharePoint",
       "status": "Production",
       "license": null,
-      "homepage": "http://our.dot.gov/office/fra/Pages/default.aspx",
+      "repository": "http://our.dot.gov/office/fra/Pages/default.aspx",
       "tags": [
         "transportation",
         "code"
@@ -2011,7 +2011,7 @@
       "vcs": "OST TFS",
       "status": "Production",
       "license": null,
-      "homepage": "https://ce.dot.gov/bic/fra/viewer.aspx#id=56",
+      "repository": "https://ce.dot.gov/bic/fra/viewer.aspx#id=56",
       "tags": [
         "transportation",
         "code"
@@ -2036,7 +2036,7 @@
       "vcs": "OST TFS",
       "status": "Production",
       "license": null,
-      "homepage": "https://ce.dot.gov/bic/fra/viewer.aspx#id=52",
+      "repository": "https://ce.dot.gov/bic/fra/viewer.aspx#id=52",
       "tags": [
         "transportation",
         "code"
@@ -2061,7 +2061,7 @@
       "vcs": "OST TFS",
       "status": "Production",
       "license": null,
-      "homepage": "https://ce.dot.gov/bic/fra/viewer.aspx#id=53",
+      "repository": "https://ce.dot.gov/bic/fra/viewer.aspx#id=53",
       "tags": [
         "transportation",
         "code"
@@ -2086,7 +2086,7 @@
       "vcs": "OST TFS",
       "status": "Production",
       "license": null,
-      "homepage": "https://ce.dot.gov/bic/fra/viewer.aspx#id=54",
+      "repository": "https://ce.dot.gov/bic/fra/viewer.aspx#id=54",
       "tags": [
         "transportation",
         "code"
@@ -2111,7 +2111,7 @@
       "vcs": "OST TFS",
       "status": "Production",
       "license": null,
-      "homepage": "https://ce.dot.gov/bic/fra/viewer.aspx#id=61",
+      "repository": "https://ce.dot.gov/bic/fra/viewer.aspx#id=61",
       "tags": [
         "transportation",
         "code"
@@ -2136,7 +2136,7 @@
       "vcs": "OST TFS",
       "status": "Production",
       "license": null,
-      "homepage": "https://ce.dot.gov/bic/fra/viewer.aspx#id=64",
+      "repository": "https://ce.dot.gov/bic/fra/viewer.aspx#id=64",
       "tags": [
         "transportation",
         "code"
@@ -2161,7 +2161,7 @@
       "vcs": "FRA TFS",
       "status": "Production",
       "license": null,
-      "homepage": "https://www.fra.dot.gov/Page/P0845",
+      "repository": "https://www.fra.dot.gov/Page/P0845",
       "tags": [
         "transportation",
         "code"
@@ -2186,7 +2186,7 @@
       "vcs": "FRA TFS",
       "status": "Production",
       "license": null,
-      "homepage": "http://apps.fra.dot.gov/app/Hoteling/",
+      "repository": "http://apps.fra.dot.gov/app/Hoteling/",
       "tags": [
         "transportation",
         "code"
@@ -2211,7 +2211,7 @@
       "vcs": "FRA TFS",
       "status": "Production",
       "license": null,
-      "homepage": "https://apps.fra.dot.gov/app/vacancies",
+      "repository": "https://apps.fra.dot.gov/app/vacancies",
       "tags": [
         "transportation",
         "code"
@@ -2236,7 +2236,7 @@
       "vcs": "FRA TFS",
       "status": "Production",
       "license": null,
-      "homepage": "https://apps.fra.dot.gov/app/FAST",
+      "repository": "https://apps.fra.dot.gov/app/FAST",
       "tags": [
         "transportation",
         "code"
@@ -2261,7 +2261,7 @@
       "vcs": "FRA TFS",
       "status": "Production",
       "license": null,
-      "homepage": "http://ce.dot.gov/App/FRA/NTSB",
+      "repository": "http://ce.dot.gov/App/FRA/NTSB",
       "tags": [
         "transportation",
         "code"
@@ -2286,7 +2286,7 @@
       "vcs": "FRA TFS",
       "status": "Production",
       "license": null,
-      "homepage": "http://ce.dot.gov/App/FRA/ATS",
+      "repository": "http://ce.dot.gov/App/FRA/ATS",
       "tags": [
         "transportation",
         "code"
@@ -2311,7 +2311,7 @@
       "vcs": "FRA TFS",
       "status": "Production",
       "license": null,
-      "homepage": "http://apps.fra.dot.gov/app/FRAAAB",
+      "repository": "http://apps.fra.dot.gov/app/FRAAAB",
       "tags": [
         "transportation",
         "code"
@@ -2336,7 +2336,7 @@
       "vcs": "FRA TFS",
       "status": "Production",
       "license": null,
-      "homepage": "http://apps.fra.dot.gov/orgchart",
+      "repository": "http://apps.fra.dot.gov/orgchart",
       "tags": [
         "transportation",
         "code"
@@ -2361,7 +2361,7 @@
       "vcs": "OST TFS",
       "status": "Production",
       "license": null,
-      "homepage": "https://ce.dot.gov/bic/fra/viewer.aspx#id=16",
+      "repository": "https://ce.dot.gov/bic/fra/viewer.aspx#id=16",
       "tags": [
         "transportation",
         "code"
@@ -2386,7 +2386,7 @@
       "vcs": "FRA TFS",
       "status": "Production",
       "license": null,
-      "homepage": "http://www.fra.dot.gov/statelaws",
+      "repository": "http://www.fra.dot.gov/statelaws",
       "tags": [
         "transportation",
         "code"
@@ -2411,7 +2411,7 @@
       "vcs": "FRA TFS",
       "status": "Production",
       "license": null,
-      "homepage": "https://itunes.apple.com/us/app/laws-regs/id868138071?mt=8",
+      "repository": "https://itunes.apple.com/us/app/laws-regs/id868138071?mt=8",
       "tags": [
         "transportation",
         "code"
@@ -2436,7 +2436,7 @@
       "vcs": "FRA TFS",
       "status": "Alpha",
       "license": null,
-      "homepage": "",
+      "repository": "",
       "tags": [
         "transportation",
         "code"
@@ -2461,7 +2461,7 @@
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "repository": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
         "transportation",
         "code"
@@ -2486,7 +2486,7 @@
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "homepage": "http://opsweb.phmsa.dot.gov/downloads/ears_81/",
+      "repository": "http://opsweb.phmsa.dot.gov/downloads/ears_81/",
       "tags": [
         "transportation",
         "code"
@@ -2511,7 +2511,7 @@
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "repository": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
         "transportation",
         "code"
@@ -2536,7 +2536,7 @@
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "repository": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
         "transportation",
         "code"
@@ -2561,7 +2561,7 @@
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "repository": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
         "transportation",
         "code"
@@ -2586,7 +2586,7 @@
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "repository": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
         "transportation",
         "code"
@@ -2611,7 +2611,7 @@
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "repository": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
         "transportation",
         "code"
@@ -2636,7 +2636,7 @@
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "repository": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
         "transportation",
         "code"
@@ -2661,7 +2661,7 @@
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "repository": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
         "transportation",
         "code"
@@ -2686,7 +2686,7 @@
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "repository": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
         "transportation",
         "code"
@@ -2711,7 +2711,7 @@
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "repository": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
         "transportation",
         "code"
@@ -2736,7 +2736,7 @@
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "repository": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
         "transportation",
         "code"
@@ -2761,7 +2761,7 @@
       "vcs": "on-premise",
       "status": "Archival",
       "license": null,
-      "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "repository": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
         "transportation",
         "code"
@@ -2786,7 +2786,7 @@
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "homepage": "SSO  -  https://portal.phmsa.dot.gov/PHMSAPortal2/ or non-SSO  -  http://hmis.phmsa.dot.gov/hmis",
+      "repository": "SSO  -  https://portal.phmsa.dot.gov/PHMSAPortal2/ or non-SSO  -  http://hmis.phmsa.dot.gov/hmis",
       "tags": [
         "transportation",
         "code"
@@ -2811,7 +2811,7 @@
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "homepage": "SSO  -  https://portal.phmsa.dot.gov/PHMSAPortal2/ or non-SSO  -  http://hmis.phmsa.dot.gov/DOT_Approvals",
+      "repository": "SSO  -  https://portal.phmsa.dot.gov/PHMSAPortal2/ or non-SSO  -  http://hmis.phmsa.dot.gov/DOT_Approvals",
       "tags": [
         "transportation",
         "code"
@@ -2836,7 +2836,7 @@
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "repository": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
         "transportation",
         "code"
@@ -2861,7 +2861,7 @@
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "repository": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
         "transportation",
         "code"
@@ -2886,7 +2886,7 @@
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "repository": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
         "transportation",
         "code"
@@ -2911,7 +2911,7 @@
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "repository": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
         "transportation",
         "code"
@@ -2936,7 +2936,7 @@
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "repository": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
         "transportation",
         "code"
@@ -2961,7 +2961,7 @@
       "vcs": "on-premise",
       "status": "Archival",
       "license": null,
-      "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "repository": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
         "transportation",
         "code"
@@ -2986,7 +2986,7 @@
       "vcs": "CDAN TFS",
       "status": "Production",
       "license": null,
-      "homepage": "https://Geolocator.cdan.dot.gov",
+      "repository": "https://Geolocator.cdan.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -3011,7 +3011,7 @@
       "vcs": "CDAN TFS",
       "status": "Production",
       "license": null,
-      "homepage": "https://vin.cdan.dot.gov",
+      "repository": "https://vin.cdan.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -3036,7 +3036,7 @@
       "vcs": "CDAN TFS",
       "status": "Production",
       "license": null,
-      "homepage": "https://parse.cdan.dot.gov",
+      "repository": "https://parse.cdan.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -3061,7 +3061,7 @@
       "vcs": "CDAN TFS",
       "status": "Production",
       "license": null,
-      "homepage": "https://ciss.cdan.dot.gov, ",
+      "repository": "https://ciss.cdan.dot.gov, ",
       "tags": [
         "transportation",
         "code"
@@ -3086,7 +3086,7 @@
       "vcs": "CDAN TFS",
       "status": "Production",
       "license": null,
-      "homepage": "https://toolbox.cdan.dot.gov",
+      "repository": "https://toolbox.cdan.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -3111,7 +3111,7 @@
       "vcs": "CDAN TFS",
       "status": "Production",
       "license": null,
-      "homepage": "https://helpdesk.cdan.dot.gov",
+      "repository": "https://helpdesk.cdan.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -3136,7 +3136,7 @@
       "vcs": "CDAN TFS",
       "status": "Production",
       "license": null,
-      "homepage": "https://upsa.cdan.dot.gov",
+      "repository": "https://upsa.cdan.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -3161,7 +3161,7 @@
       "vcs": "CDAN TFS",
       "status": "Production",
       "license": null,
-      "homepage": "https://vr.cdan.dot.gov",
+      "repository": "https://vr.cdan.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -3186,7 +3186,7 @@
       "vcs": "CDAN TFS",
       "status": "Production",
       "license": null,
-      "homepage": "https://mdecurrent.cdan.dot.gov, https://mdeprev.cdan.dot.gov",
+      "repository": "https://mdecurrent.cdan.dot.gov, https://mdeprev.cdan.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -3211,7 +3211,7 @@
       "vcs": "CDAN TFS",
       "status": "Production",
       "license": null,
-      "homepage": "https://gesintranet.cdan.dot.gov, https://farsintranet.cdan.dot.gov",
+      "repository": "https://gesintranet.cdan.dot.gov, https://farsintranet.cdan.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -3236,7 +3236,7 @@
       "vcs": "CDAN TFS",
       "status": "Production",
       "license": null,
-      "homepage": "https://gesintranet.cdan.dot.gov/query, https://farsintranet.cdan.dot.gov/query/query.aspx",
+      "repository": "https://gesintranet.cdan.dot.gov/query, https://farsintranet.cdan.dot.gov/query/query.aspx",
       "tags": [
         "transportation",
         "code"
@@ -3261,7 +3261,7 @@
       "vcs": "CDAN TFS",
       "status": "Production",
       "license": null,
-      "homepage": "https://sso.cdan.dot.gov",
+      "repository": "https://sso.cdan.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -3286,7 +3286,7 @@
       "vcs": "CDAN TFS",
       "status": "Production",
       "license": null,
-      "homepage": "https://edtadmin.cdan.dot.gov",
+      "repository": "https://edtadmin.cdan.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -3311,7 +3311,7 @@
       "vcs": "CDAN TFS",
       "status": "Production",
       "license": null,
-      "homepage": "https://statecaseviewer.cdan.dot.gov",
+      "repository": "https://statecaseviewer.cdan.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -3336,7 +3336,7 @@
       "vcs": "CDAN TFS",
       "status": "Production",
       "license": null,
-      "homepage": "https://en.cdan.dot.gov",
+      "repository": "https://en.cdan.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -3361,7 +3361,7 @@
       "vcs": "CDAN TFS",
       "status": "Production",
       "license": null,
-      "homepage": "https://reports.cdan.dot.gov",
+      "repository": "https://reports.cdan.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -3386,7 +3386,7 @@
       "vcs": "CDAN TFS",
       "status": "Production",
       "license": null,
-      "homepage": "https://editchecks.cdan.dot.gov",
+      "repository": "https://editchecks.cdan.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -3411,7 +3411,7 @@
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "homepage": "https://irex.nhtsa.gov",
+      "repository": "https://irex.nhtsa.gov",
       "tags": [
         "transportation",
         "code"
@@ -3436,7 +3436,7 @@
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "homepage": "https://naf.nhtsa.gov",
+      "repository": "https://naf.nhtsa.gov",
       "tags": [
         "transportation",
         "code"
@@ -3461,7 +3461,7 @@
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "homepage": "http://data.nhtsa.gov",
+      "repository": "http://data.nhtsa.gov",
       "tags": [
         "transportation",
         "code"
@@ -3486,7 +3486,7 @@
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "homepage": "http://travelontrack.nhtsa.gov",
+      "repository": "http://travelontrack.nhtsa.gov",
       "tags": [
         "transportation",
         "code"
@@ -3511,7 +3511,7 @@
       "vcs": "NHTSA Public Web",
       "status": "Production",
       "license": null,
-      "homepage": "http://www.nhtsa.gov/Research/SISAME-Software-&-Documentation-Downloads",
+      "repository": "http://www.nhtsa.gov/Research/SISAME-Software-&-Documentation-Downloads",
       "tags": [
         "transportation",
         "code"
@@ -3536,7 +3536,7 @@
       "vcs": "on-premise (DOT SFC Data Center)",
       "status": "Production",
       "license": null,
-      "homepage": "https://vpic.nhtsa.dot.gov/",
+      "repository": "https://vpic.nhtsa.dot.gov/",
       "tags": [
         "transportation",
         "code"
@@ -3561,7 +3561,7 @@
       "vcs": "CDAN TFS",
       "status": "Production",
       "license": null,
-      "homepage": "https://www-fars.nhtsa.dot.gov/",
+      "repository": "https://www-fars.nhtsa.dot.gov/",
       "tags": [
         "transportation",
         "code"
@@ -3586,7 +3586,7 @@
       "vcs": "CDAN TFS",
       "status": "Production",
       "license": null,
-      "homepage": "https://forms.cdan.dot.gov/mfs",
+      "repository": "https://forms.cdan.dot.gov/mfs",
       "tags": [
         "transportation",
         "code"
@@ -3611,7 +3611,7 @@
       "vcs": "N/A",
       "status": "Beta",
       "license": null,
-      "homepage": "N/A",
+      "repository": "N/A",
       "tags": [
         "transportation",
         "code"
@@ -3636,7 +3636,7 @@
       "vcs": "TFS, FHWA",
       "status": "Production",
       "license": null,
-      "homepage": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
+      "repository": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
       "tags": [
         "transportation",
         "code"
@@ -3661,7 +3661,7 @@
       "vcs": "TFS, FHWA",
       "status": "Production",
       "license": null,
-      "homepage": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
+      "repository": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
       "tags": [
         "transportation",
         "code"
@@ -3686,7 +3686,7 @@
       "vcs": "TFS, FHWA",
       "status": "Production",
       "license": null,
-      "homepage": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
+      "repository": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
       "tags": [
         "transportation",
         "code"
@@ -3711,7 +3711,7 @@
       "vcs": "TFS, FHWA",
       "status": "Production",
       "license": null,
-      "homepage": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
+      "repository": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
       "tags": [
         "transportation",
         "code"
@@ -3736,7 +3736,7 @@
       "vcs": "TFS, FHWA",
       "status": "Production",
       "license": null,
-      "homepage": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
+      "repository": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
       "tags": [
         "transportation",
         "code"
@@ -3761,7 +3761,7 @@
       "vcs": "TFS, FHWA",
       "status": "Production",
       "license": null,
-      "homepage": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
+      "repository": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
       "tags": [
         "transportation",
         "code"
@@ -3786,7 +3786,7 @@
       "vcs": "TFS, FHWA",
       "status": "Production",
       "license": null,
-      "homepage": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
+      "repository": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
       "tags": [
         "transportation",
         "code"
@@ -3811,7 +3811,7 @@
       "vcs": "TFS, FHWA",
       "status": "Production",
       "license": null,
-      "homepage": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
+      "repository": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
       "tags": [
         "transportation",
         "code"
@@ -3836,7 +3836,7 @@
       "vcs": "TFS, FHWA",
       "status": "Production",
       "license": null,
-      "homepage": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
+      "repository": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
       "tags": [
         "transportation",
         "code"
@@ -3861,7 +3861,7 @@
       "vcs": "TFS, FHWA",
       "status": "Production",
       "license": null,
-      "homepage": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
+      "repository": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
       "tags": [
         "transportation",
         "code"
@@ -3886,7 +3886,7 @@
       "vcs": "TFS, FHWA",
       "status": "Production",
       "license": null,
-      "homepage": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
+      "repository": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
       "tags": [
         "transportation",
         "code"
@@ -3911,7 +3911,7 @@
       "vcs": "N/A",
       "status": "Alpha",
       "license": null,
-      "homepage": "N/A",
+      "repository": "N/A",
       "tags": [
         "transportation",
         "code"
@@ -3936,7 +3936,7 @@
       "vcs": "N/A",
       "status": "Alpha",
       "license": null,
-      "homepage": "N/A",
+      "repository": "N/A",
       "tags": [
         "transportation",
         "code"
@@ -3961,7 +3961,7 @@
       "vcs": "Subversion",
       "status": "Alpha",
       "license": null,
-      "homepage": "TBD",
+      "repository": "TBD",
       "tags": [
         "transportation",
         "code"
@@ -3986,7 +3986,7 @@
       "vcs": "Subversion",
       "status": "Alpha",
       "license": null,
-      "homepage": "TBD",
+      "repository": "TBD",
       "tags": [
         "transportation",
         "code"
@@ -4011,7 +4011,7 @@
       "vcs": "Subversion",
       "status": "Alpha",
       "license": null,
-      "homepage": "N/A not web based",
+      "repository": "N/A not web based",
       "tags": [
         "transportation",
         "code"
@@ -4036,7 +4036,7 @@
       "vcs": "http://aedt.visualstudio.com",
       "status": "Production",
       "license": null,
-      "homepage": "aedt.faa.gov",
+      "repository": "aedt.faa.gov",
       "tags": [
         "transportation",
         "code"
@@ -4061,7 +4061,7 @@
       "vcs": "Available as part of download (password protected)",
       "status": "Production",
       "license": null,
-      "homepage": "https://www.volpe.dot.gov/infrastructure-systems-and-technology/advanced-vehicle-technology/safetyhat-transportation-system",
+      "repository": "https://www.volpe.dot.gov/infrastructure-systems-and-technology/advanced-vehicle-technology/safetyhat-transportation-system",
       "tags": [
         "transportation",
         "code"
@@ -4086,7 +4086,7 @@
       "vcs": "Amazon EC2 is hosted in multiple locations worldwide. These locations are composed of regions and Availability Zones. Each region is a separate geographic area. Each region has multiple, isolated locations known as Availability Zones. ",
       "status": "Production",
       "license": null,
-      "homepage": "https://registermyuas.faa.gov/restricted#/",
+      "repository": "https://registermyuas.faa.gov/restricted#/",
       "tags": [
         "transportation",
         "code"
@@ -4111,7 +4111,7 @@
       "vcs": "General public can download this app from the App Store for iOS or Google Play store",
       "status": "Production",
       "license": null,
-      "homepage": "",
+      "repository": "",
       "tags": [
         "transportation",
         "code"
@@ -4136,7 +4136,7 @@
       "vcs": " https://en.wikipedia.org/wiki/Application_programming_interface",
       "status": "Production",
       "license": null,
-      "homepage": "https://app.swaggerhub.com/api/FAA/APRA/1.1.0",
+      "repository": "https://app.swaggerhub.com/api/FAA/APRA/1.1.0",
       "tags": [
         "transportation",
         "code"
@@ -4161,7 +4161,7 @@
       "vcs": " Hosted in Atlantic City Data Center, Code base is in Bitbucket at the AIT Vendor facility,In process of moving code to AIT Git Repository.",
       "status": "Production",
       "license": null,
-      "homepage": " https://employees.faa.gov/portal/edcs/",
+      "repository": " https://employees.faa.gov/portal/edcs/",
       "tags": [
         "transportation",
         "code"

@@ -4,7 +4,7 @@
   "projects": [
     {
       "name": "NetworKing: Space Communications and Navigation (SCaN) App",
-      "description": "The NetworKing Game is an educational, interactive 3D game in which the player develops a space communication network. As he builds his network infrastructure, client spacecraft are attracted to the network, generating income and allowing the player to build further. As the player expands his robust communication network, fortunate and unfortunate events occur. The game can be downloaded at: http://www.nasa.gov/multimedia/3d_resources/scan.html",
+      "description": "The NetworKing Game is an educational, interactive 3D game in which the player develops a space communication network. As he builds his network infrastructure, client spacecraft are attracted to the network, generating income and allowing the player to build further. As the player expands his robust communication network, fortunate and unfortunate events occur. The game can be downloaded at: www.nasa.gov/multimedia/3d_resources/scan.html",
       "license": "https://software.nasa.gov/faq",
       "governmentWideReuseProject": 1,
       "openSourceProject": 0,
@@ -638,7 +638,7 @@
       },
       "organization": "ARC",
       "identifier": "ARC-14725-1",
-      "repository": "http://ti.arc.nasa.gov/opensource/projects/livingstone2/"
+      "repository": "https://ti.arc.nasa.gov/opensource/projects/livingstone2/"
     },
     {
       "name": "Mission Simulation Toolkit (MST)",
@@ -660,12 +660,12 @@
       },
       "organization": "ARC",
       "identifier": "ARC-14932-1",
-      "repository": "http://ti.arc.nasa.gov/opensource/projects/mission-simulation-toolkit/"
+      "repository": "https://ti.arc.nasa.gov/opensource/projects/mission-simulation-toolkit/"
     },
     {
       "name": "Java Pathfinder (JPF), Version 2.0",
       "description": "Java Pathfinder (JPF) is a model checker for Java. The technology takes a Java program and \"executes\" it in a way that explores all possible executions/interleavings of the threads in the program. This allows JPF to detect certain bugs (e.g., deadlocks and assertion violations) that may be missed during testing. ",
-      "license": "http://opensource.org/licenses/NASA-1.3",
+      "license": "https://opensource.org/licenses/NASA-1.3",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -682,7 +682,7 @@
       },
       "organization": "ARC",
       "identifier": "ARC-15388-1",
-      "repository": "http://babelfish.arc.nasa.gov/trac/jpf/wiki/install/repositories "
+      "repository": "https://babelfish.arc.nasa.gov/trac/jpf/wiki/install/repositories"
     },
     {
       "name": "CAPTools-based Automatic Parallelizer Using OpenMP (CAPO)",
@@ -731,7 +731,7 @@
     {
       "name": "Viewpoints: Software for Visualization of Multivariate Data",
       "description": "A software application that allows the interactive visualization of multivariate data using a variety of standard techniques, Viewpoints can be used with extremely large data sets.",
-      "license": "http://opensource.org/licenses/NASA-1.3",
+      "license": "https://opensource.org/licenses/NASA-1.3",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -770,7 +770,7 @@
       },
       "organization": "ARC",
       "identifier": "ARC-16075-1",
-      "repository": "http://ti.arc.nasa.gov/opensource/projects/libibvpp/"
+      "repository": "https://ti.arc.nasa.gov/opensource/projects/libibvpp/"
     },
     {
       "name": "Mariana: Text Classification System",
@@ -792,7 +792,7 @@
       },
       "organization": "ARC",
       "identifier": "ARC-16070-1",
-      "repository": "http://ti.arc.nasa.gov/opensource/projects/mariana/"
+      "repository": "https://ti.arc.nasa.gov/opensource/projects/mariana/"
     },
     {
       "name": "Geometry Manipulation Protocol (GMP) for ComputationalFluid Dynamics (CFD) Applications, Version 1.0",
@@ -814,7 +814,7 @@
       },
       "organization": "ARC",
       "identifier": "ARC-15193-1",
-      "repository": "http://ti.arc.nasa.gov/opensource/projects/gmp/"
+      "repository": "https://ti.arc.nasa.gov/opensource/projects/gmp/"
     },
     {
       "name": "SequenceMiner-Anomaly Detection in Large Sets of High-Dimensional Symbol Sequences",
@@ -836,7 +836,7 @@
       },
       "organization": "ARC",
       "identifier": "ARC-16053-1",
-      "repository": "\r\n\r\nhttps://ti.arc.nasa.gov/opensource/projects/sequenceminer/\r\n\r\nupdate on code.nasa.gov"
+      "repository": "https://ti.arc.nasa.gov/opensource/projects/sequenceminer/"
     },
     {
       "name": "Constellation PRACA Extension of the Bugzilla Application",
@@ -907,7 +907,7 @@
     {
       "name": "Parallel Dantzig-Wolfe Decomposition",
       "description": "This implementation of the Dantzig-Wolfe decomposition is built upon the GNU Linear Programming Kit. The technology provides a command-line tool for solving properly decomposed linear programs.",
-      "license": "GNU General Public License version 3.0 (GPLv3)",
+      "license": "https://sourceforge.net/p/dwsolver/code/ci/master/tree/",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -924,7 +924,7 @@
       },
       "organization": "ARC",
       "identifier": "ARC-16432-1",
-      "repository": "http://sourceforge.net/projects/dwsolver"
+      "repository": "https://sourceforge.net/projects/dwsolver"
     },
     {
       "name": "Multiple Kernel Anomaly Detection (MKAD) Algorithm",
@@ -946,7 +946,7 @@
       },
       "organization": "ARC",
       "identifier": "ARC-16462-1",
-      "repository": "http://ti.arc.nasa.gov/opensource/projects/mkad/"
+      "repository": "https://ti.arc.nasa.gov/opensource/projects/mkad/"
     },
     {
       "name": "AutoBayes: Automatic Design of Customized Analysis Algorithms and Programs",
@@ -995,7 +995,7 @@
     {
       "name": "Visual Environment for Remote Virtual Exploration (VERVE), Version 2",
       "description": "VERVE is a 3D visualization system that provides situational awareness, science analysis tools, and data understanding capabilities for robotics researchers and exploration science operations. The technology is highly modular and extensible and includes a 3D scene-graph database, an interactive 3D viewer, and associated graphical user interfaces to OSGI plugin-based applications.",
-      "license": "http://opensource.org/licenses/NASA-1.3",
+      "license": "https://opensource.org/licenses/NASA-1.3",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -1017,7 +1017,7 @@
     {
       "name": "Network-Form Game Software Library (libnfg)",
       "description": "The libnfg software library describes how humans interact with their environment and with other humans. The tool provides a Monte Carlo analysis of user-specified \"network-form games,\" which are flexible modeling methodologies that combine Bayes nets and game theory to model complex systems.",
-      "license": "http://opensource.org/licenses/NASA-1.3",
+      "license": "https://opensource.org/licenses/NASA-1.3",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -1034,12 +1034,12 @@
       },
       "organization": "ARC",
       "identifier": "ARC-16764-1",
-      "repository": "http://ritchielee.net/software/libnfg-snap-1-0/"
+      "repository": "https://ritchielee.net/software/libnfg-snap-1-0/"
     },
     {
       "name": "Kepler Community Data Analysis Tools (PyKE)",
       "description": "The Kepler archive contains time-series data calibrated and reduced from detector pixels. The pipelined reduction includes the removal of time-series trends systematic to a spacecraft and its environment.",
-      "license": "sra (open source)",
+      "license": "https://keplerscience.arc.nasa.gov/software.html#pyke",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -1056,12 +1056,12 @@
       },
       "organization": "ARC",
       "identifier": "ARC-16805-1",
-      "repository": "https://github.com/KeplerGO/PyKE/ "
+      "repository": "https://github.com/KeplerGO/PyKE/"
     },
     {
       "name": "Neo-Geography Toolkit (NGT), Version 2",
       "description": "NGT is a collection of automated processing tools that can transform raw geospatial raster data from remote sensing instruments into useful cartographic products, including visible image base maps and topographic models. ",
-      "license": "http://www.apache.org/licenses/LICENSE-2.0",
+      "license": "https://www.apache.org/licenses/LICENSE-2.0",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -1083,7 +1083,7 @@
     {
       "name": "NASA Vision Workbench (VW), Version 3",
       "description": "Vision Workbench (VW) is a modular, extensible computer vision framework that supports a range of tasks, including automated science and engineering analysis, large satellite image processing, and 2D/3D environment reconstruction. The framework provides a rapid C++ development environment as well as a flexible, multi-platform system to deploy computer vision applications. The module interface allows new capabilities to be rapidly integrated, and the dataflow architecture allows image-processing pipelines to be quickly developed and reconfigured. ",
-      "license": "http://opensource.org/licenses/NASA-1.3",
+      "license": "https://opensource.org/licenses/NASA-1.3",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -1122,12 +1122,12 @@
       },
       "organization": "ARC",
       "identifier": "ARC-16789-1",
-      "repository": "http://ti.arc.nasa.gov/opensource/ikos/"
+      "repository": "https://ti.arc.nasa.gov/opensource/ikos/"
     },
     {
       "name": "Robot Application Programming Interface Delegate (RAPID), Version 2",
       "description": "RAPID is a software reference implementation framework for remote operations. The technology promotes interoperability between robot software modules and includes a standard programming interface and data distribution middleware. RAPID facilitates integration of experimental robot software modules created by a distributed development team; improves the compatibility and reusability of robotic functions; and offers speed prototype robot development in a wide range of configurations and environments.",
-      "license": "http://opensource.org/licenses/NASA-1.3",
+      "license": "https://opensource.org/licenses/NASA-1.3",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -1144,7 +1144,7 @@
       },
       "organization": "ARC",
       "identifier": "ARC-16368-1A",
-      "repository": "http://rapid.nasa.gov/index.html"
+      "repository": "https://rapid.nasa.gov/index.html"
     },
     {
       "name": "Physics-Model-Based Wiring Fault Detection Toolbox for MATLAB",
@@ -1166,7 +1166,7 @@
       },
       "organization": "ARC",
       "identifier": "ARC-17046-1",
-      "repository": "http://ti.arc.nasa.gov/opensource/project/wiring/"
+      "repository": "https://ti.arc.nasa.gov/opensource/project/wiring/"
     },
     {
       "name": "Computational Fluid Dynamics (CFD) Utility Software Library",
@@ -1188,7 +1188,7 @@
       },
       "organization": "ARC",
       "identifier": "ARC-14467-1A",
-      "repository": "http://sourceforge.net/projects/cfdutilities/files/latest/download"
+      "repository": "https://sourceforge.net/projects/cfdutilities/files/latest/download"
     },
     {
       "name": "Open Scheduling and Planning Interface for Exploration (OpenSPIFe)",
@@ -1215,7 +1215,7 @@
     {
       "name": "Multi-threaded Copy Program (MCP) aka Mutil",
       "description": "MCP is a high-performance file copy utility that achieves performance gains through parallelization. Multiple files and parts of single files are processed in parallel using multiple threads on multiple processors. The program employs the OpenMP and MPI programming models. ",
-      "license": "http://www.gnu.org/licenses/",
+      "license": "https://www.gnu.org/licenses/",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -1254,12 +1254,12 @@
       },
       "organization": "ARC",
       "identifier": "ARC-16119-1B",
-      "repository": "http://sourceforge.net/projects/darcxdb3"
+      "repository": "https://sourceforge.net/projects/darcxdb3"
     },
     {
       "name": "PathDroid",
       "description": "PathDroid is an extension of the open sourced Java Pathfinder (JPF) verification framework that supports checking binary Android applications for absence of software defects such as unhandled exceptions and deadlocks.\r\nPathDroid let users run such applications on development platforms, without the need for hardware-in-the-loop or availability of sources.\r\n",
-      "license": "http://www.apache.org/licenses/LICENSE-2.0",
+      "license": "https://www.apache.org/licenses/LICENSE-2.0",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -1276,7 +1276,7 @@
       },
       "organization": "ARC",
       "identifier": "ARC-17293-1",
-      "repository": "http://ti.arc.nasa.gov/opensource/projects/pathdroid/"
+      "repository": "https://ti.arc.nasa.gov/opensource/projects/pathdroid/"
     },
     {
       "name": "BALFIT - A Multivariate Regression Analysis Tool",
@@ -1342,7 +1342,7 @@
       },
       "organization": "ARC",
       "identifier": "ARC-16864-1",
-      "repository": "http://ti.arc.nasa.gov/opensource/projects/block-gp/"
+      "repository": "https://ti.arc.nasa.gov/opensource/projects/block-gp/"
     },
     {
       "name": "IND 2.1-Creation and Manipulation of Decision Trees from Data",
@@ -1364,7 +1364,7 @@
       },
       "organization": "ARC",
       "identifier": "ARC-14529-1",
-      "repository": "http://ti.arc.nasa.gov/opensource/projects/ind/"
+      "repository": "https://ti.arc.nasa.gov/opensource/projects/ind/"
     },
     {
       "name": "Discontinuous-Galerkin Spectral-Element Solver (eddy)",
@@ -1391,7 +1391,7 @@
     {
       "name": "Java Pathfinder (JPF) core system",
       "description": "Java Pathfinder core system (jpf-core), is a model checker for Java bytecode. The technology takes a binary Java program and executes it in a user configurable way to detect defects such as deadlocks and unhandled exceptions, providing significantly higher confidence in correct program behavior than conventional testing.",
-      "license": "http://javapathfinder.sourceforge.net/NOSA-1.3-JPF.txt",
+      "license": "https://javapathfinder.sourceforge.net/NOSA-1.3-JPF.txt",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -1413,7 +1413,7 @@
     {
       "name": "JPF-NAS, an extension of Java Pathfinder that provides support for model checking distributed systems",
       "description": "JPF-NAS is developed to provide support for model checking distributed applications.   It relies on the multiprocess support included in Java Pathfinder (JPF) which provides basic functionality to verify the bytecode of distributed applications. JPF-NAS is implemented as a JPF extension which models interprocess communication mechanisms. It uses a form of partial order reduction to explore all possible executions of a distributed Java application. Moreover, JPF-NAS provides a functionality to check the given distributed application under test against possible network failures which can occur at the operating system or the hardware layer.",
-      "license": "http://babelfish.arc.nasa.gov/hg/jpf/jpf-nas/file/46d377d1a6f2/LICENSE-2.0.txt",
+      "license": "https://babelfish.arc.nasa.gov/hg/jpf/jpf-nas/file/46d377d1a6f2/LICENSE-2.0.txt",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -1430,12 +1430,12 @@
       },
       "organization": "ARC",
       "identifier": "ARC-17301-1",
-      "repository": "http://babelfish.arc.nasa.gov/hg/jpf/jpf-nas"
+      "repository": "https://babelfish.arc.nasa.gov/hg/jpf/jpf-nas"
     },
     {
       "name": "MFSim - Multi-fidelity Simulation",
       "description": "MFS (Multi-Fidelity Simulator) is a pluggable framework for creating an air traffic flow simulator at multiple levels of fidelity. The framework is designed to allow low-fidelity simulations of the entire US Airspace to be completed very quickly (on the order of seconds). The framework allows higher-fidelity plugins to be added to allow higher-fidelity simulations to occur in certain regions of the airspace concurrently with the low-fidelity simulation of the full airspace.",
-      "license": "http://www.apache.org/licenses/LICENSE-2.0",
+      "license": "https://www.apache.org/licenses/LICENSE-2.0",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -1452,7 +1452,7 @@
       },
       "organization": "ARC",
       "identifier": "ARC-17449-1",
-      "repository": "http://ti.arc.nasa.gov/opensource/projects/mfsim/"
+      "repository": "https://ti.arc.nasa.gov/opensource/projects/mfsim/"
     },
     {
       "name": "Multivariate Time Series Search Capability to Identify Complex Patterns in Large Datasets",
@@ -1716,12 +1716,12 @@
       },
       "organization": "ARC",
       "identifier": "ARC-16295-1A",
-      "repository": "https://github.com/nasa/QuIP "
+      "repository": "https://github.com/nasa/QuIP"
     },
     {
       "name": "Extendable Uniform Remote Operations Planning Architecture (EUROPA) 2.1",
       "description": "EUROPA is a general-purpose, reusable, artificial intelligence software system. The tool generates plans for performing complex activities in parallel. Functionality includes the capability of verifying that a plan satisfies all constraints. ",
-      "license": "http://opensource.org/licenses/NASA-1.3",
+      "license": "https://opensource.org/licenses/NASA-1.3",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -1848,7 +1848,7 @@
       },
       "organization": "ARC",
       "identifier": "ARC-15468-1",
-      "repository": "http://ti.arc.nasa.gov/opensource/projects/pour/"
+      "repository": "https://ti.arc.nasa.gov/opensource/projects/pour/"
     },
     {
       "name": "Swim: A Software Information Metacatalog for the Grid",
@@ -1936,7 +1936,7 @@
       },
       "organization": "ARC",
       "identifier": "ARC-16445-1",
-      "repository": "http://save-ha.sourceforge.net/"
+      "repository": "https://save-ha.sourceforge.net/"
     },
     {
       "name": "Savors: A Scalable Aural-Visual Environment for Security Event Monitoring, Analysis, And Response",
@@ -1958,7 +1958,7 @@
       },
       "organization": "ARC",
       "identifier": "ARC-16186-1",
-      "repository": "http://sourceforge.net/projects/savors"
+      "repository": "https://sourceforge.net/projects/savors"
     },
     {
       "name": "Control Allocation Technique to Recover from Pilot Induced Oscillations (CAPIO) through the estimation and minimization of phase lag introduced to the system due to control surface rate saturation",
@@ -2024,7 +2024,7 @@
       },
       "organization": "ARC",
       "identifier": "ARC-15103-1",
-      "repository": "http://ti.arc.nasa.gov/opensource/projects/javagenes/"
+      "repository": "https://ti.arc.nasa.gov/opensource/projects/javagenes/"
     },
     {
       "name": "JavaGenes Genetic Graphs",
@@ -2046,7 +2046,7 @@
       },
       "organization": "ARC",
       "identifier": "ARC-14293-1",
-      "repository": "http://ti.arc.nasa.gov/opensource/projects/javagenes/"
+      "repository": "https://ti.arc.nasa.gov/opensource/projects/javagenes/"
     },
     {
       "name": "GeoCam, Version 2",
@@ -2926,12 +2926,12 @@
       },
       "organization": "GRC",
       "identifier": "LEW-19165-1",
-      "repository": "https://github.com/nasa/T-MATS "
+      "repository": "https://github.com/nasa/T-MATS"
     },
     {
       "name": "Tool for Turbine Engine Closed-loop Transient Analysis (TTECTrA)",
       "description": "Tool for Turbine Engine Closed-loop Transient Analysis (TTECTrA)\r\n\r\nThe Tool for Turbine Engine Closed-loop Transient Analysis (TTECTrA) is a tool, developed in the Mathworks(R) Matlab/Simulink enviornment, intended to extend systems analysis by providing an estimate of the transient performance/capability of a conceptual engine design.  The TTECTrA tool is capable of designing a basic turbofan engine controller, with transient protection, based on the user's engine model and constraints.  TTECTrA is built in the Mathworks Matlab/Simulink environment and relies on the Matlab Control Systems Toolbox to provide additional functionality and streamline the control design process.",
-      "license": "http://opensource.org/licenses/NASA-1.3",
+      "license": "https://opensource.org/licenses/NASA-1.3",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -2948,7 +2948,7 @@
       },
       "organization": "GRC",
       "identifier": "LEW-19177-1",
-      "repository": "https://github.com/nasa/TTECTrA "
+      "repository": "https://github.com/nasa/TTECTrA"
     },
     {
       "name": "ACD Aerodynamic Design of Multistage Axial-Flow Compressors",
@@ -4620,7 +4620,7 @@
       },
       "organization": "GRC",
       "identifier": "LEW-18550-1",
-      "repository": "https://github.com/nasa/OpenMDAO-Framework "
+      "repository": "https://github.com/nasa/OpenMDAO-Framework"
     },
     {
       "name": "IPv6 Python Extension Module",
@@ -4669,7 +4669,7 @@
     {
       "name": "CCGEOM",
       "description": "CCGEOM is a Fortran computer code developed to facilitate the rapid generation of the flow passage and blading for various turbomachinery components.",
-      "license": "https://software.nasa.gov/faq",
+      "license": "https://github.com/kmader/ccgeom/blob/master/README.md",
       "governmentWideReuseProject": 1,
       "openSourceProject": 0,
       "tags": [
@@ -4686,7 +4686,7 @@
       },
       "organization": "GRC",
       "identifier": "LEW-17450-1A",
-      "repository": "https://github.com/kmader/ccgeom\r\nhttps://software.nasa.gov/software/LEW-17450-1A"
+      "repository": "https://github.com/kmader/ccgeom"
     },
     {
       "name": "TURBO-AE: An Aeroelastic And Multi-stage Aerodynamic Analysis Code Based On Unsteady Three-dimensional Navier-Stokes Equations",
@@ -4796,7 +4796,7 @@
       },
       "organization": "GRC",
       "identifier": "LEW-19288-1",
-      "repository": "https://github.com/JustinSGray/pyCycle "
+      "repository": "https://github.com/JustinSGray/pyCycle"
     },
     {
       "name": "NASA Lewis Steady-State Heat Pipe Code",
@@ -4889,7 +4889,7 @@
     {
       "name": "Java Astrodynamics Toolkit (JAT)",
       "description": "The Java Astrodynamics Toolkit (JAT) is a collection of Java components that aid flight dynamics engineers in performing space mission design; trajectory optimization; and spacecraft navigation, attitude-determination, and control systems analysis. Current capabilities include orbit propagation, orbit determination, maneuver planning, spacecraft attitude simulation, and 3D orbit and attitude visualization.",
-      "license": "http://opensource.gsfc.nasa.gov/projects/JAT/JAT_NOSA.doc",
+      "license": "https://opensource.gsfc.nasa.gov/projects/JAT/JAT_NOSA.doc",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -4906,7 +4906,7 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-14912-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/JAT/index.php"
+      "repository": "https://opensource.gsfc.nasa.gov/projects/JAT/index.php"
     },
     {
       "name": "Consultative Committee for Space Data Systems (CCSDS) File Delivery Protocol (CFDP) Software Library, Version 3.1",
@@ -4955,6 +4955,7 @@
     {
       "name": "Hierarchical Data Format Earth Observing System (HDF-EOS)Data Extractor (HEEX)",
       "description": "The Hierarchical Data Format Earth Observing System (HDF-EOS) Data Extractor (HEEX) is a tool that enables users to extract HDF-EOS data to binary or ASCII data formats in HTML or XML index. The software can be used for both HDF-EOS2 and HDF-EOS5, and it automatically recognizes the two formats.",
+      "license": "https://opensource.gsfc.nasa.gov/documents/NASA_Open_Source_Agreement_1.3.txt",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -4971,12 +4972,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-15009-1",
-      "repository": "ftp://ftp.hdfgroup.org/HDF/HDF_Current/"
+      "repository": "https://software.nasa.gov/software/GSC-15011-1"
     },
     {
       "name": "Data Service Provider Cost Estimation Tool and Comparables Database",
       "description": "The Data Service Provider Cost Estimation Tool (CET) and Comparables Database (CDB) package provides NASA's Earth Science Enterprise (ESE) the ability to make lifecycle cost estimates for the implementation and operation of the data service providers that are required to support its science and applications programs. The Data Service Provider CET and CDB package employs a cost-estimation-by-analogy approach. For more information on the package, please visit: http://opensource.gsfc.nasa.gov/projects/CET/index.php",
-      "license": "http://opensource.gsfc.nasa.gov/projects/CET/CET_NOSA.doc",
+      "license": "https://opensource.gsfc.nasa.gov/projects/CET/CET_NOSA.doc",
       "governmentWideReuseProject": 1,
       "openSourceProject": 0,
       "tags": [
@@ -4993,7 +4994,7 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-14905-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/CET/index.php"
+      "repository": "https://opensource.gsfc.nasa.gov/projects/CET/index.php"
     },
     {
       "name": "Parallel Adaptive Mesh Refinement Library (PARAMESH)",
@@ -5015,12 +5016,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-14626-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/paramesh/index.php"
+      "repository": "https://opensource.gsfc.nasa.gov/projects/paramesh/index.php"
     },
     {
       "name": "Advanced Land Image Assessment System (ALIAS)",
       "description": "ALIAS supports radiometric and geometric multispectral image processing for the Advanced Land Imager (ALI) instrument onboard NASA's Earth Observing-1 (EO-1) satellite. The radiometric subsystem characterizes and (where possible) corrects: detector operability; gain; bias; coherent, impulse, and random noise; signal-to-noise ratios; saturation levels; striping and banding; and the stability of detector performance. Geometric processing functions support sensor alignment calibrations; sensor chip assembly alignments; modulation transfer function characterizations; image-to-image characterizations; and geodetic accuracy assessments. Please visit the following URL for more information: http://opensource.gsfc.nasa.gov/projects/Alias/index.php",
-      "license": "http://opensource.gsfc.nasa.gov/projects/Alias/ALIAS_NOSA.doc",
+      "license": "https://opensource.gsfc.nasa.gov/projects/Alias/ALIAS_NOSA.doc",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -5037,7 +5038,7 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-15185-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/Alias/"
+      "repository": "https://opensource.gsfc.nasa.gov/projects/Alias/"
     },
     {
       "name": "Tool For Interactive Plotting, Sonification, and 3D Orbit Display (TIPSOD)",
@@ -5059,12 +5060,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-14732-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/tipsod/index.php"
+      "repository": "https://opensource.gsfc.nasa.gov/projects/tipsod/index.php"
     },
     {
       "name": "MATLAB-Zemax Toolkit",
       "description": "The MATLAB-Zemax toolkit is a set of MATLAB scripts and functions that enable rapid transfer of optical system and performance data from Zemax optical software into the MATLAB environment. Typical applications include: extracting prescription data into MATLAB to confirm consistency of various delivered models; perturbing the models and performing various analyses in support of integrated modeling activities; and enabling a MATLAB-driven optical model for integrated system-level modeling of wavefront sensing and control. The toolkit can be downloaded at: http://opensource.gsfc.nasa.gov/projects/Matlab_Zemax/index.php",
-      "license": "http://opensource.gsfc.nasa.gov/projects/Matlab_Zemax/matlab_zemax.doc",
+      "license": "https://opensource.gsfc.nasa.gov/projects/Matlab_Zemax/matlab_zemax.doc",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -5081,12 +5082,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-15151-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/Matlab_Zemax/index.php"
+      "repository": "https://opensource.gsfc.nasa.gov/projects/Matlab_Zemax/index.php"
     },
     {
       "name": "Coordinated Data Analysis Workshop Web (CDAWeb)",
       "description": "The CDAWeb software and the CDAWeb service built on this software have been developed and continue to be enhanced and maintained by the Space Physics Data Facility. The technology has supported NASA/Office of Space Science programs dealing with the connections between the Sun and the Earth. CDAWeb software is essentially a set of Interactive Data Language (IDL) scripts that act as the engine of the system. Please visit: http://cdaweb.gsfc.nasa.gov/cdaweb/istp_public/",
-      "license": "http://opensource.org/licenses/NASA-1.3",
+      "license": "https://opensource.org/licenses/NASA-1.3",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -5103,12 +5104,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-14292-1",
-      "repository": "http://cdaweb.gsfc.nasa.gov/about.html"
+      "repository": "https://cdaweb.gsfc.nasa.gov/about.html"
     },
     {
       "name": "Space Physics Data Facility (SPDF) Web Services",
       "description": "These Web services provide a distributed programming interface to a portion of the Space Physics Data Facility (SPDF) software. The technology conforms to all applicable Web service specifications of the World Wide Web Consortium. Please visit the following URL for additional information: http://spdf.gsfc.nasa.gov/",
-      "license": "http://opensource.org/licenses/NASA-1.3",
+      "license": "https://opensource.org/licenses/NASA-1.3",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -5147,7 +5148,7 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-14726-1",
-      "repository": "http://api-test.echo.nasa.gov/legacy-services/apis.html"
+      "repository": "https://api-test.echo.nasa.gov/legacy-services/apis.html"
     },
     {
       "name": "General EQFlux",
@@ -5169,7 +5170,7 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-14791-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/eqflux/index.php"
+      "repository": "https://opensource.gsfc.nasa.gov/projects/eqflux/index.php"
     },
     {
       "name": "Earth Observing System (EOS) Data Gateway (EDG)",
@@ -5191,7 +5192,7 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-14938-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/edg/index.php"
+      "repository": "https://opensource.gsfc.nasa.gov/projects/edg/index.php"
     },
     {
       "name": "Operating System Abstraction Layer (OSAL)",
@@ -5213,12 +5214,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-14921-1",
-      "repository": "https://github.com/nasa/osal "
+      "repository": "https://github.com/nasa/osal"
     },
     {
       "name": "Architecture Adaptive Computing Environment (ACE)",
       "description": "The Architecture Adaptive Computing Environment (ACE) is a parallel computing language, compiler, and runtime library. The purpose of ACE is to allow a programmer to more easily write parallel programs for a wide variety of parallel computer architectures.",
-      "license": "http://opensource.gsfc.nasa.gov/projects/ace/NOSA-ACE.doc",
+      "license": "https://opensource.gsfc.nasa.gov/projects/ace/NOSA-ACE.doc",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -5235,7 +5236,7 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-14911-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/ace/"
+      "repository": "https://opensource.gsfc.nasa.gov/projects/ace/"
     },
     {
       "name": "Simple, Scalable, Script-Based Science Processor for Missions (S4PM)",
@@ -5257,12 +5258,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-14841-1",
-      "repository": "http://sourceforge.net/projects/s4pm "
+      "repository": "https://sourceforge.net/projects/s4pm"
     },
     {
       "name": "XML to HDF-EOS Convertor",
       "description": "This software program takes an XML representation of the contents of a Hierarchical Data Format-Earth Observing System (HDF-EOS) file and recreates the file from that description. Please visit the following URL for additional information: http://opensource.gsfc.nasa.gov/projects/xml2he/index.php",
-      "license": "http://opensource.gsfc.nasa.gov/projects/xml2he/xml2he_NOSA_1.3O.rtf",
+      "license": "https://opensource.gsfc.nasa.gov/projects/xml2he/xml2he_NOSA_1.3O.rtf",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -5279,12 +5280,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-15017-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/xml2he/index.php"
+      "repository": "https://opensource.gsfc.nasa.gov/projects/xml2he/index.php"
     },
     {
       "name": "HDFView Plugin",
       "description": "This Java-language software plug-in to HDFView provides an interface for two versions of hierarchical data formats (HDF 4 and HDF 5). Please visit the following URL for more information: http://opensource.gsfc.nasa.gov/projects/HDF/index.php",
-      "license": "http://opensource.gsfc.nasa.gov/projects/HDF/HDFNOSA.rtf",
+      "license": "https://opensource.gsfc.nasa.gov/projects/HDF/HDFNOSA.rtf",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -5301,12 +5302,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-14948-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/HDF/index.php"
+      "repository": "https://opensource.gsfc.nasa.gov/projects/HDF/index.php"
     },
     {
       "name": "Interoperable Remote Component (IRC)",
       "description": "IRC provides robust interactive and distributed control/monitoring of remote instruments. The IRC architecture combines the processing capabilities of Java with the power of XML to express hierarchical data in a human-readable, platform-independent format. For additional information, please visit: http://opensource.gsfc.nasa.gov/projects/IRC/index.php",
-      "license": "http://opensource.gsfc.nasa.gov/projects/IRC/NASA%20Open%20Source%20Agreement%20IRC.txt",
+      "license": "https://opensource.gsfc.nasa.gov/projects/IRC/NASA%20Open%20Source%20Agreement%20IRC.txt",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -5323,12 +5324,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-14308-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/IRC/index.php"
+      "repository": "https://opensource.gsfc.nasa.gov/projects/IRC/index.php"
     },
     {
       "name": "NASA.rb (formerly fUnit)",
       "description": "NASA.rb (formerly fUnit) is a collection of Fortran modules that provide a framework for automating the construction, execution, and reporting of unit tests for Fortran software applications. Support is provided for several aspects of unit testing that are peculiar to scientific technical computing including distributing jparallel applications and parameterized behavior.",
-      "license": "http://opensource.gsfc.nasa.gov/projects/FUNIT/SUA%20Open%20Source%20FUNIT%20GSC15137.doc",
+      "license": "https://opensource.gsfc.nasa.gov/projects/FUNIT/SUA%20Open%20Source%20FUNIT%20GSC15137.doc",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -5345,12 +5346,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-15137-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/FUNIT/"
+      "repository": "https://opensource.gsfc.nasa.gov/projects/FUNIT/"
     },
     {
       "name": "NASA Forecast Model Web (NFMW) Map Service",
       "description": "NFMW reads weather forecast models outputs; subsets the data to the region of interest; interpolates the data to the specified size; generates a visualization of the data using colors, contour lines, or arrows; and sends the visualization to the client. More information can be found at: http://opensource.gsfc.nasa.gov/projects/NFMW/",
-      "license": "http://opensource.gsfc.nasa.gov/projects/NFMW/nfmw_nosa.doc",
+      "license": "https://opensource.gsfc.nasa.gov/projects/NFMW/nfmw_nosa.doc",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -5367,12 +5368,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-15276-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/NFMW/index.php"
+      "repository": "https://opensource.gsfc.nasa.gov/projects/NFMW/index.php"
     },
     {
       "name": "MATLAB-Oslo Toolkit",
       "description": "This toolkit is a set of MATLAB scripts and functions that enable rapid transfer of optical system and performance data from Oslo optical software into the MATLAB environment. Typical applications include: extracting prescription data into MATLAB to confirm consistency of various delivered models; perturbing the models and performing various analyses in support of integrated modeling activities; and enabling a MATLAB-driven optical model for integrated system-level modeling of wavefront sensing and control. The toolkit can be downloaded at http://opensource.gsfc.nasa.gov/projects/Matlab/index.php",
-      "license": "http://opensource.gsfc.nasa.gov/projects/Matlab/Matlab_nosa.doc",
+      "license": "https://opensource.gsfc.nasa.gov/projects/Matlab/Matlab_nosa.doc",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -5389,12 +5390,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-15138-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/Matlab/index.php"
+      "repository": "https://opensource.gsfc.nasa.gov/projects/Matlab/index.php"
     },
     {
       "name": "HDF-EOS2 and HDF-EOS5 Compatibility Library",
       "description": "This software library provides uniform access to HDF-EOS2 and HDF-EOS5 files through one set of application program interface (API) calls. Without the library, programs would have to be written twice to cover both HDF-EOS2 and HDF-EOS5 files. http://opensource.gsfc.nasa.gov/projects/HDF-EOS2/index.php",
-      "license": "http://opensource.gsfc.nasa.gov/projects/HDF-EOS2/HDF-EOS2_NOSA_1.3.rtf",
+      "license": "https://opensource.gsfc.nasa.gov/projects/HDF-EOS2/HDF-EOS2_NOSA_1.3.rtf",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -5411,12 +5412,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-15008-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/HDF-EOS2/index.php"
+      "repository": "https://opensource.gsfc.nasa.gov/projects/HDF-EOS2/index.php"
     },
     {
       "name": "User-Friendly Metadata",
       "description": "The User-friendly Metadata (UFM) tool functions as a filter. The tool accepts an ODL file as input and generates a simple HTML representation of the ODL as output. Command-line options provide a user with the ability to modify the program's functionality. Please visit: http://opensource.gsfc.nasa.gov/projects/UFM/index.php",
-      "license": "http://opensource.gsfc.nasa.gov/projects/UFM/User%20Friendly%20Metadata",
+      "license": "https://opensource.gsfc.nasa.gov/projects/UFM/User%20Friendly%20Metadata",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -5433,12 +5434,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-15014-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/UFM/index.php"
+      "repository": "https://opensource.gsfc.nasa.gov/projects/UFM/index.php"
     },
     {
       "name": "HDF-EOS5 Validator",
       "description": "This software allows generators of HDF-EOS data products to encode product requirement specifications in XML. The tool will then mechanically check product files against those requirements. For more information, please visit: http://opensource.gsfc.nasa.gov/projects/Validator/index.php",
-      "license": "http://opensource.gsfc.nasa.gov/projects/Validator/validator_NOSA_1.3.rtf",
+      "license": "https://opensource.gsfc.nasa.gov/projects/Validator/validator_NOSA_1.3.rtf",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -5455,12 +5456,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-15015-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/Validator/index.php"
+      "repository": "https://opensource.gsfc.nasa.gov/projects/Validator/index.php"
     },
     {
       "name": "Hierarchical Data Format Earth Observing System (HDF-EOS) XML Document-Type Definitions and Schemas",
       "description": "An XML standard has been developed for the HDF-EOS5 file format using document-type definitions and schemas. Users can transform HDF5 files into XML format and vice versa. For more information, please visit: http://opensource.gsfc.nasa.gov/projects/XML_DTD_Schemas/index.php",
-      "license": "http://opensource.gsfc.nasa.gov/projects/XML_DTD_Schemas/XML_DTD_Schemas_NOSA_1.3.rtf",
+      "license": "https://opensource.gsfc.nasa.gov/projects/XML_DTD_Schemas/XML_DTD_Schemas_NOSA_1.3.rtf",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -5477,12 +5478,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-15016-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/XML_DTD_Schemas/index.php"
+      "repository": "https://opensource.gsfc.nasa.gov/projects/XML_DTD_Schemas/index.php"
     },
     {
       "name": "Hierarchical Data Format Earth Observing System (HDF-EOS) Metadata Updater (HEMU)",
       "description": "HDF-EOS Metadata Updater (HEMU) enables users to modify metadata inside an HDF-EOS file (either HDF-EOS2 and HDF-EOS5). The tool can be used to extract metadata from a dataset to a text file that can then be modified with any text editor; replace metadata with text from an external file; or update metadata with text from an external file. For more information, please visit: http://opensource.gsfc.nasa.gov/projects/hemu/index.php",
-      "license": "http://opensource.gsfc.nasa.gov/projects/hemu/hemu_NOSA_1.3.rtf",
+      "license": "https://opensource.gsfc.nasa.gov/projects/hemu/hemu_NOSA_1.3.rtf",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -5499,12 +5500,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-15010-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/hemu/index.php"
+      "repository": "https://opensource.gsfc.nasa.gov/projects/hemu/index.php"
     },
     {
       "name": "Hierarchical Data Format Earth Observing System (HDF-EOS) Web Server",
       "description": "This shell script chains together existing data usability group tools to: extract ODL metadata from an HDF-EOS file; convert the metadata to XML; reformat the XML into HTML; publish the HTML and the original HDF-EOS file to a Web server and an OPeNDAP server; and reformat the XML and submit it to the Earth Observing System Clearing House (ECHO). For more information, please visit: http://opensource.gsfc.nasa.gov/projects/heserve/index.php",
-      "license": "http://opensource.gsfc.nasa.gov/projects/heserve/heserve_NOSA_1.3.rtf",
+      "license": "https://opensource.gsfc.nasa.gov/projects/heserve/heserve_NOSA_1.3.rtf",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -5521,12 +5522,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-15011-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/heserve/index.php"
+      "repository": "https://opensource.gsfc.nasa.gov/projects/heserve/index.php"
     },
     {
       "name": "Metadata Check",
       "description": "Metadata Check is a command-line tool to check Earth Observing System (EOS) metadata with a metadata descriptor. For more information, please visit: http://opensource.gsfc.nasa.gov/projects/metacheck/index.php",
-      "license": "http://opensource.gsfc.nasa.gov/projects/metacheck/metacheck_NOSA_1.3.rtf",
+      "license": "https://opensource.gsfc.nasa.gov/projects/metacheck/metacheck_NOSA_1.3.rtf",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -5543,12 +5544,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-15012-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/metacheck/index.php"
+      "repository": "https://opensource.gsfc.nasa.gov/projects/metacheck/index.php"
     },
     {
       "name": "ODL-to-XML Converter",
       "description": "This command-line Java-based utility converts ODL Hierarchical Data Format-Earth Observing Satellite (HDFEOS) metadata file to an HDFEOS XML file. The tool utilizes an all-Java ODL library that includes a syntax and grammar parser. The software can be downloaded at: http://opensource.gsfc.nasa.gov/projects/ODL_XML/index.php",
-      "license": "http://opensource.gsfc.nasa.gov/projects/ODL_XML/ODL_2_XML_NOSA_1.3.rtf",
+      "license": "https://opensource.gsfc.nasa.gov/projects/ODL_XML/ODL_2_XML_NOSA_1.3.rtf",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -5565,12 +5566,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-15013-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/ODL_XML/index.php"
+      "repository": "https://opensource.gsfc.nasa.gov/projects/ODL_XML/index.php"
     },
     {
       "name": "XML to ODL Convertor",
       "description": "This program translates an XML representation of Hierarchical Data Format-Earth Observing System (HDF-EOS) ODL metadata back to the ODL format. Please visit the following URL for additional information: http://opensource.gsfc.nasa.gov/projects/xml2odl/index.php",
-      "license": "http://opensource.gsfc.nasa.gov/projects/xml2odl/xml2odl_NOSA_1.3.rtf",
+      "license": "https://opensource.gsfc.nasa.gov/projects/xml2odl/xml2odl_NOSA_1.3.rtf",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -5587,12 +5588,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-15006-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/xml2odl/index.php"
+      "repository": "https://opensource.gsfc.nasa.gov/projects/xml2odl/index.php"
     },
     {
       "name": "Hierarchical Data Format-Earth Observing System (HDF-EOS) to NetCDF Converter",
       "description": "This C-language computer program accepts a set of scientific data/metadata from an Earth Observing System (EOS) satellite and converts it from the format in which it was created and delivered into another format for data processing and exchange on Earth. The converter can be downloaded at: http://www.hdfeos.org/software/convert_hdfeos5.php",
-      "license": "http://opensource.gsfc.nasa.gov/projects/hdfeos2netcdf/hdfeos2netcdf_NOSA_1.3.rtf",
+      "license": "https://opensource.gsfc.nasa.gov/projects/hdfeos2netcdf/hdfeos2netcdf_NOSA_1.3.rtf",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -5609,12 +5610,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-15007-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/hdfeos2netcdf/index.php"
+      "repository": "https://opensource.gsfc.nasa.gov/projects/hdfeos2netcdf/index.php"
     },
     {
       "name": "MATLAB-Code V Toolkit",
       "description": "This toolkit is a set of MATLAB scripts and functions that enable rapid transfer of optical system and performance data from Code V optical software into the MATLAB environment. Typical applications include: extracting prescription data into MATLAB to confirm consistency of various delivered models; perturbing the models and performing various analyses such as ray tracing or generation of point-spread functions in support of integrated modeling activities; and enabling a MATLAB-driven optical model for integrated system-level modeling of wavefront sensing and control. The toolkit can be downloaded at: http://opensource.gsfc.nasa.gov/projects/Matlab_Code_V/index.php",
-      "license": "http://opensource.gsfc.nasa.gov/projects/Matlab_Code_V/matlab_code_v_nosa.doc",
+      "license": "https://opensource.gsfc.nasa.gov/projects/Matlab_Code_V/matlab_code_v_nosa.doc",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -5631,12 +5632,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-15140-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/Matlab_Code_V/index.php"
+      "repository": "https://opensource.gsfc.nasa.gov/projects/Matlab_Code_V/index.php"
     },
     {
       "name": "Requirements Tracing On Target (RETRO)",
       "description": "RETRO offers methods and techniques for information retrieval (IR), including vector retrieval and probabilistic retrieval. The technology can be downloaded at: http://opensource.gsfc.nasa.gov/projects/RETRO/index.php",
-      "license": "http://opensource.gsfc.nasa.gov/projects/RETRO/RETRO_NOSA.doc",
+      "license": "https://opensource.gsfc.nasa.gov/projects/RETRO/RETRO_NOSA.doc",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -5653,12 +5654,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-14976-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/RETRO/index.php"
+      "repository": "https://opensource.gsfc.nasa.gov/projects/RETRO/index.php"
     },
     {
       "name": "GEOS-5 Global Change Master Modeling Software",
       "description": "GEOS-5 is a next-generation circulation model. Developed using the Earth System Modeling Framework (ESMF) for its internal architecture, the technology represents a new paradigm for systems development. Please visit the following URL for more information: http://opensource.gsfc.nasa.gov/projects/GEOS-5/",
-      "license": "http://opensource.gsfc.nasa.gov/projects/GEOS-5/GEOS-5_NOSA.doc",
+      "license": "https://opensource.gsfc.nasa.gov/projects/GEOS-5/GEOS-5_NOSA.doc",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -5675,12 +5676,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-15354-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/GEOS-5/"
+      "repository": "https://opensource.gsfc.nasa.gov/projects/GEOS-5/"
     },
     {
       "name": "Global Precipitation Space and Ground Radar Comparison Software",
       "description": "Designed to support a prototype validation network for the Global Precipitation Measurement (GPM) spaceflight mission, this space and ground radar comparison software collects data from the Precipitation Radar instrument flying on the Tropical Rainfall Measuring Mission (TRMM) spacecraft. Please visit the following URL for additional information: http://opensource.gsfc.nasa.gov/projects/GPM/",
-      "license": "http://opensource.gsfc.nasa.gov/projects/GPM/GPM_NOSA.doc",
+      "license": "https://opensource.gsfc.nasa.gov/projects/GPM/GPM_NOSA.doc",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -5697,7 +5698,7 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-15469-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/GPM/index.php"
+      "repository": "https://opensource.gsfc.nasa.gov/projects/GPM/index.php"
     },
     {
       "name": "General Mission Analysis Tool (GMAT), Version 2011A",
@@ -5719,7 +5720,7 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-16228-1",
-      "repository": "http://sourceforge.net/projects/gmat/files/GMAT/GMAT-R2011a"
+      "repository": "https://sourceforge.net/projects/gmat/files/GMAT/GMAT-R2011a"
     },
     {
       "name": "Range Safety Algorithm Software Module for an Autonomous Flight Safety System",
@@ -5873,12 +5874,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-16232-1",
-      "repository": "http://sourceforge.net/projects/coreflightexec/files/cFE-6.1.1/"
+      "repository": "https://sourceforge.net/projects/coreflightexec/files/cFE-6.1.1/"
     },
     {
       "name": "EEPROM File System",
       "description": "The EEPROM File System (EEFS) is a simple, reliable file system for embedded systems. The primary purpose of the EEFS is to provide a file system abstraction for EEPROM or PROM memories that is simple, efficient, and can be proven to be reliable.  The EEFS can be used on embedded systems where a file system is needed to access data from EEPROM, PROM, or RAM memory, but otherwise might not have the resources to deploy a full file system such as the MSDOS file system. The EEPROM file system can also be used in systems where the ability to dump, patch, and diagnose files is required. ",
-      "license": "http://opensource.org/licenses/NASA-1.3",
+      "license": "https://opensource.org/licenses/NASA-1.3",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -5900,7 +5901,7 @@
     {
       "name": "Assert-Based Unit Test Tools",
       "description": "The ut-assert unit test tools provide a unit test framework and a collection of utilities that are designed to facilitate unit testing. These tools implement an assertion-based testing philosophy that requires the developer to explicitly write verification statements that assert whether a condition is true or false.  This approach is much different than the Flight Software Branch's historical approach to unit testing that creates a log file that requires developer analysis in order to determine whether a test passed or failed. In order to use the tools a developer populates the framework with their unit tests and links with the ut-asssert library to create an executable. ",
-      "license": "http://opensource.gsfc.nasa.gov/projects/ut-assert/ut-assert_nosa.pdf",
+      "license": "https://opensource.gsfc.nasa.gov/projects/ut-assert/ut-assert_nosa.pdf",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -5917,7 +5918,7 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-16689-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/ut-assert/index.php"
+      "repository": "https://opensource.gsfc.nasa.gov/projects/ut-assert/index.php"
     },
     {
       "name": "Worldview satellite imagery browsing and downloading tool",
@@ -5939,12 +5940,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-17111-1",
-      "repository": "https://github.com/nasa-gibs/worldview \r\nhttps://github.com/nasa-gibs/worldview-options-eosdis "
+      "repository": "https://github.com/nasa-gibs/worldview"
     },
     {
       "name": "MYSTRAN",
       "description": "MYSTRAN is a Finite Element Analysis (FEA) processor.   MYSTRAN takes NASTRAN data decks as input and processes them to generate results files based on the inputs.   NASTRAN was originally developed at NASA GSFC in the 1960's.   The input files describe the mechanical nature of some piece of hardware and the loads or driving inputs that cause some reaction.   With this input MYSTRAN computes the responses to the driving inputs.  The theory and research for FEA analysis has been developed over decades.",
-      "license": "http://opensource.gsfc.nasa.gov/projects/mystran/mystran_nosa.pdf",
+      "license": "https://opensource.gsfc.nasa.gov/projects/mystran/mystran_nosa.pdf",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -5961,12 +5962,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-17173-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/mystran/index.php"
+      "repository": "https://opensource.gsfc.nasa.gov/projects/mystran/index.php"
     },
     {
       "name": "Open GeoSocial Consumer Application",
       "description": "This software interface provides a social and collaborative environment to allow end-users such as GEOSS users to discover, visualize, and access Earth Science information on demand from simple browsers and allow them to share the resulting products with their friends and/or Community of Interest through social networks.",
-      "license": "http://opensource.gsfc.nasa.gov/projects/gsca/apache_license.pdf",
+      "license": "https://opensource.gsfc.nasa.gov/projects/gsca/apache_license.pdf",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -5983,12 +5984,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-17162-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/gsca/index.php"
+      "repository": "https://opensource.gsfc.nasa.gov/projects/gsca/index.php"
     },
     {
       "name": "Vectorization of Global Flood Monitoring System using Topojson",
       "description": "This capability allows for the generation of vectors by reading the Global Flood Monitoring data, processing the data and generating aTopoJSON encoded file for visualization on the web.",
-      "license": "http://opensource.gsfc.nasa.gov/projects/vgfms/apache_license.pdf",
+      "license": "https://opensource.gsfc.nasa.gov/projects/vgfms/apache_license.pdf",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -6005,7 +6006,7 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-17169-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/vgfms/index.php"
+      "repository": "https://opensource.gsfc.nasa.gov/projects/vgfms/index.php"
     },
     {
       "name": "Core Flight System (CFS) Software Bus Network (SBN) Application, Version 1.0",
@@ -6027,7 +6028,7 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-16917-1",
-      "repository": "http://sourceforge.net/projects/cfs-sbn"
+      "repository": "https://sourceforge.net/projects/cfs-sbn"
     },
     {
       "name": "Core Flight System (CFS) CFDP Version 2",
@@ -6049,7 +6050,7 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-16125-1",
-      "repository": "http://sourceforge.net/projects/cfs-cfdp"
+      "repository": "https://sourceforge.net/projects/cfs-cfdp"
     },
     {
       "name": "Core Flight System (CFS) Checksum Application Version 2",
@@ -6071,7 +6072,7 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-15996-1",
-      "repository": "http://sourceforge.net/projects/cfs-cs"
+      "repository": "https://sourceforge.net/projects/cfs-cs"
     },
     {
       "name": "Core Flight System (CFS) Data Storage (DS) Application Version 2",
@@ -6093,7 +6094,7 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-16126-1",
-      "repository": "http://sourceforge.net/projects/cfs-ds"
+      "repository": "https://sourceforge.net/projects/cfs-ds"
     },
     {
       "name": "Core Flight System (CFS) File Manager (FM) Application Version 2",
@@ -6115,7 +6116,7 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-16007-1",
-      "repository": "http://sourceforge.net/projects/cfs-fm"
+      "repository": "https://sourceforge.net/projects/cfs-fm"
     },
     {
       "name": "Core Flight System (CFS) Housekeeping (HK) Application Version 2",
@@ -6137,7 +6138,7 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-16127-1",
-      "repository": "http://sourceforge.net/projects/cfs-hk"
+      "repository": "https://sourceforge.net/projects/cfs-hk"
     },
     {
       "name": "Core Flight System (CFS) Health and Safety Application Version 2",
@@ -6159,7 +6160,7 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-16151-1",
-      "repository": "http://sourceforge.net/projects/cfs-hs"
+      "repository": "https://sourceforge.net/projects/cfs-hs"
     },
     {
       "name": "Core Flight System (CFS) Limit Checker (LC) Application Version 2",
@@ -6181,7 +6182,7 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-16010-1",
-      "repository": "http://sourceforge.net/projects/cfs-lc"
+      "repository": "https://sourceforge.net/projects/cfs-lc"
     },
     {
       "name": "Core Flight System (CFS) Memory Dwell Application Version 2",
@@ -6203,12 +6204,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-16012-1",
-      "repository": "http://sourceforge.net/projects/cfs-md"
+      "repository": "https://sourceforge.net/projects/cfs-md"
     },
     {
       "name": "Core Flight System (CFS) Memory Manager Application Version 2",
       "description": "The Memory Manager application processes commands, generally from the ground, in order to dump the contents of a memory location, dump the contents of a range of memory locations, load a memory location with specified data, load a range of memory with specified data, or fill an area of memory with the specified fill pattern. Operations can be performed on non-volatile, volatile, and memory mapped I/O.",
-      "license": "http://opensource.org/licenses/NASA-1.3",
+      "license": "https://opensource.org/licenses/NASA-1.3",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -6247,7 +6248,7 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-16009-1",
-      "repository": "http://sourceforge.net/projects/cfs-sc"
+      "repository": "https://sourceforge.net/projects/cfs-sc"
     },
     {
       "name": "Core Flight System (CFS) Scheduler Application Version 2",
@@ -6269,12 +6270,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-16123-1",
-      "repository": "http://sourceforge.net/projects/cfs-sch"
+      "repository": "https://sourceforge.net/projects/cfs-sch"
     },
     {
       "name": "Evolutionary Mission Trajectory Generator (EMTG)",
       "description": "EMTG is a global trajectory optimization tool intended for interplanetary mission design. The technology automatically searches for the optimal sequence of planetary flybys and propulsive maneuvers for maximizing payload delivery at a destination. Designed for minimal user oversight, EMTG requires only start location, destination, allowable launch-date range, allowable flight time, and minimal spacecraft hardware information.",
-      "license": "http://opensource.gsfc.nasa.gov/projects/emtg/EMTG_NOSA.pdf",
+      "license": "https://opensource.gsfc.nasa.gov/projects/emtg/EMTG_NOSA.pdf",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -6291,12 +6292,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-16824-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/emtg/index.php"
+      "repository": "https://opensource.gsfc.nasa.gov/projects/emtg/index.php"
     },
     {
       "name": "Goddard Satellite Data Simulation Unit",
       "description": "The Goddard Satellite Data Simulation Unit (SDSU) is a comprehensive unified system of multi-sensor satellite instrumental simulators. Skill of weather forecasting models can be evaluated in terms of satellite-observed multi-sensor radiance levels. Alternatively, the remote sensing community can more readily utilize atmospheric model simulations to develop and test their retrieval algorithms for application of Earth science.",
-      "license": "http://opensource.gsfc.nasa.gov/projects/G-SDSU/G-SDSU_NOSA.pdf",
+      "license": "https://opensource.gsfc.nasa.gov/projects/G-SDSU/G-SDSU_NOSA.pdf",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -6313,12 +6314,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-15874-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/G-SDSU/"
+      "repository": "https://opensource.gsfc.nasa.gov/projects/G-SDSU/"
     },
     {
       "name": "Integrated Lunar Information Architecture for Decision Support (ILIADS), Version 3.0",
       "description": "ILIADS 3.0 provides the data management capabilities to access CxP-vetted lunar data sets from the LMMP-provided Data Portal and the LMMP-provided OnMoon lunar data product server. (LMMP stands for Lunar Mapping and Modeling Project.) It also provides specific quantitative analysis functions to meet the stated LMMP Level 3 functional and performance requirements specifications that were approved by the CxP.",
-      "license": "http://opensource.gsfc.nasa.gov/projects/ILIADS/GSC-16210_NOSA.pdf",
+      "license": "https://opensource.gsfc.nasa.gov/projects/ILIADS/GSC-16210_NOSA.pdf",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -6335,12 +6336,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-16210-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/ILIADS/index.php"
+      "repository": "https://opensource.gsfc.nasa.gov/projects/ILIADS/index.php"
     },
     {
       "name": "Obs4MIPS",
       "description": "This technology is a front end to the Climate Model Output Rewriter (CMOR2) software package. The technology converts a variety of standard data formats (e.g., netcdf3, netcdf4, Grads control files, and MATLAB data files) to allow publication on the Earth System Grid Federation (ESGF) data node.",
-      "license": "http://opensource.gsfc.nasa.gov/projects/obs4mips/obs4MIPS_NOSA.pdf",
+      "license": "https://opensource.gsfc.nasa.gov/projects/obs4mips/obs4MIPS_NOSA.pdf",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -6357,12 +6358,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-16848-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/obs4mips/index.php"
+      "repository": "https://opensource.gsfc.nasa.gov/projects/obs4mips/index.php"
     },
     {
       "name": "Orbit-Determination Toolbox",
       "description": "Based on MATLAB and Java, the flexible Orbit-Determination Toolbox is intended primarily for the advanced mission analysis that might be performed in the concept exploration, proposal, and early design phases. Visit the following URL for more information: http://opensource.gsfc.nasa.gov/projects/ODTBX/",
-      "license": "http://opensource.gsfc.nasa.gov/projects/ODTBX/ODTBX_NOSA.pdf",
+      "license": "https://opensource.gsfc.nasa.gov/projects/ODTBX/ODTBX_NOSA.pdf",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -6379,12 +6380,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-15728-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/ODTBX "
+      "repository": "https://opensource.gsfc.nasa.gov/projects/ODTBX"
     },
     {
       "name": "Ground and Space Radar Volume Matching and Comparison Software",
       "description": "This software enables easy comparison of ground- and space-based radar observations for validation purposes. It can be accessed at: http://opensource.gsfc.nasa.gov/projects/GSRadar/",
-      "license": "http://opensource.gsfc.nasa.gov/projects/GSRadar/GS_Radar_NOSA.pdf",
+      "license": "https://opensource.gsfc.nasa.gov/projects/GSRadar/GS_Radar_NOSA.pdf",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -6401,12 +6402,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-15738-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/GSRadar/"
+      "repository": "https://opensource.gsfc.nasa.gov/projects/GSRadar/"
     },
     {
       "name": "Core Hierarchical Segmentation (HSEG) Software Package",
       "description": "This version of HSEG is not subject to patent restrictions. Please visit the following URL for additional information: http://opensource.gsfc.nasa.gov/projects/HSEG/",
-      "license": "http://opensource.gsfc.nasa.gov/projects/HSEG/HSEG_NOSA.pdf",
+      "license": "https://opensource.gsfc.nasa.gov/projects/HSEG/HSEG_NOSA.pdf",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -6423,7 +6424,7 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-15855-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/HSEG/"
+      "repository": "https://opensource.gsfc.nasa.gov/projects/HSEG/"
     },
     {
       "name": "Visual System for Browsing, Analysis, and Retrieval of Data (ViSBARD)",
@@ -6445,12 +6446,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-15744-1",
-      "repository": "http://sourceforge.net/projects/visbard/"
+      "repository": "https://sourceforge.net/projects/visbard/"
     },
     {
       "name": "Lossless Hyper-/Multi-Spectral Data Compression Software",
       "description": "This software performs lossless hyper-spectral and multi-spectral data compression. It can be downloaded at: http://opensource.gsfc.nasa.gov/projects/LHD/",
-      "license": "http://opensource.gsfc.nasa.gov/projects/LHD/LHD_NOSA.pdf",
+      "license": "https://opensource.gsfc.nasa.gov/projects/LHD/LHD_NOSA.pdf",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -6467,7 +6468,7 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-15992-1",
-      "repository": "http://opensource.gsfc.nasa.gov/projects/LHD/"
+      "repository": "https://opensource.gsfc.nasa.gov/projects/LHD/"
     },
     {
       "name": "Simple, Scalable, Script-based Science Processing Archive (S4PA)",
@@ -6489,7 +6490,7 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-15877-1",
-      "repository": "http://disc.sci.gsfc.nasa.gov/additional/techlab/s4pa"
+      "repository": "https://disc.sci.gsfc.nasa.gov/additional/techlab/s4pa"
     },
     {
       "name": "SpaceWire 2014",
@@ -6621,12 +6622,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-16720-1",
-      "repository": "http://disc.sci.gsfc.nasa.gov/additional/techlab/s4pa "
+      "repository": "https://disc.sci.gsfc.nasa.gov/additional/techlab/s4pa"
     },
     {
       "name": "Landslide Hazard Assessment for Situational Awareness (LHASA)",
       "description": "This framework integrates a regional landslide susceptibility map and satellite-based rainfall estimates into a binary decision tree model, considering both daily and antecedent rainfall. Using a regionally distributed, percentile-based threshold approach, the model outputs a pixel-by-pixel nowcast in near real-time at a resolution of 30 arcseconds to identify areas of moderate and high landslide hazard. ",
-      "license": "http://www.apache.org/licenses/LICENSE-2.0",
+      "license": "https://www.apache.org/licenses/LICENSE-2.0",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -6643,12 +6644,12 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-17452-1",
-      "repository": "https://github.com/vightel/ojo-processing "
+      "repository": "https://github.com/vightel/ojo-processing"
     },
     {
       "name": "Earthdata Search Web Application",
       "description": "Earthdata Search is a web application enabling users to quickly and intuitively discover, search, visualize, and access Earth Science data in a highly visual manner.  It interfaces with and demonstrates current state-of-the-art services provided by NASA EOSDIS such as the Common Metadata Repository (CMR) for sub-second search results, the Global Imagery Browse Services (GIBS) for fast tiled imagery visualizations of data, and OPeNDAP for data access, transformation, and subsetting.",
-      "license": "http://opensource.org/licenses/NASA-1.3",
+      "license": "https://opensource.org/licenses/NASA-1.3",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -8645,7 +8646,7 @@
       },
       "organization": "GSFC",
       "identifier": "GSC-17177-1",
-      "repository": "http://sourceforge.net/projects/gmat/files/GMAT/GMAT-R2012a"
+      "repository": "https://sourceforge.net/projects/gmat/files/GMAT/GMAT-R2012a"
     },
     {
       "name": "Remote Memory Access Protocol Target Node",
@@ -8958,7 +8959,7 @@
     {
       "name": "Automated Planning and Scheduling Environment (ASPEN)",
       "description": "ASPEN automates space mission planning and other tasks that involve the reasoning of time, states, resources, and actions.",
-      "license": "http://download.jpl.nasa.gov/",
+      "license": "https://download.jpl.nasa.gov/",
       "governmentWideReuseProject": 1,
       "openSourceProject": 0,
       "tags": [
@@ -8975,7 +8976,7 @@
       },
       "organization": "JPL",
       "identifier": "NPO-41986-1",
-      "repository": "http://aspen.jpl.nasa.gov/"
+      "repository": "https://aspen.jpl.nasa.gov/"
     },
     {
       "name": "PixelLearn",
@@ -9200,7 +9201,7 @@
     {
       "name": "Global Assimilative Ionosphere Model (GAIM)",
       "description": "GAIM is used to estimate the three-dimensional electron density distribution of the Earth's ionosphere as a function of time. To achieve high accuracy for users, the software accepts a wide variety of ionospheric measurements as input and produces output either in real time or in post-processing. The software can also generate predictions of the electron density structure for several hours or days into the future.",
-      "license": "http://opensource.org/licenses/NASA-1.3",
+      "license": "https://opensource.org/licenses/NASA-1.3",
       "governmentWideReuseProject": 1,
       "openSourceProject": 0,
       "tags": [
@@ -9217,7 +9218,7 @@
       },
       "organization": "JPL",
       "identifier": "NPO-40584-1",
-      "repository": "http://iono.jpl.nasa.gov/gaim/intro.html"
+      "repository": "https://iono.jpl.nasa.gov/gaim/intro.html"
     },
     {
       "name": "Delay and Disruption Tolerant Networking Licklider Transmission Protocol (LTP) MACHETE model",
@@ -12324,7 +12325,7 @@
     {
       "name": "The OCO-2 Level 2 Retrieval Algorithm",
       "description": "The primary purpose of the Level 2 retrieval software is to derive estimates of the column averaged atmospheric CO2 dry air mole fraction, XCO2, and other Level 2 data products from the spectra returned by the OCO-2 mission. Where XCO2 is defined as the ratio of the column abundances of CO2 and the column abundance of dry air.",
-      "license": "http://opensource.org/licenses/NASA-1.3",
+      "license": "https://opensource.org/licenses/NASA-1.3",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -12363,7 +12364,7 @@
       },
       "organization": "JPL",
       "identifier": "NPO-49845-1",
-      "repository": "https://github.com/nasa/VICAR "
+      "repository": "https://github.com/nasa/VICAR"
     },
     {
       "name": "TIE 0.4 - The Imagery Exchange for the NASA Global Imagery Browse Services (GIBS) Project",
@@ -15443,7 +15444,7 @@
       },
       "organization": "JSC",
       "identifier": "MSC-25665-1",
-      "repository": "https://github.com/nasa/Trick "
+      "repository": "https://github.com/nasa/Trick"
     },
     {
       "name": "MBJEOD: An Integrated Multibody and Orbital Dynamics Simulation Module",
@@ -16455,7 +16456,7 @@
       },
       "organization": "LaRC",
       "identifier": "LAR-17878-1",
-      "repository": "http://shemesh.larc.nasa.gov/people/cam/ACCoRD/"
+      "repository": "https://shemesh.larc.nasa.gov/people/cam/ACCoRD/"
     },
     {
       "name": "Conflict Prevention Bands",
@@ -16477,7 +16478,7 @@
       },
       "organization": "LaRC",
       "identifier": "LAR-17874-1",
-      "repository": "http://shemesh.larc.nasa.gov/fm/fm-atm-codes.html"
+      "repository": "https://shemesh.larc.nasa.gov/fm/fm-atm-codes.html"
     },
     {
       "name": "Strategic Conflict Resolution (Stratway)",
@@ -16675,7 +16676,7 @@
       },
       "organization": "LaRC",
       "identifier": "LAR-17491-1",
-      "repository": "https://github.com/nasa/OpenVSP "
+      "repository": "https://github.com/nasa/OpenVSP"
     },
     {
       "name": "Fortran Unit Testing Framework (fUnit v1.0)",
@@ -16719,7 +16720,7 @@
       },
       "organization": "LaRC",
       "identifier": "LAR-17264-1",
-      "repository": "http://ti.arc.nasa.gov/opensource/projects/robus-2/"
+      "repository": "https://ti.arc.nasa.gov/opensource/projects/robus-2/"
     },
     {
       "name": "Tolerance Domain Specific Language",
@@ -16763,7 +16764,7 @@
       },
       "organization": "LaRC",
       "identifier": "LAR-17460-1",
-      "repository": "https://github.com/nasa/DAVEtools "
+      "repository": "https://github.com/nasa/DAVEtools"
     },
     {
       "name": "Java Program to Promote an Open-Source E Standard for Mass Properties Engineering",
@@ -16785,7 +16786,7 @@
       },
       "organization": "LaRC",
       "identifier": "LAR-17635-1",
-      "repository": "http://ti.arc.nasa.gov/opensource/projects/e-standards-mass-properties-engineering/"
+      "repository": "https://ti.arc.nasa.gov/opensource/projects/e-standards-mass-properties-engineering/"
     },
     {
       "name": "CertWare Safety Case Workbench Software",
@@ -16834,7 +16835,7 @@
     {
       "name": "FilePlottingTools",
       "description": "This Excel plugin written in VB.net allows rapid post-processing of thermal analysis data from text files or from SINDA-formatted SAV files. The software can be adapted to other data formats as well.",
-      "license": "http://opensource.org/licenses/NASA-1.3",
+      "license": "https://opensource.org/licenses/NASA-1.3",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -16878,7 +16879,7 @@
     {
       "name": "Windows Semi-Markov Range Evaluator (WinSURE)",
       "description": "This package is used by aerospace flight software developers to predict the reliability of flight-critical computer processes.",
-      "license": "http://opensource.org/licenses/NASA-1.3",
+      "license": "https://opensource.org/licenses/NASA-1.3",
       "governmentWideReuseProject": 1,
       "openSourceProject": 1,
       "tags": [
@@ -16895,7 +16896,7 @@
       },
       "organization": "LaRC",
       "identifier": "LAR-16059-1",
-      "repository": "https://github.com/nasa/WinSURE "
+      "repository": "https://github.com/nasa/WinSURE"
     },
     {
       "name": "GTM_Polysim-Nonlinear GTM Aircraft Polynomial Simulation in MATLAB, Version 2.0",
@@ -17005,7 +17006,7 @@
       },
       "organization": "LaRC",
       "identifier": "LAR-16060-1",
-      "repository": "https://github.com/nasa/WinASSIST "
+      "repository": "https://github.com/nasa/WinASSIST"
     },
     {
       "name": "Multi-Attribute Task Battery (MATB-II)",
@@ -17071,7 +17072,7 @@
       },
       "organization": "LaRC",
       "identifier": "LAR-18720-1",
-      "repository": "https://software.nasa.gov/software/LAR-18720-1\r\nhttps://github.com/nasa/ScIFENedsc"
+      "repository": "https://software.nasa.gov/software/LAR-18720-1"
     },
     {
       "name": "Data Transfer Between Dissimilar Meshes (DTBDM, 2.0)",
@@ -17467,7 +17468,7 @@
       },
       "organization": "LaRC",
       "identifier": "LAR-18798-1",
-      "repository": "https://github.com/nasa/polycarp "
+      "repository": "https://github.com/nasa/polycarp"
     },
     {
       "name": "Timeline Builder Assistant (TBA)",
@@ -17885,7 +17886,7 @@
       },
       "organization": "LaRC",
       "identifier": "LAR-18232-1",
-      "repository": "http://shemesh.larc.nasa.gov/PVSClass2012/pvsclass2012/lectures-printer/hypatheon.pdf"
+      "repository": "https://shemesh.larc.nasa.gov/PVSClass2012/pvsclass2012/lectures-printer/hypatheon.pdf"
     },
     {
       "name": "Modified Snowmelt Runoff Model For Forecasting Water Availability in Chile",
@@ -18061,7 +18062,7 @@
       },
       "organization": "LaRC",
       "identifier": "LAR-16804-GS",
-      "repository": " https://github.com/nasa/NASTRAN-95 \r\n https://github.com/nasa/NASTRAN-93"
+      "repository": "https://github.com/nasa/NASTRAN-95"
     },
     {
       "name": "SolFlyte",
@@ -18149,7 +18150,7 @@
       },
       "organization": "LaRC",
       "identifier": "LAR-18975-1",
-      "repository": "https://github.com/nasa/icarous "
+      "repository": "https://github.com/nasa/icarous"
     },
     {
       "name": "Shape Parameterization Algorithm (MASSOUD)",
@@ -18193,7 +18194,7 @@
       },
       "organization": "LaRC",
       "identifier": "LAR-18464-1",
-      "repository": "https://github.com/nasa/wellclear "
+      "repository": "https://github.com/nasa/wellclear"
     },
     {
       "name": "FUN3D Version 13",
@@ -18347,7 +18348,7 @@
       },
       "organization": "MSFC",
       "identifier": "MFS-33082-1",
-      "repository": "http://sourceforge.net/projects/tascnasa/ "
+      "repository": "https://sourceforge.net/projects/tascnasa/"
     },
     {
       "name": "Managed Automation Environment for Simulation, Test, and Real-time Operations (MAESTRO) Software Pre-release",
@@ -18941,7 +18942,7 @@
       },
       "organization": "MSFC",
       "identifier": "MFS-33236-1",
-      "repository": "https://github.com/nasa/MMM-Py "
+      "repository": "https://github.com/nasa/MMM-Py"
     },
     {
       "name": "Python Advanced Microwave Precipitation Radiometer Data Toolkit (PyAMPR)",
@@ -18963,7 +18964,7 @@
       },
       "organization": "MSFC",
       "identifier": "MFS-33219-1",
-      "repository": "https://github.com/nasa/PyAMPR "
+      "repository": "https://github.com/nasa/PyAMPR"
     },
     {
       "name": "Python Turbulence Detection Algorithm (PyTDA)",
@@ -18985,7 +18986,7 @@
       },
       "organization": "MSFC",
       "identifier": "MFS-33237-1",
-      "repository": "https://github.com/nasa/PyTDA "
+      "repository": "https://github.com/nasa/PyTDA"
     },
     {
       "name": "Python Interface to Dual-Pol Radar Algorithms (DualPol)",
@@ -19007,7 +19008,7 @@
       },
       "organization": "MSFC",
       "identifier": "MFS-33274-1",
-      "repository": "https://github.com/nasa/DualPol "
+      "repository": "https://github.com/nasa/DualPol"
     },
     {
       "name": "Python Polarimetric Radar Beam Blockage Calculation (PyBlock)",
@@ -19029,7 +19030,7 @@
       },
       "organization": "MSFC",
       "identifier": "MFS-33284-1",
-      "repository": "https://github.com/nasa/PyBlock "
+      "repository": "https://github.com/nasa/PyBlock"
     },
     {
       "name": "Boundary-Layer Integral-Matrix Procedure (BLIMP)",
