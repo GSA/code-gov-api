@@ -15,7 +15,8 @@
     "index-terms": "node ./scripts/index/term/index.js | ./node_modules/bunyan/bin/bunyan",
     "create-diffs": "node ./scripts/create_diffs/index.js --max_old_space_size=8192 | ./node_modules/bunyan/bin/bunyan",
     "find-gh-gov-orgs": "node ./scripts/find_gh_gov_orgs/index.js | ./node_modules/bunyan/bin/bunyan",
-    "find-gh-gov-repos": "node ./scripts/find_gh_gov_repos/index.js | ./node_modules/bunyan/bin/bunyan"
+    "find-gh-gov-repos": "node ./scripts/find_gh_gov_repos/index.js | ./node_modules/bunyan/bin/bunyan",
+    "test": "./node_modules/mocha/bin/mocha -R spec test/*"
   },
   "dependencies": {
     "JSONStream": "1.3.0",
@@ -43,7 +44,7 @@
     "moment": "2.13.0",
     "nan": "2.4.0",
     "pug": "2.0.0-beta6",
-    "request":"2.79.0",
+    "request": "2.79.0",
     "serve-favicon": "2.3.0"
   },
   "devDependencies": {
@@ -53,7 +54,8 @@
     "babel-preset-es2015": "6.5.0",
     "chai": "3.2.0",
     "eslint": "^3.18.0",
-    "mocha": "2.4.5"
+    "mocha": "2.4.5",
+    "supertest": "^3.0.0"
   },
   "engines": {
     "node": "^6.10.0",
