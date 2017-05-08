@@ -8,7 +8,7 @@
     "url": "https://github.com/presidential-innovation-fellows/code-gov-api.git"
   },
   "scripts": {
-    "start": "node app.js | ./node_modules/bunyan/bin/bunyan",
+    "start": "node app.js | ./node_modules/bunyan/bin/bunyan -o short",
     "index": "node ./scripts/index/index.js | ./node_modules/bunyan/bin/bunyan",
     "index-debug": "node --debug-brk=5858 ./scripts/index/index.js | ./node_modules/bunyan/bin/bunyan",
     "index-repos": "node ./scripts/index/repo/index.js | ./node_modules/bunyan/bin/bunyan",
