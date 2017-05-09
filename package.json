@@ -16,7 +16,8 @@
     "create-diffs": "node ./scripts/create_diffs/index.js --max_old_space_size=8192 | ./node_modules/bunyan/bin/bunyan",
     "find-gh-gov-orgs": "node ./scripts/find_gh_gov_orgs/index.js | ./node_modules/bunyan/bin/bunyan",
     "find-gh-gov-repos": "node ./scripts/find_gh_gov_repos/index.js | ./node_modules/bunyan/bin/bunyan",
-    "test": "./node_modules/mocha/bin/mocha -R spec --recursive test"
+    "test": "nyc mocha -R spec --recursive test",
+    "coverage": "nyc report --reporter=text-lcov"
   },
   "dependencies": {
     "JSONStream": "1.3.0",
@@ -56,6 +57,7 @@
     "eslint": "^3.18.0",
     "mocha": "2.4.5",
     "mocha-junit-reporter": "^1.13.0",
+    "nyc": "^10.3.2",
     "supertest": "^3.0.0"
   },
   "engines": {
