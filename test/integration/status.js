@@ -1,7 +1,7 @@
 // Tests for the Status Dashboard
 
+const app     = require('../../app');
 const request = require('supertest');
-const app     = require('../app');
 
 describe('Dashboard', () => {
   it('responds with a 200', (done) => {
