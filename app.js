@@ -465,3 +465,5 @@ if (index_interval) {
 }
 
 logger.info(`Started API server at http://localhost:${port}/`);
+
+module.exports = app;

@@ -9,3 +9,5 @@ npm-debug.log*
 github-config.json
 StatusDashboardScript
 /tmp
+.nyc_output
+coverage
