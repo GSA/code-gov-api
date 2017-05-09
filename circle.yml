@@ -9,7 +9,12 @@ machine:
 #     - npm install -g npm
 #     - npm update
 
-# test:
+test:
+  override:
+    - mocha test --reporter mocha-junit-reporter --recursive:
+        environment:
+          MOCHA_FILE: $CIRCLE_TEST_REPORTS/junit/test-results.xml
+
 #   post:
 #     - npm install codeclimate-test-reporter
 #     - codeclimate-test-reporter < coverage/lcov.info
