@@ -4,6 +4,8 @@
  * @class RepoTermLoaderStream
  */
 const Transform = require("stream").Transform;
+const _         = require("lodash");
+const config    = require("../../../config");
 
 class RepoTermLoaderStream extends Transform {
 
