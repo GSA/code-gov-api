@@ -1,15 +1,4 @@
-_ = require("lodash");
-config = {
-  "TERM_TYPES_TO_INDEX": [
-    "name",
-    "agency.name",
-    "agency.acronym",
-    "tags",
-    "languages"]
-};
-
 const RepoTermLoaderStream = require("../../../../services/indexer/term/repo_term_loader_stream");
-
 
 describe("RepoTermLoaderStream", () => {
   var termIndexerMock = {
