@@ -455,8 +455,11 @@ app.use(function(err, req, res, next) {
                             SERVER
  * ------------------------------------------------------------------ */
 
-// start the server
-app.listen(port);
+// start the server, but only if we're not in the middle of a test
+if(!module.parent) {
+  app.listen(port);
+}
+
 // schedule the interval at which indexings should happen
 index_interval = config.INDEX_INTERVAL_SECONDS;
 if (index_interval) {
