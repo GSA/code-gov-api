@@ -413,7 +413,7 @@ class Formatter {
     if (repo.agency && repo.agency.id) {
       delete repo.agency.id;
     }
-    repo.languages = this._formatLanguages(repo);
+    //repo.languages = this._formatLanguages(repo);
     //repo.license_name=this._formatLicense(repo);
     //repo.contributors=this._formatContributors(repo);
     //repo.events=JSON.parse(this._formatEvents(repo));
