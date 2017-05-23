@@ -3,6 +3,22 @@
   FORMATTER: a service which formats json objects, adding new fields and mod-
   ifying existing ones as necessary for consumption by the API
 
+  There are methods that make extra calls to the GitHub API for repo metadata. 
+  However, most of these calls are currently turned off in the code since the
+  number of calls generated exceeds the existing API limits.
+
+  TODO:  Ideally this code should be rewritten to use the new GitHub API v4
+  (GraphQL), which should end up making much fewer calls. At time of writing, 
+  the v4 API has no equivalent to the v3 "/contributors" endpoint, and the 
+  "/events" endpoint is split over multiple objects based on the subject of
+  the event (issues, forks, pull requests, etc.)
+
+  Also, the GitHub metadata fetching code should be split into a different
+  class with a more meaningful name than "Formatter".
+
+  Once the new events structure is in place, fix indexes/repo/mapping.json
+  to reflect the structure correctly to ElasticSearch.
+
 ******************************************************************************/
 
 const _ = require("lodash");
