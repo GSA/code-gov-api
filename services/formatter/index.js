@@ -25,9 +25,13 @@ const _ = require("lodash");
 const moment = require("moment");
 const Utils = require("../../utils");
 const Logger = require("../../utils/logger");
-const request_promise = require("request-promise");
 const request = require("request");
-const sleep = require("sleep");
+// These modules are used in methods below, but the code that calls
+// those methods is currently commented out.
+// I've commented out these requires to save us from needing yet more
+// dependencies in packages.json.
+// const request_promise = require("request-promise");
+// const sleep = require("sleep");
 
 let lastupdated, etag;
 
