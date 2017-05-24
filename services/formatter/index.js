@@ -19,6 +19,52 @@
   Once the new events structure is in place, fix indexes/repo/mapping.json
   to reflect the structure correctly to ElasticSearch.
 
+  Examples of the data structures added to the repo object:
+
+  events: [
+    {
+      "id": "62409417",
+      "name": "department-of-veterans-affairs/vets-api",
+      "type": "Delete",
+      "user": "aub",
+      "time": "2016-11-02T19:06:20Z"
+
+    }, {
+      "id": "62409417",
+      "name": "department-of-veterans-affairs/vets-api",
+      "type": "Push",
+      "user": "aub",
+      "time": "2016-11-02T19:06:19Z",
+      "message": "return the user (#418)",
+      "url": "https://api.github.com/repos/department-of-veterans-affairs/vets-api/commits/e552eb2b81851ff5cdbe7fd7d042edb3014932c5"
+    }, {
+      "id": "62409417",
+      "name": "department-of-veterans-affairs/vets-api",
+      "type": "PullRequest",
+      "user": "aub",
+      "time": "2016-11-02T19:06:18Z",
+      "message": "return the user",
+      "url": "https://api.github.com/repos/department-of-veterans-affairs/vets-api/pulls/418"
+    },
+    ...
+  ]
+  (Note: The "id" and "name" values in the above objects refer to the repo,
+  and are always identical for events in a given repo. We should probably
+  remove these in future work.)
+
+  codeLanguage: [
+    {
+			"language": "CSS"
+		}
+  ]
+  (This should probably be streamlined to a list of strings.)
+
+  license_name: "CC0"
+
+  As for "contributors", there's no code using that yet, so it's fine to
+  replace that with whatever seems best, or leave it unimplemented for the
+  moment.
+
 ******************************************************************************/
 
 const _ = require("lodash");
