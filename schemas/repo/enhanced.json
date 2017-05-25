@@ -43,7 +43,7 @@
       "format": "uri"
     },
     "license": {
-      "type": "string",
+      "type": ["string", "null"],
       "format": "uri"
     },
     "homepage": {
@@ -116,7 +116,7 @@
       "maximum": 1
     },
     "exemption": {
-      "type": "integer",
+      "type": ["integer","null"],
       "minimum": 1,
       "maximum": 5
     },
