@@ -1,8 +1,9 @@
 {
   "agency": "USDA",
+  "version": "1.0.1",
   "projects": [
     {
-      "organization": "OCIO",
+      "organization": "OC",
       "name": "DigitalGov Analytics",
       "description": "A Drupal Module that implements all features defined within the DAP Implementation Guide",
       "license": "http://www.gnu.org/licenses/old-licenses/gpl-2.0.html",
@@ -27,7 +28,7 @@
         "php"
       ],
       "updated": {
-        "metadataLastUpdated": "2016-12-22",
+        "metadataLastUpdated": "2017-05-15",
         "lastModified": "2015-06-01"
       }
     },
@@ -45,7 +46,8 @@
         "disease",
         "herds",
         "livestock",
-        "simulation"
+        "simulation",
+        "model"
       ],
       "contact": {
         "email": "Melissa.Schoenbaum@aphis.usda.gov",
@@ -60,7 +62,7 @@
         "python"
       ],
       "updated": {
-        "metadataLastUpdated": "2016-12-22",
+        "metadataLastUpdated": "2017-05-15",
         "lastModified": "2016-11-18"
       }
     },
@@ -77,19 +79,15 @@
         "APIs"
       ],
       "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "source.code@ocio.usda.gov"
       },
       "status": "Ideation",
       "vcs": "git",
       "repository": "https://github.com/USDA/USDA-APIs",
-      "homepage": "www.usda.gov/developer",
+      "homepage": "https://www.usda.gov/developer",
       "downloadURL": "https://github.com/USDA/USDA-APIs/archive/master.zip",
       "languages": [],
       "partners": [],
-      "exemption": null,
       "updated": {
         "lastCommit": "2013-08-13T17:10:37.000Z",
         "lastModified": "2016-11-10T13:04:49.000Z",
@@ -109,10 +107,7 @@
         "recreation"
       ],
       "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "source.code@ocio.usda.gov"
       },
       "status": "Production",
       "vcs": "git",
@@ -121,7 +116,6 @@
       "downloadURL": "https://github.com/USDA/RIDB/archive/master.zip",
       "languages": [],
       "partners": [],
-      "exemption": null,
       "updated": {
         "lastCommit": "2016-09-30T18:04:31.000Z",
         "lastModified": "2016-11-10T13:04:38.000Z",
@@ -142,10 +136,7 @@
         "standards"
       ],
       "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "source.code@ocio.usda.gov"
       },
       "status": "Production",
       "vcs": "git",
@@ -154,7 +145,6 @@
       "downloadURL": "https://github.com/USDA/data-standards/archive/master.zip",
       "languages": [],
       "partners": [],
-      "exemption": null,
       "updated": {
         "lastCommit": "2016-11-08T19:37:54.000Z",
         "lastModified": "2016-11-10T13:04:44.000Z",
@@ -170,19 +160,15 @@
       "governmentWideReuseProject": 0,
       "tags": [],
       "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "source.code@ocio.usda.gov"
       },
       "status": "Production",
       "vcs": "git",
       "repository": "https://github.com/USDA-ARS-AGIL/BovineTFBS",
-      "homepage": null,
+      "homepage": "https://github.com/USDA-ARS-AGIL/BovineTFBS",
       "downloadURL": "https://github.com/USDA-ARS-AGIL/BovineTFBS/archive/master.zip",
       "languages": [],
       "partners": [],
-      "exemption": null,
       "updated": {
         "lastCommit": "2015-06-22T23:35:54.000Z",
         "lastModified": "2015-06-12T00:39:42.000Z",
@@ -198,19 +184,15 @@
       "governmentWideReuseProject": 0,
       "tags": [],
       "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "source.code@ocio.usda.gov"
       },
       "status": "Ideation",
       "vcs": "git",
       "repository": "https://github.com/USDA-ARS-AGIL/cattleCNV",
-      "homepage": null,
+      "homepage": "https://github.com/USDA-ARS-AGIL/cattleCNV",
       "downloadURL": "https://github.com/USDA-ARS-AGIL/cattleCNV/archive/master.zip",
       "languages": [],
       "partners": [],
-      "exemption": null,
       "updated": {
         "lastCommit": "2015-06-22T23:26:53.000Z",
         "lastModified": "2015-06-22T22:15:14.000Z",
@@ -226,19 +208,15 @@
       "governmentWideReuseProject": 0,
       "tags": [],
       "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "source.code@ocio.usda.gov"
       },
       "status": "Ideation",
       "vcs": "git",
       "repository": "https://github.com/USDA-ARS-AGIL/cattleSD",
-      "homepage": null,
+      "homepage": "https://github.com/USDA-ARS-AGIL/cattleSD",
       "downloadURL": "https://github.com/USDA-ARS-AGIL/cattleSD/archive/master.zip",
       "languages": [],
       "partners": [],
-      "exemption": null,
       "updated": {
         "lastCommit": "2015-06-12T00:41:19.000Z",
         "lastModified": "2015-06-12T00:41:19.000Z",
@@ -254,19 +232,15 @@
       "governmentWideReuseProject": 0,
       "tags": [],
       "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "source.code@ocio.usda.gov"
       },
       "status": "Ideation",
       "vcs": "git",
       "repository": "https://github.com/USDA-ARS-AGIL/Alusite",
-      "homepage": null,
+      "homepage": "https://github.com/USDA-ARS-AGIL/Alusite",
       "downloadURL": "https://github.com/USDA-ARS-AGIL/Alusite/archive/master.zip",
       "languages": [],
       "partners": [],
-      "exemption": null,
       "updated": {
         "lastCommit": "2015-06-12T00:41:56.000Z",
         "lastModified": "2015-06-12T00:41:56.000Z",
@@ -282,19 +256,15 @@
       "governmentWideReuseProject": 0,
       "tags": [],
       "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "source.code@ocio.usda.gov"
       },
       "status": "Production",
       "vcs": "git",
       "repository": "https://github.com/USDA-ARS-AGIL/tfbsConsSites",
-      "homepage": null,
+      "homepage": "https://github.com/USDA-ARS-AGIL/tfbsConsSites",
       "downloadURL": "https://github.com/USDA-ARS-AGIL/tfbsConsSites/archive/master.zip",
       "languages": [],
       "partners": [],
-      "exemption": null,
       "updated": {
         "lastCommit": "2015-06-22T20:53:23.000Z",
         "lastModified": "2015-06-12T00:42:16.000Z",
@@ -310,19 +280,15 @@
       "governmentWideReuseProject": 0,
       "tags": [],
       "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "source.code@ocio.usda.gov"
       },
       "status": "Ideation",
       "vcs": "git",
       "repository": "https://github.com/USDA-ARS-AGIL/divergence",
-      "homepage": null,
+      "homepage": "https://github.com/USDA-ARS-AGIL/divergence",
       "downloadURL": "https://github.com/USDA-ARS-AGIL/divergence/archive/master.zip",
       "languages": [],
       "partners": [],
-      "exemption": null,
       "updated": {
         "lastCommit": "2015-06-12T00:42:45.000Z",
         "lastModified": "2015-06-12T00:42:45.000Z",
@@ -338,19 +304,15 @@
       "governmentWideReuseProject": 0,
       "tags": [],
       "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "source.code@ocio.usda.gov"
       },
       "status": "Ideation",
       "vcs": "git",
       "repository": "https://github.com/USDA-ARS-AGIL/BovineHapMap",
-      "homepage": null,
+      "homepage": "https://github.com/USDA-ARS-AGIL/BovineHapMap",
       "downloadURL": "https://github.com/USDA-ARS-AGIL/BovineHapMap/archive/master.zip",
       "languages": [],
       "partners": [],
-      "exemption": null,
       "updated": {
         "lastCommit": "2015-06-12T00:44:47.000Z",
         "lastModified": "2015-06-12T00:44:46.000Z",
@@ -366,19 +328,15 @@
       "governmentWideReuseProject": 0,
       "tags": [],
       "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "source.code@ocio.usda.gov"
       },
       "status": "Ideation",
       "vcs": "git",
       "repository": "https://github.com/USDA-ARS-AGIL/usda-ars-agil.github.io",
-      "homepage": null,
+      "homepage": "https://github.com/USDA-ARS-AGIL/usda-ars-agil.github.io",
       "downloadURL": "https://github.com/USDA-ARS-AGIL/usda-ars-agil.github.io/archive/master.zip",
       "languages": [],
       "partners": [],
-      "exemption": null,
       "updated": {
         "lastCommit": "2016-04-29T21:22:25.000Z",
         "lastModified": "2016-04-29T21:22:26.000Z",
@@ -394,19 +352,15 @@
       "governmentWideReuseProject": 0,
       "tags": [],
       "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "source.code@ocio.usda.gov"
       },
       "status": "Production",
       "vcs": "git",
       "repository": "https://github.com/USDA-ERS/website-content-api",
-      "homepage": null,
+      "homepage": "https://github.com/USDA-ERS/website-content-api",
       "downloadURL": "https://github.com/USDA-ERS/website-content-api/archive/master.zip",
       "languages": [],
       "partners": [],
-      "exemption": null,
       "updated": {
         "lastCommit": "2013-12-05T19:03:56.000Z",
         "lastModified": "2014-06-25T15:46:54.000Z",
@@ -422,19 +376,15 @@
       "governmentWideReuseProject": 0,
       "tags": [],
       "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "source.code@ocio.usda.gov"
       },
       "status": "Production",
       "vcs": "git",
       "repository": "https://github.com/USDA-ERS/widgets",
-      "homepage": null,
+      "homepage": "https://github.com/USDA-ERS/widgets",
       "downloadURL": "https://github.com/USDA-ERS/widgets/archive/master.zip",
       "languages": [],
       "partners": [],
-      "exemption": null,
       "updated": {
         "lastCommit": "2013-11-29T20:31:58.000Z",
         "lastModified": "2014-08-31T09:16:07.000Z",
@@ -450,10 +400,7 @@
       "governmentWideReuseProject": 0,
       "tags": [],
       "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "source.code@ocio.usda.gov"
       },
       "status": "Production",
       "vcs": "git",
@@ -462,7 +409,6 @@
       "downloadURL": "https://github.com/USDA-ERS/data-apis/archive/master.zip",
       "languages": [],
       "partners": [],
-      "exemption": null,
       "updated": {
         "lastCommit": "2013-12-12T08:06:27.000Z",
         "lastModified": "2016-06-16T14:43:46.000Z",
@@ -478,19 +424,15 @@
       "governmentWideReuseProject": 0,
       "tags": [],
       "contact": {
-        "email": "eugen2002@gmx.net",
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "eugen2002@gmx.net"
       },
       "status": "Production",
       "vcs": "git",
       "repository": "https://github.com/USDA-ERS/geospatial-apis",
-      "homepage": null,
+      "homepage": "https://github.com/USDA-ERS/geospatial-apis",
       "downloadURL": "https://github.com/USDA-ERS/geospatial-apis/archive/master.zip",
       "languages": [],
       "partners": [],
-      "exemption": null,
       "updated": {
         "lastCommit": "2013-12-12T08:15:08.000Z",
         "lastModified": "2016-11-21T18:56:59.000Z",
@@ -506,10 +448,7 @@
       "governmentWideReuseProject": 0,
       "tags": [],
       "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "source.code@ocio.usda.gov"
       },
       "status": "Production",
       "vcs": "git",
@@ -518,7 +457,6 @@
       "downloadURL": "https://github.com/USDA-FSA/fsa-style/archive/master.zip",
       "languages": [],
       "partners": [],
-      "exemption": null,
       "updated": {
         "lastCommit": "2016-11-28T22:05:34.000Z",
         "lastModified": "2016-11-28T00:58:35.000Z",
@@ -534,10 +472,7 @@
       "governmentWideReuseProject": 0,
       "tags": [],
       "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "source.code@ocio.usda.gov"
       },
       "status": "Production",
       "vcs": "git",
@@ -546,7 +481,6 @@
       "downloadURL": "https://github.com/USDA-FSA/fsa-design-system/archive/master.zip",
       "languages": [],
       "partners": [],
-      "exemption": null,
       "updated": {
         "lastCommit": "2016-11-28T22:52:06.000Z",
         "lastModified": "2016-11-28T00:58:53.000Z",
@@ -562,19 +496,15 @@
       "governmentWideReuseProject": 0,
       "tags": [],
       "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "source.code@ocio.usda.gov"
       },
       "status": "Archival",
       "vcs": "git",
       "repository": "https://github.com/USDA-FSA/fsa-design-system-draft-content",
-      "homepage": "",
+      "homepage": "https://github.com/USDA-FSA/fsa-design-system-draft-content",
       "downloadURL": "https://github.com/USDA-FSA/fsa-design-system-draft-content/archive/master.zip",
       "languages": [],
       "partners": [],
-      "exemption": null,
       "updated": {
         "lastCommit": "2016-08-24T14:28:51.000Z",
         "lastModified": "2016-10-18T16:12:15.000Z",
@@ -590,10 +520,7 @@
       "governmentWideReuseProject": 0,
       "tags": [],
       "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "source.code@ocio.usda.gov"
       },
       "status": "Ideation",
       "vcs": "git",
@@ -602,7 +529,6 @@
       "downloadURL": "https://github.com/USDA-FSA/usda-fsa.github.io/archive/master.zip",
       "languages": [],
       "partners": [],
-      "exemption": null,
       "updated": {
         "lastCommit": "2016-08-15T15:07:47.000Z",
         "lastModified": "2016-07-11T18:31:39.000Z",
@@ -618,19 +544,15 @@
       "governmentWideReuseProject": 0,
       "tags": [],
       "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "source.code@ocio.usda.gov"
       },
       "status": "Ideation",
       "vcs": "git",
       "repository": "https://github.com/USDA-FSA/playbook-draft-content",
-      "homepage": "",
+      "homepage": "https://github.com/USDA-FSA/playbook-draft-content",
       "downloadURL": "https://github.com/USDA-FSA/playbook-draft-content/archive/master.zip",
       "languages": [],
       "partners": [],
-      "exemption": null,
       "updated": {
         "lastCommit": "2016-10-20T20:36:46.000Z",
         "lastModified": "2016-10-18T16:17:35.000Z",
@@ -646,19 +568,15 @@
       "governmentWideReuseProject": 0,
       "tags": [],
       "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "source.code@ocio.usda.gov"
       },
       "status": "Archival",
       "vcs": "git",
       "repository": "https://github.com/USDA-VS/public",
-      "homepage": "",
+      "homepage": "https://github.com/USDA-VS/public",
       "downloadURL": "https://github.com/USDA-VS/public/archive/master.zip",
       "languages": [],
       "partners": [],
-      "exemption": null,
       "updated": {
         "lastCommit": "2016-08-03T14:53:03.000Z",
         "lastModified": "2016-08-03T14:50:53.000Z",
@@ -674,19 +592,15 @@
       "governmentWideReuseProject": 0,
       "tags": [],
       "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "source.code@ocio.usda.gov"
       },
       "status": "Production",
       "vcs": "git",
       "repository": "https://github.com/USDA-VS/reference_guided_assembly",
-      "homepage": null,
+      "homepage": "https://github.com/USDA-VS/reference_guided_assembly",
       "downloadURL": "https://github.com/USDA-VS/reference_guided_assembly/archive/master.zip",
       "languages": [],
       "partners": [],
-      "exemption": null,
       "updated": {
         "lastCommit": "2016-11-24T11:08:31.000Z",
         "lastModified": "2016-11-01T15:28:02.000Z",
@@ -702,19 +616,15 @@
       "governmentWideReuseProject": 0,
       "tags": [],
       "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "source.code@ocio.usda.gov"
       },
       "status": "Production",
       "vcs": "git",
       "repository": "https://github.com/USDA-VS/snp_analysis",
-      "homepage": null,
+      "homepage": "https://github.com/USDA-VS/snp_analysis",
       "downloadURL": "https://github.com/USDA-VS/snp_analysis/archive/master.zip",
       "languages": [],
       "partners": [],
-      "exemption": null,
       "updated": {
         "lastCommit": "2016-11-25T13:58:44.000Z",
         "lastModified": "2016-10-25T12:07:16.000Z",
@@ -730,19 +640,15 @@
       "governmentWideReuseProject": 0,
       "tags": [],
       "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "source.code@ocio.usda.gov"
       },
       "status": "Ideation",
       "vcs": "git",
       "repository": "https://github.com/USDA-VS/playground",
-      "homepage": "",
+      "homepage": "https://github.com/USDA-VS/playground",
       "downloadURL": "https://github.com/USDA-VS/playground/archive/master.zip",
       "languages": [],
       "partners": [],
-      "exemption": null,
       "updated": {
         "lastCommit": "2016-11-15T13:50:41.000Z",
         "lastModified": "2016-10-22T20:42:24.000Z",
@@ -758,19 +664,15 @@
       "governmentWideReuseProject": 0,
       "tags": [],
       "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "source.code@ocio.usda.gov"
       },
       "status": "Production",
       "vcs": "git",
       "repository": "https://github.com/USDA-VS/ksnp",
-      "homepage": "",
+      "homepage": "https://github.com/USDA-VS/ksnp",
       "downloadURL": "https://github.com/USDA-VS/ksnp/archive/master.zip",
       "languages": [],
       "partners": [],
-      "exemption": null,
       "updated": {
         "lastCommit": "2016-11-28T19:46:48.000Z",
         "lastModified": "2016-11-28T19:46:49.000Z",
