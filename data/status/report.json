@@ -1,5 +1,5 @@
 {
-  "timestamp": "Thu Jun 08 2017 07:39:04 GMT-0400 (EDT)",
+  "timestamp": "Mon Jun 12 2017 13:00:56 GMT-0400 (EDT)",
   "statuses": {
     "USDA": {
       "status": "FULLY COMPLIANT: 0 validation errors",
@@ -236,7 +236,7 @@
       }
     },
     "DOL": {
-      "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token < in JSON at position 4)",
+      "status": "FAILURE: MISSING PROJECTS FIELD",
       "issues": [],
       "version": "",
       "metadata": {
@@ -247,16 +247,16 @@
           "website": "https://www.dol.gov",
           "codeUrl": "https://www.dol.gov/code.json",
           "requirements": {
-            "agencyWidePolicy": 0.5,
+            "agencyWidePolicy": 0,
             "schemaFormat": 0,
-            "overallCompliance": 0.25
+            "overallCompliance": 0
           }
         }
       },
       "requirements": {
-        "agencyWidePolicy": 0.5,
+        "agencyWidePolicy": 0,
         "schemaFormat": 0,
-        "overallCompliance": 0.25
+        "overallCompliance": 0
       }
     },
     "DOS": {
