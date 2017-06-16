@@ -96,7 +96,7 @@
   "website": "https://www.dol.gov",
   "codeUrl": "https://www.dol.gov/code.json",
   "requirements": {
-    "agencyWidePolicy": 0
+    "agencyWidePolicy": 1
   }
 }, {
   "id": 11,
