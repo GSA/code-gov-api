@@ -14,6 +14,10 @@
         "Complaint",
         "Form"
       ],
+      "contact": {
+        "email": "Johnson.Priscilla@dol.gov",
+        "name": " Priscilla V Johnson,"
+      },
       "status": "Alpha",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/OFCCP-Complaint-Form",
@@ -43,6 +47,10 @@
         "Safety",
         "En"
       ],
+      "contact": {
+        "email": "hatch.mark@dol.gov",
+        "name": "Hatch Mark"
+      },
       "status": "Alpha",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/OSHA-Heat-Safety-Android-En",
@@ -72,6 +80,10 @@
         "Safety",
         "iOS"
       ],
+      "contact": {
+        "email": "hatch.mark@dol.gov",
+        "name": "Hatch Mark"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/OSHA-Heat-Safety-iOS",
@@ -99,6 +111,10 @@
         "Personal",
         "Assitants"
       ],
+      "contact": {
+        "email": "giancola.thomas@dol.gov",
+        "name": "Thomas Giancola"
+      },
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/Intelligent-Personal-Assistants",
       "homepage": "https://github.com/USDepartmentofLabor",
@@ -125,6 +141,10 @@
       "tags": [
         "YammerDataDump"
       ],
+      "contact": {
+        "email": "giancola.thomas@dol.gov",
+        "name": "Thomas Giancola"
+      },
       "status": "alpha",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/YammerDataDump",
@@ -151,6 +171,10 @@
       "tags": [
         "Developer"
       ],
+      "contact": {
+        "email": "Yao.Sue-li@dol.gov>",
+        "name": "Sue-li Yao"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/Developer",
@@ -177,6 +201,10 @@
         "PHP",
         "DOLDataSDK"
       ],
+      "contact": {
+        "email": "Yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/PHP_DOLDataSDK",
@@ -204,6 +232,10 @@
         "Labor",
         "Android"
       ],
+      "contact": {
+        "email": "Yao.Sue-li@dol.gov",
+        "name": "Sue-li.Yao"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/Child-Labor-Android",
@@ -231,6 +263,10 @@
         "chart",
         "maker"
       ],
+      "contact": {
+        "email": "McDaniel.Jay@bls.gov",
+        "name": "McDaniel Jay"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/interactive-chart-maker",
@@ -259,6 +295,10 @@
         "Data",
         "SDK"
       ],
+      "contact": {
+        "email": "Yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/Swift-Federal-Data-SDK",
@@ -284,6 +324,10 @@
       "tags": [
         "VETS4212"
       ],
+      "contact": {
+        "email": "Carl.Tom@dol.gov>",
+        "name": "Tom Carl"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/VETS4212",
@@ -311,6 +355,10 @@
         "whd",
         "14c"
       ],
+      "contact": {
+        "email": "Wang.Bin@DOL.GOV",
+        "name": "Michelle Wang"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/dol-whd-14c",
@@ -327,31 +375,6 @@
       }
     },
     {
-      "name": "Handbook",
-      "organization": "DOL Department",
-      "description": "The home of policies and guidelines that make up 18F",
-      "license": "CC0",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 0,
-      "tags": [
-        "handbook"
-      ],
-      "status": "beta",
-      "vcs": "git",
-      "repository": "https://github.com/USDepartmentofLabor/handbook",
-      "homepage": "https://github.com/USDepartmentofLabor",
-      "downloadURL": "https://github.com/USDepartmentofLabor/handbook/archive/master.zip",
-      "languages": [
-        "CSS"
-      ],
-      "exemption": null,
-      "exemptionText": "No exemption requested",
-      "updated": {
-        "lastCommit": "2016-08-29",
-        "lastModified": "2016-08-29"
-      }
-    },
-    {
       "name": "forms-library-migration",
       "organization": "DOL Department",
       "description": "Application using the DOL Forms API dataset",
@@ -363,6 +386,10 @@
         "library",
         "migration"
       ],
+      "contact": {
+        "email": "Yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/forms-library-migration",
@@ -379,32 +406,6 @@
       }
     },
     {
-      "name": "Svg-maps",
-      "organization": "DOL Department",
-      "description": "Accessible SVG Maps",
-      "license": "CC0",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 0,
-      "tags": [
-        "Svg",
-        "maps"
-      ],
-      "status": "beta",
-      "vcs": "git",
-      "repository": "https://github.com/USDepartmentofLabor/svg-maps",
-      "homepage": "https://github.com/USDepartmentofLabor",
-      "downloadURL": "https://github.com/USDepartmentofLabor/svg-maps/archive/master.zip",
-      "languages": [
-        "PHP"
-      ],
-      "exemption": null,
-      "exemptionText": "No exemption requested",
-      "updated": {
-        "lastCommit": "2016-05-09",
-        "lastModified": "2016-05-09"
-      }
-    },
-    {
       "name": "dol-faq",
       "organization": "DOL Department",
       "description": "Application using the DOL FAQ API dataset",
@@ -415,6 +416,10 @@
         "dol",
         "faq"
       ],
+      "contact": {
+        "email": "Yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/dol-faq",
@@ -440,6 +445,10 @@
       "tags": [
         "eFOH"
       ],
+      "contact": {
+        "email": "Wang.Bin@DOL.GOV",
+        "name": "Michelle Wang "
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/eFOH",
@@ -465,6 +474,10 @@
       "tags": [
         "FederalRegister"
       ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/FederalRegister",
@@ -492,6 +505,10 @@
         "Sample",
         "App"
       ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/PHP-Sample-App",
@@ -519,6 +536,10 @@
         "data",
         "listing"
       ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/public-data-listing",
@@ -545,6 +566,10 @@
         "Blackberry",
         "DOLDataSDK"
       ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/BlackBerry_DOLDataSDK",
@@ -572,6 +597,10 @@
         "Sample",
         "App"
       ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/Ruby-Sample-App",
@@ -598,6 +627,10 @@
         "DOL",
         "timesheet"
       ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/DOL-Timesheet",
@@ -623,6 +656,10 @@
       "tags": [
         "Quarry"
       ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/Quarry",
@@ -649,6 +686,10 @@
         "DOLDataSDK",
         "iOS"
       ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/DOLDataSDK-iOS",
@@ -675,6 +716,10 @@
         "Quarry",
         " Admin"
       ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/Quarry-Admin",
@@ -701,6 +746,10 @@
         "Android",
         "DOLDataSDK"
       ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/Android_DOLDataSDK",
@@ -727,6 +776,10 @@
         "DotNet",
         "DOLDataSDK"
       ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/DotNet_DOLDataSDK",
@@ -754,6 +807,10 @@
         "Sample",
         "App"
       ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/iOS-Sample-App",
@@ -781,6 +838,10 @@
         "Federal",
         "SDK"
       ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/ColdFusion-Federal-SDK",
@@ -809,6 +870,10 @@
         "ede",
         "pop"
       ],
+      "contact": {
+        "email": "Wang.Bin@DOL.GOV",
+        "name": "Michelle Wang"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/whd-pws-ede-pop",
@@ -835,6 +900,10 @@
         "Dol",
         "Locations"
       ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/DOL_locations",
@@ -862,6 +931,10 @@
         "dol",
         "api"
       ],
+      "contact": {
+        "email": "day.eric@dol.gov",
+        "name": "Day, Eric"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/node-dol-api",
@@ -890,6 +963,10 @@
         "test",
         "script"
       ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/Mobile-Accessibility-Test-Script",
@@ -917,6 +994,10 @@
         "Sample",
         "app"
       ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/Swift-Sample-App",
@@ -942,6 +1023,10 @@
       "tags": [
         "SWXMLHASH"
       ],
+      "contact": {
+        "email": "Pulsifer.Michael@DOL.GOV",
+        "name": "Pulsifer Michael"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/SWXMLHash",
@@ -970,6 +1055,10 @@
         "Safety",
         "Swift"
       ],
+      "contact": {
+        "email": "hatch.mark@dol.gov",
+        "name": "Hatch Mark"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/OSHA-Heat-Safety-Swift",
@@ -998,6 +1087,10 @@
         "listing",
         "Consolidator"
       ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/Public-Data-Listing-Consolidator",
@@ -1026,6 +1119,10 @@
         "index",
         "Java"
       ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/Calculate-Heat-Index-Java",
@@ -1051,6 +1148,10 @@
       "tags": [
         "APIv2"
       ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/APIv2",
@@ -1077,6 +1178,10 @@
         "APIv2",
         "Admin"
       ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/APIv2-Admin",
@@ -1103,6 +1208,10 @@
         "api",
         "standards"
       ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/api-standards",
@@ -1128,6 +1237,10 @@
       "tags": [
         "Weather"
       ],
+      "contact": {
+        "email": "hatch.mark@dol.gov",
+        "name": "Hatch Mark"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/Weather",
@@ -1153,6 +1266,10 @@
       "tags": [
         "conversions"
       ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/Conversions",
@@ -1178,6 +1295,10 @@
       "tags": [
         "DOLAPI"
       ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/DOLAPI",
@@ -1207,6 +1328,10 @@
         "Android",
         "ES"
       ],
+      "contact": {
+        "email": "hatch.mark@dol.gov",
+        "name": "Hatch Mark"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/OAHA-Heat-Safety-Android-Es",
@@ -1235,6 +1360,10 @@
         "Safety",
         "Blackberry"
       ],
+      "contact": {
+        "email": "hatch.mark@dol.gov",
+        "name": "Hatch Mark"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/OSHA-Heat-Safety-Blackberry",
@@ -1261,6 +1390,10 @@
         "LaborStats",
         "iOS"
       ],
+      "contact": {
+        "email": "Pulsifer.Michael@DOL.GOV",
+        "name": "Pulsifer Michael"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/LaborStats-iOS",
@@ -1287,6 +1420,10 @@
         "API",
         "status"
       ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/API-Status",
@@ -1314,6 +1451,10 @@
         "Sample",
         "App"
       ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/ColdFusion-Sample-App",
@@ -1341,6 +1482,10 @@
         "Heat",
         "Safety"
       ],
+      "contact": {
+        "email": "hatch.mark@dol.gov",
+        "name": "Hatch Mark"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/OSHA-Heat-Safety",
@@ -1368,6 +1513,10 @@
         "Sample",
         "App"
       ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/Android-Sample-App",
@@ -1395,6 +1544,10 @@
         "Sample",
         "App"
       ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/Blackberry-Sample-App",
@@ -1421,6 +1574,10 @@
         "JS",
         "dashboard"
       ],
+      "contact": {
+        "email": "Pulsifer.Michael@DOL.GOV",
+        "name": "Pulsifer Michael"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/JS-Dashboard",
@@ -1447,6 +1604,10 @@
         "LaborStats",
         "Android"
       ],
+      "contact": {
+        "email": "Pulsifer.Michael@DOL.GOV",
+        "name": "Pulsifer Michael"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/LaborStats-Anrdroid",
@@ -1472,6 +1633,10 @@
       "tags": [
         "StrategyTrackeriPad"
       ],
+      "contact": {
+        "email": "Pulsifer.Michael@DOL.GOV",
+        "name": "Pulsifer Michael"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/StrategyTrackeriPad",
@@ -1497,6 +1662,10 @@
       "tags": [
         "HelpfulRedist"
       ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
       "status": "beta",
       "vcs": "git",
       "repository": "https://github.com/USDepartmentofLabor/HelpfulRedist",
