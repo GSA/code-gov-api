@@ -32,7 +32,7 @@
     },
     "status": {
       "enum": [
-        "Ideation", "Alpha", "Beta", "Production", "Archival"
+        "Ideation", "Alpha", "Beta", "Production", "Archival", "ideation","alpha", "beta", "production", "archival"
       ]
     },
     "vcs": {
@@ -127,8 +127,8 @@
       "type": "object",
       "properties": {
         "metadataLastUpdated": {
-          "type": "string",
-          "format": "date-time"
+          "type": ["string", "null"]
+          
         },
         "lastCommit": {
           "type": "string",
