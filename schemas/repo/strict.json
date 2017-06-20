@@ -32,7 +32,7 @@
     },
     "status": {
       "enum": [
-        "Ideation", "Alpha", "Beta", "Production", "Archival"
+        "Ideation", "Alpha", "Beta", "Production", "Archival", "ideation","alpha", "beta", "production", "archival"
       ]
     },
     "vcs": {
@@ -70,17 +70,17 @@
       "type": "object",
       "properties": {
         "name": {
-          "type": "string"
+          "type": ["string", "null"]
         },
         "email": {
-          "type": "string",
+          "type": ["string", "null"],
           "format": "email"
         },
         "twitter": {
-          "type": "string"
+          "type": ["string", "null"]
         },
         "phone": {
-          "type": "string"
+          "type": ["string", "null"]
         }
       },
       "required": ["email"]
@@ -127,8 +127,8 @@
       "type": "object",
       "properties": {
         "metadataLastUpdated": {
-          "type": "string",
-          "format": "date-time"
+          "type": ["string", "null"]
+          
         },
         "lastCommit": {
           "type": "string",
