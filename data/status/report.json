@@ -1,5 +1,5 @@
 {
-  "timestamp": "Fri Jun 16 2017 11:41:39 GMT-0400 (EDT)",
+  "timestamp": "Tue Jun 20 2017 15:47:25 GMT-0400 (EDT)",
   "statuses": {
     "USDA": {
       "status": "FULLY COMPLIANT: 0 validation errors",
@@ -212,7 +212,7 @@
       }
     },
     "DOJ": {
-      "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token < in JSON at position 0)",
+      "status": "FAILURE: ERROR WHEN FETCHING (connect ETIMEDOUT 149.101.146.50:443)",
       "issues": [],
       "version": "",
       "metadata": {
@@ -236,7 +236,7 @@
       }
     },
     "DOL": {
-      "status": "NOT FULLY COMPLIANT: 57 ERRORS, 57 WARNINGS, 114 validation errors",
+      "status": "NOT FULLY COMPLIANT: 45 WARNINGS, 45 validation errors",
       "issues": [
         {
           "repoID": "dol_dol_department_ofccp_complaint_form",
@@ -256,17 +256,7 @@
                 "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -287,17 +277,7 @@
                 "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -309,32 +289,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -355,17 +319,7 @@
                 "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -377,32 +331,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -414,32 +352,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -451,32 +373,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -488,32 +394,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -525,32 +415,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -562,32 +436,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -599,32 +457,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -636,69 +478,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
-          }
-        },
-        {
-          "repoID": "dol_dol_department_handbook",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "Handbook",
-          "issues": {
-            "enhancements": [],
-            "warnings": [
-              {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
-                "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
-                },
-                "message": "should be equal to one of the allowed values"
-              }
-            ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -710,69 +499,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
-          }
-        },
-        {
-          "repoID": "dol_dol_department_svg_maps",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "Svg-maps",
-          "issues": {
-            "enhancements": [],
-            "warnings": [
-              {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
-                "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
-                },
-                "message": "should be equal to one of the allowed values"
-              }
-            ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -784,32 +520,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -821,32 +541,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -858,32 +562,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -895,32 +583,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -932,69 +604,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
-          }
-        },
-        {
-          "repoID": "dol_dol_department_blackberry_doldatasdk",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "BlackBerry_DOLDataSDK",
-          "issues": {
-            "enhancements": [],
-            "warnings": [
-              {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
-                "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
-                },
-                "message": "should be equal to one of the allowed values"
-              }
-            ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -1006,69 +625,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
-          }
-        },
-        {
-          "repoID": "dol_dol_department_dol_timesheet",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "DOL-Timesheet",
-          "issues": {
-            "enhancements": [],
-            "warnings": [
-              {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
-                "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
-                },
-                "message": "should be equal to one of the allowed values"
-              }
-            ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -1080,32 +646,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -1117,32 +667,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".downloadURL",
+                "schemaPath": "#/properties/downloadURL/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -1154,69 +688,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
-          }
-        },
-        {
-          "repoID": "dol_dol_department_android_doldatasdk",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "Android_DOLDataSDK",
-          "issues": {
-            "enhancements": [],
-            "warnings": [
-              {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
-                "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
-                },
-                "message": "should be equal to one of the allowed values"
-              }
-            ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -1228,32 +709,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -1265,69 +730,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
-          }
-        },
-        {
-          "repoID": "dol_dol_department_coldfusion_federal_sdk",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "ColdFusion-Federal-SDK",
-          "issues": {
-            "enhancements": [],
-            "warnings": [
-              {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
-                "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
-                },
-                "message": "should be equal to one of the allowed values"
-              }
-            ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -1339,106 +751,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
-          }
-        },
-        {
-          "repoID": "dol_dol_department_dol_locations",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "DOL_locations",
-          "issues": {
-            "enhancements": [],
-            "warnings": [
-              {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
-                "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
-                },
-                "message": "should be equal to one of the allowed values"
-              }
-            ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
-          }
-        },
-        {
-          "repoID": "dol_dol_department_node_dol_api",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "node-dol-api",
-          "issues": {
-            "enhancements": [],
-            "warnings": [
-              {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
-                "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
-                },
-                "message": "should be equal to one of the allowed values"
-              }
-            ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -1450,32 +772,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -1487,69 +793,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
-          }
-        },
-        {
-          "repoID": "dol_dol_department_swxmlhash",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "SWXMLHASH",
-          "issues": {
-            "enhancements": [],
-            "warnings": [
-              {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
-                "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
-                },
-                "message": "should be equal to one of the allowed values"
-              }
-            ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -1561,69 +814,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
-          }
-        },
-        {
-          "repoID": "dol_dol_department_public_data_listing_consolidator",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "Public-Data-Listing-Consolidator",
-          "issues": {
-            "enhancements": [],
-            "warnings": [
-              {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
-                "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
-                },
-                "message": "should be equal to one of the allowed values"
-              }
-            ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -1635,32 +835,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -1672,32 +856,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -1709,32 +877,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -1746,32 +898,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -1783,32 +919,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -1820,32 +940,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -1857,32 +961,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -1894,32 +982,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -1931,32 +1003,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -1968,32 +1024,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -2005,32 +1045,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -2042,106 +1066,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
-          }
-        },
-        {
-          "repoID": "dol_dol_department_osha_heat_safety",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "OSHA-Heat-Safety",
-          "issues": {
-            "enhancements": [],
-            "warnings": [
-              {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
-                "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
-                },
-                "message": "should be equal to one of the allowed values"
-              }
-            ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
-          }
-        },
-        {
-          "repoID": "dol_dol_department_android_sample_app",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "Android-Sample-App",
-          "issues": {
-            "enhancements": [],
-            "warnings": [
-              {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
-                "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
-                },
-                "message": "should be equal to one of the allowed values"
-              }
-            ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -2153,32 +1087,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -2190,32 +1108,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -2227,32 +1129,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -2264,32 +1150,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         },
         {
@@ -2301,32 +1171,16 @@
             "enhancements": [],
             "warnings": [
               {
-                "keyword": "enum",
-                "dataPath": ".status",
-                "schemaPath": "#/properties/status/enum",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "allowedValues": [
-                    "Ideation",
-                    "Alpha",
-                    "Beta",
-                    "Production",
-                    "Archival"
-                  ]
+                  "format": "uri"
                 },
-                "message": "should be equal to one of the allowed values"
+                "message": "should match format \"uri\""
               }
             ],
-            "errors": [
-              {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
-                "params": {
-                  "missingProperty": "contact"
-                },
-                "message": "should have required property 'contact'"
-              }
-            ]
+            "errors": []
           }
         }
       ],
@@ -2374,9 +1228,9 @@
       }
     },
     "DOT": {
-      "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token { in JSON at position 326)",
+      "status": "FULLY COMPLIANT: 0 validation errors",
       "issues": [],
-      "version": "",
+      "version": "1.0.1",
       "metadata": {
         "agency": {
           "name": "Department of Transportation",
@@ -2385,15 +1239,15 @@
           "codeUrl": "https://www.transportation.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 0.5,
-            "schemaFormat": 0,
-            "overallCompliance": 0.25
+            "schemaFormat": 1,
+            "overallCompliance": 0.75
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 0.5,
-        "schemaFormat": 0,
-        "overallCompliance": 0.25
+        "schemaFormat": 1,
+        "overallCompliance": 0.75
       }
     },
     "TRE": {
