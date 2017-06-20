@@ -109,7 +109,7 @@
       "type": "object",
       "properties": {
         "metadataLastUpdated": {
-          "type": "string"
+          "type": ["string", "null"]
         },
         "lastCommit": {
           "type": "string"
