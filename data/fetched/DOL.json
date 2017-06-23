@@ -3,10 +3,10 @@
   "agency": "DOL",
   "projects": [
     {
-      "name": "OFCCP-Complaint-Form",
+      "name": "OFCCP COMPLAINT FORM",
       "organization": "DOL Department",
       "description": "Complaint Involving Employment Discrimination by a Federal Contractor or Subcontractor.",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -35,10 +35,10 @@
       }
     },
     {
-      "name": "OSHA-Heat-Safety-Android-En",
+      "name": "OSHA HEAT SAFETY ANDROID EN",
       "organization": "DOL Department",
       "description": "This app allows workers and supervisors to calculate the heat index for their worksite, and, based on the heat index, displays a risk level to outdoor workers..",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -68,10 +68,10 @@
       }
     },
     {
-      "name": "OSHA-Heat-Safety-iOS",
+      "name": "OSHA HEAT SAFETY IOS",
       "organization": "DOL Department",
       "description": "This app allows workers and supervisors to calculate the heat index for their worksite, and, based on the heat index, displays a risk level to outdoor workers.",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -100,10 +100,10 @@
       }
     },
     {
-      "name": "Intelligent-Personal-Assistants",
+      "name": "Intelligent PERSONAL ASSITANTS",
       "organization": "DOL Department",
       "description": "Collaborative space for DOL development towards connecting IPAs with APIs.",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -132,10 +132,10 @@
       }
     },
     {
-      "name": "YammerDataDump",
+      "name": "YAMMERDATADUMP",
       "organization": "DOL Department",
       "description": "A simple way to download your Yammer content to excel.",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -162,10 +162,10 @@
       }
     },
     {
-      "name": "Developer",
+      "name": "DEVELOPER",
       "organization": "DOL Department",
       "description": "Developer.dol.gov has undergone a redesign and the site will is hosted here.",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -191,10 +191,10 @@
       }
     },
     {
-      "name": "PHP_DOLDataSDK",
+      "name": "PHP_DOLDATASDK",
       "organization": "DOL Department",
       "description": "PHP SDK to ease access to DOL's and other federal agencies' APIs",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -221,10 +221,10 @@
       }
     },
     {
-      "name": "Child-Labor-Android",
+      "name": "CHILD LABOR ANDROID",
       "organization": "DOL Department",
       "description": "Child-Labor-Android",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -252,10 +252,10 @@
       }
     },
     {
-      "name": "interactive-chart-maker",
+      "name": "INTERACTIVE CHART MAKER",
       "organization": "DOL Department",
       "description": "App to create interactive charts and maps",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -283,10 +283,10 @@
       }
     },
     {
-      "name": "Swift-Federal-Data-SDK",
+      "name": "SWIFT FEDERAL DATA SDK",
       "organization": "DOL Department",
       "description": "Federal Data SDK built in the Swift programming language",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -318,7 +318,7 @@
       "name": "VETS4212",
       "organization": "DOL Department",
       "description": "VETS4212",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -344,10 +344,10 @@
       }
     },
     {
-      "name": "dol-whd-14c",
+      "name": "DOL WHD 14C",
       "organization": "DOL Department",
       "description": "dol-whd-14c",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -375,10 +375,10 @@
       }
     },
     {
-      "name": "forms-library-migration",
+      "name": "FORMS LIBRARY MIGRATION",
       "organization": "DOL Department",
       "description": "Application using the DOL Forms API dataset",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -406,10 +406,10 @@
       }
     },
     {
-      "name": "dol-faq",
+      "name": "DOL FAQ",
       "organization": "DOL Department",
       "description": "Application using the DOL FAQ API dataset",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -436,10 +436,10 @@
       }
     },
     {
-      "name": "eFOH",
+      "name": "EFOH",
       "organization": "DOL Department",
       "description": "A working prototype of WHD's FOH using unverified content",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -465,10 +465,10 @@
       }
     },
     {
-      "name": "FederalRegister",
+      "name": "FEDERALREGISTER",
       "organization": "DOL Department",
       "description": "App that displays information from the Federal Register's API specific to DOL's agencies.",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -494,10 +494,10 @@
       }
     },
     {
-      "name": "PHP-Sample-App",
+      "name": "PHP SAMPLE APP",
       "organization": "DOL Department",
       "description": "Sample app and documentation for the PHP Federal SDK.",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -525,10 +525,10 @@
       }
     },
     {
-      "name": "public-data-listing",
+      "name": "PUBLIC DATA LISTING",
       "organization": "DOL Department",
       "description": "The data.json for DOL, including the individual data.json files for each of DOL's organizations.",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -556,7 +556,7 @@
       }
     },
     {
-      "name": "BlackBerry_DOLDataSDK",
+      "name": "BLACKBERRY_DOLDATASDK",
       "organization": "DOL Department",
       "description": "Blackberry SDK to ease access to DOL's and other federal agencies' APIs.",
       "license": "https://github.com/USDepartmentofLabor/BlackBerry_DOLDataSDK/blob/master/licenses.txt",
@@ -586,10 +586,10 @@
       }
     },
     {
-      "name": "Ruby-Sample-App",
+      "name": "RUBY SAMPLE APP",
       "organization": "DOL Department",
       "description": "A sample app using the Ruby Federal SDK.",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -617,7 +617,7 @@
       }
     },
     {
-      "name": "DOL-Timesheet",
+      "name": "DOL TIMESHEET",
       "organization": "DOL Department",
       "description": "This is a timesheet to record the hours that you work and calculate the amount you may be owed by your employer.",
       "license": "https://github.com/USDepartmentofLabor/DOL-Timesheet/blob/master/licenses.txt",
@@ -647,10 +647,10 @@
       }
     },
     {
-      "name": "Quarry",
+      "name": "QUARRY",
       "organization": "DOL Department",
       "description": "This is a security patch update for Quarry REST.",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -676,7 +676,7 @@
       }
     },
     {
-      "name": "DOLDataSDK-iOS",
+      "name": "DOLDATASDK IOS",
       "organization": "DOL Department",
       "description": "iOS SDK to ease access to DOL's and other federal agencies' APIs.",
       "license": "https://github.com/USDepartmentofLabor/DOLDataSDK-iOS/blob/master/licenses.txt",
@@ -706,10 +706,10 @@
       }
     },
     {
-      "name": "Quarry-Admin",
+      "name": "QUARRY ADMIN",
       "organization": "DOL Department",
       "description": "This is a security patch update for Quarry AdminUI.",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -736,7 +736,7 @@
       }
     },
     {
-      "name": "Android_DOLDataSDK",
+      "name": "ANDROID DOLDATASDK",
       "organization": "DOL Department",
       "description": "SDK to ease access to DOL's and other federal agencies' APIs.",
       "license": "https://github.com/USDepartmentofLabor/Android_DOLDataSDK/blob/master/licenses.txt",
@@ -766,10 +766,10 @@
       }
     },
     {
-      "name": "DotNet_DOLDataSDK",
+      "name": "DOTNET DOLDATASDK",
       "organization": "DOL Department",
       "description": "SDK to ease access to DOL's and other federal agencies' APIs.",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -796,10 +796,10 @@
       }
     },
     {
-      "name": "iOS-Sample-App",
+      "name": "IOS SAMPLE APP",
       "organization": "DOL Department",
       "description": "A sample app using the federal API SDK for iOS.",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -827,7 +827,7 @@
       }
     },
     {
-      "name": "ColdFusion-Federal-SDK",
+      "name": "COLDFUSION FEDERAL SDK",
       "organization": "DOL Department",
       "description": "SDK to ease access to federal APIs, including DOL's.",
       "license": "https://github.com/USDepartmentofLabor/ColdFusion-Federal-SDK/blob/master/LICENSE",
@@ -858,10 +858,10 @@
       }
     },
     {
-      "name": "whd-pws-ede-pop",
+      "name": "WHD PWS EDE POP",
       "organization": "DOL Department",
       "description": "Wireframes for a project by 18F Consulting.",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -890,7 +890,7 @@
       }
     },
     {
-      "name": "DOL_locations",
+      "name": "DOL LOCATIONS",
       "organization": "DOL Department",
       "description": "US Department of Labor Location Map",
       "license": "https://github.com/USDepartmentofLabor/DOL_Locations/blob/master/LICENSE",
@@ -920,7 +920,7 @@
       }
     },
     {
-      "name": "node-dol-api",
+      "name": "NODE DOL API",
       "organization": "DOL Department",
       "description": "This is a [Node] SDK for accessing the US Department of Labor's data API.",
       "license": "https://github.com/USDepartmentofLabor/node-dol-api/blob/master/LICENSE.md",
@@ -951,10 +951,10 @@
       }
     },
     {
-      "name": "Mobile-Accessibility-Test-Script",
+      "name": "MOBILE ACCESSIBILITY TEST SCRIPT",
       "organization": "DOL Department",
       "description": "A selection of test cases used to test accessibility and Section 508 compliance of mobile applications.",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -983,10 +983,10 @@
       }
     },
     {
-      "name": "Swift-Sample-App",
+      "name": "SWIFT SAMPLE APP",
       "organization": "DOL Department",
       "description": "Sample app using the Swift Federal Data SDK.",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -1043,10 +1043,10 @@
       }
     },
     {
-      "name": "OSHA-Heat-Safety-Swift",
+      "name": "OSHA HEAT SAFETY SWIFT",
       "organization": "DOL Department",
       "description": "prototype of a modernization of the OSHA Heat Safety App, built in Swift and employing new features, including a 7-day forecast and wind chill warnings.",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -1075,7 +1075,7 @@
       }
     },
     {
-      "name": "Public-Data-Listing-Consolidator",
+      "name": "PUBLIC DATA LISTING CONSOLIDATOR",
       "organization": "DOL Department",
       "description": "Consolidates public data listing files (data.json) into one department-wide JSON file.",
       "license": "https://github.com/USDepartmentofLabor/Public-Data-Listing-Consolidator/blob/master/LICENSE",
@@ -1107,10 +1107,10 @@
       }
     },
     {
-      "name": "Calculate-Heat-Index-Java",
+      "name": "CALCULATE HEAT INDEX JAVA",
       "organization": "DOL Department",
       "description": "Java Class that will calculate the heat index.",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -1139,10 +1139,10 @@
       }
     },
     {
-      "name": "APIv2",
+      "name": "APIV2",
       "organization": "DOL Department",
       "description": "The back-end and admin UI code for the next evolution of DOL's open data API.",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -1168,10 +1168,10 @@
       }
     },
     {
-      "name": "APIv2-Admin",
+      "name": "APIV2 ADMIN",
       "organization": "DOL Department",
       "description": "Admin interface for APIv2.",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -1198,10 +1198,10 @@
       }
     },
     {
-      "name": "api-standards",
+      "name": "API STANDARDS",
       "organization": "DOL Department",
       "description": "This document captures DOL's view of API best practices and standards as can be applied to the DOL-wide API. We will incorporate these into our work.",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -1228,10 +1228,10 @@
       }
     },
     {
-      "name": "Weather",
+      "name": "WEATHER",
       "organization": "DOL Department",
       "description": "A Swift object to support the OSHA Heat Safety App.",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -1257,10 +1257,10 @@
       }
     },
     {
-      "name": "Conversions",
+      "name": "CONVERSIONS",
       "organization": "DOL Department",
       "description": "A class that exposes functions that enable common conversions between US (Imperial) and metric measurements.",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -1289,7 +1289,7 @@
       "name": "DOLAPI",
       "organization": "DOL Department",
       "description": "Having trouble using DOL's API? Feel free to use the issues tab. If you are having trouble with any of our SDKs, please see their github pages.",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -1315,10 +1315,10 @@
       }
     },
     {
-      "name": "OSHA-Heat-Safety-Android-Es",
+      "name": "OSHA HEAT SAFETY ANDROID ES",
       "organization": "DOL Department",
       "description": "This app allows workers and supervisors to calculate the heat index for their worksite, and, based on the heat index, displays a risk level to outdoor workers",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -1348,10 +1348,10 @@
       }
     },
     {
-      "name": "OSHA-Heat-Safety-Blackberry",
+      "name": "OSHA HEAT SAFETY BLACKBERRY",
       "organization": "DOL Department",
       "description": "This app allows workers and supervisors to calculate the heat index for their worksite, and, based on the heat index, displays a risk level to outdoor workers.",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -1380,10 +1380,10 @@
       }
     },
     {
-      "name": "LaborStats-iOS",
+      "name": "LABORSTATS IOS",
       "organization": "DOL Department",
       "description": "Get the latest economic indicators from BLS & ETA.",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -1410,10 +1410,10 @@
       }
     },
     {
-      "name": "API-Status",
+      "name": "API STATUS",
       "organization": "DOL Department",
       "description": "A Mac menu bar app that sends a request every 15 minutes to the RESTful web API of your choice and displays a meter and time in ms for the response.",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -1440,10 +1440,10 @@
       }
     },
     {
-      "name": "ColdFusion-Sample-App",
+      "name": "COLDFUSION SAMPLE APP",
       "organization": "DOL Department",
       "description": "A sample app using the federal API SDK for ColdFusion.",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -1471,7 +1471,7 @@
       }
     },
     {
-      "name": "OSHA-Heat-Safety",
+      "name": "OSHA HEAT SAFETY",
       "organization": "DOL Department",
       "description": "Desktop version of the OSHA Heat Safety Tool, created as a proof of concept by the Office of Public Affairs in response to a suggestion from the public.",
       "license": "https://github.com/USDepartmentofLabor/OSHA-Heat-Safety/blob/master/LICENSE",
@@ -1502,7 +1502,7 @@
       }
     },
     {
-      "name": "Android-Sample-App",
+      "name": "ANDROID Sample APP",
       "organization": "DOL Department",
       "description": "A sample app using the federal API SDK for Android",
       "license": "https://github.com/USDepartmentofLabor/OSHA-Heat-Safety/blob/master/LICENSE",
@@ -1533,10 +1533,10 @@
       }
     },
     {
-      "name": "Blackberry-Sample-App",
+      "name": "BLACKBERRY SAMPLE APP",
       "organization": "DOL Department",
       "description": "Sample app and documentation for the Blackberry Federal SDK.",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -1564,7 +1564,7 @@
       }
     },
     {
-      "name": "JS-Dashboard",
+      "name": "JS DASHBOARD",
       "organization": "DOL Department",
       "description": "This code illustrates how to create a dashboard that will display graphs using the JIT, FLOT, and jQuery cycle API's in a section of a website.",
       "license": "null",
@@ -1594,10 +1594,10 @@
       }
     },
     {
-      "name": "LaborStats-Android",
+      "name": "LABOR STATS ANDROID",
       "organization": "DOL Department",
       "description": "Get the latest economic indicators from BLS & ETA.",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -1624,10 +1624,10 @@
       }
     },
     {
-      "name": "StrategyTrackeriPad",
+      "name": "STRATEGYTRACKERIPAD",
       "organization": "DOL Department",
       "description": "This is a sample project using the API SDK for iOS that demonstrates how it can be used for non-DOL APIs.",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [
@@ -1653,10 +1653,10 @@
       }
     },
     {
-      "name": "HelpfulRedist",
+      "name": "HELPFULREDIST",
       "organization": "DOL Department",
       "description": "The solution begins with the question “Was this page helpful,” which captures the feedback from the user about the page that is displayed on the browser.",
-      "license": "CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "openSourceProject": 1,
       "governmentWideReuseProject": 0,
       "tags": [

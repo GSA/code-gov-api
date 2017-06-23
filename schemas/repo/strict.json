@@ -43,16 +43,16 @@
       "format": "uri"
     },
     "license": {
-      "type": ["string","null"],
-      "format": "uri"
+      "type": ["string","null"]
+      
     },
     "homepage": {
       "type": "string",
       "format": "uri"
     },
     "downloadURL": {
-      "type": "string",
-      "format": "uri"
+      "type": "string"
+      
     },
     "tags": {
       "type": "array",
@@ -73,8 +73,8 @@
           "type": ["string", "null"]
         },
         "email": {
-          "type": ["string", "null"],
-          "format": "email"
+          "type": ["string", "null"]
+          
         },
         "twitter": {
           "type": ["string", "null"]
