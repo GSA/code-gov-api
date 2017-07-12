@@ -1,0 +1,50 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": true
+  },
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "extends": "eslint:recommended",
+  "rules": {
+    "valid-jsdoc": 1,
+    "default-case": 1,
+    "no-empty-function": 0,
+    "no-param-reassign": 0,
+    "no-unused-expressions": 0,
+    "global-require": 0,
+    "brace-style": 0,
+    "camelcase": 1,
+    "comma-dangle": 0,
+    "eol-last": 0,
+    "indent": [0, 2],
+    "line-comment-position": [
+      0,
+      {
+        "positon": "above"
+      }
+    ],
+    "max-len": [
+      0,
+      {
+        "code": 100
+      }
+    ],
+    "no-multiple-empty-lines": [
+      0,
+      {
+        "max": 1,
+        "maxEOF": 1,
+        "maxBOF": 0
+      }
+    ],
+    "semi": [
+      0,
+      "always"
+    ],
+    "no-var": 0
+  }
+}
