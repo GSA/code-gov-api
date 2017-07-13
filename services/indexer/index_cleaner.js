@@ -177,9 +177,9 @@ if (require.main === module) {
 
   IndexCleaner.init(ElasticsearchAdapter, reposAlias, numDays, (err)=> {
       if (err) {
-          console.log("Errors Occurred: " + err);
+          //console.log("Errors Occurred: " + err);
       } else {
-          console.log("Cleaning Completed.");
+          //console.log("Cleaning Completed.");
       }
   });
 }
