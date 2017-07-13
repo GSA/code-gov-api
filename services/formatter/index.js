@@ -153,7 +153,7 @@ class Formatter {
           }
         })
         .catch(function(err) {
-          console.log("license error: " + err);
+          //console.log("license error: " + err);
         });
     }
     return licensename;
@@ -176,7 +176,7 @@ class Formatter {
       );
       eventsurl += "/events";
 
-      console.log("eventsurl: " + eventsurl);
+      //console.log("eventsurl: " + eventsurl);
 
       var options = {
         url: eventsurl +
@@ -199,7 +199,7 @@ class Formatter {
             events = JSON.parse(body);
 
             if (events[0] != undefined) {
-              console.log("type: " + events[0].type);
+              //console.log("type: " + events[0].type);
               for (i = 0; i < Math.min(limit, events.length); i++) {
                 //eventdata= [{"avatar_url":contributors[i].avatar_url}];
 
@@ -225,7 +225,7 @@ class Formatter {
                     events[i].payload.commits[0].url +
                     "'";
                 } else if (events[i].type == "PullRequestEvent") {
-                  console.log(events[i].payload.pull_request.title);
+                  //console.log(events[i].payload.pull_request.title);
                   eventdata +=
                     ",'message': '" +
                     events[i].payload.pull_request.title +
@@ -233,7 +233,7 @@ class Formatter {
                     events[i].payload.pull_request.url +
                     "'";
                 } else if (events[i].type == "CreateEvent") {
-                  console.log(events[i].payload.ref);
+                  //console.log(events[i].payload.ref);
                   eventdata +=
                     ",'message': '" +
                     events[i].payload.ref_type +
@@ -308,7 +308,7 @@ class Formatter {
       );
       contributorsurl += "/contributors";
 
-      console.log("contributorsurl: " + contributorsurl);
+      //console.log("contributorsurl: " + contributorsurl);
 
       var options = {
         url: contributorsurl +
@@ -325,13 +325,13 @@ class Formatter {
 
       request(options, function(err, response, body) {
         if (err) {
-          console.error("contributor error: " + err);
+          //console.error("contributor error: " + err);
         } else {
           try {
             contributordata.length = 0; //clear the array
             contributors = JSON.parse(body);
             if (contributors[0] != undefined) {
-              console.log("login: " + contributors[0].login);
+              //console.log("login: " + contributors[0].login);
               for (i = 0; i < contributors.length; i++) {
                 contributordata.push({
                   login: contributors[i].login,
@@ -341,7 +341,7 @@ class Formatter {
               }
             }
           } catch (e) { //closing try
-            console.error(e);
+            //console.error(e);
           }
         }
       });
@@ -368,7 +368,7 @@ class Formatter {
       );
       languagesurl += "/languages";
 
-      console.log("languagesurl: " + languagesurl);
+      //console.log("languagesurl: " + languagesurl);
 
       var options1 = {
         url: languagesurl +
@@ -413,22 +413,16 @@ class Formatter {
 
       request(options2, function(err, response, body) {
         if (err) {
-          console.error("languages error: " + err);
+          //console.error("languages error: " + err);
         } else if (response.headers["status"] == "304 Not Modified") {
-          console.log("Status is: " + response.headers["status"]);
-          console.log(
-            "Requests Remaining is: " +
-              response.headers["x-ratelimit-remaining"]
-          );
+          //console.log("Status is: " + response.headers["status"]);
+          //console.log("Requests Remaining is: " + response.headers["x-ratelimit-remaining"]);
           //console.log("304 Not Modified");
           return repo.languages;
         } else {
-          console.log("Status is: " + response.headers["status"]);
-          console.log("ETag is: " + response.headers["etag"]);
-          console.log(
-            "Requests Remaining is: " +
-              response.headers["x-ratelimit-remaining"]
-          );
+          //console.log("Status is: " + response.headers["status"]);
+          //console.log("ETag is: " + response.headers["etag"]);
+          //console.log("Requests Remaining is: " +response.headers["x-ratelimit-remaining"]);
 
           try {
             //languagedata.length=0; //clear the array
@@ -442,7 +436,7 @@ class Formatter {
               }
             }
           } catch (e) { //closing try
-            console.error(e);
+            //console.error(e);
           }
         }
       });
