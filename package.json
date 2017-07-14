@@ -60,6 +60,8 @@
     "mocha-junit-reporter": "^1.13.0",
     "nyc": "^10.3.2",
     "proxyquire": "^1.8.0",
+    "request-promise": "^4.2.1",
+    "sleep": "^5.1.1",
     "supertest": "^3.0.0"
   },
   "engines": {

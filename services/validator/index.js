@@ -6,7 +6,6 @@
 
 ******************************************************************************/
 
-const _                   = require("lodash");
 const async               = require("async");
 const Ajv                 = require("ajv");
 const Utils               = require("../../utils");
@@ -110,8 +109,8 @@ class Validator {
           return false;
         }
         if (warning.dataPath === ".repository" && repo.repository === null) {
-          return false;
           this.logger("removing warning for closed source repo with license===null");
+          return false;
         }
         this.logger.info(warning.dataPath);       
         //if (warning.params && warning.dataPath === ".description" && warning.params.type === "string"){
@@ -119,8 +118,8 @@ class Validator {
        
       }
       if (warning.dataPath === ".license" && repo.license === null) {
-          return false;
-          this.logger("removing warning for closed source repo with repository===null");
+        this.logger("removing warning for closed source repo with repository===null");
+        return false;
       }
 
 
@@ -144,12 +143,12 @@ class Validator {
         //schema v1.0.1 requires the license element but technically allows it to be null, even for OSS. 
         //nudge here to include license info for OSS
         if (enhancement.dataPath === ".license" && repo.license === null) {
-          return false;
           this.logger("removing enhancement request for closed source repo with repository===null");
+          return false;
         }
         if (enhancement.dataPath === ".repository" && repo.repository === null) {
-          return false;
           this.logger("removing enhancement request for closed source repo with license===null");
+          return false;
         }
         this.logger.info(enhancement.dataPath);       
         //if (warning.params && warning.dataPath === ".description" && warning.params.type === "string"){
