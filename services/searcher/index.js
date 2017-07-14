@@ -176,7 +176,7 @@ class Searcher {
   // }
 
   _addStringFilter(body, field, filter) {
-    if(filter instanceof Array) {
+    if (filter instanceof Array) {
       let orBody = new Bodybuilder();
       filter.forEach((filterElement) => {
         logger.info(filterElement);
@@ -186,7 +186,7 @@ class Searcher {
     } else {
       body.filter("term", field, filter.toLowerCase());
     }
-  };
+  }
 
   _addStringFilters(body, q) {
     searchPropsByType["string"].forEach((field) => {
@@ -210,7 +210,6 @@ class Searcher {
               `Invalid date supplied for ${field}_${rangeType}. ` +
               `Please use format ${DATE_FORMAT} or ISO8601.`
             );
-            return;
           }
         }
       };
@@ -243,7 +242,6 @@ class Searcher {
             throw new Error(
               `Invalid number supplied for ${field}_${rangeType}.`
             );
-            return;
           }
         }
       };

@@ -83,7 +83,7 @@ class TermIndexer extends AbstractIndexer {
       type: ES_REPO_PARAMS.esType,
       body: {}
     };
-    this.ss = new SearchStream(adapter, searchQuery);;
+    this.ss = new SearchStream(adapter, searchQuery);
     this.indexCounter = 0;
   }
 

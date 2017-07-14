@@ -30,9 +30,9 @@ github.authenticate({
 });
 
 /**
-  Searches for gov repos (any mention of gov in the repo title, description, or
-  readme).
-**/
+ * Searches for gov repos (only mention of gov in the repo title, desc, or readme)
+ * @param callback
+ */
 function searchForGovRepos(callback) {
   // NOTE: must split up into time ranges because github has a 1000 result limit
   // when executing a repository search
@@ -41,7 +41,7 @@ function searchForGovRepos(callback) {
   // create catch all bin for < 1 month
   timeRanges.push(moment().subtract(1, "months").format(dateFormat) + " .. *");
   // create month-long time range bins for the last 5 years
-  for (i = 1; i <= 5 * 12; i++) {
+  for (let i = 1; i <= 5 * 12; i++) {
     timeRanges.push(
       moment().subtract(i + 1, "months").format(dateFormat) +
       " .. " +
@@ -49,7 +49,7 @@ function searchForGovRepos(callback) {
     );
   }
   // create year-long time range bins for years 5-10
-  for (i = 5; i <= 10; i++) {
+  for (let i = 5; i <= 10; i++) {
     timeRanges.push(
       moment().subtract(i + 1, "years").format(dateFormat) +
       " .. " +

@@ -1,7 +1,6 @@
 const async               = require("async");
 const _                   = require("lodash");
 const ElasticSearch       = require("elasticsearch");
-
 const AbstractIndexTool   = require("./abstract_index_tool");
 const Logger              = require("../../utils/logger");
 
@@ -170,16 +169,16 @@ class IndexCleaner extends AbstractIndexTool {
 // This will index all repos taking our default input.
 if (require.main === module) {
   //TODO: Make parameters
-  reposAlias = 'repos';
-  numDays = 10;
+  const reposAlias = 'repos';
+  const numDays = 10;
 
   const ElasticsearchAdapter = require('../../utils/search_adapters/elasticsearch_adapter');
 
   IndexCleaner.init(ElasticsearchAdapter, reposAlias, numDays, (err)=> {
       if (err) {
-          //console.log("Errors Occurred: " + err);
+          Logger.error("Errors Occurred: " + err);
       } else {
-          //console.log("Cleaning Completed.");
+          Logger.info("Cleaning Completed.");
       }
   });
 }
