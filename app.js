@@ -8,17 +8,13 @@ const _                   = require("lodash");
 const fs                  = require("fs");
 const async               = require("async");
 const express             = require("express");
-const request             = require("request");
 const path                = require("path");
 const md                  = require("marked");
 const git                 = require("git-rev");
-const favicon             = require('serve-favicon');
 const cookieParser        = require('cookie-parser');
 const bodyParser          = require('body-parser');
 const cors                = require('cors');
-const pug                 = require("pug");
 const Jsonfile            = require("jsonfile");
-const diff                = require("diff");
 const config              = require("./config");
 const searcherAdapter     = require("./utils/search_adapters/elasticsearch_adapter");
 const Searcher            = require("./services/searcher");
@@ -27,6 +23,11 @@ const Logger              = require("./utils/logger");
 const repoMapping         = require("./indexes/repo/mapping.json");
 const Indexer             = require("./scripts/index/index.js");
 const pkg                 = require("./package.json");
+/* eslint-disable */
+const request             = require("request");
+const pug                 = require("pug");
+const favicon             = require('serve-favicon');
+/* eslint-enable */
 
 /* ------------------------------------------------------------------ *
                             API CONFIG
@@ -59,7 +60,6 @@ let indexer = new Indexer();
 //   obscureHeaders: [],
 //   logger: logger
 // }));
-
 
 /* ------------------------------------------------------------------ *
                             API ROUTES
@@ -182,8 +182,6 @@ router.get('/repos', (req, res, next) => {
   queryReposAndSendResponse(q, res, next);
 });
 
-
-
 router.post('/repos', (req, res, next) => {
   let q = req.body;
   queryReposAndSendResponse(q, res, next);
@@ -220,7 +218,9 @@ router.get(`/agencies`, (req, res) => {
   async.parallel({
     agencyDataHash: (next) => {
       _readAgencyEndpointsFile((err, agencyEndpoints) => {
-        if (err) { return next(err); }
+        if (err) {
+          return next(err);
+        }
         let agencyDataHash = {};
         agencyEndpoints.forEach((agencyEndpoint) => {
           agencyDataHash[agencyEndpoint.acronym] = agencyEndpoint;
@@ -237,7 +237,9 @@ router.get(`/agencies`, (req, res) => {
       q.size = q.size ? q.size : 100;
 
       searcher.searchTerms(q, (err, terms) => {
-        if (err) { return next(err); }
+        if (err) {
+          return next(err);
+        }
         return next(null, terms.terms);
       });
     }
@@ -278,7 +280,9 @@ router.get(`/languages`, (req, res, next) => {
   q.size = q.size ? q.size : 100;
 
   searcher.searchTerms(q, (err, terms) => {
-    if (err) { return next(err); }
+    if (err) {
+      return next(err);
+    }
 
     let languages = [];
     terms.terms.forEach((term) => {
@@ -329,8 +333,6 @@ router.get(`/status`, (req, res) => {
 
 router.get(`/status/:agency/issues`, (req, res) => {
   let agency = req.params.agency.toUpperCase();
-
-
   const reportFilepath = _getRelativeFilepath(config.REPORT_FILEPATH);
   fs.readFile(reportFilepath, (err, data) => {
     if (err) {
@@ -421,7 +423,6 @@ router.get('/', (req, res) => {
 // all of our routes will be prefixed with /api/<version>/
 app.use('/api/0.1', router);
 
-
 /* ------------------------------------------------------------------ *
                             ERROR HANDLING
  * ------------------------------------------------------------------ */
@@ -454,7 +455,6 @@ app.use(function(err, req, res) {
     error: {}
   });
 });
-
 
 /* ------------------------------------------------------------------ *
                             SERVER

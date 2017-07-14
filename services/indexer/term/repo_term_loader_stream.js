@@ -56,8 +56,9 @@ class RepoTermLoaderStream extends Transform {
   _calcMostFrequentTerms() {
     this.logger.info(`Calculating most frequent terms...`);
     _.forOwn(this.terms, (termTypeObj, termType) => {
-      _.forOwn(termTypeObj, (termCount, termName) => {
+      _.forOwn(termTypeObj, (termCount) => {
         if (termCount > this.termMaxes[termType]) {
+
           this.termMaxes[termType] = termCount;
         }
       });

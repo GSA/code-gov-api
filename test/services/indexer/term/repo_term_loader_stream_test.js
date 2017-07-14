@@ -1,7 +1,10 @@
 const RepoTermLoaderStream = require("../../../../services/indexer/term/repo_term_loader_stream");
+const mocha = require('mocha');
+const describe = mocha.describe;
+const it = mocha.it;
 
 describe("RepoTermLoaderStream", () => {
-  var termIndexerMock = {
+  let termIndexerMock = {
     logger: {
       info: function() {}
     }
@@ -9,12 +12,12 @@ describe("RepoTermLoaderStream", () => {
 
   describe("#_transform", () => {
     it("does not raise an error when passed a repo with an undefined or null term", (done) => {
-      var repo = {
+      let repo = {
         "name": "frog",
         "agency.name": undefined,
         "agency.acronym": null
       };
-      var repoTermLoaderStream = new RepoTermLoaderStream(termIndexerMock);
+      let repoTermLoaderStream = new RepoTermLoaderStream(termIndexerMock);
       repoTermLoaderStream._transform(repo, null, done);
     });
   });

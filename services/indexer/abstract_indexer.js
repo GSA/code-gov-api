@@ -1,18 +1,16 @@
-const fs                  = require("fs");
-const path                = require("path");
-const async               = require("async");
-const _                   = require("lodash");
-const ElasticSearch       = require("elasticsearch");
 const moment              = require("moment");
-
 const Logger              = require("../../utils/logger");
+
+/* eslint-disable */
 const CONFIG              = require("../../config");
+const ElasticSearch       = require("elasticsearch");
 
 class ElasticSearchLogger extends Logger {
   get DEFAULT_LOGGER_NAME() {
     return "elasticsearch";
   }
 }
+/* eslint-enable */
 
 class AbstractIndexer {
 
@@ -27,7 +25,7 @@ class AbstractIndexer {
 
     // index is based on time stamp
     // get timestamp to append to alias name
-    var now = moment();
+    let now = moment();
     let timestamp = now.format('YYYYMMDD_HHmmss');
 
     // Set the index name to be alias appended with a timestamp.
@@ -51,7 +49,10 @@ class AbstractIndexer {
     this.client.indices.delete({
       index: this.esIndex
     }, (err, response, status) => {
-      if(err) { this.logger.error(err); }
+      if (err) {
+        this.logger.error(err); 
+      }
+      this.logger.info(status);
       return callback(err, response);
     });
   }
@@ -62,7 +63,10 @@ class AbstractIndexer {
       index: this.esIndex,
       body: this.esSettings
     }, (err, response, status) => {
-      if(err) { this.logger.error(err); }
+      if(err) {
+        this.logger.error(err); 
+      }
+      this.logger.info(status);
       return callback(err, response);
     });
   }
@@ -71,14 +75,20 @@ class AbstractIndexer {
     this.client.indices.exists({
       index: this.esIndex
     }, (err, response, status) => {
-      if(err) { this.logger.error(err); }
+      if(err) {
+        this.logger.error(err); 
+      }
+      this.logger.info(status);
       return callback(err, response);
     });
   }
 
   indexDocument(doc, callback) {
     this.client.index(doc, (err, response, status) => {
-      if(err) { this.logger.error(err); }
+      if(err) {
+        this.logger.error(err); 
+      }
+      this.logger.info(status);
       return callback(err, response);
     });
   }
@@ -90,7 +100,10 @@ class AbstractIndexer {
       type: this.esType,
       body: this.esMapping
     }, (err, response, status) => {
-      if(err) { this.logger.error(err); }
+      if(err) {
+        this.logger.error(err); 
+      }
+      this.logger.info(status);
       return callback(err, response);
     });
   }
