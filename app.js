@@ -71,21 +71,22 @@ let searcher = new Searcher(searcherAdapter);
 
 const _getRelativeFilepath = (filepath) => {
   return path.join(__dirname, filepath);
-}
+};
 
-const searchPropsByType =
-  Utils.getFlattenedMappingPropertiesByType(repoMapping["repo"]);
+const searchPropsByType = Utils.getFlattenedMappingPropertiesByType(repoMapping["repo"]);
 
+/*
 const respondInvalidQuery = (res) => {
   return res.status(400).send("Invalid query.");
-}
+};
+*/
 
 /* get a repo by nci or nct id */
-router.get('/repo/:id', (req, res, next) => {
+router.get('/repo/:id', (req, res) => {
   let id = req.params.id;
   searcher.getRepoById(id, (err, repo) => {
     // TODO: add better error handling
-    if(err) {
+    if (err) {
       return res.sendStatus(500);
     }
     if (!_.isEmpty(repo)) {
@@ -123,9 +124,9 @@ const _getInvalidRepoQueryParams = (queryParams) => {
     }
     return true;
   });
-}
+};
 
-const queryReposAndSendResponse = (q, res, next) => {
+const queryReposAndSendResponse = (q, res) => {
   let queryParams = Object.keys(q);
   // validate query params...
   let invalidParams = _getInvalidRepoQueryParams(queryParams);
@@ -147,7 +148,7 @@ const queryReposAndSendResponse = (q, res, next) => {
     // TODO: format repos
     res.json(repos);
   });
-}
+};
 
 const _readStatusReportFile = (next) => {
   const reportFilepath = _getRelativeFilepath(config.REPORT_FILEPATH);
@@ -162,7 +163,7 @@ const _readStatusReportFile = (next) => {
     );
     return next(null, statusData);
   });
-}
+};
 
 const _readAgencyEndpointsFile = (next) => {
   const agencyEndpointsFilepath = _getRelativeFilepath(config.AGENCY_ENDPOINTS_FILE);
@@ -173,7 +174,7 @@ const _readAgencyEndpointsFile = (next) => {
     let agencyEndpoints = JSON.parse(data);
     return next(null, agencyEndpoints);
   });
-}
+};
 
 /* get repos that match supplied search criteria */
 router.get('/repos', (req, res, next) => {
@@ -189,7 +190,7 @@ router.post('/repos', (req, res, next) => {
 });
 
 /* get key terms that can be used to search through repos */
-router.get('/terms', (req, res, next) => {
+router.get('/terms', (req, res) => {
   let q = _.pick(req.query, ["term", "term_type", "size", "from"]);
 
   searcher.searchTerms(q, (err, terms) => {
@@ -201,7 +202,7 @@ router.get('/terms', (req, res, next) => {
   });
 });
 
-router.post('/terms', (req, res, next) => {
+router.post('/terms', (req, res) => {
   let q = _.pick(req.body, ["term", "term_type", "size", "from"]);
 
   searcher.searchTerms(q, (err, terms) => {
@@ -213,7 +214,7 @@ router.post('/terms', (req, res, next) => {
   });
 });
 
-router.get(`/agencies`, (req, res, next) => {
+router.get(`/agencies`, (req, res) => {
   // NOTE: this relies on the terms endpoint and the `agency.acronym` term type
 
   async.parallel({
@@ -294,18 +295,18 @@ router.get(`/languages`, (req, res, next) => {
   });
 });
 
-router.get('/repo.json', (req, res, next) => {
+router.get('/repo.json', (req, res) => {
   let repoJson = Utils.omitPrivateKeys(repoMapping);
   let excludeKeys = [
     "analyzer", "index",
     "format", "include_in_root",
     "include_in_all"
-  ]
+  ];
   repoJson = Utils.omitDeepKeys(repoJson, excludeKeys);
   res.json(repoJson["repo"]["properties"]);
 });
 
-router.get('/status.json', (req, res, next) => {
+router.get('/status.json', (req, res) => {
   _readStatusReportFile((err, statusData) => {
     if (err) {
       logger.error(err);
@@ -315,7 +316,7 @@ router.get('/status.json', (req, res, next) => {
   });
 });
 
-router.get(`/status`, (req, res, next) => {
+router.get(`/status`, (req, res) => {
   _readStatusReportFile((err, statusData) => {
     if (err) {
       logger.error(err);
@@ -326,7 +327,7 @@ router.get(`/status`, (req, res, next) => {
   });
 });
 
-router.get(`/status/:agency/issues`, (req, res, next) => {
+router.get(`/status/:agency/issues`, (req, res) => {
   let agency = req.params.agency.toUpperCase();
 
 
@@ -348,7 +349,7 @@ router.get(`/status/:agency/issues`, (req, res, next) => {
 
 });
 
-router.get(`/status/:agency/fetched`, (req, res, next) => {
+router.get(`/status/:agency/fetched`, (req, res) => {
   let agency = req.params.agency.toUpperCase();
   const fetchedFilepath = _getRelativeFilepath(
     `${config.FETCHED_DIR}/${agency}.json`
@@ -358,12 +359,14 @@ router.get(`/status/:agency/fetched`, (req, res, next) => {
       logger.error(err);
       return res.sendStatus(500);
     }
-    let title = "Code.gov API Status for " + agency;
+    if (!data.title) {
+      data.title = "Code.gov API Status for " + agency;
+    }
     return res.json(data);
   });
 });
 
-router.get(`/status/:agency/discovered`, (req, res, next) => {
+router.get(`/status/:agency/discovered`, (req, res) => {
   let agency = req.params.agency.toUpperCase();
   const discoveredFilepath = _getRelativeFilepath(
     `${config.DISCOVERED_DIR}/${agency}.json`
@@ -373,7 +376,9 @@ router.get(`/status/:agency/discovered`, (req, res, next) => {
       logger.error(err);
       return res.sendStatus(500);
     }
-    let title = "Code.gov API Status for " + agency;
+    if (!data.title) {
+      data.title = "Code.gov API Status for " + agency;
+    }
     return res.json(data);
   });
 });
@@ -394,7 +399,7 @@ router.get(`/status/:agency/discovered`, (req, res, next) => {
 //   });
 // });
 
-router.get('/version', (req, res, next) => {
+router.get('/version', (req, res) => {
   const _sendVersionResponse = (gitHash) => {
     res.json({
       "version": pkg.version,
@@ -408,7 +413,7 @@ router.get('/version', (req, res, next) => {
   });
 });
 
-router.get('/', (req, res, next) => {
+router.get('/', (req, res) => {
   let title = "Code.gov API";
   res.render('index', { filters: [ md ], title: title });
 });
@@ -423,14 +428,14 @@ app.use('/api/0.1', router);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
+  let err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
 
 // development error handler (prints stacktrace)
 if (app.get('env') === 'development') {
-  app.use(function(err, req, res, next) {
+  app.use(function(err, req, res) {
     res.status(err.status || 500);
     logger.error(err);
     res.render('error', {
@@ -441,7 +446,7 @@ if (app.get('env') === 'development') {
 }
 
 // production error handler (prints generic error message)
-app.use(function(err, req, res, next) {
+app.use(function(err, req, res) {
   res.status(err.status || 500);
   logger.error(err);
   res.render('error', {
@@ -461,10 +466,10 @@ if(!module.parent) {
 }
 
 // schedule the interval at which indexings should happen
-index_interval = config.INDEX_INTERVAL_SECONDS;
-if (index_interval) {
-  indexer.schedule(index_interval);
-  logger.info(`Production: re-indexing every ${index_interval} seconds`);
+let indexInterval = config.INDEX_INTERVAL_SECONDS;
+if (indexInterval) {
+  indexer.schedule(indexInterval);
+  logger.info(`Production: re-indexing every ${indexInterval} seconds`);
 }
 
 logger.info(`Started API server at http://localhost:${port}/`);

@@ -72,17 +72,13 @@ const moment = require("moment");
 const Utils = require("../../utils");
 const Logger = require("../../utils/logger");
 const request = require("request");
-// These modules are used in methods below, but the code that calls
-// those methods is currently commented out.
-// I've commented out these requires to save us from needing yet more
-// dependencies in packages.json.
-// const request_promise = require("request-promise");
-// const sleep = require("sleep");
+const request_promise = require("request-promise");
+const sleep = require("sleep");
 
 let lastupdated, etag;
 
-var licensename = "";
-var contributors,
+let licensename = "";
+let contributors,
   contributordata = [],
   events,
   eventdata,
@@ -117,9 +113,9 @@ class Formatter {
     }
   }
   _formatLicense(repo) {
-    var license_array = new Array();
+    let license_array = new Array();
 
-    var license_url = repo.repository;
+    let license_url = repo.repository;
     if (repo.license != null) {
       license_url = license_url.replace(
         "//github.com/",
@@ -193,7 +189,7 @@ class Formatter {
 
       request(options, function(err, response, body) {
         if (err) {
-          console.error("event error: " + err);
+          Logger.error("event error: " + err);
         } else {
           try {
             events = JSON.parse(body);
@@ -278,7 +274,7 @@ class Formatter {
               eventfeed = "[" + eventdata + "]";
             }
           } catch (e) { //closing try
-            console.error(e);
+            Logger.error(e);
           }
         } //close else
       });
@@ -325,7 +321,7 @@ class Formatter {
 
       request(options, function(err, response, body) {
         if (err) {
-          //console.error("contributor error: " + err);
+          Logger.error("contributor error: " + err);
         } else {
           try {
             contributordata.length = 0; //clear the array
@@ -341,7 +337,7 @@ class Formatter {
               }
             }
           } catch (e) { //closing try
-            //console.error(e);
+            Logger.error(e);
           }
         }
       });
@@ -387,7 +383,7 @@ class Formatter {
 
       request(options1, function(err, response, body) {
         if (err) {
-          console.error("initial language request error: " + err);
+          Logger.error("initial language request error: " + err);
         } else {
           etag = response.headers["etag"];
           lastupdated = response.headers["last-modified"];
@@ -413,7 +409,7 @@ class Formatter {
 
       request(options2, function(err, response, body) {
         if (err) {
-          //console.error("languages error: " + err);
+          Logger.consoleerror("languages error: " + err);
         } else if (response.headers["status"] == "304 Not Modified") {
           //console.log("Status is: " + response.headers["status"]);
           //console.log("Requests Remaining is: " + response.headers["x-ratelimit-remaining"]);
@@ -436,7 +432,7 @@ class Formatter {
               }
             }
           } catch (e) { //closing try
-            //console.error(e);
+            Logger.error(e);
           }
         }
       });
