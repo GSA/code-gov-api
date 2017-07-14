@@ -25,10 +25,12 @@ class Validator {
     SCHEMAS.forEach((schemaName) => {
       let pathToSchemas = `${PATH_TO_SCHEMAS}/${schemaName}`;
       this.validators[schemaName] = {
+        /* eslint-disable */
         relaxed: ajv.compile(require(`${pathToSchemas}/relaxed.json`)),
         strict: ajv.compile(require(`${pathToSchemas}/strict.json`)),
         enhanced: ajv.compile(require(`${pathToSchemas}/enhanced.json`))
-      }
+        /* eslint-enable */
+      };
     });
   }
 
@@ -60,7 +62,6 @@ class Validator {
     }
   }
 
-
   _validateRepoEnhanced(repo, callback) {
     // validate for enhancements
     let valid = this.validators["repo"]["enhanced"](repo);
@@ -68,14 +69,13 @@ class Validator {
       // this.logger.info(`Didn't find any warnings for ${repo.name} (${repo.repoID}).`);
       callback(null, []);
     } else {
-      this.logger.info(`Encountered potential enhancements when validating repo data for ${repo.name} (${repo.repoID}).`);
+      this.logger.info(`Encountered potential enhancements when validating repo data for ${repo.name}`
+        + `(${repo.repoID}).`);
       let enhancements = this.validators["repo"]["enhanced"].errors;
       this.logger.warning(enhancements);
       callback(null, enhancements);
     }
   }
-
-
 
   _removeSpecialCaseErrors(repo, errors) {
     // NOTE: it is possible to handle these case(s) by altering the json-schema,
@@ -94,7 +94,6 @@ class Validator {
       return true;
     });
   }
-
 
   _removeSpecialCaseWarnings(repo, warnings) {
     // NOTE: it is possible to handle these case(s) by altering the json-schema,
@@ -121,8 +120,6 @@ class Validator {
         this.logger("removing warning for closed source repo with repository===null");
         return false;
       }
-
-
 
       return true;
     });
@@ -159,8 +156,6 @@ class Validator {
       return true;
     });
   }
-
-
 
   validateRepo(repo, callback) {
     this.logger.info(`Validating repo data for ${repo.name} (${repo.repoID})...`);
@@ -223,7 +218,9 @@ class Validator {
         }
       }
       // NOTE: need to buffer because ajs' promises don't work
-      setTimeout(() => { callback(err, result); }, 10);
+      setTimeout(() => {
+        callback(err, result); 
+      }, 10);
       // return callback(err, result);
     });
   }

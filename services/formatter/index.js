@@ -67,7 +67,6 @@
 
 ******************************************************************************/
 
-const _ = require("lodash");
 const moment = require("moment");
 const Utils = require("../../utils");
 const Logger = require("../../utils/logger");
@@ -78,13 +77,15 @@ const sleep = require("sleep");
 let lastupdated, etag;
 
 let licensename = "";
-let contributors,
-  contributordata = [],
-  events,
-  eventdata,
-  eventfeed,
-  languages,
-  languagedata;
+let contributors;
+let contributordata = [];
+let events;
+let eventdata;
+/* eslint-disable */
+let eventfeed;
+/* eslint-enable */
+let languages;
+let languagedata;
 
 class Formatter {
   constructor() {
@@ -113,8 +114,6 @@ class Formatter {
     }
   }
   _formatLicense(repo) {
-    let license_array = new Array();
-
     let license_url = repo.repository;
     if (repo.license != null) {
       license_url = license_url.replace(
@@ -122,7 +121,7 @@ class Formatter {
         "//api.github.com/repos/"
       );
 
-      var options = {
+      let options = {
         uri: license_url +
           "?client_id=" +
           process.env.CLIENT_ID +
@@ -149,7 +148,7 @@ class Formatter {
           }
         })
         .catch(function(err) {
-          //console.log("license error: " + err);
+          Logger.error("license error:", err);
         });
     }
     return licensename;
@@ -158,8 +157,8 @@ class Formatter {
   _formatEvents(repo) {
     // add event activity to repo for GitHub repos
 
-    var i, limit = 1;
-    var eventsurl = repo.repository;
+    let i, limit = 1;
+    let eventsurl = repo.repository;
 
     if (!eventsurl.includes("github.com")) {
       repo["events"] = [];
@@ -174,7 +173,7 @@ class Formatter {
 
       //console.log("eventsurl: " + eventsurl);
 
-      var options = {
+      let options = {
         url: eventsurl +
           "?client_id=" +
           process.env.CLIENT_ID +
@@ -286,9 +285,9 @@ class Formatter {
   _formatContributors(repo) {
     // add event activity to repo for GitHub repos
 
-    var i;
+    let i;
 
-    var contributorsurl = repo.repository;
+    let contributorsurl = repo.repository;
 
     //contributordata.push({"login":"testuser","avatar_url":"https://avatars2.githubusercontent.com/u/6654994?v=3","html_url":"https://github.com/lukad03"});
     //contributordata.push({"login":"testuser2","avatar_url":"https://avatars2.githubusercontent.com/u/6654994?v=3","html_url":"https://github.com/lukad04"});
@@ -306,7 +305,7 @@ class Formatter {
 
       //console.log("contributorsurl: " + contributorsurl);
 
-      var options = {
+      let options = {
         url: contributorsurl +
           "?client_id=" +
           process.env.CLIENT_ID +
@@ -349,9 +348,9 @@ class Formatter {
   _formatLanguages(repo) {
     // add language to repo for GitHub repos
 
-    var i;
+    let i;
 
-    var languagesurl = repo.repository;
+    let languagesurl = repo.repository;
 
     if (!languagesurl.includes("github.com")) {
       repo["languages"] = [];
@@ -366,7 +365,7 @@ class Formatter {
 
       //console.log("languagesurl: " + languagesurl);
 
-      var options1 = {
+      let options1 = {
         url: languagesurl +
           "?client_id=" +
           process.env.CLIENT_ID +
@@ -377,7 +376,8 @@ class Formatter {
           Accept: "application/vnd.github.v3+json",
           "Content-Type": "application/json",
           "Cache-Control": "public, max-age=604800",
-          "Access-Control-Expose-Headers": "ETag,X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-Poll-Interval, Last-Modified"
+          "Access-Control-Expose-Headers": "ETag,X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, "
+            + "X-RateLimit-Reset, X-Poll-Interval, Last-Modified"
         }
       };
 
@@ -385,12 +385,13 @@ class Formatter {
         if (err) {
           Logger.error("initial language request error: " + err);
         } else {
+          Logger.info('body', body);
           etag = response.headers["etag"];
           lastupdated = response.headers["last-modified"];
         }
       });
 
-      var options2 = {
+      let options2 = {
         url: languagesurl +
           "?client_id=" +
           process.env.CLIENT_ID +
@@ -401,7 +402,8 @@ class Formatter {
           Accept: "application/vnd.github.v3+json",
           "Content-Type": "application/json",
           "Cache-Control": "public, max-age=604800",
-          "Access-Control-Expose-Headers": "ETag,X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-Poll-Interval, Last-Modified",
+          "Access-Control-Expose-Headers": "ETag,X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, "
+            + "X-RateLimit-Reset, X-Poll-Interval, Last-Modified",
           "If-None-Match": etag,
           "If-Modified-Since": lastupdated
         }
@@ -463,9 +465,10 @@ class Formatter {
   }
 
   formatRepo(repo, callback) {
-    var formattedRepo;
+    let formattedRepo;
     try {
       formattedRepo = this._formatRepo(repo);
+      Logger.info('formatted repo', formattedRepo);
     } catch (err) {
       this.logger.error(`Error when formatting repo: ${err}`);
       return callback(err, repo);

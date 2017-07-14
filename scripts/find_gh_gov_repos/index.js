@@ -3,8 +3,6 @@
   produces a code.json for each agency.
 ***/
 
-const fs                   = require("fs");
-const _                    = require("lodash");
 const async                = require("async");
 const moment               = require("moment");
 const Github               = require("github");
@@ -178,7 +176,9 @@ function crawlAgencyOrganizationRepos(agency, callback) {
         logger.error(err);
         return callback(err);
       }
-      reposArr.forEach((repos) => { govRepos = govRepos.concat(repos); });
+      reposArr.forEach((repos) => {
+        govRepos = govRepos.concat(repos); 
+      });
       callback(null, govRepos);
     });
   } else {
@@ -227,7 +227,7 @@ function formatRepoIntoProject(repo) {
       "lastModified": moment(repo.updated_at).toISOString(),
       "metadataLastUpdated": moment().toISOString()
     }
-  }
+  };
 }
 
 // /archive/master.zip
@@ -253,7 +253,7 @@ function crawlAgencyRepos(agency, callback) {
   let reposLicenses = {};
   async.waterfall([
     (next) => {
-      fetchReposForOrg(agency, next)
+      fetchReposForOrg(agency, next);
     },
     (repos, next) => {
       agencyRepos = agencyRepos.concat(repos);
@@ -289,5 +289,5 @@ function crawlAgencyRepos(agency, callback) {
 }
 
 async.eachSeries(agenciesToCrawl, crawlAgencyRepos, (err) => {
-  logger.info("Done!");
+  logger.error("Error", err);
 });
