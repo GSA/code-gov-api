@@ -65,7 +65,9 @@ function searchForGovRepos(callback) {
       return callback(err);
     }
     let govRepos = [];
-    govReposArr.forEach((arr) => { govRepos = govRepos.concat(arr); });
+    govReposArr.forEach((arr) => {
+      govRepos = govRepos.concat(arr); 
+    });
     logger.info(`Found ${govRepos.length} repos in total.`);
     callback(null, govRepos);
   });
@@ -136,6 +138,7 @@ function filterForGovOrgs(owners, callback) {
   );
   async.eachSeries(owners, getOwnerData, (err, done) => {
     callback(err);
+    Logger.info('done', done);
   });
 }
 
@@ -177,11 +180,21 @@ function writeJsonToFile(json, callback) {
 }
 
 async.waterfall([
-  (next) => { startWriteToFile(next); },
-  (next) => { searchForGovRepos(next); },
-  (repos, next) => { getOwnersFromRepos(repos, next); },
-  (owners, next) => { filterForGovOrgs(owners, next); },
-  (next) => { endWriteToFile(next); }
+  (next) => {
+    startWriteToFile(next); 
+  },
+  (next) => {
+    searchForGovRepos(next); 
+  },
+  (repos, next) => {
+    getOwnersFromRepos(repos, next); 
+  },
+  (owners, next) => {
+    filterForGovOrgs(owners, next); 
+  },
+  (next) => {
+    endWriteToFile(next); 
+  }
 ], (err) => {
-  logger.info("Done.");
+  logger.error("Err", err);
 });

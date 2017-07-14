@@ -5,11 +5,8 @@
 
 ******************************************************************************/
 
-const _                   = require("lodash");
-const fs                  = require("fs");
 const path                = require("path");
 const Jsonfile            = require("jsonfile");
-const Utils               = require("../../utils");
 const Logger              = require("../../utils/logger");
 const config              = require("../../config");
 
@@ -47,7 +44,6 @@ class Reporter {
     this.report.statuses[itemName]["issues"].push(issuesObj);
   }
 
-
   reportVersion(itemName, version) {
     this._createReportItemIfDoesntExist(itemName);
     this.report.statuses[itemName]["version"] = version;
@@ -76,7 +72,7 @@ class Reporter {
         this.logger.error(err);
       }
       return callback(err);
-    })
+    });
   }
 
 }

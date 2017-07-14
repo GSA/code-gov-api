@@ -61,5 +61,5 @@ class MockClient {
 
 }
 
-let exportedInstance = new TestableElasticsearchAdapter()
+let exportedInstance = new TestableElasticsearchAdapter();
 module.exports = exportedInstance;

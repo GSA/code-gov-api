@@ -1,8 +1,7 @@
-const async               = require("async");
 const _                   = require("lodash");
-const ElasticSearch       = require("elasticsearch");
-
 const Logger              = require("../../utils/logger");
+/* eslint-disable */
+const ElasticSearch       = require("elasticsearch");
 const CONFIG              = require("../../config");
 
 class ElasticSearchLogger extends Logger {
@@ -10,6 +9,7 @@ class ElasticSearchLogger extends Logger {
     return "elasticsearch";
   }
 }
+/* eslint-enable */
 
 /**
  * Base Class for Index Tools.  This will allow us to share common ES functions
@@ -34,8 +34,6 @@ class AbstractIndexTool {
     this.client = adapter.getClient();
   }
 
-
-
   /**
    * Gets an array of indices that are associated with the alias
    *
@@ -49,8 +47,10 @@ class AbstractIndexTool {
       name: aliasName
     }, (err, response, status) => {
       let indices = new Array();
-      if(err) { this.logger.error(err); }
-      else {
+      if(err) {
+        this.logger.error(err); 
+      } else {
+        Logger.info('Status', status);
         _.forEach(response, function(item, key) {
           if (_.has(item, ['aliases', aliasName])) {
             indices.push(key);
@@ -73,12 +73,13 @@ class AbstractIndexTool {
     this.client.indices.existsAlias({
       name: aliasName
     }, (err, response, status) => {
-      if(err) { this.logger.error(err); }
+      if (err) {
+        this.logger.error(err); 
+      }
+      Logger.info('Status', status);
       return callback(err, response);
     });
   }
-
-
 
   /**
    * Initializes and executes the swapping of aliases for trials and terms

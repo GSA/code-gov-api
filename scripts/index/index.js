@@ -37,11 +37,11 @@ class Indexer {
 
   schedule(delayInSeconds) {
     setInterval(this.index, delayInSeconds * 1000,
-                (err) => {
-                  if (err) {
-                    this.logger.error(err);
-                  }
-                });
+      (err) => {
+        if (err) {
+          this.logger.error(err);
+        }
+      });
   }
 
 }

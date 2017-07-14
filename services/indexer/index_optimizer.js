@@ -1,15 +1,14 @@
-const async               = require("async");
-const _                   = require("lodash");
-const ElasticSearch       = require("elasticsearch");
-
 const AbstractIndexTool   = require("./abstract_index_tool");
 const Logger              = require("../../utils/logger");
 
+/* eslint-disable */
+const ElasticSearch       = require("elasticsearch");
 class ElasticSearchLogger extends Logger {
   get DEFAULT_LOGGER_NAME() {
     return "elasticsearch";
   }
 }
+/* eslint-enable */
 
 /**
  * Class for optimizing ElasticSearch Indexes
@@ -43,11 +42,14 @@ class IndexOptimizer extends AbstractIndexTool {
     this.logger.info(
       `Optimizing Index (${indexName})`);
     this.client.indices.forcemerge({
-        maxNumSegments: 1,
-        index: indexName,
-        requestTimeout: 90000
+      maxNumSegments: 1,
+      index: indexName,
+      requestTimeout: 90000
     }, (err, response, status) => {
-      if(err) { this.logger.error(err); }
+      if(err) {
+        this.logger.error(err); 
+      }
+      this.logger.info('Status', status);
       return callback(err, response);
     });
   }
@@ -66,7 +68,9 @@ class IndexOptimizer extends AbstractIndexTool {
     optimizer.logger.info(`Starting index optimization.`);
 
     optimizer.forceMerge(repoIndexInfo.esIndex, (err) => {
-      if(err) { optimizer.logger.error(err); }
+      if(err) {
+        optimizer.logger.error(err); 
+      }
       optimizer.logger.info(`Finished optimizing indices.`);
       return callback(err);
     });
