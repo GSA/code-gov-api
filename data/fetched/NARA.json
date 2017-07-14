@@ -31,6 +31,7 @@
           "name": "Federal Agencies Digital Guidelines Initiative"
         }
       ],
+      "exemption": null,
       "updated": {
         "lastCommit": "2012-09-06",
         "metadataLastUpdated": "2016-02-16",
@@ -62,6 +63,7 @@
       "languages": [
         "json"
       ],
+      "exemption": null,
       "updated": {
         "lastCommit": "2015-02-02",
         "metadataLastUpdated": "2015-02-02",
@@ -92,6 +94,7 @@
       "languages": [
         "ruby"
       ],
+      "exemption": null,
       "updated": {
         "lastCommit": "2015-02-02",
         "metadataLastUpdated": "2015-02-02",
@@ -121,6 +124,7 @@
       "languages": [
         "ruby"
       ],
+      "exemption": null,
       "updated": {
         "lastCommit": "2016-11-03",
         "metadataLastUpdated": "2015-02-02",
@@ -150,6 +154,7 @@
       "languages": [
         "ruby"
       ],
+      "exemption": null,
       "updated": {
         "lastCommit": "2016-07-26",
         "metadataLastUpdated": "2016-07-26",
@@ -180,6 +185,7 @@
       "languages": [
         "java"
       ],
+      "exemption": null,
       "updated": {
         "lastCommit": "2012-10-02",
         "metadataLastUpdated": "2016-02-16",
@@ -210,6 +216,7 @@
       "languages": [
         "java"
       ],
+      "exemption": null,
       "updated": {
         "lastCommit": "2012-02-17",
         "metadataLastUpdated": "2012-02-17",
@@ -241,6 +248,7 @@
       "languages": [
         "java"
       ],
+      "exemption": null,
       "updated": {
         "lastCommit": "2016-09-30",
         "metadataLastUpdated": "2016-09-30",
@@ -271,6 +279,7 @@
       "languages": [
         "python"
       ],
+      "exemption": null,
       "updated": {
         "lastCommit": "2014-10-31",
         "metadataLastUpdated": "2014-10-27",
@@ -300,6 +309,7 @@
       "languages": [
         "java"
       ],
+      "exemption": null,
       "updated": {
         "lastCommit": "2011-10-11",
         "metadataLastUpdated": "2016-02-16",
@@ -331,6 +341,7 @@
       "languages": [
         "java"
       ],
+      "exemption": null,
       "updated": {
         "lastCommit": "2016-09-29",
         "metadataLastUpdated": "2016-10-03",
