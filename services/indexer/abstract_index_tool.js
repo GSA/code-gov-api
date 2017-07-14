@@ -50,7 +50,9 @@ class AbstractIndexTool {
       if(err) {
         this.logger.error(err); 
       } else {
-        Logger.info('Status', status);
+        if (status) {
+          this.logger.info('Status', status);
+        }
         _.forEach(response, function(item, key) {
           if (_.has(item, ['aliases', aliasName])) {
             indices.push(key);
@@ -76,7 +78,9 @@ class AbstractIndexTool {
       if (err) {
         this.logger.error(err); 
       }
-      Logger.info('Status', status);
+      if (status) {
+        this.logger.info('Status', status);
+      }
       return callback(err, response);
     });
   }

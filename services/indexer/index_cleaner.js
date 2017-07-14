@@ -65,7 +65,9 @@ class IndexCleaner extends AbstractIndexTool {
         this.logger.error(err);
         return callback(err, false);
       } else {
-        this.logger.info('Status', status);
+        if (status) {
+          this.logger.info('Status', status);
+        }
         let indices = [];
 
         let currTime = this._toDays(Date.now());

@@ -1,11 +1,12 @@
 const _                   = require("lodash");
 const Bodybuilder         = require("bodybuilder");
 const moment              = require("moment");
-
 const config              = require("../../config");
 const Utils               = require("../../utils");
 const Logger              = require("../../utils/logger");
 const repoMapping         = require("../../indexes/repo/mapping.json");
+
+const logger = new Logger();
 
 const DATE_FORMAT = "YYYY-MM-DD";
 const REPO_RESULT_SIZE_MAX = 3000;
@@ -379,7 +380,7 @@ class Searcher {
    */
   _addSortOrder(body, q) {
     // TODO: implement some sort of sorting?
-    Logger.info('params', body, q);
+    logger.info('params', body, q);
   }
 
   _searchReposQuery(q) {

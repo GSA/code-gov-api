@@ -45,7 +45,9 @@ class RepoTermIndexerStream extends Writable {
       if(err) {
         this.logger.error(err);
       }
-      this.logger.info('Status', status);
+      if (status) {
+        this.logger.info('Status', status);
+      }
       this.termIndexer.indexCounter++;
 
       return done(err, response);
