@@ -74,6 +74,7 @@ const request = require("request");
 const request_promise = require("request-promise");
 const sleep = require("sleep");
 
+const logger = new Logger();
 let lastupdated, etag;
 
 let licensename = "";
@@ -385,7 +386,7 @@ class Formatter {
         if (err) {
           Logger.error("initial language request error: " + err);
         } else {
-          Logger.info('body', body);
+          logger.info('body', body);
           etag = response.headers["etag"];
           lastupdated = response.headers["last-modified"];
         }
@@ -468,7 +469,7 @@ class Formatter {
     let formattedRepo;
     try {
       formattedRepo = this._formatRepo(repo);
-      Logger.info('formatted repo', formattedRepo);
+      logger.info('formatted repo', formattedRepo);
     } catch (err) {
       this.logger.error(`Error when formatting repo: ${err}`);
       return callback(err, repo);

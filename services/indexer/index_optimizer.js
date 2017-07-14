@@ -49,7 +49,9 @@ class IndexOptimizer extends AbstractIndexTool {
       if(err) {
         this.logger.error(err); 
       }
-      this.logger.info('Status', status);
+      if (status) {
+        this.logger.info('Status', status);
+      }
       return callback(err, response);
     });
   }
