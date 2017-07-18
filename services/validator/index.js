@@ -6,7 +6,6 @@
 
 ******************************************************************************/
 
-const _                   = require("lodash");
 const async               = require("async");
 const Ajv                 = require("ajv");
 const Utils               = require("../../utils");
@@ -26,10 +25,12 @@ class Validator {
     SCHEMAS.forEach((schemaName) => {
       let pathToSchemas = `${PATH_TO_SCHEMAS}/${schemaName}`;
       this.validators[schemaName] = {
+        /* eslint-disable */
         relaxed: ajv.compile(require(`${pathToSchemas}/relaxed.json`)),
         strict: ajv.compile(require(`${pathToSchemas}/strict.json`)),
         enhanced: ajv.compile(require(`${pathToSchemas}/enhanced.json`))
-      }
+        /* eslint-enable */
+      };
     });
   }
 
@@ -61,7 +62,6 @@ class Validator {
     }
   }
 
-
   _validateRepoEnhanced(repo, callback) {
     // validate for enhancements
     let valid = this.validators["repo"]["enhanced"](repo);
@@ -69,14 +69,13 @@ class Validator {
       // this.logger.info(`Didn't find any warnings for ${repo.name} (${repo.repoID}).`);
       callback(null, []);
     } else {
-      this.logger.info(`Encountered potential enhancements when validating repo data for ${repo.name} (${repo.repoID}).`);
+      this.logger.info(`Encountered potential enhancements when validating repo data for ${repo.name}`
+        + `(${repo.repoID}).`);
       let enhancements = this.validators["repo"]["enhanced"].errors;
       this.logger.warning(enhancements);
       callback(null, enhancements);
     }
   }
-
-
 
   _removeSpecialCaseErrors(repo, errors) {
     // NOTE: it is possible to handle these case(s) by altering the json-schema,
@@ -96,7 +95,6 @@ class Validator {
     });
   }
 
-
   _removeSpecialCaseWarnings(repo, warnings) {
     // NOTE: it is possible to handle these case(s) by altering the json-schema,
     // but since it would require a lot of duplication of the schema definition
@@ -110,8 +108,8 @@ class Validator {
           return false;
         }
         if (warning.dataPath === ".repository" && repo.repository === null) {
-          return false;
           this.logger("removing warning for closed source repo with license===null");
+          return false;
         }
         this.logger.info(warning.dataPath);       
         //if (warning.params && warning.dataPath === ".description" && warning.params.type === "string"){
@@ -119,11 +117,9 @@ class Validator {
        
       }
       if (warning.dataPath === ".license" && repo.license === null) {
-          return false;
-          this.logger("removing warning for closed source repo with repository===null");
+        this.logger("removing warning for closed source repo with repository===null");
+        return false;
       }
-
-
 
       return true;
     });
@@ -144,12 +140,12 @@ class Validator {
         //schema v1.0.1 requires the license element but technically allows it to be null, even for OSS. 
         //nudge here to include license info for OSS
         if (enhancement.dataPath === ".license" && repo.license === null) {
-          return false;
           this.logger("removing enhancement request for closed source repo with repository===null");
+          return false;
         }
         if (enhancement.dataPath === ".repository" && repo.repository === null) {
-          return false;
           this.logger("removing enhancement request for closed source repo with license===null");
+          return false;
         }
         this.logger.info(enhancement.dataPath);       
         //if (warning.params && warning.dataPath === ".description" && warning.params.type === "string"){
@@ -160,8 +156,6 @@ class Validator {
       return true;
     });
   }
-
-
 
   validateRepo(repo, callback) {
     this.logger.info(`Validating repo data for ${repo.name} (${repo.repoID})...`);
@@ -224,7 +218,9 @@ class Validator {
         }
       }
       // NOTE: need to buffer because ajs' promises don't work
-      setTimeout(() => { callback(err, result); }, 10);
+      setTimeout(() => {
+        callback(err, result); 
+      }, 10);
       // return callback(err, result);
     });
   }

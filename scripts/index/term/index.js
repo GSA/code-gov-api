@@ -1,6 +1,4 @@
 const async                 = require("async");
-const path                  = require("path");
-const config                = require("../../../config");
 const TermIndexer           = require("../../../services/indexer/term");
 const AliasSwapper          = require("../../../services/indexer/alias_swapper");
 const IndexCleaner          = require("../../../services/indexer/index_cleaner");
@@ -35,23 +33,31 @@ class Indexer {
     let termIndexInfo = false;
 
     async.waterfall([
-      (next) => { TermIndexer.init(elasticsearchAdapter, next); },
+      (next) => {
+        TermIndexer.init(elasticsearchAdapter, next); 
+      },
       (info, next) => {
         // save out alias and term index name
         termIndexInfo = info;
         return next(null);
       },
       // optimize the index
-      (next) => { IndexOptimizer.init(elasticsearchAdapter, termIndexInfo, next); },
+      (next) => {
+        IndexOptimizer.init(elasticsearchAdapter, termIndexInfo, next); 
+      },
       // if all went well, swap aliases
-      (next) => { AliasSwapper.init(elasticsearchAdapter, termIndexInfo, next); },
+      (next) => {
+        AliasSwapper.init(elasticsearchAdapter, termIndexInfo, next); 
+      },
       // clean up old indices
-      (next) => { IndexCleaner.init(elasticsearchAdapter, termIndexInfo.esAlias, DAYS_TO_KEEP, next); }
+      (next) => {
+        IndexCleaner.init(elasticsearchAdapter, termIndexInfo.esAlias, DAYS_TO_KEEP, next); 
+      }
     ], (err, status) => {
       if (err) {
         this.logger.info("Errors encountered. Exiting.");
       } else {
-        this.logger.info("Finished indexing.");
+        this.logger.info("Finished indexing", status);
       }
       return callback(err);
     });
