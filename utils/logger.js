@@ -7,7 +7,7 @@ module.exports = class Logger {
   }
 
   constructor(config) {
-    let bun = bunyan.createLogger({name: config.name || this.DEFAULT_LOGGER_NAME});
+    let bun = bunyan.createLogger({name: 'code-gov-api'});
     this.error = bun.error.bind(bun);
     this.warning = bun.warn.bind(bun);
     this.info = bun.info.bind(bun);

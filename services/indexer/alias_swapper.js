@@ -1,15 +1,15 @@
 const async               = require("async");
-const _                   = require("lodash");
-const ElasticSearch       = require("elasticsearch");
-
 const AbstractIndexTool   = require("./abstract_index_tool");
 const Logger              = require("../../utils/logger");
 
+/* eslint-disable */
+const ElasticSearch       = require("elasticsearch");
 class ElasticSearchLogger extends Logger {
   get DEFAULT_LOGGER_NAME() {
     return "elasticsearch";
   }
 }
+/* eslint-enable */
 
 /**
  * Class for Swapping out ElasticSearch Aliases
@@ -41,15 +41,19 @@ class AliasSwapper extends AbstractIndexTool {
     this.logger.info(
       `Swapping aliases.`);
     this.client.indices.updateAliases({
-        body: {
-            actions: actions
-        }
+      body: {
+        actions: actions
+      }
     }, (err, response, status) => {
-      if(err) { this.logger.error(err); }
+      if(err) {
+        this.logger.error(err); 
+      }
+      if (status) {
+        this.logger.info('Status', status);
+      }
       return callback(err, response);
     });
   }
-
 
   /**
    * Initializes and executes the swapping of aliases for repos
@@ -61,55 +65,57 @@ class AliasSwapper extends AbstractIndexTool {
    */
   static init(adapter, repoIndexInfo, callback) {
 
-
     let swapper = new AliasSwapper(adapter);
     swapper.logger.info(`Starting alias swapping.`);
 
     //Find out who is using aliases
 
-
     async.waterfall([
       //Get indexes for repo alias
-      (next) => { swapper.aliasExists(repoIndexInfo.esAlias, next); },
+      (next) => {
+        swapper.aliasExists(repoIndexInfo.esAlias, next); 
+      },
       (exists, next) => {
         if(exists) {
-          swapper.getIndexesForAlias(repoIndexInfo.esAlias, next)
+          swapper.getIndexesForAlias(repoIndexInfo.esAlias, next);
         } else {
           //Empty Array of Indexes used by Alias
           next(null, []);
         }
       },
       (indexesForAlias, next) => {
-          repoIndexInfo.currentAliasIndexes = indexesForAlias;
-          next(null);
+        repoIndexInfo.currentAliasIndexes = indexesForAlias;
+        next(null);
       },
       // Build the removal and addions.
       (next) => {
 
-          let actions = [];
+        let actions = [];
 
-          // Loop over the repo indexes and setup the add/removes for this swap.
-          [repoIndexInfo].forEach(indexType => {
-            indexType.currentAliasIndexes.forEach((index) => {
-              actions.push({
-                "remove": {
-                    "index": index,
-                    "alias": indexType.esAlias
-                }
-              })
-            });
+        // Loop over the repo indexes and setup the add/removes for this swap.
+        [repoIndexInfo].forEach(indexType => {
+          indexType.currentAliasIndexes.forEach((index) => {
             actions.push({
-                "add": {
-                    "index": indexType.esIndex,
-                    "alias": indexType.esAlias
-                }
+              "remove": {
+                "index": index,
+                "alias": indexType.esAlias
+              }
             });
           });
+          actions.push({
+            "add": {
+              "index": indexType.esIndex,
+              "alias": indexType.esAlias
+            }
+          });
+        });
 
-          swapper.swapAlias(actions, next);
+        swapper.swapAlias(actions, next);
       }
     ], (err) => {
-      if(err) { swapper.logger.error(err); }
+      if(err) {
+        swapper.logger.error(err); 
+      }
       swapper.logger.info(`Finished swapping aliases.`);
       return callback(err);
     });

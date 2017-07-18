@@ -1,12 +1,10 @@
 const fs                  = require("fs");
-const _                   = require("lodash");
 const path                = require("path");
 const async               = require("async");
 const Jsonfile            = require("jsonfile");
 const diff                = require("diff");
 const JSONStream          = require("JSONStream");
 const Writable            = require("stream").Writable;
-
 const config              = require("../../config");
 const Logger               = require("../../utils/logger");
 

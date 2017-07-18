@@ -1,15 +1,17 @@
 const async               = require("async");
 const _                   = require("lodash");
-const ElasticSearch       = require("elasticsearch");
-
 const AbstractIndexTool   = require("./abstract_index_tool");
 const Logger              = require("../../utils/logger");
 
+/* eslint-disable */
+const ElasticSearch       = require("elasticsearch");
+const ElasticsearchAdapter = require('../../utils/search_adapters/elasticsearch_adapter');
 class ElasticSearchLogger extends Logger {
   get DEFAULT_LOGGER_NAME() {
     return "elasticsearch";
   }
 }
+/* eslint-enable */
 
 /**
  * Class for cleaning ElasticSearch Indexes
@@ -28,7 +30,7 @@ class IndexCleaner extends AbstractIndexTool {
    * @param {any} adapter The search adapter to use for connecting to ElasticSearch
    */
   constructor(adapter) {
-      super(adapter);
+    super(adapter);
   }
 
   /**
@@ -38,10 +40,10 @@ class IndexCleaner extends AbstractIndexTool {
    * @returns
    */
   _toDays(date) {
-      date = date || 0;
-      let milli_in_days = 24 * 60 * 60 * 1000;
+    date = date || 0;
+    let milli_in_days = 24 * 60 * 60 * 1000;
 
-      return Math.floor(date / milli_in_days);
+    return Math.floor(date / milli_in_days);
   }
 
   /**
@@ -55,28 +57,30 @@ class IndexCleaner extends AbstractIndexTool {
     this.logger.info(
       `Getting Indices for (${aliasName})`);
 
-
     this.client.indices.getSettings({
-        index: (aliasName + '*'),
-        name: 'index.creation_date' //Only get creation date field
+      index: (aliasName + '*'),
+      name: 'index.creation_date' //Only get creation date field
     }, (err, response, status) => {
       if(err) {
-          this.logger.error(err);
-          return callback(err, false);
+        this.logger.error(err);
+        return callback(err, false);
       } else {
-          let indices = [];
+        if (status) {
+          this.logger.info('Status', status);
+        }
+        let indices = [];
 
-          let currTime = this._toDays(Date.now());
-          let cutoffTime = currTime - daysToKeep;
+        let currTime = this._toDays(Date.now());
+        let cutoffTime = currTime - daysToKeep;
 
-          _.forEach(response, (value, key) => {
-              let index_date = this._toDays(value["settings"]["index"]["creation_date"]);
-              if (index_date < cutoffTime) {
-                indices.push(key);
-              }
-          });
+        _.forEach(response, (value, key) => {
+          let index_date = this._toDays(value["settings"]["index"]["creation_date"]);
+          if (index_date < cutoffTime) {
+            indices.push(key);
+          }
+        });
 
-          return callback(false, indices)
+        return callback(false, indices);
       }
     });
   }
@@ -89,11 +93,13 @@ class IndexCleaner extends AbstractIndexTool {
    * @param {any} callback
    */
   filterAliasedIndices(aliasName, indices, callback) {
-      this.getIndexesForAlias(aliasName, (err, aliasIndices) => {
-          if (err) { return callback(err, false); }
+    this.getIndexesForAlias(aliasName, (err, aliasIndices) => {
+      if (err) {
+        return callback(err, false); 
+      }
 
-          return callback(false, _.difference(indices, aliasIndices));
-      });
+      return callback(false, _.difference(indices, aliasIndices));
+    });
   }
 
   /**
@@ -104,10 +110,15 @@ class IndexCleaner extends AbstractIndexTool {
    */
   deleteIndices(indices, callback) {
     this.client.indices.delete({
-        index: indices,
-        requestTimeout: 90000
+      index: indices,
+      requestTimeout: 90000
     }, (err, response, status) => {
-        return callback(err);
+      if (err) {
+        this.logger.error('Error', err);
+      } else if (status) {
+        this.logger.info('Status', status);
+      }
+      return callback(err);
     });
   }
 
@@ -120,23 +131,28 @@ class IndexCleaner extends AbstractIndexTool {
   cleanIndicesForAlias(aliasName, daysToKeep, callback) {
 
     async.waterfall([
-      (next) => { this.getIndices(aliasName, daysToKeep, next); }, //Gets all indices older than 7 days
-      (oldIndices, next) => { this.filterAliasedIndices(aliasName, oldIndices, next); },
+      (next) => {
+        this.getIndices(aliasName, daysToKeep, next); 
+      }, //Gets all indices older than 7 days
+      (oldIndices, next) => {
+        this.filterAliasedIndices(aliasName, oldIndices, next); 
+      },
       (filteredIndices, next) => {
-          if (filteredIndices.length > 0) {
-            this.deleteIndices(filteredIndices, next);
-          } else {
-            next(false);
-          }
+        if (filteredIndices.length > 0) {
+          this.deleteIndices(filteredIndices, next);
+        } else {
+          next(false);
         }
+      }
     ], (err) => {
-      if(err) { this.logger.error(err); }
+      if(err) {
+        this.logger.error(err); 
+      }
       this.logger.info(`Finished cleaning indices for: (${aliasName}).`);
       return callback(err);
     });
 
   }
-
 
   /**
    * Initializes and executes the cleaning of old repo indices
@@ -158,7 +174,9 @@ class IndexCleaner extends AbstractIndexTool {
     cleaner.logger.info(`Starting index cleaning.`);
 
     cleaner.cleanIndicesForAlias(repoAlias, daysToKeep, (err) => {
-      if(err) { cleaner.logger.error(err); }
+      if(err) {
+        cleaner.logger.error(err); 
+      }
       cleaner.logger.info(`Finished cleaning indices.`);
       return callback(err);
     });
@@ -170,17 +188,15 @@ class IndexCleaner extends AbstractIndexTool {
 // This will index all repos taking our default input.
 if (require.main === module) {
   //TODO: Make parameters
-  reposAlias = 'repos';
-  numDays = 10;
-
-  const ElasticsearchAdapter = require('../../utils/search_adapters/elasticsearch_adapter');
+  const reposAlias = 'repos';
+  const numDays = 10;
 
   IndexCleaner.init(ElasticsearchAdapter, reposAlias, numDays, (err)=> {
-      if (err) {
-          console.log("Errors Occurred: " + err);
-      } else {
-          console.log("Cleaning Completed.");
-      }
+    if (err) {
+      Logger.error("Errors Occurred: " + err);
+    } else {
+      Logger.info("Cleaning Completed.");
+    }
   });
 }
 

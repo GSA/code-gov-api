@@ -36,23 +36,31 @@ class Indexer {
     let repoIndexInfo = false;
 
     async.waterfall([
-      (next) => { RepoIndexer.init(elasticsearchAdapter, AGENCY_ENDPOINTS_FILE, next); },
+      (next) => {
+        RepoIndexer.init(elasticsearchAdapter, AGENCY_ENDPOINTS_FILE, next); 
+      },
       (info, next) => {
         // save out alias and repo index name
         repoIndexInfo = info;
         return next(null);
       },
       // optimize the index
-      (next) => { IndexOptimizer.init(elasticsearchAdapter, repoIndexInfo, next); },
+      (next) => {
+        IndexOptimizer.init(elasticsearchAdapter, repoIndexInfo, next); 
+      },
       // if all went well, swap aliases
-      (next) => { AliasSwapper.init(elasticsearchAdapter, repoIndexInfo, next); },
+      (next) => {
+        AliasSwapper.init(elasticsearchAdapter, repoIndexInfo, next); 
+      },
       // clean up old indices
-      (next) => { IndexCleaner.init(elasticsearchAdapter, repoIndexInfo.esAlias, DAYS_TO_KEEP, next); }
+      (next) => {
+        IndexCleaner.init(elasticsearchAdapter, repoIndexInfo.esAlias, DAYS_TO_KEEP, next); 
+      }
     ], (err, status) => {
       if (err) {
         this.logger.info("Errors encountered. Exiting.");
       } else {
-        this.logger.info("Finished indexing.");
+        this.logger.info("Finished indexing:", status);
       }
       return callback(err);
     });

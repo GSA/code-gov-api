@@ -6,9 +6,7 @@ const _                   = require("lodash");
 const Writable            = require("stream").Writable;
 const Transform           = require("stream").Transform;
 const JSONStream          = require("JSONStream");
-const moment              = require("moment");
 const Jsonfile            = require("jsonfile");
-
 const config              = require("../../../config");
 const Validator           = require("../../validator");
 const Formatter           = require("../../formatter");
@@ -69,9 +67,11 @@ class AgencyJsonStream extends Transform {
       return this._saveFetchedToFile(agency, data, () => {
         return callback(null, data);
       });
-    }
+    };
 
-    if (err) { return _handleError(err); }
+    if (err) {
+      return _handleError(err); 
+    }
     let agencyData = {};
     try {
       // strip the BOM character
@@ -79,7 +79,9 @@ class AgencyJsonStream extends Transform {
       // parse
       agencyData = JSON.parse(formattedData);
     } catch(err) {
-      if (err) { return _handleError(err); }
+      if (err) {
+        return _handleError(err); 
+      }
     }
 
     return _handleSuccess(agencyData);
@@ -90,10 +92,10 @@ class AgencyJsonStream extends Transform {
     this.logger.info(`Fetching remote agency repos from ${agencyUrl}...`);
 
     request({ followAllRedirects: true, url: agencyUrl, 
-              headers: {'User-Agent': 'curl'} },
-      (err, response, body) => {
-        this._handleResponse(err, agency, body, callback);
-      }
+      headers: {'User-Agent': 'curl'} },
+    (err, response, body) => {
+      this._handleResponse(err, agency, body, callback);
+    }
     );
   }
 
@@ -127,14 +129,18 @@ class AgencyJsonStream extends Transform {
 
       const _handleSuccess = (data) => {
         return callback(null, data);
-      }
+      };
 
-      if (err) { return _handleError(err); }
+      if (err) {
+        return _handleError(err); 
+      }
       let agencyData = {};
       try {
         agencyData = JSON.parse(data);
       } catch(err) {
-        if (err) { return _handleError(err); }
+        if (err) {
+          return _handleError(err); 
+        }
       }
 
       return _handleSuccess(agencyData);
@@ -171,16 +177,15 @@ class AgencyJsonStream extends Transform {
                 if (validationResult.issues.errors.length ||
                   validationResult.issues.warnings.length || 
                   validationResult.issues.enhancements.length) {
-                    Reporter.reportIssues(agencyName, validationResult);
-                    numValidationErrors += validationResult.issues.errors.length;
-                    numValidationWarnings += validationResult.issues.warnings.length;
-                    numValidationEnhancements += validationResult.issues.enhancements.length;
+                  Reporter.reportIssues(agencyName, validationResult);
+                  numValidationErrors += validationResult.issues.errors.length;
+                  numValidationWarnings += validationResult.issues.warnings.length;
+                  numValidationEnhancements += validationResult.issues.enhancements.length;
                 }
                 //if (validationResult.issues.enhancements.length ) {
                 
                 //}
               }
-              
 
               if (err) {
                 // swallow the error and continue to process other repos
@@ -209,7 +214,7 @@ class AgencyJsonStream extends Transform {
             reportDetails.push(`${numValidationErrors} ERRORS`);
           }
           if (numValidationWarnings) {
-            errorCount += numValidationWarnings
+            errorCount += numValidationWarnings;
             reportDetails.push(`${numValidationWarnings} WARNINGS`);
           }
           reportDetails.push(`${errorCount} validation errors`);
@@ -222,8 +227,7 @@ class AgencyJsonStream extends Transform {
             agency.requirements.schemaFormat = 1;
             reportString = "FULLY COMPLIANT: ";
             //Reporter.reportStatus(agencyName, "FULLY COMPLIANT");
-          }
-          else{
+          } else{
             reportString= "NOT FULLY COMPLIANT: ";
           }
 
@@ -275,14 +279,16 @@ class AgencyJsonStream extends Transform {
         };
 
         this._fetchAgencyReposFallback(agency, (err, agencyData) => {
-          if (err) { return finished(); }
+          if (err) {
+            return finished(); 
+          }
 
           async.eachSeries(
             agencyData.projects,
             _processRepo,
             finished
           );
-        })
+        });
       };
 
       Reporter.reportMetadata(agencyName, { agency });
@@ -324,7 +330,7 @@ class AgencyJsonStream extends Transform {
     //overallCompliance should be the average of the other requirements.
     //TODO: align this approach with project-open-data's approach
     let overallCompliance = 0;
-    for (var req in requirements){
+    for (let req in requirements){
       overallCompliance += requirements[req];
     }
     overallCompliance /= _.size(requirements);
@@ -358,6 +364,9 @@ class AgencyRepoIndexerStream extends Writable {
     }, (err, response, status) => {
       if(err) {
         this.logger.error(err);
+      }
+      if (status) {
+        this.logger.info('Status', status);
       }
       this.repoIndexer.indexCounter++;
 
@@ -400,20 +409,32 @@ class RepoIndexer extends AbstractIndexer {
     let indexer = new RepoIndexer(adapter, agencyEndpointsFile, ES_PARAMS);
     indexer.logger.info(`Started indexing (${indexer.esType}) indices.`);
     async.waterfall([
-      (next) => { indexer.indexExists(next); },
+      (next) => {
+        indexer.indexExists(next); 
+      },
       (exists, next) => {
         if(exists) {
-          indexer.deleteIndex(next)
+          indexer.deleteIndex(next);
         } else {
           next(null, null);
         }
       },
-      (response, next) => { indexer.initIndex(next); },
-      (response, next) => { indexer.initMapping(next); },
-      (response, next) => { indexer.indexRepos(next); },
-      (next) => { Reporter.writeReportToFile(next); }
+      (response, next) => {
+        indexer.initIndex(next); 
+      },
+      (response, next) => {
+        indexer.initMapping(next); 
+      },
+      (response, next) => {
+        indexer.indexRepos(next); 
+      },
+      (next) => {
+        Reporter.writeReportToFile(next); 
+      }
     ], (err) => {
-      if(err) { indexer.logger.error(err); }
+      if(err) {
+        indexer.logger.error(err); 
+      }
       indexer.logger.info(`Finished indexing (${indexer.esType}) indices.`);
       return callback(err, {
         esIndex: indexer.esIndex,

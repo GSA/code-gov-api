@@ -67,28 +67,26 @@
 
 ******************************************************************************/
 
-const _ = require("lodash");
 const moment = require("moment");
 const Utils = require("../../utils");
 const Logger = require("../../utils/logger");
 const request = require("request");
-// These modules are used in methods below, but the code that calls
-// those methods is currently commented out.
-// I've commented out these requires to save us from needing yet more
-// dependencies in packages.json.
-// const request_promise = require("request-promise");
-// const sleep = require("sleep");
+const request_promise = require("request-promise");
+const sleep = require("sleep");
 
+const logger = new Logger();
 let lastupdated, etag;
 
-var licensename = "";
-var contributors,
-  contributordata = [],
-  events,
-  eventdata,
-  eventfeed,
-  languages,
-  languagedata;
+let licensename = "";
+let contributors;
+let contributordata = [];
+let events;
+let eventdata;
+/* eslint-disable */
+let eventfeed;
+/* eslint-enable */
+let languages;
+let languagedata;
 
 class Formatter {
   constructor() {
@@ -117,16 +115,14 @@ class Formatter {
     }
   }
   _formatLicense(repo) {
-    var license_array = new Array();
-
-    var license_url = repo.repository;
+    let license_url = repo.repository;
     if (repo.license != null) {
       license_url = license_url.replace(
         "//github.com/",
         "//api.github.com/repos/"
       );
 
-      var options = {
+      let options = {
         uri: license_url +
           "?client_id=" +
           process.env.CLIENT_ID +
@@ -153,7 +149,7 @@ class Formatter {
           }
         })
         .catch(function(err) {
-          console.log("license error: " + err);
+          Logger.error("license error:", err);
         });
     }
     return licensename;
@@ -162,8 +158,8 @@ class Formatter {
   _formatEvents(repo) {
     // add event activity to repo for GitHub repos
 
-    var i, limit = 1;
-    var eventsurl = repo.repository;
+    let i, limit = 1;
+    let eventsurl = repo.repository;
 
     if (!eventsurl.includes("github.com")) {
       repo["events"] = [];
@@ -176,9 +172,9 @@ class Formatter {
       );
       eventsurl += "/events";
 
-      console.log("eventsurl: " + eventsurl);
+      //console.log("eventsurl: " + eventsurl);
 
-      var options = {
+      let options = {
         url: eventsurl +
           "?client_id=" +
           process.env.CLIENT_ID +
@@ -193,13 +189,13 @@ class Formatter {
 
       request(options, function(err, response, body) {
         if (err) {
-          console.error("event error: " + err);
+          Logger.error("event error: " + err);
         } else {
           try {
             events = JSON.parse(body);
 
             if (events[0] != undefined) {
-              console.log("type: " + events[0].type);
+              //console.log("type: " + events[0].type);
               for (i = 0; i < Math.min(limit, events.length); i++) {
                 //eventdata= [{"avatar_url":contributors[i].avatar_url}];
 
@@ -225,7 +221,7 @@ class Formatter {
                     events[i].payload.commits[0].url +
                     "'";
                 } else if (events[i].type == "PullRequestEvent") {
-                  console.log(events[i].payload.pull_request.title);
+                  //console.log(events[i].payload.pull_request.title);
                   eventdata +=
                     ",'message': '" +
                     events[i].payload.pull_request.title +
@@ -233,7 +229,7 @@ class Formatter {
                     events[i].payload.pull_request.url +
                     "'";
                 } else if (events[i].type == "CreateEvent") {
-                  console.log(events[i].payload.ref);
+                  //console.log(events[i].payload.ref);
                   eventdata +=
                     ",'message': '" +
                     events[i].payload.ref_type +
@@ -278,7 +274,7 @@ class Formatter {
               eventfeed = "[" + eventdata + "]";
             }
           } catch (e) { //closing try
-            console.error(e);
+            Logger.error(e);
           }
         } //close else
       });
@@ -290,9 +286,9 @@ class Formatter {
   _formatContributors(repo) {
     // add event activity to repo for GitHub repos
 
-    var i;
+    let i;
 
-    var contributorsurl = repo.repository;
+    let contributorsurl = repo.repository;
 
     //contributordata.push({"login":"testuser","avatar_url":"https://avatars2.githubusercontent.com/u/6654994?v=3","html_url":"https://github.com/lukad03"});
     //contributordata.push({"login":"testuser2","avatar_url":"https://avatars2.githubusercontent.com/u/6654994?v=3","html_url":"https://github.com/lukad04"});
@@ -308,9 +304,9 @@ class Formatter {
       );
       contributorsurl += "/contributors";
 
-      console.log("contributorsurl: " + contributorsurl);
+      //console.log("contributorsurl: " + contributorsurl);
 
-      var options = {
+      let options = {
         url: contributorsurl +
           "?client_id=" +
           process.env.CLIENT_ID +
@@ -325,13 +321,13 @@ class Formatter {
 
       request(options, function(err, response, body) {
         if (err) {
-          console.error("contributor error: " + err);
+          Logger.error("contributor error: " + err);
         } else {
           try {
             contributordata.length = 0; //clear the array
             contributors = JSON.parse(body);
             if (contributors[0] != undefined) {
-              console.log("login: " + contributors[0].login);
+              //console.log("login: " + contributors[0].login);
               for (i = 0; i < contributors.length; i++) {
                 contributordata.push({
                   login: contributors[i].login,
@@ -341,7 +337,7 @@ class Formatter {
               }
             }
           } catch (e) { //closing try
-            console.error(e);
+            Logger.error(e);
           }
         }
       });
@@ -353,9 +349,9 @@ class Formatter {
   _formatLanguages(repo) {
     // add language to repo for GitHub repos
 
-    var i;
+    let i;
 
-    var languagesurl = repo.repository;
+    let languagesurl = repo.repository;
 
     if (!languagesurl.includes("github.com")) {
       repo["languages"] = [];
@@ -368,9 +364,9 @@ class Formatter {
       );
       languagesurl += "/languages";
 
-      console.log("languagesurl: " + languagesurl);
+      //console.log("languagesurl: " + languagesurl);
 
-      var options1 = {
+      let options1 = {
         url: languagesurl +
           "?client_id=" +
           process.env.CLIENT_ID +
@@ -381,20 +377,22 @@ class Formatter {
           Accept: "application/vnd.github.v3+json",
           "Content-Type": "application/json",
           "Cache-Control": "public, max-age=604800",
-          "Access-Control-Expose-Headers": "ETag,X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-Poll-Interval, Last-Modified"
+          "Access-Control-Expose-Headers": "ETag,X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, "
+            + "X-RateLimit-Reset, X-Poll-Interval, Last-Modified"
         }
       };
 
       request(options1, function(err, response, body) {
         if (err) {
-          console.error("initial language request error: " + err);
+          Logger.error("initial language request error: " + err);
         } else {
+          logger.info('body', body);
           etag = response.headers["etag"];
           lastupdated = response.headers["last-modified"];
         }
       });
 
-      var options2 = {
+      let options2 = {
         url: languagesurl +
           "?client_id=" +
           process.env.CLIENT_ID +
@@ -405,7 +403,8 @@ class Formatter {
           Accept: "application/vnd.github.v3+json",
           "Content-Type": "application/json",
           "Cache-Control": "public, max-age=604800",
-          "Access-Control-Expose-Headers": "ETag,X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-Poll-Interval, Last-Modified",
+          "Access-Control-Expose-Headers": "ETag,X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, "
+            + "X-RateLimit-Reset, X-Poll-Interval, Last-Modified",
           "If-None-Match": etag,
           "If-Modified-Since": lastupdated
         }
@@ -413,22 +412,16 @@ class Formatter {
 
       request(options2, function(err, response, body) {
         if (err) {
-          console.error("languages error: " + err);
+          Logger.consoleerror("languages error: " + err);
         } else if (response.headers["status"] == "304 Not Modified") {
-          console.log("Status is: " + response.headers["status"]);
-          console.log(
-            "Requests Remaining is: " +
-              response.headers["x-ratelimit-remaining"]
-          );
+          //console.log("Status is: " + response.headers["status"]);
+          //console.log("Requests Remaining is: " + response.headers["x-ratelimit-remaining"]);
           //console.log("304 Not Modified");
           return repo.languages;
         } else {
-          console.log("Status is: " + response.headers["status"]);
-          console.log("ETag is: " + response.headers["etag"]);
-          console.log(
-            "Requests Remaining is: " +
-              response.headers["x-ratelimit-remaining"]
-          );
+          //console.log("Status is: " + response.headers["status"]);
+          //console.log("ETag is: " + response.headers["etag"]);
+          //console.log("Requests Remaining is: " +response.headers["x-ratelimit-remaining"]);
 
           try {
             //languagedata.length=0; //clear the array
@@ -442,7 +435,7 @@ class Formatter {
               }
             }
           } catch (e) { //closing try
-            console.error(e);
+            Logger.error(e);
           }
         }
       });
@@ -473,9 +466,10 @@ class Formatter {
   }
 
   formatRepo(repo, callback) {
-    var formattedRepo;
+    let formattedRepo;
     try {
       formattedRepo = this._formatRepo(repo);
+      logger.info('formatted repo', formattedRepo);
     } catch (err) {
       this.logger.error(`Error when formatting repo: ${err}`);
       return callback(err, repo);

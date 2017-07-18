@@ -1,19 +1,15 @@
-
 /**
- * Defines an abstract adapter for getting search clients 
- * 
- * @class AbstractSearchAdapter
+ * Defines an abstract adapter for getting search clients
  */
 class AbstractSearchAdapter {
 
-    /**
-     * Gets an instance of a client 
-     * 
-     * @returns
+  /**
+     * Gets an instance of a client
+     * @returns {*}
      */
-    getClient() {
-        return this.client;
-    }
+  getClient() {
+    return this.client;
+  }
 }
 
 module.exports = AbstractSearchAdapter;
