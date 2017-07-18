@@ -1,7 +1,4 @@
 const RepoTermLoaderStream = require("../../../../services/indexer/term/repo_term_loader_stream");
-const mocha = require('mocha');
-const describe = mocha.describe;
-const it = mocha.it;
 
 describe("RepoTermLoaderStream", () => {
   let termIndexerMock = {
