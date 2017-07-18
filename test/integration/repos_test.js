@@ -1,9 +1,10 @@
 // Tests for the /repos endpoint
-
+/*
 const mocha = require('mocha');
 const describe = mocha.describe;
 const it = mocha.it;
 const before = mocha.before;
+*/
 const mockAdapter = require('../../utils/search_adapters/testable_elasticsearch_adapter');
 const request = require('supertest');
 const proxyquire = require('proxyquire');
