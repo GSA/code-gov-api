@@ -1,0 +1,45 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": true
+  },
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "extends": "eslint:recommended",
+  "rules": {
+    "default-case": 1,
+    "no-empty-function": 0,
+    "no-param-reassign": 0,
+    "no-unused-expressions": 0,
+    "no-unused-vars": 1,
+    "global-require": 1,
+    "brace-style": 1,
+    "camelcase": 0,
+    "comma-dangle": 1,
+    "eol-last": 1,
+    "indent": [1, 2],
+    "max-len": [
+      1,
+      {
+        "code": 120,
+        "ignoreUrls": true
+      }
+    ],
+    "no-multiple-empty-lines": [
+      1,
+      {
+        "max": 1,
+        "maxEOF": 1,
+        "maxBOF": 0
+      }
+    ],
+    "semi": [
+      1,
+      "always"
+    ],
+    "no-var": 1
+  }
+}

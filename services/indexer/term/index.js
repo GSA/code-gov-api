@@ -1,16 +1,6 @@
-const fs                  = require("fs");
-const path                = require("path");
-const request             = require("request");
 const async               = require("async");
-const _                   = require("lodash");
 const Writable            = require("stream").Writable;
-const moment              = require("moment");
-
-const config              = require("../../../config");
 const SearchStream        = require("../../../utils/search_stream");
-const Validator           = require("../../validator");
-const Formatter           = require("../../formatter");
-const Reporter            = require("../../reporter");
 const AbstractIndexer     = require("../abstract_indexer");
 const RepoTermLoaderStream= require("./repo_term_loader_stream");
 
@@ -34,7 +24,6 @@ const ES_TERM_PARAMS = {
   "esSettings": ES_TERM_SETTINGS
 };
 
-
 class RepoTermIndexerStream extends Writable {
 
   constructor(termIndexer) {
@@ -55,6 +44,9 @@ class RepoTermIndexerStream extends Writable {
     }, (err, response, status) => {
       if(err) {
         this.logger.error(err);
+      }
+      if (status) {
+        this.logger.info('Status', status);
       }
       this.termIndexer.indexCounter++;
 
@@ -83,7 +75,7 @@ class TermIndexer extends AbstractIndexer {
       type: ES_REPO_PARAMS.esType,
       body: {}
     };
-    this.ss = new SearchStream(adapter, searchQuery);;
+    this.ss = new SearchStream(adapter, searchQuery);
     this.indexCounter = 0;
   }
 
@@ -102,19 +94,29 @@ class TermIndexer extends AbstractIndexer {
     let indexer = new TermIndexer(adapter, ES_TERM_PARAMS);
     indexer.logger.info(`Started indexing (${indexer.esType}) indices.`);
     async.waterfall([
-      (next) => { indexer.indexExists(next); },
+      (next) => {
+        indexer.indexExists(next); 
+      },
       (exists, next) => {
         if(exists) {
-          indexer.deleteIndex(next)
+          indexer.deleteIndex(next);
         } else {
           next(null, null);
         }
       },
-      (response, next) => { indexer.initIndex(next); },
-      (response, next) => { indexer.initMapping(next); },
-      (response, next) => { indexer.indexTerms(next); }
+      (response, next) => {
+        indexer.initIndex(next); 
+      },
+      (response, next) => {
+        indexer.initMapping(next); 
+      },
+      (response, next) => {
+        indexer.indexTerms(next); 
+      }
     ], (err) => {
-      if(err) { indexer.logger.error(err); }
+      if(err) {
+        indexer.logger.error(err); 
+      }
       indexer.logger.info(`Finished indexing (${indexer.esType}) indices.`);
       return callback(err, {
         esIndex: indexer.esIndex,

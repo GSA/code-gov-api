@@ -69,7 +69,7 @@ class Utils {
           delete value[key];
         });
       }
-    }
+    };
     return _.cloneDeepWith(collection, omitFn);
   }
 
@@ -82,12 +82,14 @@ class Utils {
           }
         });
       }
-    }
+    };
     return _.cloneDeepWith(collection, omitFn);
   }
 
   static removeDupes(collection1, collection2) {
-    return _.filter(collection1, (obj) => { return !_.find(collection2, obj); });
+    return _.filter(collection1, (obj) => {
+      return !_.find(collection2, obj); 
+    });
   }
 
 }

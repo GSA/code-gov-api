@@ -1,3 +1,4 @@
+/* eslint-disable */
 var CONFIG;
 
 if (process.env.NODE_ENV === "prod" || process.env.NODE_ENV === "production") {
@@ -7,3 +8,4 @@ if (process.env.NODE_ENV === "prod" || process.env.NODE_ENV === "production") {
 }
 
 module.exports = CONFIG;
+/* eslint-enable */

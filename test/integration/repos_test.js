@@ -5,7 +5,7 @@ const request = require('supertest');
 const proxyquire = require('proxyquire');
 
 describe('/repos endpoint', () => {
-  var app, response;
+  let app;
 
   before(() => {
     // Load the app, but replace the ES adapter
@@ -26,7 +26,7 @@ describe('/repos endpoint', () => {
       .expect(() => {
         // Purely to show how to use the MockAdapter:
         // Let's see the query that was sent to ES during this request.
-        console.log('Logged search query:', mockAdapter.getSearchArgs());
+        // console.log('Logged search query:', mockAdapter.getSearchArgs());
         // Request/response is async, so any code that works with the
         // response, or depends on the query having been run, needs to
         // live in a Promise-handling method
@@ -35,7 +35,6 @@ describe('/repos endpoint', () => {
   });
 
   describe('the output JSON structure', () => {
-    var structure;
 
     before(() => {
       mockAdapter.setResponse(esResponses.basic);
@@ -48,8 +47,8 @@ describe('/repos endpoint', () => {
           if(!('total' in res.body)) {
             throw new Error('No "total" attribute in body');
           }
-          if(res.body.total != 3) {
-            throw new Error('total != 3');
+          if(res.body.total !== 3) {
+            throw new Error('total !== 3');
           }
         })
         .end(done);

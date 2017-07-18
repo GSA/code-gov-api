@@ -11,3 +11,4 @@ StatusDashboardScript
 /tmp
 .nyc_output
 coverage
+.idea

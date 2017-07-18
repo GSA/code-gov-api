@@ -1,7 +1,6 @@
 const _                   = require("lodash");
 const Bodybuilder         = require("bodybuilder");
 const moment              = require("moment");
-
 const config              = require("../../config");
 const Utils               = require("../../utils");
 const Logger              = require("../../utils/logger");
@@ -176,7 +175,7 @@ class Searcher {
   // }
 
   _addStringFilter(body, field, filter) {
-    if(filter instanceof Array) {
+    if (filter instanceof Array) {
       let orBody = new Bodybuilder();
       filter.forEach((filterElement) => {
         logger.info(filterElement);
@@ -186,7 +185,7 @@ class Searcher {
     } else {
       body.filter("term", field, filter.toLowerCase());
     }
-  };
+  }
 
   _addStringFilters(body, q) {
     searchPropsByType["string"].forEach((field) => {
@@ -210,7 +209,6 @@ class Searcher {
               `Invalid date supplied for ${field}_${rangeType}. ` +
               `Please use format ${DATE_FORMAT} or ISO8601.`
             );
-            return;
           }
         }
       };
@@ -219,9 +217,9 @@ class Searcher {
       _addRangeForRangeType("gte", gteRange);
 
       body.filter("range", field, ranges);
-    }
+    };
 
-    let possibleRangeProps = searchPropsByType["date"]
+    let possibleRangeProps = searchPropsByType["date"];
     possibleRangeProps.forEach((field) => {
       let lteRange = q[field + "_lte"];
       let gteRange = q[field + "_gte"];
@@ -243,7 +241,6 @@ class Searcher {
             throw new Error(
               `Invalid number supplied for ${field}_${rangeType}.`
             );
-            return;
           }
         }
       };
@@ -252,9 +249,9 @@ class Searcher {
       _addRangeForRangeType("gte", gteRange);
 
       body.filter("range", field, ranges);
-    }
+    };
 
-    let possibleRangeProps = searchPropsByType["byte"]
+    let possibleRangeProps = searchPropsByType["byte"];
     possibleRangeProps.forEach((field) => {
       let lteRange = q[field + "_lte"];
       let gteRange = q[field + "_gte"];
@@ -273,7 +270,7 @@ class Searcher {
   //       err +=  `Geo Distance filter for ${field} missing or invalid latitude.  Please supply valid ${field}_lat. \n`
   //     }
   //     if (!(lon) || isNaN(parseFloat(lon))) {
-  //       err +=  `Geo Distance filter for ${field} missing or invalid longitude.  Please supply valid ${field}_lon. \n`
+  //       err +=  `Geo Distance filter for ${field} missing or invalid longitude.  Please supply valid ${field}_lon.\n`
   //     }
   //
   //     //TODO: add in validation of values for distance
@@ -381,10 +378,11 @@ class Searcher {
    */
   _addSortOrder(body, q) {
     // TODO: implement some sort of sorting?
+    logger.info('params', body, q);
   }
 
   _searchReposQuery(q) {
-    var query;
+    let query;
     let body = new Bodybuilder();
 
     // this._addNestedFilters(body, q);
@@ -423,7 +421,7 @@ class Searcher {
       let formattedRes = {
         total: res.hits.total,
         repos: repos
-      }
+      };
       return callback(null, formattedRes);
     });
   }
@@ -487,7 +485,7 @@ class Searcher {
       "from": from
     };
 
-     //logger.info(query);
+    //logger.info(query);
     return query;
   }
 
@@ -510,7 +508,7 @@ class Searcher {
           source.score = hit._score;
           return source;
         })
-      }
+      };
       return callback(null, formattedRes);
     });
   }
