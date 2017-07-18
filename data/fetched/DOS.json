@@ -1,1 +1,49 @@
-{}
+{
+  "version": "1.0.3",
+  "agency": "DOS",
+  "projects": [
+    {
+      "name": "BIDS",
+      "organization": "Department of State, Information Resource Management's Office of eDiplomacy",
+      "description": "Business Information Database System",
+      "license": null,
+      "openSourceProject": 0,
+      "governmentWideReuseProject": 1,
+      "tags": [
+        "Department of State",
+        "DOS",
+        "eDiplomacy",
+        "EB",
+        "Economic Bureau",
+        "Econ Bureau",
+        "Business Opportunities",
+        "Geoviz",
+        "Map",
+        "Geovisualization",
+        "Data",
+        "Leaflet",
+        "Node",
+        "Nodejs",
+        "JavaScript"
+      ],
+      "contact": {
+        "email": "ediplomacy@state.gov",
+        "name": "Tim Hayes",
+        "URL": "https://www.state.gov/m/irm/ediplomacy/"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "repository": "https://github.com/USStateDept/BIDS",
+      "homepage": "https://bids.state.gov/",
+      "languages": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "partners": [],
+      "updated": {
+        "metadataLastUpdated": "2017-03-02"
+      }
+    }
+  ]
+}
