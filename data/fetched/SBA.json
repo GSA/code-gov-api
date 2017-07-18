@@ -1,12 +1,20 @@
 {
   "agency": "SBA",
+  "organization": "OCIO",
   "projects": [
     {
       "name": "OracletoSQL",
       "description": "A standalone CFM code to move data from Oracle Database to SQL Server Database.",
-      "license": "",
+      "license": null,
       "openSourceProject": 1,
-      "governmentWideReuseProject": 0,
+      "governmentWideReuseProject": 1,
+      "tags": [
+        "javascript",
+        "government",
+        "ember",
+        "common",
+        "nsf"
+      ],
       "contact": {
         "email": "Andrew.Davy@sba.gov",
         "name": "Andrew H Davy",
@@ -20,17 +28,7 @@
       "downloadURL": "https://www.sba.gov/sites/default/files/ora2sql.zip",
       "languages": [
         "ColdFusion"
-      ],
-      "partners": {
-        "name": "Oracle-SQL",
-        "email": "Andrew.Davy@sba.gov"
-      },
-      "exemption": null,
-      "updated": {
-        "lastCommit": "2016-12-02",
-        "metadataLastUpdated": "2016-12-02",
-        "lastModified": "2016-12-02"
-      }
+      ]
     }
   ]
 }
