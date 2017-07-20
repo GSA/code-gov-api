@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 /**
  * New Relic agent configuration.
@@ -23,4 +23,4 @@ exports.config = {
      */
     level: 'info'
   }
-}
+};
