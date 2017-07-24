@@ -48,7 +48,8 @@
     "pug": "2.0.0-beta6",
     "request": "2.79.0",
     "request-promise": "^4.2.1",
-    "serve-favicon": "2.3.0"
+    "serve-favicon": "2.3.0",
+    "sleep": "^5.1.1"
   },
   "devDependencies": {
     "babel-cli": "6.5.1",
@@ -63,7 +64,6 @@
     "nyc": "^10.3.2",
     "proxyquire": "^1.8.0",
     "request-promise": "^4.2.1",
-    "sleep": "^5.1.1",
     "supertest": "^3.0.0"
   },
   "engines": {
