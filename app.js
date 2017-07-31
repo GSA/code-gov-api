@@ -28,14 +28,15 @@ const request             = require("request");
 const pug                 = require("pug");
 const favicon             = require('serve-favicon');
 /* eslint-enable */
-
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json');
 /* ------------------------------------------------------------------ *
                             API CONFIG
  * ------------------------------------------------------------------ */
 
 // define and configure express
-let app = express();
-let port = process.env.PORT || 3001;
+const app = express();
+const port = process.env.PORT || 3001;
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(bodyParser.urlencoded({
   extended: true
@@ -45,6 +46,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 app.set('json spaces', 2);

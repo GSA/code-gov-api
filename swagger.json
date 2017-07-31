@@ -1,0 +1,172 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Swagger testing definition for the code.gov API.",
+    "version": "1.0.0",
+    "title": "Code.gov API",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "localhost:3001",
+  "basePath": "/api/0.1",
+  "tags": [
+    {
+      "name": "repo",
+      "description": "Get information on repositories"
+    },
+    {
+      "name": "terms",
+      "description": "Find items based on indexed terms"
+    },
+    {
+      "name": "agencies",
+      "description": "Find items based on agencies"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/repos": {
+      "post": {
+        "tags": [
+          "repo"
+        ],
+        "summary": "Post a search for repos",
+        "description": "",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Query to find repos",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Repo"
+            }
+          }
+        ],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "repo"
+        ],
+        "summary": "Get a list of repos",
+        "description": "",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Repo"
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid"
+          }
+        }
+      }
+    },
+    "/repo/{repoId}": {
+      "get": {
+        "tags": [
+          "repo"
+        ],
+        "summary": "",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "repoId",
+            "in": "path",
+            "description": "ID of repo to return",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Repo"
+            }
+          },
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "Repo not found"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Repo": {
+      "type": "object",
+      "properties": {
+        "repoID": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "array"
+        },
+        "license": {
+          "type": "string"
+        },
+        "governmentWideReuseProject": {
+          "type": "boolean"
+        },
+        "openSourceProject": {
+          "type": "boolean"
+        },
+        "contact": {
+          "type": "object"
+        },
+        "updated": {
+          "type": "object"
+        },
+        "organization": {
+          "type": "string"
+        },
+        "identifier": {
+          "type": "string"
+        },
+        "repository": {
+          "type": "string"
+        },
+        "agency": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
