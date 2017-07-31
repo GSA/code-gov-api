@@ -103,7 +103,8 @@
             "in": "path",
             "description": "ID of repo to return",
             "required": true,
-            "type": "string"
+            "type": "integer",
+            "format": "int64"
           }
         ],
         "responses": {
@@ -118,6 +119,64 @@
           },
           "404": {
             "description": "Repo not found"
+          }
+        }
+      }
+    },
+    "/terms": {
+      "post": {
+        "tags": [
+          "terms"
+        ],
+        "summary": "Post a search for repos",
+        "description": "",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Query to find repos",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Term"
+            }
+          }
+        ],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "terms"
+        ],
+        "summary": "Get a list of repos",
+        "description": "",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Term"
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid"
           }
         }
       }
@@ -165,6 +224,49 @@
         },
         "agency": {
           "type": "string"
+        }
+      }
+    },
+    "Term": {
+      "type": "object",
+      "properties": {
+        "term_key": {
+          "type": "string"
+        },
+        "term": {
+          "type": "string"
+        },
+        "term_type": {
+          "type": "string"
+        },
+        "count": {
+          "type": "number"
+        },
+        "count_normalized": {
+          "type": "number"
+        },
+        "score": {
+          "type": "number"
+        }
+      }
+    },
+    "Agency": {
+      "type": "object",
+      "properties": {
+        "acronym": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "website": {
+          "type": "string"
+        },
+        "codeUrl": {
+          "type": "string"
+        },
+        "numRepos": {
+          "type": "number"
         }
       }
     }
