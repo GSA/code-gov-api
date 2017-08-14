@@ -1,11 +1,11 @@
 {
   "version": "1.0.1",
-  "agency": "DOT",
+  "agency": "USDOT",
   "projects": [
     {
       "name": "PTBS",
-      "repository": "http://our.dot.gov/rc/ogc/c10/SitePages/Home.aspx",
-      "description": "PTBS",
+      "organization": "OST",
+      "description": "TRANServe internal Parking and Transit Benefit website",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "TRANServe VSS",
@@ -29,13 +29,14 @@
     },
     {
       "name": "OST - OGC",
+      "organization": "OST",
       "description": "OGC Records Management",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "OST, SharePoint, MSTFS",
       "status": "Beta",
       "license": null,
-      "repository": "http://our.dot.gov/rc/ogc/c10/SitePages/Home.aspx",
+      "homepage": "http://our.dot.gov/rc/ogc/c10/SitePages/Home.aspx",
       "tags": [
         "transportation",
         "code"
@@ -53,13 +54,14 @@
     },
     {
       "name": "OST - OGC",
+      "organization": "OST",
       "description": "OGC Correspondence",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "OST, SharePoint, MSTFS",
       "status": "Beta",
       "license": null,
-      "repository": "http://our.dot.gov/apps/oGC-Correspondence/SiteAssets/Home.aspx",
+      "homepage": "http://our.dot.gov/apps/oGC-Correspondence/SiteAssets/Home.aspx",
       "tags": [
         "transportation",
         "code"
@@ -77,13 +79,14 @@
     },
     {
       "name": "OST M20 Case Tracking System",
+      "organization": "OST",
       "description": "OST government-facing website (use restricted to OST M20)",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "OST, Visual SourceSafe",
       "status": "Production",
       "license": null,
-      "repository": "https://www.cts.ost.dot.gov",
+      "homepage": "https://www.cts.ost.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -101,13 +104,14 @@
     },
     {
       "name": "OST C70 Consumer Complaint Application",
+      "organization": "OST",
       "description": "OST government-facing website (use restricted to OST C70)",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "OST, Visual SourceSafe",
       "status": "Production",
       "license": null,
-      "repository": "http://cca.ost.dot.gov",
+      "homepage": "http://cca.ost.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -125,13 +129,14 @@
     },
     {
       "name": "OST I10 Grants Notification System",
+      "organization": "OST",
       "description": "OST government-facing website (restricted to I10 and all modes)",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "OST, Visual SourceSafe",
       "status": "Production",
       "license": null,
-      "repository": "http://gns.ost.dot.gov",
+      "homepage": "http://gns.ost.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -149,13 +154,14 @@
     },
     {
       "name": "OST C50 Rulemaking Management System",
+      "organization": "OST",
       "description": "OST government facing website (restricted to C50 users and modes)",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "OST, Visual SourceSafe",
       "status": "Production",
       "license": null,
-      "repository": "http://rms.ost.dot.gov",
+      "homepage": "http://rms.ost.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -173,13 +179,14 @@
     },
     {
       "name": "OST S10 Rulemaking",
+      "organization": "OST",
       "description": "OST government facing website",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "OST, Visual SourceSafe",
       "status": "Production",
       "license": null,
-      "repository": "http://ccm.dot.gov",
+      "homepage": "http://ccm.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -197,13 +204,14 @@
     },
     {
       "name": "OGC-C30",
+      "organization": "OST",
       "description": "Litigation Management Service ",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "OST, SharePoint, MSTFS",
       "status": "Production",
       "license": null,
-      "repository": "http://our.dot.gov/apps/lms/SitePages/Home.aspx",
+      "homepage": "http://our.dot.gov/apps/lms/SitePages/Home.aspx",
       "tags": [
         "transportation",
         "code"
@@ -221,13 +229,14 @@
     },
     {
       "name": "OST",
+      "organization": "OST",
       "description": "Suspension and Debarment Tracking System",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "OST, SharePoint, MSTFS",
       "status": "Production",
       "license": null,
-      "repository": "http://our.dot.gov/site/sd/SitePages/Home.aspx",
+      "homepage": "http://our.dot.gov/site/sd/SitePages/Home.aspx",
       "tags": [
         "transportation",
         "code"
@@ -245,13 +254,14 @@
     },
     {
       "name": "OST - OGC",
+      "organization": "OST",
       "description": "General Counsel Legal Interpretations",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "OST, SharePoint, MSTFS",
       "status": "Production",
       "license": null,
-      "repository": "http://our.dot.gov/office/ost.c/GCLI/SitePages/Home.aspx",
+      "homepage": "http://our.dot.gov/office/ost.c/GCLI/SitePages/Home.aspx",
       "tags": [
         "transportation",
         "code"
@@ -269,13 +279,14 @@
     },
     {
       "name": "OST - OGC",
+      "organization": "OST",
       "description": "Legislative Reference Division",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "OST, SharePoint, MSTFS",
       "status": "Production",
       "license": null,
-      "repository": "http://our.dot.gov/apps/lrd/SitePages/LRDHome.aspx",
+      "homepage": "http://our.dot.gov/apps/lrd/SitePages/LRDHome.aspx",
       "tags": [
         "transportation",
         "code"
@@ -293,13 +304,14 @@
     },
     {
       "name": "OST S10 ",
+      "organization": "OST",
       "description": "Correspondence Control Management System",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "OST, Visual SourceSafe",
       "status": "Production",
       "license": null,
-      "repository": "http://ccm.dot.gov",
+      "homepage": "http://ccm.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -317,13 +329,14 @@
     },
     {
       "name": "R2D2 (Resource Requirement Decision Data)",
+      "organization": "OST",
       "description": "Budget Submision and Tracking",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "OST TFS",
       "status": "Production",
       "license": null,
-      "repository": "https://osthqnwas030vg.ad.dot.gov:8890/forms/frmservlet?config=jpi755",
+      "homepage": "https://osthqnwas030vg.ad.dot.gov:8890/forms/frmservlet?config=jpi755",
       "tags": [
         "transportation",
         "code"
@@ -341,13 +354,14 @@
     },
     {
       "name": "PTBS Development",
+      "organization": "OST",
       "description": "TRANServe Parking and Transit Benefit development website",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "TRANServe VSS",
-      "status": "Alpha",
+      "status": "Testing",
       "license": null,
-      "repository": "http://transparkdev.ost.dot.gov",
+      "homepage": "http://transparkdev.ost.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -365,13 +379,14 @@
     },
     {
       "name": "PTBS Test",
+      "organization": "OST",
       "description": "TRANServe Parking and Transit Benefit test website",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "TRANServe VSS",
-      "status": "Alpha",
+      "status": "Testing",
       "license": null,
-      "repository": "https://transparktest.ost.dot.gov",
+      "homepage": "https://transparktest.ost.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -389,13 +404,14 @@
     },
     {
       "name": "OGC-C30",
+      "organization": "OST",
       "description": "Litigation Management Service ",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "OST, SharePoint, MSTFS",
-      "status": "Alpha",
+      "status": "Testing",
       "license": null,
-      "repository": "http://our.dot.gov/apps/lms/SitePages/Home.aspx",
+      "homepage": "http://our.dot.gov/apps/lms/SitePages/Home.aspx",
       "tags": [
         "transportation",
         "code"
@@ -413,13 +429,14 @@
     },
     {
       "name": "OST - OGC",
+      "organization": "OST",
       "description": "Legislative Reference Division",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "OST, SharePoint, MSTFS",
-      "status": "Alpha",
+      "status": "Testing",
       "license": null,
-      "repository": "http://ourstage.dot.gov/apps/lrd/SitePages/LRDHome.aspx",
+      "homepage": "http://ourstage.dot.gov/apps/lrd/SitePages/LRDHome.aspx",
       "tags": [
         "transportation",
         "code"
@@ -437,13 +454,14 @@
     },
     {
       "name": "OST - OGC",
+      "organization": "OST",
       "description": "OGC Correspondence",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "OST, SharePoint, MSTFS",
-      "status": "Alpha",
+      "status": "Testing",
       "license": null,
-      "repository": "http://ourstage.dot.gov/apps/oGC-Correspondence/SiteAssets/Home.aspx",
+      "homepage": "http://ourstage.dot.gov/apps/oGC-Correspondence/SiteAssets/Home.aspx",
       "tags": [
         "transportation",
         "code"
@@ -461,13 +479,14 @@
     },
     {
       "name": "OST - OGC",
+      "organization": "OST",
       "description": "General Law System",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "OST, SharePoint, MSTFS",
-      "status": "Alpha",
+      "status": "Testing",
       "license": null,
-      "repository": "http://ourstage.dot.gov/apps/gls/SitePages/Home.aspx",
+      "homepage": "http://ourstage.dot.gov/apps/gls/SitePages/Home.aspx",
       "tags": [
         "transportation",
         "code"
@@ -485,13 +504,14 @@
     },
     {
       "name": "OST - M20",
+      "organization": "OST",
       "description": "Case Tracking System",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "OST, SharePoint, MSTFS",
-      "status": "Alpha",
+      "status": "Testing",
       "license": null,
-      "repository": "http://ourstage.dot.gov/apps/CTS/SitePages/CTSHome.aspx",
+      "homepage": "http://ourstage.dot.gov/apps/CTS/SitePages/CTSHome.aspx",
       "tags": [
         "transportation",
         "code"
@@ -509,13 +529,14 @@
     },
     {
       "name": "OST S10 ",
+      "organization": "OST",
       "description": "Correspondence Control Management System",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "OST, Visual SourceSafe",
-      "status": "Alpha",
+      "status": "Testing",
       "license": null,
-      "repository": "http://ccmtraining.ost.dot.gov",
+      "homepage": "http://ccmtraining.ost.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -533,13 +554,14 @@
     },
     {
       "name": "Transit Application",
+      "organization": "OST",
       "description": "TRANServe public facing Transit Application website",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "TRANServe VSS",
       "status": "Production",
       "license": null,
-      "repository": "https://transitapp.ost.dot.gov",
+      "homepage": "https://transitapp.ost.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -557,13 +579,14 @@
     },
     {
       "name": "Parking Application",
+      "organization": "OST",
       "description": "TRANServe public facing Parking Application website",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "TRANServe VSS",
       "status": "Production",
       "license": null,
-      "repository": "https://parkingapp.ost.dot.gov",
+      "homepage": "https://parkingapp.ost.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -581,13 +604,14 @@
     },
     {
       "name": "Transit Application Training",
+      "organization": "OST",
       "description": "TRANServe public facing Transit Application Training website",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "TRANServe VSS",
       "status": "Production",
       "license": null,
-      "repository": "https://transitapptraining.ost.dot.gov",
+      "homepage": "https://transitapptraining.ost.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -605,13 +629,14 @@
     },
     {
       "name": "OST C70 Consumer Complaint Application",
+      "organization": "OST",
       "description": "Public facing website",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "OST, Visual SourceSafe",
       "status": "Production",
       "license": null,
-      "repository": "http://airconsumer.dot.gov",
+      "homepage": "http://airconsumer.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -629,13 +654,14 @@
     },
     {
       "name": "OST C70 Consumer Complaint Application",
+      "organization": "OST",
       "description": "Public facing website (user restricted to airlines and airports)",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "OST, Visual SourceSafe",
       "status": "Production",
       "license": null,
-      "repository": "http://382reporting.ost.dot.gov",
+      "homepage": "http://382reporting.ost.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -653,13 +679,14 @@
     },
     {
       "name": "OST C70 Consumer Complaint Application",
+      "organization": "OST",
       "description": "Public facing website (user restricted to airlines and airports)",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "OST, Visual SourceSafe",
       "status": "Production",
       "license": null,
-      "repository": "http://animalreport.ost.dot.gov",
+      "homepage": "http://animalreport.ost.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -677,13 +704,14 @@
     },
     {
       "name": "OST C70 Consumer Complaint Application",
+      "organization": "OST",
       "description": "Public facing website (user restricted to airlines and airports)",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "OST, Visual SourceSafe",
       "status": "Production",
       "license": null,
-      "repository": "http://filingtarmacdelayplan.dot.gov",
+      "homepage": "http://filingtarmacdelayplan.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -701,13 +729,14 @@
     },
     {
       "name": "OST C70 Consumer Complaint Application",
+      "organization": "OST",
       "description": "Public facing website (user restricted to airlines and airports)",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "OST, Visual SourceSafe",
       "status": "Production",
       "license": null,
-      "repository": "http://websiteaccessibility.dot.gov",
+      "homepage": "http://websiteaccessibility.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -725,13 +754,14 @@
     },
     {
       "name": "OST C70 Consumer Complaint Application",
+      "organization": "OST",
       "description": "Public facing website (user restricted to airlines and airports)",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "OST, Visual SourceSafe",
       "status": "Production",
       "license": null,
-      "repository": "http://prs.ost.dot.gov",
+      "homepage": "http://prs.ost.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -749,13 +779,14 @@
     },
     {
       "name": "OST I10 Grants Notification System",
+      "organization": "OST",
       "description": "OST government-facing website (restricted to I10 and all modes)",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "OST, Visual SourceSafe",
       "status": "Production",
       "license": null,
-      "repository": "http://grants.ost.dot.gov",
+      "homepage": "http://grants.ost.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -773,13 +804,14 @@
     },
     {
       "name": "OST S3 Essential Air Service",
+      "organization": "OST",
       "description": "Public facing website (restricted to small aircarriers)",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "OST, Visual SourceSafe",
       "status": "Production",
       "license": null,
-      "repository": "http://eas.dot.gov",
+      "homepage": "http://eas.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -797,13 +829,14 @@
     },
     {
       "name": "BTS VISTA",
+      "organization": "OST",
       "description": "Visualization, Informational, Statistical and Transportation Analysis System ",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "http://maps.bts.dot.gov",
+      "homepage": "maps.bts.dot.gov ; explore.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -820,14 +853,15 @@
       }
     },
     {
-      "name": "Air Carrier Traffic",
+      "name": "air_carrier_traffic_statistics",
+      "organization": "OST",
       "description": "Air Carrier Traffic Statistics -Features",
       "openSourceProject": 1,
       "governmentWideReuseProject": 1,
       "vcs": "Acquia",
       "status": "Production",
       "license": null,
-      "repository": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/air_carrier_traffic_statistics/",
+      "homepage": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/air_carrier_traffic_statistics/",
       "tags": [
         "transportation",
         "code"
@@ -844,14 +878,15 @@
       }
     },
     {
-      "name": "Air Travel Price Index",
+      "name": "air_travel_price_index",
+      "organization": "OST",
       "description": "Air Travel Price Index (ATPI)-Features",
       "openSourceProject": 1,
       "governmentWideReuseProject": 1,
       "vcs": "Acquia",
       "status": "Production",
       "license": null,
-      "repository": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/air_travel_price_index/",
+      "homepage": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/air_travel_price_index/",
       "tags": [
         "transportation",
         "code"
@@ -868,14 +903,15 @@
       }
     },
     {
-      "name": "Average Air Fares",
+      "name": "average_air_fares",
+      "organization": "OST",
       "description": "Average Air Fares - Features",
       "openSourceProject": 1,
       "governmentWideReuseProject": 1,
       "vcs": "Acquia",
       "status": "Production",
       "license": null,
-      "repository": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/average_air_fares/",
+      "homepage": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/average_air_fares/",
       "tags": [
         "transportation",
         "code"
@@ -892,14 +928,15 @@
       }
     },
     {
-      "name": "BTS Dictionary",
+      "name": "bts_dictionary",
+      "organization": "OST",
       "description": "BTS Dictionary - Features",
       "openSourceProject": 1,
       "governmentWideReuseProject": 1,
       "vcs": "Acquia",
       "status": "Production",
       "license": null,
-      "repository": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/bts_dictionary/",
+      "homepage": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/bts_dictionary/",
       "tags": [
         "transportation",
         "code"
@@ -916,14 +953,15 @@
       }
     },
     {
-      "name": "Bulk Delete OST",
+      "name": "bulk_delete",
+      "organization": "OST",
       "description": "This Module will provide interface for deleting nodes that are no longer required",
       "openSourceProject": 1,
       "governmentWideReuseProject": 1,
       "vcs": "Acquia",
       "status": "Production",
       "license": null,
-      "repository": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/bulk_delete/",
+      "homepage": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/bulk_delete/",
       "tags": [
         "transportation",
         "code"
@@ -940,14 +978,15 @@
       }
     },
     {
-      "name": "Major Pub",
+      "name": "major_pub",
+      "organization": "OST",
       "description": "This Module will Import The two major publications without menu",
       "openSourceProject": 1,
       "governmentWideReuseProject": 1,
       "vcs": "Acquia",
       "status": "Production",
       "license": null,
-      "repository": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/major_pub/",
+      "homepage": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/major_pub/",
       "tags": [
         "transportation",
         "code"
@@ -964,14 +1003,15 @@
       }
     },
     {
-      "name": "Multi Import OST",
+      "name": "multi_import",
+      "organization": "OST",
       "description": "This Module will provide interface for uploading multiple levels html files which are 508 ",
       "openSourceProject": 1,
       "governmentWideReuseProject": 1,
       "vcs": "Acquia",
       "status": "Production",
       "license": null,
-      "repository": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/multi_import/",
+      "homepage": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/multi_import/",
       "tags": [
         "transportation",
         "code"
@@ -988,14 +1028,15 @@
       }
     },
     {
-      "name": "Recruisive Impact",
+      "name": "recursive_import",
+      "organization": "OST",
       "description": "This Module will provide interface for uploading multiple levels html files which are 508 ",
       "openSourceProject": 1,
       "governmentWideReuseProject": 1,
       "vcs": "Acquia",
       "status": "Production",
       "license": null,
-      "repository": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/recursive_import/",
+      "homepage": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/recursive_import/",
       "tags": [
         "transportation",
         "code"
@@ -1012,14 +1053,15 @@
       }
     },
     {
-      "name": "Subject Areas DOT ",
+      "name": "subject_areas",
+      "organization": "OST",
       "description": "This Module will Import all the subject areas under subject areas menu",
       "openSourceProject": 1,
       "governmentWideReuseProject": 1,
       "vcs": "Acquia",
       "status": "Production",
       "license": null,
-      "repository": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/subject_areas/",
+      "homepage": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/subject_areas/",
       "tags": [
         "transportation",
         "code"
@@ -1036,14 +1078,15 @@
       }
     },
     {
-      "name": "Subject Areas WOM",
+      "name": "subject_areas_wom",
+      "organization": "OST",
       "description": "This Module will Import all the subject areas under subject areas without menu",
       "openSourceProject": 1,
       "governmentWideReuseProject": 1,
       "vcs": "Acquia",
       "status": "Production",
       "license": null,
-      "repository": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/subject_areas_wom/",
+      "homepage": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/subject_areas_wom/",
       "tags": [
         "transportation",
         "code"
@@ -1060,14 +1103,15 @@
       }
     },
     {
-      "name": "Transportation Services Index",
+      "name": "transportation_services_index",
+      "organization": "OST",
       "description": "Transportation Services Index - Features",
       "openSourceProject": 1,
       "governmentWideReuseProject": 1,
       "vcs": "Acquia",
       "status": "Production",
       "license": null,
-      "repository": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/transportation_services_index/",
+      "homepage": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/transportation_services_index/",
       "tags": [
         "transportation",
         "code"
@@ -1084,14 +1128,15 @@
       }
     },
     {
-      "name": "Custom Search DOT",
+      "name": "custom_search",
+      "organization": "OST",
       "description": "Customize the default search, change labels, default texts, ordering, and display content ",
       "openSourceProject": 1,
       "governmentWideReuseProject": 1,
       "vcs": "Acquia",
       "status": "Production",
       "license": null,
-      "repository": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom_search/",
+      "homepage": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom_search/",
       "tags": [
         "transportation",
         "code"
@@ -1108,14 +1153,15 @@
       }
     },
     {
-      "name": "RITA Book",
+      "name": "rita_book",
+      "organization": "OST",
       "description": "This Module will provide additional functionality for uploading html tables into Book ",
       "openSourceProject": 1,
       "governmentWideReuseProject": 1,
       "vcs": "Acquia",
       "status": "Production",
       "license": null,
-      "repository": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/rita_book/",
+      "homepage": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/rita_book/",
       "tags": [
         "transportation",
         "code"
@@ -1132,14 +1178,15 @@
       }
     },
     {
-      "name": "Address 2 Abstate",
+      "name": "addressfield_2abstate",
+      "organization": "OST",
       "description": "Extend address field module to format US state as two letter abbreviation",
       "openSourceProject": 1,
       "governmentWideReuseProject": 1,
       "vcs": "Acquia",
       "status": "Production",
       "license": null,
-      "repository": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/addressfield_2abstate/",
+      "homepage": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/addressfield_2abstate/",
       "tags": [
         "transportation",
         "code"
@@ -1157,13 +1204,14 @@
     },
     {
       "name": "OST PRISM",
+      "organization": "OST",
       "description": "PRISM is a procurement management system,which automates the procurement process from the creation of the initial purchase request through the solicitation, contract award until the final contract close-out.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://dotostprism.compusearch.com/prism.net/Security/logon.aspx",
+      "homepage": "https://dotostprism.compusearch.com/prism.net/Security/logon.aspx",
       "tags": [
         "transportation",
         "code"
@@ -1181,13 +1229,14 @@
     },
     {
       "name": "Administrative Management Expense System (AMES)",
+      "organization": "FTA",
       "description": "AMES is a web-based application which displays the administrative budget execution process electronically.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "repository": "http://ftanet.ad.dot.gov/ames/",
+      "homepage": "http://ftanet.ad.dot.gov/ames/",
       "tags": [
         "transportation",
         "code"
@@ -1205,13 +1254,14 @@
     },
     {
       "name": "Charter Registration Tool - Admin",
+      "organization": "FTA",
       "description": "allows FTA to electronically register private charter operators. This allows Allows FTA grant recipients to notify those companies when the grant recipient receives a request for charter service.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "repository": "http://ftanet.ad.dot.gov/CharterRegistrationAdmin",
+      "homepage": "http://ftanet.ad.dot.gov/CharterRegistrationAdmin",
       "tags": [
         "transportation",
         "code"
@@ -1229,13 +1279,14 @@
     },
     {
       "name": "Charter Registration Tool - Public",
+      "organization": "FTA",
       "description": "allows FTA to electronically register private charter operators. This allows Allows FTA grant recipients to notify those companies when the grant recipient receives a request for charter service.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "repository": "http://ftawebprod.fta.dot.gov/CharterRegistration/",
+      "homepage": "http://ftawebprod.fta.dot.gov/CharterRegistration/",
       "tags": [
         "transportation",
         "code"
@@ -1253,13 +1304,14 @@
     },
     {
       "name": "Charter Reporting Tool - Admin",
+      "organization": "FTA",
       "description": "Allows charter bus recipients to upload quarterly reports, and allows FTA to review these reports.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "repository": "https://ftanet.ad.dot.gov/CharterReporting",
+      "homepage": "https://ftanet.ad.dot.gov/CharterReporting",
       "tags": [
         "transportation",
         "code"
@@ -1277,13 +1329,14 @@
     },
     {
       "name": "Charter Reporting Tool - Public",
+      "organization": "FTA",
       "description": "Allows charter bus recipients to upload quarterly reports, and allows FTA to review these reports.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "repository": "https://ftawebprod.fta.dot.gov/CharterReporting",
+      "homepage": "https://ftawebprod.fta.dot.gov/CharterReporting",
       "tags": [
         "transportation",
         "code"
@@ -1301,13 +1354,14 @@
     },
     {
       "name": "Contact Us Tool (CUT) - Admin",
-      "description": "a web-based application that provides timely responses to inquiries submitted through FTAís public website. The tool measures FTAís responsiveness and promotes accountability of FTA staff. The tool is accessible to designated Program Office Contacts (POCs), who are responsible for responding to inquiries submitted through the tool. ?",
+      "organization": "FTA",
+      "description": "a web-based application that provides timely responses to inquiries submitted through FTA’s public website. The tool measures FTA’s responsiveness and promotes accountability of FTA staff. The tool is accessible to designated Program Office Contacts (POCs), who are responsible for responding to inquiries submitted through the tool. ​",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "repository": "http://ftanet.ad.dot.gov/ContactUsToolAdmin/",
+      "homepage": "http://ftanet.ad.dot.gov/ContactUsToolAdmin/",
       "tags": [
         "transportation",
         "code"
@@ -1325,13 +1379,14 @@
     },
     {
       "name": "Contact Us Tool (CUT) - Public",
-      "description": "a web-based application that provides timely responses to inquiries submitted through FTAís public website. The tool measures FTAís responsiveness and promotes accountability of FTA staff. The tool is accessible to designated Program Office Contacts (POCs), who are responsible for responding to inquiries submitted through the tool. ?",
+      "organization": "FTA",
+      "description": "a web-based application that provides timely responses to inquiries submitted through FTA’s public website. The tool measures FTA’s responsiveness and promotes accountability of FTA staff. The tool is accessible to designated Program Office Contacts (POCs), who are responsible for responding to inquiries submitted through the tool. ​",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "repository": "https://ftawebprod.fta.dot.gov/ContactUsTool/Public/FAQs.aspx",
+      "homepage": "https://ftawebprod.fta.dot.gov/ContactUsTool/Public/FAQs.aspx",
       "tags": [
         "transportation",
         "code"
@@ -1349,13 +1404,14 @@
     },
     {
       "name": "Operational Assets and Security Information System (OASIS)",
+      "organization": "FTA",
       "description": "Operational Assets and Security Information System - maintaining employee non-PII data; used for On- and Off-boarding Process.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "repository": "https://ftanet.ad.dot.gov/OASIS/",
+      "homepage": "https://ftanet.ad.dot.gov/OASIS/",
       "tags": [
         "transportation",
         "code"
@@ -1373,13 +1429,14 @@
     },
     {
       "name": "Oversight Tracking System (OTrak)",
+      "organization": "FTA",
       "description": "Oversight Tracking - managing oversight program activities, including annual assessment and Oversight reviews.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "repository": "https://ftawebprod.fta.dot.gov/OTrak/",
+      "homepage": "https://ftawebprod.fta.dot.gov/OTrak/",
       "tags": [
         "transportation",
         "code"
@@ -1397,13 +1454,14 @@
     },
     {
       "name": "Oversight Tracking System (OTrak) - User Acceptance",
-      "description": "Used for User Acceptance Alpha",
+      "organization": "FTA",
+      "description": "Used for User Acceptance Testing",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "repository": "https://ftawebprod.fta.dot.gov/Otrak_UA",
+      "homepage": "https://ftawebprod.fta.dot.gov/Otrak_UA",
       "tags": [
         "transportation",
         "code"
@@ -1421,13 +1479,14 @@
     },
     {
       "name": "Oversight Tracking System (OTrak) - Training",
+      "organization": "FTA",
       "description": "For training OTrak users",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "repository": "https://ftawebprod.fta.dot.gov/Otraktraining",
+      "homepage": "https://ftawebprod.fta.dot.gov/Otraktraining",
       "tags": [
         "transportation",
         "code"
@@ -1445,13 +1504,14 @@
     },
     {
       "name": "Phone Directory",
+      "organization": "FTA",
       "description": "Phone Directory allows users to locate FTA employees and onsite contractors by name, office, or reverse lookup phone number.  ",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "repository": "http://ftanet.ad.dot.gov/PhoneDirectory",
+      "homepage": "http://ftanet.ad.dot.gov/PhoneDirectory",
       "tags": [
         "transportation",
         "code"
@@ -1469,13 +1529,14 @@
     },
     {
       "name": "Program Guidance (ProGuide)",
+      "organization": "FTA",
       "description": "Program Guidance (ProGuide) is a web-based application designed to support FTA's effort to track guidance and ensure it is disseminated consistently throughout FTA. ",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "repository": "http://ftanet.ad.dot.gov/ProgramGuidance/GuidanceRequestSearch.aspx",
+      "homepage": "http://ftanet.ad.dot.gov/ProgramGuidance/GuidanceRequestSearch.aspx",
       "tags": [
         "transportation",
         "code"
@@ -1493,13 +1554,14 @@
     },
     {
       "name": "FTA Coordinating Council for Access & Mobility (CCAM) ",
+      "organization": "FTA",
       "description": " The website provides information resource on all Federal programs funding human service transportation to the general public.  The site contains information including policy, program and funding, assessment and planning, mobility management strategies, leadership and partnership, technical assistance and training, outreach, and useful practices for coordinating transportation.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "?",
-      "status": "Production",
+      "status": "",
       "license": null,
-      "repository": "https://www.transit.dot.gov/ccam/",
+      "homepage": "https://www.transit.dot.gov/ccam/",
       "tags": [
         "transportation",
         "code"
@@ -1517,13 +1579,14 @@
     },
     {
       "name": "FTA Coordinating Council for Access & Mobility (CCAM) ",
+      "organization": "FTA",
       "description": " The website provides information resource on all Federal programs funding human service transportation to the general public.  The site contains information including policy, program and funding, assessment and planning, mobility management strategies, leadership and partnership, technical assistance and training, outreach, and useful practices for coordinating transportation.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "?",
-      "status": "Production",
+      "status": "",
       "license": null,
-      "repository": "https://www.transit.dot.gov/ccam/",
+      "homepage": "https://www.transit.dot.gov/ccam/",
       "tags": [
         "transportation",
         "code"
@@ -1541,13 +1604,14 @@
     },
     {
       "name": "Discretionary Grants System (DGS)",
+      "organization": "FTA",
       "description": "DGS is a centralized and secure web-based application that allows FTA to collect and evaluate discretionary grant applications submitted through Grants.gov. The system contains submitted applications and information related to the evaluation process.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "FHWA SharePoint/Grants.gov",
       "status": "Production",
       "license": null,
-      "repository": "https://ftawebapps.fta.dot.gov/apps/DGS/",
+      "homepage": "https://ftawebapps.fta.dot.gov/apps/DGS/",
       "tags": [
         "transportation",
         "code"
@@ -1565,13 +1629,14 @@
     },
     {
       "name": "FTA Workshop Planning Calendar",
+      "organization": "FTA",
       "description": "FTA Workshop Planning Calendar is an application that allows all FTA Users to submit conference requests.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "FHWA SharePoint",
       "status": "Production",
       "license": null,
-      "repository": "https://ftawebapps.fta.dot.gov/apps/FTA_Conference_Calendar",
+      "homepage": "https://ftawebapps.fta.dot.gov/apps/FTA_Conference_Calendar",
       "tags": [
         "transportation",
         "code"
@@ -1589,13 +1654,14 @@
     },
     {
       "name": "OUR Dashboard",
+      "organization": "FTA",
       "description": "FTA's collaboration portal built in SharePoint.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "repository": "http://one10.dot.gov/office/fta/Pages/default.aspx",
+      "homepage": "http://one10.dot.gov/office/fta/Pages/default.aspx",
       "tags": [
         "transportation",
         "code"
@@ -1613,13 +1679,14 @@
     },
     {
       "name": "TransPort",
+      "organization": "FTA",
       "description": "TransPort is FTA's intranet and collaboration portal built in SharePoint.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "repository": "http://one10.dot.gov/office/fta/Pages/default.aspx",
+      "homepage": "http://one10.dot.gov/office/fta/Pages/default.aspx",
       "tags": [
         "transportation",
         "code"
@@ -1637,13 +1704,14 @@
     },
     {
       "name": "National Transit Database (NTD)",
+      "organization": "FTA",
       "description": "The National Transit Database (NTD) is the Federal Transit Administration's (FTA) statistical data collection and reporting system for the U.S. transit industry, required by 49 U.S.C. Section 5335; data used in statutory formula apportionments.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "Appian Cloud",
       "status": "Production",
       "license": null,
-      "repository": "https://faces.fta.dot.gov/suite/",
+      "homepage": "https://faces.fta.dot.gov/suite/",
       "tags": [
         "transportation",
         "code"
@@ -1661,13 +1729,14 @@
     },
     {
       "name": "Transit Award Management System (TrAMS)",
+      "organization": "FTA",
       "description": "TrAMS is a grants management application that was implemented in 2016 to replace the current grants management application, TEAM. It supports FTA in its mission to manage the application, review, approval, award, notification, management, and closure of grants and cooperative agreements.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "Appian Cloud",
       "status": "Production",
       "license": null,
-      "repository": "https://faces.fta.dot.gov/suite/",
+      "homepage": "https://faces.fta.dot.gov/suite/",
       "tags": [
         "transportation",
         "code"
@@ -1685,13 +1754,14 @@
     },
     {
       "name": "Change Tracking System (CTS/CMDB/IM)",
-      "description": "Change Tracking System (CTS) is a web-based application FTA uses to review and adjudicate all Software Change Requests (SCRs) made to agency applications and Configuration Change Requests (CCRs) that relate to security, infrastructure, and network resources.?",
+      "organization": "FTA",
+      "description": "Change Tracking System (CTS) is a web-based application FTA uses to review and adjudicate all Software Change Requests (SCRs) made to agency applications and Configuration Change Requests (CCRs) that relate to security, infrastructure, and network resources.​",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "on-premise",
       "status": "Production",
       "license": null,
-      "repository": "https://ftanet.ad.dot.gov/tmtrack/tmtrack.dll?",
+      "homepage": "https://ftanet.ad.dot.gov/tmtrack/tmtrack.dll?",
       "tags": [
         "transportation",
         "code"
@@ -1709,13 +1779,14 @@
     },
     {
       "name": "FTA Public Site",
+      "organization": "FTA",
       "description": "FTA's Public website provides FTA's stakeholders (grantees, transit agencies, Federal/State/Local/Tribal governments, and the public) with a web-based tool facilitating external communications.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "Acquia hosted (AWS Cloud)",
       "status": "Production",
       "license": null,
-      "repository": "https://www.transit.dot.gov/",
+      "homepage": "https://www.transit.dot.gov/",
       "tags": [
         "transportation",
         "code"
@@ -1733,19 +1804,20 @@
     },
     {
       "name": "Data Loading Tool",
+      "organization": "FRA",
       "description": "A tool to make all the dashboards data loading easier",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "FRA TFS",
       "status": "Beta",
       "license": null,
-      "repository": "http://apps.fra.dot.gov/dataloading/",
+      "homepage": "http://apps.fra.dot.gov/dataloading/",
       "tags": [
         "transportation",
         "code"
       ],
       "contact": {
-        "email": "eric.lovettt@dot.gov",
+        "email": "eric.lovett@dot.gov@dot.gov",
         "name": "Eric Lovett",
         "URL": "https://www.transportation.gov",
         "phone": "2023663000"
@@ -1757,19 +1829,20 @@
     },
     {
       "name": "FRA Web",
+      "organization": "FRA",
       "description": "FRA public facing website",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "FRA TFS",
       "status": "Production",
       "license": null,
-      "repository": "www.fra.dot.gov/cms.fra.dot.gov",
+      "homepage": "www.fra.dot.gov/cms.fra.dot.gov",
       "tags": [
         "transportation",
         "code"
       ],
       "contact": {
-        "email": "eric.lovettt@dot.gov",
+        "email": "eric.lovett@dot.gov@dot.gov",
         "name": "Eric Lovett",
         "URL": "https://www.transportation.gov",
         "phone": "2023663000"
@@ -1781,19 +1854,20 @@
     },
     {
       "name": "RGHS",
+      "organization": "FRA",
       "description": "Railroaders' Guid to Healthy Sleep",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "FRA TFS",
       "status": "Production",
       "license": null,
-      "repository": "http://www.railroadersleep.org",
+      "homepage": "www.railroadersleep.org",
       "tags": [
         "transportation",
         "code"
       ],
       "contact": {
-        "email": "eric.lovettt@dot.gov",
+        "email": "eric.lovett@dot.gov@dot.gov",
         "name": "Eric Lovett",
         "URL": "https://www.transportation.gov",
         "phone": "2023663000"
@@ -1805,19 +1879,20 @@
     },
     {
       "name": "RSAC",
+      "organization": "FRA",
       "description": "Railroad Safety Advisory Committee web application",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "FRA TFS",
       "status": "Production",
       "license": null,
-      "repository": "http://rsac.fra.dot.gov",
+      "homepage": "rsac.fra.dot.gov",
       "tags": [
         "transportation",
         "code"
       ],
       "contact": {
-        "email": "eric.lovettt@dot.gov",
+        "email": "eric.lovett@dot.gov@dot.gov",
         "name": "Eric Lovett",
         "URL": "https://www.transportation.gov",
         "phone": "2023663000"
@@ -1829,19 +1904,20 @@
     },
     {
       "name": "Buy America Waiver",
+      "organization": "FRA",
       "description": "Buy Americ waiver requests commenting",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "FRA TFS",
       "status": "Production",
       "license": null,
-      "repository": "http://www.fra.dot.gov/Page/P0185",
+      "homepage": "http://www.fra.dot.gov/Page/P0185",
       "tags": [
         "transportation",
         "code"
       ],
       "contact": {
-        "email": "eric.lovettt@dot.gov",
+        "email": "eric.lovett@dot.gov@dot.gov",
         "name": "Eric Lovett",
         "URL": "https://www.transportation.gov",
         "phone": "2023663000"
@@ -1853,19 +1929,20 @@
     },
     {
       "name": "Online Quiz",
+      "organization": "FRA",
       "description": "A platform to support creating and taking online quiz",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "FRA TFS",
       "status": "Production",
       "license": null,
-      "repository": "http://www.fra.dot.gov/onlinetests/",
+      "homepage": "http://www.fra.dot.gov/onlinetests/",
       "tags": [
         "transportation",
         "code"
       ],
       "contact": {
-        "email": "eric.lovettt@dot.gov",
+        "email": "eric.lovett@dot.gov@dot.gov",
         "name": "Eric Lovett",
         "URL": "https://www.transportation.gov",
         "phone": "2023663000"
@@ -1877,19 +1954,20 @@
     },
     {
       "name": "SAT Training",
+      "organization": "FRA",
       "description": "Security Awareness Training",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "FRA TFS",
       "status": "Production",
       "license": null,
-      "repository": "http://www.fra.dot.gov/training/sat",
+      "homepage": "http://www.fra.dot.gov/training/sat",
       "tags": [
         "transportation",
         "code"
       ],
       "contact": {
-        "email": "eric.lovettt@dot.gov",
+        "email": "eric.lovett@dot.gov@dot.gov",
         "name": "Eric Lovett",
         "URL": "https://www.transportation.gov",
         "phone": "2023663000"
@@ -1901,19 +1979,20 @@
     },
     {
       "name": "FRA Intranet Portal",
+      "organization": "FRA",
       "description": "FRA Intranet Portal",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "SharePoint",
       "status": "Production",
       "license": null,
-      "repository": "http://our.dot.gov/office/fra/Pages/default.aspx",
+      "homepage": "http://our.dot.gov/office/fra/Pages/default.aspx",
       "tags": [
         "transportation",
         "code"
       ],
       "contact": {
-        "email": "eric.lovettt@dot.gov",
+        "email": "eric.lovett@dot.gov@dot.gov",
         "name": "Eric Lovett",
         "URL": "https://www.transportation.gov",
         "phone": "2023663000"
@@ -1925,19 +2004,20 @@
     },
     {
       "name": "PA2 Dashboard",
+      "organization": "FRA",
       "description": "FRA web analytics dashboard",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "OST TFS",
       "status": "Production",
       "license": null,
-      "repository": "https://ce.dot.gov/bic/fra/viewer.aspx#id=56",
+      "homepage": "https://ce.dot.gov/bic/fra/viewer.aspx#id=56",
       "tags": [
         "transportation",
         "code"
       ],
       "contact": {
-        "email": "eric.lovettt@dot.gov",
+        "email": "eric.lovett@dot.gov@dot.gov",
         "name": "Eric Lovett",
         "URL": "https://www.transportation.gov",
         "phone": "2023663000"
@@ -1949,19 +2029,20 @@
     },
     {
       "name": "FedEx Cost Dashboard",
+      "organization": "FRA",
       "description": "FRA FedEx cost analytics",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "OST TFS",
       "status": "Production",
       "license": null,
-      "repository": "https://ce.dot.gov/bic/fra/viewer.aspx#id=52",
+      "homepage": "https://ce.dot.gov/bic/fra/viewer.aspx#id=52",
       "tags": [
         "transportation",
         "code"
       ],
       "contact": {
-        "email": "eric.lovettt@dot.gov",
+        "email": "eric.lovett@dot.gov@dot.gov",
         "name": "Eric Lovett",
         "URL": "https://www.transportation.gov",
         "phone": "2023663000"
@@ -1973,19 +2054,20 @@
     },
     {
       "name": "WCF Dashboard",
+      "organization": "FRA",
       "description": "Working Capital Fund dashboard",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "OST TFS",
       "status": "Production",
       "license": null,
-      "repository": "https://ce.dot.gov/bic/fra/viewer.aspx#id=53",
+      "homepage": "https://ce.dot.gov/bic/fra/viewer.aspx#id=53",
       "tags": [
         "transportation",
         "code"
       ],
       "contact": {
-        "email": "eric.lovettt@dot.gov",
+        "email": "eric.lovett@dot.gov@dot.gov",
         "name": "Eric Lovett",
         "URL": "https://www.transportation.gov",
         "phone": "2023663000"
@@ -1997,19 +2079,20 @@
     },
     {
       "name": "PRISM Dashboard",
+      "organization": "FRA",
       "description": "Dashboard shows FRA's Purchase requests by account codes. This pulls from PRISM and displays information as requested by the Dashboard owner.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "OST TFS",
       "status": "Production",
       "license": null,
-      "repository": "https://ce.dot.gov/bic/fra/viewer.aspx#id=54",
+      "homepage": "https://ce.dot.gov/bic/fra/viewer.aspx#id=54",
       "tags": [
         "transportation",
         "code"
       ],
       "contact": {
-        "email": "eric.lovettt@dot.gov",
+        "email": "eric.lovett@dot.gov@dot.gov",
         "name": "Eric Lovett",
         "URL": "https://www.transportation.gov",
         "phone": "2023663000"
@@ -2021,19 +2104,20 @@
     },
     {
       "name": "FRA POAM Tracker",
+      "organization": "FRA",
       "description": "FRA active system tracking",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "OST TFS",
       "status": "Production",
       "license": null,
-      "repository": "https://ce.dot.gov/bic/fra/viewer.aspx#id=61",
+      "homepage": "https://ce.dot.gov/bic/fra/viewer.aspx#id=61",
       "tags": [
         "transportation",
         "code"
       ],
       "contact": {
-        "email": "eric.lovettt@dot.gov",
+        "email": "eric.lovett@dot.gov@dot.gov",
         "name": "Eric Lovett",
         "URL": "https://www.transportation.gov",
         "phone": "2023663000"
@@ -2045,19 +2129,20 @@
     },
     {
       "name": "FRA Training Tracker",
+      "organization": "FRA",
       "description": "FRA Security Training Tracking",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "OST TFS",
       "status": "Production",
       "license": null,
-      "repository": "https://ce.dot.gov/bic/fra/viewer.aspx#id=64",
+      "homepage": "https://ce.dot.gov/bic/fra/viewer.aspx#id=64",
       "tags": [
         "transportation",
         "code"
       ],
       "contact": {
-        "email": "eric.lovettt@dot.gov",
+        "email": "eric.lovett@dot.gov@dot.gov",
         "name": "Eric Lovett",
         "URL": "https://www.transportation.gov",
         "phone": "2023663000"
@@ -2069,19 +2154,20 @@
     },
     {
       "name": "Rail Crossing Locator",
+      "organization": "FRA",
       "description": "A mobile app for rail crossing lookup",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "FRA TFS",
       "status": "Production",
       "license": null,
-      "repository": "https://www.fra.dot.gov/Page/P0845",
+      "homepage": "https://www.fra.dot.gov/Page/P0845",
       "tags": [
         "transportation",
         "code"
       ],
       "contact": {
-        "email": "eric.lovettt@dot.gov",
+        "email": "eric.lovett@dot.gov@dot.gov",
         "name": "Eric Lovett",
         "URL": "https://www.transportation.gov",
         "phone": "2023663000"
@@ -2093,19 +2179,20 @@
     },
     {
       "name": "FRA Hoteling",
+      "organization": "FRA",
       "description": "the purpose of the FRA hoteling space application is to identify available temporary seating while at the Headquarters Building",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "FRA TFS",
       "status": "Production",
       "license": null,
-      "repository": "http://apps.fra.dot.gov/app/Hoteling/",
+      "homepage": "http://apps.fra.dot.gov/app/Hoteling/",
       "tags": [
         "transportation",
         "code"
       ],
       "contact": {
-        "email": "eric.lovettt@dot.gov",
+        "email": "eric.lovett@dot.gov@dot.gov",
         "name": "Eric Lovett",
         "URL": "https://www.transportation.gov",
         "phone": "2023663000"
@@ -2117,19 +2204,20 @@
     },
     {
       "name": "FRA Vacancy Tracker",
+      "organization": "FRA",
       "description": "HR tracker dashboard to track the status of FRA positions",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "FRA TFS",
       "status": "Production",
       "license": null,
-      "repository": "https://apps.fra.dot.gov/app/vacancies",
+      "homepage": "https://apps.fra.dot.gov/app/vacancies",
       "tags": [
         "transportation",
         "code"
       ],
       "contact": {
-        "email": "eric.lovettt@dot.gov",
+        "email": "eric.lovett@dot.gov@dot.gov",
         "name": "Eric Lovett",
         "URL": "https://www.transportation.gov",
         "phone": "2023663000"
@@ -2141,19 +2229,20 @@
     },
     {
       "name": "FRA FAST Act Deliverable Dashboard",
+      "organization": "FRA",
       "description": "FRA FAST Act Deliverable Dashboard",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "FRA TFS",
       "status": "Production",
       "license": null,
-      "repository": "https://apps.fra.dot.gov/app/FAST",
+      "homepage": "https://apps.fra.dot.gov/app/FAST",
       "tags": [
         "transportation",
         "code"
       ],
       "contact": {
-        "email": "eric.lovettt@dot.gov",
+        "email": "eric.lovett@dot.gov@dot.gov",
         "name": "Eric Lovett",
         "URL": "https://www.transportation.gov",
         "phone": "2023663000"
@@ -2165,19 +2254,20 @@
     },
     {
       "name": "NTSB Dashboard",
+      "organization": "FRA",
       "description": "NTSB Recommendation tracker Dashboard",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "FRA TFS",
       "status": "Production",
       "license": null,
-      "repository": "http://ce.dot.gov/App/FRA/NTSB",
+      "homepage": "http://ce.dot.gov/App/FRA/NTSB",
       "tags": [
         "transportation",
         "code"
       ],
       "contact": {
-        "email": "eric.lovettt@dot.gov",
+        "email": "eric.lovett@dot.gov@dot.gov",
         "name": "Eric Lovett",
         "URL": "https://www.transportation.gov",
         "phone": "2023663000"
@@ -2189,19 +2279,20 @@
     },
     {
       "name": "ATS Dashboard",
+      "organization": "FRA",
       "description": "FRA Audit Tracking System dashboard",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "FRA TFS",
       "status": "Production",
       "license": null,
-      "repository": "http://ce.dot.gov/App/FRA/ATS",
+      "homepage": "http://ce.dot.gov/App/FRA/ATS",
       "tags": [
         "transportation",
         "code"
       ],
       "contact": {
-        "email": "eric.lovettt@dot.gov",
+        "email": "eric.lovett@dot.gov@dot.gov",
         "name": "Eric Lovett",
         "URL": "https://www.transportation.gov",
         "phone": "2023663000"
@@ -2213,19 +2304,20 @@
     },
     {
       "name": "FRAAAB Dashboard",
+      "organization": "FRA",
       "description": "Accident Analysis Branch Backlog Dashboard",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "FRA TFS",
       "status": "Production",
       "license": null,
-      "repository": "http://apps.fra.dot.gov/app/FRAAAB",
+      "homepage": "http://apps.fra.dot.gov/app/FRAAAB",
       "tags": [
         "transportation",
         "code"
       ],
       "contact": {
-        "email": "eric.lovettt@dot.gov",
+        "email": "eric.lovett@dot.gov@dot.gov",
         "name": "Eric Lovett",
         "URL": "https://www.transportation.gov",
         "phone": "2023663000"
@@ -2237,19 +2329,20 @@
     },
     {
       "name": "FRA Org chart",
+      "organization": "FRA",
       "description": "FRA Org chart",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "FRA TFS",
       "status": "Production",
       "license": null,
-      "repository": "http://apps.fra.dot.gov/orgchart",
+      "homepage": "http://apps.fra.dot.gov/orgchart",
       "tags": [
         "transportation",
         "code"
       ],
       "contact": {
-        "email": "eric.lovettt@dot.gov",
+        "email": "eric.lovett@dot.gov@dot.gov",
         "name": "Eric Lovett",
         "URL": "https://www.transportation.gov",
         "phone": "2023663000"
@@ -2261,19 +2354,20 @@
     },
     {
       "name": "RLS -LERB  Dashboard",
+      "organization": "FRA",
       "description": "Dashboard to display current metrics and trend analysis for  LERB/OCRB CASES",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "OST TFS",
       "status": "Production",
       "license": null,
-      "repository": "https://ce.dot.gov/bic/fra/viewer.aspx#id=16",
+      "homepage": "https://ce.dot.gov/bic/fra/viewer.aspx#id=16",
       "tags": [
         "transportation",
         "code"
       ],
       "contact": {
-        "email": "eric.lovettt@dot.gov",
+        "email": "eric.lovett@dot.gov@dot.gov",
         "name": "Eric Lovett",
         "URL": "https://www.transportation.gov",
         "phone": "2023663000"
@@ -2285,19 +2379,20 @@
     },
     {
       "name": "State Laws",
+      "organization": "FRA",
       "description": "State laws and regulations affecting highway - rail grade crossings",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "FRA TFS",
       "status": "Production",
       "license": null,
-      "repository": "http://www.fra.dot.gov/statelaws",
+      "homepage": "http://www.fra.dot.gov/statelaws",
       "tags": [
         "transportation",
         "code"
       ],
       "contact": {
-        "email": "eric.lovettt@dot.gov",
+        "email": "eric.lovett@dot.gov@dot.gov",
         "name": "Eric Lovett",
         "URL": "https://www.transportation.gov",
         "phone": "2023663000"
@@ -2309,19 +2404,20 @@
     },
     {
       "name": "Laws & Regs",
+      "organization": "FRA",
       "description": "A hybrid mobile app for state laws and regulations",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "FRA TFS",
       "status": "Production",
       "license": null,
-      "repository": "https://itunes.apple.com/us/app/laws-regs/id868138071?mt=8",
+      "homepage": "https://itunes.apple.com/us/app/laws-regs/id868138071?mt=8",
       "tags": [
         "transportation",
         "code"
       ],
       "contact": {
-        "email": "eric.lovettt@dot.gov",
+        "email": "eric.lovett@dot.gov@dot.gov",
         "name": "Eric Lovett",
         "URL": "https://www.transportation.gov",
         "phone": "2023663000"
@@ -2333,19 +2429,20 @@
     },
     {
       "name": "HOS",
+      "organization": "FRA",
       "description": "Hours of service app",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "FRA TFS",
-      "status": "Alpha",
+      "status": "Testing",
       "license": null,
-      "repository": "http://frahqewas006vg:8080/tfs/DefaultCollection/_git/HoursOfService",
+      "homepage": "",
       "tags": [
         "transportation",
         "code"
       ],
       "contact": {
-        "email": "eric.lovettt@dot.gov",
+        "email": "eric.lovett@dot.gov@dot.gov",
         "name": "Eric Lovett",
         "URL": "https://www.transportation.gov",
         "phone": "2023663000"
@@ -2357,13 +2454,14 @@
     },
     {
       "name": "EARS",
+      "organization": "PHMSA",
       "description": "Employee Accountability Reporting System (EARS).  EARS allows PHMSA employees to report their current duty location.  This will help supervisors account for employee whereabouts in emergency as well as non-emergency situations.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "on-premise",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
         "transportation",
         "code"
@@ -2381,13 +2479,14 @@
     },
     {
       "name": "EARS Mobile App",
+      "organization": "PHMSA",
       "description": "Employee Accountability Reporting System (EARS).  EARS allows PHMSA employees to report their current duty location.  This will help supervisors account for employee whereabouts in emergency as well as non-emergency situations.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "on-premise",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "http://opsweb.phmsa.dot.gov/downloads/ears_81/",
+      "homepage": "http://opsweb.phmsa.dot.gov/downloads/ears_81/",
       "tags": [
         "transportation",
         "code"
@@ -2405,13 +2504,14 @@
     },
     {
       "name": "HIP",
+      "organization": "PHMSA",
       "description": "Hazmat Information System (HIP).  HIP is a data warehouse for hazardous incidents for PHMSA.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "on-premise",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
         "transportation",
         "code"
@@ -2429,13 +2529,14 @@
     },
     {
       "name": "Online CFR",
+      "organization": "PHMSA",
       "description": "Online Code of Federal Regulation Manual ",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "on-premise",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
         "transportation",
         "code"
@@ -2453,13 +2554,14 @@
     },
     {
       "name": "M-V Approvals",
+      "organization": "PHMSA",
       "description": "A PHMSA Portal tracnsactional system used to submit, process and manage hazmat M number and Visual Approval requests.   Requests for new, renewal and modifcation of M and V approvals can be submited by the public via the PHMSA Portal and are processed by internal staff.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "on-premise",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
         "transportation",
         "code"
@@ -2477,13 +2579,14 @@
     },
     {
       "name": "Special Permits",
+      "organization": "PHMSA",
       "description": "A PHMSA Portal tracnsactional system used to submit, process and manage hazmat special permit requests.   Requests for new, renewal and modifcation of special permits can be submited by the public via the PHMSA Portal and are processed by internal staff.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "on-premise",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
         "transportation",
         "code"
@@ -2501,13 +2604,14 @@
     },
     {
       "name": "Hazmat Registration",
+      "organization": "PHMSA",
       "description": "A PHMSA Portal sytem used to submit and process hazmat Registration requests.  Requests for initial, renewal and amendments of hazmat Registration can be submitted by the public via the PHMSA Portal  and are processed by internal staff.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "on-premise",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
         "transportation",
         "code"
@@ -2525,13 +2629,14 @@
     },
     {
       "name": "PDM",
+      "organization": "PHMSA",
       "description": "Pipeline Data Mart (PDM) is a data warehouse for Pipeline side of PHMSA.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "on-premise",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
         "transportation",
         "code"
@@ -2549,13 +2654,14 @@
     },
     {
       "name": "SMART",
+      "organization": "PHMSA",
       "description": "Safety Monitoring and Reporting Tool (SMART) ",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "on-premise",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
         "transportation",
         "code"
@@ -2573,13 +2679,14 @@
     },
     {
       "name": "FIM",
+      "organization": "PHMSA",
       "description": "Failure Investigation Module (FIM) allows pipeline investigator to record and track their Telephonic Investigation of pipeline incidents and accidents.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "on-premise",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
         "transportation",
         "code"
@@ -2597,13 +2704,14 @@
     },
     {
       "name": "PHMSA Portal",
+      "organization": "PHMSA",
       "description": "A centralized portal for all of PHMSA's IT systems",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "on-premise",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
         "transportation",
         "code"
@@ -2621,13 +2729,14 @@
     },
     {
       "name": "FedStar",
+      "organization": "PHMSA",
       "description": "Federal-State Tracking and Reporting (FedStar).  The purpose of the system is to automate the PHMSA Office of Pipeline Safety (PHP) State Program federal and state information exchange. FedSTAR provides grant management and back-office program management capabilities, in addition to providing tools for the State Program federal and state partners to use in conducting the pipeline safety program.  ",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "on-premise",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
         "transportation",
         "code"
@@ -2645,13 +2754,14 @@
     },
     {
       "name": "Bank of America Import",
+      "organization": "PHMSA",
       "description": "Used to verify Hazmat Registration payments made by check.  This function is not currently being used.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "on-premise",
-      "status": "Archival",
+      "status": "Not ooperational ",
       "license": null,
-      "repository": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
         "transportation",
         "code"
@@ -2669,13 +2779,14 @@
     },
     {
       "name": "HMIS",
+      "organization": "PHMSA",
       "description": "A legacy application that consists of multiple modules modules used for receiving and managing requests for publication, RAM certification requests, hazmat incidents reports and hazmat registratons.  This applcation is accessible to DOT employees via single sign on in the PHMSA Portal",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "on-premise",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "homepage": "SSO  -  https://portal.phmsa.dot.gov/PHMSAPortal2/ or non-SSO  -  http://hmis.phmsa.dot.gov/hmis",
       "tags": [
         "transportation",
         "code"
@@ -2693,13 +2804,14 @@
     },
     {
       "name": "DOT Approvals",
+      "organization": "PHMSA",
       "description": "A legacty application used to proecess requests for Hazmat Approvals (explosives, fireworks and competant authority).  This applcation is accessible to DOT employees via single sign on in the PHMSA Portal",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "on-premise",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "homepage": "SSO  -  https://portal.phmsa.dot.gov/PHMSAPortal2/ or non-SSO  -  http://hmis.phmsa.dot.gov/DOT_Approvals",
       "tags": [
         "transportation",
         "code"
@@ -2717,13 +2829,14 @@
     },
     {
       "name": "Annual Reports",
+      "organization": "PHMSA",
       "description": "Allows pipeline operators to file annual reports.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "on-premise",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
         "transportation",
         "code"
@@ -2741,13 +2854,14 @@
     },
     {
       "name": "OMS",
+      "organization": "PHMSA",
       "description": "Operator Management System (OMS) manages pipeline operator information.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "on-premise",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
         "transportation",
         "code"
@@ -2765,13 +2879,14 @@
     },
     {
       "name": "NPMS",
+      "organization": "PHMSA",
       "description": "National Pipeline Mapping System (NPMS) ",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "on-premise",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
         "transportation",
         "code"
@@ -2789,13 +2904,14 @@
     },
     {
       "name": "PAM",
+      "organization": "PHMSA",
       "description": "Pipeline Asset Management (PAM) manages pipeline asset information.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "on-premise",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
         "transportation",
         "code"
@@ -2813,13 +2929,14 @@
     },
     {
       "name": "ODES",
+      "organization": "PHMSA",
       "description": "ODES allows pipeline operators to submit piepeline incident/accident reports and allows field offices to review the reports.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "on-premise",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
         "transportation",
         "code"
@@ -2837,13 +2954,14 @@
     },
     {
       "name": "Registration Management",
+      "organization": "PHMSA",
       "description": "Used to manage Hazmat Reegistration requests.  This function is not currently used.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "on-premise",
-      "status": "Archival",
+      "status": "Not operational",
       "license": null,
-      "repository": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "homepage": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
       "tags": [
         "transportation",
         "code"
@@ -2861,13 +2979,14 @@
     },
     {
       "name": "Geolocator",
+      "organization": "NHTSA",
       "description": "This application integrates Microsoft Bing Maps and is used to pin point the location of the crash and collect the Lat/long of the crash location",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "CDAN TFS",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://Geolocator.cdan.dot.gov",
+      "homepage": "https://Geolocator.cdan.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -2885,13 +3004,14 @@
     },
     {
       "name": "VIN Decoder",
+      "organization": "NHTSA",
       "description": "This is used to decode the Vehicle Identification Number (VIN) of a vehicle to produce the vehicle specifications",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "CDAN TFS",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://vin.cdan.dot.gov",
+      "homepage": "https://vin.cdan.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -2909,13 +3029,14 @@
     },
     {
       "name": "PARSE",
-      "description": "Police Accident Report Sampling Engine (PARSE) is a web application Production within CDAN to collect, manage, store and make available to CDAN data acquisition projects, Police Accident Reports (PAR) data collected via electronic or physical methods for the purposes of selection within a appropriate NHTSA data collection program.",
+      "organization": "NHTSA",
+      "description": "Police Accident Report Sampling Engine (PARSE) is a web application operating within CDAN to collect, manage, store and make available to CDAN data acquisition projects, Police Accident Reports (PAR) data collected via electronic or physical methods for the purposes of selection within a appropriate NHTSA data collection program.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "CDAN TFS",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://parse.cdan.dot.gov",
+      "homepage": "https://parse.cdan.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -2933,13 +3054,14 @@
     },
     {
       "name": "CISSWeb",
+      "organization": "NHTSA",
       "description": "Crash Investigation Sampling System (CISS) Web (CISSWeb) application consists of motor vehicle crash and injury data collected from Police Accident Reports (PARS) gathered through a network of remote field sites around the country operated and managed under contract by NHTSA.  CISSWeb is the application that consolidates all the data collected within the lifecycle of the case, regardless of the source. Specific PARs are selected for followup investigation via a sample algorithm designed to target towed late model vehicle, specific injuries and/or crashes of special interest to NHTSA. In addition to PAR and injury data, field Data Technicians collect data by inspecting and recording damage to case vehicles, inspecting and collecting data from crash scenes and enhancing vehicle and scene data with digital imagery. When possible, contractors conduct occupant interviews.  NHTSA uses the CISS data collected to evaluate the conditions present at the time of the crash, injuries resulting from crashes, vehicle crashworthiness, special types of crashes (e.g., air bag deployment), and crashes of high public interest (e.g., school bus crashes).",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "CDAN TFS",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://ciss.cdan.dot.gov",
+      "homepage": "https://ciss.cdan.dot.gov, ",
       "tags": [
         "transportation",
         "code"
@@ -2957,13 +3079,14 @@
     },
     {
       "name": "Toolbox",
+      "organization": "NHTSA",
       "description": "The CDAN Toolbox is an external authenticate website that supports the CDAN system.  The Toolbox stores items required by the remote users such as coding manuals, hardware manuals, and the like.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "CDAN TFS",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://toolbox.cdan.dot.gov",
+      "homepage": "https://toolbox.cdan.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -2981,13 +3104,14 @@
     },
     {
       "name": "Helpdesk",
+      "organization": "NHTSA",
       "description": "The CDAN Helpdesk is a ticketing solution that supports the CDAN system.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "CDAN TFS",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://helpdesk.cdan.dot.gov",
+      "homepage": "https://helpdesk.cdan.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -3005,13 +3129,14 @@
     },
     {
       "name": "UPSA",
+      "organization": "NHTSA",
       "description": "The UPSA is the tool that manages rights and privileges for users of the CDAN system.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "CDAN TFS",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://upsa.cdan.dot.gov",
+      "homepage": "https://upsa.cdan.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -3029,13 +3154,14 @@
     },
     {
       "name": "Variable Repository",
+      "organization": "NHTSA",
       "description": "The CDAN Variable Repository is the metadata repository that drives the CDAN applicatoins, tracks the usage of variables and their attributes, as well as providing the data needed to run the CDAN applications.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "CDAN TFS",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://vr.cdan.dot.gov",
+      "homepage": "https://vr.cdan.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -3053,13 +3179,14 @@
     },
     {
       "name": "MDE",
+      "organization": "NHTSA",
       "description": "This application is used to code FARS, CRSS and NTS data. ",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "CDAN TFS",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://mdecurrent.cdan.dot.gov",
+      "homepage": "https://mdecurrent.cdan.dot.gov, https://mdeprev.cdan.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -3077,13 +3204,14 @@
     },
     {
       "name": "Intranet",
+      "organization": "NHTSA",
       "description": "This application has a lot of custome reports whioch are used for quality and analysis of the coded data for FARS and  CRSS studies",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "CDAN TFS",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://gesintranet.cdan.dot.gov",
+      "homepage": "https://gesintranet.cdan.dot.gov, https://farsintranet.cdan.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -3101,13 +3229,14 @@
     },
     {
       "name": "Query Tool",
+      "organization": "NHTSA",
       "description": "This application is used to query data collected in FARS and GES/CRSS studies",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "CDAN TFS",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://gesintranet.cdan.dot.gov/query",
+      "homepage": "https://gesintranet.cdan.dot.gov/query, https://farsintranet.cdan.dot.gov/query/query.aspx",
       "tags": [
         "transportation",
         "code"
@@ -3125,13 +3254,14 @@
     },
     {
       "name": "SSO",
+      "organization": "NHTSA",
       "description": "This is the CDAN Single Sign on Application through which the users can get access to all of the CDAN applications",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "CDAN TFS",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://sso.cdan.dot.gov",
+      "homepage": "https://sso.cdan.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -3149,13 +3279,14 @@
     },
     {
       "name": "EDT Manager",
+      "organization": "NHTSA",
       "description": "Using this application, the users will be able to setup their review process for the coded data in FARS and CRSS",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "CDAN TFS",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://edtadmin.cdan.dot.gov",
+      "homepage": "https://edtadmin.cdan.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -3173,13 +3304,14 @@
     },
     {
       "name": "Case Viewer",
+      "organization": "NHTSA",
       "description": "The data received through EDT from the States in their dat structure and format can be viewed using this application",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "CDAN TFS",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://statecaseviewer.cdan.dot.gov",
+      "homepage": "https://statecaseviewer.cdan.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -3197,13 +3329,14 @@
     },
     {
       "name": "FastFARS",
+      "organization": "NHTSA",
       "description": "This is an Early notification application through which Fatal crashes are immediately notified.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "CDAN TFS",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://en.cdan.dot.gov",
+      "homepage": "https://en.cdan.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -3221,13 +3354,14 @@
     },
     {
       "name": "Report Builder",
+      "organization": "NHTSA",
       "description": "This is an application built using Microsfot's SSRS through the users can build their own reports.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "CDAN TFS",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://reports.cdan.dot.gov",
+      "homepage": "https://reports.cdan.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -3245,13 +3379,14 @@
     },
     {
       "name": "Edit Checks",
+      "organization": "NHTSA",
       "description": "Data completeness and integrity checks are written and executed on the data collectes to ensure good quality of the data. ",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "CDAN TFS",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://editchecks.cdan.dot.gov",
+      "homepage": "https://editchecks.cdan.dot.gov",
       "tags": [
         "transportation",
         "code"
@@ -3269,13 +3404,14 @@
     },
     {
       "name": "iREx",
+      "organization": "NHTSA",
       "description": "iREx (integrated Risk Executive) is a NHTSA-developed  automated Risk Management system for its IT investments. It is compliant to federal regulations (implements NIST SP 800-37 Risk Management Framework guidance and processes) to ensure that Risk-based decision making is a tangible feature of the NHTSA risk management processes. It is collaboratively used by NHTSA's PMO, EA, CPIC and cybersecurity components in risk-based decisioning. iREx ensures that risk mitigation is linked to identifiable combinations of security issues that are recorded and managed in order to address and measure each relevant risk and vulnerability.  iREx is a web-based application with a SQL-based database back-end.  It has capabilities to generate Assessment and Analysis reports used to support DOT/NHTSA Risk Posture, and C&A of its IT systems.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "on-premise",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://irex.nhtsa.gov",
+      "homepage": "https://irex.nhtsa.gov",
       "tags": [
         "transportation",
         "code"
@@ -3293,13 +3429,14 @@
     },
     {
       "name": "NAF",
+      "organization": "NHTSA",
       "description": "NAF (NHTSA Asset Framework) is the NHTSA-developed system that serves as its IT Asset metadata management, analysis and reporting platform. This  includes  IT hardware, software assets information in the following contexts: technical specifications, licensing information, SLA management, capital planning, acquisition, and enterprise architecture (TRM).",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "on-premise",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://naf.nhtsa.gov",
+      "homepage": "https://naf.nhtsa.gov",
       "tags": [
         "transportation",
         "code"
@@ -3317,13 +3454,14 @@
     },
     {
       "name": "MR Tool (SDAG)",
+      "organization": "NHTSA",
       "description": "MR Tool (Service Data Architecture Group Metadata Repository) is the NHTSA-developed DOT standard system that supports  DOT's continuing implementation of OMB M-13-13 (through DOT Order 1351.34) for DOT OA data and information to be disclosed rapidly in forms that the public can readily find and use.  As such, it is tailored as an analysis and reporting system holding metadata  describing DOT OA datasets, and is designed to conform to the latest federal Open Data metadata schema (https://project-open-data.cio.gov/v1.1/schema/). ",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "on-premise",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "http://data.nhtsa.gov",
+      "homepage": "http://data.nhtsa.gov",
       "tags": [
         "transportation",
         "code"
@@ -3341,13 +3479,14 @@
     },
     {
       "name": "TravelOnTrack",
+      "organization": "NHTSA",
       "description": "TravelOnTrack is used to track allocated agency travel budgets by office and fiscal year. It manages and tracks submitted travel proposals, plans and completed travel information, including associated budget and overage data. It enables transfer of unused funds in an office as necessary. TravelOnTrack generates summary reports on available funds and usage of approved/proposed travels and other travel-related reports.  ",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "on-premise",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "http://travelontrack.nhtsa.gov",
+      "homepage": "http://travelontrack.nhtsa.gov",
       "tags": [
         "transportation",
         "code"
@@ -3365,13 +3504,14 @@
     },
     {
       "name": "SISAME",
-      "description": "NHTSA funded the development of the SISAME program starting in the late 1980ís until the mid 2000ís.  This program provides a very unique capability for mass/spring multibody model extraction from test data.   NHTSA has discontinued support or development for the SISAME program",
+      "organization": "NHTSA",
+      "description": "NHTSA funded the development of the SISAME program starting in the late 1980’s until the mid 2000’s.  This program provides a very unique capability for mass/spring multibody model extraction from test data.   NHTSA has discontinued support or development for the SISAME program",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "NHTSA Public Web",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "http://www.nhtsa.gov/Research/SISAME-Software-&-Documentation-Downloads",
+      "homepage": "http://www.nhtsa.gov/Research/SISAME-Software-&-Documentation-Downloads",
       "tags": [
         "transportation",
         "code"
@@ -3389,13 +3529,14 @@
     },
     {
       "name": "vPIC-List",
-      "description": "The NHTSA Product Information Catalog and Vehicle Listing (vPIC) is a consolidated platform that presents data collected within the manufacturer reported data from CFR 49 Parts 551 ñ 574 for use in a variety of modern tools. NHTSAís vPIC platform is intended to serve as a centralized source for basic Vehicle Identification Number (VIN) decoding, Manufacturer Information Database (MID), Manufacturer Equipment Plant Identification and associated data.  vPIC is primarily intended for use on Model Years 1995 forward. Data prior to 1995 may be available depending on the manufacturer, which is based on submittals received by NHTSA. This includes passenger vehicles, trucks, buses, trailers / trailer kits, incomplete vehicles, low speed vehicles and motorcycles to name a few as the primary categories. Vehicles within these major categories are further defined by the details provided by the manufacturers in accordance to reporting standards of CFR 49 Part 565 and 566.",
+      "organization": "NHTSA",
+      "description": "The NHTSA Product Information Catalog and Vehicle Listing (vPIC) is a consolidated platform that presents data collected within the manufacturer reported data from CFR 49 Parts 551 – 574 for use in a variety of modern tools. NHTSA’s vPIC platform is intended to serve as a centralized source for basic Vehicle Identification Number (VIN) decoding, Manufacturer Information Database (MID), Manufacturer Equipment Plant Identification and associated data.  vPIC is primarily intended for use on Model Years 1995 forward. Data prior to 1995 may be available depending on the manufacturer, which is based on submittals received by NHTSA. This includes passenger vehicles, trucks, buses, trailers / trailer kits, incomplete vehicles, low speed vehicles and motorcycles to name a few as the primary categories. Vehicles within these major categories are further defined by the details provided by the manufacturers in accordance to reporting standards of CFR 49 Part 565 and 566.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "on-premise (DOT SFC Data Center)",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://vpic.nhtsa.dot.gov/",
+      "homepage": "https://vpic.nhtsa.dot.gov/",
       "tags": [
         "transportation",
         "code"
@@ -3413,13 +3554,14 @@
     },
     {
       "name": "Encyclopedia",
+      "organization": "NHTSA",
       "description": "This is the public website through which FARS traffic safety facts as well as query capability is made available",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "CDAN TFS",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://www-fars.nhtsa.dot.gov/",
+      "homepage": "https://www-fars.nhtsa.dot.gov/",
       "tags": [
         "transportation",
         "code"
@@ -3437,13 +3579,14 @@
     },
     {
       "name": "CISSForm",
+      "organization": "NHTSA",
       "description": "CISSForm is the CDAN implemenation of the commercial software developed by Mi-Co.  This application is used to perform offline data collection for vehicles involved in motor vehicle crashes within the CISS system.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "CDAN TFS",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://forms.cdan.dot.gov/mfs",
+      "homepage": "https://forms.cdan.dot.gov/mfs",
       "tags": [
         "transportation",
         "code"
@@ -3461,13 +3604,14 @@
     },
     {
       "name": "N/A",
+      "organization": "SLS",
       "description": "N/A",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "N/A",
-      "status": "Beta",
+      "status": "Prototype",
       "license": null,
-      "repository": "http://transportation.gov",
+      "homepage": "N/A",
       "tags": [
         "transportation",
         "code"
@@ -3485,13 +3629,14 @@
     },
     {
       "name": "DIMS",
+      "organization": "FHWA",
       "description": "Delphi Interface Maintenance System",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "TFS, FHWA",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
+      "homepage": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
       "tags": [
         "transportation",
         "code"
@@ -3509,13 +3654,14 @@
     },
     {
       "name": "FOIS",
+      "organization": "FHWA",
       "description": "FHWA Organization Information System",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "TFS, FHWA",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
+      "homepage": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
       "tags": [
         "transportation",
         "code"
@@ -3533,13 +3679,14 @@
     },
     {
       "name": "FMIS",
+      "organization": "FHWA",
       "description": "Fiscal Management Information System",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "TFS, FHWA",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
+      "homepage": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
       "tags": [
         "transportation",
         "code"
@@ -3557,13 +3704,14 @@
     },
     {
       "name": "FMIS-5",
+      "organization": "FHWA",
       "description": "Fiscal Management Information System 5",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "TFS, FHWA",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
+      "homepage": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
       "tags": [
         "transportation",
         "code"
@@ -3581,13 +3729,14 @@
     },
     {
       "name": "FOIA",
+      "organization": "FHWA",
       "description": "Freedom Of Information Act System",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "TFS, FHWA",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
+      "homepage": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
       "tags": [
         "transportation",
         "code"
@@ -3605,13 +3754,14 @@
     },
     {
       "name": "NBI",
+      "organization": "FHWA",
       "description": "National Bridge Inventory System",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "TFS, FHWA",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
+      "homepage": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
       "tags": [
         "transportation",
         "code"
@@ -3629,13 +3779,14 @@
     },
     {
       "name": "NHI/CMS",
+      "organization": "FHWA",
       "description": "NHI Web Portal and Course Management System",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "TFS, FHWA",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
+      "homepage": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
       "tags": [
         "transportation",
         "code"
@@ -3653,13 +3804,14 @@
     },
     {
       "name": "RASPS",
+      "organization": "FHWA",
       "description": "Rapid Approval & State Payment System",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "TFS, FHWA",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
+      "homepage": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
       "tags": [
         "transportation",
         "code"
@@ -3677,13 +3829,14 @@
     },
     {
       "name": "TFICS",
+      "organization": "FHWA",
       "description": "Transportation Fellows Interns and Contractor System",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "TFS, FHWA",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
+      "homepage": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
       "tags": [
         "transportation",
         "code"
@@ -3701,13 +3854,14 @@
     },
     {
       "name": "UPACS",
+      "organization": "FHWA",
       "description": "User Profile and Access Control System",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "TFS, FHWA",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
+      "homepage": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
       "tags": [
         "transportation",
         "code"
@@ -3725,13 +3879,14 @@
     },
     {
       "name": "NTI",
+      "organization": "FHWA",
       "description": "National Tunnel Inventory",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "TFS, FHWA",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
+      "homepage": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
       "tags": [
         "transportation",
         "code"
@@ -3749,13 +3904,14 @@
     },
     {
       "name": "N/A",
+      "organization": "MARAD",
       "description": "N/A",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "N/A",
-      "status": "Alpha",
+      "status": "Prototype",
       "license": null,
-      "repository": "http://transportation.gov",
+      "homepage": "N/A",
       "tags": [
         "transportation",
         "code"
@@ -3773,13 +3929,14 @@
     },
     {
       "name": "N/A",
+      "organization": "OIG",
       "description": "N/A",
       "openSourceProject": 0,
       "governmentWideReuseProject": 0,
       "vcs": "N/A",
-      "status": "Alpha",
+      "status": "Prototype",
       "license": null,
-      "repository": "http://transportation.gov",
+      "homepage": "N/A",
       "tags": [
         "transportation",
         "code"
@@ -3797,13 +3954,14 @@
     },
     {
       "name": "SFD",
-      "description": "The SFD rulemaking is designed to enhance FMCSAís ability to identify non-compliant motor carriers by using all available agency data",
+      "organization": "FMSCA",
+      "description": "The SFD rulemaking is designed to enhance FMCSA’s ability to identify non-compliant motor carriers by using all available agency data",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "Subversion",
-      "status": "Alpha",
+      "status": "Prototype",
       "license": null,
-      "repository": null,
+      "homepage": "TBD",
       "tags": [
         "transportation",
         "code"
@@ -3821,13 +3979,14 @@
     },
     {
       "name": "D&ADB",
-      "description": "Drug and Alcohol Clearinghouse Database will be used to store and transfer information about drug and alcohol program violations and Alpha results",
+      "organization": "FMSCA",
+      "description": "Drug and Alcohol Clearinghouse Database will be used to store and transfer information about drug and alcohol program violations and testing results",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "Subversion",
-      "status": "Alpha",
+      "status": "Prototype",
       "license": null,
-      "repository": null,
+      "homepage": "TBD",
       "tags": [
         "transportation",
         "code"
@@ -3845,13 +4004,14 @@
     },
     {
       "name": "eRODS",
+      "organization": "FMSCA",
       "description": "Enforcement tool to read and analyse Hours of Service data read from Electronic Logging Devices",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "Subversion",
-      "status": "Alpha",
+      "status": "Prototype",
       "license": null,
-      "repository": null,
+      "homepage": "N/A not web based",
       "tags": [
         "transportation",
         "code"
@@ -3869,13 +4029,14 @@
     },
     {
       "name": "Aviation Environmental Design Tool",
+      "organization": "VOLPE",
       "description": "AEDT is a software system that models aircraft performance in space and time to estimate fuel consumption, emissions, noise, and air quality consequences. ",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "http://aedt.visualstudio.com",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "http://aedt.visualstudio.com",
+      "homepage": "aedt.faa.gov",
       "tags": [
         "transportation",
         "code"
@@ -3893,13 +4054,14 @@
     },
     {
       "name": "SafetyHAT",
+      "organization": "VOLPE",
       "description": "Database tool that facilitates implementing the System Theoretic Process Analysis (STPA) method.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "Available as part of download (password protected)",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://www.volpe.dot.gov/infrastructure-systems-and-technology/advanced-vehicle-technology/safetyhat-transportation-system",
+      "homepage": "https://www.volpe.dot.gov/infrastructure-systems-and-technology/advanced-vehicle-technology/safetyhat-transportation-system",
       "tags": [
         "transportation",
         "code"
@@ -3917,13 +4079,14 @@
     },
     {
       "name": "Unmanned Aircraft Systems Registration Service (UASRS)",
-      "description": "The Unmanned Aircraft Systems Registration Service (UASRS) is used by the Federal Aviation Administration (FAA) to provide small Unmanned Aircraft System (sUAS) operators/owners a service to register all sUAS for the purpose of Production sUAS in U.S. air space. sUAS are defined as those aircraft that weigh more than 0.55 pounds but less than 55 pounds. This service educates new operators about airspace rules so they can use their unmanned aircraft safely. As part of the registration process, registrants acknowledge that they have read, understand, and intend to follow the safety guidance. The service allows the FAA to identify and take enforcement action against those who intentionally violate the rules or operate unsafely.",
+      "organization": "FAA",
+      "description": "The Unmanned Aircraft Systems Registration Service (UASRS) is used by the Federal Aviation Administration (FAA) to provide small Unmanned Aircraft System (sUAS) operators/owners a service to register all sUAS for the purpose of operating sUAS in U.S. air space. sUAS are defined as those aircraft that weigh more than 0.55 pounds but less than 55 pounds. This service educates new operators about airspace rules so they can use their unmanned aircraft safely. As part of the registration process, registrants acknowledge that they have read, understand, and intend to follow the safety guidance. The service allows the FAA to identify and take enforcement action against those who intentionally violate the rules or operate unsafely.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "Amazon EC2 is hosted in multiple locations worldwide. These locations are composed of regions and Availability Zones. Each region is a separate geographic area. Each region has multiple, isolated locations known as Availability Zones. ",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": null,
+      "homepage": "https://registermyuas.faa.gov/restricted#/",
       "tags": [
         "transportation",
         "code"
@@ -3941,13 +4104,14 @@
     },
     {
       "name": "B4UFly",
+      "organization": "FAA",
       "description": " B4UFLY is a UAS Mobile Application that enables a small UAS or model aircraft operator the ability to check their current location for conformance with FAA published guidelines prior to flight operations.  This will assist model aircraft users to conform to Public Law 112-95, Section 336: Special Rule for Model Aircraft (FMRA) which outlines what a model aircraft is and how it can be legally operated within the national airspace.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": "General public can download this app from the App Store for iOS or Google Play store",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": null,
+      "homepage": "",
       "tags": [
         "transportation",
         "code"
@@ -3965,13 +4129,14 @@
     },
     {
       "name": "EDAI",
-      "description": "External Data Access Initiative (EDAi) provides the private sector greater access to core FAA data to spur more innovation in the aviation industry, and ultimately advance the FAAís mission of safety in flight.  Based on stakeholder recommendations, this initiativeís first effort strived to provide both more data and better data for Aeronautical products and information.    Solution Delivery developed and deployed web services for several aeronautical products including both information about those products and the ability to automatically download those products which satisfied one of the recommendations.",
+      "organization": "FAA",
+      "description": "External Data Access Initiative (EDAi) provides the private sector greater access to core FAA data to spur more innovation in the aviation industry, and ultimately advance the FAA’s mission of safety in flight.  Based on stakeholder recommendations, this initiative’s first effort strived to provide both more data and better data for Aeronautical products and information.    Solution Delivery developed and deployed web services for several aeronautical products including both information about those products and the ability to automatically download those products which satisfied one of the recommendations.",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": " https://en.wikipedia.org/wiki/Application_programming_interface",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://app.swaggerhub.com/api/FAA/APRA/1.1.0",
+      "homepage": "https://app.swaggerhub.com/api/FAA/APRA/1.1.0",
       "tags": [
         "transportation",
         "code"
@@ -3989,13 +4154,14 @@
     },
     {
       "name": "EDCS",
+      "organization": "FAA",
       "description": "Enterprise Data Control Service Focus - A set of common infrastructure services.  Web based common access point (interface) - Fully documented data history enabling trust - Access control is documented and enforced - Enabled data resources have REST APIs that comply with documentation and dissemination control",
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
       "vcs": " Hosted in Atlantic City Data Center, Code base is in Bitbucket at the AIT Vendor facility,In process of moving code to AIT Git Repository.",
-      "status": "Production",
+      "status": "Operating",
       "license": null,
-      "repository": "https://employees.faa.gov/portal/edcs/",
+      "homepage": " https://employees.faa.gov/portal/edcs/",
       "tags": [
         "transportation",
         "code"
