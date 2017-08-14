@@ -33,7 +33,7 @@
       ],
       "updated": {
         "lastCommit": "2012-09-06",
-        "metadataLastUpdated": "2016-02-16",
+        "metadataLastUpdated": "2017-03-30",
         "lastModified": "2016-02-16"
       }
     },
@@ -64,7 +64,7 @@
       ],
       "updated": {
         "lastCommit": "2015-02-02",
-        "metadataLastUpdated": "2015-02-02",
+        "metadataLastUpdated": "2017-03-30",
         "lastModified": "2015-02-02"
       }
     },
@@ -94,7 +94,7 @@
       ],
       "updated": {
         "lastCommit": "2015-02-02",
-        "metadataLastUpdated": "2015-02-02",
+        "metadataLastUpdated": "2017-03-30",
         "lastModified": "2015-02-02"
       }
     },
@@ -122,9 +122,9 @@
         "ruby"
       ],
       "updated": {
-        "lastCommit": "2016-11-03",
-        "metadataLastUpdated": "2015-02-02",
-        "lastModified": "2015-02-02"
+        "lastCommit": "2017-06-07",
+        "metadataLastUpdated": "2017-08-02",
+        "lastModified": "2017-06-07"
       }
     },
     {
@@ -151,9 +151,9 @@
         "ruby"
       ],
       "updated": {
-        "lastCommit": "2016-07-26",
-        "metadataLastUpdated": "2016-07-26",
-        "lastModified": "2016-07-26"
+        "lastCommit": "2017-06-07",
+        "metadataLastUpdated": "2017-08-02",
+        "lastModified": "2017-06-07"
       }
     },
     {
@@ -182,7 +182,7 @@
       ],
       "updated": {
         "lastCommit": "2012-10-02",
-        "metadataLastUpdated": "2016-02-16",
+        "metadataLastUpdated": "2017-03-30",
         "lastModified": "2016-02-16"
       }
     },
@@ -212,7 +212,7 @@
       ],
       "updated": {
         "lastCommit": "2012-02-17",
-        "metadataLastUpdated": "2012-02-17",
+        "metadataLastUpdated": "2017-03-30",
         "lastModified": "2012-02-17"
       }
     },
@@ -242,9 +242,9 @@
         "java"
       ],
       "updated": {
-        "lastCommit": "2016-09-30",
-        "metadataLastUpdated": "2016-09-30",
-        "lastModified": "2016-09-30"
+        "lastCommit": "2017-06-23",
+        "metadataLastUpdated": "2017-08-02",
+        "lastModified": "2016-06-23"
       }
     },
     {
@@ -273,7 +273,7 @@
       ],
       "updated": {
         "lastCommit": "2014-10-31",
-        "metadataLastUpdated": "2014-10-27",
+        "metadataLastUpdated": "2017-03-30",
         "lastModified": "2014-10-31"
       }
     },
@@ -302,8 +302,95 @@
       ],
       "updated": {
         "lastCommit": "2011-10-11",
-        "metadataLastUpdated": "2016-02-16",
+        "metadataLastUpdated": "2017-03-30",
         "lastModified": "2016-02-16"
+      }
+    },
+    {
+      "name": "Wikimedia Upload",
+      "organization": "National Archives and Records Administration",
+      "description": "Upload digital content from the National Archives Catalog to Wikimedia Commons.",
+      "license": "https://github.com/usnationalarchives/wikimedia-upload/blob/master/LICENSE.md",
+      "openSourceProject": 1,
+      "governmentWideReuseProject": 1,
+      "tags": [
+        "NARA",
+        "wikimedia",
+        "metadata",
+        "Python"
+      ],
+      "contact": {
+        "email": "leslie.johnston@nara.gov",
+        "name": "Leslie Johnston"
+      },
+      "status": "Production",
+      "repository": "https://github.com/usnationalarchives/wikimedia-upload",
+      "downloadURL": "https://github.com/usnationalarchives/wikimedia-upload",
+      "languages": [
+        "Python"
+      ],
+      "updated": {
+        "lastCommit": "2017-06-15",
+        "metadataLastUpdated": "2017-08-02",
+        "lastModified": "2017-06-15"
+      }
+    },
+    {
+      "name": "NARA Scripts",
+      "organization": "National Archives and Records Administration",
+      "description": "Scripts used in the work of the US National Archives.",
+      "license": "https://github.com/usnationalarchives/nara-scripts/commit/336bede0caf44cf64ad489510a3aacb685d61fe8",
+      "openSourceProject": 1,
+      "governmentWideReuseProject": 1,
+      "tags": [
+        "NARA",
+        "conversion",
+        "metadata",
+        "Python"
+      ],
+      "contact": {
+        "email": "leslie.johnston@nara.gov",
+        "name": "Leslie Johnston"
+      },
+      "status": "Production",
+      "repository": "https://github.com/usnationalarchives/nara-scripts",
+      "downloadURL": "https://github.com/usnationalarchives/nara-scripts/tree/master/python",
+      "languages": [
+        "Python"
+      ],
+      "updated": {
+        "lastCommit": "2017-04-28",
+        "metadataLastUpdated": "2017-08-02",
+        "lastModified": "2017-04-28"
+      }
+    },
+    {
+      "name": "TimelineJS",
+      "organization": "National Archives and Records Administration",
+      "description": "TimelineJS v3: A Storytelling Timeline built in JavaScript.",
+      "license": "https://github.com/usnationalarchives/TimelineJS3/blob/master/LICENSE",
+      "openSourceProject": 1,
+      "governmentWideReuseProject": 1,
+      "tags": [
+        "NARA",
+        "conversion",
+        "metadata",
+        "JavaScript"
+      ],
+      "contact": {
+        "email": "leslie.johnston@nara.gov",
+        "name": "Leslie Johnston"
+      },
+      "status": "Production",
+      "repository": "https://github.com/usnationalarchives/TimelineJS3",
+      "downloadURL": "https://github.com/usnationalarchives/TimelineJS3/tree/master/source",
+      "languages": [
+        "JavaScript"
+      ],
+      "updated": {
+        "lastCommit": "2017-04-05",
+        "metadataLastUpdated": "2017-08-02",
+        "lastModified": "2017-04-05"
       }
     },
     {
@@ -326,15 +413,15 @@
         "name": "Leslie Johnston"
       },
       "status": "Production",
-      "repository": "https://github.com/usnationalarchives/Video-Frame-Analyzer",
-      "downloadURL": "https://github.com/usnationalarchives/Video-Frame-Analyzer/blob/master/bin/sammaGui.jar",
+      "repository": "https://github.com/usnationalarchives/wartime-films-project",
+      "downloadURL": "https://github.com/usnationalarchives/wartime-films-project/tree/master/ww1/app",
       "languages": [
         "java"
       ],
       "updated": {
-        "lastCommit": "2016-09-29",
-        "metadataLastUpdated": "2016-10-03",
-        "lastModified": "2016-10-03"
+        "lastCommit": "2017-07-12",
+        "metadataLastUpdated": "2017-08-02",
+        "lastModified": "2017-07-12"
       }
     }
   ]

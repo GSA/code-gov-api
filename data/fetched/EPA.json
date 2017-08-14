@@ -1109,7 +1109,7 @@
       }
     },
     {
-      "organization": "ORD",
+      "organization": "IESD",
       "name": "EDG Clip-N-Ship flex",
       "description": "This is the source code for the EPA's Enterprise Dataset Gateway Clip and Ship Application: https://edg.epa.gov/clipship/",
       "license": "N/A",
