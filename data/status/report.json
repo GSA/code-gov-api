@@ -1,68 +1,51 @@
 {
+
   "timestamp": "Mon Aug 14 2017 12:02:39 GMT-0400 (EDT)",
+
   "statuses": {
     "USDA": {
-      "status": "FULLY COMPLIANT: 0 validation errors",
-      "issues": [],
-      "version": "1.0.1",
-      "metadata": {
-        "agency": {
-          "name": "Department of Agriculture",
-          "acronym": "USDA",
-          "website": "https://usda.gov/",
-          "codeUrl": "https://www.usda.gov/code.json",
-          "requirements": {
-            "agencyWidePolicy": 0.5,
-            "schemaFormat": 1,
-            "overallCompliance": 0.75
+      "status": "NOT FULLY COMPLIANT: 25 WARNINGS, 25 validation errors, 2 REQUESTED ENHANCEMENTS",
+      "issues": [
+        {
+          "repoID": "usda_ocio_digitalgov_analytics",
+          "agency": "Department of Agriculture",
+          "organization": "OCIO",
+          "project_name": "DigitalGov Analytics",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
           }
-        }
-      },
-      "requirements": {
-        "agencyWidePolicy": 0.5,
-        "schemaFormat": 1,
-        "overallCompliance": 0.75
-      }
-    },
-    "DOC": {
-      "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token < in JSON at position 0)",
-      "issues": [],
-      "version": "",
-      "metadata": {
-        "agency": {
-          "id": 2,
-          "name": "Department of Commerce",
-          "acronym": "DOC",
-          "website": "https://www.commerce.gov/",
-          "codeUrl": "https://www.commerce.gov/code.json",
-          "requirements": {
-            "agencyWidePolicy": 1,
-            "schemaFormat": 0,
-            "overallCompliance": 0.5
-          }
-        }
-      },
-      "requirements": {
-        "agencyWidePolicy": 1,
-        "schemaFormat": 0,
-        "overallCompliance": 0.5
-      }
-    },
-    "DOD": {
-      "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token < in JSON at position 0)",
-      "issues": [],
-      "version": "",
-      "metadata": {
-        "agency": {
-          "id": 3,
-          "name": "Department of Defense",
-          "acronym": "DOD",
-          "website": "https://www.defense.gov/",
-          "codeUrl": "https://www.defense.gov/code.json",
-          "requirements": {
-            "agencyWidePolicy": 0,
-            "schemaFormat": 0,
-            "overallCompliance": 0
+        },
+        {
+          "repoID": "usda_aphis_animal_disease_spread_model",
+          "agency": "Department of Agriculture",
+          "organization": "APHIS",
+          "project_name": "Animal Disease Spread Model",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
           }
         }
       },
@@ -1975,10 +1958,12 @@
               }
             ],
             "warnings": [],
+
             "errors": []
           }
         },
         {
+
           "repoID": "dol_dol_department_js_dashboard",
           "agency": "Department of Labor",
           "organization": "DOL Department",
@@ -1996,6 +1981,7 @@
               }
             ],
             "warnings": [],
+
             "errors": []
           }
         },
@@ -2017,10 +2003,12 @@
               }
             ],
             "warnings": [],
+
             "errors": []
           }
         },
         {
+
           "repoID": "dol_dol_department_vets4212",
           "agency": "Department of Labor",
           "organization": "DOL Department",
@@ -2038,6 +2026,7 @@
               }
             ],
             "warnings": [],
+
             "errors": []
           }
         },
@@ -2067,6 +2056,12 @@
           "agency": "Department of Labor",
           "organization": "DOL Department",
           "project_name": "JS DASHBOARD",
+
+        {
+          "repoID": "nasa_gsfc_ground_space_radar_volume_matching_and_comparison_software",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "GSFC",
+          "project_name": "Ground and Space Radar Volume Matching and Comparison Software",
           "issues": {
             "enhancements": [
               {
@@ -2084,73 +2079,10 @@
           }
         },
         {
-          "repoID": "dol_dol_department_developer",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "DEVELOPER",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".contact.email",
-                "schemaPath": "#/properties/contact/properties/email/format",
-                "params": {
-                  "format": "email"
-                },
-                "message": "should match format \"email\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_vets4212",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "VETS4212",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".contact.email",
-                "schemaPath": "#/properties/contact/properties/email/format",
-                "params": {
-                  "format": "email"
-                },
-                "message": "should match format \"email\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_doldatasdk_ios",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "DOLDATASDK IOS",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".downloadURL",
-                "schemaPath": "#/properties/downloadURL/format",
-                "params": {
-                  "format": "uri"
-                },
-                "message": "should match format \"uri\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_js_dashboard",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "JS DASHBOARD",
+          "repoID": "nasa_gsfc_core_hierarchical_segmentation_hseg_software_package",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "GSFC",
+          "project_name": "Core Hierarchical Segmentation (HSEG) Software Package",
           "issues": {
             "enhancements": [
               {
@@ -2168,73 +2100,10 @@
           }
         },
         {
-          "repoID": "dol_dol_department_developer",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "DEVELOPER",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".contact.email",
-                "schemaPath": "#/properties/contact/properties/email/format",
-                "params": {
-                  "format": "email"
-                },
-                "message": "should match format \"email\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_vets4212",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "VETS4212",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".contact.email",
-                "schemaPath": "#/properties/contact/properties/email/format",
-                "params": {
-                  "format": "email"
-                },
-                "message": "should match format \"email\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_doldatasdk_ios",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "DOLDATASDK IOS",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".downloadURL",
-                "schemaPath": "#/properties/downloadURL/format",
-                "params": {
-                  "format": "uri"
-                },
-                "message": "should match format \"uri\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_js_dashboard",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "JS DASHBOARD",
+          "repoID": "nasa_gsfc_visual_system_for_browsing_analysis_retrieval_data_visbard_",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "GSFC",
+          "project_name": "Visual System for Browsing, Analysis, and Retrieval of Data (ViSBARD)",
           "issues": {
             "enhancements": [
               {
@@ -2252,73 +2121,10 @@
           }
         },
         {
-          "repoID": "dol_dol_department_developer",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "DEVELOPER",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".contact.email",
-                "schemaPath": "#/properties/contact/properties/email/format",
-                "params": {
-                  "format": "email"
-                },
-                "message": "should match format \"email\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_vets4212",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "VETS4212",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".contact.email",
-                "schemaPath": "#/properties/contact/properties/email/format",
-                "params": {
-                  "format": "email"
-                },
-                "message": "should match format \"email\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_doldatasdk_ios",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "DOLDATASDK IOS",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".downloadURL",
-                "schemaPath": "#/properties/downloadURL/format",
-                "params": {
-                  "format": "uri"
-                },
-                "message": "should match format \"uri\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_js_dashboard",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "JS DASHBOARD",
+          "repoID": "nasa_gsfc_lossless_hyper_multi_spectral_data_compression_software",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "GSFC",
+          "project_name": "Lossless Hyper-/Multi-Spectral Data Compression Software",
           "issues": {
             "enhancements": [
               {
@@ -2336,73 +2142,10 @@
           }
         },
         {
-          "repoID": "dol_dol_department_developer",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "DEVELOPER",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".contact.email",
-                "schemaPath": "#/properties/contact/properties/email/format",
-                "params": {
-                  "format": "email"
-                },
-                "message": "should match format \"email\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_vets4212",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "VETS4212",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".contact.email",
-                "schemaPath": "#/properties/contact/properties/email/format",
-                "params": {
-                  "format": "email"
-                },
-                "message": "should match format \"email\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_doldatasdk_ios",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "DOLDATASDK IOS",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".downloadURL",
-                "schemaPath": "#/properties/downloadURL/format",
-                "params": {
-                  "format": "uri"
-                },
-                "message": "should match format \"uri\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_js_dashboard",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "JS DASHBOARD",
+          "repoID": "nasa_gsfc_simple_scalable_script_based_science_processing_archive_s4pa_",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "GSFC",
+          "project_name": "Simple, Scalable, Script-based Science Processing Archive (S4PA)",
           "issues": {
             "enhancements": [
               {
@@ -2420,73 +2163,52 @@
           }
         },
         {
-          "repoID": "dol_dol_department_developer",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "DEVELOPER",
+          "repoID": "nasa_gsfc_42_a_comprehensive_general_purpose_simulation_attitude_trajectory_dynamics_and_control_of_multiple_spacecraft_composed_of_multiple_rigid_or_flexible_bodies",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "GSFC",
+          "project_name": "42: A Comprehensive General-Purpose Simulation of Attitude and Trajectory Dynamics and Control of Multiple Spacecraft Composed of Multiple Rigid or Flexible Bodies",
           "issues": {
-            "enhancements": [
+            "enhancements": [],
+            "warnings": [
               {
                 "keyword": "format",
-                "dataPath": ".contact.email",
-                "schemaPath": "#/properties/contact/properties/email/format",
-                "params": {
-                  "format": "email"
-                },
-                "message": "should match format \"email\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_vets4212",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "VETS4212",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".contact.email",
-                "schemaPath": "#/properties/contact/properties/email/format",
-                "params": {
-                  "format": "email"
-                },
-                "message": "should match format \"email\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_doldatasdk_ios",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "DOLDATASDK IOS",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".downloadURL",
-                "schemaPath": "#/properties/downloadURL/format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
                 "params": {
                   "format": "uri"
                 },
                 "message": "should match format \"uri\""
               }
             ],
-            "warnings": [],
             "errors": []
           }
         },
         {
-          "repoID": "dol_dol_department_js_dashboard",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "JS DASHBOARD",
+          "repoID": "nasa_gsfc_landslide_hazard_assessment_for_situational_awareness_lhasa_",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "GSFC",
+          "project_name": "Landslide Hazard Assessment for Situational Awareness (LHASA)",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_gsfc_earthdata_search_web_application",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "GSFC",
+          "project_name": "Earthdata Search Web Application",
           "issues": {
             "enhancements": [
               {
@@ -2504,73 +2226,10 @@
           }
         },
         {
-          "repoID": "dol_dol_department_developer",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "DEVELOPER",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".contact.email",
-                "schemaPath": "#/properties/contact/properties/email/format",
-                "params": {
-                  "format": "email"
-                },
-                "message": "should match format \"email\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_vets4212",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "VETS4212",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".contact.email",
-                "schemaPath": "#/properties/contact/properties/email/format",
-                "params": {
-                  "format": "email"
-                },
-                "message": "should match format \"email\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_doldatasdk_ios",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "DOLDATASDK IOS",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".downloadURL",
-                "schemaPath": "#/properties/downloadURL/format",
-                "params": {
-                  "format": "uri"
-                },
-                "message": "should match format \"uri\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_js_dashboard",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "JS DASHBOARD",
+          "repoID": "nasa_gsfc_general_mission_analysis_tool_gmat_v_r2016a",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "GSFC",
+          "project_name": "General Mission Analysis Tool (GMAT) v.R2016a",
           "issues": {
             "enhancements": [
               {
@@ -2588,73 +2247,10 @@
           }
         },
         {
-          "repoID": "dol_dol_department_developer",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "DEVELOPER",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".contact.email",
-                "schemaPath": "#/properties/contact/properties/email/format",
-                "params": {
-                  "format": "email"
-                },
-                "message": "should match format \"email\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_vets4212",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "VETS4212",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".contact.email",
-                "schemaPath": "#/properties/contact/properties/email/format",
-                "params": {
-                  "format": "email"
-                },
-                "message": "should match format \"email\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_doldatasdk_ios",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "DOLDATASDK IOS",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".downloadURL",
-                "schemaPath": "#/properties/downloadURL/format",
-                "params": {
-                  "format": "uri"
-                },
-                "message": "should match format \"uri\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_js_dashboard",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "JS DASHBOARD",
+          "repoID": "nasa_jpl_horizon_5_framework_for_distributed_data_management_product_generation_workflow",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "JPL",
+          "project_name": "HORIZON 5 - Framework for distributed data management and product generation workflow",
           "issues": {
             "enhancements": [
               {
@@ -2672,73 +2268,10 @@
           }
         },
         {
-          "repoID": "dol_dol_department_developer",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "DEVELOPER",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".contact.email",
-                "schemaPath": "#/properties/contact/properties/email/format",
-                "params": {
-                  "format": "email"
-                },
-                "message": "should match format \"email\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_vets4212",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "VETS4212",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".contact.email",
-                "schemaPath": "#/properties/contact/properties/email/format",
-                "params": {
-                  "format": "email"
-                },
-                "message": "should match format \"email\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_doldatasdk_ios",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "DOLDATASDK IOS",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".downloadURL",
-                "schemaPath": "#/properties/downloadURL/format",
-                "params": {
-                  "format": "uri"
-                },
-                "message": "should match format \"uri\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_js_dashboard",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "JS DASHBOARD",
+          "repoID": "nasa_jpl_redshift_mobile_app_for_following_tactical_strategic_operations_meeting_schedule",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "JPL",
+          "project_name": "RedShift: mobile app for following the tactical and strategic operations meeting schedule",
           "issues": {
             "enhancements": [
               {
@@ -2756,73 +2289,10 @@
           }
         },
         {
-          "repoID": "dol_dol_department_developer",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "DEVELOPER",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".contact.email",
-                "schemaPath": "#/properties/contact/properties/email/format",
-                "params": {
-                  "format": "email"
-                },
-                "message": "should match format \"email\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_vets4212",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "VETS4212",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".contact.email",
-                "schemaPath": "#/properties/contact/properties/email/format",
-                "params": {
-                  "format": "email"
-                },
-                "message": "should match format \"email\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_doldatasdk_ios",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "DOLDATASDK IOS",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".downloadURL",
-                "schemaPath": "#/properties/downloadURL/format",
-                "params": {
-                  "format": "uri"
-                },
-                "message": "should match format \"uri\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_js_dashboard",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "JS DASHBOARD",
+          "repoID": "nasa_jpl_juneberry_web_service_software",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "JPL",
+          "project_name": "Juneberry Web Service Software",
           "issues": {
             "enhancements": [
               {
@@ -2840,73 +2310,10 @@
           }
         },
         {
-          "repoID": "dol_dol_department_developer",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "DEVELOPER",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".contact.email",
-                "schemaPath": "#/properties/contact/properties/email/format",
-                "params": {
-                  "format": "email"
-                },
-                "message": "should match format \"email\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_vets4212",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "VETS4212",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".contact.email",
-                "schemaPath": "#/properties/contact/properties/email/format",
-                "params": {
-                  "format": "email"
-                },
-                "message": "should match format \"email\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_doldatasdk_ios",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "DOLDATASDK IOS",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".downloadURL",
-                "schemaPath": "#/properties/downloadURL/format",
-                "params": {
-                  "format": "uri"
-                },
-                "message": "should match format \"uri\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_js_dashboard",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "JS DASHBOARD",
+          "repoID": "nasa_jpl_edrn_knowledge_environment",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "JPL",
+          "project_name": "The EDRN Knowledge Environment",
           "issues": {
             "enhancements": [
               {
@@ -2924,73 +2331,10 @@
           }
         },
         {
-          "repoID": "dol_dol_department_developer",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "DEVELOPER",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".contact.email",
-                "schemaPath": "#/properties/contact/properties/email/format",
-                "params": {
-                  "format": "email"
-                },
-                "message": "should match format \"email\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_vets4212",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "VETS4212",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".contact.email",
-                "schemaPath": "#/properties/contact/properties/email/format",
-                "params": {
-                  "format": "email"
-                },
-                "message": "should match format \"email\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_doldatasdk_ios",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "DOLDATASDK IOS",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".downloadURL",
-                "schemaPath": "#/properties/downloadURL/format",
-                "params": {
-                  "format": "uri"
-                },
-                "message": "should match format \"uri\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_js_dashboard",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "JS DASHBOARD",
+          "repoID": "nasa_jpl_demud_discovery_through_eigenbasis_modeling_uninteresting_data",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "JPL",
+          "project_name": "DEMUD: Discovery through Eigenbasis Modeling of Uninteresting Data",
           "issues": {
             "enhancements": [
               {
@@ -3008,73 +2352,10 @@
           }
         },
         {
-          "repoID": "dol_dol_department_developer",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "DEVELOPER",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".contact.email",
-                "schemaPath": "#/properties/contact/properties/email/format",
-                "params": {
-                  "format": "email"
-                },
-                "message": "should match format \"email\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_vets4212",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "VETS4212",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".contact.email",
-                "schemaPath": "#/properties/contact/properties/email/format",
-                "params": {
-                  "format": "email"
-                },
-                "message": "should match format \"email\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_doldatasdk_ios",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "DOLDATASDK IOS",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".downloadURL",
-                "schemaPath": "#/properties/downloadURL/format",
-                "params": {
-                  "format": "uri"
-                },
-                "message": "should match format \"uri\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_js_dashboard",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "JS DASHBOARD",
+          "repoID": "nasa_jpl_dtntap",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "JPL",
+          "project_name": "DTNTAP",
           "issues": {
             "enhancements": [
               {
@@ -3092,73 +2373,10 @@
           }
         },
         {
-          "repoID": "dol_dol_department_developer",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "DEVELOPER",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".contact.email",
-                "schemaPath": "#/properties/contact/properties/email/format",
-                "params": {
-                  "format": "email"
-                },
-                "message": "should match format \"email\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_vets4212",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "VETS4212",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".contact.email",
-                "schemaPath": "#/properties/contact/properties/email/format",
-                "params": {
-                  "format": "email"
-                },
-                "message": "should match format \"email\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_doldatasdk_ios",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "DOLDATASDK IOS",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".downloadURL",
-                "schemaPath": "#/properties/downloadURL/format",
-                "params": {
-                  "format": "uri"
-                },
-                "message": "should match format \"uri\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_js_dashboard",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "JS DASHBOARD",
+          "repoID": "nasa_jpl_dtka_a_prototype_implementation_delay_tolerant_security_key_distribution",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "JPL",
+          "project_name": "DTKA, a Prototype Implementation of Delay-Tolerant Security Key Distribution",
           "issues": {
             "enhancements": [
               {
@@ -3176,73 +2394,10 @@
           }
         },
         {
-          "repoID": "dol_dol_department_developer",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "DEVELOPER",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".contact.email",
-                "schemaPath": "#/properties/contact/properties/email/format",
-                "params": {
-                  "format": "email"
-                },
-                "message": "should match format \"email\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_vets4212",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "VETS4212",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".contact.email",
-                "schemaPath": "#/properties/contact/properties/email/format",
-                "params": {
-                  "format": "email"
-                },
-                "message": "should match format \"email\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_doldatasdk_ios",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "DOLDATASDK IOS",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".downloadURL",
-                "schemaPath": "#/properties/downloadURL/format",
-                "params": {
-                  "format": "uri"
-                },
-                "message": "should match format \"uri\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_js_dashboard",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "JS DASHBOARD",
+          "repoID": "nasa_jpl_juneplum_restful_web_access_opendap_hyrax_back_end_server",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "JPL",
+          "project_name": "Juneplum - ReSTful Web Access of OPeNDAP Hyrax Back End Server",
           "issues": {
             "enhancements": [
               {
@@ -3260,73 +2415,10 @@
           }
         },
         {
-          "repoID": "dol_dol_department_developer",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "DEVELOPER",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".contact.email",
-                "schemaPath": "#/properties/contact/properties/email/format",
-                "params": {
-                  "format": "email"
-                },
-                "message": "should match format \"email\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_vets4212",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "VETS4212",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".contact.email",
-                "schemaPath": "#/properties/contact/properties/email/format",
-                "params": {
-                  "format": "email"
-                },
-                "message": "should match format \"email\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_doldatasdk_ios",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "DOLDATASDK IOS",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".downloadURL",
-                "schemaPath": "#/properties/downloadURL/format",
-                "params": {
-                  "format": "uri"
-                },
-                "message": "should match format \"uri\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_js_dashboard",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "JS DASHBOARD",
+          "repoID": "nasa_jpl_edge_extensible_data_gateway_environment",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "JPL",
+          "project_name": "EDGE - The Extensible Data Gateway Environment",
           "issues": {
             "enhancements": [
               {
@@ -3344,73 +2436,10 @@
           }
         },
         {
-          "repoID": "dol_dol_department_developer",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "DEVELOPER",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".contact.email",
-                "schemaPath": "#/properties/contact/properties/email/format",
-                "params": {
-                  "format": "email"
-                },
-                "message": "should match format \"email\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_vets4212",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "VETS4212",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".contact.email",
-                "schemaPath": "#/properties/contact/properties/email/format",
-                "params": {
-                  "format": "email"
-                },
-                "message": "should match format \"email\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_doldatasdk_ios",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "DOLDATASDK IOS",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".downloadURL",
-                "schemaPath": "#/properties/downloadURL/format",
-                "params": {
-                  "format": "uri"
-                },
-                "message": "should match format \"uri\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_js_dashboard",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "JS DASHBOARD",
+          "repoID": "nasa_jpl_nexus_deep_data_platform",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "JPL",
+          "project_name": "NEXUS: Deep Data Platform",
           "issues": {
             "enhancements": [
               {
@@ -3428,73 +2457,10 @@
           }
         },
         {
-          "repoID": "dol_dol_department_developer",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "DEVELOPER",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".contact.email",
-                "schemaPath": "#/properties/contact/properties/email/format",
-                "params": {
-                  "format": "email"
-                },
-                "message": "should match format \"email\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_vets4212",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "VETS4212",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".contact.email",
-                "schemaPath": "#/properties/contact/properties/email/format",
-                "params": {
-                  "format": "email"
-                },
-                "message": "should match format \"email\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_doldatasdk_ios",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "DOLDATASDK IOS",
-          "issues": {
-            "enhancements": [
-              {
-                "keyword": "format",
-                "dataPath": ".downloadURL",
-                "schemaPath": "#/properties/downloadURL/format",
-                "params": {
-                  "format": "uri"
-                },
-                "message": "should match format \"uri\""
-              }
-            ],
-            "warnings": [],
-            "errors": []
-          }
-        },
-        {
-          "repoID": "dol_dol_department_js_dashboard",
-          "agency": "Department of Labor",
-          "organization": "DOL Department",
-          "project_name": "JS DASHBOARD",
+          "repoID": "nasa_jpl_radiometric_calibration_uavsar_images",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "JPL",
+          "project_name": "Radiometric Calibration of UAVSAR Images",
           "issues": {
             "enhancements": [
               {
@@ -3508,110 +2474,1196 @@
               }
             ],
             "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_jpl_gneimo_advanced_techniques_for_constrained_internal_coordinate_molecular_dynamics",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "JPL",
+          "project_name": "GNEIMO Advanced Techniques for Constrained Internal Coordinate Molecular Dynamics",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_jpl_a_web_based_search_service_to_support_imaging_spectrometer_instrument_operations_",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "JPL",
+          "project_name": "A Web-based Search Service to Support Imaging Spectrometer Instrument Operations.",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_jpl_oco_2_level_2_retrieval_algorithm",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "JPL",
+          "project_name": "The OCO-2 Level 2 Retrieval Algorithm",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_jpl_vicar_video_image_communication_retrieval",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "JPL",
+          "project_name": "VICAR - Video Image Communication And Retrieval",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_jpl_tie_0_4_imagery_exchange_for_the_nasa_global_imagery_browse_services_gibs_project",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "JPL",
+          "project_name": "TIE 0.4 - The Imagery Exchange for the NASA Global Imagery Browse Services (GIBS) Project",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_jpl_space_mission_architecture_risk_analysis_tool_smart_",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "JPL",
+          "project_name": "Space Mission Architecture and Risk Analysis Tool (SMART)",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_jpl_cobra_a_code_browser_analyzer_an_extendable_interactive_tool_for_analysis_c_code",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "JPL",
+          "project_name": "Cobra: A Code Browser and Analyzer -- an extendable, interactive tool for the analysis of C code",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_jpl_sysml_system_model_for_thirty_meter_telescope_tmt_",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "JPL",
+          "project_name": "SysML System Model for the Thirty Meter Telescope (TMT)",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_jpl_ominas_open_source_modular_image_navigation_analysis_system_astronomical_data_processing_software",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "JPL",
+          "project_name": "OMINAS (OPEN-SOURCE MODULAR IMAGE NAVIGATION AND ANALYSIS SYSTEM) astronomical data processing software",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_jpl_imce_ontological_modeling_framework",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "JPL",
+          "project_name": "IMCE Ontological Modeling Framework",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_jpl_earthkit",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "JPL",
+          "project_name": "EarthKit",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_jpl_regional_hydrologic_extremes_assessment_system_rheas_software_framework",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "JPL",
+          "project_name": "Regional Hydrologic Extremes Assessment System (RHEAS) software framework",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_jpl_file_exchange_interface_5_new_enhancements_to_ntr_40075",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "JPL",
+          "project_name": "File Exchange Interface 5 - New enhancements to NTR 40075",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_jpl_ndarts",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "JPL",
+          "project_name": "Ndarts",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_jpl_athena",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "JPL",
+          "project_name": "Athena",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_jpl_oceanographic_data_management_archive_system",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "JPL",
+          "project_name": "Oceanographic Data Management And Archive System",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_jsc_input_device_framework_idf_",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "JSC",
+          "project_name": "Input Device Framework (IDF)",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_jsc_trick_13_simulation_environment",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "JSC",
+          "project_name": "Trick 13 Simulation Environment",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_larc_accords_conflict_detection_cd3d_conflict_resolution_cr3d_algorithms",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "LaRC",
+          "project_name": "ACCoRDs Conflict-Detection (CD3D)/Conflict-Resolution (CR3D) Algorithms",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_larc_conflict_prevention_bands",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "LaRC",
+          "project_name": "Conflict Prevention Bands",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_larc_strategic_conflict_resolution_stratway_",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "LaRC",
+          "project_name": "Strategic Conflict Resolution (Stratway)",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_larc_vehicle_sketch_pad_vsp_",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "LaRC",
+          "project_name": "Vehicle Sketch Pad (VSP)",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_larc_fortran_unit_testing_framework_funit_v1_0_",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "LaRC",
+          "project_name": "Fortran Unit Testing Framework (fUnit v1.0)",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_larc_robus_2_fault_tolerant_broadcast_communication_system_for_modular_avionics",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "LaRC",
+          "project_name": "ROBUS-2 Fault-Tolerant Broadcast Communication System for Modular Avionics",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_larc_tolerance_domain_specific_language",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "LaRC",
+          "project_name": "Tolerance Domain Specific Language",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_larc_java_based_software_tool_for_dynamic_aerospace_vehicle_exchange_markup_files",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "LaRC",
+          "project_name": "Java-Based Software Tool for Dynamic Aerospace Vehicle Exchange Markup Files",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_larc_java_program_to_promote_an_open_source_e_standard_for_mass_properties_engineering",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "LaRC",
+          "project_name": "Java Program to Promote an Open-Source E Standard for Mass Properties Engineering",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_larc_certware_safety_case_workbench_software",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "LaRC",
+          "project_name": "CertWare Safety Case Workbench Software",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_larc_kodiak_a_software_library_for_verifying_nonlinear_arithmetic_statements",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "LaRC",
+          "project_name": "Kodiak: A Software Library for Verifying Nonlinear Arithmetic Statements",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_larc_fileplottingtools",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "LaRC",
+          "project_name": "FilePlottingTools",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_larc_flight_dynamics_simulation_a_generic_transport_model",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "LaRC",
+          "project_name": "Flight Dynamics Simulation of a Generic Transport Model",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_larc_windows_semi_markov_range_evaluator_winsure_",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "LaRC",
+          "project_name": "Windows Semi-Markov Range Evaluator (WinSURE)",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_larc_winassist_windows_abstract_semi_markov_specification_interface_to_sure_tool_",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "LaRC",
+          "project_name": "WinASSIST: (Windows Abstract Semi-Markov Specification Interface To The SURE Tool)",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_larc_scalable_implementation_finite_elements_by_nasa_scifen_",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "LaRC",
+          "project_name": "Scalable Implementation of Finite Elements by NASA (ScIFEN)",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_larc_composite_damage_compdam_progressive_damage_analysis_software",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "LaRC",
+          "project_name": "Composite Damage (CompDam) Progressive Damage Analysis Software",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_larc_ceos_data_cube_platform_v_2_ceos2_",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "LaRC",
+          "project_name": "CEOS Data Cube Platform v.2 (CEOS2)",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_larc_surface_aquatic_vegetation_detection_tool_savdt_",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "LaRC",
+          "project_name": "Surface Aquatic Vegetation Detection Tool (SAVDT)",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_larc_polycarp_algorithms_software_for_computations_with_polygons",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "LaRC",
+          "project_name": "PolyCARP: Algorithms and Software for Computations with Polygons",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_larc_develop_drip_slip_landslide_detection_package_drip_slip_",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "LaRC",
+          "project_name": "DEVELOP DRIP and SLIP Landslide Detection Package (DRIP-SLIP)",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_larc_lsurface_temperature_modis_visualization_lastmov_",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "LaRC",
+          "project_name": "Land Surface Temperature MODIS Visualization (LaSTMoV)",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_larc_hypatheon_searchable_database_capability_for_formalized_mathematics",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "LaRC",
+          "project_name": "Hypatheon-Searchable Database Capability for Formalized Mathematics",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_larc_modified_snowmelt_runoff_model_for_forecasting_water_availability_in_chile",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "LaRC",
+          "project_name": "Modified Snowmelt Runoff Model For Forecasting Water Availability in Chile",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_larc_abaqus_user_subroutine_verification_abaverify_",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "LaRC",
+          "project_name": "Abaqus User Subroutine Verification (abaverify)",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_larc_coastal_mid_atlantic_metric_model",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "LaRC",
+          "project_name": "Coastal Mid-Atlantic METRIC Model",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_larc_generic_branch_bound_algorithm_for_rigorous_numerical_computations_kodiak_",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "LaRC",
+          "project_name": "Generic Branch and Bound Algorithm for Rigorous Numerical Computations (KODIAK)",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_larc_nasa_structrual_analysis_nastran_",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "LaRC",
+          "project_name": "NASA STRuctrual ANalysis (NASTRAN)",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_larc_icarous_communication_decision_making_software_modules",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "LaRC",
+          "project_name": "ICAROUS' Communication and Decision Making Software Modules",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_larc_well_clear_violation_volumes_for_concept_integration_of_uas_in_nas",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "LaRC",
+          "project_name": "Well-Clear Violation Volumes for Concept of Integration of UAS in the NAS",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_msfc_tool_for_analysis_surface_cracks_tasc_",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "MSFC",
+          "project_name": "Tool for Analysis of Surface Cracks (TASC)",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_msfc_libsprite",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "MSFC",
+          "project_name": "libSPRITE",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_msfc_marshall_mrms_mosaic_python_toolkit_mmm_py_",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "MSFC",
+          "project_name": "Marshall MRMS Mosaic Python Toolkit (MMM-Py)",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_msfc_python_advanced_microwave_precipitation_radiometer_data_toolkit_pyampr_",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "MSFC",
+          "project_name": "Python Advanced Microwave Precipitation Radiometer Data Toolkit (PyAMPR)",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_msfc_python_turbulence_detection_algorithm_pytda_",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "MSFC",
+          "project_name": "Python Turbulence Detection Algorithm (PyTDA)",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_msfc_python_interface_to_dual_pol_radar_algorithms_dualpol_",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "MSFC",
+          "project_name": "Python Interface to Dual-Pol Radar Algorithms (DualPol)",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "nasa_msfc_python_polarimetric_radar_beam_blockage_calculation_pyblock_",
+          "agency": "National Aeronautics and Space Administration",
+          "organization": "MSFC",
+          "project_name": "Python Polarimetric Radar Beam Blockage Calculation (PyBlock)",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
             "errors": []
           }
         }
       ],
-      "version": "2.0.1",
-      "metadata": {
-        "agency": {
-          "name": "Department of Labor",
-          "acronym": "DOL",
-          "website": "https://www.dol.gov",
-          "codeUrl": "https://www.dol.gov/code.json",
-          "requirements": {
-            "agencyWidePolicy": 1,
-            "schemaFormat": 1,
-            "overallCompliance": 1
-          }
-        }
-      },
-      "requirements": {
-        "agencyWidePolicy": 1,
-        "schemaFormat": 1,
-        "overallCompliance": 1
-      }
-    },
-    "DOS": {
-      "status": "FULLY COMPLIANT: 0 validation errors",
-      "issues": [],
-      "version": "1.0.3",
-      "metadata": {
-        "agency": {
-          "name": "Department of State",
-          "acronym": "DOS",
-          "website": "https://state.gov/",
-          "codeUrl": "http://state.gov/code.json",
-          "requirements": {
-            "agencyWidePolicy": 0.5,
-            "schemaFormat": 1,
-            "overallCompliance": 0.75
-          }
-        }
-      },
-      "requirements": {
-        "agencyWidePolicy": 0.5,
-        "schemaFormat": 1,
-        "overallCompliance": 0.75
-      }
-    },
-    "DOT": {
-      "status": "FULLY COMPLIANT: 0 validation errors",
-      "issues": [],
       "version": "1.0.1",
       "metadata": {
         "agency": {
-          "name": "Department of Transportation",
-          "acronym": "DOT",
-          "website": "https://www.transportation.gov/",
-          "codeUrl": "https://www.transportation.gov/code.json",
+          "name": "National Aeronautics and Space Administration",
+          "acronym": "NASA",
+          "website": "https://nasa.gov/",
+          "codeUrl": "/data/fallback/NASA.json",
           "requirements": {
-            "agencyWidePolicy": 0.5,
-            "schemaFormat": 1,
-            "overallCompliance": 0.75
+            "agencyWidePolicy": 0,
+            "schemaFormat": 0.5,
+            "overallCompliance": 0.25
           }
         }
       },
       "requirements": {
-        "agencyWidePolicy": 0.5,
-        "schemaFormat": 1,
-        "overallCompliance": 0.75
+        "agencyWidePolicy": 0,
+        "schemaFormat": 0.5,
+        "overallCompliance": 0.25
       }
     },
-    "TRE": {
-      "status": "FULLY COMPLIANT: 0 validation errors",
-      "issues": [],
-      "version": "1.0.1",
-      "metadata": {
-        "agency": {
-          "name": "Department of Treasury",
-          "acronym": "TRE",
-          "website": "https://www.treasury.gov/",
-          "codeUrl": "https://www.treasury.gov/code.json",
-          "requirements": {
-            "agencyWidePolicy": 0.5,
-            "schemaFormat": 1,
-            "overallCompliance": 0.75
-          }
-        }
-      },
-      "requirements": {
-        "agencyWidePolicy": 0.5,
-        "schemaFormat": 1,
-        "overallCompliance": 0.75
-      }
-    },
-    "VA": {
-      "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token < in JSON at position 0)",
+    "AID": {
+      "status": "FAILURE: MISSING PROJECTS FIELD",
       "issues": [],
       "version": "",
       "metadata": {
         "agency": {
-          "id": 14,
-          "name": "Department of Veterans Affairs",
-          "acronym": "VA",
-          "website": "https://va.gov/",
-          "codeUrl": "https://va.gov/code.json",
+          "id": 17,
+          "name": "Agency for International Development",
+          "acronym": "AID",
+          "website": "https://usaid.gov/",
+          "codeUrl": "/data/fallback/AID.json",
           "requirements": {
             "agencyWidePolicy": 0,
             "schemaFormat": 0,
@@ -3625,77 +3677,8 @@
         "overallCompliance": 0
       }
     },
-    "EPA": {
-      "status": "FULLY COMPLIANT: 0 validation errors",
-      "issues": [],
-      "version": "1.0.1",
-      "metadata": {
-        "agency": {
-          "name": "Environmental Protection Agency",
-          "acronym": "EPA",
-          "website": "https://epa.gov/",
-          "codeUrl": "https://epa.gov/code.json",
-          "requirements": {
-            "agencyWidePolicy": 0,
-            "schemaFormat": 1,
-            "overallCompliance": 0.5
-          }
-        }
-      },
-      "requirements": {
-        "agencyWidePolicy": 0,
-        "schemaFormat": 1,
-        "overallCompliance": 0.5
-      }
-    },
-    "NASA": {
-      "status": "FULLY COMPLIANT: 0 validation errors",
-      "issues": [],
-      "version": "1.0.1",
-      "metadata": {
-        "agency": {
-          "name": "National Aeronautics and Space Administration",
-          "acronym": "NASA",
-          "website": "https://nasa.gov/",
-          "codeUrl": "https://code.nasa.gov/code.json",
-          "requirements": {
-            "agencyWidePolicy": 1,
-            "schemaFormat": 1,
-            "overallCompliance": 1
-          }
-        }
-      },
-      "requirements": {
-        "agencyWidePolicy": 1,
-        "schemaFormat": 1,
-        "overallCompliance": 1
-      }
-    },
-    "AID": {
-      "status": "FULLY COMPLIANT: 0 validation errors",
-      "issues": [],
-      "version": "1.0.1",
-      "metadata": {
-        "agency": {
-          "name": "Agency for International Development",
-          "acronym": "AID",
-          "website": "https://usaid.gov/",
-          "codeUrl": "https://usaid.gov/code.json",
-          "requirements": {
-            "agencyWidePolicy": 1,
-            "schemaFormat": 1,
-            "overallCompliance": 1
-          }
-        }
-      },
-      "requirements": {
-        "agencyWidePolicy": 1,
-        "schemaFormat": 1,
-        "overallCompliance": 1
-      }
-    },
     "FEMA": {
-      "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token < in JSON at position 0)",
+      "status": "FAILURE: MISSING PROJECTS FIELD",
       "issues": [],
       "version": "",
       "metadata": {
@@ -3704,16 +3687,16 @@
           "name": "Federal Emergency Management Agency",
           "acronym": "FEMA",
           "website": "https://fema.gov/",
-          "codeUrl": "https://fema.gov/code.json",
+          "codeUrl": "/data/fallback/FEMA.json",
           "requirements": {
-            "agencyWidePolicy": null,
+            "agencyWidePolicy": 0,
             "schemaFormat": 0,
             "overallCompliance": 0
           }
         }
       },
       "requirements": {
-        "agencyWidePolicy": null,
+        "agencyWidePolicy": 0,
         "schemaFormat": 0,
         "overallCompliance": 0
       }
@@ -3727,7 +3710,7 @@
           "name": "General Services Administration",
           "acronym": "GSA",
           "website": "https://gsa.gov/",
-          "codeUrl": "https://gsa.gov/code.json",
+          "codeUrl": "/data/fallback/GSA.json",
           "requirements": {
             "agencyWidePolicy": 1,
             "schemaFormat": 1,
@@ -3749,18 +3732,18 @@
           "name": "National Science Foundation",
           "acronym": "NSF",
           "website": "https://nsf.gov/",
-          "codeUrl": "https://nsf.gov/code.json",
+          "codeUrl": "/data/fallback/NSF.json",
           "requirements": {
-            "agencyWidePolicy": 1,
+            "agencyWidePolicy": 0,
             "schemaFormat": 1,
-            "overallCompliance": 1
+            "overallCompliance": 0.5
           }
         }
       },
       "requirements": {
-        "agencyWidePolicy": 1,
+        "agencyWidePolicy": 0,
         "schemaFormat": 1,
-        "overallCompliance": 1
+        "overallCompliance": 0.5
       }
     },
     "NRC": {
@@ -3772,22 +3755,22 @@
           "name": "Nuclear Regulatory Commission",
           "acronym": "NRC",
           "website": "https://www.nrc.gov/",
-          "codeUrl": "https://www.nrc.gov/code.json",
+          "codeUrl": "/data/fallback/NRC.json",
           "requirements": {
-            "agencyWidePolicy": 1,
+            "agencyWidePolicy": 0,
             "schemaFormat": 1,
-            "overallCompliance": 1
+            "overallCompliance": 0.5
           }
         }
       },
       "requirements": {
-        "agencyWidePolicy": 1,
+        "agencyWidePolicy": 0,
         "schemaFormat": 1,
-        "overallCompliance": 1
+        "overallCompliance": 0.5
       }
     },
     "OPM": {
-      "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token < in JSON at position 0)",
+      "status": "FAILURE: MISSING PROJECTS FIELD",
       "issues": [],
       "version": "",
       "metadata": {
@@ -3796,40 +3779,71 @@
           "name": "Office of Personnel Management",
           "acronym": "OPM",
           "website": "https://opm.gov/",
-          "codeUrl": "https://opm.gov/code.json",
+          "codeUrl": "/data/fallback/OPM.json",
           "requirements": {
-            "agencyWidePolicy": 0.5,
+            "agencyWidePolicy": 0,
             "schemaFormat": 0,
-            "overallCompliance": 0.25
+            "overallCompliance": 0
           }
         }
       },
       "requirements": {
-        "agencyWidePolicy": 0.5,
+        "agencyWidePolicy": 0,
         "schemaFormat": 0,
-        "overallCompliance": 0.25
+        "overallCompliance": 0
       }
     },
     "SBA": {
-      "status": "FULLY COMPLIANT: 0 validation errors",
-      "issues": [],
+      "status": "NOT FULLY COMPLIANT: 1 ERRORS, 1 validation errors, 1 REQUESTED ENHANCEMENTS",
+      "issues": [
+        {
+          "repoID": "sba_oracletosql",
+          "agency": "Small Business Administration",
+          "project_name": "OracletoSQL",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": [
+              {
+                "keyword": "required",
+                "dataPath": "",
+                "schemaPath": "#/required",
+                "params": {
+                  "missingProperty": "tags"
+                },
+                "message": "should have required property 'tags'"
+              }
+            ]
+          }
+        }
+      ],
       "metadata": {
         "agency": {
           "name": "Small Business Administration",
           "acronym": "SBA",
           "website": "https://sba.gov/",
-          "codeUrl": "https://sba.gov/code.json",
+          "codeUrl": "/data/fallback/SBA.json",
           "requirements": {
-            "agencyWidePolicy": 1,
-            "schemaFormat": 1,
-            "overallCompliance": 1
+            "agencyWidePolicy": 0,
+            "schemaFormat": 0.5,
+            "overallCompliance": 0.25
           }
         }
       },
       "requirements": {
-        "agencyWidePolicy": 1,
-        "schemaFormat": 1,
-        "overallCompliance": 1
+        "agencyWidePolicy": 0,
+        "schemaFormat": 0.5,
+        "overallCompliance": 0.25
       }
     },
     "NARA": {
@@ -3841,45 +3855,48 @@
           "name": "National Archives",
           "acronym": "NARA",
           "website": "https://archives.gov/",
-          "codeUrl": "https://archives.gov/code.json",
+          "codeUrl": "/data/fallback/NARA.json",
           "requirements": {
-            "agencyWidePolicy": 1,
-            "schemaFormat": 1,
-            "overallCompliance": 1
-          }
-        }
-      },
-      "requirements": {
-        "agencyWidePolicy": 1,
-        "schemaFormat": 1,
-        "overallCompliance": 1
-      }
-    },
-    "CFPB": {
-      "status": "FULLY COMPLIANT: 0 validation errors",
-      "issues": [],
-      "version": "1.0.1",
-      "metadata": {
-        "agency": {
-          "name": "Consumer Financial Protection Bureau",
-          "acronym": "CFPB",
-          "website": "https://consumerfinance.gov/",
-          "codeUrl": "https://consumerfinance.gov/code.json",
-          "requirements": {
-            "agencyWidePolicy": null,
+            "agencyWidePolicy": 0,
             "schemaFormat": 1,
             "overallCompliance": 0.5
           }
         }
       },
       "requirements": {
-        "agencyWidePolicy": null,
+        "agencyWidePolicy": 0,
         "schemaFormat": 1,
         "overallCompliance": 0.5
       }
     },
+    "CFPB": {
+      "status": "FAILURE: MISSING PROJECTS FIELD",
+      "issues": [],
+      "version": "",
+      "metadata": {
+        "agency": {
+          "id": 25,
+          "name": "Consumer Financial Protection Bureau",
+          "acronym": "CFPB",
+          "website": "https://consumerfinance.gov/",
+          "codeUrl": "/data/fallback/CFPB.json",
+          "requirements": {
+            "agencyWidePolicy": 0,
+            "schemaFormat": 0,
+            "overallCompliance": 0
+          }
+        }
+      },
+      "requirements": {
+        "agencyWidePolicy": 0,
+        "schemaFormat": 0,
+        "overallCompliance": 0
+      }
+    },
     "EOP": {
+
       "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token < in JSON at position 0)",
+
       "issues": [],
       "version": "",
       "metadata": {
@@ -3888,41 +3905,18 @@
           "name": "White House - Executive Office of the President",
           "acronym": "EOP",
           "website": "https://whitehouse.gov/",
-          "codeUrl": "https://whitehouse.gov/code.json",
+          "codeUrl": "/data/fallback/EOP.json",
           "requirements": {
-            "agencyWidePolicy": null,
+            "agencyWidePolicy": 0,
             "schemaFormat": 0,
             "overallCompliance": 0
           }
         }
       },
       "requirements": {
-        "agencyWidePolicy": null,
+        "agencyWidePolicy": 0,
         "schemaFormat": 0,
         "overallCompliance": 0
-      }
-    },
-    "SSA": {
-      "status": "FULLY COMPLIANT: 0 validation errors",
-      "issues": [],
-      "version": "1.0.1",
-      "metadata": {
-        "agency": {
-          "name": "Social Security Administration",
-          "acronym": "SSA",
-          "website": "https://www.ssa.gov",
-          "codeUrl": "https://www.ssa.gov/code.json",
-          "requirements": {
-            "agencyWidePolicy": 1,
-            "schemaFormat": 1,
-            "overallCompliance": 1
-          }
-        }
-      },
-      "requirements": {
-        "agencyWidePolicy": 1,
-        "schemaFormat": 1,
-        "overallCompliance": 1
       }
     }
   }
