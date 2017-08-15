@@ -114,7 +114,7 @@
   "website": "https://www.transportation.gov/",
   "codeUrl": "https://www.transportation.gov/code.json",
   "requirements": {
-    "agencyWidePolicy": 0.5
+    "agencyWidePolicy": 1.0
   }
 }, {
   "id": 13,
