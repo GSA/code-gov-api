@@ -1,0 +1,594 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Swagger testing definition for the code.gov API.",
+    "version": "1.0.0",
+    "title": "Code.gov API",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "localhost:3001",
+  "basePath": "/api/0.1",
+  "tags": [
+    {
+      "name": "repo",
+      "description": "Get information on repositories"
+    },
+    {
+      "name": "terms",
+      "description": "Find items based on indexed terms"
+    },
+    {
+      "name": "agencies",
+      "description": "Find items based on agencies"
+    },
+    {
+      "name": "languages",
+      "description": "The language of which a software project is composed"
+    },
+    {
+      "name": "repo-json",
+      "description": "Schema for a repo"
+    },
+    {
+      "name": "status-json",
+      "description": "List of compliances by agency"
+    },
+    {
+      "name": "status",
+      "description": "List of statuses"
+    },
+    {
+      "name": "version",
+      "description": "The version of this API"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/repos": {
+      "post": {
+        "tags": [
+          "repo"
+        ],
+        "summary": "Post a search for repos",
+        "description": "",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Query to find repos",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Repo"
+            }
+          }
+        ],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "repo"
+        ],
+        "summary": "Get a list of repos",
+        "description": "",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Repo"
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid"
+          }
+        }
+      }
+    },
+    "/repo/{repoId}": {
+      "get": {
+        "tags": [
+          "repo"
+        ],
+        "summary": "",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "repoId",
+            "in": "path",
+            "description": "ID of repo to return",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Repo"
+            }
+          },
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "Repo not found"
+          }
+        }
+      }
+    },
+    "/terms": {
+      "post": {
+        "tags": [
+          "terms"
+        ],
+        "summary": "Post a search for repos",
+        "description": "",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Query to find repos",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Term"
+            }
+          }
+        ],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "terms"
+        ],
+        "summary": "Get a list of repos",
+        "description": "",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Term"
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid"
+          }
+        }
+      }
+    },
+    "/agencies": {
+      "get": {
+        "tags": [
+          "agencies"
+        ],
+        "summary": "Get a list of agencies",
+        "description": "",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "size",
+            "in": "query",
+            "description": "Number of agencies to return",
+            "required": false,
+            "type": "number"
+          },
+          {
+            "name": "from",
+            "in": "query",
+            "description": "Specify an offset to return",
+            "required": false,
+            "type": "number"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Agency"
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid"
+          }
+        }
+      }
+    },
+    "/languages": {
+      "get": {
+        "tags": [
+          "languages"
+        ],
+        "summary": "Get a list of agencies",
+        "description": "",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "size",
+            "in": "query",
+            "description": "Number of agencies to return",
+            "required": false,
+            "type": "number"
+          },
+          {
+            "name": "from",
+            "in": "query",
+            "description": "Specify an offset to return",
+            "required": false,
+            "type": "number"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Language"
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid"
+          }
+        }
+      }
+    },
+    "/repo.json": {
+      "get": {
+        "tags": [
+          "repo-json"
+        ],
+        "summary": "Get the schema for a repo",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "array"
+            }
+          },
+          "400": {
+            "description": "Invalid"
+          }
+        }
+      }
+    },
+    "/status.json": {
+      "get": {
+        "tags": [
+          "status-json"
+        ],
+        "summary": "Get a list of agencies with their compliance status",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "array"
+            }
+          },
+          "400": {
+            "description": "Invalid"
+          }
+        }
+      }
+    },
+    "/status": {
+      "get": {
+        "tags": [
+          "status"
+        ],
+        "summary": "Get an HTML page detailing the status from status.json",
+        "description": "",
+        "produces": [
+          "text/html"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "400": {
+            "description": "Invalid"
+          }
+        }
+      }
+    },
+    "/status/{agencyName}/issues": {
+      "get": {
+        "tags": [
+          "status"
+        ],
+        "summary": "Get a list of issues for a particular agency",
+        "description": "",
+        "produces": [
+          "text/html"
+        ],
+        "parameters": [
+          {
+            "name": "agencyName",
+            "in": "path",
+            "type": "string",
+            "description": "Agency name"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "400": {
+            "description": "Invalid"
+          }
+        }
+      }
+    },
+    "/status/{agencyName}/fetched": {
+      "get": {
+        "tags": [
+          "status"
+        ],
+        "summary": "Get a list of repos by agency",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "agencyName",
+            "in": "path",
+            "type": "string",
+            "description": "Agency name"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Repo"
+            }
+          },
+          "400": {
+            "description": "Invalid"
+          }
+        }
+      }
+    },
+    "/status/{agencyName}/discovered": {
+      "get": {
+        "tags": [
+          "status"
+        ],
+        "summary": "Get a list of repos by agency",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "agencyName",
+            "in": "path",
+            "type": "string",
+            "description": "Agency name"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Repo"
+            }
+          },
+          "400": {
+            "description": "Invalid"
+          }
+        }
+      }
+    },
+    "/version": {
+      "get": {
+        "tags": [
+          "version"
+        ],
+        "summary": "Get the version of this API",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Version"
+            }
+          },
+          "400": {
+            "description": "Invalid"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Repo": {
+      "type": "object",
+      "properties": {
+        "repoID": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "array"
+        },
+        "license": {
+          "type": "string"
+        },
+        "governmentWideReuseProject": {
+          "type": "boolean"
+        },
+        "openSourceProject": {
+          "type": "boolean"
+        },
+        "contact": {
+          "type": "object"
+        },
+        "updated": {
+          "type": "object"
+        },
+        "organization": {
+          "type": "string"
+        },
+        "identifier": {
+          "type": "string"
+        },
+        "repository": {
+          "type": "string"
+        },
+        "agency": {
+          "type": "string"
+        }
+      }
+    },
+    "Term": {
+      "type": "object",
+      "properties": {
+        "term_key": {
+          "type": "string"
+        },
+        "term": {
+          "type": "string"
+        },
+        "term_type": {
+          "type": "string"
+        },
+        "count": {
+          "type": "number"
+        },
+        "count_normalized": {
+          "type": "number"
+        },
+        "score": {
+          "type": "number"
+        }
+      }
+    },
+    "Agency": {
+      "type": "object",
+      "properties": {
+        "acronym": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "website": {
+          "type": "string"
+        },
+        "codeUrl": {
+          "type": "string"
+        },
+        "numRepos": {
+          "type": "number"
+        }
+      }
+    },
+    "Language": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "numRepos": {
+          "type": "number"
+        }
+      }
+    },
+    "Version": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "strng"
+        },
+        "git-hash": {
+          "type": "string"
+        },
+        "git-repository": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
