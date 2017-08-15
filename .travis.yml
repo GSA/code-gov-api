@@ -4,6 +4,20 @@ node_js:
 cache:
   directories:
     - "node_modules"
+    - '$HOME/.sonar/cache'
 script:
   - npm install
   - npm test
+  - sonar-scanner
+dist: trusty
+sudo: required
+
+addons:
+  sonarcloud:
+    organization: "codegovapi"
+    token:
+      secure: "gtWO5G4sBsHzODOkfGJn2Arpt3zn0DnxClgRygQT3IAs2aVKx0JyQ/YSuLwAgmuE55h799PDrAJ3iwPR6KLxVX9p+sUGghOrwJ6tkJBuAyQMJD8Ct6ddOLpeniT7jDvH/i9k+JpHy7933ZXaMh1WMrmEr6ks97IQAH0XIS1jN9PGMXekyWz0omEBUcaOGszN5/EjKciPWbvbQMQA2OEp3lLUIyTOmawHVX8ip18iLQpBBjIqPDcIj93mMpwqebcM9Zc1xwPxCeBbc/Ze6MwxEI9RV2DsGir2mDDuc8qv/l8n/MxCRSjtnaf1KSeec5cBw8DwKFxx7nCSpk4gqShmhu6V+l7MvNCR5gYgPp11UkXH3b+owmhyT4EX/sQOwZ+woZtRhe+wnmFlyOXuAJj7mzBHT5XFi9Vhni1/vas/c3GdqwjV7P017cJ7gQ52+vDopFqOGlkMoB5djMzmzZp3yhpg3wxUZhwo6zV9bPJz39EszhEAUs7MT3jxbKeudceGX4SjFVHokCZ4C3UydBKzDYPe8laZh9L09kjxIR8CF3MprWULtiRPh5Rds1Eqhd7l84yiClHrjmNnOOUI01hFJiPZYJCexD6vKZWX7L/McKR11ZQqgdHWtJpmvlP/DkDg9cw1vyLOyNRM97HKp2nMjgNiabrNtzH0w5BzfwK7THk="
+jdk:
+  - oraclejdk8
+  
+    
