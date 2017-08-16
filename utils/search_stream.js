@@ -26,7 +26,7 @@ class SearchStream extends Readable {
         "from": this.from
       }
     });
-    this.logger.info(`Streaming search for:`, searchQuery);
+    this.logger.debug(`Streaming search for:`, searchQuery);
     this.current = this.from;
     this.client.search(searchQuery, (err, res) => {
       if (err) {
