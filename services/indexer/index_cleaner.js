@@ -66,7 +66,7 @@ class IndexCleaner extends AbstractIndexTool {
         return callback(err, false);
       } else {
         if (status) {
-          this.logger.info('Status', status);
+          this.logger.debug('Status', status);
         }
         let indices = [];
 
@@ -95,7 +95,7 @@ class IndexCleaner extends AbstractIndexTool {
   filterAliasedIndices(aliasName, indices, callback) {
     this.getIndexesForAlias(aliasName, (err, aliasIndices) => {
       if (err) {
-        return callback(err, false); 
+        return callback(err, false);
       }
 
       return callback(false, _.difference(indices, aliasIndices));
@@ -116,7 +116,7 @@ class IndexCleaner extends AbstractIndexTool {
       if (err) {
         this.logger.error('Error', err);
       } else if (status) {
-        this.logger.info('Status', status);
+        this.logger.debug('Status', status);
       }
       return callback(err);
     });
@@ -132,10 +132,10 @@ class IndexCleaner extends AbstractIndexTool {
 
     async.waterfall([
       (next) => {
-        this.getIndices(aliasName, daysToKeep, next); 
+        this.getIndices(aliasName, daysToKeep, next);
       }, //Gets all indices older than 7 days
       (oldIndices, next) => {
-        this.filterAliasedIndices(aliasName, oldIndices, next); 
+        this.filterAliasedIndices(aliasName, oldIndices, next);
       },
       (filteredIndices, next) => {
         if (filteredIndices.length > 0) {
@@ -146,7 +146,7 @@ class IndexCleaner extends AbstractIndexTool {
       }
     ], (err) => {
       if(err) {
-        this.logger.error(err); 
+        this.logger.error(err);
       }
       this.logger.info(`Finished cleaning indices for: (${aliasName}).`);
       return callback(err);
@@ -175,7 +175,7 @@ class IndexCleaner extends AbstractIndexTool {
 
     cleaner.cleanIndicesForAlias(repoAlias, daysToKeep, (err) => {
       if(err) {
-        cleaner.logger.error(err); 
+        cleaner.logger.error(err);
       }
       cleaner.logger.info(`Finished cleaning indices.`);
       return callback(err);
