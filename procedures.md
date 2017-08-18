@@ -45,11 +45,12 @@ The development team checks for security events weekly. Any unusual or suspiciou
 Checklist:
 1. Create an issue in the project's [issue tracker](https://github.com/presidential-innovation-fellows/code-gov-api/issues) to track this Security Event Review.
 2. Review SonarCloud for all repositories and open a ticket for all alerts flagged with grade lower than A.
-3. Review [production logs](https://logs.fr.cloud.gov) for unapproved and unusual activities. 
-4. Review actionable security events on production logs for successful and unsuccessful account logon events, account management events, object access, policy change, privilege functions, process tracking, system events, all administrator activity, authentication checks, authorization checks, data deletions, data access, data changes, and permission changes.
-5. Deactivate any cloud.gov and github access for people who have left the team.
-6. Note any findings in the Security Event Review issue.
-7. Close the Security Event Review issue.
+3. Review Gemnasium for all alerts flagged with 'red' flags.
+4. Review [production logs](https://logs.fr.cloud.gov) for unapproved and unusual activities. 
+5. Review actionable security events on production logs for successful and unsuccessful account logon events, account management events, object access, policy change, privilege functions, process tracking, system events, all administrator activity, authentication checks, authorization checks, data deletions, data access, data changes, and permission changes.
+6. Deactivate any cloud.gov and github access for people who have left the team.
+7. Note any findings in the Security Event Review issue.
+8. Close the Security Event Review issue.
 
 ### Monitoring of New Relic Alerts
 
