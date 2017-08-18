@@ -53,4 +53,4 @@ Checklist:
 
 ### Monitoring of New Relic Alerts
 
-New Relic alerts are emailed to the full team immediately.  The first team member to see the alert checks the site's status and posts in the project slack channel (#code-gov-partners) the results.  The system owner then coordinates any necessary followup.  
+[New Relic alerts](https://rpm.newrelic.com/accounts/1651802/applications) are emailed to the full development team immediately.  The first team member to see the alert checks the site's status and posts in the project slack channel (#code-gov-partners) the results.  The system owner then coordinates any necessary followup.  
