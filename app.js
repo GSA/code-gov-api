@@ -30,6 +30,7 @@ const favicon             = require('serve-favicon');
 /* eslint-enable */
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
+require('newrelic');
 /* ------------------------------------------------------------------ *
                             API CONFIG
  * ------------------------------------------------------------------ */
