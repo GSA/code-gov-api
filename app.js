@@ -3,7 +3,7 @@
     * tests
     * lint/githook rules
 */
-
+require('newrelic');
 const _                   = require("lodash");
 const fs                  = require("fs");
 const async               = require("async");
@@ -30,7 +30,7 @@ const favicon             = require('serve-favicon');
 /* eslint-enable */
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
-require('newrelic');
+
 /* ------------------------------------------------------------------ *
                             API CONFIG
  * ------------------------------------------------------------------ */
