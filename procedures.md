@@ -34,17 +34,17 @@ These accounts are created for developers that need access to contribute code an
 
 1. [Create an account](https://github.com/) with GitHub and [enable multi factor authentication](https://github.com/blog/1614-two-factor-authentication).
 2. Make sure you have [gitseekrets](https://github.com/18F/laptop/tree/master/seekret-rules) installed on your Mac or in your virtualbox, if that is where you do your development. (If you are a Windows only user, you can be exempt from this requirement while the windows version is in development.) 
-3. Then, you will want to contact the system owner, currently Gray Brooks. In that message, include your name, the name of your supervisor, confirm you have two-factor authentication on and have installed gitseekrets. 
+3. Then, you will want to contact the system owner, currently Olivier Kamanda. In that message, include your name, the name of your supervisor, confirm you have two-factor authentication on and have installed gitseekrets. 
 4. The system owner will confirm the GSA identity of the applicant, and signal approval in the ticket. 
 5. The system owner will then add the GitHub handle for the new member to the analytics.usa.gov 18F GitHub team and close the ticket.
 
 ### Weekly Monitoring Checklist
 
-The development team checks for security events weekly. Any unusual or suspicious activities are immediately brought to the team's attention in the project slack channel (#dap) and the system owner coordinates appropriate investigation and followup. The team will follow the [18F incident response handbook](https://handbook.18f.gov/security-incidents/).
+The development team checks for security events weekly. Any unusual or suspicious activities are immediately brought to the team's attention in the project slack channel (#code-gov-partners) and the system owner coordinates appropriate investigation and followup. The team will follow the [18F incident response handbook](https://handbook.18f.gov/security-incidents/).
 
 Checklist:
 1. Create an issue in the project's [issue tracker](https://github.com/presidential-innovation-fellows/code-gov-api/issues) to track this Security Event Review.
-2. Review SonarCloud for all repositories and open a ticket for all "red" alerts.
+2. Review SonarCloud for all repositories and open a ticket for all alerts flagged with grade lower than A.
 3. Review [production logs](https://logs.fr.cloud.gov) for unapproved and unusual activities. 
 4. Review actionable security events on production logs for successful and unsuccessful account logon events, account management events, object access, policy change, privilege functions, process tracking, system events, all administrator activity, authentication checks, authorization checks, data deletions, data access, data changes, and permission changes.
 5. Deactivate any cloud.gov and github access for people who have left the team.
