@@ -1,5 +1,5 @@
 {
-  "timestamp": "Mon Aug 14 2017 12:28:42 GMT-0400 (EDT)",
+  "timestamp": "Tue Aug 22 2017 09:13:06 GMT-0400 (EDT)",
   "statuses": {
     "USDA": {
       "status": "FULLY COMPLIANT: 0 validation errors",
@@ -73,8 +73,88 @@
       }
     },
     "ED": {
-      "status": "NOT FULLY COMPLIANT: 1 ERRORS, 1 validation errors",
+      "status": "FULLY COMPLIANT: 0 validation errors",
       "issues": [
+        {
+          "repoID": "ed_ed_developer_hub",
+          "agency": "Department of Education",
+          "project_name": "ED developer hub",
+          "issues": {
+            "enhancements": [],
+            "warnings": [],
+            "errors": [
+              {
+                "keyword": "required",
+                "dataPath": "",
+                "schemaPath": "#/required",
+                "params": {
+                  "missingProperty": "license"
+                },
+                "message": "should have required property 'license'"
+              }
+            ]
+          }
+        },
+        {
+          "repoID": "ed_ed_developer_hub",
+          "agency": "Department of Education",
+          "project_name": "ED developer hub",
+          "issues": {
+            "enhancements": [],
+            "warnings": [],
+            "errors": [
+              {
+                "keyword": "required",
+                "dataPath": "",
+                "schemaPath": "#/required",
+                "params": {
+                  "missingProperty": "license"
+                },
+                "message": "should have required property 'license'"
+              }
+            ]
+          }
+        },
+        {
+          "repoID": "ed_ed_developer_hub",
+          "agency": "Department of Education",
+          "project_name": "ED developer hub",
+          "issues": {
+            "enhancements": [],
+            "warnings": [],
+            "errors": [
+              {
+                "keyword": "required",
+                "dataPath": "",
+                "schemaPath": "#/required",
+                "params": {
+                  "missingProperty": "license"
+                },
+                "message": "should have required property 'license'"
+              }
+            ]
+          }
+        },
+        {
+          "repoID": "ed_ed_developer_hub",
+          "agency": "Department of Education",
+          "project_name": "ED developer hub",
+          "issues": {
+            "enhancements": [],
+            "warnings": [],
+            "errors": [
+              {
+                "keyword": "required",
+                "dataPath": "",
+                "schemaPath": "#/required",
+                "params": {
+                  "missingProperty": "license"
+                },
+                "message": "should have required property 'license'"
+              }
+            ]
+          }
+        },
         {
           "repoID": "ed_ed_developer_hub",
           "agency": "Department of Education",
@@ -105,15 +185,15 @@
           "codeUrl": "https://www2.ed.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 1,
-            "schemaFormat": 0.5,
-            "overallCompliance": 0.75
+            "schemaFormat": 1,
+            "overallCompliance": 1
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 1,
-        "schemaFormat": 0.5,
-        "overallCompliance": 0.75
+        "schemaFormat": 1,
+        "overallCompliance": 1
       }
     },
     "DOE": {
@@ -259,6 +339,1854 @@
     "DOL": {
       "status": "FULLY COMPLIANT: 0 validation errors, 4 REQUESTED ENHANCEMENTS",
       "issues": [
+        {
+          "repoID": "dol_dol_department_developer",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DEVELOPER",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_vets4212",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "VETS4212",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_doldatasdk_ios",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DOLDATASDK IOS",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".downloadURL",
+                "schemaPath": "#/properties/downloadURL/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_js_dashboard",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "JS DASHBOARD",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_developer",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DEVELOPER",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_vets4212",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "VETS4212",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_doldatasdk_ios",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DOLDATASDK IOS",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".downloadURL",
+                "schemaPath": "#/properties/downloadURL/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_js_dashboard",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "JS DASHBOARD",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_developer",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DEVELOPER",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_vets4212",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "VETS4212",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_doldatasdk_ios",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DOLDATASDK IOS",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".downloadURL",
+                "schemaPath": "#/properties/downloadURL/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_js_dashboard",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "JS DASHBOARD",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_developer",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DEVELOPER",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_vets4212",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "VETS4212",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_doldatasdk_ios",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DOLDATASDK IOS",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".downloadURL",
+                "schemaPath": "#/properties/downloadURL/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_js_dashboard",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "JS DASHBOARD",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_developer",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DEVELOPER",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_vets4212",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "VETS4212",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_doldatasdk_ios",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DOLDATASDK IOS",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".downloadURL",
+                "schemaPath": "#/properties/downloadURL/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_js_dashboard",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "JS DASHBOARD",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_developer",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DEVELOPER",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_vets4212",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "VETS4212",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_doldatasdk_ios",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DOLDATASDK IOS",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".downloadURL",
+                "schemaPath": "#/properties/downloadURL/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_js_dashboard",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "JS DASHBOARD",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_developer",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DEVELOPER",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_vets4212",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "VETS4212",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_doldatasdk_ios",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DOLDATASDK IOS",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".downloadURL",
+                "schemaPath": "#/properties/downloadURL/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_js_dashboard",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "JS DASHBOARD",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_developer",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DEVELOPER",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_vets4212",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "VETS4212",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_doldatasdk_ios",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DOLDATASDK IOS",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".downloadURL",
+                "schemaPath": "#/properties/downloadURL/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_js_dashboard",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "JS DASHBOARD",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_developer",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DEVELOPER",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_vets4212",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "VETS4212",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_doldatasdk_ios",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DOLDATASDK IOS",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".downloadURL",
+                "schemaPath": "#/properties/downloadURL/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_js_dashboard",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "JS DASHBOARD",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_developer",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DEVELOPER",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_vets4212",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "VETS4212",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_doldatasdk_ios",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DOLDATASDK IOS",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".downloadURL",
+                "schemaPath": "#/properties/downloadURL/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_js_dashboard",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "JS DASHBOARD",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_developer",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DEVELOPER",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_vets4212",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "VETS4212",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_doldatasdk_ios",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DOLDATASDK IOS",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".downloadURL",
+                "schemaPath": "#/properties/downloadURL/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_js_dashboard",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "JS DASHBOARD",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_developer",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DEVELOPER",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_vets4212",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "VETS4212",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_doldatasdk_ios",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DOLDATASDK IOS",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".downloadURL",
+                "schemaPath": "#/properties/downloadURL/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_js_dashboard",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "JS DASHBOARD",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_developer",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DEVELOPER",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_vets4212",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "VETS4212",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_doldatasdk_ios",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DOLDATASDK IOS",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".downloadURL",
+                "schemaPath": "#/properties/downloadURL/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_js_dashboard",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "JS DASHBOARD",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_developer",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DEVELOPER",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_vets4212",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "VETS4212",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_doldatasdk_ios",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DOLDATASDK IOS",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".downloadURL",
+                "schemaPath": "#/properties/downloadURL/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_js_dashboard",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "JS DASHBOARD",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_developer",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DEVELOPER",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_vets4212",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "VETS4212",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_doldatasdk_ios",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DOLDATASDK IOS",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".downloadURL",
+                "schemaPath": "#/properties/downloadURL/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_js_dashboard",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "JS DASHBOARD",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_developer",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DEVELOPER",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_vets4212",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "VETS4212",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_doldatasdk_ios",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DOLDATASDK IOS",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".downloadURL",
+                "schemaPath": "#/properties/downloadURL/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_js_dashboard",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "JS DASHBOARD",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_developer",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DEVELOPER",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_vets4212",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "VETS4212",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_doldatasdk_ios",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DOLDATASDK IOS",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".downloadURL",
+                "schemaPath": "#/properties/downloadURL/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_js_dashboard",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "JS DASHBOARD",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_developer",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DEVELOPER",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_vets4212",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "VETS4212",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_doldatasdk_ios",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DOLDATASDK IOS",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".downloadURL",
+                "schemaPath": "#/properties/downloadURL/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_js_dashboard",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "JS DASHBOARD",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_developer",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DEVELOPER",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_vets4212",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "VETS4212",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_doldatasdk_ios",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DOLDATASDK IOS",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".downloadURL",
+                "schemaPath": "#/properties/downloadURL/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_js_dashboard",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "JS DASHBOARD",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_developer",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DEVELOPER",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_vets4212",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "VETS4212",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_doldatasdk_ios",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DOLDATASDK IOS",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".downloadURL",
+                "schemaPath": "#/properties/downloadURL/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_js_dashboard",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "JS DASHBOARD",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_developer",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DEVELOPER",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_vets4212",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "VETS4212",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_doldatasdk_ios",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DOLDATASDK IOS",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".downloadURL",
+                "schemaPath": "#/properties/downloadURL/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_js_dashboard",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "JS DASHBOARD",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_developer",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DEVELOPER",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_vets4212",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "VETS4212",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_doldatasdk_ios",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "DOLDATASDK IOS",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".downloadURL",
+                "schemaPath": "#/properties/downloadURL/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dol_dol_department_js_dashboard",
+          "agency": "Department of Labor",
+          "organization": "DOL Department",
+          "project_name": "JS DASHBOARD",
+          "issues": {
+            "enhancements": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "warnings": [],
+            "errors": []
+          }
+        },
         {
           "repoID": "dol_dol_department_developer",
           "agency": "Department of Labor",
@@ -643,7 +2571,7 @@
       }
     },
     "SBA": {
-      "status": "FULLY COMPLIANT: 0 validation errors",
+      "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token < in JSON at position 0)",
       "issues": [],
       "metadata": {
         "agency": {
@@ -653,15 +2581,15 @@
           "codeUrl": "https://sba.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 1,
-            "schemaFormat": 1,
-            "overallCompliance": 1
+            "schemaFormat": 0,
+            "overallCompliance": 0.5
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 1,
-        "schemaFormat": 1,
-        "overallCompliance": 1
+        "schemaFormat": 0,
+        "overallCompliance": 0.5
       }
     },
     "NARA": {
@@ -708,6 +2636,30 @@
         "agencyWidePolicy": null,
         "schemaFormat": 1,
         "overallCompliance": 0.5
+      }
+    },
+    "EOP": {
+      "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token < in JSON at position 0)",
+      "issues": [],
+      "version": "",
+      "metadata": {
+        "agency": {
+          "id": 26,
+          "name": "White House - Executive Office of the President",
+          "acronym": "EOP",
+          "website": "https://whitehouse.gov/",
+          "codeUrl": "https://whitehouse.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": null,
+            "schemaFormat": 0,
+            "overallCompliance": 0
+          }
+        }
+      },
+      "requirements": {
+        "agencyWidePolicy": null,
+        "schemaFormat": 0,
+        "overallCompliance": 0
       }
     },
     "SSA": {
