@@ -653,6 +653,7 @@
       "name": "ED developer hub",
       "openSourceProject": 1,
       "governmentWideReuseProject": 1,
+      "license": "N/A",
       "repository": "https://github.com/usedgov",
       "description": "Several open source repositories of reusable ED Open Source Code",
       "tags": [
