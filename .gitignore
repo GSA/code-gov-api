@@ -12,3 +12,7 @@ StatusDashboardScript
 .nyc_output
 coverage
 .idea
+
+manifest_api_indexer.yml
+manifest_staging_api_indexer.yml
+
