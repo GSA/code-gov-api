@@ -1,0 +1,71 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/code-gov-api
+    docker:
+      - image: circleci/node:boron
+    steps:
+      - checkout
+      - run:
+          name: update-npm
+          command: 'sudo npm install -g npm@latest'
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: install-node-modules
+          command: npm install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+              - ./node_modules
+      - run:
+          name: run-linter
+          command: npm run lint
+      - run:
+          name: run-test
+          command: npm test
+      - run:
+          name: upload-test-report
+          command: |
+              npm install codeclimate-test-reporter
+              codeclimate-test-reporter < coverage/lcov.info
+      - store_test_results:
+          path: build/test-results/test-results.xml
+      - store_artifacts:
+          path: test-results.xml
+          prefix: tests
+      - store_artifacts:
+          path: build/coverage
+          prefix: coverage
+      
+      # Install Cloud Foundry cli (cf) before deploy step. cf is used to push project to Cloud.gov
+      - run:
+          name: install-cf-cli
+          command: |
+            curl -v -L -o cf-cli_amd64.deb 'https://cli.run.pivotal.io/stable?release=debian64&source=github'
+            sudo dpkg -i cf-cli_amd64.deb
+            cf -v
+
+      # Production deployment. TODO: Check to see how to do this with tags instead of master branch
+      - deploy:
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              cf login -a ${CF_URL} -u ${CF_DEPLOYER_USER} -p ${CF_PASS} -o ORG -s ${CF_PROD_SPACE}
+              cf push
+            fi
+      
+      # Staging deployment.
+      - deploy:
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "staging" ]; then
+              cf login -a ${CF_URL} -u ${CF_DEPLOYER_USER} -p ${CF_PASS} -o ORG -s ${CF_STAGING_SPACE}
+              cf push
+            fi
+      
+      # Development deployment.
+      - deploy:
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "development" ]; then
+              cf login -a ${CF_URL} -u ${CF_DEPLOYER_USER} -p ${CF_PASS} -o ORG -s ${CF_DEV_SPACE}
+              cf push
+            fi
