@@ -1,0 +1,3 @@
+--reporter mocha-junit-reporter
+--recursive
+--reporter-options mochaFile=./build/test-results/results.xml
