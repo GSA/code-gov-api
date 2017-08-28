@@ -6,14 +6,11 @@ jobs:
       - image: circleci/node:boron
     steps:
       - checkout
-      - run:
-          name: update-npm
-          command: 'sudo npm install -g npm@latest'
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
           name: install-node-modules
-          command: npm install
+          command: npm install --all
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
@@ -28,9 +25,9 @@ jobs:
           name: upload-test-report
           command: |
               npm install codeclimate-test-reporter
-              codeclimate-test-reporter < coverage/lcov.info
+              ./node_modules/.bin/codeclimate-test-reporter < build/coverage/lcov.info
       - store_test_results:
-          path: build/test-results/test-results.xml
+          path: build/test-results/results.xml
       - store_artifacts:
           path: test-results.xml
           prefix: tests
