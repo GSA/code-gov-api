@@ -43,7 +43,7 @@ jobs:
             sudo dpkg -i cf-cli_amd64.deb
             cf -v
 
-      # Production deployment. TODO: Check to see how to do this with tags instead of master branch
+      # Production deployment.
       - deploy:
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
