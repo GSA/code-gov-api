@@ -9,6 +9,9 @@
     "es6": true
   },
   "extends": "eslint:recommended",
+  "plugins": [
+    "mocha"
+  ],
   "rules": {
     "default-case": 1,
     "no-empty-function": 0,
@@ -40,6 +43,7 @@
       1,
       "always"
     ],
-    "no-var": 1
+    "no-var": 1,
+    "mocha/no-global-tests": "error"
   }
 }
