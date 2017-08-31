@@ -31,7 +31,7 @@ const favicon             = require('serve-favicon');
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
 
-const helmet = require('helmet')
+const helmet = require('helmet');
 
 /* ------------------------------------------------------------------ *
                             API CONFIG
