@@ -48,7 +48,7 @@ const limiter = new RateLimit({
   headers: true
 });
 
-app.user(limiter);
+app.use(limiter);
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(bodyParser.urlencoded({
   extended: true
