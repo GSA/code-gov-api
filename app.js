@@ -32,6 +32,7 @@ const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
 
 const helmet = require('helmet');
+const RateLimit = require('express-rate-limit')
 
 /* ------------------------------------------------------------------ *
                             API CONFIG
@@ -40,6 +41,14 @@ const helmet = require('helmet');
 // define and configure express
 const app = express();
 const port = process.env.PORT || 3001;
+const limiter = new RateLimit({
+  windowMs: parseInt(process.env.WINDOW_MS, 10),
+  max: parseInt(process.env.MAX_IP_REQUESTS, 10),
+  delayMs:parseInt(process.env.DELAY_MS, 10),
+  headers: true
+});
+
+app.user(limiter);
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(bodyParser.urlencoded({
   extended: true
