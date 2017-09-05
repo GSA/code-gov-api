@@ -1,5 +1,10 @@
+# Code.gov Tools - Unlocking the potential of the Federal Government’s software
 
-# Code.gov Tools - Unlocking the potential of the Federal Government’s software.
+[![CircleCI](https://circleci.com/gh/presidential-innovation-fellows/code-gov-api.svg?style=svg)](https://circleci.com/gh/presidential-innovation-fellows/code-gov-api)
+[![Code Climate](https://codeclimate.com/github/codeclimate/codeclimate/badges/gpa.svg)](https://codeclimate.com/github/codeclimate/codeclimate)
+[![Test Coverage](https://codeclimate.com/github/codeclimate/codeclimate/badges/coverage.svg)](https://codeclimate.com/github/codeclimate/codeclimate/coverage)
+[![Issue Count](https://codeclimate.com/github/codeclimate/codeclimate/badges/issue_count.svg)](https://codeclimate.com/github/codeclimate/codeclimate)
+[![Dependency Status](https://gemnasium.com/badges/github.com/presidential-innovation-fellows/code-gov-api.svg)](https://gemnasium.com/github.com/presidential-innovation-fellows/code-gov-api)
 
 ## Introduction
 
@@ -8,6 +13,7 @@
 This repository is home to the code powering code.gov. To learn more about the project, check out the main [Code.gov project README](https://github.com/presidential-innovation-fellows/code-gov-pm/blob/master/README.md)
 
 ## Installation
+
 Please install the following dependencies before running this project...
 
 * [Node.js](https://nodejs.org/en/download/)
@@ -18,6 +24,7 @@ Once node is installed, install the local npm dependencies...
 `cd code-gov-api && npm install`
 
 ## Running
+
 This project uses elasticsearch to store code repositories. As such, it is necessary to run an indexing process which will populate an elasticsearch index. Make sure that elasticsearch is running, then
 
 `npm run index`
@@ -39,7 +46,7 @@ Here’s how you can help contribute to code.gov:
     * To provide feedback on [the code.gov website], you should follow this [repository](https://github.com/presidential-innovation-fellows/code-gov-web) and [this issues tracker](https://github.com/presidential-innovation-fellows/code-gov-web/issues).
     * If you aren't sure where your question or idea fits, this is a good place to share it.
 
-## Questions?
+## Questions
 
 If you have questions, please feel [free to open an issue here](https://github.com/presidential-innovation-fellows/code-gov-web/issues): [https://github.com/presidential-innovation-fellows/code-gov-web/issues](https://github.com/presidential-innovation-fellows/code-gov-web/issues) or send us an email at code@listserv.gsa.gov.
 
@@ -48,7 +55,5 @@ If you have questions, please feel [free to open an issue here](https://github.c
 As stated in [CONTRIBUTING](CONTRIBUTING.md):
 
 > [..] this project is in the worldwide public domain (in the public domain within the United States, and copyright and related rights in the work worldwide are waived through the [CC0 1.0 Universal public domain dedication](https://creativecommons.org/publicdomain/zero/1.0/)).
-
-> All contributions to this project will be released under the CC0
-dedication. By submitting a pull request, you are agreeing to comply
-with this waiver of copyright interest.
+<!-- -->
+> All contributions to this project will be released under the CC0 dedication. By submitting a pull request, you are agreeing to comply with this waiver of copyright interest.
