@@ -32,7 +32,7 @@ const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
 
 const helmet = require('helmet');
-const RateLimit = require('express-rate-limit')
+const RateLimit = require('express-rate-limit');
 
 /* ------------------------------------------------------------------ *
                             API CONFIG
