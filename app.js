@@ -42,9 +42,9 @@ const RateLimit = require('express-rate-limit')
 const app = express();
 const port = process.env.PORT || 3001;
 const limiter = new RateLimit({
-  windowMs: parseInt(process.env.WINDOW_MS, 10),
-  max: parseInt(process.env.MAX_IP_REQUESTS, 10),
-  delayMs:parseInt(process.env.DELAY_MS, 10),
+  windowMs: parseInt(process.env.WINDOW_MS || 60000, 10),
+  max: parseInt(process.env.MAX_IP_REQUESTS || 500, 10),
+  delayMs:parseInt(process.env.DELAY_MS || 0, 10),
   headers: true
 });
 
