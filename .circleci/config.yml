@@ -47,7 +47,7 @@ jobs:
       - deploy:
           command: |
             if [ "${CIRCLE_TAG}" =~ "${DEPLOY_TAG_PATTERN}" ]; then
-              cf login -a ${CF_URL} -u ${CF_DEPLOYER_USER} -p ${CF_PASS} -o ${ORG} -s ${CF_PROD_SPACE}
+              cf login -a ${CF_URL} -u ${CF_DEPLOYER_USER} -p ${CF_PASS} -o ${CF_ORG} -s ${CF_PROD_SPACE}
               cf push
             fi
 
@@ -55,6 +55,6 @@ jobs:
       - deploy:
           command: |
             if [ "${CIRCLE_BRANCH}" == "${STAGING_DEPLOY_BRANCH}" ]; then
-              cf login -a ${CF_URL} -u ${CF_DEPLOYER_USER} -p ${CF_PASS} -o ${ORG} -s ${CF_STAGING_SPACE}
+              cf login -a ${CF_URL} -u ${CF_DEPLOYER_USER} -p ${CF_PASS} -o ${CF_ORG} -s ${CF_STAGING_SPACE}
               cf push
             fi
