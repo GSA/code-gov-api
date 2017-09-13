@@ -26,7 +26,7 @@ class RepoTermLoaderStream extends Transform {
   }
 
   _loadTermsFromRepo(repo, callback) {
-    this.logger.info(`Loading terms from repo (${repo.repoID})...`);
+    this.logger.debug(`Loading terms from repo (${repo.repoID})...`);
 
     const _loadTerm = (termType, termVal) => {
       termVal = termVal.toLowerCase();
@@ -69,7 +69,7 @@ class RepoTermLoaderStream extends Transform {
     this.logger.info(`Pushing term objects to stream...`);
     _.forOwn(this.terms, (termTypeObj, termType) => {
       _.forOwn(termTypeObj, (termCount, termName) => {
-        this.logger.info(`Pushing term [${termType}](${termName})...`);
+        this.logger.debug(`Pushing term [${termType}](${termName})...`);
         let termCountNormalized = termCount / this.termMaxes[termType];
         let term = {
           term_key: termName,

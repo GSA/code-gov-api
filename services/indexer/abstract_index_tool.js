@@ -48,10 +48,10 @@ class AbstractIndexTool {
     }, (err, response, status) => {
       let indices = new Array();
       if(err) {
-        this.logger.error(err); 
+        this.logger.error(err);
       } else {
         if (status) {
-          this.logger.info('Status', status);
+          this.logger.debug('Status', status);
         }
         _.forEach(response, function(item, key) {
           if (_.has(item, ['aliases', aliasName])) {
@@ -76,10 +76,10 @@ class AbstractIndexTool {
       name: aliasName
     }, (err, response, status) => {
       if (err) {
-        this.logger.error(err); 
+        this.logger.error(err);
       }
       if (status) {
-        this.logger.info('Status', status);
+        this.logger.debug('Status', status);
       }
       return callback(err, response);
     });
