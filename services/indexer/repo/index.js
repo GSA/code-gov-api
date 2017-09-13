@@ -47,7 +47,7 @@ class AgencyJsonStream extends Transform {
       config.FETCHED_DIR,
       `${agencyName}.json`
     );
-    this.logger.info(`Writing fetched output to ${fetchedFilepath}...`);
+    this.logger.debug(`Writing fetched output to ${fetchedFilepath}...`);
     Jsonfile.writeFile(fetchedFilepath, jsonData, (err) => {
       if (err) {
         this.logger.error(err);
@@ -70,7 +70,7 @@ class AgencyJsonStream extends Transform {
     };
 
     if (err) {
-      return _handleError(err); 
+      return _handleError(err);
     }
     let agencyData = {};
     try {
@@ -80,7 +80,7 @@ class AgencyJsonStream extends Transform {
       agencyData = JSON.parse(formattedData);
     } catch(err) {
       if (err) {
-        return _handleError(err); 
+        return _handleError(err);
       }
     }
 
@@ -91,7 +91,7 @@ class AgencyJsonStream extends Transform {
     let agencyUrl = agency.codeUrl;
     this.logger.info(`Fetching remote agency repos from ${agencyUrl}...`);
 
-    request({ followAllRedirects: true, url: agencyUrl, 
+    request({ followAllRedirects: true, url: agencyUrl,
       headers: {'User-Agent': 'curl'} },
     (err, response, body) => {
       this._handleResponse(err, agency, body, callback);
@@ -102,7 +102,7 @@ class AgencyJsonStream extends Transform {
   _fetchAgencyReposLocal(agency, callback) {
     let agencyUrl = agency.codeUrl;
     const filePath = path.join(__dirname, "../../..", agencyUrl);
-    this.logger.info(`Fetching local agency repos from ${filePath}...`);
+    this.logger.debug(`Fetching local agency repos from ${filePath}...`);
 
     fs.readFile(filePath, 'utf8', (err, data) => {
       this._handleResponse(err, agency, data, callback);
@@ -117,7 +117,7 @@ class AgencyJsonStream extends Transform {
       config.FALLBACK_DIR,
       agencyUrl
     );
-    this.logger.warning(
+    this.logger.debug(
       `[FALLBACK] Fetching local agency repos from ${filePath}...`
     );
 
@@ -132,14 +132,14 @@ class AgencyJsonStream extends Transform {
       };
 
       if (err) {
-        return _handleError(err); 
+        return _handleError(err);
       }
       let agencyData = {};
       try {
         agencyData = JSON.parse(data);
       } catch(err) {
         if (err) {
-          return _handleError(err); 
+          return _handleError(err);
         }
       }
 
@@ -157,9 +157,9 @@ class AgencyJsonStream extends Transform {
         // throwing out the repos that have errors and keeping those which
         // only have warnings (or no errors and warnings at all)...
         Reporter.reportVersion(agencyName, agencyData.version);
-            
+
         const _processRepo = (repo, done) => {
-          this.logger.info(`Processing repo ${repo.name}...`);
+          this.logger.debug(`Processing repo ${repo.name}...`);
           // add agency to repo (we need it for formatting)
           repo.agency = agency;
           Formatter.formatRepo(repo, (err, formattedRepo) => {
@@ -175,7 +175,7 @@ class AgencyJsonStream extends Transform {
             Validator.validateRepo(repo, (err, validationResult) => {
               if (validationResult.issues) {
                 if (validationResult.issues.errors.length ||
-                  validationResult.issues.warnings.length || 
+                  validationResult.issues.warnings.length ||
                   validationResult.issues.enhancements.length) {
                   Reporter.reportIssues(agencyName, validationResult);
                   numValidationErrors += validationResult.issues.errors.length;
@@ -183,7 +183,7 @@ class AgencyJsonStream extends Transform {
                   numValidationEnhancements += validationResult.issues.enhancements.length;
                 }
                 //if (validationResult.issues.enhancements.length ) {
-                
+
                 //}
               }
 
@@ -218,7 +218,7 @@ class AgencyJsonStream extends Transform {
             reportDetails.push(`${numValidationWarnings} WARNINGS`);
           }
           reportDetails.push(`${errorCount} validation errors`);
-        
+
           if (numValidationEnhancements) {
             reportDetails.push(`${numValidationEnhancements} REQUESTED ENHANCEMENTS`);
           }
@@ -233,10 +233,10 @@ class AgencyJsonStream extends Transform {
 
           reportString += reportDetails.join(", ");
           Reporter.reportStatus(agencyName, reportString);
-        
+
           agency.requirements.overallCompliance = this._calculateOverallCompliance(agency.requirements);
           Reporter.reportRequirements(agencyName, agency.requirements);
-        
+
           return finished();
         };
 
@@ -259,7 +259,7 @@ class AgencyJsonStream extends Transform {
         agency.requirements.schemaFormat = 0;
         agency.requirements.overallCompliance = this._calculateOverallCompliance(agency.requirements);
         Reporter.reportRequirements(agencyName, agency.requirements);
-        
+
         const _processRepo = (repo, done) => {
           this.logger.info(`[FALLBACK] Processing repo ${repo.name}...`);
           // add agency to repo (we need it for formatting)
@@ -280,7 +280,7 @@ class AgencyJsonStream extends Transform {
 
         this._fetchAgencyReposFallback(agency, (err, agencyData) => {
           if (err) {
-            return finished(); 
+            return finished();
           }
 
           async.eachSeries(
@@ -298,14 +298,14 @@ class AgencyJsonStream extends Transform {
           `FAILURE: ERROR WHEN FETCHING (${err.message})`);
         return _processAgencyDataFailure(callback);
       } else if (agencyData === {}) {
-        this.logger.warning(`Missing data in (${agencyUrl}).`);
+        this.logger.debug(`Missing data in (${agencyUrl}).`);
         Reporter.reportStatus(agencyName, "FAILURE: MISSING DATA");
         return _processAgencyDataFailure(callback);
       } else if (agencyData.projects && agencyData.projects.length > 0) {
-        this.logger.info(`Processing data from (${agencyUrl}).`);
+        this.logger.debug(`Processing data from (${agencyUrl}).`);
         return _processAgencyDataSuccess(callback);
       } else {
-        this.logger.error(
+        this.logger.debug(
           `Missing projects for agency (${agencyName}).`
         );
         Reporter.reportStatus(agencyName, "FAILURE: MISSING PROJECTS FIELD");
@@ -353,7 +353,7 @@ class AgencyRepoIndexerStream extends Writable {
   }
 
   _indexRepo(repo, done) {
-    this.logger.info(
+    this.logger.debug(
       `Indexing repository (${repo.repoID}).`);
 
     this.repoIndexer.indexDocument({
@@ -366,7 +366,7 @@ class AgencyRepoIndexerStream extends Writable {
         this.logger.error(err);
       }
       if (status) {
-        this.logger.info('Status', status);
+        this.logger.debug('Status', status);
       }
       this.repoIndexer.indexCounter++;
 
@@ -410,7 +410,7 @@ class RepoIndexer extends AbstractIndexer {
     indexer.logger.info(`Started indexing (${indexer.esType}) indices.`);
     async.waterfall([
       (next) => {
-        indexer.indexExists(next); 
+        indexer.indexExists(next);
       },
       (exists, next) => {
         if(exists) {
@@ -420,20 +420,20 @@ class RepoIndexer extends AbstractIndexer {
         }
       },
       (response, next) => {
-        indexer.initIndex(next); 
+        indexer.initIndex(next);
       },
       (response, next) => {
-        indexer.initMapping(next); 
+        indexer.initMapping(next);
       },
       (response, next) => {
-        indexer.indexRepos(next); 
+        indexer.indexRepos(next);
       },
       (next) => {
-        Reporter.writeReportToFile(next); 
+        Reporter.writeReportToFile(next);
       }
     ], (err) => {
       if(err) {
-        indexer.logger.error(err); 
+        indexer.logger.error(err);
       }
       indexer.logger.info(`Finished indexing (${indexer.esType}) indices.`);
       return callback(err, {

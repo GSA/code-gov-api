@@ -3,7 +3,8 @@ const RepoTermLoaderStream = require("../../../../services/indexer/term/repo_ter
 describe("RepoTermLoaderStream", () => {
   let termIndexerMock = {
     logger: {
-      info: function() {}
+      info: function() {},
+      debug: function() {}
     }
   };
 
