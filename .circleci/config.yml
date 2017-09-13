@@ -1,0 +1,60 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/code-gov-api
+    docker:
+      - image: circleci/node:boron
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: install-node-modules
+          command: npm install --all
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+              - ./node_modules
+      - run:
+          name: run-linter
+          command: npm run lint
+      - run:
+          name: run-test
+          command: npm test
+      - run:
+          name: upload-test-report
+          command: |
+              npm install codeclimate-test-reporter
+              ./node_modules/.bin/codeclimate-test-reporter < build/coverage/lcov.info
+      - store_test_results:
+          path: build/test-results/results.xml
+      - store_artifacts:
+          path: test-results.xml
+          prefix: tests
+      - store_artifacts:
+          path: build/coverage
+          prefix: coverage
+      
+      # Install Cloud Foundry cli (cf) before deploy step. cf is used to push project to Cloud.gov
+      - run:
+          name: install-cf-cli
+          command: |
+            curl -v -L -o cf-cli_amd64.deb 'https://cli.run.pivotal.io/stable?release=debian64&source=github'
+            sudo dpkg -i cf-cli_amd64.deb
+            cf -v
+
+      # Production deployment.
+      - deploy:
+          command: |
+            if [ "${CIRCLE_TAG}" =~ "${DEPLOY_TAG_PATTERN}" ]; then
+              cf login -a ${CF_URL} -u ${CF_PRODUCTION_DEPLOYER} -p ${CF_PRODUCTION_DEPLOYER_PASS} -o ${CF_ORG} -s ${CF_PRODUCTION_SPACE}
+              cf push
+            fi
+
+      # Staging deployment.
+      - deploy:
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "${STAGING_DEPLOY_BRANCH}" ]; then
+              cf login -a ${CF_URL} -u ${CF_STAGING_DEPLOYER} -p ${CF_STAGING_DEPLOYER_PASS} -o ${CF_ORG} -s ${CF_STAGING_SPACE}
+              cf push
+            fi

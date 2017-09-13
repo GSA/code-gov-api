@@ -50,9 +50,9 @@ class AbstractIndexer {
       index: this.esIndex
     }, (err, response, status) => {
       if (err) {
-        this.logger.error(err); 
+        this.logger.error(err);
       }
-      this.logger.info(status);
+      this.logger.debug(status);
       return callback(err, response);
     });
   }
@@ -64,9 +64,9 @@ class AbstractIndexer {
       body: this.esSettings
     }, (err, response, status) => {
       if(err) {
-        this.logger.error(err); 
+        this.logger.error(err);
       }
-      this.logger.info(status);
+      this.logger.debug(status);
       return callback(err, response);
     });
   }
@@ -76,9 +76,9 @@ class AbstractIndexer {
       index: this.esIndex
     }, (err, response, status) => {
       if(err) {
-        this.logger.error(err); 
+        this.logger.error(err);
       }
-      this.logger.info(status);
+      this.logger.debug(status);
       return callback(err, response);
     });
   }
@@ -86,9 +86,9 @@ class AbstractIndexer {
   indexDocument(doc, callback) {
     this.client.index(doc, (err, response, status) => {
       if(err) {
-        this.logger.error(err); 
+        this.logger.error(err);
       }
-      this.logger.info(status);
+      this.logger.debug(status);
       return callback(err, response);
     });
   }
@@ -101,9 +101,9 @@ class AbstractIndexer {
       body: this.esMapping
     }, (err, response, status) => {
       if(err) {
-        this.logger.error(err); 
+        this.logger.error(err);
       }
-      this.logger.info(status);
+      this.logger.debug(status);
       return callback(err, response);
     });
   }
