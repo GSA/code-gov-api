@@ -1,0 +1,23 @@
+applications:
+- name: code-api-indexer
+  memory: 1024M
+  disk_quota: 1024M
+  health-check-type: process
+  buildpack: https://github.com/cloudfoundry/nodejs-buildpack
+  no-route: true
+  env:
+    ES_AUTH: root:TkvKE7Rd59
+    ES_HEAP_SIZE: 10g
+    ES_HOST: http://root:TkvKE7Rd59@xb6e8222c93c34-rest.service.kubernetes:32699
+    NODE_ENV: production
+    CF_STAGING_TIMEOUT: 15
+    CF_STARTUP_TIMEOUT: 15
+    
+    
+    
+    
+
+  services:
+  - my-elastic-service
+  stack: cflinuxfs2
+  command: node ./scripts/index/repo/index.js | ./node_modules/bunyan/bin/bunyan
