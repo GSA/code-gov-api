@@ -34,7 +34,7 @@ class RepoTermIndexerStream extends Writable {
 
   _indexTerm(term, done) {
     let id = `${term.term_key}_${term.term_type}`;
-    this.logger.info(
+    this.logger.debug(
       `Indexing term (${id}).`);
     this.termIndexer.indexDocument({
       "index": this.termIndexer.esIndex,
@@ -46,7 +46,7 @@ class RepoTermIndexerStream extends Writable {
         this.logger.error(err);
       }
       if (status) {
-        this.logger.info('Status', status);
+        this.logger.debug('Status', status);
       }
       this.termIndexer.indexCounter++;
 
@@ -95,7 +95,7 @@ class TermIndexer extends AbstractIndexer {
     indexer.logger.info(`Started indexing (${indexer.esType}) indices.`);
     async.waterfall([
       (next) => {
-        indexer.indexExists(next); 
+        indexer.indexExists(next);
       },
       (exists, next) => {
         if(exists) {
@@ -105,17 +105,17 @@ class TermIndexer extends AbstractIndexer {
         }
       },
       (response, next) => {
-        indexer.initIndex(next); 
+        indexer.initIndex(next);
       },
       (response, next) => {
-        indexer.initMapping(next); 
+        indexer.initMapping(next);
       },
       (response, next) => {
-        indexer.indexTerms(next); 
+        indexer.indexTerms(next);
       }
     ], (err) => {
       if(err) {
-        indexer.logger.error(err); 
+        indexer.logger.error(err);
       }
       indexer.logger.info(`Finished indexing (${indexer.esType}) indices.`);
       return callback(err, {

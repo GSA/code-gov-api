@@ -47,10 +47,10 @@ class IndexOptimizer extends AbstractIndexTool {
       requestTimeout: 90000
     }, (err, response, status) => {
       if(err) {
-        this.logger.error(err); 
+        this.logger.error(err);
       }
       if (status) {
-        this.logger.info('Status', status);
+        this.logger.debug('Status', status);
       }
       return callback(err, response);
     });
@@ -71,7 +71,7 @@ class IndexOptimizer extends AbstractIndexTool {
 
     optimizer.forceMerge(repoIndexInfo.esIndex, (err) => {
       if(err) {
-        optimizer.logger.error(err); 
+        optimizer.logger.error(err);
       }
       optimizer.logger.info(`Finished optimizing indices.`);
       return callback(err);

@@ -38,12 +38,12 @@ class Validator {
     // validate for errors
     let valid = this.validators["repo"]["relaxed"](repo);
     if (valid) {
-      this.logger.info(`Successfully validated repo data for ${repo.name} (${repo.repoID}).`);
+      this.logger.debug(`Successfully validated repo data for ${repo.name} (${repo.repoID}).`);
       callback(null, []);
     } else {
-      this.logger.info(`Encountered errors when validating repo data for ${repo.name} (${repo.repoID}).`);
+      this.logger.debug(`Encountered errors when validating repo data for ${repo.name} (${repo.repoID}).`);
       let errors = this.validators["repo"]["relaxed"].errors;
-      this.logger.error(errors);
+      this.logger.debug(errors);
       callback(null, errors);
     }
   }
@@ -55,9 +55,9 @@ class Validator {
       // this.logger.info(`Didn't find any warnings for ${repo.name} (${repo.repoID}).`);
       callback(null, []);
     } else {
-      this.logger.info(`Encountered warnings when validating repo data for ${repo.name} (${repo.repoID}).`);
+      this.logger.debug(`Encountered warnings when validating repo data for ${repo.name} (${repo.repoID}).`);
       let warnings = this.validators["repo"]["strict"].errors;
-      this.logger.warning(warnings);
+      this.logger.debug(warnings);
       callback(null, warnings);
     }
   }
@@ -69,10 +69,10 @@ class Validator {
       // this.logger.info(`Didn't find any warnings for ${repo.name} (${repo.repoID}).`);
       callback(null, []);
     } else {
-      this.logger.info(`Encountered potential enhancements when validating repo data for ${repo.name}`
+      this.logger.debug(`Encountered potential enhancements when validating repo data for ${repo.name}`
         + `(${repo.repoID}).`);
       let enhancements = this.validators["repo"]["enhanced"].errors;
-      this.logger.warning(enhancements);
+      this.logger.debug(enhancements);
       callback(null, enhancements);
     }
   }
@@ -89,7 +89,7 @@ class Validator {
         if (error.params && error.params.missingProperty === "repository") {
           return false;
         }
-        
+
       }
       return true;
     });
@@ -111,10 +111,6 @@ class Validator {
           this.logger("removing warning for closed source repo with license===null");
           return false;
         }
-        this.logger.info(warning.dataPath);       
-        //if (warning.params && warning.dataPath === ".description" && warning.params.type === "string"){
-        //  return false;
-       
       }
       if (warning.dataPath === ".license" && repo.license === null) {
         this.logger("removing warning for closed source repo with repository===null");
@@ -137,7 +133,7 @@ class Validator {
         if (enhancement.params && enhancement.params.missingProperty === "repository") {
           return false;
         }
-        //schema v1.0.1 requires the license element but technically allows it to be null, even for OSS. 
+        //schema v1.0.1 requires the license element but technically allows it to be null, even for OSS.
         //nudge here to include license info for OSS
         if (enhancement.dataPath === ".license" && repo.license === null) {
           this.logger("removing enhancement request for closed source repo with repository===null");
@@ -147,10 +143,6 @@ class Validator {
           this.logger("removing enhancement request for closed source repo with license===null");
           return false;
         }
-        this.logger.info(enhancement.dataPath);       
-        //if (warning.params && warning.dataPath === ".description" && warning.params.type === "string"){
-        //  return false;
-       
       }
 
       return true;
@@ -158,7 +150,7 @@ class Validator {
   }
 
   validateRepo(repo, callback) {
-    this.logger.info(`Validating repo data for ${repo.name} (${repo.repoID})...`);
+    this.logger.debug(`Validating repo data for ${repo.name} (${repo.repoID})...`);
 
     let result = {
       "repoID": repo.repoID,
@@ -196,9 +188,9 @@ class Validator {
       (validationEnhancements, next) => {
         // remove errors and warnings from enhancements
         let enhancements = Utils.removeDupes(validationEnhancements, result.issues.errors);
-        
+
         enhancements = Utils.removeDupes(enhancements, result.issues.warnings);
-        
+
         // remove special case enhancements
         enhancements = this._removeSpecialCaseEnhancements(repo, enhancements);
 
@@ -219,7 +211,7 @@ class Validator {
       }
       // NOTE: need to buffer because ajs' promises don't work
       setTimeout(() => {
-        callback(err, result); 
+        callback(err, result);
       }, 10);
       // return callback(err, result);
     });

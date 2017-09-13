@@ -46,10 +46,10 @@ class AliasSwapper extends AbstractIndexTool {
       }
     }, (err, response, status) => {
       if(err) {
-        this.logger.error(err); 
+        this.logger.error(err);
       }
       if (status) {
-        this.logger.info('Status', status);
+        this.logger.debug('Status', status);
       }
       return callback(err, response);
     });
@@ -73,7 +73,7 @@ class AliasSwapper extends AbstractIndexTool {
     async.waterfall([
       //Get indexes for repo alias
       (next) => {
-        swapper.aliasExists(repoIndexInfo.esAlias, next); 
+        swapper.aliasExists(repoIndexInfo.esAlias, next);
       },
       (exists, next) => {
         if(exists) {
@@ -114,7 +114,7 @@ class AliasSwapper extends AbstractIndexTool {
       }
     ], (err) => {
       if(err) {
-        swapper.logger.error(err); 
+        swapper.logger.error(err);
       }
       swapper.logger.info(`Finished swapping aliases.`);
       return callback(err);
