@@ -19,13 +19,14 @@ function _getRepo(owner, repo) {
   return github.repos.get({
     owner: owner,
     repo: repo
-  }).then(function (repo) {
+  })
+  .then(function (repo) {
     return {
-      description: repo.data.description,
-      watchers_count: repo.data.watchers_count,
-      stargazers_count: repo.data.stargazers_count,
-      language: repo.data.language,
-      issues_url: repo.data.issues_url
+      description: repo.description,
+      watchers_count: repo.watchers_count,
+      stargazers_count: repo.stargazers_count,
+      language: repo.language,
+      issues_url: repo.issues_url
     };
   });
 }
@@ -40,7 +41,8 @@ function _getCollaborators(owner, repo) {
   return github.repos.getCollaborators({
     owner: owner,
     repo: repo
-  }).then((collabs) => {
+  })
+  .then((collabs) => {
     return {
       collaborators: collabs.data.map(function (collab) {
         return {
@@ -127,7 +129,7 @@ function getRepoGithubInfo(data) {
       _getCollaborators(owner, repo)
     ])
     .then((values) => {
-      let githubInfo = {};
+      let githubInfo = {}
       values.forEach((value) => {
         if (value.collaborators) {
           githubInfo.collaborators = value.collaborators;
@@ -139,11 +141,25 @@ function getRepoGithubInfo(data) {
       return githubInfo;
     })
     .catch((error) => {
-      throw new Error(error)
+      return {
+        collaborators: [],
+        repoInfo: {},
+        error: {
+          projectName: data.name,
+          errorMessage: error
+        }
+      }
     });
+  } else {
+    return {
+      collaborators: [],
+      repoInfo: {},
+      error: {
+        projectName: data.name,
+        errorMessage: 'Project has no repository URL. Can not retrieve Github infomation.'
+      }
+    }
   }
-
-  return {};
 }
 
 module.exports = getRepoGithubInfo;
