@@ -1,5 +1,5 @@
 /* eslint-disable */
-var CONFIG;
+let CONFIG;
 
 if (process.env.NODE_ENV === "prod" || process.env.NODE_ENV === "production") {
   CONFIG = require("./prod/index.json");
