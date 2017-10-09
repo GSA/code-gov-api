@@ -1,5 +1,3 @@
-const github = require('./github');
+const getRepoGithubInfo = require('./github');
 
-module.exports = {
-  github
-};
+module.exports = getRepoGithubInfo;
