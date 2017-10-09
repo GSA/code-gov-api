@@ -5,8 +5,7 @@ This repository was initially a fork of https://github.com/mobxjs/mobx-react-boi
 
 NodeJS platform is distributed under the [MIT license] (https://github.com/nodejs/node/blob/master/LICENSE).
 
-The MongoDB database and server is available under [GNU AGPL v3.0, the drivers are made available under Apache License v2.0.] (https://www.mongodb.com/community/licensing)
-
+Elasticsearch is a Open Source, Distributed, RESTful Search Engine available under the [Apache 2.0 license](https://github.com/elastic/elasticsearch/blob/master/LICENSE.txt)
 
 The file vendor/js/es5-shim.min.js is from es5-shim, copyright Kristopher Michael Kowal and contributors, under the MIT license and other licenses as indicated by its contributors (inclusive of "MIT license", "3-clause BSD License", "Creative Commons Zero (public domain)", and undefined licenses as indicated by "XXX TODO License or CLA").
 
