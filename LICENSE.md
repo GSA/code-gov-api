@@ -1,15 +1,15 @@
-##A few parts of this project are not in the public domain
+## A few parts of this project are not in the public domain
 
 This repository was initially a fork of https://github.com/mobxjs/mobx-react-boilerplate, copyright Michel Weststrate, under the MIT license.
 
 
-NodeJS platform is distributed under the [MIT license] (https://github.com/nodejs/node/blob/master/LICENSE).
+NodeJS platform is distributed under the [MIT license](https://github.com/nodejs/node/blob/master/LICENSE).
 
 Elasticsearch is a Open Source, Distributed, RESTful Search Engine available under the [Apache 2.0 license](https://github.com/elastic/elasticsearch/blob/master/LICENSE.txt)
 
 The file vendor/js/es5-shim.min.js is from es5-shim, copyright Kristopher Michael Kowal and contributors, under the MIT license and other licenses as indicated by its contributors (inclusive of "MIT license", "3-clause BSD License", "Creative Commons Zero (public domain)", and undefined licenses as indicated by "XXX TODO License or CLA").
 
-####Full license text for the MIT licensed files:
+#### Full license text for the MIT licensed files:
 
 ```
 The MIT License (MIT)
@@ -20,23 +20,24 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ```
-##The rest of this project is in the public domain
+
+## The rest of this project is in the public domain
 
 As a work of the United States Government, this project is in the public domain within the United States.
 
 Additionally, we waive copyright and related rights in the work worldwide through the CC0 1.0 Universal public domain dedication.
 
-##CC0 1.0 Universal Summary
+## CC0 1.0 Universal Summary
 
 This is a human-readable summary of the Legal Code (read the full text).
 
-###No Copyright
+### No Copyright
 
 The person who associated a work with this deed has dedicated the work to the public domain by waiving all of his or her rights to the work worldwide under copyright law, including all related and neighboring rights, to the extent allowed by law.
 
 You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.
 
-###Other Information
+### Other Information
 
 In no way are the patent or trademark rights of any person affected by CC0, nor are the rights that other persons may have in the work or in how the work is used, such as publicity or privacy rights.
 
