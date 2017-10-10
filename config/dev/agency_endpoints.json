@@ -5,7 +5,9 @@
   "website": "https://usda.gov/",
   "codeUrl": "/data/fallback/USDA.json",
   "requirements": {
-    "agencyWidePolicy": 0
+    "agencyWidePolicy": 0,
+    "openSourceRequirement":0,
+    "inventoryRequirement":0
   }
 }, {
   "id": 2,
@@ -14,7 +16,9 @@
   "website": "https://www.commerce.gov/",
   "codeUrl": "/data/fallback/DOC.json",
   "requirements": {
-    "agencyWidePolicy": 0
+    "agencyWidePolicy": 0,
+    "openSourceRequirement":0,
+    "inventoryRequirement":0
   }
 }, {
   "id": 3,
@@ -23,7 +27,9 @@
   "website": "https://www.defense.gov/",
   "codeUrl": "/data/fallback/DOD.json",
   "requirements": {
-    "agencyWidePolicy": 0
+    "agencyWidePolicy": 0,
+    "openSourceRequirement":0,
+    "inventoryRequirement":0
   }
 }, {
   "id": 4,
@@ -32,7 +38,9 @@
   "website": "https://ed.gov/",
   "codeUrl": "/data/fallback/ED.json",
   "requirements": {
-    "agencyWidePolicy": 0
+    "agencyWidePolicy": 0,
+    "openSourceRequirement":0,
+    "inventoryRequirement":0
   }
 }, {
   "id": 5,
@@ -41,7 +49,9 @@
   "website": "https://energy.gov/",
   "codeUrl": "/data/fallback/DOE.json",
   "requirements": {
-    "agencyWidePolicy": 0
+    "agencyWidePolicy": 0,
+    "openSourceRequirement":0,
+    "inventoryRequirement":0
   }
 }, {
   "id": 6,
@@ -50,7 +60,9 @@
   "website": "https://hhs.gov",
   "codeUrl": "/data/fallback/HHS.json",
   "requirements": {
-    "agencyWidePolicy": 0
+    "agencyWidePolicy": 0,
+    "openSourceRequirement":0,
+    "inventoryRequirement":0
   }
 }, {
   "id": 29,
@@ -59,7 +71,9 @@
   "website": "https://dhs.gov",
   "codeUrl": "https://dhs.gov/code.json",
   "requirements": {
-    "agencyWidePolicy": 0
+    "agencyWidePolicy": 0,
+    "openSourceRequirement":0,
+    "inventoryRequirement":0
   }
 }, {
   "id": 7,
@@ -68,7 +82,9 @@
   "website": "https://www.hud.gov/",
   "codeUrl": "/data/fallback/HUD.json",
   "requirements": {
-    "agencyWidePolicy": 0
+    "agencyWidePolicy": 0,
+    "openSourceRequirement":0,
+    "inventoryRequirement":0
   }
 }, {
   "id": 8,
@@ -77,7 +93,9 @@
   "website": "https://data.doi.gov/",
   "codeUrl": "/data/fallback/DOI.json",
   "requirements": {
-    "agencyWidePolicy": 0
+    "agencyWidePolicy": 0,
+    "openSourceRequirement":0,
+    "inventoryRequirement":0
   }
 }, {
   "id": 9,
@@ -86,7 +104,9 @@
   "website": "https://justice.gov",
   "codeUrl": "/data/fallback/DOJ.json",
   "requirements": {
-    "agencyWidePolicy": 0
+    "agencyWidePolicy": 0,
+    "openSourceRequirement":0,
+    "inventoryRequirement":0
   }
 }, {
   "id": 10,
@@ -95,7 +115,9 @@
   "website": "https://www.dol.gov",
   "codeUrl": "/data/fallback/DOL.json",
   "requirements": {
-    "agencyWidePolicy": 0
+    "agencyWidePolicy": 0,
+    "openSourceRequirement":0,
+    "inventoryRequirement":0
   }
 }, {
   "id": 11,
@@ -104,7 +126,9 @@
   "website": "https://state.gov/",
   "codeUrl": "/data/fallback/DOS.json",
   "requirements": {
-    "agencyWidePolicy": 0
+    "agencyWidePolicy": 0,
+    "openSourceRequirement":0,
+    "inventoryRequirement":0
   }
 }, {
   "id": 12,
@@ -113,7 +137,9 @@
   "website": "https://www.transportation.gov/",
   "codeUrl": "/data/fallback/DOT.json",
   "requirements": {
-    "agencyWidePolicy": 0
+    "agencyWidePolicy": 0,
+    "openSourceRequirement":0,
+    "inventoryRequirement":0
   }
 }, {
   "id": 13,
@@ -122,7 +148,9 @@
   "website": "https://www.treasury.gov/",
   "codeUrl": "/data/fallback/TRE.json",
   "requirements": {
-    "agencyWidePolicy": 0
+    "agencyWidePolicy": 0,
+    "openSourceRequirement":0,
+    "inventoryRequirement":0
   }
 }, {
   "id": 14,
@@ -131,7 +159,9 @@
   "website": "https://va.gov/",
   "codeUrl": "/data/fallback/VA.json",
   "requirements": {
-    "agencyWidePolicy": 0
+    "agencyWidePolicy": 0,
+    "openSourceRequirement":0,
+    "inventoryRequirement":0
   }
 }, {
   "id": 15,
@@ -140,7 +170,9 @@
   "website": "https://epa.gov/",
   "codeUrl": "/data/fallback/EPA.json",
   "requirements": {
-    "agencyWidePolicy": 0
+    "agencyWidePolicy": 0,
+    "openSourceRequirement":0,
+    "inventoryRequirement":0
   }
 }, {
   "id": 16,
@@ -149,7 +181,9 @@
   "website": "https://nasa.gov/",
   "codeUrl": "/data/fallback/NASA.json",
   "requirements": {
-    "agencyWidePolicy": 0
+    "agencyWidePolicy": 0,
+    "openSourceRequirement":0,
+    "inventoryRequirement":0
   }
 }, {
   "id": 17,
@@ -158,7 +192,9 @@
   "website": "https://usaid.gov/",
   "codeUrl": "/data/fallback/AID.json",
   "requirements": {
-    "agencyWidePolicy": 0
+    "agencyWidePolicy": 0,
+    "openSourceRequirement":0,
+    "inventoryRequirement":0
   }
 }, {
   "id": 18,
@@ -167,7 +203,9 @@
   "website": "https://fema.gov/",
   "codeUrl": "/data/fallback/FEMA.json",
   "requirements": {
-    "agencyWidePolicy": 0
+    "agencyWidePolicy": 0,
+    "openSourceRequirement":0,
+    "inventoryRequirement":0
   }
 }, {
   "id": 19,
@@ -176,7 +214,9 @@
   "website": "https://gsa.gov/",
   "codeUrl": "/data/fallback/GSA.json",
   "requirements": {
-    "agencyWidePolicy": 1
+    "agencyWidePolicy": 1,
+    "openSourceRequirement":0,
+    "inventoryRequirement":0
   }
 }, {
   "id": 20,
@@ -185,7 +225,9 @@
   "website": "https://nsf.gov/",
   "codeUrl": "/data/fallback/NSF.json",
   "requirements": {
-    "agencyWidePolicy": 0
+    "agencyWidePolicy": 0,
+    "openSourceRequirement":0,
+    "inventoryRequirement":0
   }
 }, {
   "id": 21,
@@ -194,7 +236,9 @@
   "website": "https://www.nrc.gov/",
   "codeUrl": "/data/fallback/NRC.json",
   "requirements": {
-    "agencyWidePolicy": 0
+    "agencyWidePolicy": 0,
+    "openSourceRequirement":0,
+    "inventoryRequirement":0
   }
 }, {
   "id": 22,
@@ -203,7 +247,9 @@
   "website": "https://opm.gov/",
   "codeUrl": "/data/fallback/OPM.json",
   "requirements": {
-    "agencyWidePolicy": 0
+    "agencyWidePolicy": 0,
+    "openSourceRequirement":0,
+    "inventoryRequirement":0
   }
 }, {
   "id": 23,
@@ -212,7 +258,9 @@
   "website": "https://sba.gov/",
   "codeUrl": "/data/fallback/SBA.json",
   "requirements": {
-    "agencyWidePolicy": 0
+    "agencyWidePolicy": 0,
+    "openSourceRequirement":0,
+    "inventoryRequirement":0
   }
 },
 {
@@ -222,7 +270,9 @@
   "website": "https://archives.gov/",
   "codeUrl": "/data/fallback/NARA.json",
   "requirements": {
-    "agencyWidePolicy": 0
+    "agencyWidePolicy": 0,
+    "openSourceRequirement":0,
+    "inventoryRequirement":0
   }
 },
 {
@@ -232,7 +282,9 @@
   "website": "https://consumerfinance.gov/",
   "codeUrl": "/data/fallback/CFPB.json",
   "requirements": {
-    "agencyWidePolicy": 0
+    "agencyWidePolicy": 0,
+    "openSourceRequirement":0,
+    "inventoryRequirement":0
   }
 },
 {
@@ -242,7 +294,9 @@
   "website": "https://whitehouse.gov/",
   "codeUrl": "/data/fallback/EOP.json",
   "requirements": {
-    "agencyWidePolicy": 0
+    "agencyWidePolicy": 0,
+    "openSourceRequirement":0,
+    "inventoryRequirement":0
   }
 },
 {
@@ -252,6 +306,8 @@
   "website": "https://www.dhs.gov",
   "codeUrl": "/data/fallback/DHS.json",
   "requirements": {
-    "agencyWidePolicy": 0
+    "agencyWidePolicy": 0,
+    "openSourceRequirement":0,
+    "inventoryRequirement":0
   }
 }]
