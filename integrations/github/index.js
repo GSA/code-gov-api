@@ -124,7 +124,7 @@ function getRepoGithubInfo(data) {
     });
     const {owner, repo} = _getOwnerRepo(data.repository);
 
-    Promise.all([
+    return Promise.all([
       _getRepo(owner, repo),
       _getCollaborators(owner, repo)
     ])
