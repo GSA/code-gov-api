@@ -22,36 +22,39 @@ function _getRepo(owner, repo) {
   })
   .then(function (repo) {
     return {
+      name: repo.name,
       description: repo.description,
+      homepage: repo.homepage,
       watchers_count: repo.watchers_count,
       stargazers_count: repo.stargazers_count,
       language: repo.language,
-      issues_url: repo.issues_url
+      issues_url: repo.issues_url,
+      license: repo.license
     };
   });
 }
 
 /**
- * Gets all repository collaborators
+ * Gets all repository contributors
  * @param {string} owner - repository owner
  * @param {string} repo - repository name
- * @returns {Object} Object with all collaborators and their basic information along with a count
+ * @returns {Object} Object with all contributors and their basic information along with a count
  */
-function _getCollaborators(owner, repo) {
-  return github.repos.getCollaborators({
+function _getContributors(owner, repo) {
+  return github.repos.getContributors({
     owner: owner,
     repo: repo
   })
-  .then((collabs) => {
+  .then((contributors) => {
     return {
-      collaborators: collabs.data.map(function (collab) {
+      contributors: contributors.map(function (contrib) {
         return {
-          userName: collab.login,
-          url: collab.html_url,
-          avatar_url: collab.avatar_url
+          userName: contrib.login,
+          url: contrib.html_url,
+          avatar_url: contrib.avatar_url
         };
       }),
-      total_collaborators: collabs.length
+      total_contributors: contributors.length
     };
   });
 }
@@ -126,13 +129,13 @@ function getRepoGithubInfo(data) {
 
     return Promise.all([
       _getRepo(owner, repo),
-      _getCollaborators(owner, repo)
+      _getContributors(owner, repo)
     ])
     .then((values) => {
       let githubInfo = {}
       values.forEach((value) => {
-        if (value.collaborators) {
-          githubInfo.collaborators = value.collaborators;
+        if (value.contributors) {
+          githubInfo.contributors = value.contributors;
         } else {
           githubInfo.repoInfo = value;
         }
@@ -142,7 +145,7 @@ function getRepoGithubInfo(data) {
     })
     .catch((error) => {
       return {
-        collaborators: [],
+        contributors: [],
         repoInfo: {},
         error: {
           projectName: data.name,
@@ -152,7 +155,7 @@ function getRepoGithubInfo(data) {
     });
   } else {
     return {
-      collaborators: [],
+      contributors: [],
       repoInfo: {},
       error: {
         projectName: data.name,
