@@ -8,7 +8,7 @@ const IndexOptimizer        = require("../../../services/indexer/index_optimizer
 const Logger                = require("../../../utils/logger");
 const elasticsearchAdapter  = require("../../../utils/search_adapters/elasticsearch_adapter");
 
-const DAYS_TO_KEEP = 7;
+const DAYS_TO_KEEP = process.env.DAYS_TO_KEEP || 2;
 const AGENCY_ENDPOINTS_FILE = path.join(__dirname, "../../../", config.AGENCY_ENDPOINTS_FILE);
 
 /**
