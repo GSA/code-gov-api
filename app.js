@@ -3,7 +3,9 @@
     * tests
     * lint/githook rules
 */
+const config              = require("./config");
 require('newrelic');
+
 const _                   = require("lodash");
 const fs                  = require("fs");
 const async               = require("async");
@@ -15,7 +17,6 @@ const cookieParser        = require('cookie-parser');
 const bodyParser          = require('body-parser');
 const cors                = require('cors');
 const Jsonfile            = require("jsonfile");
-const config              = require("./config");
 const searcherAdapter     = require("./utils/search_adapters/elasticsearch_adapter");
 const Searcher            = require("./services/searcher");
 const Utils               = require("./utils");
