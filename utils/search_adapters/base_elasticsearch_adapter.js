@@ -17,6 +17,7 @@ class BaseElasticsearchAdapter extends AbstractSearchAdapter {
     super();
   }
 
+  //TODO: We might be able to eliminate all this code and the AbstractSearchAdapter. Something to think about
   getHostsFromConfig() {
     let hosts = [];
 
