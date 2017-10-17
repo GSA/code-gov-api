@@ -18,7 +18,5 @@
     "agency.name",
     "agency.acronym",
     "tags",
-    "languages"],
-  "ES_HOST": "10.10.3.111",
-  "ES_PORT": "32850"
+    "languages"]
 }
