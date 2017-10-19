@@ -11,6 +11,6 @@ applications:
     CF_STAGING_TIMEOUT: 15
     CF_STARTUP_TIMEOUT: 15
   services:
-  - cod_gov_elasticsearch
+  - code_gov_elasticsearch
   stack: cflinuxfs2
   command: npm start
