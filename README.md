@@ -1,10 +1,11 @@
 # Code.gov Tools - Unlocking the potential of the Federal Government’s software
 
-[![CircleCI](https://circleci.com/gh/presidential-innovation-fellows/code-gov-api.svg?style=shield&circle-token=e4c0e096066ee84c9989206a562e7d5224f187e4)](https://circleci.com/gh/presidential-innovation-fellows/code-gov-api)
-[![Code Climate](https://codeclimate.com/github/codeclimate/codeclimate/badges/gpa.svg)](https://codeclimate.com/github/codeclimate/codeclimate)
-[![Test Coverage](https://codeclimate.com/github/codeclimate/codeclimate/badges/coverage.svg)](https://codeclimate.com/github/codeclimate/codeclimate/coverage)
-[![Issue Count](https://codeclimate.com/github/codeclimate/codeclimate/badges/issue_count.svg)](https://codeclimate.com/github/codeclimate/codeclimate)
-[![Dependency Status](https://gemnasium.com/badges/github.com/presidential-innovation-fellows/code-gov-api.svg)](https://gemnasium.com/github.com/presidential-innovation-fellows/code-gov-api)
+[![CircleCI](https://circleci.com/gh/GSA/code-gov-api.svg?style=shield&circle-token=a7551669b06edee93c482a338d87d354974faa9f)](https://circleci.com/gh/GSA/code-gov-api)
+[![Maintainability](https://api.codeclimate.com/v1/badges/c7f588c467b66045efdf/maintainability)](https://codeclimate.com/github/GSA/code-gov-api/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/c7f588c467b66045efdf/test_coverage)](https://codeclimate.com/github/GSA/code-gov-api/test_coverage)
+[![Issue Count](https://codeclimate.com/github/GSA/code-gov-api/badges/issue_count.svg)](https://codeclimate.com/github/GSA/code-gov-api)
+[![Dependency Status](https://gemnasium.com/badges/github.com/GSA/code-gov-api.svg)](https://gemnasium.com/github.com/GSA/code-gov-api)
+
 
 ## Introduction
 
