@@ -1,0 +1,16 @@
+applications:
+- name: code-api
+  memory: 1024M
+  instances: 1
+  disk_quota: 1024M
+  health-check-type: http
+  health-check-http-endpoint: /api/0.1
+  buildpack: https://github.com/cloudfoundry/nodejs-buildpack
+  env:
+    ES_HEAP_SIZE: 10g
+    CF_STAGING_TIMEOUT: 15
+    CF_STARTUP_TIMEOUT: 15
+  services:
+  - code_gov_elasticsearch
+  stack: cflinuxfs2
+  command: npm start

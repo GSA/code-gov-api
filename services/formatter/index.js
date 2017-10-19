@@ -74,7 +74,6 @@ const request = require("request");
 const request_promise = require("request-promise");
 const sleep = require("sleep");
 
-const logger = new Logger();
 let lastupdated, etag;
 
 let licensename = "";
@@ -149,7 +148,7 @@ class Formatter {
           }
         })
         .catch(function(err) {
-          Logger.error("license error:", err);
+          this.logger.error("license error:", err);
         });
     }
     return licensename;
@@ -189,7 +188,7 @@ class Formatter {
 
       request(options, function(err, response, body) {
         if (err) {
-          Logger.error("event error: " + err);
+          this.logger.error("event error: " + err);
         } else {
           try {
             events = JSON.parse(body);
@@ -274,7 +273,7 @@ class Formatter {
               eventfeed = "[" + eventdata + "]";
             }
           } catch (e) { //closing try
-            Logger.error(e);
+            this.logger.error(e);
           }
         } //close else
       });
@@ -321,7 +320,7 @@ class Formatter {
 
       request(options, function(err, response, body) {
         if (err) {
-          Logger.error("contributor error: " + err);
+          this.logger.error("contributor error: " + err);
         } else {
           try {
             contributordata.length = 0; //clear the array
@@ -337,7 +336,7 @@ class Formatter {
               }
             }
           } catch (e) { //closing try
-            Logger.error(e);
+            this.logger.error(e);
           }
         }
       });
@@ -384,9 +383,9 @@ class Formatter {
 
       request(options1, function(err, response, body) {
         if (err) {
-          Logger.error("initial language request error: " + err);
+          this.logger.error("initial language request error: " + err);
         } else {
-          logger.debug('body', body);
+          this.logger.debug('body', body);
           etag = response.headers["etag"];
           lastupdated = response.headers["last-modified"];
         }
@@ -412,7 +411,7 @@ class Formatter {
 
       request(options2, function(err, response, body) {
         if (err) {
-          Logger.consoleerror("languages error: " + err);
+          this.logger.consoleerror("languages error: " + err);
         } else if (response.headers["status"] == "304 Not Modified") {
           //console.log("Status is: " + response.headers["status"]);
           //console.log("Requests Remaining is: " + response.headers["x-ratelimit-remaining"]);
@@ -435,7 +434,7 @@ class Formatter {
               }
             }
           } catch (e) { //closing try
-            Logger.error(e);
+            this.logger.error(e);
           }
         }
       });
@@ -469,7 +468,7 @@ class Formatter {
     let formattedRepo;
     try {
       formattedRepo = this._formatRepo(repo);
-      logger.debug('formatted repo', formattedRepo);
+      this.logger.debug('formatted repo', formattedRepo);
     } catch (err) {
       this.logger.error(`Error when formatting repo: ${err}`);
       return callback(err, repo);

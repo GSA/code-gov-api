@@ -8,8 +8,8 @@
     "url": "https://github.com/presidential-innovation-fellows/code-gov-api.git"
   },
   "scripts": {
-    "start": "node app.js | ./node_modules/bunyan/bin/bunyan -o short",
-    "debug": "node --inspect app.js | ./node_modules/bunyan/bin/bunyan -o short",
+    "start": "NODE_ENV=production node app.js | ./node_modules/bunyan/bin/bunyan -o short",
+    "debug": "NODE_ENV=development node --inspect app.js | ./node_modules/bunyan/bin/bunyan -o short",
     "index": "node ./scripts/index/index.js | ./node_modules/bunyan/bin/bunyan",
     "index-debug": "NODE_ENV=development node --debug-brk=5858 ./scripts/index/index.js | ./node_modules/bunyan/bin/bunyan",
     "index-repos": "node ./scripts/index/repo/index.js | ./node_modules/bunyan/bin/bunyan",
@@ -28,6 +28,7 @@
     "bodybuilder": "1.22.0",
     "bunyan": "1.8.1",
     "bunyan-middleware": "0.3.1",
+    "cfenv": "^1.0.4",
     "cookie-parser": "1.4.3",
     "cors": "2.7.1",
     "diff": "^3.1.0",
