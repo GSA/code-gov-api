@@ -1,7 +1,8 @@
 const GitHubApi = require("github");
+// const bluebird = require("bluebird");
 
 const github = new GitHubApi({
-  Promise: require("bluebird"),
+  Promise: Promise,
   host: "api.github.com",
   protocol: "https",
   headers: {
@@ -66,14 +67,14 @@ function _getContributors(owner, repo) {
  * @returns {Object} Object with the repository's owner and name
  */
 function getOwnerRepoHttpGithubUrl(matchResults) {
-  const substringIndexStart = matchResults[0].length + (matchResults.index + 1)
+  const substringIndexStart = matchResults[0].length + (matchResults.index + 1);
 
-  let parseResult = matchResults.input.substring(substringIndexStart).split('/')
+  let parseResult = matchResults.input.substring(substringIndexStart).split('/');
 
   return {
     owner: parseResult[0],
     repo: parseResult[1]
-  }
+  };
 
 }
 
@@ -132,7 +133,7 @@ function getRepoGithubInfo(data) {
       _getContributors(owner, repo)
     ])
     .then((values) => {
-      let githubInfo = {}
+      let githubInfo = {};
       values.forEach((value) => {
         if (value.contributors) {
           githubInfo.contributors = value.contributors;
@@ -151,7 +152,7 @@ function getRepoGithubInfo(data) {
           projectName: data.name,
           errorMessage: error
         }
-      }
+      };
     });
   } else {
     return {
@@ -161,7 +162,7 @@ function getRepoGithubInfo(data) {
         projectName: data.name,
         errorMessage: 'Project has no repository URL. Can not retrieve Github infomation.'
       }
-    }
+    };
   }
 }
 

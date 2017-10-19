@@ -23,7 +23,7 @@ const Utils               = require("./utils");
 const Logger              = require("./utils/logger");
 const repoMapping         = require("./indexes/repo/mapping.json");
 const Indexer             = require("./scripts/index/index.js");
-const getRepoGithubInfo   = require("./integrations")
+const getRepoGithubInfo   = require("./integrations");
 const pkg                 = require("./package.json");
 /* eslint-disable */
 const request             = require("request");
