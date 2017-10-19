@@ -50,35 +50,6 @@
   ],
   "paths": {
     "/repos": {
-      "post": {
-        "tags": [
-          "repo"
-        ],
-        "summary": "Post a search for repos",
-        "description": "",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "body",
-            "name": "body",
-            "description": "Query to find repos",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/Repo"
-            }
-          }
-        ],
-        "responses": {
-          "405": {
-            "description": "Invalid input"
-          }
-        }
-      },
       "get": {
         "tags": [
           "repo"
@@ -144,35 +115,6 @@
       }
     },
     "/terms": {
-      "post": {
-        "tags": [
-          "terms"
-        ],
-        "summary": "Post a search for repos",
-        "description": "",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "body",
-            "name": "body",
-            "description": "Query to find repos",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/Term"
-            }
-          }
-        ],
-        "responses": {
-          "405": {
-            "description": "Invalid input"
-          }
-        }
-      },
       "get": {
         "tags": [
           "terms"
