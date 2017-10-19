@@ -385,7 +385,7 @@ class Formatter {
         if (err) {
           this.logger.error("initial language request error: " + err);
         } else {
-          logger.debug('body', body);
+          this.logger.debug('body', body);
           etag = response.headers["etag"];
           lastupdated = response.headers["last-modified"];
         }
