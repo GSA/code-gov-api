@@ -10,7 +10,7 @@ module.exports = class Logger {
     if(!config || !config.name) {
       config = {
         name: this.DEFAULT_LOGGER_NAME
-      }
+      };
     }
     let bun = bunyan.createLogger(config);
     this.error = bun.error.bind(bun);
