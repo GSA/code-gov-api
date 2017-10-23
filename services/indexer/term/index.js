@@ -6,7 +6,7 @@ const RepoTermLoaderStream= require("./repo_term_loader_stream");
 
 // NOTE: dependent on elasticsearch repos being indexed
 
-const ES_REPO_MAPPING = require("../../../indexes/repo/mapping.json");
+const ES_REPO_MAPPING = require("../../../indexes/repo/mapping_100.json");
 const ES_REPO_SETTINGS = require("../../../indexes/repo/settings.json");
 const ES_REPO_PARAMS = {
   "esAlias": "repos",
