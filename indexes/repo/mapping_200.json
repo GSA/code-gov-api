@@ -1,0 +1,298 @@
+{
+    "repo": {
+        "properties": {
+            "repoID": {
+                "type": "string",
+                "index": "not_analyzed"
+            },
+            "agency": {
+                "type": "string",
+                "analyzer": "keyword_ci",
+                "fields": {
+                    "_fulltext": {
+                        "type": "string",
+                        "analyzer": "englishfulltext"
+                    }
+                }
+            },
+            "measurementType": {
+                "type": "nested",
+                "properties":{
+                    "method": {
+                        "type": "string",
+                        "analyzer": "keyword_ci",
+                        "fields": {
+                            "_fulltext": {
+                                "type": "string",
+                                "analyzer": "englishfulltext"
+                            }
+                        }
+                    },
+                    "ifOther": {
+                        "type": "string",
+                        "analyzer": "englishfulltext",
+                        "fields": {
+                            "_fulltext": {
+                                "type": "string",
+                                "analyzer": "englishfulltext"
+                            }
+                        }
+                    }
+                }
+            },
+            "status": {
+                "type": "string",
+                "analyzer": "keyword_ci"
+            },
+            "vcs": {
+                "type": "string",
+                "analyzer": "keyword_ci"
+            },
+            "repositoryURL": {
+                "type": "string",
+                "analyzer": "keyword_ci"
+            },
+            "name": {
+                "type": "string",
+                "analyzer": "keyword_ci"
+            },
+            "homepageURL": {
+                "type": "string",
+                "analyzer": "keyword_ci"
+            },
+            "downloadURL": {
+                "type": "string",
+                "index": "not_analyzed"
+            },
+            "description": {
+                "type": "string",
+                "analyzer": "englishfulltext",
+                "fields": {
+                    "_fulltext": {
+                        "type": "string",
+                        "analyzer": "englishfulltext"
+                    }
+                }
+            },
+            "events": {
+                "type": "string",
+                "analyzer": "keyword_ci",
+                "fields": {
+                    "_fulltext": {
+                        "type": "string",
+                        "analyzer": "englishfulltext"
+                    }
+                }
+            },
+            "tags": {
+                "type": "string",
+                "analyzer": "keyword_ci",
+                "fields": {
+                    "_fulltext": {
+                        "type": "string",
+                        "analyzer": "englishfulltext"
+                    }
+                }
+            },
+            "languages": {
+                "type": "string",
+                "analyzer": "keyword_ci",
+                "fields": {
+                    "_fulltext": {
+                        "type": "string",
+                        "analyzer": "englishfulltext"
+                    }
+                }
+            },
+            "contact": {
+                "type": "nested",
+                "include_in_root": true,
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "analyzer": "keyword_ci",
+                        "fields": {
+                            "_fulltext": {
+                                "type": "string",
+                                "analyzer": "englishfulltext"
+                            }
+                        }
+                    },
+                    "email": {
+                        "type": "string",
+                        "analyzer": "keyword_ci",
+                        "fields": {
+                            "_fulltext": {
+                                "type": "string",
+                                "analyzer": "englishfulltext"
+                            }
+                        }
+                    },
+                    "twitter": {
+                        "type": "string",
+                        "analyzer": "keyword_ci",
+                        "fields": {
+                            "_fulltext": {
+                                "type": "string",
+                                "analyzer": "englishfulltext"
+                            }
+                        }
+                    },
+                    "phone": {
+                        "type": "string",
+                        "analyzer": "keyword_ci",
+                        "fields": {
+                            "_fulltext": {
+                                "type": "string",
+                                "analyzer": "englishfulltext"
+                            }
+                        }
+                    }
+                }
+            },
+            "partners": {
+                "type": "nested",
+                "include_in_root": true,
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "analyzer": "keyword_ci",
+                        "fields": {
+                            "_fulltext": {
+                                "type": "string",
+                                "analyzer": "englishfulltext"
+                            }
+                        }
+                    },
+                    "email": {
+                        "type": "string",
+                        "analyzer": "keyword_ci",
+                        "fields": {
+                            "_fulltext": {
+                                "type": "string",
+                                "analyzer": "englishfulltext"
+                            }
+                        }
+                    }
+                }
+            },
+            "permissions": {
+                "type": "nested",
+                "properties": {
+                    "licenses": {
+                        "type": "nested",
+                        "properties": {
+                            "name": {
+                                "type": "string",
+                                "analyzer": "keyword_ci",
+                                "fields": {
+                                    "_fulltext": {
+                                        "type": "string",
+                                        "analyzer": "englishfulltext"
+                                    }
+                                }
+                            },
+                            "URL": {
+                                "type": "string",
+                                "index": "not_analyzed"
+                            }
+                        }
+                    },
+                    "usageType": {
+                        "type": "string",
+                        "analyzer": "keyword_ci",
+                        "fields": {
+                            "_fulltext": {
+                                "type": "string",
+                                "analyzer": "englishfulltext"
+                            }
+                        }
+                    },
+                    "exemptionText": {
+                        "type": "string",
+                        "analyzer": "englishfulltext",
+                        "fields": {
+                            "_fulltext": {
+                                "type": "string",
+                                "analyzer": "englishfulltext"
+                            }
+                        }
+                    }
+                }
+            },
+            "laborHours": {
+                "type": "short"
+            },
+            "relatedCode": {
+                "type": "nested",
+                "properties": {
+                    "name":{
+                        "type": "string",
+                        "analyzer": "keyword_ci",
+                        "fields": {
+                            "_fulltext": {
+                                "type": "string",
+                                "analyzer": "englishfulltext"
+                            }
+                        }
+                    },
+                    "URL": {
+                        "type": "string",
+                        "index": "not_analyzed"
+                    }
+                }
+            },
+            "reusedCode": {
+                "type": "nested",
+                "properties": {
+                    "name":{
+                        "type": "string",
+                        "analyzer": "keyword_ci",
+                        "fields": {
+                            "_fulltext": {
+                                "type": "string",
+                                "analyzer": "englishfulltext"
+                            }
+                        }
+                    },
+                    "URL": {
+                        "type": "string",
+                        "index": "not_analyzed"
+                    }
+                }
+            },
+            "disclaimerURL": {
+                "type": "string",
+                "index": "not_analyzed"
+            },
+            "disclaimerText": {
+                "type": "string",
+                "analyzer": "englishfulltext",
+                "fields": {
+                    "_fulltext": {
+                        "type": "string",
+                        "analyzer": "englishfulltext"    
+                    }
+                }
+            },
+            "updated": {
+                "type": "nested",
+                "include_in_root": true,
+                "properties": {
+                    "metadataLastUpdated": {
+                        "type": "date",
+                        "format": "strict_date_optional_time||epoch_millis"
+                    },
+                    "lastCommit": {
+                        "type": "date",
+                        "format": "strict_date_optional_time||epoch_millis"
+                    },
+                    "sourceCodeLastModified": {
+                        "type": "date",
+                        "format": "strict_date_optional_time||epoch_millis"
+                    }
+                }
+            }
+        }
+    }
+}
