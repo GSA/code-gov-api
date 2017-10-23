@@ -13,7 +13,7 @@ const Formatter           = require("../../formatter");
 const Reporter            = require("../../reporter");
 const AbstractIndexer     = require("../abstract_indexer");
 
-const ES_MAPPING = require("../../../indexes/repo/mapping.json");
+const ES_MAPPING = require("../../../indexes/repo/mapping_100.json");
 const ES_SETTINGS = require("../../../indexes/repo/settings.json");
 const ES_PARAMS = {
   "esAlias": "repos",
