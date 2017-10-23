@@ -21,7 +21,7 @@ const searcherAdapter     = require("./utils/search_adapters/elasticsearch_adapt
 const Searcher            = require("./services/searcher");
 const Utils               = require("./utils");
 const Logger              = require("./utils/logger");
-const repoMapping         = require("./indexes/repo/mapping.json");
+const repoMapping         = require("./indexes/repo/mapping_100.json");
 const Indexer             = require("./scripts/index/index.js");
 const pkg                 = require("./package.json");
 /* eslint-disable */
