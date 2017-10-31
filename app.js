@@ -60,6 +60,14 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 app.use(helmet());
+app.use(helmet.hsts({
+  maxAge: config.HSTS_MAX_AGE,
+  preload: config.HSTS_PRELOAD,
+  setIf: function() {
+    return config.USE_HSTS;
+  },
+}));
+
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
