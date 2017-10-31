@@ -206,26 +206,9 @@ router.get('/repos', (req, res, next) => {
   queryReposAndSendResponse(q, res, next);
 });
 
-router.post('/repos', (req, res, next) => {
-  let q = req.body;
-  queryReposAndSendResponse(q, res, next);
-});
-
 /* get key terms that can be used to search through repos */
 router.get('/terms', (req, res) => {
   let q = _.pick(req.query, ["term", "term_type", "size", "from"]);
-
-  searcher.searchTerms(q, (err, terms) => {
-    // TODO: add better error handling
-    if(err) {
-      return res.sendStatus(500);
-    }
-    res.json(terms);
-  });
-});
-
-router.post('/terms', (req, res) => {
-  let q = _.pick(req.body, ["term", "term_type", "size", "from"]);
 
   searcher.searchTerms(q, (err, terms) => {
     // TODO: add better error handling
