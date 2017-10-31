@@ -65,7 +65,7 @@ app.use(helmet.hsts({
   preload: config.HSTS_PRELOAD,
   setIf: function() {
     return config.USE_HSTS;
-  },
+  }
 }));
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
