@@ -79,7 +79,7 @@ class AbstractIndexer {
     });
   }
 
-  indexExists(callback) {
+  indexExists() {
     return new Promise((fulfill, reject) => {
       this.client.indices.exists({
         index: this.esIndex
