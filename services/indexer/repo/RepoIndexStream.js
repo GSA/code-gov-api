@@ -1,5 +1,3 @@
-const fs = require("fs");
-const path = require('path');
 const { Writable } = require("stream");
 
 class RepoIndexerStream extends Writable {
