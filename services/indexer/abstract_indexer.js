@@ -55,7 +55,7 @@ class AbstractIndexer {
           reject(err);
         } else {
           this.logger.debug(status);
-          fulfill({status, response});
+          fulfill(response);
         }
       });
     });
@@ -73,7 +73,7 @@ class AbstractIndexer {
           reject(err);
         } else {
           this.logger.debug(status);
-          fulfill({status, response});
+          fulfill(response);
         }
       });
     });
@@ -89,7 +89,7 @@ class AbstractIndexer {
           reject(err);
         } else {
           this.logger.debug(status);
-          fulfill({status, response});
+          fulfill(response);
         }
       });
     });
@@ -103,7 +103,7 @@ class AbstractIndexer {
           reject(err)
         } else {
           this.logger.debug(status);
-          fulfill({status, response});
+          fulfill({response, status});
         }
       });
     });
@@ -123,7 +123,7 @@ class AbstractIndexer {
           reject(err);
         } else {
           this.logger.debug(status);
-          fulfill({status, response});
+          fulfill(response);
         }
       });
     });
