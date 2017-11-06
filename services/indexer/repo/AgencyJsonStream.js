@@ -1,10 +1,8 @@
-const fs = require("fs");
 const path = require('path');
 const { Transform } = require("stream");
-const config = require("../../../config");
 const request = require("request");
 const Jsonfile = require("jsonfile");
-const Logger = require('../../../utils/logger')
+const Logger = require('../../../utils/logger');
 const _ = require("lodash");
 const Validator = require('../../validator');
 const Formatter = require('../../formatter');
@@ -52,7 +50,7 @@ class AgencyJsonStream extends Transform {
         rejectUnauthorized: false,
         url: agency.codeUrl,
         headers: {
-          'User-Agent': 'code.gov',
+          'User-Agent': 'code.gov'
         }
       };
   
@@ -74,11 +72,15 @@ class AgencyJsonStream extends Transform {
           }
         });
       } else {
-        const fallbackPath = path.join('../../../', agency.codeUrl);
-        const jsonData = require(fallbackPath);
-        this._saveFetchedCodeJson(agency.acronym, jsonData)
-          .then(data => fulfill(data))
-          .catch(err => reject(`errorMessage ${agency.codeUrl} - ${err}`));
+        const fallbackPath = path.join(__dirname, '../../../', agency.codeUrl);
+        Jsonfile.readFile(fallbackPath, (err, jsonData) => {
+          if(err) {
+            reject(`errorMessage ${agency.codeUrl} - ${err}`);
+          }
+          this._saveFetchedCodeJson(agency.acronym, jsonData)
+            .then(data => fulfill(data))
+            .catch(err => reject(`errorMessage ${agency.codeUrl} - ${err}`));
+        });
       }
     });
   }
@@ -109,7 +111,8 @@ class AgencyJsonStream extends Transform {
           if(results.issues) {
             validationTotals.errors += results.issues.errors.length ? results.issues.errors.length : 0;
             validationTotals.warnings += results.issues.warnings.length ? results.issues.warnings.length : 0;
-            validationTotals.enhancements += results.issues.enhancements.length ? results.issues.enhancements.length : 0;
+            validationTotals.enhancements += results.issues.enhancements.length ?
+              results.issues.enhancements.length : 0;
   
             Reporter.reportIssues(agency.acronym, results);
           }
@@ -184,7 +187,7 @@ class AgencyJsonStream extends Transform {
           return this._validateAgencyRepos(agency, codeJson);
         } else {
           const message = `ERROR: Agency ${agency.acronym} code.json has no projects.`;
-          Reporter.reportStatus(agency.acronym, message)
+          Reporter.reportStatus(agency.acronym, message);
           
           return Promise.reject(message);
         }
