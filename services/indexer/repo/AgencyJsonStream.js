@@ -5,7 +5,7 @@ const config = require("../../../config");
 const request = require("request");
 const Jsonfile = require("jsonfile");
 const Logger = require('../../../utils/logger')
-
+const _ = require("lodash");
 const Validator = require('../../validator');
 const Formatter = require('../../formatter');
 const Reporter = require("../../reporter");
@@ -30,12 +30,11 @@ class AgencyJsonStream extends Transform {
       const fetchedFilepath = path.join(fetchedDir, filename);
     
       try {
-        const parsedJson = JSON.parse(codeJson);
-        Jsonfile.writeFile(fetchedFilepath, parsedJson, (err) => {
+        Jsonfile.writeFile(fetchedFilepath, codeJson, (err) => {
           if (err) {
             reject(err);
           } else {
-            fulfill(parsedJson);
+            fulfill(codeJson);
           }
         });
       } catch(err) {
@@ -57,22 +56,30 @@ class AgencyJsonStream extends Transform {
         }
       };
   
-      request(requestParams, (err, response, body) => {
-        const errorMessage = 'FAILURE: There was an error fetching the code.json:';
-        if(err) {
-          reject(`${errorMessage} ${agency.codeUrl} - ${err}`);
-        } else {
-          if(response.statusCode === 200) {
-            const formattedData = body.replace(/^\uFEFF/, '');
-  
-            this._saveFetchedCodeJson(agency.acronym, formattedData)
-              .then(data => fulfill(data))
-              .catch(err => reject(`errorMessage ${agency.codeUrl} - ${err}`));
+      if(process.env.NODE_ENV === 'prod' || process.env.NODE_ENV === 'production') {
+        request(requestParams, (err, response, body) => {
+          const errorMessage = 'FAILURE: There was an error fetching the code.json:';
+          if(err) {
+            reject(`${errorMessage} ${agency.codeUrl} - ${err}`);
           } else {
-            reject(`${errorMessage} ${agency.codeUrl} returned ${response.statusCode}`);
+            if(response.statusCode === 200) {
+              const formattedData = body.replace(/^\uFEFF/, '');
+    
+              this._saveFetchedCodeJson(agency.acronym, JSON.parse(formattedData))
+                .then(data => fulfill(data))
+                .catch(err => reject(`errorMessage ${agency.codeUrl} - ${err}`));
+            } else {
+              reject(`${errorMessage} ${agency.codeUrl} returned ${response.statusCode}`);
+            }
           }
-        }
-      });
+        });
+      } else {
+        const fallbackPath = path.join('../../../', agency.codeUrl);
+        const jsonData = require(fallbackPath);
+        this._saveFetchedCodeJson(agency.acronym, jsonData)
+          .then(data => fulfill(data))
+          .catch(err => reject(`errorMessage ${agency.codeUrl} - ${err}`));
+      }
     });
   }
 
@@ -90,10 +97,12 @@ class AgencyJsonStream extends Transform {
 
     Reporter.reportVersion(agency.acronym, codeJson.version);
 
-    let repos = codeJson.projects.map(repo => {
-      const repoId = Utils.transformStringToKey([agency.acronym, repo.organization, repo.name].join("_"));
+    let resultRepos = [];
 
-      Validator.validateRepo(repo, (error, results) => {
+    codeJson.projects.map(repo => {
+      const repoId = Utils.transformStringToKey([agency.acronym, repo.organization, repo.name].join("_"));
+      
+      return Validator.validateRepo(repo, agency, (error, results) => {
         if(error) {
           logger.error(`Error validating repo with repoID ${repoId}. Throwing it out of the indexing process.`);
         } else {
@@ -105,7 +114,7 @@ class AgencyJsonStream extends Transform {
             Reporter.reportIssues(agency.acronym, results);
           }
 
-          return repo;
+          resultRepos.push(repo);
         }
       });
     });
@@ -136,23 +145,33 @@ class AgencyJsonStream extends Transform {
     agency.requirements.overallCompliance = this._calculateOverallCompliance(agency.requirements);
     Reporter.reportRequirements(agency.acronym, agency.requirements);
     
-    return Promise.resolve(repos);
+    return Promise.resolve(resultRepos);
   }
 
+  _calculateOverallCompliance(requirements){
+    //overallCompliance should be the average of the other requirements.
+    //TODO: align this approach with project-open-data's approach
+    let overallCompliance = 0;
+    for (let req in requirements){
+      overallCompliance += requirements[req];
+    }
+    overallCompliance /= _.size(requirements);
+    return overallCompliance;
+  }
+  
   _formatRepos(agency, repos) {
     logger.debug('Entered _formatCodeJson - Agency: ', agency.acronym);
-    return Promise.all(
-      repos.map(repo => {
-        repo.agency = agency;
-        Formatter.formatRepo(repo, (err, formattedRepo) => {
-          if (err) {
-            const msg = `[Error] Formatting repo: ${repo.name}. Throwing it out of the indexing process.`;
-            logger.error(msg, err);
-          }
-          return formattedRepo;
-        });
-      })
-    );
+
+    repos.map(repo => {
+      repo.agency = agency;
+      Formatter.formatRepo(repo, (err, formattedRepo) => {
+        if (err) {
+          const msg = `[Error] Formatting repo: ${repo.name}. Throwing it out of the indexing process.`;
+          logger.error(msg, err);
+        }
+        this.push(formattedRepo);
+      });
+    });
   }
 
   _transform(agency, enc, callback) {
@@ -171,15 +190,13 @@ class AgencyJsonStream extends Transform {
         }
       })
       .then(repos => {
-        return this._formatRepos(agency, repos)
-      })
-      .then(formattedRepos => {
-        this.push(formattedRepos);
+        this._formatRepos(agency, repos);
+        callback();
       })
       .catch(err => {
         logger.error(err);
+        callback();
       });
-    callback();
   }
 }
 
