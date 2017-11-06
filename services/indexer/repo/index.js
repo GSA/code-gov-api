@@ -327,14 +327,24 @@ class AgencyJsonStream extends Transform {
   }
 
   _calculateOverallCompliance(requirements){
-    //overallCompliance should be the average of the other requirements.
-    //TODO: align this approach with project-open-data's approach
-    let overallCompliance = 0;
-    for (let req in requirements){
-      overallCompliance += requirements[req];
+    // overallCompliance should be:
+    //  - 0 if 2 or more compliances are 0
+    //  - 1 if all 3 are 1
+    //  - otherwise the average of the requirements
+    //
+    // TODO: align this approach with project-open-data's approach
+    const compliances = [
+      requirements.agencyWidePolicy,
+      requirements.openSourceRequirement,
+      requirements.inventoryRequirement
+    ];
+    const counts = _.countBy(compliances, _.identity);
+
+    if (counts['0'] === 2) {
+      return 0;
+    } else {
+      return _.mean(compliances);
     }
-    overallCompliance /= _.size(requirements);
-    return overallCompliance;
   }
 
 }
