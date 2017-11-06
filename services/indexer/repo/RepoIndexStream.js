@@ -8,7 +8,6 @@ class RepoIndexerStream extends Writable {
     this.indexer = indexer;
   }
 
-
   _indexRepo(repo) {
     return new Promise((fulfill, reject) => {
       // TODO: turn this call into a promise
@@ -17,29 +16,29 @@ class RepoIndexerStream extends Writable {
         "type": this.indexer.esType,
         "id": repo.repoID,
         "body": repo
-      }, (err, response, status) => {
-        if(err) {
-          this.logger.error(err);
-          reject(err);
-        } else {
-          if (status) {
-            this.logger.debug('Status', status);
-          }
-          this.repoIndexer.indexCounter++;
-    
-          fulfill({status, response});
+      })
+      .then((response, status) => {
+        if (status) {
+          this.indexer.logger.debug('Status', status);
         }
+        this.indexer.indexCounter++;
+  
+        fulfill(response);
+      })
+      .catch(err => {
+        this.indexer.logger.error(err);
+        reject(err);
       });
     });
   }
 
   _write(repo, enc, next) {
     this._indexRepo(repo)
-      .then((status, response) => {
+      .then((response) => {
         return next(null, response);
       })
       .catch(err => {
-        this.logger.error(err);
+        this.indexer.logger.error(err);
         return next(err, null);
       });
   }
