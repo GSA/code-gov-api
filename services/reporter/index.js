@@ -59,22 +59,23 @@ class Reporter {
     this.report.statuses[itemName]["requirements"] = requirements;
   }
 
-  writeReportToFile(callback) {
-    this.logger.info("Writing report to file...");
-    this.report.timestamp = (new Date()).toString();
-    const reportFilepath = path.join(
-      __dirname,
-      "../../",
-      config.REPORT_FILEPATH
-    );
-    Jsonfile.writeFile(reportFilepath, this.report, (err) => {
-      if (err) {
-        this.logger.error(err);
-      }
-      return callback(err);
+  writeReportToFile() {
+    return new Promise((fulfill, reject) => {
+      this.logger.info("Writing report to file...");
+      this.report.timestamp = (new Date()).toString();
+      const reportFilepath = path.join(
+        __dirname,
+        "../../",
+        config.REPORT_FILEPATH
+      );
+      Jsonfile.writeFile(reportFilepath, this.report, (err) => {
+        if (err) {
+          reject(err);
+        }
+        fulfill(err);
+      });
     });
   }
-
 }
 
 module.exports = new Reporter();
