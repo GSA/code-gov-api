@@ -44,7 +44,7 @@ class AbstractIndexer {
     );
   }
 
-  deleteIndex(callback) {
+  deleteIndex() {
     this.logger.info(`Deleting index (${this.esIndex}).`);
     return new Promise((fulfill, reject) => {
       this.client.indices.delete({
@@ -61,7 +61,7 @@ class AbstractIndexer {
     });
   }
 
-  initIndex(callback) {
+  initIndex() {
     this.logger.info(`Creating index (${this.esIndex}).`);
     return new Promise((fulfill, reject) => {
       this.client.indices.create({
@@ -100,7 +100,7 @@ class AbstractIndexer {
       this.client.index(doc, (err, response, status) => {
         if(err) {
           this.logger.error(err);
-          reject(err)
+          reject(err);
         } else {
           this.logger.debug(status);
           fulfill({response, status});
@@ -109,7 +109,7 @@ class AbstractIndexer {
     });
   }
 
-  initMapping(callback) {
+  initMapping() {
     this.logger.info(`Updating mapping for index (${this.esIndex}).`);
 
     return new Promise((fulfill, reject) => {
