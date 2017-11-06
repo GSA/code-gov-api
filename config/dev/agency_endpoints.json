@@ -57,7 +57,7 @@
   "name": "Department of Homeland Security",
   "acronym": "DHS",
   "website": "https://dhs.gov",
-  "codeUrl": "https://dhs.gov/code.json",
+  "codeUrl": "/data/fallback/DHS.json",
   "requirements": {
     "agencyWidePolicy": 0
   }
