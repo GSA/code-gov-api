@@ -1,8 +1,5 @@
-const config              = require("../../../config");
 const fs                  = require("fs");
 const async               = require("async");
-const _                   = require("lodash");
-const { Writable }        = require("stream");
 const JSONStream          = require("JSONStream");
 const Reporter            = require("../../reporter");
 const AbstractIndexer     = require("../abstract_indexer");
@@ -29,49 +26,95 @@ class RepoIndexer extends AbstractIndexer {
     this.agencyEndpointsFile = agencyEndpointsFile;
   }
 
-  indexRepos(callback) {
-    let rs = fs.createReadStream(this.agencyEndpointsFile);
-    let js = JSONStream.parse("*");
-    let as = new AgencyJsonStream();
-    let is = new RepoIndexerStream(this);
+  indexRepos() {
+    let agencyEndpointsStream = fs.createReadStream(this.agencyEndpointsFile);
+    let jsonStream = JSONStream.parse("*");
+    let agencyJsonStream = new AgencyJsonStream();
+    let indexerStream = new RepoIndexerStream(this);
 
-    rs.pipe(js).pipe(as).pipe(is).on("finish", () => {
-      this.logger.info(`Indexed ${this.indexCounter} ${this.esType} documents.`);
-      callback();
+    return new Promise((fulfill, reject) => {
+      agencyEndpointsStream
+        .pipe(jsonStream)
+        .on("error", (error) => {
+          reject(error);
+        })
+        .pipe(agencyJsonStream)
+        .on("error", (error) => {
+          reject(error);
+        })
+        .pipe(indexerStream)
+        .on("error", (error) => {
+          reject(error);
+        })
+        .on("finish", () => {
+          const finishedMsg = `Indexed ${this.indexCounter} ${this.esType} documents.`;
+          this.logger.info(finishedMsg);
+          fulfill(finishedMsg);
+        });
     });
   }
 
   static init(adapter, agencyEndpointsFile, callback) {
-    let indexer = new RepoIndexer(adapter, agencyEndpointsFile, ES_PARAMS);
+    const indexer = new RepoIndexer(adapter, agencyEndpointsFile, ES_PARAMS);
     indexer.logger.info(`Started indexing (${indexer.esType}) indices.`);
     async.waterfall([
       (next) => {
         indexer.indexExists()
-          .then((status, response) => {
-            next();
+          .then(response => {
+            next(null, response);
           })
           .catch(err => {
-            this.logger.error(err);
+            indexer.logger.error(err);
           });
       },
       (exists, next) => {
         if(exists) {
-          indexer.deleteIndex(next);
+          indexer.deleteIndex()
+            .then(response => {
+              next(null, response);
+            })
+            .catch(err => {
+              indexer.logger.error(err);
+            });
         } else {
           next(null, null);
         }
       },
       (response, next) => {
-        indexer.initIndex(next);
+        indexer.initIndex()
+          .then(response => {
+            next(null, response);
+          })
+          .catch(err => {
+            indexer.logger.error(err);
+          });
       },
       (response, next) => {
-        indexer.initMapping(next);
+        indexer.initMapping()
+          .then(response => {
+            next(null, response);
+          })
+          .catch(err => {
+            indexer.logger.error(err);
+          });
       },
       (response, next) => {
-        indexer.indexRepos(next);
+        indexer.indexRepos()
+          .then(response => {
+            next(null, response);
+          })
+          .catch(err => {
+            indexer.logger.error(err);
+          });
       },
-      (next) => {
-        Reporter.writeReportToFile(next);
+      (response, next) => {
+        Reporter.writeReportToFile()
+          .then(response => {
+            next(null, response);
+          })
+          .catch(err => {
+            indexer.logger.error(err);
+          });
       }
     ], (err) => {
       if(err) {
