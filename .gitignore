@@ -68,4 +68,4 @@ StatusDashboardScript
 /build
 manifest_api_indexer.yml
 manifest_staging_api_indexer.yml
-
+data/fetched/*
