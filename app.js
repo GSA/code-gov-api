@@ -21,7 +21,7 @@ const searcherAdapter     = require("./utils/search_adapters/elasticsearch_adapt
 const Searcher            = require("./services/searcher");
 const Utils               = require("./utils");
 const Logger              = require("./utils/logger");
-const repoMapping         = require("./indexes/repo/mapping.json");
+const repoMapping         = require("./indexes/repo/mapping_100.json");
 const Indexer             = require("./scripts/index/index.js");
 const pkg                 = require("./package.json");
 /* eslint-disable */
@@ -60,6 +60,14 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 app.use(helmet());
+app.use(helmet.hsts({
+  maxAge: config.HSTS_MAX_AGE,
+  preload: config.HSTS_PRELOAD,
+  setIf: function() {
+    return config.USE_HSTS;
+  }
+}));
+
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -198,26 +206,9 @@ router.get('/repos', (req, res, next) => {
   queryReposAndSendResponse(q, res, next);
 });
 
-router.post('/repos', (req, res, next) => {
-  let q = req.body;
-  queryReposAndSendResponse(q, res, next);
-});
-
 /* get key terms that can be used to search through repos */
 router.get('/terms', (req, res) => {
   let q = _.pick(req.query, ["term", "term_type", "size", "from"]);
-
-  searcher.searchTerms(q, (err, terms) => {
-    // TODO: add better error handling
-    if(err) {
-      return res.sendStatus(500);
-    }
-    res.json(terms);
-  });
-});
-
-router.post('/terms', (req, res) => {
-  let q = _.pick(req.body, ["term", "term_type", "size", "from"]);
 
   searcher.searchTerms(q, (err, terms) => {
     // TODO: add better error handling

@@ -6,6 +6,12 @@ jobs:
       - image: circleci/node:boron
     steps:
       - checkout
+      - run: 
+          name: download-cc-test-reporter
+          command: curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+      - run: 
+          name: make-test-reporter-executable
+          command: chmod +x ./cc-test-reporter
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
@@ -14,7 +20,9 @@ jobs:
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
-              - ./node_modules
+            - ./node_modules
+      - run:
+          command: ./cc-test-reporter before-build
       - run:
           name: run-linter
           command: npm run lint
@@ -24,15 +32,14 @@ jobs:
       - run:
           name: upload-test-report
           command: |
-              npm install codeclimate-test-reporter
-              ./node_modules/.bin/codeclimate-test-reporter < build/coverage/lcov.info
+             ./cc-test-reporter after-build -t lcov --exit-code $?
       - store_test_results:
-          path: build/test-results/results.xml
+          path: test-results/results.xml
       - store_artifacts:
           path: test-results.xml
           prefix: tests
       - store_artifacts:
-          path: build/coverage
+          path: coverage
           prefix: coverage
       
       # Install Cloud Foundry cli (cf) before deploy step. cf is used to push project to Cloud.gov

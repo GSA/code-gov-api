@@ -4,7 +4,7 @@ const moment              = require("moment");
 const config              = require("../../config");
 const Utils               = require("../../utils");
 const Logger              = require("../../utils/logger");
-const repoMapping         = require("../../indexes/repo/mapping.json");
+const repoMapping         = require("../../indexes/repo/mapping_100.json");
 
 const DATE_FORMAT = "YYYY-MM-DD";
 const REPO_RESULT_SIZE_MAX = 3000;
