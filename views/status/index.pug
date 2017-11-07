@@ -39,6 +39,8 @@ block content
     tr
       th(colspan=2) Agency or Organization
       th Agency Policy Updated
+      th OpenSource Requirement
+      th Inventory Requirement
       th Inventory Published, Compliant
       th Code.json Link
       th Schema Version
@@ -91,8 +93,42 @@ block content
         else 
           td(style="background:none")
             .success.bold
-              ="Complete"        
-        
+              ="Complete"
+        if data.metadata.agency.requirements.inventoryRequirement <=0
+          if data.metadata.agency.requirements.inventoryRequirement == 0
+            td(style="background:none")
+              .failure.bold
+                ="Incomplete"
+          else
+            td
+              .grey
+                ="N/A"
+        else if data.metadata.agency.requirements.inventoryRequirement <1
+          td(style="background:none")
+            .warning.bold
+              ="Partially complete"   
+        else 
+          td(style="background:none")
+            .success.bold
+              ="Complete"
+              
+        if data.metadata.agency.requirements.openSourceRequirement <=0
+          if data.metadata.agency.requirements.openSourceRequirement == 0
+            td(style="background:none")
+              .failure.bold
+                ="Incomplete"
+          else
+            td
+              .grey
+                ="N/A"
+        else if data.metadata.agency.requirements.openSourceRequirement <1
+          td(style="background:none")
+            .warning.bold
+              ="Partially complete"   
+        else 
+          td(style="background:none")
+            .success.bold
+              ="Complete"
 
 
         if data.metadata.agency.requirements.schemaFormat <=0
