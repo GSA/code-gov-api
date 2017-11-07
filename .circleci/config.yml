@@ -32,7 +32,7 @@ jobs:
       - run:
           name: upload-test-report
           command: |
-             ./cc-test-reporter after-build -t lcov --exit-code $? build/coverage/lcov.info
+             ./cc-test-reporter after-build -t lcov -p ~/code-gov-api/build --exit-code $?
       - store_test_results:
           path: build/test-results/results.xml
       - store_artifacts:
