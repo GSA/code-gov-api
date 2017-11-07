@@ -2,7 +2,7 @@
     "exclude": [
         "test/**/*.js"
     ],
-    "report-dir": "./build/coverage",
+    "report-dir": "./coverage",
     "reporter": [
         "lcov"
     ]
