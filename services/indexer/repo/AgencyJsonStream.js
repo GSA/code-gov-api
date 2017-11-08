@@ -164,7 +164,7 @@ class AgencyJsonStream extends Transform {
   _formatRepos(agency, repos) {
     logger.debug('Entered _formatCodeJson - Agency: ', agency.acronym);
 
-    repos.map(repo => {
+    repos.forEach(repo => {
       repo.agency = agency;
       Formatter.formatRepo(repo, (err, formattedRepo) => {
         if (err) {
