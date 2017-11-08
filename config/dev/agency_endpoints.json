@@ -5,7 +5,7 @@
   "website": "https://usda.gov/",
   "codeUrl": "/data/fallback/USDA.json",
   "requirements": {
-    "agencyWidePolicy": 0,
+    "agencyWidePolicy": 0.5,
     "openSourceRequirement":0,
     "inventoryRequirement":0
   }
@@ -16,7 +16,7 @@
   "website": "https://www.commerce.gov/",
   "codeUrl": "/data/fallback/DOC.json",
   "requirements": {
-    "agencyWidePolicy": 0,
+    "agencyWidePolicy": 0.5,
     "openSourceRequirement":0,
     "inventoryRequirement":0
   }
@@ -38,8 +38,8 @@
   "website": "https://ed.gov/",
   "codeUrl": "/data/fallback/ED.json",
   "requirements": {
-    "agencyWidePolicy": 0,
-    "openSourceRequirement":0,
+    "agencyWidePolicy": 1,
+    "openSourceRequirement":1,
     "inventoryRequirement":0
   }
 }, {
@@ -60,15 +60,16 @@
   "website": "https://hhs.gov",
   "codeUrl": "/data/fallback/HHS.json",
   "requirements": {
-    "agencyWidePolicy": 0,
+    "agencyWidePolicy": 1,
     "openSourceRequirement":0,
     "inventoryRequirement":0
   }
-}, {
-  "id": 29,
+},
+{
+  "id": 28,
   "name": "Department of Homeland Security",
   "acronym": "DHS",
-  "website": "https://dhs.gov",
+  "website": "https://www.dhs.gov", 
   "codeUrl": "/data/fallback/DHS.json",
   "requirements": {
     "agencyWidePolicy": 0,
@@ -82,7 +83,7 @@
   "website": "https://www.hud.gov/",
   "codeUrl": "/data/fallback/HUD.json",
   "requirements": {
-    "agencyWidePolicy": 0,
+    "agencyWidePolicy": 0.5,
     "openSourceRequirement":0,
     "inventoryRequirement":0
   }
@@ -104,7 +105,7 @@
   "website": "https://justice.gov",
   "codeUrl": "/data/fallback/DOJ.json",
   "requirements": {
-    "agencyWidePolicy": 0,
+    "agencyWidePolicy": 0.5,
     "openSourceRequirement":0,
     "inventoryRequirement":0
   }
@@ -115,7 +116,7 @@
   "website": "https://www.dol.gov",
   "codeUrl": "/data/fallback/DOL.json",
   "requirements": {
-    "agencyWidePolicy": 0,
+    "agencyWidePolicy": 1,
     "openSourceRequirement":0,
     "inventoryRequirement":0
   }
@@ -137,8 +138,8 @@
   "website": "https://www.transportation.gov/",
   "codeUrl": "/data/fallback/DOT.json",
   "requirements": {
-    "agencyWidePolicy": 0,
-    "openSourceRequirement":0,
+    "agencyWidePolicy": 1.0,
+    "openSourceRequirement":0.5,
     "inventoryRequirement":0
   }
 }, {
@@ -148,7 +149,7 @@
   "website": "https://www.treasury.gov/",
   "codeUrl": "/data/fallback/TRE.json",
   "requirements": {
-    "agencyWidePolicy": 0,
+    "agencyWidePolicy": 0.5,
     "openSourceRequirement":0,
     "inventoryRequirement":0
   }
@@ -170,8 +171,8 @@
   "website": "https://epa.gov/",
   "codeUrl": "/data/fallback/EPA.json",
   "requirements": {
-    "agencyWidePolicy": 0,
-    "openSourceRequirement":0,
+    "agencyWidePolicy": 0.5,
+    "openSourceRequirement":0.5,
     "inventoryRequirement":0
   }
 }, {
@@ -181,9 +182,9 @@
   "website": "https://nasa.gov/",
   "codeUrl": "/data/fallback/NASA.json",
   "requirements": {
-    "agencyWidePolicy": 0,
-    "openSourceRequirement":0,
-    "inventoryRequirement":0
+    "agencyWidePolicy": 1,
+    "openSourceRequirement":1,
+    "inventoryRequirement":0.5
   }
 }, {
   "id": 17,
@@ -192,9 +193,9 @@
   "website": "https://usaid.gov/",
   "codeUrl": "/data/fallback/AID.json",
   "requirements": {
-    "agencyWidePolicy": 0,
+    "agencyWidePolicy": 1,
     "openSourceRequirement":0,
-    "inventoryRequirement":0
+    "inventoryRequirement":0.5
   }
 }, {
   "id": 18,
@@ -203,9 +204,9 @@
   "website": "https://fema.gov/",
   "codeUrl": "/data/fallback/FEMA.json",
   "requirements": {
-    "agencyWidePolicy": 0,
-    "openSourceRequirement":0,
-    "inventoryRequirement":0
+    "agencyWidePolicy": null,
+    "openSourceRequirement":null,
+    "inventoryRequirement":null
   }
 }, {
   "id": 19,
@@ -215,8 +216,8 @@
   "codeUrl": "/data/fallback/GSA.json",
   "requirements": {
     "agencyWidePolicy": 1,
-    "openSourceRequirement":0,
-    "inventoryRequirement":0
+    "openSourceRequirement":1,
+    "inventoryRequirement":1
   }
 }, {
   "id": 20,
@@ -225,9 +226,9 @@
   "website": "https://nsf.gov/",
   "codeUrl": "/data/fallback/NSF.json",
   "requirements": {
-    "agencyWidePolicy": 0,
-    "openSourceRequirement":0,
-    "inventoryRequirement":0
+    "agencyWidePolicy": 1,
+    "openSourceRequirement":1,
+    "inventoryRequirement":1
   }
 }, {
   "id": 21,
@@ -236,9 +237,9 @@
   "website": "https://www.nrc.gov/",
   "codeUrl": "/data/fallback/NRC.json",
   "requirements": {
-    "agencyWidePolicy": 0,
+    "agencyWidePolicy": 0.5,
     "openSourceRequirement":0,
-    "inventoryRequirement":0
+    "inventoryRequirement":1
   }
 }, {
   "id": 22,
@@ -247,7 +248,7 @@
   "website": "https://opm.gov/",
   "codeUrl": "/data/fallback/OPM.json",
   "requirements": {
-    "agencyWidePolicy": 0,
+    "agencyWidePolicy": 0.5,
     "openSourceRequirement":0,
     "inventoryRequirement":0
   }
@@ -258,7 +259,7 @@
   "website": "https://sba.gov/",
   "codeUrl": "/data/fallback/SBA.json",
   "requirements": {
-    "agencyWidePolicy": 0,
+    "agencyWidePolicy": 1,
     "openSourceRequirement":0,
     "inventoryRequirement":0
   }
@@ -270,9 +271,9 @@
   "website": "https://archives.gov/",
   "codeUrl": "/data/fallback/NARA.json",
   "requirements": {
-    "agencyWidePolicy": 0,
-    "openSourceRequirement":0,
-    "inventoryRequirement":0
+    "agencyWidePolicy": null,
+    "openSourceRequirement": null,
+    "inventoryRequirement": null
   }
 },
 {
@@ -282,9 +283,9 @@
   "website": "https://consumerfinance.gov/",
   "codeUrl": "/data/fallback/CFPB.json",
   "requirements": {
-    "agencyWidePolicy": 0,
-    "openSourceRequirement":0,
-    "inventoryRequirement":0
+    "agencyWidePolicy": null,
+    "openSourceRequirement":null,
+    "inventoryRequirement":null
   }
 },
 {
@@ -294,20 +295,20 @@
   "website": "https://whitehouse.gov/",
   "codeUrl": "/data/fallback/EOP.json",
   "requirements": {
-    "agencyWidePolicy": 0,
-    "openSourceRequirement":0,
-    "inventoryRequirement":0
+    "agencyWidePolicy": null,
+    "openSourceRequirement":null,
+    "inventoryRequirement":null
   }
 },
 {
-  "id": 28,
-  "name": "Department of Homeland Security",
-  "acronym": "DHS",
-  "website": "https://www.dhs.gov",
-  "codeUrl": "/data/fallback/DHS.json",
+  "id": 27,
+  "name": "Social Security Administration",
+  "acronym": "SSA",
+  "website": "https://www.ssa.gov",
+  "codeUrl": "data/fallback/SSA.json",
   "requirements": {
-    "agencyWidePolicy": 0,
-    "openSourceRequirement":0,
-    "inventoryRequirement":0
+    "agencyWidePolicy": 1,
+    "openSourceRequirement":1,
+    "inventoryRequirement":0.5
   }
 }]
