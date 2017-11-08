@@ -10,13 +10,14 @@ const Reporter = require("../../reporter");
 const Utils = require("../../../utils");
 
 const logger = new Logger({name: 'agency-json-stream'});
-const fetchedDir = path.join(__dirname, '../../../data/fetched/');
 
 class AgencyJsonStream extends Transform {
-  constructor() {
+  constructor(fetchedDir, fallbackDir) {
     super({
       objectMode: true
     });
+    this.fetchedDir = fetchedDir;
+    this.fallbackDir = fallbackDir;
   }
 
   _saveFetchedCodeJson(agencyAcronym, codeJson) {
@@ -24,8 +25,7 @@ class AgencyJsonStream extends Transform {
 
     return new Promise((fulfill, reject) => {
       Jsonfile.spaces = 2;
-      const filename = `${agencyAcronym}.json`;
-      const fetchedFilepath = path.join(fetchedDir, filename);
+      const fetchedFilepath = path.join(this.fetchedDir, `${agencyAcronym}.json`);
     
       try {
         Jsonfile.writeFile(fetchedFilepath, codeJson, (err) => {
@@ -72,8 +72,7 @@ class AgencyJsonStream extends Transform {
           }
         });
       } else {
-        const fallbackPath = path.join(__dirname, '../../../', agency.codeUrl);
-        Jsonfile.readFile(fallbackPath, (err, jsonData) => {
+        Jsonfile.readFile(path.join(this.fallbackDir, agency.codeUrl), (err, jsonData) => {
           if(err) {
             reject(`errorMessage ${agency.codeUrl} - ${err}`);
           }
