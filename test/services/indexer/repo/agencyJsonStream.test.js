@@ -89,4 +89,40 @@ describe('AgencyJsonStream', function() {
       done();
     });
   });
+
+  describe('Compliance Calculations', function() {
+    it('Should return 0', function() {
+      const expectedValue = 0;
+      const requirements = {
+        agencyWidePolicy: 0,
+        openSourceRequirement: 0,
+        inventoryRequirement: 0
+      };
+      const overallCompliance = agencyJsonStream._calculateOverallCompliance(requirements);
+
+      overallCompliance.should.be.equal(expectedValue);
+    });
+    it('Should return 1', function() {
+      const expectedValue = 1;
+      const requirements = {
+        agencyWidePolicy: 1,
+        openSourceRequirement: 1,
+        inventoryRequirement: 1
+      };
+      const overallCompliance = agencyJsonStream._calculateOverallCompliance(requirements);
+
+      overallCompliance.should.be.equal(expectedValue);
+    });
+    it('Should return the mean of all values passed', function() {
+      const expectedValue = 1.3333333333333333;
+      const requirements = {
+        agencyWidePolicy: 1,
+        openSourceRequirement: 1,
+        inventoryRequirement: 2
+      };
+      const overallCompliance = agencyJsonStream._calculateOverallCompliance(requirements);
+
+      overallCompliance.should.be.equal(expectedValue);
+    });
+  });
 });
