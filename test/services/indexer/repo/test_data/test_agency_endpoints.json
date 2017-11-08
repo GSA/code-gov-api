@@ -1,0 +1,12 @@
+[{
+  "id": 1,
+  "name": "Department of FAKE",
+  "acronym": "FAKE",
+  "website": "https://fake.gov/",
+  "codeUrl": "/FAKE.json",
+  "requirements": {
+    "agencyWidePolicy": 0,
+    "openSourceRequirement":0,
+    "inventoryRequirement":0
+  }
+}]
