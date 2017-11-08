@@ -85,6 +85,7 @@ describe('AgencyJsonStream', function() {
 
     agencyStream.pipe(jsonStream).pipe(agencyJsonStream).on('data', (repos) => {
       repos.should.be.deep.equal(expectedRepo);
+    }).on('finish', () => {
       done();
     });
   });
