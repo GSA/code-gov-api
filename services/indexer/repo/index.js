@@ -1,11 +1,12 @@
-const fs                  = require("fs");
-const async               = require("async");
-const JSONStream          = require("JSONStream");
-const Reporter            = require("../../reporter");
-const AbstractIndexer     = require("../abstract_indexer");
+const fs = require("fs");
+const path = require("path"); 
+const async = require("async");
+const JSONStream = require("JSONStream");
+const Reporter = require("../../reporter");
+const AbstractIndexer = require("../abstract_indexer");
 
-const AgencyJsonStream    = require("../repo/AgencyJsonStream");
-const RepoIndexerStream   = require("../repo/RepoIndexStream");
+const AgencyJsonStream = require("../repo/AgencyJsonStream");
+const RepoIndexerStream = require("../repo/RepoIndexStream");
 const ES_MAPPING = require("../../../indexes/repo/mapping_100.json");
 
 const ES_SETTINGS = require("../../../indexes/repo/settings.json");
@@ -29,10 +30,11 @@ class RepoIndexer extends AbstractIndexer {
   }
 
   indexRepos() {
-    let agencyEndpointsStream = fs.createReadStream(this.agencyEndpointsFile);
-    let jsonStream = JSONStream.parse("*");
-    let agencyJsonStream = new AgencyJsonStream();
-    let indexerStream = new RepoIndexerStream(this);
+    const fetchedDir = path.join(__dirname, '../../../data/fetched/');
+    const agencyEndpointsStream = fs.createReadStream(this.agencyEndpointsFile);
+    const jsonStream = JSONStream.parse("*");
+    const agencyJsonStream = new AgencyJsonStream(fetchedDir);
+    const indexerStream = new RepoIndexerStream(this);
 
     return new Promise((fulfill, reject) => {
       agencyEndpointsStream
