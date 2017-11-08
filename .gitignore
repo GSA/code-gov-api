@@ -67,4 +67,5 @@ StatusDashboardScript
 .idea
 data/fetched/*
 test-results/
+test/**/test_data/fetched/*.json
 
