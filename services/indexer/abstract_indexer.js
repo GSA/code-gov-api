@@ -103,7 +103,7 @@ class AbstractIndexer {
           reject(err);
         } else {
           this.logger.debug(status);
-          fulfill({response, status});
+          fulfill(response);
         }
       });
     });
