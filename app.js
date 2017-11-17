@@ -48,7 +48,7 @@ const limiter = new RateLimit({
   delayMs:parseInt(process.env.DELAY_MS || 0, 10),
   headers: true
 });
-
+app.set('json escape', true);
 app.use(limiter);
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(bodyParser.urlencoded({
@@ -160,7 +160,7 @@ const queryReposAndSendResponse = (q, res) => {
       "Invalid Params": invalidParams
     };
     logger.error(error);
-    return res.status(400).send(error);
+    return res.status(400).json(error);
   }
 
   searcher.searchRepos(q, (err, repos) => {
