@@ -69,7 +69,7 @@ describe('AgencyJsonStream', function() {
       downloadURL: 'https://github.com/FAKE_ORG/FAKEMailSaveMessageExtension-/archive/master.zip',
       exemption: null,
       exemptionText: 'No exemption requested',
-      updated: { lastCommit: '2017-04-11T04:00:00.000Z', metadataLastUpdated: '2017-04-22T04:00:00.000Z', lastModified: '2017-04-11' },
+      updated: { lastCommit: '2017-04-11T00:00:00.000Z', metadataLastUpdated: '2017-04-22T00:00:00.000Z', lastModified: '2017-04-11' },
       agency: {
         name: 'Department of FAKE',
         acronym: 'FAKE',
