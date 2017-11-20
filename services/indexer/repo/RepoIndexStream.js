@@ -1,4 +1,7 @@
 const { Writable } = require("stream");
+const Logger = require("../../../utils/logger");
+
+const logger = new Logger({ name: 'repo-indexer-stream' });
 
 class RepoIndexerStream extends Writable {
   constructor(indexer) {
@@ -19,14 +22,15 @@ class RepoIndexerStream extends Writable {
       })
       .then((response, status) => {
         if (status) {
-          this.indexer.logger.debug('Status', status);
+          logger.debug('indexer.indexDocument - Status', status);
         }
+        
         this.indexer.indexCounter++;
   
         fulfill(response);
       })
       .catch(err => {
-        this.indexer.logger.error(err);
+        logger.error(err);
         reject(err);
       });
     });
@@ -35,10 +39,11 @@ class RepoIndexerStream extends Writable {
   _write(repo, enc, next) {
     this._indexRepo(repo)
       .then((response) => {
+        logger.debug('_indexRepo promise fulfilled')
         return next(null, response);
       })
       .catch(err => {
-        this.indexer.logger.error(err);
+        logger.error(err);
         return next(err, null);
       });
   }
