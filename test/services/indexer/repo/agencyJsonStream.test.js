@@ -29,7 +29,7 @@ describe('AgencyJsonStream', function() {
     agencyJsonStream._saveFetchedCodeJson('FAKE', codeJson)
       .then(data =>{
         const fetchedCodeJson = JsonFile.readFileSync(path.join(fetchDataDir, '/FAKE.json'));
-        data.should.deep.equal(fetchedCodeJson);
+        data.should.be.deep.equal(fetchedCodeJson);
       })
       .then(done, done);
   });
@@ -38,7 +38,7 @@ describe('AgencyJsonStream', function() {
     const codeJson = JsonFile.readFileSync(path.join(fallbackDataDir, '/FAKE.json'));
     agencyJsonStream._getAgencyCodeJson(agency[0])
       .then(data => {
-        data.should.deep.equal(codeJson);
+        data.should.be.deep.equal(codeJson);
       })
       .then(done, done);
   });
@@ -75,7 +75,7 @@ describe('AgencyJsonStream', function() {
         acronym: 'FAKE',
         website: 'https://fake.gov/',
         codeUrl: '/FAKE.json',
-        requirements: { agencyWidePolicy: 0, openSourceRequirement: 0, inventoryRequirement: 0, schemaFormat: 1, overallCompliance: 0.25 }
+        requirements: { agencyWidePolicy: 0, openSourceRequirement: 0, inventoryRequirement: 0, schemaFormat: 1, overallCompliance: 0 }
       },
       repoID: 'fake_fake_org_save_mail' 
     }
@@ -84,9 +84,12 @@ describe('AgencyJsonStream', function() {
     const jsonStream = JsonStream.parse('*');
 
     agencyStream.pipe(jsonStream).pipe(agencyJsonStream).on('data', (repos) => {
-      repos.should.be.deep.equal(expectedRepo);
-    }).on('finish', () => {
-      done();
+      try {
+        repos.should.be.deep.equal(expectedRepo);
+        done();
+      }catch(err) {
+        done(err);
+      }
     });
   });
 
