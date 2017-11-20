@@ -23,17 +23,17 @@ class RepoIndexer extends AbstractIndexer {
     return "repo-indexer";
   }
 
-  constructor(adapter, agencyEndpointsFile, params) {
+  constructor(adapter, agencyEndpointsFile, fetchedFilesDir, params) {
     super(adapter, params);
     this.indexCounter = 0;
     this.agencyEndpointsFile = agencyEndpointsFile;
+    this.fetchedFilesDir = fetchedFilesDir;
   }
 
   indexRepos() {
-    const fetchedDir = path.join(__dirname, '../../../data/fetched/');
     const agencyEndpointsStream = fs.createReadStream(this.agencyEndpointsFile);
     const jsonStream = JSONStream.parse("*");
-    const agencyJsonStream = new AgencyJsonStream(fetchedDir);
+    const agencyJsonStream = new AgencyJsonStream(this.fetchedFilesDir);
     const indexerStream = new RepoIndexerStream(this);
 
     return new Promise((fulfill, reject) => {
@@ -58,8 +58,8 @@ class RepoIndexer extends AbstractIndexer {
     });
   }
 
-  static init(adapter, agencyEndpointsFile, callback) {
-    const indexer = new RepoIndexer(adapter, agencyEndpointsFile, ES_PARAMS);
+  static init(adapter, agencyEndpointsFile, fetchedFilesDir, callback) {
+    const indexer = new RepoIndexer(adapter, agencyEndpointsFile, fetchedFilesDir, ES_PARAMS);
     indexer.logger.info(`Started indexing (${indexer.esType}) indices.`);
     async.waterfall([
       (next) => {

@@ -37,7 +37,7 @@ class Indexer {
 
     async.waterfall([
       (next) => {
-        RepoIndexer.init(elasticsearchAdapter, AGENCY_ENDPOINTS_FILE, next); 
+        RepoIndexer.init(elasticsearchAdapter, AGENCY_ENDPOINTS_FILE, config.FETCHED_DIR, next); 
       },
       (info, next) => {
         // save out alias and repo index name
