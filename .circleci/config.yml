@@ -34,7 +34,7 @@ jobs:
           command: |
              ./cc-test-reporter after-build -t lcov --exit-code $?
       - store_test_results:
-          path: test-results/
+          path: test-results.xml
       - store_artifacts:
           path: coverage
           prefix: coverage
