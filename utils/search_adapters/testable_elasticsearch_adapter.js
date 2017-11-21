@@ -59,6 +59,11 @@ class MockClient {
     callback(this.adapter.error, this.adapter.response);
   }
 
+  index(doc, callback) {
+    // Should return a mock response from elasticsearch ...
+    this.adapter.indexedDoc = doc;
+    callback(this.adapter.error, this.adapter.response);
+  }
 }
 
 let exportedInstance = new TestableElasticsearchAdapter();
