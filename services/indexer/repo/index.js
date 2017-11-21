@@ -1,5 +1,4 @@
 const fs = require("fs");
-const path = require("path"); 
 const async = require("async");
 const JSONStream = require("JSONStream");
 const Reporter = require("../../reporter");

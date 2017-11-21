@@ -13,7 +13,6 @@ class RepoIndexerStream extends Writable {
 
   _indexRepo(repo) {
     return new Promise((fulfill, reject) => {
-      // TODO: turn this call into a promise
       this.indexer.indexDocument({
         "index": this.indexer.esIndex,
         "type": this.indexer.esType,
@@ -39,7 +38,7 @@ class RepoIndexerStream extends Writable {
   _write(repo, enc, next) {
     this._indexRepo(repo)
       .then((response) => {
-        logger.debug('_indexRepo promise fulfilled')
+        logger.debug('_indexRepo promise fulfilled');
         return next(null, response);
       })
       .catch(err => {
