@@ -1,9 +1,9 @@
-const moment              = require("moment");
-const Logger              = require("../../utils/logger");
+const moment = require("moment");
+const Logger = require("../../utils/logger");
 
 /* eslint-disable */
-const CONFIG              = require("../../config");
-const ElasticSearch       = require("elasticsearch");
+const CONFIG = require("../../config");
+const ElasticSearch = require("elasticsearch");
 
 class ElasticSearchLogger extends Logger {
   get DEFAULT_LOGGER_NAME() {
@@ -44,67 +44,88 @@ class AbstractIndexer {
     );
   }
 
-  deleteIndex(callback) {
+  deleteIndex() {
     this.logger.info(`Deleting index (${this.esIndex}).`);
-    this.client.indices.delete({
-      index: this.esIndex
-    }, (err, response, status) => {
-      if (err) {
-        this.logger.error(err);
-      }
-      this.logger.debug(status);
-      return callback(err, response);
+    return new Promise((fulfill, reject) => {
+      this.client.indices.delete({
+        index: this.esIndex
+      }, (err, response, status) => {
+        if (err) {
+          this.logger.error(err);
+          reject(err);
+        } else {
+          this.logger.debug(status);
+          fulfill(response);
+        }
+      });
     });
   }
 
-  initIndex(callback) {
+  initIndex() {
     this.logger.info(`Creating index (${this.esIndex}).`);
-    this.client.indices.create({
-      index: this.esIndex,
-      body: this.esSettings
-    }, (err, response, status) => {
-      if(err) {
-        this.logger.error(err);
-      }
-      this.logger.debug(status);
-      return callback(err, response);
+    return new Promise((fulfill, reject) => {
+      this.client.indices.create({
+        index: this.esIndex,
+        body: this.esSettings
+      }, (err, response, status) => {
+        if(err) {
+          this.logger.error(err);
+          reject(err);
+        } else {
+          this.logger.debug(status);
+          fulfill(response);
+        }
+      });
     });
   }
 
-  indexExists(callback) {
-    this.client.indices.exists({
-      index: this.esIndex
-    }, (err, response, status) => {
-      if(err) {
-        this.logger.error(err);
-      }
-      this.logger.debug(status);
-      return callback(err, response);
+  indexExists() {
+    return new Promise((fulfill, reject) => {
+      this.client.indices.exists({
+        index: this.esIndex
+      }, (err, response, status) => {
+        if(err) {
+          this.logger.error(err);
+          reject(err);
+        } else {
+          this.logger.debug(status);
+          fulfill(response);
+        }
+      });
     });
   }
 
-  indexDocument(doc, callback) {
-    this.client.index(doc, (err, response, status) => {
-      if(err) {
-        this.logger.error(err);
-      }
-      this.logger.debug(status);
-      return callback(err, response);
+  indexDocument(doc) {
+    return new Promise((fulfill, reject) => {
+      this.client.index(doc, (err, response, status) => {
+        if(err) {
+          this.logger.error(err);
+          reject(err);
+        } else {
+          this.logger.debug(status);
+          fulfill(response);
+        }
+      });
     });
   }
 
-  initMapping(callback) {
+  initMapping() {
     this.logger.info(`Updating mapping for index (${this.esIndex}).`);
-    return this.client.indices.putMapping({
-      index: this.esIndex,
-      type: this.esType,
-      body: this.esMapping
-    }, (err, response, status) => {
-      if(err) {
-        this.logger.error(err);
-      }
-      this.logger.debug(status);
-      return callback(err, response);
+
+    return new Promise((fulfill, reject) => {
+      this.client.indices.putMapping({
+        index: this.esIndex,
+        type: this.esType,
+        body: this.esMapping
+      }, (err, response, status) => {
+        if(err) {
+          this.logger.error(err);
+          reject(err);
+        } else {
+          this.logger.debug(status);
+          fulfill(response);
+        }
+      });
     });
   }
 
