@@ -149,12 +149,12 @@ class Validator {
     });
   }
 
-  validateRepo(repo, callback) {
+  validateRepo(repo, agency, callback) {
     this.logger.debug(`Validating repo data for ${repo.name} (${repo.repoID})...`);
 
     let result = {
       "repoID": repo.repoID,
-      "agency": repo.agency.name,
+      "agency": agency.name,
       "organization": repo.organization,
       "project_name": repo.name,
       issues: {
@@ -199,7 +199,7 @@ class Validator {
       }
     ], (err) => {
       if (err) {
-        // this.logger.error(err);
+        this.logger.error(err);
       } else {
         // check to see if we encountered any validation errors
         if (result.issues.errors.length) {
@@ -209,11 +209,8 @@ class Validator {
           );
         }
       }
-      // NOTE: need to buffer because ajs' promises don't work
-      setTimeout(() => {
-        callback(err, result);
-      }, 10);
-      // return callback(err, result);
+
+      callback(err, result);
     });
   }
 

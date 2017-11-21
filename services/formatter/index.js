@@ -93,7 +93,7 @@ class Formatter {
   }
 
   _formatDate(date) {
-    return moment(date).toJSON();
+    return moment.utc(date).toJSON();
   }
 
   _formatDates(repo) {

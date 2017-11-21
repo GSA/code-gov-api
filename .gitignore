@@ -65,6 +65,8 @@ StatusDashboardScript
 /tmp
 .nyc_output
 .idea
-manifest_api_indexer.yml
-manifest_staging_api_indexer.yml
-test-results
+data/fetched/*
+test-results/
+test/**/test_data/fetched/*.json
+test-results.xml
+
