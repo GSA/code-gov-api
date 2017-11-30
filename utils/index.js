@@ -92,6 +92,19 @@ class Utils {
     });
   }
 
+  static getCodeJsonVersion(codeJson) {
+    if(codeJson.version) {
+      return codeJson.version;
+    } else {
+      if(codeJson.agency && codeJson.projects) {
+        return '1.0.1';
+      } else if(codeJson.agency && codeJson.releases) {
+        return '2.0.0';
+      } else {
+        return '1.0.0';
+      }
+    }
+  }
 }
 
 module.exports = Utils;
