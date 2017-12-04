@@ -4,7 +4,7 @@ const request = require("request");
 const Jsonfile = require("jsonfile");
 const Logger = require('../../../utils/logger');
 const _ = require("lodash");
-const Validator = require('../../validator');
+const getValidator = require('../../validator');
 const Formatter = require('../../formatter');
 const Reporter = require("../../reporter");
 const Utils = require("../../../utils");
@@ -102,8 +102,9 @@ class AgencyJsonStream extends Transform {
 
     codeJson.projects.map(repo => {
       const repoId = Utils.transformStringToKey([agency.acronym, repo.organization, repo.name].join("_"));
-      
-      return Validator.validateRepo(repo, agency, (error, results) => {
+      const validator = getValidator(codeJson);
+
+      return validator.validateRepo(repo, agency, (error, results) => {
         if(error) {
           logger.error(`Error validating repo with repoID ${repoId}. Throwing it out of the indexing process.`);
         } else {
