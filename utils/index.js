@@ -3,6 +3,10 @@ const latinize                    = require("latinize");
 
 class Utils {
 
+  /**
+   * Transform passed string into RepoId
+   * @param {string} text 
+   */
   static transformStringToKey(text) {
     return latinize(text)
       .toLowerCase()
@@ -14,6 +18,10 @@ class Utils {
       .replace("the_", "");
   }
 
+  /**
+   * Flaten Elasticsearch mappings.
+   * @param {object} mapping 
+   */
   static getFlattenedMappingProperties(mapping) {
     let props = {};
 
@@ -33,6 +41,10 @@ class Utils {
     return props;
   }
 
+  /**
+   * Flaten Elasticsearch mappings by type.
+   * @param {object} mapping 
+   */
   static getFlattenedMappingPropertiesByType(mapping) {
     let props = {};
 
@@ -62,6 +74,11 @@ class Utils {
     return props;
   }
 
+  /**
+   * Delete specified keys from objects in passed collection.
+   * @param {Array[object]} collection - collections of objects to have keys deleted
+   * @param {Array} excludeKeys - List of keys to be deleted.
+   */
   static omitDeepKeys(collection, excludeKeys) {
     const omitFn = (value) => {
       if (value && typeof value === 'object') {
@@ -73,6 +90,10 @@ class Utils {
     return _.cloneDeepWith(collection, omitFn);
   }
 
+  /**
+   * Delete private object keys ( prefixed with `_` ) from objects in passed collection.
+   * @param {Array[object]} collection - list of objects to have keys deleted
+   */
   static omitPrivateKeys(collection) {
     const omitFn = (value) => {
       if (value && typeof value === 'object') {
@@ -86,12 +107,23 @@ class Utils {
     return _.cloneDeepWith(collection, omitFn);
   }
 
+  /**
+   * Remove duplicate items from passed collections.
+   * @param {*} collection1 
+   * @param {*} collection2 
+   */
+  
   static removeDupes(collection1, collection2) {
     return _.filter(collection1, (obj) => {
       return !_.find(collection2, obj); 
     });
   }
 
+  /**
+   * Extract schema version from code.json
+   * @param {*} codeJson 
+   */
+  
   static getCodeJsonVersion(codeJson) {
     if(codeJson.version) {
       return codeJson.version;
