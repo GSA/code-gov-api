@@ -23,6 +23,7 @@ const Utils               = require("./utils");
 const Logger              = require("./utils/logger");
 const repoMapping         = require("./indexes/repo/mapping_100.json");
 const Indexer             = require("./scripts/index/index.js");
+const getRepoGithubInfo   = require("./integrations");
 const pkg                 = require("./package.json");
 /* eslint-disable */
 const request             = require("request");
@@ -150,9 +151,8 @@ const _getInvalidRepoQueryParams = (queryParams) => {
   });
 };
 
-const queryReposAndSendResponse = (q, res) => {
-  let queryParams = Object.keys(q);
-  // validate query params...
+const queryReposAndSendResponse = (req, res) => {
+  let queryParams = Object.keys(req.query);
   let invalidParams = _getInvalidRepoQueryParams(queryParams);
   if (invalidParams.length > 0) {
     let error = {
@@ -163,14 +163,22 @@ const queryReposAndSendResponse = (q, res) => {
     return res.status(400).json(error);
   }
 
-  searcher.searchRepos(q, (err, repos) => {
+  searcher.searchRepos(req.query, (err, codeGovRepos) => {
     // TODO: add better error handling
     if(err) {
       logger.error(err);
       return res.sendStatus(500);
     }
-    // TODO: format repos
-    res.json(repos);
+
+    Promise.all(
+      codeGovRepos.repos.map(repo => {
+        return getRepoGithubInfo(repo);
+      })
+    )
+    .then(resultRepos => {
+      codeGovRepos.repos = resultRepos;
+      res.json(resultRepos);
+    });
   });
 };
 
@@ -202,8 +210,7 @@ const _readAgencyEndpointsFile = (next) => {
 
 /* get repos that match supplied search criteria */
 router.get('/repos', (req, res, next) => {
-  let q = req.query;
-  queryReposAndSendResponse(q, res, next);
+  queryReposAndSendResponse(req, res, next);
 });
 
 /* get key terms that can be used to search through repos */

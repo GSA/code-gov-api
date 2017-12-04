@@ -1,4 +1,5 @@
 /* eslint-disable */
+
 const cfenv = require('cfenv')
 const appEnv = cfenv.getAppEnv()
 const elasticSearchCredentials = appEnv.getServiceCreds("code_gov_elasticsearch")
