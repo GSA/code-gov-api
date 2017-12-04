@@ -271,9 +271,9 @@
   "website": "https://archives.gov/",
   "codeUrl": "/data/fallback/NARA.json",
   "requirements": {
-    "agencyWidePolicy": null,
-    "openSourceRequirement": null,
-    "inventoryRequirement": null
+    "agencyWidePolicy": 0.5,
+    "openSourceRequirement": 1,
+    "inventoryRequirement": 0.5
   }
 },
 {
