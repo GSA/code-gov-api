@@ -6,77 +6,114 @@
 
 ******************************************************************************/
 
-const async               = require("async");
-const Ajv                 = require("ajv");
-const Utils               = require("../../utils");
-const Logger              = require("../../utils/logger");
+const async = require("async");
+const Ajv = require("ajv");
+const Utils = require("../../utils");
+const Logger = require("../../utils/logger");
+const path = require('path');
+const JsonFile = require('jsonfile');
 
-const PATH_TO_SCHEMAS = "../../schemas";
+const PATH_TO_SCHEMAS = path.join(process.cwd(), '/schemas');
 const SCHEMAS = ["repo"];
+const logger = new Logger({ name: "validator" });
+
+/**
+ * Return validator for specified schema indicated in the version field found in the codeJson.
+ * @param {object} codeJson 
+ */
+function getValidator(codeJson) {
+  const version = Utils.getCodeJsonVersion(codeJson);
+  return new Validator(version);
+}
+
+/**
+ * Get schema validator functions for a given schema path.
+ * @param {string} schemaPath 
+ */
+function getSchemaValidators(schemaPath) {
+  const ajv = new Ajv({ async: true });
+  return { 
+    relaxed: ajv.compile(JsonFile.readFileSync(path.join(schemaPath, '/relaxed.json'))), 
+    strict: ajv.compile(JsonFile.readFileSync(path.join(schemaPath, '/strict.json'))), 
+    enhanced: ajv.compile(JsonFile.readFileSync(path.join(schemaPath, '/enhanced.json')))
+  };
+}
 
 class Validator {
 
-  constructor() {
-    this.logger = new Logger({ name: "validator" });
-
-    // create ajv validators from index mappings
-    let ajv = new Ajv({ async: true });
+  constructor(version) {
+    this._version = version;
     this.validators = {};
+
     SCHEMAS.forEach((schemaName) => {
-      let pathToSchemas = `${PATH_TO_SCHEMAS}/${schemaName}`;
-      this.validators[schemaName] = {
-        /* eslint-disable */
-        relaxed: ajv.compile(require(`${pathToSchemas}/relaxed.json`)),
-        strict: ajv.compile(require(`${pathToSchemas}/strict.json`)),
-        enhanced: ajv.compile(require(`${pathToSchemas}/enhanced.json`))
-        /* eslint-enable */
-      };
+      const pathToSchemas = path.join(PATH_TO_SCHEMAS, schemaName, this._version);
+      this.validators[schemaName] = getSchemaValidators(pathToSchemas);
     });
   }
 
+  /**
+   * Validate the passed repo with a relaxed json schema.
+   * @param {object} repo 
+   * @param {object} callback 
+   */
   _validateRepoRelaxed(repo, callback) {
     // validate for errors
     let valid = this.validators["repo"]["relaxed"](repo);
     if (valid) {
-      this.logger.debug(`Successfully validated repo data for ${repo.name} (${repo.repoID}).`);
+      logger.debug(`Successfully validated repo data for ${repo.name} (${repo.repoID}).`);
       callback(null, []);
     } else {
-      this.logger.debug(`Encountered errors when validating repo data for ${repo.name} (${repo.repoID}).`);
+      logger.debug(`Encountered errors when validating repo data for ${repo.name} (${repo.repoID}).`);
       let errors = this.validators["repo"]["relaxed"].errors;
-      this.logger.debug(errors);
+      logger.debug(errors);
       callback(null, errors);
     }
   }
 
+  /**
+   * Validate the passed repo with a strict json schema.
+   * @param {object} repo 
+   * @param {object} callback 
+   */
   _validateRepoStrict(repo, callback) {
     // validate for warnings
     let valid = this.validators["repo"]["strict"](repo);
     if (valid) {
-      // this.logger.info(`Didn't find any warnings for ${repo.name} (${repo.repoID}).`);
+      // logger.info(`Didn't find any warnings for ${repo.name} (${repo.repoID}).`);
       callback(null, []);
     } else {
-      this.logger.debug(`Encountered warnings when validating repo data for ${repo.name} (${repo.repoID}).`);
+      logger.debug(`Encountered warnings when validating repo data for ${repo.name} (${repo.repoID}).`);
       let warnings = this.validators["repo"]["strict"].errors;
-      this.logger.debug(warnings);
+      logger.debug(warnings);
       callback(null, warnings);
     }
   }
 
+  /**
+   * Validate the repo with a enhaced json schema.
+   * @param {object} repo 
+   * @param {object} callback 
+   */
   _validateRepoEnhanced(repo, callback) {
     // validate for enhancements
     let valid = this.validators["repo"]["enhanced"](repo);
     if (valid) {
-      // this.logger.info(`Didn't find any warnings for ${repo.name} (${repo.repoID}).`);
+      // logger.info(`Didn't find any warnings for ${repo.name} (${repo.repoID}).`);
       callback(null, []);
     } else {
-      this.logger.debug(`Encountered potential enhancements when validating repo data for ${repo.name}`
+      logger.debug(`Encountered potential enhancements when validating repo data for ${repo.name}`
         + `(${repo.repoID}).`);
       let enhancements = this.validators["repo"]["enhanced"].errors;
-      this.logger.debug(enhancements);
+      logger.debug(enhancements);
       callback(null, enhancements);
     }
   }
 
+  /**
+   * Remove errors that fall under specific special cases for errors.
+   * @param {object} repo 
+   * @param {object} errors 
+   */
   _removeSpecialCaseErrors(repo, errors) {
     // NOTE: it is possible to handle these case(s) by altering the json-schema,
     // but since it would require a lot of duplication of the schema definition
@@ -95,6 +132,11 @@ class Validator {
     });
   }
 
+  /**
+   * Remove errors that fall under specific special cases for warnings.
+   * @param {object} repo 
+   * @param {object} warnings 
+   */
   _removeSpecialCaseWarnings(repo, warnings) {
     // NOTE: it is possible to handle these case(s) by altering the json-schema,
     // but since it would require a lot of duplication of the schema definition
@@ -108,12 +150,12 @@ class Validator {
           return false;
         }
         if (warning.dataPath === ".repository" && repo.repository === null) {
-          this.logger("removing warning for closed source repo with license===null");
+          logger("removing warning for closed source repo with license===null");
           return false;
         }
       }
       if (warning.dataPath === ".license" && repo.license === null) {
-        this.logger("removing warning for closed source repo with repository===null");
+        logger("removing warning for closed source repo with repository===null");
         return false;
       }
 
@@ -121,6 +163,11 @@ class Validator {
     });
   }
 
+  /**
+   * Remove errors that fall under specific special cases for enhancements.
+   * @param {object} repo 
+   * @param {object} enhancements 
+   */
   _removeSpecialCaseEnhancements(repo, enhancements) {
     // NOTE: it is possible to handle these case(s) by altering the json-schema,
     // but since it would require a lot of duplication of the schema definition
@@ -136,11 +183,11 @@ class Validator {
         //schema v1.0.1 requires the license element but technically allows it to be null, even for OSS.
         //nudge here to include license info for OSS
         if (enhancement.dataPath === ".license" && repo.license === null) {
-          this.logger("removing enhancement request for closed source repo with repository===null");
+          logger("removing enhancement request for closed source repo with repository===null");
           return false;
         }
         if (enhancement.dataPath === ".repository" && repo.repository === null) {
-          this.logger("removing enhancement request for closed source repo with license===null");
+          logger("removing enhancement request for closed source repo with license===null");
           return false;
         }
       }
@@ -149,8 +196,14 @@ class Validator {
     });
   }
 
+  /**
+   * Validate a given repo's structure.
+   * @param {object} repo 
+   * @param {object} agency 
+   * @param {function} callback 
+   */
   validateRepo(repo, agency, callback) {
-    this.logger.debug(`Validating repo data for ${repo.name} (${repo.repoID})...`);
+    logger.debug(`Validating repo data for ${repo.name} (${repo.repoID})...`);
 
     let result = {
       "repoID": repo.repoID,
@@ -199,7 +252,7 @@ class Validator {
       }
     ], (err) => {
       if (err) {
-        this.logger.error(err);
+        logger.error(err);
       } else {
         // check to see if we encountered any validation errors
         if (result.issues.errors.length) {
@@ -216,4 +269,7 @@ class Validator {
 
 }
 
-module.exports = new Validator();
+module.exports = {
+  getValidator
+};
+
