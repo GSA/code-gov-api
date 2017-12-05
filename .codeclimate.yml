@@ -1,0 +1,31 @@
+---
+engines:
+  csslint:
+    enabled: true
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - javascript
+  eslint:
+    enabled: true
+    checks:
+      complexity:
+        enabled: true
+  fixme:
+    enabled: true
+ratings:
+  paths:
+  - "**.css"
+  - "**.js"
+exclude_paths:
+- config/
+- node_modules/
+- test/
+- test-results/
+- data/
+- coverage/
+- .vscode/
+- .nyc_output/
+- .circleci/
+- .schemas/
