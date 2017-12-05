@@ -69,4 +69,4 @@ data/fetched/*
 test-results/
 test/**/test_data/fetched/*.json
 test-results.xml
-
+.vscode/
