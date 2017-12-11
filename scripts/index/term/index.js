@@ -1,10 +1,11 @@
-const async                 = require("async");
-const TermIndexer           = require("../../../services/indexer/term");
-const AliasSwapper          = require("../../../services/indexer/alias_swapper");
-const IndexCleaner          = require("../../../services/indexer/index_cleaner");
-const IndexOptimizer        = require("../../../services/indexer/index_optimizer");
-const Logger                = require("../../../utils/logger");
-const elasticsearchAdapter  = require("../../../utils/search_adapters/elasticsearch_adapter");
+const async = require("async");
+const config = require('../../../config');
+const TermIndexer = require("../../../services/indexer/term");
+const AliasSwapper = require("../../../services/indexer/alias_swapper");
+const IndexCleaner = require("../../../services/indexer/index_cleaner");
+const IndexOptimizer = require("../../../services/indexer/index_optimizer");
+const Logger = require("../../../utils/logger");
+const elasticsearchAdapter = require("../../../utils/search_adapters/elasticsearch_adapter");
 
 const DAYS_TO_KEEP = process.env.DAYS_TO_KEEP || 2;
 
@@ -67,7 +68,7 @@ class Indexer {
 // If we are running this module directly from Node this code will execute.
 // This will index all terms taking our default input.
 if (require.main === module) {
-  let indexer = new Indexer();
+  let indexer = new Indexer(config);
   indexer.index((err) => {
     if (err) {
       indexer.logger.error(err);

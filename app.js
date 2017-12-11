@@ -122,7 +122,7 @@ if(!module.parent) {
 
 // schedule the interval at which indexings should happen
 const indexInterval = config.INDEX_INTERVAL_SECONDS;
-const indexer = new Indexer();
+const indexer = new Indexer(config);
 if (indexInterval) {
   indexer.schedule(indexInterval);
   logger.info(`Production: re-indexing every ${indexInterval} seconds`);

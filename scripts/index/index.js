@@ -1,9 +1,8 @@
-const async                 = require("async");
-
-const RepoIndexer           = require("./repo/index.js");
-const TermIndexer           = require("./term/index.js");
-
-const Logger                = require("../../utils/logger");
+const async = require("async");
+const config = require('../../config');
+const RepoIndexer = require("./repo/index.js");
+const TermIndexer = require("./term/index.js");
+const Logger = require("../../utils/logger");
 
 /**
  * Defines the class responsible for creating and managing the elasticsearch indexes
@@ -16,14 +15,15 @@ class Indexer {
    * Creates an instance of Indexer.
    *
    */
-  constructor() {
+  constructor(config) {
     this.logger = new Logger({name: "term-index-script"});
+    this.config = config;
   }
 
   index(callback) {
     async.waterfall([
       (next) => {
-        let repoIndexer = new RepoIndexer();
+        let repoIndexer = new RepoIndexer(this.config);
         repoIndexer.index(next);
       },
       (next) => {

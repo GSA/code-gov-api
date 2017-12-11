@@ -39,7 +39,7 @@ describe('Index given repo', function(done) {
       "_version" : 1,
       "created" : true
     });
-    indexer = new RepoIndexer(mockAdapter, agency, fetchDataDir, ES_PARAMS);
+    indexer = new RepoIndexer(mockAdapter, agency, fetchDataDir, fallbackDataDir, ES_PARAMS);
   });
 
   it('should index repo and return result', function(done) {

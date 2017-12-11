@@ -22,17 +22,18 @@ class RepoIndexer extends AbstractIndexer {
     return "repo-indexer";
   }
 
-  constructor(adapter, agencyEndpointsFile, fetchedFilesDir, params) {
+  constructor(adapter, agencyEndpointsFile, fetchedFilesDir, fallbackFilesDir=null, params) {
     super(adapter, params);
     this.indexCounter = 0;
     this.agencyEndpointsFile = agencyEndpointsFile;
     this.fetchedFilesDir = fetchedFilesDir;
+    this.fallbackFilesDir = fallbackFilesDir;
   }
 
   indexRepos() {
     const agencyEndpointsStream = fs.createReadStream(this.agencyEndpointsFile);
     const jsonStream = JSONStream.parse("*");
-    const agencyJsonStream = new AgencyJsonStream(this.fetchedFilesDir);
+    const agencyJsonStream = new AgencyJsonStream(this.fetchedFilesDir, this.fallbackFilesDir);
     const indexerStream = new RepoIndexerStream(this);
 
     return new Promise((fulfill, reject) => {
@@ -57,8 +58,10 @@ class RepoIndexer extends AbstractIndexer {
     });
   }
 
-  static init(adapter, agencyEndpointsFile, fetchedFilesDir, callback) {
-    const indexer = new RepoIndexer(adapter, agencyEndpointsFile, fetchedFilesDir, ES_PARAMS);
+  static init(adapter, config, callback) {
+    const indexer = new RepoIndexer(adapter, config.AGENCY_ENDPOINTS_FILE, config.FETCHED_DIR, 
+      config.FALLBACK_DIR, ES_PARAMS);
+
     indexer.logger.info(`Started indexing (${indexer.esType}) indices.`);
     async.waterfall([
       (next) => {
@@ -111,7 +114,7 @@ class RepoIndexer extends AbstractIndexer {
           });
       },
       (response, next) => {
-        Reporter.writeReportToFile()
+        Reporter.writeReportToFile(config)
           .then(response => {
             next(null, response);
           })
