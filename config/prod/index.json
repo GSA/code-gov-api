@@ -15,11 +15,16 @@
     "agency.name",
     "agency.acronym",
     "tags",
-    "languages"],
+    "languages"
+  ],
   "TERM_TYPES_TO_SEARCH": [
     "name",
     "agency.name",
     "agency.acronym",
     "tags",
-    "languages"]
+    "languages"
+  ],
+  "ES_AUTH": "codegov",
+  "ES_HOST": "localhost",
+  "ES_PORT": "9200"
 }
