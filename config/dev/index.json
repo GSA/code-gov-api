@@ -20,5 +20,6 @@
     "tags",
     "languages"],
     "ES_HOST": "localhost",
-    "ES_PORT": 9200
+    "ES_PORT": 9200,
+    "NR_KEY": "this-is-not-a-key"
 }
