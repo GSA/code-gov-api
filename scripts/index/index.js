@@ -49,7 +49,7 @@ class Indexer {
 // If we are running this module directly from Node this code will execute.
 // This will index all items taking our default input.
 if (require.main === module) {
-  let indexer = new Indexer();
+  let indexer = new Indexer(config);
   indexer.index((err) => {
     if (err) {
       indexer.logger.error(err);
