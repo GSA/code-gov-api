@@ -94,6 +94,25 @@ const queryReposAndSendResponse = (searcher, query, response, next) => {
   });
 };
 
+function _getFileDataByAgency(request, directoryPath) {
+  return new Promise((resolve, reject) => {
+    let agency = request.params.agency.toUpperCase();
+    const filePath = _getRelativeFilepath(
+      `${directoryPath}/${agency}.json`
+    );
+    Jsonfile.readFile(filePath, (err, data) => {
+      if (err) {
+        reject(err);
+      }
+      if (!data.title) {
+        data.title = "Code.gov API Status for " + agency;
+      }
+      resolve(data);
+    });
+  });
+  
+}
+
 function getApiRoutes(config, searcher, router) {
   /* get a repo by nci or nct id */
   router.get('/repos/:id', (request, response) => {
@@ -277,37 +296,21 @@ function getApiRoutes(config, searcher, router) {
   });
 
   router.get(`/status/:agency/fetched`, (request, response) => {
-    let agency = request.params.agency.toUpperCase();
-    const fetchedFilepath = _getRelativeFilepath(
-      `${config.FETCHED_DIR}/${agency}.json`
-    );
-    Jsonfile.readFile(fetchedFilepath, (err, data) => {
-      if (err) {
-        logger.error(err);
-        return response.sendStatus(500);
-      }
-      if (!data.title) {
-        data.title = "Code.gov API Status for " + agency;
-      }
-      return response.json(data);
+    _getFileDataByAgency(request, config.FETCHED_DIR)
+    .then(fetchedData => response.json(fetchedData))
+    .catch(error => {
+      logger.error(error);
+      return response.sendStatus(500);
     });
   });
 
   router.get(`/status/:agency/discovered`, (request, response) => {
-    let agency = request.params.agency.toUpperCase();
-    const discoveredFilepath = _getRelativeFilepath(
-      `${config.DISCOVERED_DIR}/${agency}.json`
-    );
-    Jsonfile.readFile(discoveredFilepath, (err, data) => {
-      if (err) {
-        logger.error(err);
+    _getFileDataByAgency(request, config.DISCOVERED_DIR)
+      .then(discoveredData => response.json(discoveredData))
+      .catch(error => {
+        logger.error(error);
         return response.sendStatus(500);
-      }
-      if (!data.title) {
-        data.title = "Code.gov API Status for " + agency;
-      }
-      return response.json(data);
-    });
+      });
   });
 
   // router.get(`/status/:agency/diff`, (req, res, next) => {
