@@ -1,15 +1,13 @@
-const async                 = require("async");
-const path                  = require("path");
-const config                = require("../../../config");
-const RepoIndexer           = require("../../../services/indexer/repo");
-const AliasSwapper          = require("../../../services/indexer/alias_swapper");
-const IndexCleaner          = require("../../../services/indexer/index_cleaner");
-const IndexOptimizer        = require("../../../services/indexer/index_optimizer");
-const Logger                = require("../../../utils/logger");
-const elasticsearchAdapter  = require("../../../utils/search_adapters/elasticsearch_adapter");
+const async = require("async");
+const config = require("../../../config");
+const RepoIndexer = require("../../../services/indexer/repo");
+const AliasSwapper = require("../../../services/indexer/alias_swapper");
+const IndexCleaner = require("../../../services/indexer/index_cleaner");
+const IndexOptimizer = require("../../../services/indexer/index_optimizer");
+const Logger = require("../../../utils/logger");
+const elasticsearchAdapter = require("../../../utils/search_adapters/elasticsearch_adapter");
 
 const DAYS_TO_KEEP = process.env.DAYS_TO_KEEP || 2;
-const AGENCY_ENDPOINTS_FILE = path.join(__dirname, "../../../", config.AGENCY_ENDPOINTS_FILE);
 
 /**
  * Defines the class responsible for creating and managing the elasticsearch indexes
@@ -22,8 +20,9 @@ class Indexer {
    * Creates an instance of Indexer.
    *
    */
-  constructor() {
+  constructor(config) {
     this.logger = new Logger({name: "repo-index-script"});
+    this.config = config;
   }
 
   /**
@@ -37,7 +36,7 @@ class Indexer {
 
     async.waterfall([
       (next) => {
-        RepoIndexer.init(elasticsearchAdapter, AGENCY_ENDPOINTS_FILE, config.FETCHED_DIR, next); 
+        RepoIndexer.init(elasticsearchAdapter, this.config, next); 
       },
       (info, next) => {
         // save out alias and repo index name
@@ -70,7 +69,7 @@ class Indexer {
 // If we are running this module directly from Node this code will execute.
 // This will index all repos taking our default input.
 if (require.main === module) {
-  let indexer = new Indexer();
+  let indexer = new Indexer(config);
   indexer.index((err) => {
     if (err) {
       indexer.logger.error(err);
