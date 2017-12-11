@@ -5,16 +5,15 @@
 
 ******************************************************************************/
 
-const path                = require("path");
-const Jsonfile            = require("jsonfile");
-const Logger              = require("../../utils/logger");
-const config              = require("../../config");
+const Jsonfile = require("jsonfile");
+const Logger = require("../../utils/logger");
+const config = require("../../config");
 
 class Reporter {
 
-  constructor() {
-    this.logger = new Logger({ name: "reporter" });
-
+  constructor(config, loggerName) {
+    this.logger = new Logger(loggerName);
+    this.config = config;
     this.report = {
       timestamp: (new Date()).toString(),
       statuses: {}
@@ -63,12 +62,8 @@ class Reporter {
     return new Promise((fulfill, reject) => {
       this.logger.info("Writing report to file...");
       this.report.timestamp = (new Date()).toString();
-      const reportFilepath = path.join(
-        __dirname,
-        "../../",
-        config.REPORT_FILEPATH
-      );
-      Jsonfile.writeFile(reportFilepath, this.report, (err) => {
+
+      Jsonfile.writeFile(this.config.REPORT_FILEPATH, this.report, (err) => {
         if (err) {
           reject(err);
         }
@@ -78,4 +73,4 @@ class Reporter {
   }
 }
 
-module.exports = new Reporter();
+module.exports = new Reporter(config, { name: "reporter" });
