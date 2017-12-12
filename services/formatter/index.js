@@ -490,16 +490,15 @@ class Formatter {
   }
   _upgradeToPermissions(repo) {
 
-    repo.permissions = {};
-    repo.permissions.licenses = [];
-
-    repo.permissions.licenses.push({
-      URL: repo.license ? repo.license: null,
-      name: null
-    });
     const { usageType, exemptionText } = this._getUsageTypeExemptionText(repo);
-
-    repo.permissions= { usageType, exemptionText };
+    repo.permissions = { 
+      usageType, 
+      exemptionText,
+      licenses: [{
+        URL: repo.license ? repo.license: '',
+        name: ''
+      }]
+    };
 
     delete repo.license;
     delete repo.openSourceProject;
@@ -508,35 +507,36 @@ class Formatter {
     delete repo.exemptionText;
   }
   _upgradeUpdatedToDate(repo) {
-    repo.date = {
-      created: '',
-      lastModified: '',
-      metadataLastUpdated: '',
-    };
-  
+    let lastModified = '', 
+      metadataLastUpdated = '';
+
     if (repo.updated) {
       if (repo.updated.sourceCodeLastModified) {
-        repo.date.lastModified = this._formatDate(repo.updated.sourceCodeLastModified);
+        lastModified = this._formatDate(repo.updated.sourceCodeLastModified);
       }
   
       if (repo.updated.metadataLastUpdated) {
-        repo.date.metadataLastUpdated = this._formatDate(repo.updated.metadataLastUpdated);
+        metadataLastUpdated = this._formatDate(repo.updated.metadataLastUpdated);
       }
   
       delete repo.updated;
     }
+
+    repo.date = {
+      created: '',
+      lastModified: lastModified,
+      metadataLastUpdated: metadataLastUpdated
+    };
   }
   _upgradeProject(repo) {
-    repo.repositoryURL = repo.repository;
+    repo.laborHours = null;
+    repo.repositoryURL = repo.repository ? repo.repository : '';
+    repo.homepageURL = repo.homepage ? repo.homepage : '';
+
     delete repo.repository;
-  
-    repo.homepageURL = repo.homepage;
     delete repo.homepage;
   
-    this._upgradeToPermissions(repo);
-  
-    repo.laborHours = null;
-  
+    this._upgradeToPermissions(repo);  
     this._upgradeUpdatedToDate(repo);
     this._upgradeOptionalFields(repo);
   
