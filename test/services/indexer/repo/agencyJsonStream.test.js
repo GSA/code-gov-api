@@ -50,8 +50,8 @@ describe('AgencyJsonStream', function() {
       });
   });
 
-  it.only('Should return fomatted repos', function(done){
-    const expectedRepo = {
+  it('Should return fomatted repos', function(){
+    const expectedFormattedRepo = {
       name: 'Save Mail',
       organization: 'FAKE_ORG',
       description: 'FAKE Gmail extension to save messages to local disk',
@@ -67,9 +67,9 @@ describe('AgencyJsonStream', function() {
       contact: { email: 'fake@fake.gov', name: 'Derp Fakerson', phone: '5555555555' },
       status: 'Production',
       vcs: 'git',
+      laborHours: null,
       homepageURL: 'https://github.com/FAKEGOV/FAKEMailSaveMessageExtension-',
       downloadURL: 'https://github.com/FAKE_ORG/FAKEMailSaveMessageExtension-/archive/master.zip',
-      updated: { lastCommit: '2017-04-11T00:00:00.000Z', metadataLastUpdated: '2017-04-22T00:00:00.000Z', lastModified: '2017-04-11' },
       agency: {
         name: 'Department of FAKE',
         acronym: 'FAKE',
@@ -77,16 +77,30 @@ describe('AgencyJsonStream', function() {
         codeUrl: '/FAKE.json',
         requirements: { agencyWidePolicy: 0, openSourceRequirement: 0, inventoryRequirement: 0, schemaFormat: 1, overallCompliance: 0 }
       },
+      repositoryURL: '',
+      disclaimerText: '',
+      disclaimerURL: '',
+      relatedCode: [{
+        codeName: '',
+        codeURL: '',
+        isGovernmentRepo: false
+      }],
+      reusedCode: [{
+        URL: '',
+        name: ''
+      }],
+      date: {
+        created: '',
+        lastModified: '2017-04-11T00:00:00.000Z',
+        metadataLastUpdated: '2017-04-22T00:00:00.000Z'
+      },
       repoID: 'fake_fake_org_save_mail' 
     }
     const codeJson = JsonFile.readFileSync(path.join(fallbackDataDir, '/FAKE.json'));
-    const agencyStream = fs.createReadStream(path.join(testDataDir, 'test_agency_endpoints.json'));
-    const jsonStream = JsonStream.parse('*');
 
-    agencyStream.pipe(jsonStream).pipe(agencyJsonStream).on('data', (repos) => {
-      repos.should.be.deep.equal(expectedRepo);
-      done();
-    }).on('error', (error) => done(error));
+    return agencyJsonStream._formatRepos(agency[0], { schemaVersion: '1.0.1', repos: codeJson.projects })
+      .then(repo => repo.should.be.deep.equal(expectedFormattedRepo));
+
   });
 
   describe('Compliance Calculations', function() {
