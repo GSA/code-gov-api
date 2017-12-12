@@ -565,23 +565,26 @@ class Formatter {
   }
 
   formatRepo(schemaVersion = '1.0.1', repo, callback) {
-    let formattedRepo;
-    try {
-      if(schemaVersion === '2.0.0') {
-        formattedRepo = this._formatRepo(repo);
-      } else {
-        this._upgradeProject(repo);
-        formattedRepo = this._formatRepo(repo);
+    return new Promise((resolve, reject) => {
+      let formattedRepo;
+      try {
+        if(schemaVersion === '2.0.0') {
+          formattedRepo = this._formatRepo(repo);
+        } else {
+          this._upgradeProject(repo);
+          formattedRepo = this._formatRepo(repo);
+        }
+        
+        this.logger.debug('formatted repo', formattedRepo);
+      } catch (error) {
+        this.logger.error(`Error when formatting repo: ${error}`);
+        reject(error);
       }
-      
-      this.logger.debug('formatted repo', formattedRepo);
-    } catch (error) {
-      this.logger.error(`Error when formatting repo: ${error}`);
-      return callback(error, repo);
-    }
-
-    this.logger.debug(`Formatted repo ${repo.name} (${repo.repoID}).`);
-    return callback(null, repo);
+  
+      this.logger.debug(`Formatted repo ${repo.name} (${repo.repoID}).`);
+      resolve(repo);
+    });
+    
   }
 }
 
