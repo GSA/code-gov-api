@@ -121,9 +121,8 @@ class Utils {
 
   /**
    * Extract schema version from code.json
-   * @param {*} codeJson 
+   * @param {object} codeJson 
    */
-  
   static getCodeJsonVersion(codeJson) {
     if(codeJson.version) {
       return codeJson.version;
@@ -135,6 +134,22 @@ class Utils {
       } else {
         return '1.0.0';
       }
+    }
+  }
+
+  /**
+   * Extract repositories from code.json by checking the schema version
+   * @param {object} codeJson 
+   * @returns {array} Array with repositories / projects found in the code.json
+   */
+  static getCodeJsonRepos(codeJson) {
+    const version = this.getCodeJsonVersion(codeJson);
+    const version2RegExp = /^2(\.\d+){0,2}$/;
+
+    if(version2RegExp.test(version)) {
+      return codeJson.releases ? codeJson.releases : null;
+    } else {
+      return codeJson.projects ? codeJson.projects : null;
     }
   }
 }
