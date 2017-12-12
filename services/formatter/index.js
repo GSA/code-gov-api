@@ -67,11 +67,13 @@
 
 ******************************************************************************/
 
-const moment = require("moment");
-const Utils = require("../../utils");
+const JsonFile = require('jsonfile');
 const Logger = require("../../utils/logger");
+const moment = require("moment");
+const path = require('path');
 const request = require("request");
 const request_promise = require("request-promise");
+const Utils = require("../../utils");
 const sleep = require("sleep");
 
 let lastupdated, etag;
@@ -97,19 +99,15 @@ class Formatter {
   }
 
   _formatDates(repo) {
-    if (repo.updated) {
-      if (repo.updated.metadataLastUpdated) {
-        repo.updated.metadataLastUpdated = this._formatDate(
-          repo.updated.metadataLastUpdated
-        );
+    if (repo.date) {
+      if (repo.date.lastModified) {
+        repo.date.lastModified = this._formatDate(repo.date.lastModified);
       }
-      if (repo.updated.lastCommit) {
-        repo.updated.lastCommit = this._formatDate(repo.updated.lastCommit);
+      if (repo.date.metadataLastUpdated) {
+        repo.date.metadataLastUpdated = this._formatDate(repo.date.metadataLastUpdated);
       }
-      if (repo.updated.sourceCodeLastModified) {
-        repo.updated.sourceCodeLastModified = this._formatDate(
-          repo.updated.sourceCodeLastModified
-        );
+      if (repo.date.created) {
+        repo.date.created = this._formatDate(repo.date.created);
       }
     }
   }
@@ -443,9 +441,111 @@ class Formatter {
     return languagedata;
   }
 
-  _formatRepo(repo) {
+  _getUsageTypeExemptionText(repo) {
+    const exemptionTexts = JsonFile.readFileSync(path.join(__dirname, './repo_upgrade_texts.json'));
+    let usageType, exemptionText;
+
+    if (repo.openSourceProject === 1) {
+      usageType = 'openSource';
+      exemptionText = exemptionTexts.openSource;
+    } else if (repo.governmentWideReuseProject === 1) {
+      usageType = 'governmentWideReuse';
+      exemptionText = exemptionTexts.governmentWideReuse;
+    } else if (String(repo.exemption) === '1') {
+      usageType = 'exemptByLaw';
+      exemptionText = exemptionTexts.exemptByLaw;
+    } else if (String(repo.exemption) === '2') {
+      usageType = 'exemptByNationalSecurity';
+      exemptionText = exemptionTexts.exemptByNationalSecurity;
+    } else if (String(repo.exemption) === '3') {
+      usageType = 'exemptByAgencySystem';
+      exemptionText = exemptionTexts.exemptByAgencySystem;
+    } else if (String(repo.exemption) === '4') {
+      usageType = 'exemptByAgencyMission';
+      exemptionText = exemptionTexts.exemptByAgencyMission;
+    } else if (String(repo.exemption) === '5') {
+      usageType = 'exemptByCIO';
+      exemptionText = exemptionTexts.exemptByCIO;
+    } else {
+      usageType = null;
+      exemptionText = null;
+    }
+
+    return {usageType, exemptionText};
+
+  }
+  _upgradeOptionalFields(repo) {
+    repo.vcs = repo.vcs || ''
+    repo.disclaimerText = repo.disclaimerText || ''
+    repo.disclaimerURL = repo.disclaimerURL || ''
+    repo.relatedCode = [{
+      codeName: '',
+      codeURL: '',
+      isGovernmentRepo: false,
+    }]
+    repo.reusedCode = [{
+      name: '',
+      URL: '',
+    }]
+  }
+  _upgradeToPermissions(repo) {
+
+    repo.permissions = {};
+    repo.permissions.licenses = [];
+
+    repo.permissions.licenses.push({
+      URL: repo.license ? repo.license: null,
+      name: null
+    });
+    const { usageType, exemptionText } = this._getUsageTypeExemptionText(repo);
+
+    repo.permissions= { usageType, exemptionText };
+
+    delete repo.license;
+    delete repo.openSourceProject;
+    delete repo.governmentWideReuseProject;
+    delete repo.exemption;
+    delete repo.exemptionText;
+  }
+  _upgradeUpdatedToDate(repo) {
+    repo.date = {
+      created: '',
+      lastModified: '',
+      metadataLastUpdated: '',
+    };
+  
+    if (repo.updated) {
+      if (repo.updated.sourceCodeLastModified) {
+        repo.date.lastModified = this._formatDate(repo.updated.sourceCodeLastModified);
+      }
+  
+      if (repo.updated.metadataLastUpdated) {
+        repo.date.metadataLastUpdated = this._formatDate(repo.updated.metadataLastUpdated);
+      }
+  
+      delete repo.updated;
+    }
+  }
+  _upgradeProject(repo) {
+    repo.repositoryURL = repo.repository;
+    delete repo.repository;
+  
+    repo.homepageURL = repo.homepage;
+    delete repo.homepage;
+  
+    this._upgradeToPermissions(repo);
+  
+    repo.laborHours = null;
+  
+    this._upgradeUpdatedToDate(repo);
+    this._upgradeOptionalFields(repo);
+  
+    return repo;
+  }
+
+  _formatRepo(repo){
     // add repoId using a combination of agency acronym, organization, and
-    // project name fields
+    // repo name fields
     let repoId = Utils.transformStringToKey(
       [repo.agency.acronym, repo.organization, repo.name].join("_")
     );
@@ -464,14 +564,20 @@ class Formatter {
     return repo;
   }
 
-  formatRepo(repo, callback) {
+  formatRepo(schemaVersion = '1.0.1', repo, callback) {
     let formattedRepo;
     try {
-      formattedRepo = this._formatRepo(repo);
+      if(schemaVersion === '2.0.0') {
+        formattedRepo = this._formatRepo(repo);
+      } else {
+        this._upgradeProject(repo);
+        formattedRepo = this._formatRepo(repo);
+      }
+      
       this.logger.debug('formatted repo', formattedRepo);
-    } catch (err) {
-      this.logger.error(`Error when formatting repo: ${err}`);
-      return callback(err, repo);
+    } catch (error) {
+      this.logger.error(`Error when formatting repo: ${error}`);
+      return callback(error, repo);
     }
 
     this.logger.debug(`Formatted repo ${repo.name} (${repo.repoID}).`);
