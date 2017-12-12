@@ -6,7 +6,7 @@ const AbstractIndexer = require("../abstract_indexer");
 
 const AgencyJsonStream = require("../repo/AgencyJsonStream");
 const RepoIndexerStream = require("../repo/RepoIndexStream");
-const ES_MAPPING = require("../../../indexes/repo/mapping_100.json");
+const ES_MAPPING = require("../../../indexes/repo/mapping_200.json");
 
 const ES_SETTINGS = require("../../../indexes/repo/settings.json");
 const ES_PARAMS = {
