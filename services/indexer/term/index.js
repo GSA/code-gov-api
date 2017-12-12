@@ -1,5 +1,4 @@
-const async               = require("async");
-const Writable            = require("stream").Writable;
+const Writable            = require("stream");
 const SearchStream        = require("../../../utils/search_stream");
 const AbstractIndexer     = require("../abstract_indexer");
 const RepoTermLoaderStream= require("./repo_term_loader_stream");
@@ -32,32 +31,41 @@ class RepoTermIndexerStream extends Writable {
     this.logger = termIndexer.logger;
   }
 
-  _indexTerm(term, done) {
+  _indexTerm(term) {
     let id = `${term.term_key}_${term.term_type}`;
-    this.logger.debug(
-      `Indexing term (${id}).`);
-    this.termIndexer.indexDocument({
-      "index": this.termIndexer.esIndex,
-      "type": this.termIndexer.esType,
-      "id": id,
-      "body": term
-    }, (err, response, status) => {
-      if(err) {
-        this.logger.error(err);
-      }
-      if (status) {
-        this.logger.debug('Status', status);
-      }
-      this.termIndexer.indexCounter++;
+    this.logger.debug(`Indexing term (${id}).`);
 
-      return done(err, response);
+    return new Promise((resolve, reject) => {
+      this.termIndexer.indexDocument({
+        "index": this.termIndexer.esIndex,
+        "type": this.termIndexer.esType,
+        "id": id,
+        "body": term
+      })
+      .then((response, status) => {
+        if (status) {
+          this.logger.debug('termIndexer.indexDocument - Status', status);
+        }
+        
+        this.termIndexer.indexCounter++;
+  
+        resolve(response);
+      })
+      .catch(err => {
+        this.logger.error(err);
+        reject(err);
+      });
     });
   }
 
   _write(term, enc, next) {
-    this._indexTerm(term, (err, response) => {
-      return next(null, response);
-    });
+    this._indexTerm(term)
+      .then(response => {
+        return next(null, response)
+      })
+      .catch(error => {
+        return next(error, null);
+      });
   }
 
 }
@@ -79,50 +87,41 @@ class TermIndexer extends AbstractIndexer {
     this.indexCounter = 0;
   }
 
-  indexTerms(callback) {
+  indexTerms() {
     let ss = this.ss;
     let rs = new RepoTermLoaderStream(this);
     let is = new RepoTermIndexerStream(this);
 
     ss.pipe(rs).pipe(is).on("finish", () => {
       this.logger.info(`Indexed ${this.indexCounter} ${this.esType} documents.`);
-      callback();
     });
   }
 
   static init(adapter, callback) {
     let indexer = new TermIndexer(adapter, ES_TERM_PARAMS);
     indexer.logger.info(`Started indexing (${indexer.esType}) indices.`);
-    async.waterfall([
-      (next) => {
-        indexer.indexExists(next);
-      },
-      (exists, next) => {
+    indexer.indexExists()
+      .then((exists) => {
         if(exists) {
-          indexer.deleteIndex(next);
-        } else {
-          next(null, null);
+          indexer.deleteIndex()
         }
-      },
-      (response, next) => {
-        indexer.initIndex(next);
-      },
-      (response, next) => {
-        indexer.initMapping(next);
-      },
-      (response, next) => {
-        indexer.indexTerms(next);
-      }
-    ], (err) => {
-      if(err) {
-        indexer.logger.error(err);
-      }
-      indexer.logger.info(`Finished indexing (${indexer.esType}) indices.`);
-      return callback(err, {
-        esIndex: indexer.esIndex,
-        esAlias: indexer.esAlias
+      })
+      .then(() => indexer.initIndex())
+      .then(() => indexer.initMapping())
+      .then(() => indexer.indexTerms())
+      .then(() => {
+        return callback(null, {
+          esIndex: indexer.esIndex,
+          esAlias: indexer.esAlias
+        });
+      })
+      .catch(error => {
+        indexer.logger.error(error);
+        return callback(error, {
+          esIndex: indexer.esIndex,
+          esAlias: indexer.esAlias
+        });
       });
-    });
   }
 
 }
