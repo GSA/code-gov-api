@@ -6,12 +6,60 @@
                 "index": "not_analyzed"
             },
             "agency": {
-                "type": "string",
-                "analyzer": "keyword_ci",
-                "fields": {
-                    "_fulltext": {
+                "type": "nested",
+                "properties": {
+                    "name": {
                         "type": "string",
-                        "analyzer": "englishfulltext"
+                        "analyzer": "keyword_ci",
+                        "fields": {
+                            "_fulltext": {
+                                "type": "string",
+                                "analyzer": "englishfulltext"
+                            }
+                        }
+                    },
+                    "acronym": {
+                        "type": "string",
+                        "analyzer": "keyword_ci",
+                        "fields": {
+                            "_fulltext": {
+                                "type": "string",
+                                "analyzer": "keyword_ci"
+                            }
+                        }
+                    },
+                    "website": {
+                        "type": "string",
+                        "index": "not_analyzed"
+                    },
+                    "codeUrl": {
+                        "type": "string",
+                        "index": "not_analyzed"
+                    },
+                    "requirements": {
+                        "type": "nested",
+                        "properties": {
+                            "agencyWidePolicy": {
+                                "type": "float",
+                                "index": "not_analyzed"
+                            }, 
+                            "openSourceRequirement": {
+                                "type": "float",
+                                "index": "not_analyzed"
+                            },
+                            "inventoryRequirement": {
+                                "type": "float",
+                                "index": "not_analyzed"
+                            },
+                            "schemaFormat": {
+                                "type": "float",
+                                "index": "not_analyzed"
+                            },
+                            "overallCompliance": {
+                                "type": "float",
+                                "index": "not_analyzed"
+                            }
+                        }
                     }
                 }
             },
@@ -53,6 +101,14 @@
                 "analyzer": "keyword_ci"
             },
             "name": {
+                "type": "string",
+                "analyzer": "keyword_ci"
+            },
+            "version": {
+                "type": "string",
+                "analyzer": "keyword_ci"
+            },
+            "organization": {
                 "type": "string",
                 "analyzer": "keyword_ci"
             },
@@ -275,21 +331,21 @@
                     }
                 }
             },
-            "updated": {
+            "date": {
                 "type": "nested",
                 "include_in_root": true,
                 "properties": {
                     "metadataLastUpdated": {
                         "type": "date",
-                        "format": "strict_date_optional_time||epoch_millis"
+                        "ignore_malformed": true
                     },
                     "lastCommit": {
                         "type": "date",
-                        "format": "strict_date_optional_time||epoch_millis"
+                        "ignore_malformed": true
                     },
                     "sourceCodeLastModified": {
                         "type": "date",
-                        "format": "strict_date_optional_time||epoch_millis"
+                        "ignore_malformed": true
                     }
                 }
             }
