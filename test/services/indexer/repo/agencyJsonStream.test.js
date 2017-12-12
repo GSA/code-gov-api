@@ -51,7 +51,7 @@ describe('AgencyJsonStream', function() {
   });
 
   it('Should return fomatted repos', function(){
-    const expectedFormattedRepo = {
+    const expectedFormattedRepo = [{
       name: 'Save Mail',
       organization: 'FAKE_ORG',
       description: 'FAKE Gmail extension to save messages to local disk',
@@ -95,7 +95,7 @@ describe('AgencyJsonStream', function() {
         metadataLastUpdated: '2017-04-22T00:00:00.000Z'
       },
       repoID: 'fake_fake_org_save_mail' 
-    }
+    }]
     const codeJson = JsonFile.readFileSync(path.join(fallbackDataDir, '/FAKE.json'));
 
     return agencyJsonStream._formatRepos(agency[0], { schemaVersion: '1.0.1', repos: codeJson.projects })
