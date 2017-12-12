@@ -5,8 +5,10 @@
   "website": "https://fake.gov/",
   "codeUrl": "/FAKE.json",
   "requirements": {
-    "agencyWidePolicy": 0,
-    "openSourceRequirement":0,
-    "inventoryRequirement":0
+    "agencyWidePolicy": 0, 
+    "openSourceRequirement": 0, 
+    "inventoryRequirement": 0, 
+    "schemaFormat": 1, 
+    "overallCompliance": 0 
   }
 }]
