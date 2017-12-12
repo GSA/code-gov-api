@@ -188,20 +188,17 @@ class AgencyJsonStream extends Transform {
   }
   
   _formatRepos(agency, validatedRepos) {
+    
     logger.debug('Entered _formatCodeJson - Agency: ', agency.acronym);
-
+    
     const {schemaVersion, repos} = validatedRepos;
 
-    repos.forEach(repo => {
-      repo.agency = agency;
-      Formatter.formatRepo(schemaVersion, repo, (err, formattedRepo) => {
-        if (err) {
-          const msg = `[Error] Formatting repo: ${repo.name}. Throwing it out of the indexing process.`;
-          logger.error(msg, err);
-        }
-        this.push(formattedRepo);
-      });
-    });
+    return Promise.all(
+      repos.map(repo => {
+        repo.agency = agency;
+        return Formatter.formatRepo(schemaVersion, repo);
+      })
+    );
   }
 
   _transform(agency, enc, callback) {
@@ -210,10 +207,9 @@ class AgencyJsonStream extends Transform {
 
     this._getAgencyCodeJson(agency)
       .then(codeJson => this._validateAgencyRepos(agency, codeJson))
-      .then(validatedRepos => {
-        this._formatRepos(agency, validatedRepos);
-        callback();
-      })
+      .then(validatedRepos => this._formatRepos(agency, validatedRepos))
+      .then(formattedRepos => formattedRepos.forEach(repo => this.push(repo)))
+      .then(() => callback())
       .catch(error => {
         logger.error(error);
         callback();
