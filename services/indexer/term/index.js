@@ -61,7 +61,7 @@ class RepoTermIndexerStream extends Writable {
   _write(term, enc, next) {
     this._indexTerm(term)
       .then(response => {
-        return next(null, response)
+        return next(null, response);
       })
       .catch(error => {
         return next(error, null);
@@ -103,7 +103,7 @@ class TermIndexer extends AbstractIndexer {
     indexer.indexExists()
       .then((exists) => {
         if(exists) {
-          indexer.deleteIndex()
+          indexer.deleteIndex();
         }
       })
       .then(() => indexer.initIndex())

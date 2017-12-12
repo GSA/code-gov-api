@@ -475,18 +475,18 @@ class Formatter {
 
   }
   _upgradeOptionalFields(repo) {
-    repo.vcs = repo.vcs || ''
-    repo.disclaimerText = repo.disclaimerText || ''
-    repo.disclaimerURL = repo.disclaimerURL || ''
+    repo.vcs = repo.vcs || '';
+    repo.disclaimerText = repo.disclaimerText || '';
+    repo.disclaimerURL = repo.disclaimerURL || '';
     repo.relatedCode = [{
       codeName: '',
       codeURL: '',
-      isGovernmentRepo: false,
-    }]
+      isGovernmentRepo: false
+    }];
     repo.reusedCode = [{
       name: '',
-      URL: '',
-    }]
+      URL: ''
+    }];
   }
   _upgradeToPermissions(repo) {
 
@@ -564,7 +564,7 @@ class Formatter {
     return repo;
   }
 
-  formatRepo(schemaVersion = '1.0.1', repo, callback) {
+  formatRepo(schemaVersion = '1.0.1', repo) {
     return new Promise((resolve, reject) => {
       let formattedRepo;
       try {
