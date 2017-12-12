@@ -84,6 +84,12 @@ class AgencyJsonStream extends Transform {
     });
   }
 
+  /**
+   * Validate agency repositories.
+   * @param {object} agency Object with agency metadata.
+   * @param {object} codeJson Object with the complete code inventory for the supplied agency.
+   * @returns {object} Object with schemaVersion of the supplied code.json and an array of it's validated repositories.
+   */
   _validateAgencyRepos(agency, codeJson) {
     logger.debug('Entered _validateAgencyRepos');
 
@@ -99,8 +105,13 @@ class AgencyJsonStream extends Transform {
     Reporter.reportVersion(agency.acronym, codeJson.version);
 
     let resultRepos = [];
+    const repos = Utils.getCodeJsonRepos(codeJson);
 
-    codeJson.projects.map(repo => {
+    if(!repos) {
+      return Promise.reject(`ERROR: ${agency.acronym} code.json has no projects or releaseEvents.`);
+    }
+
+    repos.map(repo => {
       const repoId = Utils.transformStringToKey([agency.acronym, repo.organization, repo.name].join("_"));
       const validator = getValidator(codeJson);
 
@@ -148,7 +159,10 @@ class AgencyJsonStream extends Transform {
     agency.requirements.overallCompliance = this._calculateOverallCompliance(agency.requirements);
     Reporter.reportRequirements(agency.acronym, agency.requirements);
     
-    return Promise.resolve(resultRepos);
+    return Promise.resolve({
+      schemaVersion: Utils.getCodeJsonVersion(codeJson),
+      repos: resultRepos
+    });
   }
 
   _calculateOverallCompliance(requirements){
@@ -173,12 +187,14 @@ class AgencyJsonStream extends Transform {
     }
   }
   
-  _formatRepos(agency, repos) {
+  _formatRepos(agency, validatedRepos) {
     logger.debug('Entered _formatCodeJson - Agency: ', agency.acronym);
+
+    const {schemaVersion, repos} = validatedRepos;
 
     repos.forEach(repo => {
       repo.agency = agency;
-      Formatter.formatRepo(repo, (err, formattedRepo) => {
+      Formatter.formatRepo(schemaVersion, repo, (err, formattedRepo) => {
         if (err) {
           const msg = `[Error] Formatting repo: ${repo.name}. Throwing it out of the indexing process.`;
           logger.error(msg, err);
@@ -193,22 +209,13 @@ class AgencyJsonStream extends Transform {
     Reporter.reportMetadata(agency.acronym, { agency });
 
     this._getAgencyCodeJson(agency)
-      .then(codeJson => {
-        if(codeJson.projects) {
-          return this._validateAgencyRepos(agency, codeJson);
-        } else {
-          const message = `ERROR: Agency ${agency.acronym} code.json has no projects.`;
-          Reporter.reportStatus(agency.acronym, message);
-          
-          return Promise.reject(message);
-        }
-      })
-      .then(repos => {
-        this._formatRepos(agency, repos);
+      .then(codeJson => this._validateAgencyRepos(agency, codeJson))
+      .then(validatedRepos => {
+        this._formatRepos(agency, validatedRepos);
         callback();
       })
-      .catch(err => {
-        logger.error(err);
+      .catch(error => {
+        logger.error(error);
         callback();
       });
   }
