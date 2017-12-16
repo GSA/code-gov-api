@@ -32,6 +32,8 @@ function getValidator(codeJson) {
  */
 function getSchemaValidators(schemaPath) {
   const ajv = new Ajv({ async: true });
+  ajv.addMetaSchema(require('ajv/lib/refs/json-schema-draft-04.json'));
+
   return { 
     relaxed: ajv.compile(JsonFile.readFileSync(path.join(schemaPath, '/relaxed.json'))), 
     strict: ajv.compile(JsonFile.readFileSync(path.join(schemaPath, '/strict.json'))), 
