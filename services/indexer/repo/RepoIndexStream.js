@@ -12,33 +12,23 @@ class RepoIndexerStream extends Writable {
   }
 
   _indexRepo(repo) {
-    return new Promise((fulfill, reject) => {
-      this.indexer.indexDocument({
-        "index": this.indexer.esIndex,
-        "type": this.indexer.esType,
-        "id": repo.repoID,
-        "body": repo
-      })
+    return this.indexer.indexDocument({
+      "index": this.indexer.esIndex,
+      "type": this.indexer.esType,
+      "id": repo.repoID,
+      "body": repo
+    });
+  }
+
+  _write(repo, enc, next) {
+    this._indexRepo(repo)
       .then((response, status) => {
         if (status) {
           logger.debug('indexer.indexDocument - Status', status);
         }
         
         this.indexer.indexCounter++;
-  
-        fulfill(response);
-      })
-      .catch(err => {
-        logger.error(err);
-        reject(err);
-      });
-    });
-  }
 
-  _write(repo, enc, next) {
-    this._indexRepo(repo)
-      .then((response) => {
-        logger.debug('_indexRepo promise fulfilled');
         return next(null, response);
       })
       .catch(err => {
