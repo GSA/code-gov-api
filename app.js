@@ -1,7 +1,5 @@
-const config = require("./config");
-require('newrelic');
-
 const bodyParser = require('body-parser');
+const config = require("./config");
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const express = require("express");
@@ -117,17 +115,18 @@ app.use(function(err, req, res) {
 
 // start the server, but only if we're not in the middle of a test
 if(!module.parent) {
+  require('newrelic');
+
   app.listen(port);
-}
+  // schedule the interval at which indexings should happen
+  const indexInterval = config.INDEX_INTERVAL_SECONDS;
+  const indexer = new Indexer(config);
+  if (indexInterval) {
+    indexer.schedule(indexInterval);
+    logger.info(`Production: re-indexing every ${indexInterval} seconds`);
+  }
 
-// schedule the interval at which indexings should happen
-const indexInterval = config.INDEX_INTERVAL_SECONDS;
-const indexer = new Indexer(config);
-if (indexInterval) {
-  indexer.schedule(indexInterval);
-  logger.info(`Production: re-indexing every ${indexInterval} seconds`);
+  logger.info(`Started API server at http://0.0.0.0:${port}/`);
 }
-
-logger.info(`Started API server at http://localhost:${port}/`);
 
 module.exports = app;
