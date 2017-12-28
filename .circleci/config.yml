@@ -6,6 +6,8 @@ jobs:
       - image: circleci/node:8.9.3-stretch
     steps:
       - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
       - run:
           name: install-node-modules
           command: npm install --all
