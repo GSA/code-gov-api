@@ -3,11 +3,9 @@ jobs:
   build:
     working_directory: ~/code-gov-api
     docker:
-      - image: circleci/node:carbon
+      - image: circleci/node:8.9.3-stretch
     steps:
       - checkout
-      - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
       - run:
           name: install-node-modules
           command: npm install --all
@@ -21,7 +19,7 @@ jobs:
   test:
     working_directory: ~/code-gov-api
     docker:
-      - image: circleci/node:carbon
+      - image: circleci/node:8.9.3-stretch
     steps:
       - checkout
       - run: 
@@ -56,7 +54,7 @@ jobs:
   deploy-staging:
     working_directory: ~/code-gov-api
     docker:
-      - image: circleci/node:carbon
+      - image: circleci/node:8.9.3-stretch
     steps:
       - checkout
       - restore_cache:
@@ -83,7 +81,7 @@ jobs:
   deploy-production:
     working_directory: ~/code-gov-api
     docker:
-      - image: circleci/node:carbon
+      - image: circleci/node:8.9.3-stretch
     steps:
       - checkout
       - restore_cache:
