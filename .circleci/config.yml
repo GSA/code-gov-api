@@ -3,12 +3,32 @@ jobs:
   build:
     working_directory: ~/code-gov-api
     docker:
-      - image: circleci/node:boron
+      - image: circleci/node:carbon
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: install-node-modules
+          command: npm install --all
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: run-linter
+          command: npm run lint
+  test:
+    working_directory: ~/code-gov-api
+    docker:
+      - image: circleci/node:carbon
     steps:
       - checkout
       - run: 
           name: download-cc-test-reporter
           command: curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+      - run:
+          command: ./cc-test-reporter before-build
       - run: 
           name: make-test-reporter-executable
           command: chmod +x ./cc-test-reporter
@@ -22,11 +42,6 @@ jobs:
           paths:
             - ./node_modules
       - run:
-          command: ./cc-test-reporter before-build
-      - run:
-          name: run-linter
-          command: npm run lint
-      - run:
           name: run-test
           command: npm test
       - run:
@@ -38,7 +53,21 @@ jobs:
       - store_artifacts:
           path: coverage
           prefix: coverage
-      
+  deploy-staging:
+    working_directory: ~/code-gov-api
+    docker:
+      - image: circleci/node:carbon
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: install-node-modules
+          command: npm install --all
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
       # Install Cloud Foundry cli (cf) before deploy step. cf is used to push project to Cloud.gov
       - run:
           name: install-cf-cli
@@ -46,19 +75,63 @@ jobs:
             curl -v -L -o cf-cli_amd64.deb 'https://cli.run.pivotal.io/stable?release=debian64&source=github'
             sudo dpkg -i cf-cli_amd64.deb
             cf -v
-
+      - run:
+          name: deploy-to-staging
+          command: |
+            cf login -a ${CF_URL} -u ${CF_STAGING_DEPLOYER} -p ${CF_STAGING_DEPLOYER_PASS} -o ${CF_ORG} -s ${CF_STAGING_SPACE}
+            cf push ${CF_APP}
+  deploy-production:
+    working_directory: ~/code-gov-api
+    docker:
+      - image: circleci/node:carbon
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: install-node-modules
+          command: npm install --all
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: install-cf-cli
+          command: |
+            curl -v -L -o cf-cli_amd64.deb 'https://cli.run.pivotal.io/stable?release=debian64&source=github'
+            sudo dpkg -i cf-cli_amd64.deb
+            cf -v
       # Production deployment.
       - deploy:
           command: |
-            if [ "${CIRCLE_TAG}" =~ "${DEPLOY_TAG_PATTERN}" ]; then
               cf login -a ${CF_URL} -u ${CF_PRODUCTION_DEPLOYER} -p ${CF_PRODUCTION_DEPLOYER_PASS} -o ${CF_ORG} -s ${CF_PRODUCTION_SPACE}
               cf push ${CF_APP}
-            fi
-
-      # Staging deployment.
-      - deploy:
-          command: |
-            if [ "${CIRCLE_BRANCH}" == "${STAGING_DEPLOY_BRANCH}" ]; then
-              cf login -a ${CF_URL} -u ${CF_STAGING_DEPLOYER} -p ${CF_STAGING_DEPLOYER_PASS} -o ${CF_ORG} -s ${CF_STAGING_SPACE}
-              cf push ${CF_APP}
-            fi
+workflows:
+  version: 2
+  build-test-deploy:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build
+      - hold:
+          type: approve
+          requires:
+            - test
+          filters:
+            branch:
+              only: ${STAGING_DEPLOY_BRANCH}
+            tags:
+              only: ${DEPLOY_TAG_PATTERN}
+      - deploy-staging:
+          requires:
+            - hold
+          filters:
+            branch: 
+              only: ${STAGING_DEPLOY_BRANCH}
+      - deploy-production:
+          requires:
+            - hold
+          filters:
+            tags:
+              only: ${DEPLOY_TAG_PATTERN}
