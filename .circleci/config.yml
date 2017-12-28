@@ -115,11 +115,11 @@ workflows:
           requires:
             - build
       - hold:
-          type: approve
+          type: approval
           requires:
             - test
           filters:
-            branch:
+            branches:
               only: ${STAGING_DEPLOY_BRANCH}
             tags:
               only: ${DEPLOY_TAG_PATTERN}
@@ -127,7 +127,7 @@ workflows:
           requires:
             - hold
           filters:
-            branch: 
+            branches: 
               only: ${STAGING_DEPLOY_BRANCH}
       - deploy-production:
           requires:
