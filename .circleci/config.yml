@@ -126,7 +126,7 @@ workflows:
             - test
           filters:
             branches:
-              only: ${STAGING_DEPLOY_BRANCH}
+              only: master
             tags:
               ignore: /.*/
       - deploy-staging:
@@ -134,7 +134,7 @@ workflows:
             - deploy-staging-hold
           filters:
             branches: 
-              only: ${STAGING_DEPLOY_BRANCH}
+              only: master
             tags:
               ignore: /.*/
       - deploy-prod-hold:
@@ -143,7 +143,7 @@ workflows:
             - test
           filters:
             tags:
-              only: ${DEPLOY_TAG_PATTERN}
+              only: /^v(\d+\.){2}\d+/
             branches:
               ignore: /.*/
       - deploy-production:
@@ -151,6 +151,6 @@ workflows:
             - deploy-prod-hold
           filters:
             tags:
-              only: ${DEPLOY_TAG_PATTERN}
+              only: /^v(\d+\.){2}\d+/
             branches:
               ignore: /.*/
