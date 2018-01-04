@@ -127,6 +127,8 @@ workflows:
           filters:
             branches:
               only: ${STAGING_DEPLOY_BRANCH}
+            tags:
+              ignore: /.*/
       - deploy-prod-hold:
           type: approval
           requires:
@@ -134,15 +136,21 @@ workflows:
           filters:
             tags:
               only: ${DEPLOY_TAG_PATTERN}
+            branches:
+              ignore: /.*/
       - deploy-staging:
           requires:
             - deploy-staging-hold
           filters:
             branches: 
               only: ${STAGING_DEPLOY_BRANCH}
+            tags:
+              ignore: /.*/
       - deploy-production:
           requires:
             - deploy-prod-hold
           filters:
             tags:
               only: ${DEPLOY_TAG_PATTERN}
+            branches:
+              ignore: /.*/
