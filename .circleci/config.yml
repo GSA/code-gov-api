@@ -9,6 +9,9 @@ jobs:
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
+          name: verify-npm-cache
+          command: npm cache verify
+      - run:
           name: install-node-modules
           command: npm install --all
       - save_cache:
@@ -34,6 +37,9 @@ jobs:
           command: ./cc-test-reporter before-build
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: verify-npm-cache
+          command: npm cache verify
       - run:
           name: install-node-modules
           command: npm install --all
