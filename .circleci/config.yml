@@ -120,24 +120,29 @@ workflows:
       - test:
           requires:
             - build
-      - hold:
+      - deploy-staging-hold:
           type: approval
           requires:
             - test
           filters:
             branches:
               only: ${STAGING_DEPLOY_BRANCH}
+      - deploy-prod-hold:
+          type: approval
+          requires:
+            - test
+          filters:
             tags:
               only: ${DEPLOY_TAG_PATTERN}
       - deploy-staging:
           requires:
-            - hold
+            - deploy-staging-hold
           filters:
             branches: 
               only: ${STAGING_DEPLOY_BRANCH}
       - deploy-production:
           requires:
-            - hold
+            - deploy-prod-hold
           filters:
             tags:
               only: ${DEPLOY_TAG_PATTERN}
