@@ -1,11 +1,11 @@
-const Writable            = require("stream");
+const Writable            = require("stream").Writable;
 const SearchStream        = require("../../../utils/search_stream");
 const AbstractIndexer     = require("../abstract_indexer");
 const RepoTermLoaderStream= require("./repo_term_loader_stream");
 
 // NOTE: dependent on elasticsearch repos being indexed
 
-const ES_REPO_MAPPING = require("../../../indexes/repo/mapping_100.json");
+const ES_REPO_MAPPING = require("../../../indexes/repo/mapping_200.json");
 const ES_REPO_SETTINGS = require("../../../indexes/repo/settings.json");
 const ES_REPO_PARAMS = {
   "esAlias": "repos",
@@ -42,19 +42,19 @@ class RepoTermIndexerStream extends Writable {
         "id": id,
         "body": term
       })
-      .then((response, status) => {
-        if (status) {
-          this.logger.debug('termIndexer.indexDocument - Status', status);
-        }
+        .then((response, status) => {
+          if (status) {
+            this.logger.debug('termIndexer.indexDocument - Status', status);
+          }
         
-        this.termIndexer.indexCounter++;
+          this.termIndexer.indexCounter++;
   
-        resolve(response);
-      })
-      .catch(err => {
-        this.logger.error(err);
-        reject(err);
-      });
+          resolve(response);
+        })
+        .catch(err => {
+          this.logger.error(err);
+          reject(err);
+        });
     });
   }
 
