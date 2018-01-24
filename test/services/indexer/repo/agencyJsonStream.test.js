@@ -5,6 +5,7 @@ const chai = require('chai');
 const JsonStream = require('JSONStream');
 const JsonFile = require('jsonfile');
 const should = chai.should();
+const moment = require('moment');
 
 const AgencyJsonStream = require('../../../../services/indexer/repo/AgencyJsonStream');
 
@@ -91,8 +92,8 @@ describe('AgencyJsonStream', function() {
       }],
       date: {
         created: '',
-        lastModified: '2017-04-11T00:00:00.000Z',
-        metadataLastUpdated: '2017-04-22T00:00:00.000Z'
+        lastModified: moment('2017-04-11', 'YYYY-MM-DD').utc().toJSON(),
+        metadataLastUpdated: moment('2017-04-22', 'YYYY-MM-DD').utc().toJSON()
       },
       repoID: 'fake_fake_org_save_mail' 
     }]
