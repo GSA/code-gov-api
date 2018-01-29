@@ -9,10 +9,10 @@ function getConfig(env) {
   };
   if (config.prod_envs.includes(env)) {
     config = Object.assign(config, getProductionConfig());
-    config.LOGGER_LEVEL = 'INFO'
+    config.LOGGER_LEVEL = 'INFO';
   } else {
     config = Object.assign(config, getDevelopmentConfig());
-    config.LOGGER_LEVEL = 'DEBUG'
+    config.LOGGER_LEVEL = 'DEBUG';
   }
 
   config.AGENCY_ENDPOINTS_FILE = path.join(path.dirname(__dirname), 'config/agency_metadata.json');
@@ -26,6 +26,12 @@ function getConfig(env) {
     ? jsonfile.readFileSync(path.join(path.dirname(__dirname), './swagger-prod.json'))
     : jsonfile.readFileSync(path.join(path.dirname(__dirname), './swagger.json'));
   config.SWAGGER_DOCUMENT.host = config.SWAGGER_HOST || `0.0.0.0:${config.PORT}`;
+  config.issueTypeRegEx = /\[issue-type\]/;
+  config.skillLevelRegEx = /\[skill-level\]/;
+  config.effortRegEx = /\[effort\]/;
+  config.impactRegEx = /\[impact\]/;
+  config.featuredRegEx = /\[featured\]/;
+
   return config;
 }
 
