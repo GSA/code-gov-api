@@ -20,13 +20,14 @@ describe('Get Github repository information', function() {
   it('should return code-gov-api information', function(done){
     getRepoInformation(githubUrl, githubConfig)
       .then(result => {
-        console.log(result)
-        result.repoInfo.name.should.equal('code-gov-api')
+        result.name.should.equal('code-gov-api')
+        result.homepage.should.equal('http://code.gov')
       }).then(done, done);
   });
   it('should return repository issues', function(done) {
     getRepoIssues(githubUrl, githubConfig)
       .then(issues => {
+        console.log(issues);
         issues.should.be.a('array');
       }).then(done, done);
   });
