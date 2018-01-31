@@ -9,6 +9,7 @@ const path = require('path');
 const pkg = require("../package.json");
 const Utils = require('../utils');
 const repoMapping = require('../indexes/repo/mapping_100.json');
+const { getRepoInformation } = require('../integrations');
 
 const logger = new Logger({ name: 'routes.index' });
 
@@ -85,12 +86,18 @@ const queryReposAndSendResponse = (searcher, query, response, next) => {
     return response.status(400).json(error);
   }
 
-  searcher.searchRepos(query, (error, repos) => {
+  searcher.searchRepos(query, (error, codeGovRepos) => {
     if(error) {
       logger.error(error);
       return response.sendStatus(500);
     }
-    response.json(repos);
+
+    const resultRepos = codeGovRepos.repos.map(repo => {
+      repo.githubInfo = getRepoInformation(repo);
+      return repo;
+    });
+
+    response.json(resultRepos);
   });
 };
 
