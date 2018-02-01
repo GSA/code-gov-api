@@ -7,7 +7,6 @@ if (process.env.NODE_ENV === "prod" || process.env.NODE_ENV === "production") {
   config = getProductionConfig();
 } else {
   config = getDevelopmentConfig();
-  process.env.nrkey = config.NR_KEY;
 }
 
 config.AGENCY_ENDPOINTS_FILE = path.join(path.dirname(__dirname), config.AGENCY_ENDPOINTS_FILE);
