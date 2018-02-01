@@ -41,7 +41,7 @@ class AgencyJsonStream extends Transform {
     });
   }
 
-  _getAgencyCodeJson(agency){
+  _getAgencyCodeJson(agency, config){
     logger.debug('Entered saveFetchedCodeJson - Agency: ', agency.acronym);
 
     return new Promise((fulfill, reject) => {
@@ -54,7 +54,7 @@ class AgencyJsonStream extends Transform {
         }
       };
   
-      if(process.env.NODE_ENV === 'prod' || process.env.NODE_ENV === 'production') {
+      if(config.prod_envs.includes(process.env.NODE_ENV)) {
         request(requestParams, (err, response, body) => {
           const errorMessage = 'FAILURE: There was an error fetching the code.json:';
           if(err) {
