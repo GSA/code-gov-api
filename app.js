@@ -115,7 +115,9 @@ app.use(function(err, req, res) {
 
 // start the server, but only if we're not in the middle of a test
 if(!module.parent) {
-  require('newrelic');
+  if(config.prod_envs.includes(process.env.NODE_ENV)) {
+    require('newrelic');
+  }
 
   app.listen(port);
   // schedule the interval at which indexings should happen
