@@ -3,7 +3,9 @@ const getProductionConfig = require('./prod');
 const getDevelopmentConfig = require('./dev');
 let config;
 
-if (process.env.NODE_ENV === "prod" || process.env.NODE_ENV === "production") {
+config.prod_envs = ['prod', 'production', 'stag', 'staging'];
+
+if (config.prod_envs.includes(process.env.NODE_ENV)) {
   config = getProductionConfig();
 } else {
   config = getDevelopmentConfig();
