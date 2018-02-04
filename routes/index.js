@@ -29,18 +29,13 @@ const _readStatusReportFile = (config, next) => {
 };
 
 const _readAgencyEndpointsFile = (config, next) => {
-  const agencyEndpointsFilepath = _getRelativeFilepath(config.AGENCY_ENDPOINTS_FILE);
-  fs.readFile(agencyEndpointsFilepath, (err, data) => {
+  fs.readFile(config.AGENCY_ENDPOINTS_FILE, (err, data) => {
     if (err) {
       return next(err);
     }
     let agencyEndpoints = JSON.parse(data);
     return next(null, agencyEndpoints);
   });
-};
-
-const _getRelativeFilepath = (filepath) => {
-  return path.join(__dirname, filepath);
 };
 
 const _getInvalidRepoQueryParams = (queryParams) => {
@@ -97,9 +92,7 @@ const queryReposAndSendResponse = (searcher, query, response, next) => {
 function _getFileDataByAgency(request, directoryPath) {
   return new Promise((resolve, reject) => {
     let agency = request.params.agency.toUpperCase();
-    const filePath = _getRelativeFilepath(
-      `${directoryPath}/${agency}.json`
-    );
+    const filePath = `${directoryPath}/${agency}.json`
     Jsonfile.readFile(filePath, (err, data) => {
       if (err) {
         reject(err);
@@ -153,7 +146,7 @@ function getApiRoutes(config, searcher, router) {
 
     async.parallel({
       agencyDataHash: (next) => {
-        _readAgencyEndpointsFile((error, agencyEndpoints) => {
+        _readAgencyEndpointsFile(config, (error, agencyEndpoints) => {
           if (error) {
             return next(error);
           }
