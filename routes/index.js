@@ -5,7 +5,6 @@ const git = require("git-rev");
 const Jsonfile = require("jsonfile");
 const Logger = require('../utils/logger');
 const marked = require('marked');
-const path = require('path');
 const pkg = require("../package.json");
 const Utils = require('../utils');
 const repoMapping = require('../indexes/repo/mapping_100.json');
@@ -92,7 +91,7 @@ const queryReposAndSendResponse = (searcher, query, response, next) => {
 function _getFileDataByAgency(request, directoryPath) {
   return new Promise((resolve, reject) => {
     let agency = request.params.agency.toUpperCase();
-    const filePath = `${directoryPath}/${agency}.json`
+    const filePath = `${directoryPath}/${agency}.json`;
     Jsonfile.readFile(filePath, (err, data) => {
       if (err) {
         reject(err);
