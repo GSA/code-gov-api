@@ -78,13 +78,13 @@
         }
       }
     },
-    "/repo/{repoId}": {
+    "/repos/{repoId}": {
       "get": {
         "tags": [
           "repo"
         ],
-        "summary": "",
-        "description": "",
+        "summary": "Get information for specified repoId",
+        "description": "Gets the information of a specific repository index with the passed repoId.",
         "produces": [
           "application/json"
         ],
@@ -94,8 +94,7 @@
             "in": "path",
             "description": "ID of repo to return",
             "required": true,
-            "type": "integer",
-            "format": "int64"
+            "type": "string"
           }
         ],
         "responses": {
@@ -119,8 +118,8 @@
         "tags": [
           "terms"
         ],
-        "summary": "Get a list of repos",
-        "description": "",
+        "summary": "Get a list of terms",
+        "description": "Get a list of terms that were extracted from the repositories indexed.",
         "consumes": [
           "application/json"
         ],
@@ -149,7 +148,7 @@
           "agencies"
         ],
         "summary": "Get a list of agencies",
-        "description": "",
+        "description": "Get a list of agencies.",
         "consumes": [
           "application/json"
         ],
@@ -193,8 +192,8 @@
         "tags": [
           "languages"
         ],
-        "summary": "Get a list of agencies",
-        "description": "",
+        "summary": "Get a list of programming languages found in our code inventory.",
+        "description": "This returns a list of the programming languages that are used in the indexed code inventory. When a repo is index the programming language is extracted written to a file.",
         "consumes": [
           "application/json"
         ],
@@ -205,7 +204,7 @@
           {
             "name": "size",
             "in": "query",
-            "description": "Number of agencies to return",
+            "description": "Number of programming languages to return",
             "required": false,
             "type": "number"
           },
@@ -238,7 +237,7 @@
         "tags": [
           "repo-json"
         ],
-        "summary": "Get the schema for a repo",
+        "summary": "Get the JSON schema for a repo",
         "description": "",
         "produces": [
           "application/json"
@@ -262,7 +261,7 @@
           "status-json"
         ],
         "summary": "Get a list of agencies with their compliance status",
-        "description": "",
+        "description": "Get a list of agencies with their Federal Source Code Policy compliance status ",
         "produces": [
           "application/json"
         ],
@@ -284,8 +283,8 @@
         "tags": [
           "status"
         ],
-        "summary": "Get an HTML page detailing the status from status.json",
-        "description": "",
+        "summary": "Get an HTML page rendering the agencies status from status.json",
+        "description": "Get an HTML page rendering the agencies status from status.json",
         "produces": [
           "text/html"
         ],
@@ -308,7 +307,7 @@
           "status"
         ],
         "summary": "Get a list of issues for a particular agency",
-        "description": "",
+        "description": "Get a list of issues for a particular agency. These issues are grouped by software repository.",
         "produces": [
           "text/html"
         ],
@@ -339,7 +338,7 @@
           "status"
         ],
         "summary": "Get a list of repos by agency",
-        "description": "",
+        "description": "Lists out all repositories that have been indexed for a given agency.",
         "produces": [
           "application/json"
         ],
