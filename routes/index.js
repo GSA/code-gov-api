@@ -7,7 +7,7 @@ const Logger = require('../utils/logger');
 const marked = require('marked');
 const pkg = require("../package.json");
 const Utils = require('../utils');
-const repoMapping = require('../indexes/repo/mapping_100.json');
+const repoMapping = require('../indexes/repo/mapping_200.json');
 
 const logger = new Logger({ name: 'routes.index' });
 
