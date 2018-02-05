@@ -38,46 +38,37 @@ const _readAgencyEndpointsFile = (config, next) => {
 };
 
 const _getInvalidRepoQueryParams = (queryParams) => {
-  let without = _.without(queryParams,
-    "from", "size", "sort", "_fulltext", "include", "exclude");
+  let without = _.without(queryParams, "from", "size", "sort", "_fulltext", "include", "exclude");
+
   return without.filter((queryParam) => {
     if (_.includes(searchPropsByType["string"], queryParam)) {
       return false;
     } else if (queryParam.endsWith("_gte") || queryParam.endsWith("_lte")) {
       let paramWithoutOp = queryParam.substring(0, queryParam.length - 4);
-      if (
-        _.includes(searchPropsByType["date"], paramWithoutOp) ||
-        _.includes(searchPropsByType["byte"], paramWithoutOp)
-      ) {
+      if (_.includes(searchPropsByType["date"], paramWithoutOp)) {
         return false;
       }
-    } else if (
-      queryParam.endsWith("_lon") ||
-      queryParam.endsWith("_lat") ||
-      queryParam.endsWith("_dist")
-    ) {
-      // special endings for geo distance filtering.
-      let paramWithoutOp = queryParam.substring(0, queryParam.lastIndexOf("_"));
-      if ( _.includes(searchPropsByType["geo_point"], paramWithoutOp) ) {
-        return false;
-      }
-    }
+    } 
     return true;
   });
 };
 
 const queryReposAndSendResponse = (searcher, query, response, next) => {
   let queryParams = Object.keys(query);
-  // validate query params...
-  let invalidParams = _getInvalidRepoQueryParams(queryParams);
-  if (invalidParams.length > 0) {
-    let error = {
-      "Error": "Invalid query params.",
-      "Invalid Params": invalidParams
-    };
-    logger.error(error);
-    return response.status(400).json(error);
+
+  if(queryParams.length) {
+    // validate query params...
+    let invalidParams = _getInvalidRepoQueryParams(queryParams);
+    if (invalidParams.length > 0) {
+      let error = {
+        "Error": "Invalid query params.",
+        "Invalid Params": invalidParams
+      };
+      logger.error(error);
+      return response.status(400).json(error);
+    }
   }
+  
 
   searcher.searchRepos(query, (error, repos) => {
     if(error) {
