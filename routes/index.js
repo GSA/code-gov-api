@@ -68,7 +68,6 @@ const queryReposAndSendResponse = (searcher, query, response, next) => {
       return response.status(400).json(error);
     }
   }
-  
 
   searcher.searchRepos(query, (error, repos) => {
     if(error) {
@@ -280,11 +279,11 @@ function getApiRoutes(config, searcher, router) {
 
   router.get(`/status/:agency/fetched`, (request, response) => {
     _getFileDataByAgency(request, config.FETCHED_DIR)
-    .then(fetchedData => response.json(fetchedData))
-    .catch(error => {
-      logger.error(error);
-      return response.sendStatus(500);
-    });
+      .then(fetchedData => response.json(fetchedData))
+      .catch(error => {
+        logger.error(error);
+        return response.sendStatus(500);
+      });
   });
 
   router.get(`/status/:agency/discovered`, (request, response) => {

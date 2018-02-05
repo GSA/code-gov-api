@@ -267,7 +267,7 @@ class Searcher {
         } else {
           body.sort(sortField, 'asc');
         }
-      })
+      });
     } else {
       body.sort('name', q['sort'] || 'asc');
     }
