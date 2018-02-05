@@ -4,13 +4,15 @@ const moment              = require("moment");
 const config              = require("../../config");
 const Utils               = require("../../utils");
 const Logger              = require("../../utils/logger");
-const repoMapping         = require("../../indexes/repo/mapping_100.json");
+const repoMapping         = require("../../indexes/repo/mapping_200.json");
 
 const DATE_FORMAT = "YYYY-MM-DD";
 const REPO_RESULT_SIZE_MAX = 3000;
 const REPO_RESULT_SIZE_DEFAULT = 10;
 const TERM_RESULT_SIZE_MAX = 100;
 const TERM_RESULT_SIZE_DEFAULT = 5;
+const ELASTICSEARCH_SORT_ORDERS = ['asc', 'desc'];
+const ELASTICSEARCH_SORT_MODES = ['min', 'max', 'sum', 'avg', 'median'];
 const searchPropsByType =
   Utils.getFlattenedMappingPropertiesByType(repoMapping["repo"]);
 
@@ -31,7 +33,7 @@ class Searcher {
 
     body.query("match", "repoID", id);
     let query = body.build("v2");
-    // logger.info(query);
+    logger.debug(query);
 
     return query;
   }
@@ -131,49 +133,6 @@ class Searcher {
     }
   }
 
-  // _addNestedFilters(body, q) {
-  //   //Get the list of property paths to treat as a Nested Filter.
-  //   let possibleNestedFilterProps =
-  //     _.chain(searchPropsByType["nested"]) //Get nested properties
-  //     .intersection(NESTED_SEARCH_PROPS_FILTER) //Filter from whitelist
-  //     .sort()
-  //     .value(); //Sort remaining props to be able to match parent paths over child paths.
-  //
-  //   //iterate over the possibilities to see if there are at least 2 fields,
-  //   //if there are 2 or more properties to nest we will, otherwise we will
-  //   //pass off to the normal filter handlers.
-  //   possibleNestedFilterProps.forEach((nestedfield) => {
-  //     let paramsForNesting = _.pickBy(q, (value, key) => {
-  //       return key.startsWith(nestedfield);
-  //     });
-  //
-  //     if (paramsForNesting && _.keys(paramsForNesting).length > 1) {
-  //       //We need to use a nested filter since we have more than one parameter.
-  //
-  //       // ES 2.x removed the nested filter in lieu of nested queries
-  //       // you can add filters to queries in 2.x
-  //
-  //       //We will need to add a nested query to our main body.
-  //       //A nested query needs a query, so we will create a
-  //       // boolean "must", which holds its own query.
-  //
-  //       let nestedBodyQuery = new Bodybuilder();
-  //       let boolMustContents = new Bodybuilder();
-  //
-  //       this._addFieldFilters(nestedBodyQuery, paramsForNesting);
-  //       body.query("nested", nestedfield, 'avg', nestedBodyQuery.build());
-  //
-  //       //Now that we have added the keys, we need to remove the params
-  //       //from the original request params so we don't add duplicate
-  //       //filters.
-  //       _.keys(paramsForNesting).forEach((paramToRemove) => {
-  //         delete q[paramToRemove];
-  //       })
-  //     }
-  //
-  //   })
-  // }
-
   _addStringFilter(body, field, filter) {
     if (filter instanceof Array) {
       let orBody = new Bodybuilder();
@@ -229,111 +188,18 @@ class Searcher {
     });
   }
 
-  _addByteRangeFilters(body, q) {
-    const _addRangeFilter = (field, lteRange, gteRange) => {
-      let ranges = {};
-
-      const _addRangeForRangeType = (rangeType, byteRange) => {
-        if(byteRange) {
-          if(!isNaN(parseInt(byteRange))) {
-            ranges[rangeType] = byteRange;
-          } else {
-            throw new Error(
-              `Invalid number supplied for ${field}_${rangeType}.`
-            );
-          }
-        }
-      };
-
-      _addRangeForRangeType("lte", lteRange);
-      _addRangeForRangeType("gte", gteRange);
-
-      body.filter("range", field, ranges);
-    };
-
-    let possibleRangeProps = searchPropsByType["byte"];
-    possibleRangeProps.forEach((field) => {
-      let lteRange = q[field + "_lte"];
-      let gteRange = q[field + "_gte"];
-      if(lteRange || gteRange) {
-        _addRangeFilter(field, lteRange, gteRange);
-      }
-    });
-  }
-
-  // _addGeoDistanceFilters(body, q) {
-  //
-  //   //We need to put lat/long/distance into a single filter
-  //   const _addGeoDistanceFilter = (field, lat, lon, dist) => {
-  //     let err = "";
-  //     if (!(lat) || isNaN(parseFloat(lat))) {
-  //       err +=  `Geo Distance filter for ${field} missing or invalid latitude.  Please supply valid ${field}_lat. \n`
-  //     }
-  //     if (!(lon) || isNaN(parseFloat(lon))) {
-  //       err +=  `Geo Distance filter for ${field} missing or invalid longitude.  Please supply valid ${field}_lon.\n`
-  //     }
-  //
-  //     //TODO: add in validation of values for distance
-  //
-  //     if (err != "") {
-  //       throw new Error(err);
-  //       return;
-  //     }
-  //
-  //     //add in filter.
-  //     body.filter("geodistance", field, dist, { lat: lat, lon: lon})
-  //   }
-  //
-  //   //iterate over geo_point fields.
-  //   //make sure that we have lat/lon/and dist for each (maybe dist is optional)
-  //   let possibleGeoProps = searchPropsByType["geo_point"]
-  //   possibleGeoProps.forEach((field) => {
-  //     let latParam = q[field + "_lat"];
-  //     let lonParam = q[field + "_lon"];
-  //     let distParam = q[field + "_dist"];
-  //
-  //     if (latParam || lonParam || distParam) {
-  //       _addGeoDistanceFilter(field, latParam, lonParam, distParam);
-  //     }
-  //   });
-  //
-  // }
-
-  // _addBooleanFilters(body, q) {
-  //   const _addBooleanFilter = (field, filter) => {
-  //     const _stringToBool = (string) => {
-  //       return string === "true" || string === "1";
-  //     }
-  //     if(filter instanceof Array) {
-  //       let orBody = new Bodybuilder();
-  //       filter.forEach((filterEl) => {
-  //         orBody.orFilter("term", field, _stringToBool(filterEl));
-  //       });
-  //       body.filter("bool", "and", orBody.build("v2"));
-  //     } else {
-  //       body.filter("term", field, _stringToBool(filter));
-  //     }
-  //   };
-  //
-  //   searchPropsByType["boolean"].forEach((field) => {
-  //     if(q[field]) {
-  //       _addBooleanFilter(field, q[field]);
-  //     }
-  //   });
-  // }
-
   _addSizeFromParams(body, q) {
-    q.size = q.size ? q.size : REPO_RESULT_SIZE_DEFAULT;
+    q.size = q.size || REPO_RESULT_SIZE_DEFAULT;
     let size = q.size > REPO_RESULT_SIZE_MAX ? REPO_RESULT_SIZE_MAX : q.size;
-    let from = q.from ? q.from : 0;
+    let from = q.from || 0;
     body.size(size);
     body.from(from);
   }
 
   _addIncludeExclude(body, q) {
-    let include = q.include;
-    let exclude = q.exclude;
-
+    let include = q.include || null;
+    let exclude = q.exclude || null;
+    let _source = {};
     const _enforceArray = (obj) => {
       if (!(obj instanceof Array)) {
         if (typeof(obj) === "string") {
@@ -346,12 +212,14 @@ class Searcher {
       }
     };
 
-    if (include || exclude) {
-      include = _enforceArray(include);
-      exclude = _enforceArray(exclude);
-      let _source = {};
-      if (include) _source.include = include;
-      if (exclude) _source.exclude = exclude;
+    if (include) {
+      _source.include = _enforceArray(include);
+    }
+    if(exclude) {
+      _source.exclude = _enforceArray(exclude);
+    }
+
+    if(Object.keys(_source).length) {
       body.rawOption("_source", _source);
     }
   }
@@ -365,9 +233,6 @@ class Searcher {
   _addFieldFilters(body, q){
     this._addStringFilters(body, q);
     this._addDateRangeFilters(body, q);
-    this._addByteRangeFilters(body, q);
-    // this._addGeoDistanceFilters(body, q);
-    // this._addBooleanFilters(body, q);
   }
 
   /**
@@ -377,12 +242,38 @@ class Searcher {
    * @param {any} q The query parameters a user is searching for
    */
   _addSortOrder(body, q) {
-    // TODO: implement some sort of sorting?
-    logger.info('params', body, q);
+    if(q['sort']) {
+      const sortValues = [];
+      q.sort.split(',').forEach(value => {
+        if(value) {
+          sortValues.push(value.split('__'));
+        }
+      });
+
+      sortValues.forEach(sortValue => {
+        let sortOptions = {};
+        let sortField = sortValue[0];
+
+        if(sortValue.length > 1) {
+          sortValue.slice(1).forEach(item => {
+            if (ELASTICSEARCH_SORT_ORDERS.includes(item)) {
+              sortOptions.order = item;
+            }
+            if (ELASTICSEARCH_SORT_MODES.includes(item)) {
+              sortOptions.mode = item;
+            }
+          });
+          body.sort(sortField, sortOptions);
+        } else {
+          body.sort(sortField, 'asc');
+        }
+      })
+    } else {
+      body.sort('name', q['sort'] || 'asc');
+    }
   }
 
   _searchReposQuery(q) {
-    let query;
     let body = new Bodybuilder();
 
     // this._addNestedFilters(body, q);
@@ -393,33 +284,32 @@ class Searcher {
 
     this._addSortOrder(body, q);
 
-    query = body.build("v2");
+    let query = body.build("v2");
 
-    // logger.info(query);
+    logger.debug(query);
     return query;
   }
 
-  searchRepos(q, callback) {
-    logger.info("Repo searching", q);
+  searchRepos(requestQuery, callback) {
+    logger.info("Repo searching", requestQuery);
 
     this.client.search({
       index: 'repos',
       type: 'repo',
-      body: this._searchReposQuery(q)
-    }, (err, res) => {
-      if(err) {
-        logger.error(err);
-        return callback(err);
+      body: this._searchReposQuery(requestQuery)
+    }, (error, elasticSearchResponse) => {
+      if(error) {
+        logger.error(error);
+        return callback(error);
       }
-      // return callback(null, res);
       let repos = Utils.omitPrivateKeys(
-        _.map(res.hits.hits, (hit) => {
+        _.map(elasticSearchResponse.hits.hits, (hit) => {
           return hit._source;
         })
       );
 
       let formattedRes = {
-        total: res.hits.total,
+        total: elasticSearchResponse.hits.total,
         repos: repos
       };
       return callback(null, formattedRes);
