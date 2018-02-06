@@ -6,7 +6,7 @@
                 "index": "not_analyzed"
             },
             "agency": {
-                "type": "nested",
+                "type": "object",
                 "properties": {
                     "name": {
                         "type": "string",
@@ -64,7 +64,7 @@
                 }
             },
             "measurementType": {
-                "type": "nested",
+                "type": "object",
                 "properties":{
                     "method": {
                         "type": "string",
@@ -161,7 +161,7 @@
                 }
             },
             "contact": {
-                "type": "nested",
+                "type": "object",
                 "include_in_root": true,
                 "properties": {
                     "name": {
@@ -335,15 +335,15 @@
                 "type": "nested",
                 "include_in_root": true,
                 "properties": {
+                    "created": {
+                        "type": "date",
+                        "ignore_malformed": true
+                    },
+                    "lastModified": {
+                        "type": "date",
+                        "ignore_malformed": true
+                    },
                     "metadataLastUpdated": {
-                        "type": "date",
-                        "ignore_malformed": true
-                    },
-                    "lastCommit": {
-                        "type": "date",
-                        "ignore_malformed": true
-                    },
-                    "sourceCodeLastModified": {
                         "type": "date",
                         "ignore_malformed": true
                     }
