@@ -10,8 +10,8 @@
   "scripts": {
     "start": "NODE_ENV=production node app.js | ./node_modules/bunyan/bin/bunyan -o short",
     "debug": "NODE_ENV=development nodemon --inspect app.js | ./node_modules/bunyan/bin/bunyan -o short",
-    "index": "node ./scripts/index/index.js | ./node_modules/bunyan/bin/bunyan",
-    "index-debug": "node --debug-brk=5858 ./scripts/index/index.js | ./node_modules/bunyan/bin/bunyan",
+    "index": "NODE_ENV=production node ./scripts/index/index.js | ./node_modules/bunyan/bin/bunyan",
+    "index-debug": "NODE_ENV=development nodemon --inspect ./scripts/index/index.js | ./node_modules/bunyan/bin/bunyan",
     "index-repos": "node ./scripts/index/repo/index.js | ./node_modules/bunyan/bin/bunyan",
     "index-terms": "node ./scripts/index/term/index.js | ./node_modules/bunyan/bin/bunyan",
     "create-diffs": "node ./scripts/create_diffs/index.js --max_old_space_size=8192 | ./node_modules/bunyan/bin/bunyan",
