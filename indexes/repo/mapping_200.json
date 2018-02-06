@@ -233,7 +233,7 @@
                 }
             },
             "permissions": {
-                "type": "nested",
+                "type": "object",
                 "properties": {
                     "licenses": {
                         "type": "nested",
@@ -277,7 +277,7 @@
                 }
             },
             "laborHours": {
-                "type": "short"
+                "type": "integer"
             },
             "relatedCode": {
                 "type": "nested",
