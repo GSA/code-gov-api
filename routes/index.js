@@ -38,7 +38,7 @@ const _readAgencyEndpointsFile = (config, next) => {
 };
 
 const _getInvalidRepoQueryParams = (queryParams) => {
-  let without = _.without(queryParams, "from", "size", "sort", "_fulltext", "include", "exclude");
+  let without = _.without(queryParams, "from", "size", "sort", "q", "include", "exclude");
 
   return without.filter((queryParam) => {
     if (_.includes(searchPropsByType["string"], queryParam)) {
