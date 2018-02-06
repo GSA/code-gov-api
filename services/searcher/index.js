@@ -65,10 +65,10 @@ class Searcher {
                               SEARCH FOR REPOS
    ***********************************************************************/
 
-  _addMatchPhraseForFullText(body, q, field, boost) {
+  _addMatchPhraseForFullText(body, queryParams, field, boost) {
     let query = { "match_phrase": {} };
     query["match_phrase"][field] = {
-      "query": q._fulltext
+      "query": queryParams.q
     };
 
     if (boost) {
@@ -78,17 +78,17 @@ class Searcher {
     body.query("bool", "should", query);
   }
 
-  _addMatchForFullText(body, q, field) {
+  _addMatchForFullText(body, queryParams, field) {
     let query = { "match": {} };
-    query["match"][field] = q._fulltext;
+    query["match"][field] = queryParams.q;
 
     body.query("bool", "should", query);
   }
 
-  _addCommonCutoffForFullText(body, q, field, boost) {
+  _addCommonCutoffForFullText(body, queryParams, field, boost) {
     let query = { "common": {} };
     query["common"][field] = {
-      "query": q._fulltext,
+      "query": queryParams.q,
       "cutoff_frequency": 0.001,
       "low_freq_operator": "and"
     };
@@ -100,36 +100,30 @@ class Searcher {
     body.query("bool", "should", query);
   }
 
-  _addFullTextQuery(body, q) {
-    if (q._fulltext) {
+  _addFullTextQuery(body, queryParams) {
+    if (queryParams.q) {
       // need to nest `_fulltext` query as a "must"
       let ftBody = new Bodybuilder();
 
       ftBody.query("bool", "should", {
         "multi_match": {
-          "query": q._fulltext,
-          "fields": ["repoID"]
+          "query": queryParams.q,
+          "fields": [
+            "repoID",
+            "agency.acronym",
+            "agency.name",
+            "contact.name",
+            "contact.email",
+            "partners.name",
+            "partners.email",
+            "description",
+            "tags",
+            "permissions.licenses.name"
+          ]
         }
       });
-      this._addMatchPhraseForFullText(ftBody, q, "agency._fulltext", 4);
-      this._addCommonCutoffForFullText(ftBody, q, "agency._fulltext", 4);
-      this._addMatchPhraseForFullText(ftBody, q, "description._fulltext");
-      this._addCommonCutoffForFullText(ftBody, q, "description._fulltext");
-      this._addMatchPhraseForFullText(ftBody, q, "tags", 4);
-      this._addCommonCutoffForFullText(ftBody, q, "tags", 4);
-      this._addMatchForFullText(ftBody, q, "codeLanguage.language", 4);
-      this._addMatchForFullText(ftBody, q, "contact.name._fulltext", 4);
-      this._addMatchForFullText(ftBody, q, "contact.email._fulltext", 4);
-      this._addMatchForFullText(ftBody, q, "contact.twitter._fulltext", 4);
-      this._addMatchForFullText(ftBody, q, "contact.phone._fulltext", 4);
-      this._addMatchForFullText(ftBody, q, "partners.name._fulltext", 4);
-      this._addMatchForFullText(ftBody, q, "partners.email._fulltext", 4);
-      this._addMatchForFullText(ftBody, q, "contact.twitter._fulltext", 4);
-      this._addMatchForFullText(ftBody, q, "license._fulltext", 4);
 
-      let ftQuery = ftBody.build("v2")["query"];
-
-      body.query("bool", "must", ftQuery);
+      body.query("bool", "must", ftBody.build("v2")["query"]);
     }
   }
 
@@ -146,15 +140,16 @@ class Searcher {
     }
   }
 
-  _addStringFilters(body, q) {
-    searchPropsByType["string"].forEach((field) => {
-      if(q[field]) {
-        this._addStringFilter(body, field, q[field]);
+  _addStringFilters(body, queryParams) {
+    
+    searchPropsByType['string'].forEach((field) => {
+      if(queryParams[field]) {
+        this._addStringFilter(body, field, queryParams[field]);
       }
     });
   }
 
-  _addDateRangeFilters(body, q) {
+  _addDateRangeFilters(body, queryParams) {
     const _addRangeFilter = (field, lteRange, gteRange) => {
       let ranges = {};
 
@@ -180,25 +175,25 @@ class Searcher {
 
     let possibleRangeProps = searchPropsByType["date"];
     possibleRangeProps.forEach((field) => {
-      let lteRange = q[field + "_lte"];
-      let gteRange = q[field + "_gte"];
+      let lteRange = queryParams[field + "_lte"];
+      let gteRange = queryParams[field + "_gte"];
       if(lteRange || gteRange) {
         _addRangeFilter(field, lteRange, gteRange);
       }
     });
   }
 
-  _addSizeFromParams(body, q) {
-    q.size = q.size || REPO_RESULT_SIZE_DEFAULT;
-    let size = q.size > REPO_RESULT_SIZE_MAX ? REPO_RESULT_SIZE_MAX : q.size;
-    let from = q.from || 0;
+  _addSizeFromParams(body, queryParams) {
+    queryParams.size = queryParams.size || REPO_RESULT_SIZE_DEFAULT;
+    let size = queryParams.size > REPO_RESULT_SIZE_MAX ? REPO_RESULT_SIZE_MAX : queryParams.size;
+    let from = queryParams.from || 0;
     body.size(size);
     body.from(from);
   }
 
-  _addIncludeExclude(body, q) {
-    let include = q.include || null;
-    let exclude = q.exclude || null;
+  _addIncludeExclude(body, queryParams) {
+    let include = queryParams.include || null;
+    let exclude = queryParams.exclude || null;
     let _source = {};
     const _enforceArray = (obj) => {
       if (!(obj instanceof Array)) {
@@ -230,21 +225,21 @@ class Searcher {
    * @param {any} body An instance of a Bodybuilder class
    * @param {any} q The query parameters a user is searching for
    */
-  _addFieldFilters(body, q){
-    this._addStringFilters(body, q);
-    this._addDateRangeFilters(body, q);
+  _addFieldFilters(body, queryParams){
+    this._addStringFilters(body, queryParams);
+    this._addDateRangeFilters(body, queryParams);
   }
 
   /**
    * Adds sorting depending on query input parameters.
    *
    * @param {any} body An instance of a Bodybuilder class
-   * @param {any} q The query parameters a user is searching for
+   * @param {any} queryParams The query parameters a user is searching for
    */
-  _addSortOrder(body, q) {
-    if(q['sort']) {
+  _addSortOrder(body, queryParams) {
+    if(queryParams['sort']) {
       const sortValues = [];
-      q.sort.split(',').forEach(value => {
+      queryParams.sort.split(',').forEach(value => {
         if(value) {
           sortValues.push(value.split('__'));
         }
@@ -269,20 +264,19 @@ class Searcher {
         }
       });
     } else {
-      body.sort('name', q['sort'] || 'asc');
+      body.sort('name', queryParams['sort'] || 'asc');
     }
   }
 
-  _searchReposQuery(q) {
+  _searchReposQuery(queryParams) {
     let body = new Bodybuilder();
 
-    // this._addNestedFilters(body, q);
-    this._addFieldFilters(body, q);
-    this._addSizeFromParams(body, q);
-    this._addIncludeExclude(body, q);
-    this._addFullTextQuery(body, q);
+    this._addFieldFilters(body, queryParams);
+    this._addSizeFromParams(body, queryParams);
+    this._addIncludeExclude(body, queryParams);
+    this._addFullTextQuery(body, queryParams);
 
-    this._addSortOrder(body, q);
+    this._addSortOrder(body, queryParams);
 
     let query = body.build("v2");
 
@@ -320,23 +314,23 @@ class Searcher {
                               SEARCH FOR TERMS
    ***********************************************************************/
 
-  _searchTermsQuery(q) {
+  _searchTermsQuery(queryParams) {
     // TODO: use BodyBuilder more
     let body = new Bodybuilder();
 
     // add query terms (boost when phrase is matched)
-    if (q.term) {
-      body.query("match", "term_suggest", q.term);
-      body.query("match", "term_suggest", q.term, {type: "phrase"});
+    if (queryParams.term) {
+      body.query("match", "term_suggest", queryParams.term);
+      body.query("match", "term_suggest", queryParams.term, {type: "phrase"});
     }
 
     // set the term types (use defaults if not supplied)
     let termTypes = config.TERM_TYPES_TO_SEARCH;
-    if (q.term_type) {
-      if (q.term_type instanceof Array) {
-        termTypes = q.term_type;
+    if (queryParams.term_type) {
+      if (queryParams.term_type instanceof Array) {
+        termTypes = queryParams.term_type;
       } else {
-        termTypes = [q.term_type];
+        termTypes = [queryParams.term_type];
       }
     }
     termTypes.forEach((termType) => {
@@ -346,10 +340,10 @@ class Searcher {
     // build the query and add custom fields (that bodyparser can't handle)
     let functionQuery = body.build("v2");
     // boost exact match
-    if (q.term) {
+    if (queryParams.term) {
       functionQuery.query.bool.should = {
         "match": {
-          "term": q.term
+          "term": queryParams.term
         }
       };
     }
@@ -364,9 +358,9 @@ class Searcher {
     functionQuery.boost_mode = "multiply";
 
     // set the size, from
-    let size = q.size || TERM_RESULT_SIZE_DEFAULT;
+    let size = queryParams.size || TERM_RESULT_SIZE_DEFAULT;
     size = size > TERM_RESULT_SIZE_MAX ? TERM_RESULT_SIZE_MAX : size;
-    let from = q.from ? q.from : 0;
+    let from = queryParams.from ? queryParams.from : 0;
 
     // finalize the query
     let query = {
@@ -379,12 +373,12 @@ class Searcher {
     return query;
   }
 
-  searchTerms(q, callback) {
+  searchTerms(queryParams, callback) {
     // logger.info("Term searching", q);
     this.client.search({
       index: 'terms',
       type: 'term',
-      body: this._searchTermsQuery(q)
+      body: this._searchTermsQuery(queryParams)
     }, (err, res) => {
       if(err) {
         logger.error(err);
@@ -409,7 +403,7 @@ class Searcher {
     body.query("match", "term_key", key);
 
     let query = body.build("v2");
-    // logger.info(query);
+    logger.debug(query);
 
     return query;
   }
