@@ -14,12 +14,12 @@ class RepoTermLoaderStream extends Transform {
     this.logger = termIndexer.logger;
     this.config = config;
     this.terms = {};
-    this.config.TERM_TYPES_TO_INDEX.forEach((termType) => {
+    this.config.TERM_TYPES_TO_INDEX.forEach(termType => {
       this.terms[termType] = {};
     });
 
     this.termMaxes = {};
-    this.config.TERM_TYPES_TO_INDEX.forEach((termType) => {
+    this.config.TERM_TYPES_TO_INDEX.forEach(termType => {
       this.termMaxes[termType] = 0;
     });
   }
@@ -36,7 +36,7 @@ class RepoTermLoaderStream extends Transform {
       }
     };
 
-    this.config.TERM_TYPES_TO_INDEX.forEach((termType) => {
+    this.config.TERM_TYPES_TO_INDEX.forEach(termType => {
       let term = _.get(repo, termType);
       if (term !== undefined && term !== null) {
         if (Array.isArray(term)) {
