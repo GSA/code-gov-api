@@ -1,14 +1,14 @@
 const path = require('path');
 const getProductionConfig = require('./prod');
 const getDevelopmentConfig = require('./dev');
-let config;
-
-config.prod_envs = ['prod', 'production', 'stag', 'staging'];
+let config = {
+  prod_envs: ['prod', 'production', 'stag', 'staging']
+};
 
 if (config.prod_envs.includes(process.env.NODE_ENV)) {
-  config = getProductionConfig();
+  config = Object.assign(config, getProductionConfig());
 } else {
-  config = getDevelopmentConfig();
+  config = Object.assign(config, getDevelopmentConfig());
 }
 
 config.AGENCY_ENDPOINTS_FILE = path.join(path.dirname(__dirname), config.AGENCY_ENDPOINTS_FILE);
