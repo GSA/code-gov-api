@@ -17,19 +17,18 @@ class CreateDiffStream extends Writable {
     this.config = config;
   }
 
-  _createFilePath(folderDir, filename) {
-    return path.join(this.config.FETCHED_DIR, filename);
+  _readFile(folderDir, filename, next) {
+    const filePath = path.join(this.config.FETCHED_DIR, filename);
+    Jsonfile.readFile(filePath, next);
   }
   _performDiff(agency, callback) {
     logger.info(`Performing diff for ${agency}...`);
     async.parallel({
       "fetched": (next) => {
-        let fetchedFilepath = this._createFilePath(this.config.FETCHED_DIR, `${agency}.json`);
-        Jsonfile.readFile(fetchedFilepath, next);
+        this._readFile(this.config.FETCHED_DIR, `${agency}.json`, next);
       },
       "discovered": (next) => {
-        let discoveredFilepath = this._createFilePath(this.config.DISCOVERED_DIR, `${agency}.json`);
-        Jsonfile.readFile(discoveredFilepath, next);
+        this._readFile(this.config.DISCOVERED_DIR, `${agency}.json`, next);
       }
     }, (err, {fetched, discovered}) => {
       if (err) {
