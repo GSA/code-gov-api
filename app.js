@@ -1,5 +1,5 @@
 const bodyParser = require('body-parser');
-const config = require("./config");
+const getConfig = require("./config");
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const express = require("express");
@@ -33,6 +33,8 @@ const limiter = new RateLimit({
   delayMs:parseInt(process.env.DELAY_MS || 0, 10),
   headers: true
 });
+const config = getConfig(process.env.NODE_ENV);
+
 app.set('json escape', true);
 app.use(limiter);
 app.use(express.static(path.join(__dirname, '/public')));
