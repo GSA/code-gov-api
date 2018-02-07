@@ -76,7 +76,7 @@ class TermIndexer extends AbstractIndexer {
     return "term-indexer";
   }
 
-  constructor(adapter, params) {
+  constructor(adapter, params, config) {
     super(adapter, params);
     let searchQuery = {
       index: ES_REPO_PARAMS.esAlias,
@@ -85,12 +85,13 @@ class TermIndexer extends AbstractIndexer {
     };
     this.ss = new SearchStream(adapter, searchQuery);
     this.indexCounter = 0;
+    this.config = config;
   }
 
   indexTerms() {
     let ss = this.ss;
-    let rs = new RepoTermLoaderStream(this);
-    let is = new RepoTermIndexerStream(this);
+    let rs = new RepoTermLoaderStream(this, this.config);
+    let is = new RepoTermIndexerStream(this, this.config);
 
     ss.pipe(rs).pipe(is).on("finish", () => {
       this.logger.info(`Indexed ${this.indexCounter} ${this.esType} documents.`);

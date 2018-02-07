@@ -5,19 +5,16 @@ const Jsonfile            = require("jsonfile");
 const diff                = require("diff");
 const JSONStream          = require("JSONStream");
 const Writable            = require("stream").Writable;
-const config              = require("../../config");
+const getConfig           = require("../../config");
 const Logger               = require("../../utils/logger");
-
-const AGENCY_ENDPOINTS_FILE = path.join(
-  __dirname, "../../", config.AGENCY_ENDPOINTS_FILE
-);
 
 let logger = new Logger({ name: "create-diffs" });
 
 class CreateDiffStream extends Writable {
 
-  constructor() {
+  constructor(config) {
     super({objectMode: true});
+    this.config = config;
   }
 
   _performDiff(agency, callback) {
@@ -25,18 +22,14 @@ class CreateDiffStream extends Writable {
     async.parallel({
       "fetched": (next) => {
         let fetchedFilepath = path.join(
-          __dirname,
-          "../../",
-          config.FETCHED_DIR,
+          this.config.FETCHED_DIR,
           `${agency}.json`
         );
         Jsonfile.readFile(fetchedFilepath, next);
       },
       "discovered": (next) => {
         let discoveredFilepath = path.join(
-          __dirname,
-          "../../",
-          config.DISCOVERED_DIR,
+          this.config.DISCOVERED_DIR,
           `${agency}.json`
         );
         Jsonfile.readFile(discoveredFilepath, next);
@@ -57,7 +50,7 @@ class CreateDiffStream extends Writable {
       let diffedFilepath = path.join(
         __dirname,
         "../../",
-        config.DIFFED_DIR,
+        this.config.DIFFED_DIR,
         `${agencyName}.json`
       );
       logger.info(`Writing output to ${diffedFilepath}...`);
@@ -73,10 +66,16 @@ class CreateDiffStream extends Writable {
 
 }
 
-let rs = fs.createReadStream(AGENCY_ENDPOINTS_FILE);
-let js = JSONStream.parse("*");
-let ds = new CreateDiffStream();
+function createDiffs(config) {
+  let rs = fs.createReadStream(config.AGENCY_ENDPOINTS_FILE);
+  let js = JSONStream.parse("*");
+  let ds = new CreateDiffStream(config);
 
-rs.pipe(js).pipe(ds).on("finish", () => {
-  this.logger.info(`Done.`);
-});
+  rs.pipe(js).pipe(ds).on("finish", () => {
+    this.logger.info(`Done.`);
+  });
+}
+
+if(!module.parent) {
+  createDiffs(getConfig(process.env.NODE_ENV));
+}
