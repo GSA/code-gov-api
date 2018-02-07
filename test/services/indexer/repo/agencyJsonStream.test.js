@@ -15,6 +15,7 @@ describe('AgencyJsonStream', function() {
   let fallbackDataDir;
   let fetchDataDir;
   let agency;
+  let config;
 
   beforeEach(function() {
     testDataDir = path.join(__dirname, '/test_data');
@@ -22,6 +23,9 @@ describe('AgencyJsonStream', function() {
     fetchDataDir = path.join(testDataDir, '/fetched');
     agency = JsonFile.readFileSync(path.join(testDataDir, 'test_agency_endpoints.json'))
     agencyJsonStream = new AgencyJsonStream(fetchDataDir, fallbackDataDir);
+    config = {
+      prod_envs: ['prod', 'production', 'stag', 'staging']
+    };
   });
 
   it('Should save codeJson to disk', function() {
@@ -36,7 +40,7 @@ describe('AgencyJsonStream', function() {
 
   it('Should return codejson from disk', function() {
     const codeJson = JsonFile.readFileSync(path.join(fallbackDataDir, '/FAKE.json'));
-    return agencyJsonStream._getAgencyCodeJson(agency[0])
+    return agencyJsonStream._getAgencyCodeJson(agency[0], config)
       .then(data => {
         data.should.be.deep.equal(codeJson);
       });
