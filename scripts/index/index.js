@@ -1,5 +1,5 @@
 const async = require("async");
-const config = require('../../config');
+const getConfig = require('../../config');
 const RepoIndexer = require("./repo/index.js");
 const TermIndexer = require("./term/index.js");
 const Logger = require("../../utils/logger");
@@ -16,7 +16,7 @@ class Indexer {
    *
    */
   constructor(config) {
-    this.logger = new Logger({name: "term-index-script"});
+    this.logger = new Logger({name: "index-script"});
     this.config = config;
   }
 
@@ -27,7 +27,7 @@ class Indexer {
         repoIndexer.index(next);
       },
       (next) => {
-        let termIndexer = new TermIndexer();
+        let termIndexer = new TermIndexer(this.config);
         termIndexer.index(next);
       }
     ], (err) => {
@@ -49,6 +49,7 @@ class Indexer {
 // If we are running this module directly from Node this code will execute.
 // This will index all items taking our default input.
 if (require.main === module) {
+  const config = getConfig(process.env.NODE_ENV);
   let indexer = new Indexer(config);
   indexer.index((err) => {
     if (err) {

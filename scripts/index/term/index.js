@@ -1,5 +1,5 @@
 const async = require("async");
-const config = require('../../../config');
+const getConfig = require('../../../config');
 const TermIndexer = require("../../../services/indexer/term");
 const AliasSwapper = require("../../../services/indexer/alias_swapper");
 const IndexCleaner = require("../../../services/indexer/index_cleaner");
@@ -20,8 +20,9 @@ class Indexer {
    * Creates an instance of Indexer.
    *
    */
-  constructor() {
+  constructor(config) {
     this.logger = new Logger({name: "term-index-script"});
+    this.config = config;
   }
 
   /**
@@ -68,6 +69,7 @@ class Indexer {
 // If we are running this module directly from Node this code will execute.
 // This will index all terms taking our default input.
 if (require.main === module) {
+  const config = getConfig(process.env.NODE_ENV);
   let indexer = new Indexer(config);
   indexer.index((err) => {
     if (err) {
