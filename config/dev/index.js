@@ -1,7 +1,8 @@
-const config = require("./index.json");
+const jsonfile = require('jsonfile');
+const path = require('path');
 
 function getDevelopmentConfig() {
-  return config;
+  return jsonfile.readFileSync(path.join(__dirname, 'index.json'));
 }
 
 module.exports = getDevelopmentConfig;
