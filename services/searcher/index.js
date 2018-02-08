@@ -1,7 +1,7 @@
 const _                   = require("lodash");
 const Bodybuilder         = require("bodybuilder");
 const moment              = require("moment");
-const config              = require("../../config");
+const getConfig           = require("../../config");
 const Utils               = require("../../utils");
 const Logger              = require("../../utils/logger");
 const repoMapping         = require("../../indexes/repo/mapping_200.json");
@@ -20,7 +20,8 @@ let logger = new Logger({name: "searcher"});
 
 class Searcher {
 
-  constructor(adapter) {
+  constructor(adapter, config) {
+    this.config = config;
     this.client = adapter.getClient();
   }
 
@@ -321,11 +322,11 @@ class Searcher {
     // add query terms (boost when phrase is matched)
     if (queryParams.term) {
       body.query("match", "term_suggest", queryParams.term);
-      body.query("match", "term_suggest", queryParams.term, {type: "phrase"});
+      body.query("match", "term_suggest", { query: queryParams.term, type: "phrase" });
     }
 
     // set the term types (use defaults if not supplied)
-    let termTypes = config.TERM_TYPES_TO_SEARCH;
+    let termTypes = this.config.TERM_TYPES_TO_SEARCH;
     if (queryParams.term_type) {
       if (queryParams.term_type instanceof Array) {
         termTypes = queryParams.term_type;
@@ -369,7 +370,7 @@ class Searcher {
       "from": from
     };
 
-    //logger.info(query);
+    logger.debug(query);
     return query;
   }
 
