@@ -2,7 +2,7 @@ const async               = require("async");
 const _                   = require("lodash");
 const AbstractIndexTool   = require("./abstract_index_tool");
 const Logger              = require("../../utils/logger");
-
+const getConfig = require('../../config');
 /* eslint-disable */
 const ElasticSearch       = require("elasticsearch");
 const ElasticsearchAdapter = require('../../utils/search_adapters/elasticsearch_adapter');
@@ -190,8 +190,9 @@ if (require.main === module) {
   //TODO: Make parameters
   const reposAlias = 'repos';
   const numDays = 10;
+  const elasticsearchAdapter = new ElasticsearchAdapter(getConfig(process.env.NODE_ENV));
 
-  IndexCleaner.init(ElasticsearchAdapter, reposAlias, numDays, (err)=> {
+  IndexCleaner.init(elasticsearchAdapter, reposAlias, numDays, (err)=> {
     if (err) {
       Logger.error("Errors Occurred: " + err);
     } else {
