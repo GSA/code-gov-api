@@ -74,7 +74,7 @@ const logger = new Logger({name: "code-gov-api"});
                             API ROUTES
  * ------------------------------------------------------------------ */
 const searcherAdapter = new ElasticsearchSearcherAdapter(config);
-const searcher = new Searcher(searcherAdapter);
+const searcher = new Searcher(searcherAdapter, config);
 const router = getApiRoutes(config, searcher, new express.Router());
 app.use('/api/0.1', router);
 
