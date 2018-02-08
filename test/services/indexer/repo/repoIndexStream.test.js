@@ -3,7 +3,7 @@ const JsonFile = require('jsonfile');
 const path = require('path');
 
 // TODO: change location of testable_elasticsearch_adapter to the test directory
-const mockAdapter = require('../../../../utils/search_adapters/testable_elasticsearch_adapter');
+const MockAdapter = require('../../../../utils/search_adapters/testable_elasticsearch_adapter');
 const RepoIndexer = require('../../../../services/indexer/repo');
 const RepoIndexerStream = require('../../../../services/indexer/repo/RepoIndexStream')
 const proxyquire = require('proxyquire');
@@ -16,9 +16,10 @@ describe('Index given repo', function(done) {
   let fetchDataDir;
   let agency;
   let indexer;
+  let mockAdapter = new MockAdapter();
 
   // TODO: add multi version support see Github project https://github.com/GSA/code-gov-api/projects/1
-  const ES_MAPPING = require("../../../../indexes/repo/mapping_100.json");
+  const ES_MAPPING = require("../../../../indexes/repo/mapping_200.json");
   const ES_SETTINGS = require("../../../../indexes/repo/settings.json");
   const ES_PARAMS = {
     "esAlias": "repos",
@@ -32,6 +33,7 @@ describe('Index given repo', function(done) {
     fallbackDataDir = path.join(testDataDir, '/fallback');
     fetchDataDir = fallbackDataDir; // Same as abouve, we will not be going through all the file fetch flow.
     agency = JsonFile.readFileSync(path.join(testDataDir, 'test_agency_endpoints.json'))
+
     mockAdapter.setResponse({
       "_index" : "repo",
       "_type" : "repo",
