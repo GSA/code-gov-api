@@ -1,4 +1,3 @@
-const CONFIG                        = require("../../config");
 const AbstractSearchAdapter         = require("./abstract_search_adapter");
 
 /**
@@ -13,20 +12,21 @@ class BaseElasticsearchAdapter extends AbstractSearchAdapter {
      * Creates an instance of SearcherESClient.
      *
      */
-  constructor() {
+  constructor(config) {
     super();
+    this.config = config;
   }
 
   //TODO: We might be able to eliminate all this code and the AbstractSearchAdapter. Something to think about
   getHostsFromConfig() {
     let hosts = [];
 
-    if (Array.isArray(CONFIG.ES_HOST)) {
-      CONFIG.ES_HOST.forEach(host => {
-        hosts.push(`${host}:${CONFIG.ES_PORT}`);
+    if (Array.isArray(this.config.ES_HOST)) {
+      this.config.ES_HOST.forEach(host => {
+        hosts.push(`${host}:${this.config.ES_PORT}`);
       });
     } else {
-      hosts.push(`${CONFIG.ES_HOST}:${CONFIG.ES_PORT}`);
+      hosts.push(`${this.config.ES_HOST}:${this.config.ES_PORT}`);
     }
 
     return hosts;

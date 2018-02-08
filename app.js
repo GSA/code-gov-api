@@ -10,7 +10,7 @@ const Logger = require("./utils/logger");
 const path = require("path");
 const RateLimit = require('express-rate-limit');
 const Searcher = require("./services/searcher");
-const searcherAdapter = require("./utils/search_adapters/elasticsearch_adapter");
+const ElasticsearchSearcherAdapter = require("./utils/search_adapters/elasticsearch_adapter");
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
 
@@ -73,7 +73,7 @@ const logger = new Logger({name: "code-gov-api"});
 /* ------------------------------------------------------------------ *
                             API ROUTES
  * ------------------------------------------------------------------ */
-
+const searcherAdapter = new ElasticsearchSearcherAdapter(config);
 const searcher = new Searcher(searcherAdapter);
 const router = getApiRoutes(config, searcher, new express.Router());
 app.use('/api/0.1', router);

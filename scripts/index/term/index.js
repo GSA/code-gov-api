@@ -5,7 +5,7 @@ const AliasSwapper = require("../../../services/indexer/alias_swapper");
 const IndexCleaner = require("../../../services/indexer/index_cleaner");
 const IndexOptimizer = require("../../../services/indexer/index_optimizer");
 const Logger = require("../../../utils/logger");
-const elasticsearchAdapter = require("../../../utils/search_adapters/elasticsearch_adapter");
+const ElasticsearchAdapter = require("../../../utils/search_adapters/elasticsearch_adapter");
 
 const DAYS_TO_KEEP = process.env.DAYS_TO_KEEP || 2;
 
@@ -23,6 +23,7 @@ class Indexer {
   constructor(config) {
     this.logger = new Logger({name: "term-index-script"});
     this.config = config;
+    this.elasticsearchAdapter = new ElasticsearchAdapter(this.config);
   }
 
   /**
@@ -36,7 +37,7 @@ class Indexer {
 
     async.waterfall([
       (next) => {
-        TermIndexer.init(elasticsearchAdapter, next); 
+        TermIndexer.init(this.elasticsearchAdapter, next); 
       },
       (info, next) => {
         // save out alias and term index name
@@ -45,15 +46,15 @@ class Indexer {
       },
       // optimize the index
       (next) => {
-        IndexOptimizer.init(elasticsearchAdapter, termIndexInfo, next); 
+        IndexOptimizer.init(this.elasticsearchAdapter, termIndexInfo, next); 
       },
       // if all went well, swap aliases
       (next) => {
-        AliasSwapper.init(elasticsearchAdapter, termIndexInfo, next); 
+        AliasSwapper.init(this.elasticsearchAdapter, termIndexInfo, next); 
       },
       // clean up old indices
       (next) => {
-        IndexCleaner.init(elasticsearchAdapter, termIndexInfo.esAlias, DAYS_TO_KEEP, next); 
+        IndexCleaner.init(this.elasticsearchAdapter, termIndexInfo.esAlias, DAYS_TO_KEEP, next); 
       }
     ], (err, status) => {
       if (err) {

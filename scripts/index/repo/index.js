@@ -1,11 +1,11 @@
 const async = require("async");
-const config = require("../../../config");
+const getConfig = require("../../../config");
 const RepoIndexer = require("../../../services/indexer/repo");
 const AliasSwapper = require("../../../services/indexer/alias_swapper");
 const IndexCleaner = require("../../../services/indexer/index_cleaner");
 const IndexOptimizer = require("../../../services/indexer/index_optimizer");
 const Logger = require("../../../utils/logger");
-const elasticsearchAdapter = require("../../../utils/search_adapters/elasticsearch_adapter");
+const ElasticsearchAdapter = require("../../../utils/search_adapters/elasticsearch_adapter");
 
 const DAYS_TO_KEEP = process.env.DAYS_TO_KEEP || 2;
 
@@ -23,6 +23,7 @@ class Indexer {
   constructor(config) {
     this.logger = new Logger({name: "repo-index-script"});
     this.config = config;
+    this.elasticsearchAdapter = new ElasticsearchAdapter(this.config);
   }
 
   /**
@@ -36,7 +37,7 @@ class Indexer {
 
     async.waterfall([
       (next) => {
-        RepoIndexer.init(elasticsearchAdapter, this.config, next); 
+        RepoIndexer.init(this.elasticsearchAdapter, this.config, next); 
       },
       (info, next) => {
         // save out alias and repo index name
@@ -45,15 +46,15 @@ class Indexer {
       },
       // optimize the index
       (next) => {
-        IndexOptimizer.init(elasticsearchAdapter, repoIndexInfo, next); 
+        IndexOptimizer.init(this.elasticsearchAdapter, repoIndexInfo, next); 
       },
       // if all went well, swap aliases
       (next) => {
-        AliasSwapper.init(elasticsearchAdapter, repoIndexInfo, next); 
+        AliasSwapper.init(this.elasticsearchAdapter, repoIndexInfo, next); 
       },
       // clean up old indices
       (next) => {
-        IndexCleaner.init(elasticsearchAdapter, repoIndexInfo.esAlias, DAYS_TO_KEEP, next); 
+        IndexCleaner.init(this.elasticsearchAdapter, repoIndexInfo.esAlias, DAYS_TO_KEEP, next); 
       }
     ], (err, status) => {
       if (err) {
@@ -69,7 +70,7 @@ class Indexer {
 // If we are running this module directly from Node this code will execute.
 // This will index all repos taking our default input.
 if (require.main === module) {
-  let indexer = new Indexer(config);
+  let indexer = new Indexer(getConfig(process.env.NODE_ENV));
   indexer.index((err) => {
     if (err) {
       indexer.logger.error(err);
