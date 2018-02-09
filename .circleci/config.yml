@@ -90,7 +90,7 @@ jobs:
             - ./node_modules
       - run:
           name: get-data
-          commands: npm run index
+          command: npm run index
       - run:
           name: run-test
           command: npm test
