@@ -25,7 +25,6 @@ jobs:
     working_directory: ~/code-gov-api
     docker:
       - image: circleci/node:8.9.3-stretch
-      - image: codegov/code-gov-integration-data
     steps:
       - checkout
       - run: 
@@ -48,6 +47,50 @@ jobs:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
             - ./node_modules
+      - run:
+          name: run-test
+          command: |
+            npm run index
+            npm test
+      - run:
+          name: upload-test-report
+          command: |
+             ./cc-test-reporter after-build -t lcov --exit-code $?
+      - store_test_results:
+          path: test-results.xml
+      - store_artifacts:
+          path: coverage
+          prefix: coverage
+  integration:
+    working_directory: ~/code-gov-api
+    docker:
+      - image: circleci/node:8.9.3-stretch
+      - image: elasticsearch:2.4
+    steps:
+      - checkout
+      - run: 
+          name: download-cc-test-reporter
+          command: curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+      - run: 
+          name: make-test-reporter-executable
+          command: chmod +x ./cc-test-reporter
+      - run:
+          command: ./cc-test-reporter before-build
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: verify-npm-cache
+          command: npm cache verify
+      - run:
+          name: install-node-modules
+          command: npm install --all
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+      - run:
+        name: get-data
+        commands: npm run index
       - run:
           name: run-test
           command: npm test
@@ -121,18 +164,13 @@ workflows:
       - test:
           requires:
             - build
-      - deploy-staging-hold:
-          type: approval
+      - integration:
           requires:
-            - test
-          filters:
-            branches:
-              only: master
-            tags:
-              ignore: /.*/
+            - build
       - deploy-staging:
           requires:
-            - deploy-staging-hold
+            - test
+            - integration
           filters:
             branches: 
               only: master
@@ -142,6 +180,7 @@ workflows:
           type: approval
           requires:
             - test
+            - integration
           filters:
             tags:
               only: /^v(\d+\.){2}\d+/
