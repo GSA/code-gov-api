@@ -28,12 +28,13 @@ class RepoIndexer extends AbstractIndexer {
     this.agencyEndpointsFile = agencyEndpointsFile;
     this.fetchedFilesDir = fetchedFilesDir;
     this.fallbackFilesDir = fallbackFilesDir;
+
   }
 
-  indexRepos() {
+  indexRepos(config) {
     const agencyEndpointsStream = fs.createReadStream(this.agencyEndpointsFile);
     const jsonStream = JSONStream.parse("*");
-    const agencyJsonStream = new AgencyJsonStream(this.fetchedFilesDir, this.fallbackFilesDir);
+    const agencyJsonStream = new AgencyJsonStream(this.fetchedFilesDir, this.fallbackFilesDir, config);
     const indexerStream = new RepoIndexerStream(this);
 
     return new Promise((fulfill, reject) => {
@@ -105,7 +106,7 @@ class RepoIndexer extends AbstractIndexer {
           });
       },
       (response, next) => {
-        indexer.indexRepos()
+        indexer.indexRepos(config)
           .then(response => {
             next(null, response);
           })

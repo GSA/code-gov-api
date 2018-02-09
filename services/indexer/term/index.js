@@ -2,6 +2,7 @@ const Writable            = require("stream").Writable;
 const SearchStream        = require("../../../utils/search_stream");
 const AbstractIndexer     = require("../abstract_indexer");
 const RepoTermLoaderStream= require("./repo_term_loader_stream");
+const getConfig = require('../../../config');
 
 // NOTE: dependent on elasticsearch repos being indexed
 
@@ -99,7 +100,7 @@ class TermIndexer extends AbstractIndexer {
   }
 
   static init(adapter, callback) {
-    let indexer = new TermIndexer(adapter, ES_TERM_PARAMS);
+    let indexer = new TermIndexer(adapter, ES_TERM_PARAMS, getConfig(process.env.NODE_ENV));
     indexer.logger.info(`Started indexing (${indexer.esType}) indices.`);
     indexer.indexExists()
       .then((exists) => {

@@ -12,12 +12,13 @@ const Utils = require("../../../utils");
 const logger = new Logger({name: 'agency-json-stream'});
 
 class AgencyJsonStream extends Transform {
-  constructor(fetchedDir, fallbackDir) {
+  constructor(fetchedDir, fallbackDir, config) {
     super({
       objectMode: true
     });
     this.fetchedDir = fetchedDir;
     this.fallbackDir = fallbackDir;
+    this.config = config;
   }
 
   _saveFetchedCodeJson(agencyAcronym, codeJson) {
@@ -41,7 +42,7 @@ class AgencyJsonStream extends Transform {
     });
   }
 
-  _getAgencyCodeJson(agency, config){
+  _getAgencyCodeJson(agency){
     logger.debug('Entered saveFetchedCodeJson - Agency: ', agency.acronym);
 
     return new Promise((fulfill, reject) => {
@@ -54,7 +55,7 @@ class AgencyJsonStream extends Transform {
         }
       };
   
-      if(config.prod_envs.includes(process.env.NODE_ENV)) {
+      if(this.config.prod_envs.includes(process.env.NODE_ENV)) {
         request(requestParams, (err, response, body) => {
           const errorMessage = 'FAILURE: There was an error fetching the code.json:';
           if(err) {

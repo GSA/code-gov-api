@@ -2,7 +2,6 @@ const _                   = require("lodash");
 const Logger              = require("../../utils/logger");
 /* eslint-disable */
 const ElasticSearch       = require("elasticsearch");
-const CONFIG              = require("../../config");
 
 class ElasticSearchLogger extends Logger {
   get DEFAULT_LOGGER_NAME() {

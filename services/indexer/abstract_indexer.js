@@ -2,7 +2,6 @@ const moment = require("moment");
 const Logger = require("../../utils/logger");
 
 /* eslint-disable */
-const CONFIG = require("../../config");
 const ElasticSearch = require("elasticsearch");
 
 class ElasticSearchLogger extends Logger {
