@@ -7,7 +7,7 @@
 
 const Jsonfile = require("jsonfile");
 const Logger = require("../../utils/logger");
-const config = require("../../config");
+const getConfig = require("../../config");
 
 class Reporter {
 
@@ -73,4 +73,4 @@ class Reporter {
   }
 }
 
-module.exports = new Reporter(config, { name: "reporter" });
+module.exports = new Reporter(getConfig(process.env.NODE_ENV), { name: "reporter" });
