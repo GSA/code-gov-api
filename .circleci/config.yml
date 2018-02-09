@@ -49,9 +49,7 @@ jobs:
             - ./node_modules
       - run:
           name: run-test
-          command: |
-            npm run index
-            npm test
+          command: npm run unit-test
       - run:
           name: upload-test-report
           command: |
@@ -93,7 +91,7 @@ jobs:
           command: npm run index
       - run:
           name: run-test
-          command: npm test
+          command: npm run integration-test
       - run:
           name: upload-test-report
           command: |
