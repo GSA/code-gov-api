@@ -1,4 +1,4 @@
-const RepoTermLoaderStream = require("../../../../services/indexer/term/repo_term_loader_stream");
+const RepoTermLoaderStream = require("../../../../../services/indexer/term/repo_term_loader_stream");
 
 describe("RepoTermLoaderStream", () => {
   let termIndexerMock = {

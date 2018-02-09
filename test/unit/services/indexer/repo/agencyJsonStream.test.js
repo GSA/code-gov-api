@@ -7,7 +7,7 @@ const JsonFile = require('jsonfile');
 const should = chai.should();
 const moment = require('moment');
 
-const AgencyJsonStream = require('../../../../services/indexer/repo/AgencyJsonStream');
+const AgencyJsonStream = require('../../../../../services/indexer/repo/AgencyJsonStream');
 
 describe('AgencyJsonStream', function() {
   let agencyJsonStream;
@@ -22,10 +22,9 @@ describe('AgencyJsonStream', function() {
     fallbackDataDir = path.join(testDataDir, '/fallback');
     fetchDataDir = path.join(testDataDir, '/fetched');
     agency = JsonFile.readFileSync(path.join(testDataDir, 'test_agency_endpoints.json'))
-    agencyJsonStream = new AgencyJsonStream(fetchDataDir, fallbackDataDir);
-    config = {
+    agencyJsonStream = new AgencyJsonStream(fetchDataDir, fallbackDataDir, {
       prod_envs: ['prod', 'production', 'stag', 'staging']
-    };
+    });
   });
 
   it('Should save codeJson to disk', function() {
@@ -40,7 +39,7 @@ describe('AgencyJsonStream', function() {
 
   it('Should return codejson from disk', function() {
     const codeJson = JsonFile.readFileSync(path.join(fallbackDataDir, '/FAKE.json'));
-    return agencyJsonStream._getAgencyCodeJson(agency[0], config)
+    return agencyJsonStream._getAgencyCodeJson(agency[0])
       .then(data => {
         data.should.be.deep.equal(codeJson);
       });

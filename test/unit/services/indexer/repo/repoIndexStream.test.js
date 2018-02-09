@@ -3,9 +3,9 @@ const JsonFile = require('jsonfile');
 const path = require('path');
 
 // TODO: change location of testable_elasticsearch_adapter to the test directory
-const MockAdapter = require('../../../../utils/search_adapters/testable_elasticsearch_adapter');
-const RepoIndexer = require('../../../../services/indexer/repo');
-const RepoIndexerStream = require('../../../../services/indexer/repo/RepoIndexStream')
+const MockAdapter = require('../../../../../utils/search_adapters/testable_elasticsearch_adapter');
+const RepoIndexer = require('../../../../../services/indexer/repo');
+const RepoIndexerStream = require('../../../../../services/indexer/repo/RepoIndexStream')
 const proxyquire = require('proxyquire');
 
 
@@ -19,8 +19,8 @@ describe('Index given repo', function(done) {
   let mockAdapter = new MockAdapter();
 
   // TODO: add multi version support see Github project https://github.com/GSA/code-gov-api/projects/1
-  const ES_MAPPING = require("../../../../indexes/repo/mapping_200.json");
-  const ES_SETTINGS = require("../../../../indexes/repo/settings.json");
+  const ES_MAPPING = require("../../../../../indexes/repo/mapping_200.json");
+  const ES_SETTINGS = require("../../../../../indexes/repo/settings.json");
   const ES_PARAMS = {
     "esAlias": "repos",
     "esType": "repo",

@@ -1,7 +1,7 @@
 const chai = require('chai'),
   should = chai.should();
 
-const { getValidator } = require('../../../services/validator');
+const { getValidator } = require('../../../../services/validator');
 
 describe('Validator service', function() {
 
