@@ -89,8 +89,8 @@ jobs:
           paths:
             - ./node_modules
       - run:
-        name: get-data
-        commands: npm run index
+          name: get-data
+          commands: npm run index
       - run:
           name: run-test
           command: npm test
