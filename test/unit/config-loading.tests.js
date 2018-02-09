@@ -1,4 +1,4 @@
-const getConfig = require('../config');
+const getConfig = require('../../config');
 const chai = require('chai');
 const should = chai.should();
 
