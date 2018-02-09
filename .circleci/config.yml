@@ -25,6 +25,7 @@ jobs:
     working_directory: ~/code-gov-api
     docker:
       - image: circleci/node:8.9.3-stretch
+      - image: codegov/code-gov-integration-data
     steps:
       - checkout
       - run: 
