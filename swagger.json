@@ -55,23 +55,30 @@
           "repo"
         ],
         "summary": "Get a list of repos",
-        "description": "",
+        "description": "Get list of repositories indexed by Code.gov.",
         "consumes": [ "application/json" ],
         "produces": [ "application/json" ],
         "parameters": [
-          {
-            "name": "repoId",
-            "in": "path",
-            "description": "ID of repo to return",
-            "required": false,
-            "type": "string"
-          },
           {
             "name": "q",
             "in": "query",
             "description": "Text to search for. This will make a full text search on all our index properties. Eg. rest api",
             "required": false,
             "type": "string"
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "description": "Sets the size of the results returned. Default is 10.",
+            "required": false,
+            "type": "number"
+          },
+          {
+            "name": "from",
+            "in": "query",
+            "description": "Sets the offset from where to paginate. Default is 0 (first element in the result set).",
+            "required": false,
+            "type": "number"
           },
           {
             "name": "agency.name",
@@ -167,21 +174,21 @@
           {
             "name": "laborHours",
             "in": "query",
-            "description": "Filters search by the Agency name.",
+            "description": "Filters search by the amount of labor hours dedicated to the project.",
             "required": false,
-            "type": "string"
+            "type": "number"
           },
           {
             "name": "date.created",
             "in": "query",
-            "description": "Filters search by the Agency name.",
+            "description": "Filters search by the repository's created date. You can also use date.created_gte, date.created_lte, date.created_gt, date.created_lt to define ranges. Eg. 2018-02-01",
             "required": false,
             "type": "string"
           },
           {
             "name": "date.lastModified",
             "in": "query",
-            "description": "Filters search by the last date the repository was modified. ",
+            "description": "Filters search by the last date the repository was modified. You can also use date.lastModified_gte, date.lastModified_lte, date.lastModified_gt, date.lastModified_lt to define ranges. Eg. 2018-02-01",
             "required": false,
             "type": "string"
           }
