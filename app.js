@@ -25,15 +25,15 @@ const favicon = require('serve-favicon');
  * ------------------------------------------------------------------ */
 
 // define and configure express
+const config = getConfig(process.env.NODE_ENV);
+
 const app = express();
-const port = process.env.PORT || 3001;
 const limiter = new RateLimit({
   windowMs: parseInt(process.env.WINDOW_MS || 60000, 10),
   max: parseInt(process.env.MAX_IP_REQUESTS || 500, 10),
   delayMs:parseInt(process.env.DELAY_MS || 0, 10),
   headers: true
 });
-const config = getConfig(process.env.NODE_ENV);
 
 app.set('json escape', true);
 app.use(limiter);
@@ -55,6 +55,7 @@ app.use(helmet.hsts({
   }
 }));
 
+swaggerDocument.host = config.SWAGGER_HOST;
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -121,7 +122,7 @@ if(!module.parent) {
     require('newrelic');
   }
 
-  app.listen(port);
+  app.listen(config.port);
   // schedule the interval at which indexings should happen
   const indexInterval = config.INDEX_INTERVAL_SECONDS;
   const indexer = new Indexer(config);
@@ -130,7 +131,7 @@ if(!module.parent) {
     logger.info(`Production: re-indexing every ${indexInterval} seconds`);
   }
 
-  logger.info(`Started API server at http://0.0.0.0:${port}/`);
+  logger.info(`Started API server at http://0.0.0.0:${config.port}/`);
 }
 
 module.exports = app;
