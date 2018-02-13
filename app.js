@@ -122,7 +122,7 @@ if(!module.parent) {
     require('newrelic');
   }
 
-  app.listen(config.port);
+  app.listen(config.PORT);
   // schedule the interval at which indexings should happen
   const indexInterval = config.INDEX_INTERVAL_SECONDS;
   const indexer = new Indexer(config);
@@ -131,7 +131,7 @@ if(!module.parent) {
     logger.info(`Production: re-indexing every ${indexInterval} seconds`);
   }
 
-  logger.info(`Started API server at http://0.0.0.0:${config.port}/`);
+  logger.info(`Started API server at http://0.0.0.0:${config.PORT}/`);
 }
 
 module.exports = app;

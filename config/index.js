@@ -19,7 +19,7 @@ function getConfig(env) {
   config.DIFFED_DIR = path.join(path.dirname(__dirname), config.DIFFED_DIR);
   config.FALLBACK_DIR = path.join(path.dirname(__dirname), config.FALLBACK_DIR);
   config.PORT = process.env.PORT || 3001;
-  config.SWAGGER_HOST = `${config.SWAGGER_HOST || 'localhost'}:${config.PORT}`;
+  config.SWAGGER_HOST = config.SWAGGER_HOST || `localhost:${config.PORT}`;
 
   return config;
 }
