@@ -1,8 +1,8 @@
 {
   "swagger": "2.0",
   "info": {
-    "description": "Swagger testing definition for the code.gov API.",
-    "version": "1.0.0",
+    "description": "Code.gov API documentation. While using this documentation locally please choose to ",
+    "version": "2.0.0",
     "title": "Code.gov API",
     "license": {
       "name": "CC0",
@@ -46,7 +46,8 @@
     }
   ],
   "schemes": [
-    "http"
+    "http",
+    "https"
   ],
   "paths": {
     "/repos": {
@@ -251,11 +252,37 @@
         ],
         "summary": "Get a list of terms",
         "description": "Get a list of terms that were extracted from the repositories indexed.",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "term",
+            "in": "query",
+            "description": "Filters the result set by the term value. The API will match the text to any part of the value. Eg. term=ox will return { ... \"term\": \"oxide\" ... }",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "term_type",
+            "in": "query",
+            "description": "Filters the result set by the term type. Eg. term_type=agency.acronym",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "description": "Sets the size of the results returned. Default is 10.",
+            "required": false,
+            "type": "number"
+          },
+          {
+            "name": "from",
+            "in": "query",
+            "description": "Sets the offset from where to paginate. Default is 0 (first element in the result set).",
+            "required": false,
+            "type": "number"
+          }
         ],
         "responses": {
           "200": {
