@@ -16,7 +16,7 @@
     },
     "description": {
       "type": "string",
-      "description": "A one- or two-sentence description of the release."
+      "description": "A one or two sentence description of the release."
     },
     "permissions": {
       "type": "object",
@@ -35,7 +35,8 @@
                 "type": "string",
                 "description": "An abbreviation for the name of the license. For example, 'CC0' or 'MIT'."
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "usageType": {
@@ -53,13 +54,11 @@
           "additionalProperties": false
         },
         "exemptionText": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": ["string", "null"],
           "description": "If an exemption is listed in the 'usageType' field, this field should include a one- or two- sentence justification for the exemption used."
         }
       },
+      "additionalProperties": false,
       "required": ["licenses"]
     },
     "tags": {
@@ -92,6 +91,7 @@
           "description": "A phone number for the point of contact for the release."
         }
       },
+      "additionalProperties": false,
       "required": ["email"]
     },
     "status": {
@@ -112,7 +112,7 @@
       "description": "A lowercase string with the name of the version control system that is being used for the release. For example, 'git'."
     },
     "repositoryURL": {
-      "type": ["string", "null"],
+      "type": "string",
       "format": "uri",
       "description": "The URL of the public release repository for open source repositories. This field is not required for repositories that are only available as government-wide reuse or are closed (pursuant to one of the exemptions)."
     },
@@ -161,7 +161,6 @@
             "format": "uri",
             "description": "The URL where the code repository, project, library or release can be found."
           }
-
         },
         "additionalProperties": false
       }
@@ -199,7 +198,8 @@
             "type": "string",
             "description": "The email address for the point of contact at the partner agency."
           }
-        }
+        },
+        "additionalProperties": false
       }
     },
     "date": {
@@ -221,9 +221,11 @@
           "format": "date",
           "description": "The date the metadata of the release was last updated, in YYYY-MM-DD or ISO 8601 format."
         }
-      }
+      },
+      "additionalProperties": false
     }
   },
+  "additionalProperties": false,
   "required": [
     "name",
     "permissions",
