@@ -1,0 +1,51 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+        "version": {
+            "type": "string",
+            "enum": [
+                "1.0.1",
+                "2.0.0"
+            ]
+        },
+        "measurementType": {
+            "type": "object",
+            "description": "An object containing description of the open source measurement method. ",
+            "properties": {
+                "method": {
+                    "type": "string",
+                    "enum": [
+                        "cost",
+                        "system",
+                        "projects",
+                        "modules",
+                        "linesOfCode",
+                        "other"
+                    ],
+                    "description": "An enumerated list of methods for measuring the open source requirement. "
+                },
+                "ifOther": {
+                    "type": "string",
+                    "description": "A one- or two- sentence description of the measurement type used, if 'other' is selected as the value of 'method' field."
+                }
+            }
+        },
+        "agency": {
+            "type": "string",
+            "description": "The agency acronym for Clinger Cohen Act (CCA) agencies can be found through the CFO Act list, as CCA references the CFO Act. For example \"GSA\" or \"DOD\". Please use uppercase letters."
+        },
+        "releases": {
+            "type": "array",
+            "items": {
+                "type":"object"
+            }
+        }
+    },
+    "additionalProperties": false,
+    "required":[
+        "version",
+        "measurementType",
+        "releases"
+    ]
+}
