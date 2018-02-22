@@ -7,11 +7,11 @@
       "description": "The name of the release."
     },
     "version": {
-      "type": "string",
+      "type": ["string", "null"],
       "description": "The version for this release. For example, '1.0.0'."
     },
     "organization": {
-      "type": "string",
+      "type": ["string", "null"],
       "description": "The organization or component within the agency to which the releases listed belong. For example, '18F' or 'Navy'."
     },
     "description": {
@@ -27,15 +27,15 @@
             "type": "object",
             "properties": {
               "URL": {
-                "type": "string",
-                "format": "uri",
+                "type": ["string", "null"],
                 "description": "The URL of the release license, if available. If not, null should be used."
               },
               "name": {
                 "type": "string",
                 "description": "An abbreviation for the name of the license. For example, 'CC0' or 'MIT'."
               }
-            }
+            },
+            "required": ["name"]
           }
         },
         "usageType": {
@@ -53,17 +53,14 @@
           "additionalProperties": false
         },
         "exemptionText": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": ["string", "null"],
           "description": "If an exemption is listed in the 'usageType' field, this field should include a one- or two- sentence justification for the exemption used."
         }
       },
-      "required": ["licenses"]
+      "required": ["licenses", "usageType"]
     },
     "tags": {
-      "type": "array",
+      "type": ["array", "null"],
       "items": {
         "type": "string",
         "description": "An array of keywords that will be helpful in discovering and searching for the release."
@@ -84,7 +81,6 @@
         },
         "URL": {
           "type": "string",
-          "format": "uri",
           "description": "The URL to a website that can be used to reach the point of contact. For example, 'http://twitter.com/codeDotGov'."
         },
         "phone": {
@@ -95,7 +91,7 @@
       "required": ["email"]
     },
     "status": {
-      "type": "string",
+      "type": ["string", "null"],
       "description": "The development status of the release.",
       "enum": [
         "Ideation",
@@ -108,35 +104,31 @@
       ]
     },
     "vcs": {
-      "type": "string",
+      "type": ["string", "null"],
       "description": "A lowercase string with the name of the version control system that is being used for the release. For example, 'git'."
     },
     "repositoryURL": {
-      "type": ["string", "null"],
-      "format": "uri",
+      "type": "string",
       "description": "The URL of the public release repository for open source repositories. This field is not required for repositories that are only available as government-wide reuse or are closed (pursuant to one of the exemptions)."
     },
     "homepageURL": {
-      "type": "string",
-      "format": "uri",
+      "type": ["string", "null"],
       "description": "The URL of the public release homepage."
     },
     "downloadURL": {
-      "type": "string",
-      "format": "uri",
+      "type": ["string", "null"],
       "description": "The URL where a distribution of the release can be found."
     },
     "disclaimerURL": {
-      "type": "string",
-      "format": "uri",
+      "type": ["string", "null"],
       "description": "The URL where disclaimer language regarding the release can be found."
     },
     "disclaimerText": {
-      "type": "string",
+      "type": ["string", "null"],
       "description": "Short paragraph that includes disclaimer language to accompany the release."
     },
     "languages": {
-      "type": "array",
+      "type": ["array", "null"],
       "description": " An array of strings with the names of the programming languages in use on the release.",
       "items": {
         "type": "string"
@@ -147,78 +139,70 @@
       "description": "An estimate of total labor hours spent by your organization/component across all versions of this release. This includes labor performed by federal employees and contractors."
     },
     "relatedCode": {
-      "type": "array",
+      "type": ["array", "null"],
       "description": "An array of affiliated government repositories that may be a part of the same project. For example,  relatedCode for 'code-gov-web' would include 'code-gov-api' and 'code-gov-tools'.",
       "items": {
         "type": "object",
         "properties": {
           "name": {
-            "type": "string",
+            "type": ["string", "null"],
             "description": "The name of the code repository, project, library or release."
           },
           "URL": {
-            "type": "string",
-            "format": "uri",
+            "type": ["string", "null"],
             "description": "The URL where the code repository, project, library or release can be found."
           }
-
-        },
-        "additionalProperties": false
+        }
       }
     },
     "reusedCode": {
-      "type": "array",
+      "type": ["array", "null"],
       "description": "An array of government source code, libraries, frameworks, APIs, platforms or other software used in this release. For example, US Web Design Standards, cloud.gov, Federalist, Digital Services Playbook, Analytics Reporter.",
       "items": {
         "type": "object",
         "properties": {
           "name": {
-            "type": "string",
+            "type": ["string", "null"],
             "description": "The name of the software used in this release."
           },
           "URL": {
-            "type": "string",
-            "format": "uri",
+            "type": ["string", "null"],
             "description": "The URL where the software can be found."
           }
-        },
-        "additionalProperties": false
+        }
       }
     },
     "partners": {
-      "type": "array",
+      "type": ["array", "null"],
       "description": "An array of objects including an acronym for each agency partnering on the release and the contact email at such agency.",
       "items": {
         "type": "object",
         "properties": {
           "name": {
-            "type": "string",
+            "type": ["string", "null"],
             "description": "The acronym describing the partner agency."
           },
           "email": {
-            "type": "string",
+            "type": ["string", "null"],
             "description": "The email address for the point of contact at the partner agency."
           }
         }
       }
     },
     "date": {
-      "type": "object",
+      "type": ["object", "null"],
       "description": "A date object describing the release.",
       "properties": {
         "created": {
-          "type": "string",
-          "format": "date",
+          "type": ["string", "null"],
           "description": "The date the release was created, in YYYY-MM-DD or ISO 8601 format."
         },
         "lastModified": {
-          "type": "string",
-          "format": "date",
+          "type": ["string", "null"],
           "description": "The date the release was modified, in YYYY-MM-DD or ISO 8601 format."
         },
         "metadataLastUpdated": {
-          "type": "string",
-          "format": "date",
+          "type": ["string", "null"],
           "description": "The date the metadata of the release was last updated, in YYYY-MM-DD or ISO 8601 format."
         }
       }
