@@ -147,14 +147,6 @@ describe('Validator service', function() {
             "vcs": "Acquia",
             "status": "Production",
             "repositoryURL": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/air_travel_price_index/",
-            "permissions": {
-              "licenses": [{
-                "URL": "",
-                "name": "Yes"
-              }],
-              "usageType": "openSource",
-              "exemptiontext": "null"
-            },
             "tags": ["transportation", "code"],
             "laborHours": 0,
             "contact": {
