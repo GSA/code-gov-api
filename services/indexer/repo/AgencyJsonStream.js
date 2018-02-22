@@ -3,7 +3,6 @@ const { Transform } = require("stream");
 const request = require("request");
 const Jsonfile = require("jsonfile");
 const Logger = require('../../../utils/logger');
-const _ = require("lodash");
 const { getValidator } = require('../../validator');
 const Formatter = require('../../formatter');
 const Reporter = require("../../reporter");
@@ -43,7 +42,7 @@ class AgencyJsonStream extends Transform {
   }
 
   _getAgencyCodeJson(agency){
-    logger.debug('Entered saveFetchedCodeJson - Agency: ', agency.acronym);
+    logger.info('Entered saveFetchedCodeJson - Agency: ', agency.acronym);
 
     return new Promise((fulfill, reject) => {
       const requestParams = {
@@ -118,19 +117,17 @@ class AgencyJsonStream extends Transform {
 
       return validator.validateRepo(repo, agency, (error, results) => {
         if(error) {
-          logger.error(`Error validating repo with repoID ${repoId}. Throwing it out of the indexing process.`);
-        } else {
-          if(results.issues) {
-            validationTotals.errors += results.issues.errors.length ? results.issues.errors.length : 0;
-            validationTotals.warnings += results.issues.warnings.length ? results.issues.warnings.length : 0;
-            validationTotals.enhancements += results.issues.enhancements.length ?
-              results.issues.enhancements.length : 0;
-  
-            Reporter.reportIssues(agency.acronym, results);
-          }
-
-          resultRepos.push(repo);
+          logger.debug(`Error validating repo with repoID ${repoId}.`);
         }
+        if(results.issues) {
+          validationTotals.errors += results.issues.errors.length ? results.issues.errors.length : 0;
+          validationTotals.warnings += results.issues.warnings.length ? results.issues.warnings.length : 0;
+          validationTotals.enhancements += results.issues.enhancements.length ? results.issues.enhancements.length : 0;
+  
+          Reporter.reportIssues(agency.acronym, results);
+        }
+        validator.cleaner(repo);
+        resultRepos.push(repo);
       });
     });
 
@@ -166,26 +163,19 @@ class AgencyJsonStream extends Transform {
     });
   }
 
-  _calculateOverallCompliance(requirements){
-    // overallCompliance should be:
-    //  - 0 if 2 or more compliances are 0
-    //  - 1 if all 3 are 1
-    //  - otherwise the average of the requirements
-    //
+  _calculateMean(values) {
+    return values.reduce((total, currentValue) => total + currentValue) / values.length;
+  }
+
+  _calculateOverallCompliance(requirements) {
     // TODO: align this approach with project-open-data's approach
     const compliances = [
       requirements.agencyWidePolicy,
       requirements.openSourceRequirement,
       requirements.inventoryRequirement
     ];
-    const counts = _.countBy(compliances, _.identity);
-
-    if (counts['0'] === 2) {
-      return 0;
-    } else {
-      // If all are 1 then 1 for all
-      return _.mean(compliances);
-    }
+  
+    return this._calculateMean(compliances);
   }
   
   _formatRepos(agency, validatedRepos) {
