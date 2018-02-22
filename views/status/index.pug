@@ -61,7 +61,7 @@ block content
               =data.metadata.agency.acronym
             td
               =data.metadata.agency.name
-        else if data.metadata.agency.requirements.overallCompliance <1
+        else if data.metadata.agency.requirements.overallCompliance >= 0.25 && data.metadata.agency.requirements.overallCompliance <1
           td.warning
             =data.metadata.agency.acronym 
           td.warning
