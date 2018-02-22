@@ -12,6 +12,7 @@ const Utils = require("../../utils");
 const Logger = require("../../utils/logger");
 const path = require('path');
 const JsonFile = require('jsonfile');
+const version4Schema = require('ajv/lib/refs/json-schema-draft-04.json');
 
 const PATH_TO_SCHEMAS = path.join(process.cwd(), '/schemas');
 const SCHEMAS = ["repo"];
@@ -31,14 +32,21 @@ function getValidator(codeJson) {
  * @param {string} schemaPath 
  */
 function getSchemaValidators(schemaPath) {
-  const ajv = new Ajv({ async: true });
-  ajv.addMetaSchema(require('ajv/lib/refs/json-schema-draft-04.json'));
+  const ajv = new Ajv({ async: true, allErrors: true });
+  ajv.addMetaSchema(version4Schema);
 
   return { 
     relaxed: ajv.compile(JsonFile.readFileSync(path.join(schemaPath, '/relaxed.json'))), 
     strict: ajv.compile(JsonFile.readFileSync(path.join(schemaPath, '/strict.json'))), 
     enhanced: ajv.compile(JsonFile.readFileSync(path.join(schemaPath, '/enhanced.json')))
   };
+}
+
+function getCleaner(schemaPath) {
+  const ajv = new Ajv({ removeAdditional: true });
+  ajv.addMetaSchema(version4Schema);
+
+  return ajv.compile(JsonFile.readFileSync(path.join(schemaPath, '/strict.json')));
 }
 
 class Validator {
@@ -51,6 +59,7 @@ class Validator {
       const pathToSchemas = path.join(PATH_TO_SCHEMAS, schemaName, this._version);
       this.validators[schemaName] = getSchemaValidators(pathToSchemas);
     });
+    this.cleaner = getCleaner(path.join(PATH_TO_SCHEMAS, 'repo', this._version));
   }
 
   /**
