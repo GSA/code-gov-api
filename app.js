@@ -12,7 +12,6 @@ const RateLimit = require('express-rate-limit');
 const Searcher = require("./services/searcher");
 const ElasticsearchSearcherAdapter = require("./utils/search_adapters/elasticsearch_adapter");
 const swaggerUi = require('swagger-ui-express');
-const swaggerDocument = require('./swagger.json');
 
 /* eslint-disable */
 const request = require("request");
@@ -37,14 +36,14 @@ const limiter = new RateLimit({
 
 app.set('json escape', true);
 app.use(limiter);
-app.use(express.static(path.join(__dirname, '/public')));
+// app.use(express.static(path.join(__dirname, '/public')));
 app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use('/api', express.static(path.join(__dirname, 'public')));
 app.use(cors());
 app.use(helmet());
 app.use(helmet.hsts({
@@ -55,8 +54,7 @@ app.use(helmet.hsts({
   }
 }));
 
-swaggerDocument.host = config.SWAGGER_HOST;
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use('/api/docs', swaggerUi.serve, swaggerUi.setup(config.SWAGGER_DOCUMENT));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 app.set('json spaces', 2);
@@ -77,7 +75,7 @@ const logger = new Logger({name: "code-gov-api"});
 const searcherAdapter = new ElasticsearchSearcherAdapter(config);
 const searcher = new Searcher(searcherAdapter, config);
 const router = getApiRoutes(config, searcher, new express.Router());
-app.use('/api/0.1', router);
+app.use('/api', router);
 
 /* ------------------------------------------------------------------ *
                             ERROR HANDLING

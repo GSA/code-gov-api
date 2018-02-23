@@ -4,7 +4,7 @@ applications:
   instances: 1
   disk_quota: 1024M
   health-check-type: http
-  health-check-http-endpoint: /api/0.1
+  health-check-http-endpoint: /api
   buildpack: https://github.com/cloudfoundry/nodejs-buildpack
   env:
     ES_HEAP_SIZE: 10g
