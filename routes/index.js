@@ -53,7 +53,7 @@ const _getInvalidRepoQueryParams = (queryParams) => {
   });
 };
 
-const queryReposAndSendResponse = (searcher, query, response, next) => {
+const queryReposAndSendResponse = (searcher, query, response) => {
   let queryParams = Object.keys(query);
 
   if(queryParams.length) {

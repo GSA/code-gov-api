@@ -1,6 +1,7 @@
 const path = require('path');
 const getProductionConfig = require('./prod');
 const getDevelopmentConfig = require('./dev');
+const jsonfile = require('jsonfile');
 
 function getConfig(env) {
   let config = {
@@ -19,8 +20,10 @@ function getConfig(env) {
   config.DIFFED_DIR = path.join(path.dirname(__dirname), config.DIFFED_DIR);
   config.FALLBACK_DIR = path.join(path.dirname(__dirname), config.FALLBACK_DIR);
   config.PORT = process.env.PORT || 3001;
-  config.SWAGGER_HOST = config.SWAGGER_HOST || `localhost:${config.PORT}`;
-
+  config.SWAGGER_DOCUMENT = config.SWAGGER_ENV === 'prod'
+    ? jsonfile.readFileSync(path.join(path.dirname(__dirname), './swagger-prod.json'))
+    : jsonfile.readFileSync(path.join(path.dirname(__dirname), './swagger.json'));
+  config.SWAGGER_DOCUMENT.host = config.SWAGGER_HOST || `0.0.0.0:${config.PORT}`;
   return config;
 }
 
