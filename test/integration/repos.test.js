@@ -4,10 +4,14 @@ const chai = require('chai');
 const should = chai.should();
 
 describe('/repos endpoint', () => {
+  let endpoint;
+  before(() => {
+    endpoint = '/api/repos';
+  });
 
   it('responds with a 200', (done) => {
     request(app)
-      .get('/api/0.1/repos')
+      .get(endpoint)
       .expect(200)
       .expect(res => {
         res.body.should.be.a('object');
@@ -18,7 +22,7 @@ describe('/repos endpoint', () => {
   describe('the output JSON structure', () => {
     it('includes a "total" count of at least 2000', (done) => {
       // See supertest documentation for this assertion style
-      request(app).get('/api/0.1/repos')
+      request(app).get(endpoint)
         .expect((res) => {
           res.body.total.should.be.at.least(2000)
         })

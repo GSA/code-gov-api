@@ -167,7 +167,21 @@
               "in": "query",
               "description": "Filters search by the repository's usage type. Eg. openSource, governmentWideReuse",
               "required": false,
-              "type": "string"
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "style": "form",
+              "collectionFormat": "multi",
+              "enum": [
+                "openSource",
+                "governmentWideReuse",
+                "exemptByLaw",
+                "exemptByNationalSecurity",
+                "exemptByAgencySystem",
+                "exemptByAgencyMission",
+                "exemptByCIO"
+              ]
             },
             {
               "name": "laborHours",

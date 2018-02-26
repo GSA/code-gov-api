@@ -130,12 +130,10 @@ class Searcher {
 
   _addStringFilter(body, field, filter) {
     if (filter instanceof Array) {
-      let orBody = new Bodybuilder();
       filter.forEach((filterElement) => {
         logger.info(filterElement);
-        orBody.orFilter("term", field, filterElement.toLowerCase());
+        body.orFilter("term", field, filterElement.toLowerCase());
       });
-      body.filter("bool", "and", orBody.build("v2"));
     } else {
       body.filter("term", field, filter.toLowerCase());
     }
@@ -281,7 +279,7 @@ class Searcher {
 
     let query = body.build("v2");
 
-    logger.debug(query);
+    logger.info(query);
     return query;
   }
 
