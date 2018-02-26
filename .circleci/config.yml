@@ -21,16 +21,19 @@ jobs:
       - run:
           name: run-linter
           command: npm run lint
+      - run:
+          name: run-security-check
+          command: npm run security-check
   test:
     working_directory: ~/code-gov-api
     docker:
       - image: circleci/node:8.9.3-stretch
     steps:
       - checkout
-      - run: 
+      - run:
           name: download-cc-test-reporter
           command: curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-      - run: 
+      - run:
           name: make-test-reporter-executable
           command: chmod +x ./cc-test-reporter
       - run:
@@ -66,10 +69,10 @@ jobs:
       - image: elasticsearch:2.4
     steps:
       - checkout
-      - run: 
+      - run:
           name: download-cc-test-reporter
           command: curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-      - run: 
+      - run:
           name: make-test-reporter-executable
           command: chmod +x ./cc-test-reporter
       - run:
@@ -170,7 +173,7 @@ workflows:
             - test
             - integration
           filters:
-            branches: 
+            branches:
               only: master
             tags:
               ignore: /.*/

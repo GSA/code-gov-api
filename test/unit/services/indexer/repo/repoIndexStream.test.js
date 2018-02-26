@@ -1,4 +1,3 @@
-const proxyRequire = require('proxyquire');
 const JsonFile = require('jsonfile');
 const path = require('path');
 
@@ -6,7 +5,6 @@ const path = require('path');
 const MockAdapter = require('../../../../../utils/search_adapters/testable_elasticsearch_adapter');
 const RepoIndexer = require('../../../../../services/indexer/repo');
 const RepoIndexerStream = require('../../../../../services/indexer/repo/RepoIndexStream')
-const proxyquire = require('proxyquire');
 
 
 describe('Index given repo', function(done) {
@@ -18,7 +16,6 @@ describe('Index given repo', function(done) {
   let indexer;
   let mockAdapter = new MockAdapter();
 
-  // TODO: add multi version support see Github project https://github.com/GSA/code-gov-api/projects/1
   const ES_MAPPING = require("../../../../../indexes/repo/mapping_200.json");
   const ES_SETTINGS = require("../../../../../indexes/repo/settings.json");
   const ES_PARAMS = {
@@ -70,7 +67,7 @@ describe('Index given repo', function(done) {
         codeUrl: '/FAKE.json',
         requirements: { agencyWidePolicy: 0, openSourceRequirement: 0, inventoryRequirement: 0, schemaFormat: 1, overallCompliance: 0 }
       },
-      repoID: 'fake_fake_org_save_mail' 
+      repoID: 'fake_fake_org_save_mail'
     }
     const expectedResult = {
       "_id": "1",
