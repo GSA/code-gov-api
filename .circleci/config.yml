@@ -22,8 +22,8 @@ jobs:
           name: run-linter
           command: npm run lint
       - run:
-          name: run-nsp
-          command: nsp check
+          name: run-security-check
+          command: npm run security-check
   test:
     working_directory: ~/code-gov-api
     docker:
