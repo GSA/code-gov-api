@@ -3,7 +3,7 @@ const getConfig = require("./config");
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const express = require("express");
-const getApiRoutes = require('./routes');
+const { getApiRoutes } = require('./routes');
 const helmet = require('helmet');
 const Indexer = require("./scripts/index/index.js");
 const Logger = require("./utils/logger");
@@ -27,19 +27,19 @@ const favicon = require('serve-favicon');
 const config = getConfig(process.env.NODE_ENV);
 
 const app = express();
-const limiter = new RateLimit({
-  windowMs: parseInt(process.env.WINDOW_MS || 60000, 10),
-  max: parseInt(process.env.MAX_IP_REQUESTS || 500, 10),
-  delayMs:parseInt(process.env.DELAY_MS || 0, 10),
-  headers: true
-});
 
 app.set('json escape', true);
-app.use(limiter);
-// app.use(express.static(path.join(__dirname, '/public')));
-app.use(bodyParser.urlencoded({
-  extended: true
-}));
+
+if( config.ClOUD_GOV_SPACE && config.ClOUD_GOV_SPACE === 'prod') {
+  const limiter = new RateLimit({
+    windowMs: parseInt(process.env.WINDOW_MS || 60000, 10),
+    max: parseInt(process.env.MAX_IP_REQUESTS || 500, 10),
+    delayMs:parseInt(process.env.DELAY_MS || 0, 10),
+    headers: true
+  });
+  app.use(limiter);
+}
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
