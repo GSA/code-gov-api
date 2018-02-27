@@ -1,7 +1,6 @@
 const _                   = require("lodash");
 const Bodybuilder         = require("bodybuilder");
 const moment              = require("moment");
-const getConfig           = require("../../config");
 const Utils               = require("../../utils");
 const Logger              = require("../../utils/logger");
 const repoMapping         = require("../../indexes/repo/mapping_200.json");
@@ -140,7 +139,7 @@ class Searcher {
   }
 
   _addStringFilters(body, queryParams) {
-    
+
     searchPropsByType['string'].forEach((field) => {
       if(queryParams[field]) {
         this._addStringFilter(body, field, queryParams[field]);
