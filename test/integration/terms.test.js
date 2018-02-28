@@ -21,7 +21,7 @@ describe('/terms endpoint', () => {
       // See supertest documentation for this assertion style
       request(app).get(`${endpoint}?term_type=agency.acronym`)
         .expect(response => {
-          response.body.total.should.be.at.least(13)
+          response.body.total.should.be.at.least(20)
         })
         .end(done);
     });
