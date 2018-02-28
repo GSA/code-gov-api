@@ -83,8 +83,8 @@ function getApiRoutes(config, searcher, router) {
       });
   });
   router.get(`/status`, (request, response) => {
-    getStatusData(response, config, logger)
-      .then(results => response.render('status', { title: "Code.gov API Status", results }))
+    getStatusData(config, logger)
+      .then(results => response.render('status', { title: "Code.gov API Status", statusData: results }))
       .catch(error => {
         logger.error(error);
         response.sendStatus(404);
