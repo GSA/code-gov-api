@@ -18,7 +18,7 @@ describe('AgencyJsonStream', function() {
   let config;
 
   beforeEach(function() {
-    testDataDir = path.join(__dirname, '/test_data');
+    testDataDir = path.join(path.dirname(path.dirname(path.dirname(__dirname))), '/test_data');
     fallbackDataDir = path.join(testDataDir, '/fallback');
     fetchDataDir = path.join(testDataDir, '/fetched');
     agency = JsonFile.readFileSync(path.join(testDataDir, 'test_agency_endpoints.json'))
@@ -98,7 +98,7 @@ describe('AgencyJsonStream', function() {
         lastModified: moment('2017-04-11', 'YYYY-MM-DD').utc().toJSON(),
         metadataLastUpdated: moment('2017-04-22', 'YYYY-MM-DD').utc().toJSON()
       },
-      repoID: 'fake_fake_org_save_mail' 
+      repoID: 'fake_fake_org_save_mail'
     }]
     const codeJson = JsonFile.readFileSync(path.join(fallbackDataDir, '/FAKE.json'));
 

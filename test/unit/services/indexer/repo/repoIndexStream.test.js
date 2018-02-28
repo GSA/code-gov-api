@@ -26,7 +26,7 @@ describe('Index given repo', function(done) {
   };
 
   before(function() {
-    testDataDir = path.join(__dirname, '/test_data');
+    testDataDir = path.join(path.dirname(path.dirname(path.dirname(__dirname))), '/test_data');
     fallbackDataDir = path.join(testDataDir, '/fallback');
     fetchDataDir = fallbackDataDir; // Same as abouve, we will not be going through all the file fetch flow.
     agency = JsonFile.readFileSync(path.join(testDataDir, 'test_agency_endpoints.json'))
