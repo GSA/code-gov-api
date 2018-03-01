@@ -1,1 +1,277 @@
-{}
+{
+  "version": "2.0.0",
+  "agency": "",
+  "releases": [
+    {
+      "status": " ",
+      "vcs": "git",
+      "repoURL": "https://github.com/bro/bro",
+      "name": "bro",
+      "downloadURL": " ",
+      "description": "Bro is a powerful network analysis framework that is much different from the typical IDS you may know. Official mirror of git.bro.org/bro.git . ",
+      "contact": {
+        "email": " ",
+        "name": " ",
+        "twitter": " ",
+        "phone": " "
+      },
+      "partners": [
+        {
+          "name": " "
+        },
+        {
+          "email": " "
+        }
+      ],
+      "license_name": "CCBY4.0",
+      "closedproject": 0,
+      "agency": "DOE",
+      "tags": [
+        "bro",
+        "network analysis",
+        "framework"
+      ],
+      "languages": [
+        "Bro"
+      ],
+      "id": "DOE/bro",
+      "repositoryURL": "git://github.com/bro/bro.git",
+      "homepageURL": "http://www.bro.org",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/bro/bro/blob/master/doc/LICENSE",
+            "name": null
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": "2012-07-06T20:30:16Z"
+      },
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
+    },
+    {
+      "status": " ",
+      "vcs": "git",
+      "repoURL": "https://github.com/dun/conman",
+      "name": "conman",
+      "downloadURL": " ",
+      "description": "ConMan: The Console Manager ",
+      "contact": {
+        "email": " ",
+        "name": " ",
+        "twitter": " ",
+        "phone": " "
+      },
+      "partners": [
+        {
+          "name": " "
+        },
+        {
+          "email": " "
+        }
+      ],
+      "license_name": "GPLv3",
+      "closedproject": 0,
+      "agency": "DOE",
+      "tags": [
+        "conman",
+        "console",
+        "manager"
+      ],
+      "languages": [
+        "C"
+      ],
+      "id": "DOE/conman",
+      "repositoryURL": "git://github.com/dun/conman.git",
+      "homepageURL": "",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/dun/conman",
+            "name": null
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": "2015-03-17T18:13:16Z"
+      },
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
+    },
+    {
+      "status": " ",
+      "vcs": "git",
+      "repoURL": "https://github.com/samilliken/openDCIM",
+      "name": "openDCIM",
+      "downloadURL": " ",
+      "description": "An open source (GPL v3) Data Center Inventory Management (DCIM) application. ",
+      "contact": {
+        "email": " ",
+        "name": " ",
+        "twitter": " ",
+        "phone": " "
+      },
+      "partners": [
+        {
+          "name": " "
+        },
+        {
+          "email": " "
+        }
+      ],
+      "license_name": "GPLv3",
+      "closedproject": 0,
+      "agency": "DOE",
+      "tags": [
+        "open source",
+        "source",
+        "data center",
+        "inventory management",
+        "dcim"
+      ],
+      "languages": [
+        "PHP"
+      ],
+      "id": "DOE/openDCIM",
+      "repositoryURL": "git://github.com/samilliken/openDCIM.git",
+      "homepageURL": "http://opendcim.org",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/samilliken/openDCIM",
+            "name": null
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": "2012-04-18T01:46:19Z"
+      },
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
+    },
+    {
+      "status": " ",
+      "vcs": "git",
+      "repoURL": "https://github.com/dun/munge",
+      "name": "munge",
+      "downloadURL": " ",
+      "description": "MUNGE Uid 'N' Gid Emporium ",
+      "contact": {
+        "email": " ",
+        "name": " ",
+        "twitter": " ",
+        "phone": " "
+      },
+      "partners": [
+        {
+          "name": " "
+        },
+        {
+          "email": " "
+        }
+      ],
+      "license_name": "GPLv3",
+      "closedproject": 0,
+      "agency": "DOE",
+      "tags": [
+        "munge",
+        "uid",
+        "gid",
+        "emporium"
+      ],
+      "languages": [
+        "C"
+      ],
+      "id": "DOE/munge",
+      "repositoryURL": "git://github.com/dun/munge.git",
+      "homepageURL": "",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/dun/munge",
+            "name": null
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": "2015-05-15T22:16:19Z"
+      },
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
+    }
+  ]
+}

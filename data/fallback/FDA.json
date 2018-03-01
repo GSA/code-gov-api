@@ -3,15 +3,16 @@
   "agency": "",
   "releases": [
     {
-      "status": "production",
+      "status": " ",
       "vcs": "git",
-      "name": "data.gov",
-      "downloadURL": "https://github.com/GSA/data.gov/archive/master.zip",
-      "description": "Data.gov source code and issue tracker ",
+      "name": "fda-hive",
+      "agency": "FDA",
+      "downloadURL": " ",
+      "description": "FDA High-performance Integrated Virtual Environment (HIVE)",
       "contact": {
-        "email": "datagov@gsa.gov",
+        "email": " ",
         "name": "",
-        "twitter": "https://twitter.com/usdatagov",
+        "twitter": "",
         "phone": ""
       },
       "partners": [
@@ -22,24 +23,27 @@
           "email": ""
         }
       ],
-      "license_name": "CC0",
+      "license_name": "MIT",
       "closedproject": 0,
       "tags": [
-        "data",
-        "open data",
-        "data.gov",
-        "issue tracker"
+        "fda",
+        "high performance",
+        "performance",
+        "integrated virtual environment",
+        "virtual environment",
+        "environment",
+        "hive"
       ],
       "languages": [
-        "PHP"
+        "C++"
       ],
-      "id": "undefined/data.gov",
-      "repositoryURL": "git://github.com/GSA/data.gov.git",
-      "homepageURL": "http://www.data.gov",
+      "id": "FDA/fda-hive",
+      "repositoryURL": "https://github.com/FDA/fda-hive",
+      "homepageURL": "",
       "permissions": {
         "licenses": [
           {
-            "URL": "https://github.com/GSA/data.gov/blob/master/LICENSE.md",
+            "URL": "https://opensource.org/licenses/MIT",
             "name": null
           }
         ],
@@ -50,7 +54,7 @@
       "date": {
         "created": "",
         "lastModified": "",
-        "metadataLastUpdated": "2013-03-29T01:01:04Z"
+        "metadataLastUpdated": "2016-04-05T19:13:57Z"
       },
       "disclaimerText": "",
       "disclaimerURL": "",

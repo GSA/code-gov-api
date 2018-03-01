@@ -1,1 +1,218 @@
-{}
+{
+  "version": "2.0.0",
+  "agency": "",
+  "releases": [
+    {
+      "status": " ",
+      "vcs": "git",
+      "repoURL": "https://github.com/USEPA/E-Enterprise-Portal",
+      "name": "E-Enterprise-Portal",
+      "downloadURL": " ",
+      "description": "E-Enterprise is a transformative approach to make environmental information and data more accessible, efficient, and evidence-based through advances in monitoring, reporting, and information technology. The Portal is designed to be a modern and efficient interface for environmental transactions. This includes easier access to information and making transactions with environmental agencies as efficient and effective as possible. ",
+      "contact": {
+        "email": " ",
+        "name": " ",
+        "twitter": " ",
+        "phone": " "
+      },
+      "partners": [
+        {
+          "name": " "
+        },
+        {
+          "email": " "
+        }
+      ],
+      "license_name": "GPLv2",
+      "closedproject": 0,
+      "agency": "EPA",
+      "tags": [
+        "environmental",
+        "information",
+        "data",
+        "epa",
+        "evidence-based",
+        "monitoring",
+        "reporting",
+        "portal",
+        "ux",
+        "ui",
+        "interface",
+        "environmental",
+        "transactions"
+      ],
+      "languages": [
+        "PHP"
+      ],
+      "id": "EPA/E-Enterprise-Portal",
+      "repositoryURL": "git://github.com/USEPA/E-Enterprise-Portal.git",
+      "homepageURL": "",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/USEPA/E-Enterprise-Portal/blob/master/drupal/LICENSE.txt",
+            "name": null
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": "2015-06-01T17:37:20Z"
+      },
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
+    },
+    {
+      "status": " ",
+      "vcs": "git",
+      "repoURL": "https://github.com/USEPA/My-Right-To-Know--MyRTK-",
+      "name": "My-Right-To-Know--MyRTK-",
+      "downloadURL": " ",
+      "description": "This application compares toxic chemical releases from individual facilities to releases from other facilities in the same county, as well as to releases from other facilities in the same industry sector. ",
+      "contact": {
+        "email": " ",
+        "name": " ",
+        "twitter": " ",
+        "phone": " "
+      },
+      "partners": [
+        {
+          "name": " "
+        },
+        {
+          "email": " "
+        }
+      ],
+      "license_name": "EPAOSA",
+      "closedproject": 0,
+      "agency": "EPA",
+      "tags": [
+        "toxic",
+        "chemical",
+        "industry",
+        "epa",
+        "mobile",
+        "web",
+        "water",
+        "pollution"
+      ],
+      "languages": [
+        "JavaScript"
+      ],
+      "id": "EPA/My-Right-To-Know--MyRTK-",
+      "repositoryURL": "git://github.com/USEPA/My-Right-To-Know--MyRTK-.git",
+      "homepageURL": "",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/USEPA/My-Right-To-Know--MyRTK-/blob/master/LICENSE.md",
+            "name": null
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": "2013-06-12T14:15:41Z"
+      },
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
+    },
+    {
+      "status": " ",
+      "vcs": "git",
+      "repoURL": "https://github.com/USEPA/WNTR",
+      "name": "WNTR",
+      "downloadURL": " ",
+      "description": "",
+      "contact": {
+        "email": " ",
+        "name": " ",
+        "twitter": " ",
+        "phone": " "
+      },
+      "partners": [
+        {
+          "name": " "
+        },
+        {
+          "email": " "
+        }
+      ],
+      "license_name": "BSD-3,LGPLv2",
+      "closedproject": 0,
+      "agency": "EPA",
+      "tags": [],
+      "languages": [
+        "Python"
+      ],
+      "id": "EPA/WNTR",
+      "repositoryURL": "git://github.com/USEPA/WNTR.git",
+      "homepageURL": "",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/USEPA/WNTR/blob/master/LICENSE.txt",
+            "name": null
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": "2016-07-13T16:33:33Z"
+      },
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
+    }
+  ]
+}

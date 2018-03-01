@@ -1,14 +1,11 @@
 {
-  "version": "1.0.1",
-  "agency": "DHHS",
-  "projects": [
+  "version": "2.0.0",
+  "agency": "",
+  "releases": [
     {
       "name": "ckanext-datajson",
       "organization": "Department of Health and Human Services",
       "description": "Custom CKAN extension for HealthData.gov",
-      "license": "http://creativecommons.org/publicdomain/zero/1.0/",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 1,
       "tags": [
         "ckan",
         "json",
@@ -19,15 +16,45 @@
         "name": "Office of the Chief Information Officer"
       },
       "vcs": "git",
-      "repository": "https://github.com/HHS/ckanext-datajson"
+      "agency": "HHS",
+      "id": "HHS/ckanext-datajson",
+      "repositoryURL": "https://github.com/HHS/ckanext-datajson",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "http://creativecommons.org/publicdomain/zero/1.0/",
+            "name": null
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      },
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
     },
     {
       "name": "ckanext-harvest",
       "organization": "Department of Health and Human Services",
       "description": "CKAN remote harvesting extension",
-      "license": null,
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 1,
       "tags": [
         "ckan",
         "harvest",
@@ -38,15 +65,45 @@
         "name": "Office of the Chief Information Officer"
       },
       "vcs": "git",
-      "repository": "https://github.com/HHS/ckanext-harvest"
+      "agency": "HHS",
+      "id": "HHS/ckanext-harvest",
+      "repositoryURL": "https://github.com/HHS/ckanext-harvest",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": null,
+            "name": null
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      },
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
     },
     {
       "name": "lodestar",
       "organization": "Department of Health and Human Services",
       "description": "Linked Data explorer and SPARQL endpoint",
-      "license": "http://www.apache.org/licenses/LICENSE-2.0",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 1,
       "tags": [
         "linked data",
         "SPARQL",
@@ -57,15 +114,45 @@
         "name": "Office of the Chief Information Officer"
       },
       "vcs": "git",
-      "repository": "https://github.com/HHS/lodestar"
+      "agency": "HHS",
+      "id": "HHS/lodestar",
+      "repositoryURL": "https://github.com/HHS/lodestar",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "http://www.apache.org/licenses/LICENSE-2.0",
+            "name": null
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      },
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
     },
     {
       "name": "Healthcare Fraud Prevention",
       "organization": "Centers for Medicare and Medicaid Services",
       "description": "Code from the Healthcare Fraud Prevention Partnership challenge",
-      "license": "http://www.apache.org/licenses/LICENSE-2.0",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 1,
       "tags": [
         "healthcare",
         "fraud prevention"
@@ -75,15 +162,45 @@
         "name": "Office of the Chief Information Officer"
       },
       "vcs": "git",
-      "repository": "https://github.com/HHS/CoECI-CMS-Healthcare-Fraud-Prevention"
+      "agency": "HHS",
+      "id": "HHS/Healthcare%20Fraud%20Prevention",
+      "repositoryURL": "https://github.com/HHS/CoECI-CMS-Healthcare-Fraud-Prevention",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "http://www.apache.org/licenses/LICENSE-2.0",
+            "name": null
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      },
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
     },
     {
       "name": "FNMS",
       "organization": "Department of Health and Human Services",
       "description": "Foreign National Management System",
-      "license": null,
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 1,
       "tags": [
         "government",
         "foreign",
@@ -94,15 +211,46 @@
         "email": "ServiceDesk.OCIO.HHS@hhs.gov",
         "name": "Office of the Chief Information Officer"
       },
-      "status": "Alpha"
+      "status": "Alpha",
+      "agency": "HHS",
+      "id": "HHS/FNMS",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": null,
+            "name": null
+          }
+        ],
+        "usageType": "governmentWideReuse",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      },
+      "vcs": "",
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
     },
     {
       "name": "ARAPS",
       "organization": "Department of Health and Human Services",
       "description": "Automated Reasonable Accomodation Processing System",
-      "license": null,
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 1,
       "tags": [
         "government",
         "accomodation",
@@ -112,15 +260,46 @@
         "email": "ServiceDesk.OCIO.HHS@hhs.gov",
         "name": "Office of the Chief Information Officer"
       },
-      "status": "Alpha"
+      "status": "Alpha",
+      "agency": "HHS",
+      "id": "HHS/ARAPS",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": null,
+            "name": null
+          }
+        ],
+        "usageType": "governmentWideReuse",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      },
+      "vcs": "",
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
     },
     {
       "name": "MMS",
       "organization": "Department of Health and Human Services",
       "description": "Menotoring Matching System",
-      "license": null,
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 1,
       "tags": [
         "Mentoring",
         "HHSU"
@@ -129,7 +308,41 @@
         "email": "ServiceDesk.OCIO.HHS@hhs.gov",
         "name": "Office of the Chief Information Officer"
       },
-      "status": "Alpha"
+      "status": "Alpha",
+      "agency": "HHS",
+      "id": "HHS/MMS",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": null,
+            "name": null
+          }
+        ],
+        "usageType": "governmentWideReuse",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      },
+      "vcs": "",
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
     }
   ]
 }
