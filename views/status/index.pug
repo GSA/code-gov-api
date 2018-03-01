@@ -18,7 +18,7 @@ block content
       ="The technical notes and Issues page now include 'Requested Enhancements' which are not mandatory and do not impact agencies' green/yellow/red status."
     p(style="padding: 10px; margin: 10px;")
       i Last Updated:&nbsp;
-        =statusData.timestamp  
+        =statusData.timestamp
 
   -
     var statusDataArr = [];
@@ -44,18 +44,20 @@ block content
       th Inventory Published, Compliant
       th Code.json Link
       th Schema Version
+      th Code.json Fetch Result
+      th Fallback Data Used
       th(style="width:400px;") Technical Notes
       th Issues
       th Discovered
     each data in statusDataArr
       tr
-        
+
         if data.metadata.agency.requirements.overallCompliance <=0
-          if data.metadata.agency.requirements.overallCompliance == 0  
+          if data.metadata.agency.requirements.overallCompliance == 0
             td.failure
-              =data.metadata.agency.acronym 
+              =data.metadata.agency.acronym
             td.failure
-              =data.metadata.agency.name              
+              =data.metadata.agency.name
           else
             td
               =data.metadata.agency.acronym
@@ -63,12 +65,12 @@ block content
               =data.metadata.agency.name
         else if data.metadata.agency.requirements.overallCompliance >= 0.25 && data.metadata.agency.requirements.overallCompliance <1
           td.warning
-            =data.metadata.agency.acronym 
+            =data.metadata.agency.acronym
           td.warning
             =data.metadata.agency.name
         else if data.metadata.agency.requirements.overallCompliance >=1
           td.success
-            =data.metadata.agency.acronym 
+            =data.metadata.agency.acronym
           td.success
             =data.metadata.agency.name
         else
@@ -76,7 +78,7 @@ block content
             =data.metadata.agency.acronym
           td
             =data.metadata.agency.name
-        
+
         if data.metadata.agency.requirements.agencyWidePolicy <=0
           if data.metadata.agency.requirements.agencyWidePolicy == 0
             td(style="background:none")
@@ -89,8 +91,8 @@ block content
         else if data.metadata.agency.requirements.agencyWidePolicy <1
           td(style="background:none")
             .warning.bold
-              ="Partially complete"   
-        else 
+              ="Partially complete"
+        else
           td(style="background:none")
             .success.bold
               ="Complete"
@@ -106,12 +108,12 @@ block content
         else if data.metadata.agency.requirements.inventoryRequirement <1
           td(style="background:none")
             .warning.bold
-              ="Partially complete"   
-        else 
+              ="Partially complete"
+        else
           td(style="background:none")
             .success.bold
               ="Complete"
-              
+
         if data.metadata.agency.requirements.openSourceRequirement <=0
           if data.metadata.agency.requirements.openSourceRequirement == 0
             td(style="background:none")
@@ -124,15 +126,15 @@ block content
         else if data.metadata.agency.requirements.openSourceRequirement <1
           td(style="background:none")
             .warning.bold
-              ="Partially complete"   
-        else 
+              ="Partially complete"
+        else
           td(style="background:none")
             .success.bold
               ="Complete"
 
 
         if data.metadata.agency.requirements.schemaFormat <=0
-          if data.metadata.agency.requirements.schemaFormat == 0  
+          if data.metadata.agency.requirements.schemaFormat == 0
             td(style="background:none")
               .failure.bold
                 ="Incomplete"
@@ -143,17 +145,21 @@ block content
         else if data.metadata.agency.requirements.schemaFormat <1
           td(style="background:none")
             .warning.bold
-              ="Partially complete"   
-        else 
+              ="Partially complete"
+        else
           td(style="background:none")
             .success.bold
               ="Complete"
-        
+
         td
           a(href=data.metadata.agency.codeUrl)
             =data.metadata.agency.codeUrl
         td
           =data.version
+        td
+          =data.fetchResult
+        td
+          =data.wasFallbackUsed
         td
           =data.status
         td
