@@ -35,7 +35,7 @@ describe('Testing routes/utils.js', () => {
       }
     };
     config = {
-      AGENCY_ENDPOINTS_FILE: path.join(path.dirname(path.dirname(__dirname)), '/config/dev/agency_endpoints.json')
+      AGENCY_ENDPOINTS_FILE: path.join(path.dirname(path.dirname(__dirname)), '/config/agency_metadata.json')
     }
   });
 
@@ -65,10 +65,6 @@ describe('Testing routes/utils.js', () => {
             issuesData.statusData.issues.length.should.be.at.least(1);
           });
       });
-
-      // it('should return a error', () => {
-      //   return getAgencyIssues('wrongAgency', { REPORT_FILEPATH: statusReportFile}).should.be.eventually.rejected
-      // });
     });
   });
 

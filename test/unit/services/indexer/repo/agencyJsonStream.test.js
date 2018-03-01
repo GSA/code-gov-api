@@ -78,8 +78,10 @@ describe('AgencyJsonStream', function() {
         name: 'Department of FAKE',
         acronym: 'FAKE',
         website: 'https://fake.gov/',
-        codeUrl: '/FAKE.json',
-        requirements: { agencyWidePolicy: 0, openSourceRequirement: 0, inventoryRequirement: 0, schemaFormat: 1, overallCompliance: 0 }
+        codeUrl: 'https://fake.gov/FAKE.json',
+        fallback_file: "/FAKE.json",
+        requirements: { agencyWidePolicy: 0, openSourceRequirement: 0, inventoryRequirement: 0, schemaFormat: 1, overallCompliance: 0 },
+        complianceDashboard: false
       },
       repositoryURL: '',
       disclaimerText: '',
