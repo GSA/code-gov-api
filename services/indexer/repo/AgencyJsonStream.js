@@ -26,7 +26,7 @@ class AgencyJsonStream extends Transform {
     return new Promise((fulfill, reject) => {
       Jsonfile.spaces = 2;
       const fetchedFilepath = path.join(this.fetchedDir, `${agencyAcronym}.json`);
-    
+
       try {
         Jsonfile.writeFile(fetchedFilepath, codeJson, (err) => {
           if (err) {
@@ -37,14 +37,25 @@ class AgencyJsonStream extends Transform {
         });
       } catch(err) {
         reject(err);
-      }  
+      }
+    });
+  }
+
+  _readFallbackData(fallbackDir, fallbackFile) {
+    return new Promise((resolve, reject) => {
+      Jsonfile.readFile(path.join(fallbackDir, fallbackFile), (err, jsonData) => {
+        if(err) {
+          reject(`errorMessage ${fallbackFile} - ${err}`);
+        }
+        resolve(jsonData);
+      });
     });
   }
 
   _getAgencyCodeJson(agency){
     logger.info('Entered saveFetchedCodeJson - Agency: ', agency.acronym);
 
-    return new Promise((fulfill, reject) => {
+    return new Promise((resolve, reject) => {
       const requestParams = {
         followAllRedirects: true,
         rejectUnauthorized: false,
@@ -53,33 +64,53 @@ class AgencyJsonStream extends Transform {
           'User-Agent': 'code.gov'
         }
       };
-  
+
       if(this.config.prod_envs.includes(process.env.NODE_ENV)) {
         request(requestParams, (err, response, body) => {
           const errorMessage = 'FAILURE: There was an error fetching the code.json:';
           if(err) {
             reject(`${errorMessage} ${agency.codeUrl} - ${err}`);
+          }
+
+          Reporter.reportCodeJsonFetchResult(agency.acronym, response.statusCode);
+
+          if(response.statusCode === 200) {
+            Reporter.reportFallbackUsed(agency.acronym, false);
+            const formattedData = body.replace(/^\uFEFF/, '');
+
+            this._saveFetchedCodeJson(agency.acronym, JSON.parse(formattedData))
+              .then(data => resolve(data))
+              .catch(err => reject(`errorMessage ${agency.codeUrl} - ${err}`));
           } else {
-            if(response.statusCode === 200) {
-              const formattedData = body.replace(/^\uFEFF/, '');
-    
-              this._saveFetchedCodeJson(agency.acronym, JSON.parse(formattedData))
-                .then(data => fulfill(data))
-                .catch(err => reject(`errorMessage ${agency.codeUrl} - ${err}`));
-            } else {
-              reject(`${errorMessage} ${agency.codeUrl} returned ${response.statusCode}`);
-            }
+            logger.warning(
+              `${errorMessage} ${agency.codeUrl} returned ${response.statusCode}. Using fallback data for indexing.`);
+
+            Reporter.reportFallbackUsed(agency.acronym, true);
+
+            this._readFallbackData(this.fallbackDir, agency.fallback_file)
+              .then(jsonData => {
+                this._saveFetchedCodeJson(agency.acronym, jsonData)
+                  .then(data => resolve(data))
+                  .catch(err => reject(`errorMessage ${agency.fallback_file} - ${err}`));
+              })
+              .catch(error => {
+                logger.error(error);
+                reject(error);
+              });
           }
         });
       } else {
-        Jsonfile.readFile(path.join(this.fallbackDir, agency.codeUrl), (err, jsonData) => {
-          if(err) {
-            reject(`errorMessage ${agency.codeUrl} - ${err}`);
-          }
-          this._saveFetchedCodeJson(agency.acronym, jsonData)
-            .then(data => fulfill(data))
-            .catch(err => reject(`errorMessage ${agency.codeUrl} - ${err}`));
-        });
+        Reporter.reportFallbackUsed(agency.acronym, false);
+        this._readFallbackData(this.fallbackDir, agency.fallback_file)
+          .then(jsonData => {
+            this._saveFetchedCodeJson(agency.acronym, jsonData)
+              .then(data => resolve(data))
+              .catch(err => reject(`errorMessage ${agency.fallback_file} - ${err}`));
+          })
+          .catch(error => {
+            logger.error(error);
+            reject(error);
+          });
       }
     });
   }
@@ -123,7 +154,7 @@ class AgencyJsonStream extends Transform {
           validationTotals.errors += results.issues.errors.length ? results.issues.errors.length : 0;
           validationTotals.warnings += results.issues.warnings.length ? results.issues.warnings.length : 0;
           validationTotals.enhancements += results.issues.enhancements.length ? results.issues.enhancements.length : 0;
-  
+
           Reporter.reportIssues(agency.acronym, results);
         }
         validator.cleaner(repo);
@@ -156,7 +187,7 @@ class AgencyJsonStream extends Transform {
 
     agency.requirements.overallCompliance = this._calculateOverallCompliance(agency.requirements);
     Reporter.reportRequirements(agency.acronym, agency.requirements);
-    
+
     return Promise.resolve({
       schemaVersion: Utils.getCodeJsonVersion(codeJson),
       repos: resultRepos
@@ -174,14 +205,14 @@ class AgencyJsonStream extends Transform {
       requirements.openSourceRequirement,
       requirements.inventoryRequirement
     ];
-  
+
     return this._calculateMean(compliances);
   }
-  
+
   _formatRepos(agency, validatedRepos) {
-    
+
     logger.debug('Entered _formatCodeJson - Agency: ', agency.acronym);
-    
+
     const {schemaVersion, repos} = validatedRepos;
 
     return Promise.all(
