@@ -58,6 +58,16 @@ class Reporter {
     this.report.statuses[itemName]["requirements"] = requirements;
   }
 
+  reportCodeJsonFetchResult(itemName, fetchResult) {
+    this._createReportItemIfDoesntExist(itemName);
+    this.report.statuses[itemName]["fetchResult"] = fetchResult;
+  }
+
+  reportFallbackUsed(itemName, wasFallbackUsed) {
+    this._createReportItemIfDoesntExist(itemName);
+    this.report.statuses[itemName]["wasFallbackUsed"] = wasFallbackUsed;
+  }
+
   writeReportToFile() {
     return new Promise((fulfill, reject) => {
       this.logger.info("Writing report to file...");
