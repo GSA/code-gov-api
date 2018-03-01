@@ -1,1 +1,280 @@
-{}
+{
+  "version": "2.0.0",
+  "agency": "",
+  "releases": [
+    {
+      "status": " ",
+      "vcs": "git",
+      "repoURL": "https://github.com/department-of-veterans-affairs/vets-website",
+      "name": "vets-website",
+      "downloadURL": " ",
+      "description": "Beta version of Vets.gov",
+      "contact": {
+        "email": " ",
+        "name": " ",
+        "twitter": "https://twitter.com/DeptVetAffairs/",
+        "phone": " "
+      },
+      "partners": [
+        {
+          "name": " "
+        },
+        {
+          "email": " "
+        }
+      ],
+      "license_name": "CC0",
+      "closedproject": 0,
+      "agency": "VA",
+      "tags": [
+        "beta",
+        "version",
+        "vets",
+        "gov"
+      ],
+      "languages": [
+        "JavaScript"
+      ],
+      "id": "VA/vets-website",
+      "repositoryURL": "git://github.com/department-of-veterans-affairs/vets-website.git",
+      "homepageURL": "https://www.vets.gov/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/department-of-veterans-affairs/vets-website/blob/master/LICENSE",
+            "name": null
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": "2015-03-31T18:34:05Z"
+      },
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
+    },
+    {
+      "status": " ",
+      "vcs": "git",
+      "repoURL": "https://github.com/department-of-veterans-affairs/vets-api",
+      "name": "vets-api",
+      "downloadURL": " ",
+      "description": "API for vets.gov ",
+      "contact": {
+        "email": " ",
+        "name": " ",
+        "twitter": "https://twitter.com/DeptVetAffairs/",
+        "phone": " "
+      },
+      "partners": [
+        {
+          "name": " "
+        },
+        {
+          "email": " "
+        }
+      ],
+      "license_name": "CC0",
+      "closedproject": 0,
+      "agency": "VA",
+      "tags": [
+        "api",
+        "vets",
+        "gov"
+      ],
+      "languages": [
+        "Ruby"
+      ],
+      "id": "VA/vets-api",
+      "repositoryURL": "git://github.com/department-of-veterans-affairs/vets-api.git",
+      "homepageURL": "",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/department-of-veterans-affairs/vets-api/blob/master/LICENSE.md",
+            "name": null
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": "2016-07-01T17:33:19Z"
+      },
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
+    },
+    {
+      "status": " ",
+      "vcs": "git",
+      "repoURL": "https://github.com/department-of-veterans-affairs/sniffybara",
+      "name": "sniffybara",
+      "downloadURL": " ",
+      "description": "Gem that adds automatic 508 accessibility compliance checks into your Capybara specs ",
+      "contact": {
+        "email": " ",
+        "name": " ",
+        "twitter": "https://twitter.com/DeptVetAffairs/",
+        "phone": " "
+      },
+      "partners": [
+        {
+          "name": " "
+        },
+        {
+          "email": " "
+        }
+      ],
+      "license_name": "",
+      "closedproject": 0,
+      "agency": "VA",
+      "tags": [
+        "gem",
+        "508",
+        "accessibility",
+        "compliance",
+        "checks",
+        "capybara",
+        "specs"
+      ],
+      "languages": [
+        "Ruby"
+      ],
+      "id": "VA/sniffybara",
+      "repositoryURL": "git://github.com/department-of-veterans-affairs/sniffybara.git",
+      "homepageURL": "",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://path.to/license",
+            "name": null
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": "2016-02-06T23:12:38Z"
+      },
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
+    },
+    {
+      "status": " ",
+      "vcs": "git",
+      "repoURL": "https://github.com/department-of-veterans-affairs/roadrunner-rails",
+      "name": "roadrunner-rails",
+      "downloadURL": " ",
+      "description": "Base rails project with the VA special sauce. ",
+      "contact": {
+        "email": " ",
+        "name": " ",
+        "twitter": "https://twitter.com/DeptVetAffairs/",
+        "phone": " "
+      },
+      "partners": [
+        {
+          "name": " "
+        },
+        {
+          "email": " "
+        }
+      ],
+      "license_name": "CC0",
+      "closedproject": 0,
+      "agency": "VA",
+      "tags": [
+        "ruby",
+        "rails",
+        "project",
+        "roadrunner"
+      ],
+      "languages": [
+        "Ruby"
+      ],
+      "id": "VA/roadrunner-rails",
+      "repositoryURL": "git://github.com/department-of-veterans-affairs/roadrunner-rails.git",
+      "homepageURL": "",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/department-of-veterans-affairs/roadrunner-rails/blob/master/LICENSE.md",
+            "name": null
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": "2016-02-02T17:44:07Z"
+      },
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
+    }
+  ]
+}

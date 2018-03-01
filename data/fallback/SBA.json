@@ -1,34 +1,64 @@
 {
-  "agency": "SBA",
-  "projects": [{
-    "name": "OracletoSQL",
-    "description": "A standalone CFM code to move data from Oracle Database to SQL Server Database.",
-    "license": "",
-    "openSourceProject": 1,
-    "governmentWideReuseProject": 0,
-    "contact": {
-      "email": "Andrew.Davy@sba.gov",
-      "name": "Andrew H Davy",
-      "URL": "",
-      "phone": "2022056292"
-    },
-    "status": "Alpha",
-    "vcs": "",
-    "repository": "https://sba.gov/open-source",
-    "homepage": "https://sba.gov/open-source",
-    "downloadURL": "https://www.sba.gov/sites/default/files/ora2sql.zip",
-    "languages": [
-      "ColdFusion"
-    ],
-    "partners": {
-      "name": "Oracle-SQL",
-      "email": "Andrew.Davy@sba.gov"
-    },
-    "exemption": null,
-    "updated": {
-      "lastCommit": "2016-12-02",
-      "metadataLastUpdated": "2016-12-02",
-      "lastModified": "2016-12-02"
+  "version": "2.0.0",
+  "agency": "",
+  "releases": [
+    {
+      "name": "OracletoSQL",
+      "description": "A standalone CFM code to move data from Oracle Database to SQL Server Database.",
+      "tags": [
+        "javascript",
+        "government",
+        "ember",
+        "common",
+        "nsf"
+      ],
+      "contact": {
+        "email": "Andrew.Davy@sba.gov",
+        "name": "Andrew H Davy",
+        "URL": "",
+        "phone": "2022056292"
+      },
+      "status": "Alpha",
+      "vcs": "",
+      "downloadURL": "https://www.sba.gov/sites/default/files/ora2sql.zip",
+      "languages": [
+        "ColdFusion"
+      ],
+      "agency": "SBA",
+      "id": "SBA/OracletoSQL",
+      "repositoryURL": "https://sba.gov/open-source",
+      "homepageURL": "https://sba.gov/open-source",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": null,
+            "name": null
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      },
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
     }
-  }]
+  ]
 }

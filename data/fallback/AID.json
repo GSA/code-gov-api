@@ -1,1 +1,110 @@
-{}
+{
+  "version": "2.0.0",
+  "agency": "",
+  "releases": [
+    {
+      "name": "Save Gmail",
+      "organization": "M/CIO",
+      "description": "USAID Gmail extension to save messages to local disk",
+      "tags": [
+        "save",
+        "gmail"
+      ],
+      "contact": {
+        "email": "mdicko@usaid.gov",
+        "name": "Malcolm Dicko",
+        "phone": "7036661215"
+      },
+      "status": "Production",
+      "vcs": "git",
+      "downloadURL": "https://github.com/USAID-MCIO/USAIDGmailSaveMessageExtension-/archive/master.zip",
+      "agency": "AID",
+      "id": "AID/Save%20Gmail",
+      "repositoryURL": "https://github.com/USAID-MCIO/USAIDGmailSaveMessageExtension-",
+      "homepageURL": "https://github.com/USAID-MCIO/USAIDGmailSaveMessageExtension-",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": null,
+            "name": null
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": "2017-04-22T00:00:00.000Z"
+      },
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
+    },
+    {
+      "name": "Gmail Imap POP Disable",
+      "organization": "M/CIO",
+      "description": "Allows a gmail enterprise to authorize only a limited number of users the ability to connect to Gmail using POP or IMAP. Any other users who configure that option which are not in the authorized list will have the connection disabled.",
+      "tags": [
+        "gmail",
+        "imap"
+      ],
+      "contact": {
+        "email": "mdicko@usaid.gov",
+        "name": "Malcolm Dicko",
+        "phone": "7036661215"
+      },
+      "status": "Production",
+      "vcs": "git",
+      "downloadURL": "https://github.com/USAID-MCIO/USAIDGmailImapPopDisable-/archive/master.zip",
+      "agency": "AID",
+      "id": "AID/Gmail%20Imap%20POP%20Disable",
+      "repositoryURL": "https://github.com/USAID-MCIO/USAIDGmailImapPopDisable-",
+      "homepageURL": "https://github.com/USAID-MCIO/USAIDGmailImapPopDisable-",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": null,
+            "name": null
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": "2017-04-22T00:00:00.000Z"
+      },
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
+    }
+  ]
+}
