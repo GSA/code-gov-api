@@ -1,5 +1,4 @@
 {
-  "AGENCY_ENDPOINTS_FILE": "/config/dev/agency_endpoints.json",
   "REPORT_FILEPATH": "/data/status/report.json",
   "DISCOVERED_DIR": "/data/discovered",
   "FETCHED_DIR": "/data/fetched",

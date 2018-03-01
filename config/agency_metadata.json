@@ -3,7 +3,8 @@
   "name": "Department of Agriculture",
   "acronym": "USDA",
   "website": "https://usda.gov/",
-  "codeUrl": "USDA.json",
+  "codeUrl": "https://www.usda.gov/code.json",
+  "fallback_file": "USDA.json",
   "requirements": {
     "agencyWidePolicy": 0.75,
     "openSourceRequirement": 0,
@@ -18,7 +19,8 @@
   "name": "Department of Commerce",
   "acronym": "DOC",
   "website": "https://www.commerce.gov/",
-  "codeUrl": "DOC.json",
+  "codeUrl": "https://www.commerce.gov/code.json",
+  "fallback_file": "DOC.json",
   "requirements": {
     "agencyWidePolicy": 0.75,
     "openSourceRequirement": 0,
@@ -33,7 +35,8 @@
   "name": "Department of Defense",
   "acronym": "DOD",
   "website": "https://www.defense.gov/",
-  "codeUrl": "DOD.json",
+  "codeUrl": "https://www.defense.gov/code.json",
+  "fallback_file": "DOD.json",
   "requirements": {
     "agencyWidePolicy": 0,
     "openSourceRequirement": 0,
@@ -48,7 +51,8 @@
   "name": "Department of Education",
   "acronym": "ED",
   "website": "https://ed.gov/",
-  "codeUrl": "ED.json",
+  "codeUrl": "https://www.ed.gov/code.json",
+  "fallback_file": "ED.json",
   "requirements": {
     "agencyWidePolicy": 1,
     "openSourceRequirement": 1,
@@ -63,7 +67,8 @@
   "name": "Department of Energy",
   "acronym": "DOE",
   "website": "https://energy.gov/",
-  "codeUrl": "DOE.json",
+  "codeUrl": "https://www.energy.gov/code.json",
+  "fallback_file": "DOE.json",
   "requirements": {
     "agencyWidePolicy": 1,
     "openSourceRequirement": 1,
@@ -78,7 +83,8 @@
   "name": "Department of Health and Human Services",
   "acronym": "HHS",
   "website": "https://hhs.gov",
-  "codeUrl": "HHS.json",
+  "codeUrl": "https://www.hhs.gov/code.json",
+  "fallback_file": "HHS.json",
   "requirements": {
     "agencyWidePolicy": 1,
     "openSourceRequirement": 0,
@@ -93,7 +99,8 @@
   "name": "Department of Housing and Urban Development",
   "acronym": "HUD",
   "website": "https://www.hud.gov/",
-  "codeUrl": "HUD.json",
+  "codeUrl": "https://www.hud.gov/code.json",
+  "fallback_file": "HUD.json",
   "requirements": {
     "agencyWidePolicy": 0.75,
     "openSourceRequirement": 0,
@@ -108,7 +115,8 @@
   "name": "Department of Homeland Security",
   "acronym": "DHS",
   "website": "https://www.dhs.gov",
-  "codeUrl": "DHS.json",
+  "codeUrl": "https://www.dhs.gov/code.json",
+  "fallback_file": "DHS.json",
   "requirements": {
     "agencyWidePolicy": 1,
     "openSourceRequirement": 0,
@@ -123,7 +131,8 @@
   "name": "Department of Interior",
   "acronym": "DOI",
   "website": "https://data.doi.gov/",
-  "codeUrl": "DOI.json",
+  "codeUrl": "https://www.doi.gov/code.json",
+  "fallback_file": "DOI.json",
   "requirements": {
     "agencyWidePolicy": 0,
     "openSourceRequirement": 0,
@@ -138,7 +147,8 @@
   "name": "Department of Justice",
   "acronym": "DOJ",
   "website": "https://justice.gov",
-  "codeUrl": "DOJ.json",
+  "codeUrl": "https://www.justice.gov/code.json",
+  "fallback_file": "DOJ.json",
   "requirements": {
     "agencyWidePolicy": 0.75,
     "openSourceRequirement": 0,
@@ -152,7 +162,8 @@
   "name": "Department of Labor",
   "acronym": "DOL",
   "website": "https://www.dol.gov",
-  "codeUrl": "DOL.json",
+  "codeUrl": "https://www.dol.gov/code.json",
+  "fallback_file": "DOL.json",
   "requirements": {
     "agencyWidePolicy": 1,
     "openSourceRequirement": 0,
@@ -167,7 +178,8 @@
   "name": "Department of State",
   "acronym": "DOS",
   "website": "https://state.gov/",
-  "codeUrl": "DOS.json",
+  "codeUrl": "https://www.state.gov/code.json",
+  "fallback_file": "DOS.json",
   "requirements": {
     "agencyWidePolicy": 0,
     "openSourceRequirement": 0,
@@ -182,7 +194,8 @@
   "name": "Department of Transportation",
   "acronym": "DOT",
   "website": "https://www.transportation.gov/",
-  "codeUrl": "DOT.json",
+  "codeUrl": "https://www.transportation.gov/code.json",
+  "fallback_file": "DOT.json",
   "requirements": {
     "agencyWidePolicy": 1.0,
     "openSourceRequirement": 0.5,
@@ -197,7 +210,8 @@
   "name": "Department of the Treasury",
   "acronym": "TREASURY",
   "website": "https://www.treasury.gov/",
-  "codeUrl": "TREASURY.json",
+  "codeUrl": "https://www.treasury.gov/code.json",
+  "fallback_file": "TREASURY.json",
   "requirements": {
     "agencyWidePolicy": 0.75,
     "openSourceRequirement": 0,
@@ -211,7 +225,8 @@
   "name": "Department of Veterans Affairs",
   "acronym": "VA",
   "website": "https://va.gov/",
-  "codeUrl": "VA.json",
+  "codeUrl": "https://www.va.gov/code.json",
+  "fallback_file": "VA.json",
   "requirements": {
     "agencyWidePolicy": 0,
     "openSourceRequirement": 0,
@@ -225,7 +240,8 @@
   "name": "Environmental Protection Agency",
   "acronym": "EPA",
   "website": "https://epa.gov/",
-  "codeUrl": "EPA.json",
+  "codeUrl": "https://www.epa.gov/code.json",
+  "fallback_file": "EPA.json",
   "requirements": {
     "agencyWidePolicy": 1,
     "openSourceRequirement": 0.5,
@@ -239,7 +255,8 @@
   "name": "National Aeronautics and Space Administration",
   "acronym": "NASA",
   "website": "https://nasa.gov/",
-  "codeUrl": "NASA.json",
+  "codeUrl": "https://code.nasa.gov/code.json",
+  "fallback_file": "NASA.json",
   "requirements": {
     "agencyWidePolicy": 1,
     "openSourceRequirement": 1,
@@ -253,7 +270,8 @@
   "name": "Agency for International Development",
   "acronym": "USAID",
   "website": "https://usaid.gov/",
-  "codeUrl": "USAID.json",
+  "codeUrl": "https://www.usaid.gov/code.json",
+  "fallback_file": "USAID.json",
   "requirements": {
     "agencyWidePolicy": 1,
     "openSourceRequirement": 0,
@@ -267,7 +285,8 @@
   "name": "General Services Administration",
   "acronym": "GSA",
   "website": "https://gsa.gov/",
-  "codeUrl": "GSA.json",
+  "codeUrl": "https://www.gsa.gov/code.json",
+  "fallback_file": "GSA.json",
   "requirements": {
     "agencyWidePolicy": 1,
     "openSourceRequirement": 1,
@@ -281,7 +300,8 @@
   "name": "National Science Foundation",
   "acronym": "NSF",
   "website": "https://nsf.gov/",
-  "codeUrl": "NSF.json",
+  "codeUrl": "https://www.nsf.gov/code.json",
+  "fallback_file": "NSF.json",
   "requirements": {
     "agencyWidePolicy": 1,
     "openSourceRequirement": 1,
@@ -295,7 +315,8 @@
   "name": "Nuclear Regulatory Commission",
   "acronym": "NRC",
   "website": "https://www.nrc.gov/",
-  "codeUrl": "NRC.json",
+  "codeUrl": "https://www.nrc.gov/code.json",
+  "fallback_file": "NRC.json",
   "requirements": {
     "agencyWidePolicy": 1,
     "openSourceRequirement": 0,
@@ -309,7 +330,8 @@
   "name": "Office of Personnel Management",
   "acronym": "OPM",
   "website": "https://opm.gov/",
-  "codeUrl": "OPM.json",
+  "codeUrl": "https://www.opm.gov/code.json",
+  "fallback_file": "OPM.json",
   "requirements": {
     "agencyWidePolicy": 0.75,
     "openSourceRequirement": 0,
@@ -323,7 +345,8 @@
   "name": "Small Business Administration",
   "acronym": "SBA",
   "website": "https://sba.gov/",
-  "codeUrl": "SBA.json",
+  "codeUrl": "https://www.sba.gov/code.json",
+  "fallback_file": "SBA.json",
   "requirements": {
     "agencyWidePolicy": 1,
     "openSourceRequirement": 0,
@@ -337,7 +360,8 @@
   "name": "National Archives and Records Administration",
   "acronym": "NARA",
   "website": "https://archives.gov/",
-  "codeUrl": "NARA.json",
+  "codeUrl": "https://www.archives.gov/code.json",
+  "fallback_file": "NARA.json",
   "requirements": {
     "agencyWidePolicy": 1,
     "openSourceRequirement": 0.5,
@@ -351,7 +375,8 @@
   "name": "Social Security Administration",
   "acronym": "SSA",
   "website": "https://www.ssa.gov",
-  "codeUrl": "SSA.json",
+  "codeUrl": "https://www.ssa.gov/code.json",
+  "fallback_file": "SSA.json",
   "requirements": {
     "agencyWidePolicy": 1,
     "openSourceRequirement": 1,
@@ -365,7 +390,8 @@
   "name": "Consumer Financial Protection Bureau",
   "acronym": "CFPB",
   "website": "https://consumerfinance.gov/",
-  "codeUrl": "CFPB.json",
+  "codeUrl": "https://consumerfinance.gov/code.json",
+  "fallback_file": "CFPB.json",
   "requirements": {
     "agencyWidePolicy": null,
     "openSourceRequirement": null,
@@ -379,7 +405,8 @@
   "name": "U.S. Geological Survey",
   "acronym": "USGS",
   "website": "https://usgs.gov/",
-  "codeUrl": "USGS.json",
+  "codeUrl": "https://usgs.gov/code.json",
+  "fallback_file": "USGS.json",
   "requirements": {
     "agencyWidePolicy": null,
     "openSourceRequirement": null,
