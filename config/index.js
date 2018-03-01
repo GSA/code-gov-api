@@ -15,7 +15,7 @@ function getConfig(env) {
     config.LOGGER_LEVEL = 'DEBUG'
   }
 
-  config.AGENCY_ENDPOINTS_FILE = path.join(path.dirname(__dirname), config.AGENCY_ENDPOINTS_FILE);
+  config.AGENCY_ENDPOINTS_FILE = path.join(path.dirname(__dirname), 'config/agency_metadata.json');
   config.REPORT_FILEPATH = path.join(path.dirname(__dirname), config.REPORT_FILEPATH);
   config.DISCOVERED_DIR = path.join(path.dirname(__dirname), config.DISCOVERED_DIR);
   config.FETCHED_DIR = path.join(path.dirname(__dirname), config.FETCHED_DIR);
