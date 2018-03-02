@@ -1,6 +1,7 @@
 const path = require('path');
 const { Transform } = require("stream");
-const request = require("request");
+// const request = require("request");
+const fetch = require('node-fetch');
 const Jsonfile = require("jsonfile");
 const Logger = require('../../../utils/logger');
 const { getValidator } = require('../../validator');
@@ -41,7 +42,8 @@ class AgencyJsonStream extends Transform {
     });
   }
 
-  _readFallbackData(fallbackDir, fallbackFile) {
+  _readFallbackData(agency, fallbackDir, fallbackFile) {
+    Reporter.reportFallbackUsed(agency.acronym, true);
     return new Promise((resolve, reject) => {
       Jsonfile.readFile(path.join(fallbackDir, fallbackFile), (err, jsonData) => {
         if(err) {
@@ -55,64 +57,42 @@ class AgencyJsonStream extends Transform {
   _getAgencyCodeJson(agency){
     logger.info('Entered saveFetchedCodeJson - Agency: ', agency.acronym);
 
-    return new Promise((resolve, reject) => {
-      const requestParams = {
-        followAllRedirects: true,
-        rejectUnauthorized: false,
-        url: agency.codeUrl,
-        headers: {
-          'User-Agent': 'code.gov'
-        }
-      };
-
-      if(this.config.prod_envs.includes(process.env.NODE_ENV)) {
-        request(requestParams, (err, response, body) => {
-          const errorMessage = 'FAILURE: There was an error fetching the code.json:';
-          if(err) {
-            reject(`${errorMessage} ${agency.codeUrl} - ${err}`);
-          }
-
-          Reporter.reportCodeJsonFetchResult(agency.acronym, response.statusCode);
-
-          if(response.statusCode === 200) {
-            Reporter.reportFallbackUsed(agency.acronym, false);
-            const formattedData = body.replace(/^\uFEFF/, '');
-
-            this._saveFetchedCodeJson(agency.acronym, JSON.parse(formattedData))
-              .then(data => resolve(data))
-              .catch(err => reject(`errorMessage ${agency.codeUrl} - ${err}`));
-          } else {
+    if(this.config.prod_envs.includes(process.env.NODE_ENV)) {
+      const errorMessage = 'FAILURE: There was an error fetching the code.json:';
+      return fetch(agency.codeUrl, {
+        headers: { 'Content-Type': 'application/json', 'User-Agent': 'code.gov' }
+      })
+        .then(response => {
+          if(response.status >= 400) {
             logger.warning(
-              `${errorMessage} ${agency.codeUrl} returned ${response.statusCode}. Using fallback data for indexing.`);
+              `${errorMessage} ${agency.codeUrl} returned ${response.status} and
+              Content-Type ${response.headers['Content-Type']}. Using fallback data for indexing.`);
 
-            Reporter.reportFallbackUsed(agency.acronym, true);
-
-            this._readFallbackData(this.fallbackDir, agency.fallback_file)
-              .then(jsonData => {
-                this._saveFetchedCodeJson(agency.acronym, jsonData)
-                  .then(data => resolve(data))
-                  .catch(err => reject(`errorMessage ${agency.fallback_file} - ${err}`));
-              })
-              .catch(error => {
-                logger.error(error);
-                reject(error);
-              });
+            return this._readFallbackData(agency, this.fallbackDir, agency.fallback_file);
           }
+          try {
+            return response.text()
+              .then(responseText => JSON.parse( responseText.replace(/^\uFEFF/, '') ));
+          } catch(error) {
+            logger.warning(
+              `${errorMessage} ${agency.codeUrl} returned ${response.statusCode} and
+              Content-Type ${response.headers['content-type']}. Using fallback data for indexing.`);
+
+            return this._readFallbackData(agency, this.fallbackDir, agency.fallback_file);
+          }
+        })
+        .then(jsonData => {
+          Reporter.reportFallbackUsed(agency.acronym, false);
+          return this._saveFetchedCodeJson(agency.acronym, jsonData);
+        })
+        .catch(error => {
+          logger.warning(`${errorMessage} ${agency.codeUrl} - ${error.message}. Using fallback data for indexing.`);
+          return this._readFallbackData(agency, this.fallbackDir, agency.fallback_file);
         });
-      } else {
-        Reporter.reportFallbackUsed(agency.acronym, false);
-        this._readFallbackData(this.fallbackDir, agency.fallback_file)
-          .then(jsonData => {
-            this._saveFetchedCodeJson(agency.acronym, jsonData)
-              .then(data => resolve(data))
-              .catch(err => reject(`errorMessage ${agency.fallback_file} - ${err}`));
-          })
-          .catch(error => {
-            logger.error(error);
-            reject(error);
-          });
-      }
-    });
+    } else {
+      Reporter.reportFallbackUsed(agency.acronym, false);
+      return this._readFallbackData(agency, this.fallbackDir, agency.fallback_file);
+    }
   }
 
   /**
