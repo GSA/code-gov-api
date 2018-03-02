@@ -110,6 +110,9 @@ class Searcher {
           "query": queryParams.q,
           "fields": [
             "repoID",
+            "name",
+            "repositoryURL",
+            "homepageURL",
             "agency.acronym",
             "agency.name",
             "contact.name",
@@ -278,7 +281,7 @@ class Searcher {
 
     let query = body.build("v2");
 
-    logger.info(query);
+    logger.debug(query);
     return query;
   }
 
