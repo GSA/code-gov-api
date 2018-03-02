@@ -14,7 +14,6 @@ const ElasticsearchSearcherAdapter = require("./utils/search_adapters/elasticsea
 const swaggerUi = require('swagger-ui-express');
 
 /* eslint-disable */
-const request = require("request");
 const pug = require("pug");
 const favicon = require('serve-favicon');
 /* eslint-enable */
@@ -60,14 +59,6 @@ app.set('view engine', 'pug');
 app.set('json spaces', 2);
 
 const logger = new Logger({name: "code-gov-api"});
-
-// app.use(bunyanMiddleware({
-//   headerName: 'X-Request-Id',
-//   propertyName: 'reqId',
-//   logName: 'req_id',
-//   obscureHeaders: [],
-//   logger: logger
-// }));
 
 /* ------------------------------------------------------------------ *
                             API ROUTES

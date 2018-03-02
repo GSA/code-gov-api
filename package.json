@@ -53,9 +53,8 @@
     "moment": "^2.20.0",
     "nan": "^2.9.2",
     "newrelic": "^2.8.0",
+    "node-fetch": "^2.0.0",
     "pug": "^2.0.0-rc.4",
-    "request": "^2.83.0",
-    "request-promise": "^4.2.1",
     "serve-favicon": "^2.4.5",
     "sleep": "^5.1.1",
     "swagger-ui-express": "^2.0.15"
