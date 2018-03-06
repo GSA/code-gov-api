@@ -1,14 +1,14 @@
 {
-  "version": "1.0.1",
+  "version": "2.0.0",
   "agency": "NARA",
-  "projects": [
+  "measurementType": {
+    "method": "projects"
+  },
+  "releases": [
     {
       "name": "AVI-MetaEdit",
       "organization": "National Archives and Records Administration",
       "description": "Software to perform various metadata editing for AVI files. You can use the tool to embed, edit, import, and export metadata.",
-      "license": "https://github.com/usnationalarchives/AVI-MetaEdit/commit/63550ce58d5648ab36eb4f04b05174f556fe660f",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 1,
       "tags": [
         "NARA",
         "Metadata",
@@ -20,30 +20,44 @@
         "name": "Leslie Johnston"
       },
       "status": "Archival",
-      "repository": "https://github.com/usnationalarchives/AVI-MetaEdit",
-      "homepage": "http://www.archives.gov/developer",
       "downloadURL": "https://github.com/usnationalarchives/AVI-MetaEdit/tree/master/Release",
       "languages": [
-        "java"
+        "c++",
+        "html",
+        "bourneshell",
+        "c",
+        "makefile",
+        "json",
+        "markdown"
       ],
       "partners": [
         {
           "name": "Federal Agencies Digital Guidelines Initiative"
         }
       ],
-      "updated": {
-        "lastCommit": "2012-09-06",
-        "metadataLastUpdated": "2017-03-30",
-        "lastModified": "2016-02-16"
-      }
+      "repositoryURL": "https://github.com/usnationalarchives/AVI-MetaEdit",
+      "homepageURL": "http://www.archives.gov/developer",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/usnationalarchives/AVI-MetaEdit/commit/63550ce58d5648ab36eb4f04b05174f556fe660f",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": 15610,
+      "date": {
+        "created": "2012-08-27",
+        "lastModified": "2016-12-06",
+        "metadataLastUpdated": "2017-12-18"
+      },
+      "vcs": "git"
     },
     {
       "name": "NARA Catalog Node Client",
       "organization": "National Archives and Records Administration",
       "description": "Node client for the National Archives API.",
-      "license": "https://github.com/usnationalarchives/nara-node/commit/5ac1d4c3f0052890068f71a46fa9301d2995b444",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 1,
       "tags": [
         "NARA",
         "api",
@@ -57,24 +71,34 @@
         "name": "Leslie Johnston"
       },
       "status": "Beta",
-      "repository": "https://github.com/usnationalarchives/nara-node",
       "downloadURL": "https://github.com/usnationalarchives/nara-node",
       "languages": [
-        "json"
+        "json",
+        "markdown",
+        "javascript"
       ],
-      "updated": {
-        "lastCommit": "2015-02-02",
-        "metadataLastUpdated": "2017-03-30",
-        "lastModified": "2015-02-02"
-      }
+      "repositoryURL": "https://github.com/usnationalarchives/nara-node",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/usnationalarchives/nara-node/commit/5ac1d4c3f0052890068f71a46fa9301d2995b444",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": 46,
+      "date": {
+        "created": "2015-02-02",
+        "lastModified": "2015-02-02",
+        "metadataLastUpdated": "2017-12-18"
+      },
+      "vcs": "git"
     },
     {
       "name": "NARA Catalog Ruby Client",
       "organization": "National Archives and Records Administration",
       "description": "Ruby client for the National Archives API.",
-      "license": "https://github.com/usnationalarchives/nara-ruby/blob/master/LICENSE.txt",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 1,
       "tags": [
         "NARA",
         "api",
@@ -87,24 +111,122 @@
         "name": "Leslie Johnston"
       },
       "status": "Beta",
-      "repository": "https://github.com/usnationalarchives/nara-ruby",
       "downloadURL": "https://github.com/usnationalarchives/nara-ruby",
       "languages": [
-        "ruby"
+        "ruby",
+        "markdown",
+        "json"
       ],
-      "updated": {
-        "lastCommit": "2015-02-02",
-        "metadataLastUpdated": "2017-03-30",
-        "lastModified": "2015-02-02"
-      }
+      "repositoryURL": "https://github.com/usnationalarchives/nara-ruby",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/usnationalarchives/nara-ruby/blob/master/LICENSE.txt",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": 91,
+      "date": {
+        "created": "2015-02-02",
+        "lastModified": "2015-01-02",
+        "metadataLastUpdated": "2017-12-18"
+      },
+      "vcs": "git"
+    },
+    {
+      "name": "fr2_blog",
+      "organization": "National Archives and Records Administration",
+      "description": "Federal Register 2.0 WordPress Installation",
+      "tags": [
+        "NARA",
+        "WordPress",
+        "FederalRegister"
+      ],
+      "contact": {
+        "email": "leslie.johnston@nara.gov",
+        "name": "Leslie Johnston"
+      },
+      "status": "Production",
+      "downloadURL": "https://github.com/usnationalarchives/fr2_blog",
+      "languages": [
+        "php",
+        "css",
+        "javascript",
+        "markdown",
+        "html",
+        "sass",
+        "yaml",
+        "ruby",
+        "xml"
+      ],
+      "repositoryURL": "https://github.com/usnationalarchives/fr2_blog",
+      "homepageURL": "https://www.federalregister.gov/reader-aids/developer-resources",
+      "permissions": {
+        "licenses": null,
+        "usageType": "openSource"
+      },
+      "laborHours": 135569,
+      "date": {
+        "created": "2011-01-29",
+        "lastModified": "2015-09-23",
+        "metadataLastUpdated": "2017-12-18"
+      },
+      "vcs": "git"
+    },
+    {
+      "name": "Federal Register API Core and Data Importer",
+      "organization": "National Archives and Records Administration",
+      "description": "Federal Register 2.0 API and Data Importer",
+      "tags": [
+        "NARA",
+        "api",
+        "dataimport",
+        "FederalRegister"
+      ],
+      "contact": {
+        "email": "leslie.johnston@nara.gov",
+        "name": "Leslie Johnston"
+      },
+      "status": "Production",
+      "downloadURL": "https://github.com/usnationalarchives/federalregister-api-core",
+      "languages": [
+        "ruby",
+        "html",
+        "sass",
+        "javascript",
+        "css",
+        "yaml",
+        "markdown",
+        "handlebars",
+        "json",
+        "xml",
+        "bourneshell"
+      ],
+      "repositoryURL": "https://github.com/usnationalarchives/federalregister-api-core",
+      "homepageURL": "https://www.federalregister.gov/reader-aids/developer-resources",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/usnationalarchives/federalregister-api-core/blob/master/LICENSE",
+            "name": "GovPulse"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": 27679,
+      "date": {
+        "created": "2012-09-07",
+        "lastModified": "2016-12-16",
+        "metadataLastUpdated": "2017-12-18"
+      },
+      "vcs": "git"
     },
     {
       "name": "FederalRegister.gov Ruby API Client",
       "organization": "National Archives and Records Administration",
-      "description": "A Ruby API Client for FederalRegister.gov that handles searching articles and getting information about agencies.",
-      "license": "https://github.com/usnationalarchives/federal_register/commit/26a79489cbb01cde74d284dc9d1298bada3b846",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 1,
+      "description": "A Ruby API Client for the Federal Register site FederalRegister.gov that handles searching articles and getting information about agencies.",
       "tags": [
         "NARA",
         "api",
@@ -115,28 +237,39 @@
         "name": "Leslie Johnston"
       },
       "status": "Production",
-      "repository": "https://github.com/usnationalarchives/federal_register",
-      "homepage": "https://www.federalregister.gov/reader-aids/developer-resources",
       "downloadURL": "https://github.com/usnationalarchives/federal_register",
       "languages": [
-        "ruby"
+        "ruby",
+        "yaml",
+        "markdown",
+        "json"
       ],
-      "updated": {
-        "lastCommit": "2017-06-07",
-        "metadataLastUpdated": "2017-08-02",
-        "lastModified": "2017-06-07"
-      }
+      "repositoryURL": "https://github.com/usnationalarchives/federal_register",
+      "homepageURL": "https://www.federalregister.gov/reader-aids/developer-resources",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/usnationalarchives/federal_register/commit/26a79489cbb01cde74d284dc9d1298bada3b846",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": 593,
+      "date": {
+        "created": "2011-06-21",
+        "lastModified": "2017-11-16",
+        "metadataLastUpdated": "2017-12-18"
+      },
+      "vcs": "git"
     },
     {
       "name": "Federal Register 2.0 Web Display",
       "organization": "National Archives and Records Administration",
-      "description": "Ruby tools for tracking Federal Register content, leveraging the FederalRegister.gov API.",
-      "license": null,
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 1,
+      "description": "Federal Register 2.0 Web Display",
       "tags": [
         "NARA",
-        "api",
+        "webdisplay",
         "FederalRegister"
       ],
       "contact": {
@@ -144,29 +277,37 @@
         "name": "Leslie Johnston"
       },
       "status": "Production",
-      "repository": "https://github.com/usnationalarchives/federalregister-web",
-      "homepage": "https://www.federalregister.gov/reader-aids/developer-resources",
       "downloadURL": "https://github.com/usnationalarchives/federalregister-web",
       "languages": [
-        "ruby"
+        "javascript",
+        "ruby",
+        "sass",
+        "yaml",
+        "coffeescript",
+        "json",
+        "html"
       ],
-      "updated": {
-        "lastCommit": "2017-06-07",
-        "metadataLastUpdated": "2017-08-02",
-        "lastModified": "2017-06-07"
-      }
+      "repositoryURL": "https://github.com/usnationalarchives/federalregister-web",
+      "homepageURL": "https://www.federalregister.gov/reader-aids/developer-resources",
+      "permissions": {
+        "licenses": null,
+        "usageType": "openSource"
+      },
+      "laborHours": 8117,
+      "date": {
+        "created": "2011-08-22",
+        "lastModified": "2016-07-26",
+        "metadataLastUpdated": "2017-12-18"
+      },
+      "vcs": "git"
     },
     {
       "name": "NARA File Analyzer and Metadata Harvester",
       "organization": "National Archives and Records Administration",
-      "description": "Software to walk a directory tree and perform a \"File Test\" on each file that is encountered. The application framework allows new File Tests to be quickly developed and deployed into the application. The results of each File Test are compiled into a table that summarizes the results of the analysis.",
-      "license": "https://github.com/usnationalarchives/File-Analyzer/commit/7c2aefc27dec2ab9c2f49d644c4b55cbe67657ab",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 1,
+      "description": "Software to walk a directory tree and perform a \"File Test\" on each file that is encountered and compile results into a table.",
       "tags": [
         "NARA",
         "FileTest",
-        "Java",
         "Metadata"
       ],
       "contact": {
@@ -174,29 +315,35 @@
         "name": "Leslie Johnston"
       },
       "status": "Archival",
-      "repository": "https://github.com/usnationalarchives/File-Analyzer",
-      "homepage": "http://www.archives.gov/developer",
       "downloadURL": "https://github.com/usnationalarchives/File-Analyzer/tree/master/bin",
       "languages": [
-        "java"
+        "java",
+        "html",
+        "markdown",
+        "css",
+        "json"
       ],
-      "updated": {
-        "lastCommit": "2012-10-02",
-        "metadataLastUpdated": "2017-03-30",
-        "lastModified": "2016-02-16"
-      }
+      "repositoryURL": "https://github.com/usnationalarchives/File-Analyzer",
+      "homepageURL": "http://www.archives.gov/developer",
+      "permissions": {
+        "licenses": null,
+        "usageType": "openSource"
+      },
+      "laborHours": 2797,
+      "date": {
+        "created": "2011-10-07",
+        "lastModified": "2016-02-16",
+        "metadataLastUpdated": "2017-12-18"
+      },
+      "vcs": "git"
     },
     {
       "name": "MediaInfo",
       "organization": "National Archives and Records Administration",
       "description": "MediaInfo is a tool to analyze video and audio files and provide a unified display of the most relevant technical and tag data.",
-      "license": "https://mediaarea.net/en/MediaInfo/License",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 0,
       "tags": [
         "NARA",
         "FileTest",
-        "Java",
         "Metadata"
       ],
       "contact": {
@@ -204,25 +351,33 @@
         "name": "Leslie Johnston"
       },
       "status": "Archival",
-      "repository": "https://github.com/usnationalarchives/File-Analyzer",
-      "homepage": "http://www.archives.gov/developer",
       "downloadURL": "https://github.com/usnationalarchives/MediaInfo/blob/master/MediaInfo_GUI_0.7.53_Windows_i386.exe",
       "languages": [
-        "java"
+        "json"
       ],
-      "updated": {
-        "lastCommit": "2012-02-17",
-        "metadataLastUpdated": "2017-03-30",
-        "lastModified": "2012-02-17"
-      }
+      "repositoryURL": "https://github.com/usnationalarchives/MediaInfo",
+      "homepageURL": "http://www.archives.gov/developer",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://mediaarea.net/en/MediaInfo/License",
+            "name": "BSD"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": 15,
+      "date": {
+        "created": "2012-02-17",
+        "lastModified": "2012-02-17",
+        "metadataLastUpdated": "2017-12-18"
+      },
+      "vcs": "git"
     },
     {
       "name": "Catalog-API",
       "organization": "National Archives and Records Administration",
       "description": "The National Archives Catalog API is a read–write web API for the online catalog for the National Archives.",
-      "license": null,
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 1,
       "tags": [
         "NARA",
         "API",
@@ -235,25 +390,29 @@
         "name": "Leslie Johnston"
       },
       "status": "Production",
-      "repository": "https://github.com/usnationalarchives/Catalog-API",
-      "homepage": "http://www.archives.gov/developer",
       "downloadURL": "https://github.com/usnationalarchives/Catalog-API",
       "languages": [
-        "java"
+        "json",
+        "markdown"
       ],
-      "updated": {
-        "lastCommit": "2017-06-23",
-        "metadataLastUpdated": "2017-08-02",
-        "lastModified": "2016-06-23"
-      }
+      "repositoryURL": "https://github.com/usnationalarchives/Catalog-API",
+      "homepageURL": "http://www.archives.gov/developer",
+      "permissions": {
+        "licenses": null,
+        "usageType": "openSource"
+      },
+      "laborHours": 106,
+      "date": {
+        "created": "2014-12-03",
+        "lastModified": "2017-06-23",
+        "metadataLastUpdated": "2017-12-18"
+      },
+      "vcs": "git"
     },
     {
       "name": "NARA Catalog API Twitterbot",
       "organization": "National Archives and Records Administration",
-      "description": "Experimental Twitterbot that constructs a fielded search query to NARA's online catalog API using the parameters provided, and then extracts the necessary metadata fields to form a tweet.",
-      "license": "https://github.com/usnationalarchives/Twitterbot/commit/45b945c8e0acc908272ee393624c027db3d81502",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 1,
+      "description": "Experimental Twitterbot that constructs a fielded search query to NARA's online catalog API and extracts metadata to form a tweet.",
       "tags": [
         "NARA",
         "api",
@@ -266,140 +425,191 @@
         "name": "Leslie Johnston"
       },
       "status": "Archival",
-      "repository": "https://github.com/usnationalarchives/Twitterbot",
       "downloadURL": "https://github.com/usnationalarchives/Twitterbot/blob/master/automagical_todays_document.py",
       "languages": [
-        "python"
+        "python",
+        "markdown",
+        "json"
       ],
-      "updated": {
-        "lastCommit": "2014-10-31",
-        "metadataLastUpdated": "2017-03-30",
-        "lastModified": "2014-10-31"
-      }
+      "repositoryURL": "https://github.com/usnationalarchives/Twitterbot",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/usnationalarchives/Twitterbot/commit/45b945c8e0acc908272ee393624c027db3d81502",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": 61,
+      "date": {
+        "created": "2014-10-16",
+        "lastModified": "2014-10-31",
+        "metadataLastUpdated": "2017-12-18"
+      },
+      "vcs": "git"
     },
     {
       "name": "Video Frame Analyzer",
       "organization": "National Archives and Records Administration",
       "description": "Software that automates the quality control process for digitized video files and provides analysis for video frame level metadata.",
-      "license": "https://github.com/usnationalarchives/Video-Frame-Analyzer/commit/4aa1ec3a08d5847015d669616f70dd8d5dccc9ab",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 1,
       "tags": [
         "NARA",
         "video",
-        "metadata",
-        "java"
+        "metadata"
       ],
       "contact": {
         "email": "leslie.johnston@nara.gov",
         "name": "Leslie Johnston"
       },
       "status": "Archival",
-      "repository": "https://github.com/usnationalarchives/Video-Frame-Analyzer",
       "downloadURL": "https://github.com/usnationalarchives/Video-Frame-Analyzer/blob/master/bin/sammaGui.jar",
       "languages": [
-        "java"
+        "java",
+        "xml",
+        "markdown",
+        "css",
+        "html",
+        "json"
       ],
-      "updated": {
-        "lastCommit": "2011-10-11",
-        "metadataLastUpdated": "2017-03-30",
-        "lastModified": "2016-02-16"
-      }
+      "repositoryURL": "https://github.com/usnationalarchives/Video-Frame-Analyzer",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/usnationalarchives/Video-Frame-Analyzer/commit/4aa1ec3a08d5847015d669616f70dd8d5dccc9ab",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": 1307,
+      "date": {
+        "created": "2011-10-11",
+        "lastModified": "2016-02-16",
+        "metadataLastUpdated": "2017-12-18"
+      },
+      "vcs": "git"
     },
     {
       "name": "Wikimedia Upload",
       "organization": "National Archives and Records Administration",
       "description": "Upload digital content from the National Archives Catalog to Wikimedia Commons.",
-      "license": "https://github.com/usnationalarchives/wikimedia-upload/blob/master/LICENSE.md",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 1,
       "tags": [
         "NARA",
         "wikimedia",
-        "metadata",
-        "Python"
+        "metadata"
       ],
       "contact": {
         "email": "leslie.johnston@nara.gov",
         "name": "Leslie Johnston"
       },
       "status": "Production",
-      "repository": "https://github.com/usnationalarchives/wikimedia-upload",
       "downloadURL": "https://github.com/usnationalarchives/wikimedia-upload",
       "languages": [
-        "Python"
+        "markdown",
+        "python"
       ],
-      "updated": {
-        "lastCommit": "2017-06-15",
-        "metadataLastUpdated": "2017-08-02",
-        "lastModified": "2017-06-15"
-      }
+      "repositoryURL": "https://github.com/usnationalarchives/wikimedia-upload",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/usnationalarchives/wikimedia-upload/blob/master/LICENSE.md",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": 122,
+      "date": {
+        "created": "2017-05-12",
+        "lastModified": "2017-06-15",
+        "metadataLastUpdated": "2017-12-18"
+      },
+      "vcs": "git"
     },
     {
       "name": "NARA Scripts",
       "organization": "National Archives and Records Administration",
       "description": "Scripts used in the work of the US National Archives.",
-      "license": "https://github.com/usnationalarchives/nara-scripts/commit/336bede0caf44cf64ad489510a3aacb685d61fe8",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 1,
       "tags": [
         "NARA",
         "conversion",
-        "metadata",
-        "Python"
+        "metadata"
       ],
       "contact": {
         "email": "leslie.johnston@nara.gov",
         "name": "Leslie Johnston"
       },
       "status": "Production",
-      "repository": "https://github.com/usnationalarchives/nara-scripts",
       "downloadURL": "https://github.com/usnationalarchives/nara-scripts/tree/master/python",
       "languages": [
-        "Python"
+        "python",
+        "markdown"
       ],
-      "updated": {
-        "lastCommit": "2017-04-28",
-        "metadataLastUpdated": "2017-08-02",
-        "lastModified": "2017-04-28"
-      }
+      "repositoryURL": "https://github.com/usnationalarchives/nara-scripts",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/usnationalarchives/nara-scripts/commit/336bede0caf44cf64ad489510a3aacb685d61fe8",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": 137,
+      "date": {
+        "created": "2016-10-27",
+        "lastModified": "2017-04-28",
+        "metadataLastUpdated": "2017-12-18"
+      },
+      "vcs": "git"
     },
     {
-      "name": "TimelineJS",
+      "name": "TimelineJS3",
       "organization": "National Archives and Records Administration",
       "description": "TimelineJS v3: A Storytelling Timeline built in JavaScript.",
-      "license": "https://github.com/usnationalarchives/TimelineJS3/blob/master/LICENSE",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 1,
       "tags": [
         "NARA",
         "conversion",
-        "metadata",
-        "JavaScript"
+        "metadata"
       ],
       "contact": {
         "email": "leslie.johnston@nara.gov",
         "name": "Leslie Johnston"
       },
       "status": "Production",
-      "repository": "https://github.com/usnationalarchives/TimelineJS3",
       "downloadURL": "https://github.com/usnationalarchives/TimelineJS3/tree/master/source",
       "languages": [
-        "JavaScript"
+        "JavaScript",
+        "json",
+        "html",
+        "less",
+        "python",
+        "markdown",
+        "css"
       ],
-      "updated": {
-        "lastCommit": "2017-04-05",
-        "metadataLastUpdated": "2017-08-02",
-        "lastModified": "2017-04-05"
-      }
+      "repositoryURL": "https://github.com/usnationalarchives/TimelineJS3",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/usnationalarchives/TimelineJS3/blob/master/LICENSE",
+            "name": "Mozilla Public License"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": 21432,
+      "date": {
+        "created": "2014-07-29",
+        "lastModified": "2017-04-05",
+        "metadataLastUpdated": "2017-12-18"
+      },
+      "vcs": "git"
     },
     {
       "name": "Wartime Films Apps and Metadata Tools",
       "organization": "National Archives and Records Administration",
-      "description": "An app that highlights World War I content from the National Archives and from other institutions and individuals to increase the relevance and discoverability of this content for local communities.",
-      "license": "https://github.com/usnationalarchives/wartime-films-project/blob/master/LICENSE.md",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 1,
+      "description": "An app that highlights World War I content from the National Archives and from other institutions and individuals.",
       "tags": [
         "NARA",
         "App",
@@ -413,16 +623,145 @@
         "name": "Leslie Johnston"
       },
       "status": "Production",
-      "repository": "https://github.com/usnationalarchives/wartime-films-project",
       "downloadURL": "https://github.com/usnationalarchives/wartime-films-project/tree/master/ww1/app",
       "languages": [
-        "java"
+        "xml",
+        "c#",
+        "css",
+        "html",
+        "markdown",
+        "json"
       ],
-      "updated": {
-        "lastCommit": "2017-07-12",
-        "metadataLastUpdated": "2017-08-02",
-        "lastModified": "2017-07-12"
-      }
+      "repositoryURL": "https://github.com/usnationalarchives/wartime-films-project",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/usnationalarchives/wartime-films-project/blob/master/LICENSE.md",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": 336726,
+      "date": {
+        "created": "2016-06-16",
+        "lastModified": "2017-06-12",
+        "metadataLastUpdated": "2017-12-18"
+      },
+      "vcs": "git"
+    },
+    {
+      "name": "Capstone GRS Web Site App",
+      "organization": "National Archives and Records Administration",
+      "description": "The site contains data sets for active, approved NA-1005s submitted by Federal agencies.",
+      "tags": [
+        "NARA",
+        "App",
+        "GRS",
+        "Records"
+      ],
+      "contact": {
+        "email": "leslie.johnston@nara.gov",
+        "name": "Leslie Johnston"
+      },
+      "status": "Production",
+      "downloadURL": "https://github.com/usnationalarchives/capstone-grs",
+      "languages": [
+        "xml",
+        "c#",
+        "css",
+        "html",
+        "markdown",
+        "json"
+      ],
+      "repositoryURL": "https://github.com/usnationalarchives/capstone-grs",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/usnationalarchives/capstone-grs/blob/master/LICENSE.md",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": 16384,
+      "date": {
+        "created": "2015-12-22",
+        "lastModified": "2017-12-13",
+        "metadataLastUpdated": "2017-12-18"
+      },
+      "vcs": "git"
+    },
+    {
+      "name": "Partner Data Transform",
+      "organization": "National Archives and Records Administration",
+      "description": "Python scripts to transform partner data for upload to National Archives Catalog.",
+      "tags": [
+        "NARA",
+        "Metadata",
+        "Records"
+      ],
+      "contact": {
+        "email": "leslie.johnston@nara.gov",
+        "name": "Leslie Johnston"
+      },
+      "status": "Production",
+      "downloadURL": "https://github.com/usnationalarchives/partner-data-transform/archive/master.zip",
+      "languages": [
+        "xml",
+        "python",
+        "markdown"
+      ],
+      "repositoryURL": "https://github.com/usnationalarchives/partner-data-transform",
+      "permissions": {
+        "licenses": null,
+        "usageType": "openSource"
+      },
+      "laborHours": 15565,
+      "date": {
+        "created": "2016-10-11",
+        "lastModified": "2017-08-23",
+        "metadataLastUpdated": "2017-12-18"
+      },
+      "vcs": "git"
+    },
+    {
+      "name": "ERA Tools",
+      "organization": "National Archives and Records Administration",
+      "description": "Collection of tools for processing digital archival artifacts.",
+      "tags": [
+        "NARA",
+        "Processing",
+        "Metadata",
+        "Records"
+      ],
+      "contact": {
+        "email": "leslie.johnston@nara.gov",
+        "name": "Leslie Johnston"
+      },
+      "status": "Production",
+      "downloadURL": "https://github.com/usnationalarchives/era-tools/archive/master.zip",
+      "languages": [
+        "java",
+        "markdown"
+      ],
+      "repositoryURL": "https://github.com/usnationalarchives/era-tools",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/usnationalarchives/era-tools/blob/master/LICENSE.md",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": 61,
+      "date": {
+        "created": "2017-03-13",
+        "lastModified": "2017-10-11",
+        "metadataLastUpdated": "2017-12-18"
+      },
+      "vcs": "git"
     }
   ]
 }

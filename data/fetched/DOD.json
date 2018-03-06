@@ -1,1 +1,213 @@
-{}
+{
+  "version": "2.0.0",
+  "agency": "",
+  "releases": [
+    {
+      "status": " ",
+      "vcs": "git",
+      "repoURL": "https://github.com/deptofdefense/anet",
+      "name": "ANET",
+      "downloadURL": " ",
+      "description": "A tool to track relationships between advisors and advisees -- like NATO and the Afghan government.",
+      "contact": {
+        "email": " ",
+        "name": "",
+        "twitter": "",
+        "phone": ""
+      },
+      "partners": [
+        {
+          "name": ""
+        },
+        {
+          "email": ""
+        }
+      ],
+      "license_name": "MIT",
+      "closedproject": 0,
+      "agency": "DOD",
+      "tags": [
+        "advisor",
+        "network"
+      ],
+      "languages": [
+        "Java"
+      ],
+      "id": "DOD/ANET",
+      "repositoryURL": "git://github.com/deptofdefense/anet.git",
+      "homepageURL": "",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/deptofdefense/anet/blob/master/LICENSE.md",
+            "name": null
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": "2016-10-11T19:40:12Z"
+      },
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
+    },
+    {
+      "status": " ",
+      "vcs": "git",
+      "repoURL": "https://github.com/deptofdefense/eMCM",
+      "name": "eMCM",
+      "downloadURL": " ",
+      "description": "Search and browse interface for the Military Courts-martial Manual.",
+      "contact": {
+        "email": " ",
+        "name": "",
+        "twitter": "",
+        "phone": ""
+      },
+      "partners": [
+        {
+          "name": ""
+        },
+        {
+          "email": ""
+        }
+      ],
+      "license_name": "AGPLv3",
+      "closedproject": 0,
+      "agency": "DOD",
+      "tags": [
+        "search",
+        "browse",
+        "interface",
+        "military",
+        "courts",
+        "martial",
+        "manual"
+      ],
+      "languages": [
+        "HTML"
+      ],
+      "id": "DOD/eMCM",
+      "repositoryURL": "git://github.com/deptofdefense/eMCM.git",
+      "homepageURL": "http://mcm.mil",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/deptofdefense/eMCM/blob/master/LICENSE.md",
+            "name": null
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": "2016-12-14T17:37:02Z"
+      },
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
+    },
+    {
+      "status": " ",
+      "vcs": "git",
+      "repoURL": "https://github.com/USArmyResearchLab/Dshell",
+      "name": "Dshell",
+      "downloadURL": " ",
+      "description": "Dshell is a network forensic analysis framework. ",
+      "contact": {
+        "email": " ",
+        "name": "",
+        "twitter": "",
+        "phone": ""
+      },
+      "partners": [
+        {
+          "name": ""
+        },
+        {
+          "email": ""
+        }
+      ],
+      "license_name": "MIT",
+      "closedproject": 0,
+      "agency": "DOD",
+      "tags": [
+        "dshell",
+        "network",
+        "forensic",
+        "analysis",
+        "framework",
+        ""
+      ],
+      "languages": [
+        "Python"
+      ],
+      "id": "DOD/Dshell",
+      "repositoryURL": "git://github.com/USArmyResearchLab/Dshell.git",
+      "homepageURL": "",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/USArmyResearchLab/Dshell/blob/master/LICENSE.txt",
+            "name": null
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": "2014-12-17T12:04:51Z"
+      },
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
+    }
+  ]
+}

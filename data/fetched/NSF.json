@@ -1,13 +1,13 @@
 {
   "agency": "NSF",
-  "organization": "National Science Foundation",
-  "projects": [
+  "version": "2.0.0",
+  "measurementType": {
+    "method": "modules"
+  },
+  "releases": [
     {
       "name": "ember-common-components",
       "description": "A useful set of common Ember JavaScript components used at NSF which include DataGrid, Tool Tips, Calendar Widgets, and more.",
-      "license": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 1,
       "tags": [
         "javascript",
         "government",
@@ -22,17 +22,70 @@
       },
       "status": "Beta",
       "vcs": "git",
-      "repository": "https://github.com/nsf-open/nsf-common-ember-components",
       "languages": [
-        "javascript"
-      ]
+        "JavaScript"
+      ],
+      "repositoryURL": "https://github.com/nsf-open/nsf-common-ember-components",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
+            "name": "NSF"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": -1,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      },
+      "disclaimerText": "",
+      "disclaimerURL": ""
+    },
+    {
+      "name": "nsf-ember-tooltip",
+      "description": "An ember-cli addon for using Tooltipster in Ember applications. The default sideTip, and the ScrollableTip plugins come preconfigured.",
+      "tags": [
+        "javascript",
+        "government",
+        "ember",
+        "common",
+        "nsf"
+      ],
+      "contact": {
+        "email": "esivagna@nsf.gov",
+        "name": "Elanchezhian Sivagnanam",
+        "phone": "7032928088"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "languages": [
+        "JavaScript"
+      ],
+      "repositoryURL": "https://github.com/nsf-open/nsf-ember-tooltip",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
+            "name": "NSF"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": -1,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      },
+      "disclaimerText": "",
+      "disclaimerURL": ""
     },
     {
       "name": "access-management-service",
       "description": "Provides User, Permission, Division and Role information. Proxies some information from IAM's RoleManager Service.",
-      "license": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
       "tags": [
         "java",
         "government",
@@ -48,14 +101,31 @@
       },
       "languages": [
         "Java"
-      ]
+      ],
+      "repositoryURL": "",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
+            "name": "NSF"
+          }
+        ],
+        "usageType": "exemptByAgencySystem",
+        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+      },
+      "laborHours": -1,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      },
+      "vcs": "",
+      "disclaimerText": "",
+      "disclaimerURL": ""
     },
     {
       "name": "adhoc-review-service",
       "description": "Contains the routes for creating, updating, and deleting proposal adhoc reviews.",
-      "license": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
       "tags": [
         "java",
         "government",
@@ -71,14 +141,38 @@
       },
       "languages": [
         "Java"
+      ],
+      "repositoryURL": "",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
+            "name": "NSF"
+          }
+        ],
+        "usageType": "exemptByAgencySystem",
+        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+      },
+      "laborHours": -1,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      },
+      "vcs": "",
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
       ]
     },
     {
       "name": "award-budget-service",
       "description": "Contains methods that perform Increment Maintenance on Award Budget objects.",
-      "license": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
       "tags": [
         "java",
         "government",
@@ -94,14 +188,31 @@
       },
       "languages": [
         "Java"
-      ]
+      ],
+      "repositoryURL": "",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
+            "name": "NSF"
+          }
+        ],
+        "usageType": "exemptByAgencySystem",
+        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+      },
+      "laborHours": -1,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      },
+      "vcs": "",
+      "disclaimerText": "",
+      "disclaimerURL": ""
     },
     {
       "name": "award-service",
       "description": "Provides NSF award specific data and functions.",
-      "license": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
       "tags": [
         "java",
         "government",
@@ -117,14 +228,31 @@
       },
       "languages": [
         "Java"
-      ]
+      ],
+      "repositoryURL": "",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
+            "name": "NSF"
+          }
+        ],
+        "usageType": "exemptByAgencySystem",
+        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+      },
+      "laborHours": -1,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      },
+      "vcs": "",
+      "disclaimerText": "",
+      "disclaimerURL": ""
     },
     {
       "name": "enterprise-reporting-service",
       "description": "Queries the BI system for Recent, Frequent, and Custom BI reports for a particular user.",
-      "license": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
       "tags": [
         "java",
         "government",
@@ -140,14 +268,31 @@
       },
       "languages": [
         "Java"
-      ]
+      ],
+      "repositoryURL": "",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
+            "name": "NSF"
+          }
+        ],
+        "usageType": "exemptByAgencySystem",
+        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+      },
+      "laborHours": -1,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      },
+      "vcs": "",
+      "disclaimerText": "",
+      "disclaimerURL": ""
     },
     {
       "name": "meeting-service",
       "description": "Contains the routes for creating, updating, and deleting Meetings for Proposal Reviews at NSF",
-      "license": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
       "tags": [
         "java",
         "government",
@@ -163,14 +308,31 @@
       },
       "languages": [
         "Java"
-      ]
+      ],
+      "repositoryURL": "",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
+            "name": "NSF"
+          }
+        ],
+        "usageType": "exemptByAgencySystem",
+        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+      },
+      "laborHours": -1,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      },
+      "vcs": "",
+      "disclaimerText": "",
+      "disclaimerURL": ""
     },
     {
       "name": "proposal-service",
       "description": "Contains routes to search and retrieve NSF proposal information.",
-      "license": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
       "tags": [
         "java",
         "government",
@@ -186,14 +348,31 @@
       },
       "languages": [
         "Java"
-      ]
+      ],
+      "repositoryURL": "",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
+            "name": "NSF"
+          }
+        ],
+        "usageType": "exemptByAgencySystem",
+        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+      },
+      "laborHours": -1,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      },
+      "vcs": "",
+      "disclaimerText": "",
+      "disclaimerURL": ""
     },
     {
       "name": "proposal-data-service",
       "description": "Contains routes that perform CRUD operations on in-progress proposals.",
-      "license": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
       "tags": [
         "java",
         "government",
@@ -209,14 +388,31 @@
       },
       "languages": [
         "Java"
-      ]
+      ],
+      "repositoryURL": "",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
+            "name": "NSF"
+          }
+        ],
+        "usageType": "exemptByAgencySystem",
+        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+      },
+      "laborHours": -1,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      },
+      "vcs": "",
+      "disclaimerText": "",
+      "disclaimerURL": ""
     },
     {
       "name": "reviewer-service",
       "description": "Contains routes to search and retrieve NSF reviewer information.",
-      "license": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
       "tags": [
         "java",
         "government",
@@ -233,14 +429,31 @@
       },
       "languages": [
         "Java"
-      ]
+      ],
+      "repositoryURL": "",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
+            "name": "NSF"
+          }
+        ],
+        "usageType": "exemptByAgencySystem",
+        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+      },
+      "laborHours": -1,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      },
+      "vcs": "",
+      "disclaimerText": "",
+      "disclaimerURL": ""
     },
     {
       "name": "solicitation-data-service",
       "description": "Contains routes that retrieve solicitation and related unit of consideration data.",
-      "license": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
       "tags": [
         "java",
         "government",
@@ -256,14 +469,31 @@
       },
       "languages": [
         "Java"
-      ]
+      ],
+      "repositoryURL": "",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
+            "name": "NSF"
+          }
+        ],
+        "usageType": "exemptByAgencySystem",
+        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+      },
+      "laborHours": -1,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      },
+      "vcs": "",
+      "disclaimerText": "",
+      "disclaimerURL": ""
     },
     {
       "name": "proposal-management-service",
       "description": "Edge service that support business processes of PSM clients.",
-      "license": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
       "tags": [
         "java",
         "government",
@@ -279,14 +509,31 @@
       },
       "languages": [
         "Java"
-      ]
+      ],
+      "repositoryURL": "",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
+            "name": "NSF"
+          }
+        ],
+        "usageType": "exemptByAgencySystem",
+        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+      },
+      "laborHours": -1,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      },
+      "vcs": "",
+      "disclaimerText": "",
+      "disclaimerURL": ""
     },
     {
       "name": "profile-service",
       "description": "Capability in MyNSF to allow MyNSF Program Staff to associate themselves to a Program Element. At this point UPM shall still be used to assign POs for a particular PEC.",
-      "license": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
       "tags": [
         "java",
         "government",
@@ -303,14 +550,31 @@
       },
       "languages": [
         "Java"
-      ]
+      ],
+      "repositoryURL": "",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
+            "name": "NSF"
+          }
+        ],
+        "usageType": "exemptByAgencySystem",
+        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+      },
+      "laborHours": -1,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      },
+      "vcs": "",
+      "disclaimerText": "",
+      "disclaimerURL": ""
     },
     {
       "name": "reference-data-service",
       "description": "Returns mostly static reference data that can be easily cached. Some of the items include: GSA Committee Codes, Hotels, NSF Orgs & Divisions, and Program Elements.",
-      "license": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
       "tags": [
         "java",
         "government",
@@ -327,14 +591,31 @@
       },
       "languages": [
         "Java"
-      ]
+      ],
+      "repositoryURL": "",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
+            "name": "NSF"
+          }
+        ],
+        "usageType": "exemptByAgencySystem",
+        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+      },
+      "laborHours": -1,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      },
+      "vcs": "",
+      "disclaimerText": "",
+      "disclaimerURL": ""
     },
     {
       "name": "system-advisory-service",
       "description": "The System Advisory Service is used to display System Advisories on the MyNSF system. This does not limit it to MyNSF. The Service itself is generic and allows for namespacing if other teams wish to use the service.",
-      "license": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
       "tags": [
         "java",
         "government",
@@ -349,16 +630,116 @@
         "name": "Elanchezhian Sivagnanam",
         "phone": "7032928088"
       },
+      "status": "Beta",
+      "vcs": "git",
       "languages": [
         "Java"
-      ]
+      ],
+      "repositoryURL": "https://github.com/nsf-open/rest-service-system-advisory",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
+            "name": "NSF"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": -1,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      },
+      "disclaimerText": "",
+      "disclaimerURL": ""
+    },
+    {
+      "name": "email-service",
+      "description": "Send, Store and Search system generated emails.",
+      "tags": [
+        "java",
+        "government",
+        "microservice",
+        "nsf",
+        "mynsf",
+        "features",
+        "shared"
+      ],
+      "contact": {
+        "email": "esivagna@nsf.gov",
+        "name": "Elanchezhian Sivagnanam",
+        "phone": "7032928088"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "languages": [
+        "Java"
+      ],
+      "repositoryURL": "https://github.com/nsf-open/rest-service-email",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
+            "name": "NSF"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": -1,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      },
+      "disclaimerText": "",
+      "disclaimerURL": ""
+    },
+    {
+      "name": "inbox-service",
+      "description": "Inbox Service is enables system messages to be displayed on the MyNSF home page. This service is not related to emails.",
+      "tags": [
+        "java",
+        "email",
+        "government",
+        "microservice",
+        "nsf",
+        "mynsf",
+        "features",
+        "shared"
+      ],
+      "contact": {
+        "email": "esivagna@nsf.gov",
+        "name": "Elanchezhian Sivagnanam",
+        "phone": "7032928088"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "languages": [
+        "Java"
+      ],
+      "repositoryURL": "https://github.com/nsf-open/rest-service-inbox",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
+            "name": "NSF"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": -1,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      },
+      "disclaimerText": "",
+      "disclaimerURL": ""
     },
     {
       "name": "template-service",
       "description": "Service provides Letter Template Management operations. Templates are use when sending standard Letters (emails). They can also contain placeholder values.",
-      "license": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
       "tags": [
         "java",
         "government",
@@ -375,14 +756,31 @@
       },
       "languages": [
         "Java"
-      ]
+      ],
+      "repositoryURL": "",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
+            "name": "NSF"
+          }
+        ],
+        "usageType": "exemptByAgencySystem",
+        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+      },
+      "laborHours": -1,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      },
+      "vcs": "",
+      "disclaimerText": "",
+      "disclaimerURL": ""
     },
     {
       "name": "toggle-service",
       "description": "The Toggle Service will return available feature toggles for a particular user (based off SSO).",
-      "license": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
       "tags": [
         "java",
         "government",
@@ -397,16 +795,33 @@
         "name": "Elanchezhian Sivagnanam",
         "phone": "7032928088"
       },
+      "status": "Beta",
+      "vcs": "git",
       "languages": [
         "Java"
-      ]
+      ],
+      "repositoryURL": "https://github.com/nsf-open/rest-service-toggle",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
+            "name": "NSF"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": -1,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      },
+      "disclaimerText": "",
+      "disclaimerURL": ""
     },
     {
       "name": "document-generation-service",
       "description": "Contains routes that generate and concatenate documents from stored PSM data.",
-      "license": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
       "tags": [
         "java",
         "government",
@@ -422,14 +837,31 @@
       },
       "languages": [
         "Java"
-      ]
+      ],
+      "repositoryURL": "",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
+            "name": "NSF"
+          }
+        ],
+        "usageType": "exemptByAgencySystem",
+        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+      },
+      "laborHours": -1,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      },
+      "vcs": "",
+      "disclaimerText": "",
+      "disclaimerURL": ""
     },
     {
       "name": "file-upload-service",
       "description": "Contains routes that upload files to file store (AWS S3).",
-      "license": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
       "tags": [
         "java",
         "government",
@@ -445,14 +877,31 @@
       },
       "languages": [
         "Java"
-      ]
+      ],
+      "repositoryURL": "",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
+            "name": "NSF"
+          }
+        ],
+        "usageType": "exemptByAgencySystem",
+        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+      },
+      "laborHours": -1,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      },
+      "vcs": "",
+      "disclaimerText": "",
+      "disclaimerURL": ""
     },
     {
       "name": "search-program-officer-service",
       "description": "Service returns the Program Officers pertaining to the given Organization, Program Element, and for the given Fiscal year.  The search parameters - organization code, program element code and numerical fiscal year.",
-      "license": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
       "tags": [
         "java",
         "government",
@@ -468,14 +917,31 @@
       },
       "languages": [
         "Java"
-      ]
+      ],
+      "repositoryURL": "",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
+            "name": "NSF"
+          }
+        ],
+        "usageType": "exemptByAgencySystem",
+        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+      },
+      "laborHours": -1,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      },
+      "vcs": "",
+      "disclaimerText": "",
+      "disclaimerURL": ""
     },
     {
       "name": "get-user-data-service",
-      "description": "Service retrieves the user profile attribute and the access details.  By default, the Get User data service returns the given user’s attribute list.  Applications that intend to request the access details (functional organization, associated program elements, role/entitlement etc.) should request the service with a filter org=true as a request parameter. The Access Details object includes the list of functional organizations with their associated program elements and roles for the given user.",
-      "license": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
+      "description": "Service retrieves the user profile attribute and the access details.  By default, the Get User data service returns the given userâ€™s attribute list.  Applications that intend to request the access details (functional organization, associated program elements, role/entitlement etc.) should request the service with a filter org=true as a request parameter. The Access Details object includes the list of functional organizations with their associated program elements and roles for the given user.",
       "tags": [
         "java",
         "government",
@@ -491,14 +957,31 @@
       },
       "languages": [
         "Java"
-      ]
+      ],
+      "repositoryURL": "",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
+            "name": "NSF"
+          }
+        ],
+        "usageType": "exemptByAgencySystem",
+        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+      },
+      "laborHours": -1,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      },
+      "vcs": "",
+      "disclaimerText": "",
+      "disclaimerURL": ""
     },
     {
       "name": "search-user-data-service",
       "description": "Service searches for the identity in IDM and UPM repository by using the firstname, lastName and OrgCode as the search field. API supports various combinations of the search patterns to generalize the search function.",
-      "license": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
       "tags": [
         "java",
         "government",
@@ -514,14 +997,31 @@
       },
       "languages": [
         "Java"
-      ]
+      ],
+      "repositoryURL": "",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
+            "name": "NSF"
+          }
+        ],
+        "usageType": "exemptByAgencySystem",
+        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+      },
+      "laborHours": -1,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      },
+      "vcs": "",
+      "disclaimerText": "",
+      "disclaimerURL": ""
     },
     {
       "name": "export-user-service",
       "description": "Service is designed to export all identities and their respective attribute for system integration purpose.  Optionally it does support numerous search filters to retrieve defined set of users from the IDM repository.  Export user service is NOT designed to retrieve information managed by UPM and Role Manager.",
-      "license": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
       "tags": [
         "java",
         "government",
@@ -537,14 +1037,31 @@
       },
       "languages": [
         "Java"
-      ]
+      ],
+      "repositoryURL": "",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
+            "name": "NSF"
+          }
+        ],
+        "usageType": "exemptByAgencySystem",
+        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+      },
+      "laborHours": -1,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      },
+      "vcs": "",
+      "disclaimerText": "",
+      "disclaimerURL": ""
     },
     {
       "name": "search-divsion-org-service",
       "description": "Service returns Division Director, Delegated Division Director, Administrative Officer, Delegated Administrative Officer, Financial Reviewer for the given organization to the consumer API.",
-      "license": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
       "tags": [
         "java",
         "government",
@@ -560,7 +1077,27 @@
       },
       "languages": [
         "Java"
-      ]
+      ],
+      "repositoryURL": "",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
+            "name": "NSF"
+          }
+        ],
+        "usageType": "exemptByAgencySystem",
+        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+      },
+      "laborHours": -1,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      },
+      "vcs": "",
+      "disclaimerText": "",
+      "disclaimerURL": ""
     }
   ]
 }

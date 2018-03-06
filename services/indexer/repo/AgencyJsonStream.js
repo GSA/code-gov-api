@@ -29,7 +29,7 @@ class AgencyJsonStream extends Transform {
       const fetchedFilepath = path.join(this.fetchedDir, `${agencyAcronym}.json`);
 
       try {
-        Jsonfile.writeFile(fetchedFilepath, codeJson, (err) => {
+        Jsonfile.writeFile(fetchedFilepath, codeJson, { spaces: 2 }, (err) => {
           if (err) {
             reject(err);
           } else {
@@ -70,27 +70,24 @@ class AgencyJsonStream extends Transform {
 
             return this._readFallbackData(agency, this.fallbackDir, agency.fallback_file);
           }
-          try {
-            return response.text()
-              .then(responseText => JSON.parse( responseText.replace(/^\uFEFF/, '') ));
-          } catch(error) {
-            logger.warning(
-              `${errorMessage} ${agency.codeUrl} returned ${response.statusCode} and
-              Content-Type ${response.headers['content-type']}. Using fallback data for indexing.`);
-
-            return this._readFallbackData(agency, this.fallbackDir, agency.fallback_file);
-          }
+          return response.text()
+            .then(responseText => JSON.parse( responseText.replace(/^\uFEFF/, '') ));
         })
         .then(jsonData => {
           Reporter.reportFallbackUsed(agency.acronym, false);
-          return this._saveFetchedCodeJson(agency.acronym, jsonData);
+          this._saveFetchedCodeJson(agency.acronym, jsonData)
+            .then(() => logger.info(`Saved fetched data for ${agency.acronym}`))
+            .catch(error => logger.error(`Could not save fetched data for ${agency.acronym} - ${error}`));
+
+          return jsonData;
         })
         .catch(error => {
           logger.warning(`${errorMessage} ${agency.codeUrl} - ${error.message}. Using fallback data for indexing.`);
+          Reporter.reportFallbackUsed(agency.acronym, true);
           return this._readFallbackData(agency, this.fallbackDir, agency.fallback_file);
         });
     } else {
-      Reporter.reportFallbackUsed(agency.acronym, false);
+      Reporter.reportFallbackUsed(agency.acronym, true);
       return this._readFallbackData(agency, this.fallbackDir, agency.fallback_file);
     }
   }
