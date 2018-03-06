@@ -96,7 +96,7 @@ function getApiRoutes(config, searcher, router) {
     getAgencyIssues(agency, config)
       .then(issuesData => {
         if (issuesData.statusData) {
-          return response.render(`status/${agency}/issues`, issuesData);
+          return response.render(`status/agency/issues`, issuesData);
         } else {
           return response.sendStatus(404);
         }
