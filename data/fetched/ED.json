@@ -1,13 +1,20 @@
 {
-  "version": "1.0.1",
-  "agency": "DOED",
-  "projects": [
+  "version": "2.0.0",
+  "measurementType": {
+    "method": "projects"
+  },
+  "agency": "ED",
+  "releases": [
     {
       "name": "OESE SharePoint Sites",
-      "description": "The OESE SharePoint Project provides a centralized knowledge management system and portal to improve internal communication within OESE, provides OESE staff access to the right information when they need it, and enables collaboration among OESE staff.  The OESE SharePoint portal contains an organized, centralized and searchable repository of OESE-specific information that is not currently available elsewhere.  Items currently available on-line include leading indicators, OESE’s logic model toolkit, performance data, process maps, and information on internal OESE processes (e.g., standard operating procedures, templates, checklists, examples, best practices).",
-      "license": "NA",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
+      "description": "The OESE SharePoint Project provides a centralized knowledge management system and portal to improve internal communication within OESE, provides OESE staff access to the right information when they need it, and enables collaboration among OESE staff.  The OESE SharePoint portal contains an organized, centralized and searchable repository of OESE-specific information that is not currently available elsewhere.  Items currently available on-line include leading indicators, OESE�s logic model toolkit, performance data, process maps, and information on internal OESE processes (e.g., standard operating procedures, templates, checklists, examples, best practices).",
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "repositoryURL": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": "Custom code for this project was created release prior to 08082016"
+      },
       "tags": [
         "grants",
         "contracts",
@@ -18,56 +25,36 @@
       "contact": {
         "email": "lori.ahmady@ed.gov",
         "name": "Lori Ahmady"
-      }
-    },
-    {
-      "name": "RESULTS: Interstate and Intrastate coordination website",
-      "description": "An online resource to improve the inter- and intra-state coordinate of MEP granted",
-      "license": "NA",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": [
-        "migrant education"
-      ],
-      "contact": {
-        "email": "Lindsay.Booth@ed.gov",
-        "name": "Lindsay Booth"
-      }
+      },
+      "laborHours": 0
     },
     {
       "name": "Migrant Student Information Exchange (MSIX)",
       "description": "The Migrant Student Information Exchange (MSIX) is the technology that allows States to share educational and health information on migrant children who travel from State to State and who as a result, have student records in multiple States' information systems.",
-      "license": "NA",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByLaw",
+        "exemptionText": "Contract that was used to create code was written prior to the FSCP requirement"
+      },
       "tags": [
         "migrant student"
       ],
       "contact": {
         "email": "Patricia.Meyertholen@ed.gov",
         "name": "Patricia Meyertholen"
-      }
-    },
-    {
-      "name": "21st CCLC Program - Professional Development and Technical Assistance Portal",
-      "description": "The U.S. Department of Education s Office of Elementary and Secondary Education (OESE) seeks to provide technical assistance through a professional development portal designed to provide just-in-time, relevant, and state-of-the-art resources.",
-      "license": "NA",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": [
-        "professional development"
-      ],
-      "contact": {
-        "email": "Daryn.Hedlund@ed.gov",
-        "name": "Daryn Hedlund"
-      }
+      },
+      "laborHours": 0
     },
     {
       "name": "ED Data Express",
       "description": "ED Data Express is a Web site designed to improve the public's ability to access and explore high-value state-level education data collected by the U.S. Department of Education.",
-      "license": "NA",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByLaw",
+        "exemptionText": "Contract that was used to create code was written prior to the FSCP requirement"
+      },
       "tags": [
         "elementary education",
         "early childhood education",
@@ -80,14 +67,18 @@
       "contact": {
         "email": "Sarah.Newman@ed.gov",
         "name": "Sarah Newman"
-      }
+      },
+      "laborHours": 0
     },
     {
       "name": "Alternative Dispute Resolution Case Tracking System (MicroPact)",
       "description": "A case tracking system  that provides the Department of Education with integrated reports and real time statistical data on informal pre-grievances, formal and informal EEO pre-complaints and formal complaints that aid in the development of strategies to prevent and address workplace disputes ",
-      "license": "Available in the OM Progrm Office",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 1,
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "governmentWideReuse",
+        "exemptionText": "Please contact named contact for Government-wide reuse"
+      },
       "tags": [
         "dispute resolution",
         "grievances",
@@ -97,56 +88,72 @@
       "contact": {
         "email": "David.Wortham@ed.gov",
         "name": "David Wortham"
-      }
+      },
+      "laborHours": 0
     },
     {
       "name": "Office of Hearing and Appeals (OHA) Case Tracking and Reporting System (MicroPact)",
-      "description": "A docket management case tracking system that assists the Department of Education’s OHA in the compliance and adjudication of administrative hearings before OHA’s tribunal body.",
-      "license": "Available in the OM Progrm Office",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 1,
+      "description": "A docket management case tracking system that assists the Department of Education�s OHA in the compliance and adjudication of administrative hearings before OHA�s tribunal body.",
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "governmentWideReuse",
+        "exemptionText": "Please contact named contact for Government-wide reuse"
+      },
       "tags": [
         "administrative hearing cases"
       ],
       "contact": {
         "email": "George.Abbott@ed.gov",
         "name": "George Abbott"
-      }
+      },
+      "laborHours": 0
     },
     {
       "name": "Parking Case Tracking System (MicroPact)",
       "description": "A case tracking systems that has includes a parking application that is approved/disapproved online and generates reports.",
-      "license": "Available in the OM Progrm Office",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 1,
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "governmentWideReuse",
+        "exemptionText": "Please contact named contact for Government-wide reuse"
+      },
       "tags": [
         "parking"
       ],
       "contact": {
         "email": "Shelia.Russell@ed.gov",
         "name": "Sheila Russell"
-      }
+      },
+      "laborHours": 0
     },
     {
       "name": "Federal Real Property Division (FRPD) Tracking System(MicroPact)",
       "description": "The FRPD is a web-based system designed to track the 30-year life cycle of surplus properties disposed of by the General Services Administration and the Department of Defense for educational purposes. The properties are managed by the U.S. Department of Education.",
-      "license": "Available in the OM Progrm Office",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 1,
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "governmentWideReuse",
+        "exemptionText": "Please contact named contact for Government-wide reuse"
+      },
       "tags": [
         "real property"
       ],
       "contact": {
         "email": "LaToya.Cannon@ed.gov",
         "name": "LaToya Cannon"
-      }
+      },
+      "laborHours": 0
     },
     {
       "name": "Labor and Employee Relations Branch Case Tracking System (MicroPact)",
       "description": "A case tracking system used by the U.S. Department of Education to track, report and retrieve  labor and employee relations cases and related documents.",
-      "license": "Available in the OM Progrm Office",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 1,
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "governmentWideReuse",
+        "exemptionText": "Please contact named contact for Government-wide reuse"
+      },
       "tags": [
         "labor relations",
         "employee relations"
@@ -154,42 +161,54 @@
       "contact": {
         "email": "Dorothy.Titus@ed.gov",
         "name": "Dorothy Titus"
-      }
+      },
+      "laborHours": 0
     },
     {
       "name": "Telework Agreement Form Workflow  (SharePoint)",
       "description": "A SharePoint workflow that allows the submission, evaluation, approval and/or disapproval of new Telework requests; the termination of existing Telework Agreement; and to review the status of Draft, Submitted, Approved, Disapproved or Terminated Telework Agreements.",
-      "license": "Available in the OM Progrm Office",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 1,
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "governmentWideReuse",
+        "exemptionText": "Please contact named contact for Government-wide reuse"
+      },
       "tags": [
         "telework"
       ],
       "contact": {
         "email": "Kia.Fuller@ed.gov",
         "name": "Shanquila Fuller"
-      }
+      },
+      "laborHours": 0
     },
     {
       "name": "Tuition Reimbursement Program Form Workflow   (SharePoint)",
       "description": "An automated SharePoint workflow that allows U.S. Department of Education employees an opportunity to submit an application to receive tuition reimbursement for undergraduate or graduate courses at a college or university of their choice.  The documentation is used by a Panel Review Team to rate and approve the applications that are retained in the system.",
-      "license": "Available in the OM Progrm Office",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 1,
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "governmentWideReuse",
+        "exemptionText": "Please contact named contact for Government-wide reuse"
+      },
       "tags": [
         "tuition reimbursement"
       ],
       "contact": {
         "email": "toni.pope@ed.gov",
         "name": "Toni Pope"
-      }
+      },
+      "laborHours": 0
     },
     {
       "name": "Exit Clearance Form Workflow   (SharePoint)",
       "description": "An automated SharePoint workflow that allows employees who are separating or transferring from the U.S. Department of Education to initiate, obtain, and document form. ",
-      "license": "Available in the OM Progrm Office",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 1,
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "governmentWideReuse",
+        "exemptionText": "Please contact named contact for Government-wide reuse"
+      },
       "tags": [
         "exit clearance",
         "separation",
@@ -198,14 +217,18 @@
       "contact": {
         "email": "Marian.Tucker@ed.gov",
         "name": "Marian Tucker"
-      }
+      },
+      "laborHours": 0
     },
     {
       "name": "Information Collection Request, Review, and Approval System (ICRAS)",
       "description": "ICRAS is an automated web based system that manages the Paperwork Reduction Act (PRA) clearance process.",
-      "license": "Available in the OM Progrm Office",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 1,
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "governmentWideReuse",
+        "exemptionText": "Please contact named contact for Government-wide reuse"
+      },
       "tags": [
         "Information Collection",
         "Review",
@@ -214,30 +237,18 @@
       "contact": {
         "email": "Stephanie.Valentine@ed.gov",
         "name": "Stephanie Valentine"
-      }
-    },
-    {
-      "name": "Budget Formulation Database",
-      "description": "The Budget Formulation Database is used to assist in formulating the Department's Salaries and Expenses budget requests to OMB and Congress.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": [
-        "budget management",
-        "salaries",
-        "expenses"
-      ],
-      "contact": {
-        "email": "Laureen.Bloom@ed.gov",
-        "name": "Laureen Bloom"
-      }
+      },
+      "laborHours": 0
     },
     {
       "name": "Teacher Shortage Areas Nationwide Listing",
       "description": "A State that desires to propose teacher shortage areas for designation must submit the information required under the program regulations ",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 1,
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "governmentWideReuse",
+        "exemptionText": "Please contact named contact for Government-wide reuse"
+      },
       "tags": [
         "grants",
         "loan cancellation",
@@ -249,16 +260,38 @@
       "contact": {
         "email": "Freddie.Cross@ed.gov",
         "name": "Freddie Cross"
-      }
+      },
+      "laborHours": 0
+    },
+    {
+      "name": "Budget Formulation Database",
+      "description": "The Budget Formulation Database is used to assist in formulating the Department's Salaries and Expenses budget requests to OMB and Congress.",
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": "Custom code for this project was created release prior to 08082016"
+      },
+      "tags": [
+        "budget management",
+        "salaries",
+        "expenses"
+      ],
+      "contact": {
+        "email": "Laureen.Bloom@ed.gov",
+        "name": "Laureen Bloom"
+      },
+      "laborHours": 0
     },
     {
       "name": "College Scorecard",
-      "description": "Website that allows students (high school and adult) and those who support them (parents, guidance counselors) to search among colleges and find schools that meet their criteria ",
-      "license": "N/A",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 1,
-      "repository": "https://github.com/RTICWDT/college-scorecard",
+      "repositoryURL": "https://github.com/RTICWDT/college-scorecard",
       "homepage": "https://collegescorecard.ed.gov/",
+      "description": "Website that allows students (high school and adult) and those who support them (parents, guidance counselors) to search among colleges and find schools that meet their criteria ",
+      "permissions": {
+        "licenses": null,
+        "usageType": "openSource"
+      },
       "tags": [
         "college",
         "scorecard",
@@ -267,14 +300,18 @@
       "contact": {
         "email": "Ross.Santy@ed.gov",
         "name": "Ross Santy"
-      }
+      },
+      "laborHours": 0
     },
     {
       "name": "National Report System (NRS) Adult Ed Web-Based Data Collection and Warehousing",
       "description": "Section 212 of Adult Education and Family Literacy Act, requires that ED establish a comprehensive performance accountability system for formula grantees to assess the effectiveness of adult education and literacy activities. NRS is the required system.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByLaw",
+        "exemptionText": "Contract that was used to create code was written prior to the FSCP requirement"
+      },
       "tags": [
         "adult education",
         "performance reporting"
@@ -282,14 +319,18 @@
       "contact": {
         "email": "joshua.behsudi@ed.gov",
         "name": "Joshua Behsudi"
-      }
+      },
+      "laborHours": 0
     },
     {
       "name": "Literacy Information and Communications System",
       "description": "LINCS is a professional learning platform for adult educators.",
-      "license": "Available for some products",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "governmentWideReuse",
+        "exemptionText": "Please contact named contact for Government-wide reuse"
+      },
       "tags": [
         "adult education",
         "literacy"
@@ -297,14 +338,18 @@
       "contact": {
         "email": "MaryJo.Maralit@ed.gov",
         "name": "Mary Jo Maralit"
-      }
+      },
+      "laborHours": 0
     },
     {
       "name": "Financial Aid Toolkit",
       "description": "The Financial Aid Toolkit (FinancialAidToolkit.ed.gov) provides important information and resources for middle school and high school counselors, TRIO and GEAR UP staff, college access professionals, and other professionals who work with and advise students and families on preparing for and funding a postsecondary education. ",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByLaw",
+        "exemptionText": "Contract that was used to create code was written prior to the FSCP requirement"
+      },
       "tags": [
         "financial aid",
         "financial aid counselors",
@@ -314,42 +359,18 @@
       "contact": {
         "email": "priscilla.mulford@ed.gov",
         "name": "Priscilla Mulford"
-      }
-    },
-    {
-      "name": "ADG Applications (ADGA)",
-      "description": "The ADG Applications investment covers operations for 7 applications. It was downgraded in FY14 to non-major status due to DME funding cuts by the FSA IRB.  The BY2015 submission represents a revision to the investment that now includes DME.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": [
-        "IT system operations"
-      ],
-      "contact": {
-        "email": "Randall.Wolff@ed.gov",
-        "name": "Randall Wolff"
-      }
-    },
-    {
-      "name": "Aid Data Mart (ADM)",
-      "description": "The Aid Data Mart gathers summary and detail lending data  from FMS, NSLDS, and PEPS, and makes it available in both predefined reports and ad hoc inquiry formats to be used in program management and oversight activities.  It is scheduled to be decommissioned on 01/15/2017 as its functionality has been developed in the EDWA IT investment.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": [
-        "data mart"
-      ],
-      "contact": {
-        "email": "Andrea.Wise@ed.gov",
-        "name": "Andrea Wise"
-      }
+      },
+      "laborHours": 0
     },
     {
       "name": "Application and Eligibility Determination System (AEDS)",
       "description": "The AEDS supports a large group of front end business functions associated with applying for federal student aid. The primary business function is application processing and eligibility determination.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByLaw",
+        "exemptionText": "Contract that was used to create code was written prior to the FSCP requirement"
+      },
       "tags": [
         "application",
         "eligibility determination"
@@ -357,29 +378,18 @@
       "contact": {
         "email": "Misty.Parkinson@ed.gov",
         "name": "Misty Parkinson"
-      }
-    },
-    {
-      "name": "Common Origination and Disbursement (COD)",
-      "description": "Common processing platform for Federal student aid recipients at higher education institutions participating in Title IV aid programs to originate and disburse Title IV funds, including Pell Grants & Direct Loans. EDWA project added in FY14.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": [
-        "student aid",
-        "disbursement"
-      ],
-      "contact": {
-        "email": "Sharyn.Hutson@ed.gov",
-        "name": "Sharyn Hutson"
-      }
+      },
+      "laborHours": 0
     },
     {
       "name": "Debt Management and Collections System (DMCS)",
       "description": "The DMCS Investment supports a system that collects defaulted student debt through a number of means and returns the money to the Treasury.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByLaw",
+        "exemptionText": "Contract that was used to create code was written prior to the FSCP requirement"
+      },
       "tags": [
         "debt collection",
         "defaulted loans"
@@ -387,88 +397,36 @@
       "contact": {
         "email": "Sandi.McCabe@ed.gov",
         "name": "Sandi McCabe"
-      }
-    },
-    {
-      "name": "eCampus Based System",
-      "description": "The investment (eCampus-Based System) supports the activities that provide Campus-Based funds (Federal Supplemental Educational Opportunity Grant, Federal Work-Study, and Federal Perkins Loans) to Title IV eligible institutions.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": [
-        "student aid grant",
-        "loan",
-        "workstudy",
-        "disbursement"
-      ],
-      "contact": {
-        "email": "Sue.OFlaherty@ed.gov",
-        "name": "Sue OFlaherty"
-      }
+      },
+      "laborHours": 0
     },
     {
       "name": "EDExpress",
       "description": "EDE Suite is a suite of two free software products (EDExpress and Direct Loan Tools) provided by FSA to schools for their use in originating, disbursing, and packaging Title IV aid for students.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "governmentWideReuse",
+        "exemptionText": "Please contact named contact for Government-wide reuse"
+      },
       "tags": [
         "student aid"
       ],
       "contact": {
         "email": "Glenn.Kirksey@ed.gov",
         "name": "Glenn Kirksey"
-      }
-    },
-    {
-      "name": "Enterprise Business Collaboration (EBC)",
-      "description": "EBC provides the Department of Education a platform where users (employees, contractors, external partners) can collaborate with each other using SharePoint, Office Communication Suite (chat) and LiveMeeting.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": [
-        "collaboration"
-      ],
-      "contact": {
-        "email": "Sergio.Perez@ed.gov",
-        "name": "Sergio Perez"
-      }
-    },
-    {
-      "name": "Enterprise Data Warehouse and Analytics (EDWA)",
-      "description": "The EDWA project will provide a mechanism to collect and report on all aspects of the origination and disbursement process.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": [
-        "data warehouse",
-        "data analytics"
-      ],
-      "contact": {
-        "email": "Mike.Fillinich@ed.gov",
-        "name": "Mike.Fillinich"
-      }
-    },
-    {
-      "name": "Enterprise Identity Management Service (EIMS)",
-      "description": "The Enterprise Identity Management Service will provide a centralized and consolidated identity management framework for FSA  systems.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": [
-        "identity management"
-      ],
-      "contact": {
-        "email": "Steven.Burke@ed.gov",
-        "name": "Steven Burke"
-      }
+      },
+      "laborHours": 0
     },
     {
       "name": "eZ-Audit",
       "description": "eZ-Audit is a web-based application that provides a single point of submission to electronically collect financial statements and compliance audits from schools, and facilitates the processing of these through the School Eligibility Channel (SEC).",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": "Custom code for this project was created release prior to 08082016"
+      },
       "tags": [
         "financial statements",
         "audit"
@@ -476,42 +434,18 @@
       "contact": {
         "email": "Ti.Baker@ed.gov",
         "name": "Ti Baker"
-      }
-    },
-    {
-      "name": "Federal Student Aid Financial Management System (FSA FMS)",
-      "description": "Utilizing Oracle Federal Financials, FMS is the single point of financial information by institution, integrating transactions both from the FSA feeder systems as well as from the G5 system.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": [
-        "financial reporting"
-      ],
-      "contact": {
-        "email": "Stephen.Malleck@ed.gov",
-        "name": "Stephen Malleck"
-      }
-    },
-    {
-      "name": "FSA Portals (IFAPandSchoolsPortion)",
-      "description": "The Information for Financial Aid Professionals (IFAP) web site serves as FSA's electronic library for financial aid professionals. IFAP also provides FSA's constituency with a single point of access to all FSA web sites which they may need in a day.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": [
-        "loans"
-      ],
-      "contact": {
-        "email": "Marcello.Rojtman@ed.gov",
-        "name": "Marcello Rojtman"
-      }
+      },
+      "laborHours": 0
     },
     {
       "name": "Health Education Assistance Loans (HEAL)",
       "description": "This investment is a unique web based system with an Oracle database that tracks current payment status on outstanding HEAL loans and enables the HEAL Program to project the government s potential liability for future claim payments.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByLaw",
+        "exemptionText": "Contract that was used to create code was written prior to the FSCP requirement"
+      },
       "tags": [
         "loan servicing",
         "collections"
@@ -519,13 +453,18 @@
       "contact": {
         "email": "Valerie.Sherrer@ed.gov",
         "name": "Valerie Sherrer"
-      }
+      },
+      "laborHours": 0
     },
     {
       "name": "Integrated Partner Management (IPM)",
       "description": "The IPM initiative, through process reengineering and process automation, will provide, in one solution, improved eligibility, enrollment, and oversight processes used to manage partner entities as they administer Title IV Financial Aid for Students.",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByLaw",
+        "exemptionText": "Contract that was used to create code was written prior to the FSCP requirement"
+      },
       "tags": [
         "program compliance",
         "partner management"
@@ -533,129 +472,71 @@
       "contact": {
         "email": "Monica.Williams@ed.gov",
         "name": "Monica Williams"
-      }
+      },
+      "laborHours": 0
     },
     {
       "name": "Integrated Student Experience (ISE)",
       "description": "The Integrated Student Experience initiative is comprised of student websites, new media and mobile interfaces.  The project will begin to consolidate FSA s 14+ websites for students, rewrite content into plain language, and improve customer experience.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByLaw",
+        "exemptionText": "Contract that was used to create code was written prior to the FSCP requirement"
+      },
       "tags": [
         "student aid"
       ],
       "contact": {
         "email": "Mindy.Chiat@ed.gov",
         "name": "Mindy Chiat"
-      }
+      },
+      "laborHours": 0
     },
     {
       "name": "National Student Loan Database System (NSLDS)",
       "description": "The NSLDS Investment is a mixed-life cycle investment that accounts for the current operations and maintenance of an application that manages integration of enrollment, loan, grant and student data used for eligibility determination, PM & Oversight.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByLaw",
+        "exemptionText": "Contract that was used to create code was written prior to the FSCP requirement"
+      },
       "tags": [
         "student aid"
       ],
       "contact": {
         "email": "Valerie.Sherrer@ed.gov",
         "name": "Valerie Sherrer"
-      }
+      },
+      "laborHours": 0
     },
     {
-      "name": "Ombudsman Case Tracking System and Coalition of Federal Ombudsman Website (OCTS)",
-      "description": "This project continues maintenance and operations support for the Ombudsman Case Tracking System (OCTS) and the Coalition of Federal Ombudsmen Website (CFOW) accessible at https://octs.ed.gov/ and http://federalombuds.ed.gov/, respectively.  In addition this investment supports the new FSA Feedback system (formerly known as the Enterprise Complaint Systen) called for by President Barak Obama.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": [
-        "loan case processing"
-      ],
-      "contact": {
-        "email": "Corwin.Jennings@ed.gov",
-        "name": "Corwin Jennings"
-      }
-    },
-    {
-      "name": "Postsecondary Education Participants System (PEPS)",
-      "description": "The Postsecondary Education Participants System (PEPS) is the repository of data for entities participating in the Title IV Programs i.e schools, lenders, guarantors.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": [
-        "eligibility",
-        "participation"
-      ],
-      "contact": {
-        "email": "Sam.Aba@ed.gov",
-        "name": "Sam Aba"
-      }
-    },
-    {
-      "name": "Student Aid Internet Gateway (SAIG)",
-      "description": "The purpose of the project is to ensure continuing comprehensive, effective operational and maintenance support for SAIG.  SAIG provides telecommunications support and facilitates data transmission to Federal Student Aid (FSA) customers.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": [
-        "data transmission mailbox"
-      ],
-      "contact": {
-        "email": "Larry.Lanwehr@ed.gov",
-        "name": "Larry Lanwehr"
-      }
-    },
-    {
-      "name": "ED Web Support Services",
-      "description": "ED.gov is the Department's primary Internet portal and website.  The ED Web Support Services project supports the ED.gov application.",
-      "license": "NA",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": [
-        "information dissemination"
-      ],
-      "contact": {
-        "email": "Carollynn.Hammersmith@ed.gov",
-        "name": "Carollynn Hammersmith"
-      }
-    },
-    {
-      "name": "Open Source Search",
-      "description": "An open source tool based on Apache SOLR that provides enterprise search capabilities for ed.gov, and replaces the outdated Google Search Applicance",
-      "license": "Government owned",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": [
-        "enterprise search",
-        "SOLR"
-      ],
-      "contact": {
-        "email": "Carollynn.Hammersmith@ed.gov",
-        "name": "Carollynn Hammersmith"
-      }
-    },
-    {
-      "name": "CPSS – Contracts Purchasing and Support System",
+      "name": "CPSS � Contracts Purchasing and Support System",
       "description": "System of Record for contract writing activities across the Department",
-      "license": "NA",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": "Custom code for this project was created release prior to 08082016"
+      },
       "tags": [
         "contract management"
       ],
       "contact": {
         "email": "Kevin.Walters@ed.gov",
         "name": "Kevin Walters"
-      }
+      },
+      "laborHours": 0
     },
     {
       "name": "ED developer hub",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 1,
-      "license": "N/A",
-      "repository": "https://github.com/usedgov",
+      "repositoryURL": "https://github.com/usedgov",
       "description": "Several open source repositories of reusable ED Open Source Code",
+      "permissions": {
+        "licenses": null,
+        "usageType": "openSource"
+      },
       "tags": [
         "Hub",
         "Developer",
@@ -664,176 +545,401 @@
       "contact": {
         "email": "Ivan.Metzger@ed.gov",
         "name": "Ivan Metzger"
-      }
-    },
-    {
-      "name": "ELVIS (on AEM's server)",
-      "description": "This is a temporary system designed to develop ERIC records. It ingests various sources of publisher information, has a workflow system, and publishes XML to be ingested in ERIC",
-      "license": 0,
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": [
-        "processing software"
-      ],
-      "contact": {
-        "email": "erin.pollard@ed.gov",
-        "name": "Erin Pollard"
-      }
-    },
-    {
-      "name": "ELVIS (in IES Data Center)",
-      "description": "This is a temporary system designed to develop ERIC records. It ingests various sources of publisher information, has a workflow system, and publishes XML to be ingested in ERIC",
-      "license": 0,
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": [
-        "processing software"
-      ],
-      "contact": {
-        "email": "erin.pollard@ed.gov",
-        "name": "Erin Pollard"
-      }
+      },
+      "laborHours": 0
     },
     {
       "name": "ERIC Database",
       "description": "This is a database of 1.6 million bibliographic citations and full text documents. It is available at eric.ed.gov",
-      "license": 0,
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "governmentWideReuse",
+        "exemptionText": "Please contact named contact for Government-wide reuse"
+      },
       "tags": [
         "publication database"
       ],
       "contact": {
         "email": "erin.pollard@ed.gov",
         "name": "Erin Pollard"
-      }
-    },
-    {
-      "name": "ERIC Processing System",
-      "description": "This system takes records sent by the old ELVIS system and processes them to run in the ERIC Database",
-      "license": 0,
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": [
-        "XML Conversion",
-        "processing software"
-      ],
-      "contact": {
-        "email": "erin.pollard@ed.gov",
-        "name": "Erin Pollard"
-      }
+      },
+      "laborHours": 0
     },
     {
       "name": "Find What Works",
       "description": "This is a webiste application that takes information about studies reviewed and sorts them in an easily customizable format",
-      "license": 0,
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 1,
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "governmentWideReuse",
+        "exemptionText": "Please contact named contact for Government-wide reuse"
+      },
       "tags": [
         "search"
       ],
       "contact": {
         "email": "erin.pollard@ed.gov",
         "name": "Erin Pollard"
-      }
+      },
+      "laborHours": 0
     },
     {
       "name": "Reviewed Studies Database",
       "description": "This is a database of all studies reviewed by the WWC",
-      "license": 0,
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": "Custom code for this project was created release prior to 08082016"
+      },
       "tags": [
         "publication database"
       ],
       "contact": {
         "email": "erin.pollard@ed.gov",
         "name": "Erin Pollard"
-      }
+      },
+      "laborHours": 0
     },
     {
       "name": "Online Courses",
       "description": "This is an application to allow users to complete their training online. It includes videos, an online test, and a certification",
-      "license": 0,
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": "Custom code for this project was created release prior to 08082016"
+      },
       "tags": [
         "online course"
       ],
       "contact": {
         "email": "erin.pollard@ed.gov",
         "name": "Erin Pollard"
-      }
+      },
+      "laborHours": 0
     },
     {
       "name": "Online Study Review Guide",
       "description": "This is an internal processing system to cooridnate reviewes for the What Works Clearinghouse.",
-      "license": 0,
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": "Custom code for this project was created release prior to 08082016"
+      },
       "tags": [
         "online course"
       ],
       "contact": {
         "email": "erin.pollard@ed.gov",
         "name": "Erin Pollard"
-      }
-    },
-    {
-      "name": "RCT Yes",
-      "description": "RCT-YES is a free software tool that allows you to easily analyze data and report results on the effectiveness of programs in your context.",
-      "license": "https://www.rct-yes.com/Home/Download",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": [
-        "evaluation software"
-      ],
-      "contact": {
-        "email": "erin.pollard@ed.gov",
-        "name": "Erin Pollard"
-      }
+      },
+      "laborHours": 0
     },
     {
       "name": "EdMaps",
       "description": "REL Midwest EdMaps is a Web-mapping application that displays complex education data geographically as \"story maps.\" EdMaps helps users analyze publicly available school- and district-level data, observe trends over time, and frame conversations on practice and policy.",
-      "license": 0,
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": "Custom code for this project was created release prior to 08082016"
+      },
       "tags": [
         "mapping"
       ],
       "contact": {
         "email": "erin.pollard@ed.gov",
         "name": "Erin Pollard"
-      }
+      },
+      "laborHours": 0
     },
     {
       "name": "The Program, Outcomes, Measures and Targets Application (POMT)",
       "description": "Program, Outcomes, Measures and Targets Application (POMT) helps users create a plan to monitor, measure, and track outcomes over time to evaluate program effectiveness.",
-      "license": "http://relpacific.mcrel.org/wp-content/uploads/2016/03/POMT_ReadMe_2014.txt",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
+      "downloadURL": "http://relpacific.mcrel.org/resources/pomt-app/",
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "governmentWideReuse",
+        "exemptionText": "Please contact named contact for Government-wide reuse"
+      },
       "tags": [
         "evaluation software"
       ],
       "contact": {
         "email": "erin.pollard@ed.gov",
         "name": "Erin Pollard"
-      }
+      },
+      "laborHours": 0
     },
     {
       "name": "The Education Logic Model (ELM) application",
       "description": "The Education Logic Model (ELM) application helps users create a logic model and the Program",
-      "license": "http://relpacific.mcrel.org/wp-content/uploads/2016/03/Education-Logic-Models_TermsandConditions.txt",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
+      "downloadURL": "http://relpacific.mcrel.org/resources/elm-app/",
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "governmentWideReuse",
+        "exemptionText": "Please contact named contact for Government-wide reuse"
+      },
       "tags": [
         "logic models"
       ],
       "contact": {
         "email": "erin.pollard@ed.gov",
         "name": "Erin Pollard"
-      }
+      },
+      "laborHours": 0
+    },
+    {
+      "name": "Audit Accoutability Resolution and Tracking System (AARTS)",
+      "description": "Maintenance & enhancement support for AARTS-a database system used to track,monitor & report on all post-audit activity for the agency,including Single Audits, GAO & OIG audits.",
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": "Custom code for this project was created release prior to 08082016"
+      },
+      "tags": [
+        "audit",
+        "tracking"
+      ],
+      "contact": {
+        "email": "diane.gregory@ed.gov",
+        "name": "Diane Gregory"
+      },
+      "laborHours": 0
+    },
+    {
+      "name": "Civil Rights Data Collection (CRDC)",
+      "description": "Collection and reporting of local education areas, independent school districts, and public schools data on students concerning english language proficiency, disicpline, disability and other factors affecting quality student education for all in America.",
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": "Custom code for this project was created release prior to 08082016"
+      },
+      "tags": [
+        "data collection"
+      ],
+      "contact": {
+        "email": "janis.brown@ed.gov",
+        "name": "Janis Brown"
+      },
+      "laborHours": 0
+    },
+    {
+      "name": "EDFacts",
+      "description": "EDFacts is an Internet-based information management system for K-12 education performance data.",
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByLaw",
+        "exemptionText": "Contract that was used to create code was written prior to the FSCP requirement"
+      },
+      "tags": [
+        "metadata",
+        "management"
+      ],
+      "contact": {
+        "email": "brandon.scott@ed.gov",
+        "name": "Brandon Scott"
+      },
+      "laborHours": 0
+    },
+    {
+      "name": "Enterprise IT Architecture",
+      "description": "Enterprise Architecture (EA) Program Management, Development Execution, and related disciplines; Engineering 24x7 Operational Support and performance testing to FSA business units.",
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByLaw",
+        "exemptionText": "Contract that was used to create code was written prior to the FSCP requirement"
+      },
+      "tags": [
+        "EA",
+        "Enterprise Architecture",
+        "middleware",
+        "architecture"
+      ],
+      "contact": {
+        "email": "sandy.england@ed.gov",
+        "name": "Sandy England"
+      },
+      "laborHours": 0
+    },
+    {
+      "name": "Financial Management Support System",
+      "description": "The FMSS provides Department-wide core financial management capabilities.",
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByLaw",
+        "exemptionText": "Contract that was used to create code was written prior to the FSCP requirement"
+      },
+      "tags": [
+        "Financial",
+        "Management"
+      ],
+      "contact": {
+        "email": "steven.sirk@ed.gov",
+        "name": "Steven Sirk"
+      },
+      "laborHours": 0
+    },
+    {
+      "name": "Grants Management System (G5)",
+      "description": "The U.S. Department of Education grants management system, known as G5, supports ED's full lifecycle grants management business process",
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByLaw",
+        "exemptionText": "Contract that was used to create code was written prior to the FSCP requirement"
+      },
+      "tags": [
+        "Grants",
+        "Management"
+      ],
+      "contact": {
+        "email": "wally.labban@ed.gov",
+        "name": "Wally Labban"
+      },
+      "laborHours": 0
+    },
+    {
+      "name": "i3 CoPP",
+      "description": "The purpose of i3 is to support entities with a record of improving student achievement and nonprofits in partnership with local educational agencies or a consortium of schools to expand the implementation of, and investment in, evidence-based practices.",
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "governmentWideReuse",
+        "exemptionText": "Please contact named contact for Government-wide reuse"
+      },
+      "tags": [
+        "Grants Management",
+        "Community of Practice",
+        "Resource Library"
+      ],
+      "contact": {
+        "email": "kelly.terpak@ed.gov",
+        "name": "Kelly Terpak"
+      },
+      "laborHours": 0
+    },
+    {
+      "name": "National Clearinghouse for English Language Acquisition (NCELA)",
+      "description": "It uses a variety of mechanisms to collect, analyze, synthesize and disseminate high-quality information. It focuses on language instruction educational programs for English Learners, educational research and processes to improve the educational outcomes.",
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByLaw",
+        "exemptionText": "Contract that was used to create code was written prior to the FSCP requirement"
+      },
+      "tags": [
+        "English Learner",
+        "Title III",
+        "English Language Acquisition"
+      ],
+      "contact": {
+        "email": "melissa.escalante@ed.gov",
+        "name": "Melissa Escalante"
+      },
+      "laborHours": 0
+    },
+    {
+      "name": "OSEP GRADS 360 and Customer Service Database (OCSD)",
+      "description": "Processes of submission of statutorily-required IDEA reports (SPP/APR) and grant applications by State agencies to OSEP and the Department.",
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": "Custom code for this project was created release prior to 08082016"
+      },
+      "tags": [
+        "Grants"
+      ],
+      "contact": {
+        "email": "rebecca.walawender@ed.gov",
+        "name": "Rebecca Walawender"
+      },
+      "laborHours": 0
+    },
+    {
+      "name": "OSEP Personnel Development Program Data Collection System (PDPDCS)",
+      "description": "Collects performance measure data from OSEP Personnel Development Program grantees and collects and tracks service obligation data. The system provides relevant and timely information on scholars and grantees.",
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": "Custom code for this project was created release prior to 08082016"
+      },
+      "tags": [
+        "Grants"
+      ],
+      "contact": {
+        "email": "bonnie.jones@ed.gov",
+        "name": "Bonnie Jones"
+      },
+      "laborHours": 0
+    },
+    {
+      "name": "Readiness and Emergency Management for Schools TA Center (REMS)",
+      "description": "REMS TA Center provides training, resources, and TA to grantees and nongrantees, IHEs, SEAs, LEAs, schools, and nonpublic schools to help build capacity in school emergency management and preparedness as put forth in the new Federal guidance.",
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByLaw",
+        "exemptionText": "Contract that was used to create code was written prior to the FSCP requirement"
+      },
+      "tags": [
+        "School Safety",
+        "Preparedness",
+        "Emergency Resources"
+      ],
+      "contact": {
+        "email": "madeline.sullivan@ed.gov",
+        "name": "Madeline Sullivan"
+      },
+      "laborHours": 0
+    },
+    {
+      "name": "Web Data Collection for the Campus Crime",
+      "description": "Web Data Collection for Campus Crime and Accreditited Schools list, assist school in providing students nationwide a safe environment in which to learn and to keep students, parents, and employees well informed about campus security.",
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": "Custom code for this project was created release prior to 08082016"
+      },
+      "tags": [
+        "Data Collection"
+      ],
+      "contact": {
+        "email": "Amy.Wilson@ed.gov",
+        "name": "Amy Wilson"
+      },
+      "laborHours": 0
+    },
+    {
+      "name": "Web Data Collection for the EADA Surveys",
+      "description": "Web Data Collection for EADA Survey and Accreditited Schools list, assist school in providing students nationwide a safe environment in which to learn and to keep students, parents, and employees well informed about campus security.",
+      "repositoryURL": null,
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": "Custom code for this project was created release prior to 08082016"
+      },
+      "tags": [
+        "Data Collection"
+      ],
+      "contact": {
+        "email": "Amy.Wilson@ed.gov",
+        "name": "Amy Wilson"
+      },
+      "laborHours": 0
     }
   ]
 }

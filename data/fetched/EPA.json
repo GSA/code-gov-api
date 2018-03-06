@@ -1,1237 +1,2773 @@
 {
-  "version": "1.0.1",
+  "version": "2.0.0",
   "agency": "EPA",
-  "projects": [
-    {
-      "organization": "ORD",
-      "name": "modelling_hab_indices",
-      "description": "Technical documentation of research and code used for models of HAB related indices stored in a github repository (https://github.com/USEPA/modelling_hab_indices",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Jeff Hollister",
-        "email": "Hollister.Jeff@epa.gov",
-        "phone": "(401) 782-9655"
-      }
-    },
-    {
-      "organization": "USEPA",
-      "name": "Water Distribution Network Model",
-      "description": "EPANET is useful for modeling potable water distribution networks. EPANET is developed and maintained by the USEPA in Cincinnati, OH and hosted at github.com/USEPA.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Michael Tryby",
-        "email": "Tryby.Michael@epa.gov",
-        "phone": "(513) 569-7559"
-      }
-    },
-    {
-      "organization": "OW",
-      "name": "Water Quality Data Discovery Tool",
-      "description": "The WQP Data Discovery tool is a desktop application that provides an easy to use interface allowing users to query, summarize, QC and display data from the WQP. The tool uses open source R, a statistical programming language and several add-on packages, to visualize the data selected from the portal and to assist users in selecting data they may need for analysis.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Samantha Sifleet",
-        "email": "Sifleet.Samantha@epa.gov",
-        "phone": "(000) 000-0000"
-      }
-    },
-    {
-      "organization": "ORD",
-      "name": "Global SDG Indicators",
-      "description": "Global SDG Indicators",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Julia Ortiz",
-        "email": "Ortiz.Julia@epa.gov",
-        "phone": "(202) 564-1931"
-      }
-    },
-    {
-      "organization": "ORD",
-      "name": "honeybee",
-      "description": "Trello Board to track progress https://trello.com/b/4BS17BEn/honey-i-m-home-mobile-app",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Andrew Yuen",
-        "email": "Yuen.Andrew@epa.gov",
-        "phone": "(703) 305-7191"
-      }
-    },
-    {
-      "organization": "ORD",
-      "name": "MysticRiverWsdRC2015",
-      "description": "N/A",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Julia Ortiz",
-        "email": "Ortiz.Julia@epa.gov",
-        "phone": "(202) 564-1931"
-      }
-    },
-    {
-      "organization": "USEPA / Region 1",
-      "name": "region 1 r",
-      "description": "This repository contains materials for an R workshop for USEPA Region 1 New England Regional Staff.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Jeff Hollister",
-        "email": "Hollister.Jeff@epa.gov",
-        "phone": "(401) 782-9655"
-      }
-    },
-    {
-      "organization": "ORD",
-      "name": "hivescience",
-      "description": "The HiveScience mobile App is designed for citizen scientist beekeepers to collect and share data related to the health of their honey bee colonies. Using this App, beekeepers can easily enter hive health and Varroa mite monitoring data on-site and in real-time. These data will help us better understand factors affecting the health of honey bees and their ability to survive the winter. For more info, check out https://www.epa.gov/citizen-science/hivescience",
-      "license": null,
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": null,
-      "contact": {
-        "name": "Feroz Daraseng",
-        "email": "Daraseng.Feroz@epa.gov",
-        "phone": "(703) 347-0623"
-      }
-    },
-    {
-      "organization": "ORD",
-      "name": "R micromap package development",
-      "description": "This repository is for development of the USEPA R micromap package. If you would like to contribute to this repository please follow the guidelines in CONTRIBUTING.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Marc Weber",
-        "email": "Weber.Marc@epa.gov",
-        "phone": "(541) 754-4469"
-      }
-    },
-    {
-      "organization": "USEPA",
-      "name": "PHP Data Sample for Envirofacts API, Using Safe Drinking Water Information Systems (SDIWS) Data",
-      "description": "This API data sample will provide the steps to create a simple PHP Web application that can consume Safe Drinking Water Information System (SDWIS) data from EPA's Envirofacts database.   \r\n  \r\nThe Envirofacts SDWIS database contains information about public water systems and their violations of EPA's drinking water regulations, as reported to EPA by the states.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": null,
-        "email": null,
-        "phone": null
-      }
-    },
-    {
-      "organization": "USEPA",
-      "name": "Computational Sustainability",
-      "description": "This is code written primarily in Java as part of the Computational Sustainability Pathfinder Innovation Project. Once completed, it should contain all necessary source code for a stand alone Java application for evaluting sustainability scenarios using models build in the VennSim modeling platform. This project is being developed in GitHub.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Stephen Edwards",
-        "email": "Edwards.Stephen@epa.gov",
-        "phone": "(919) 541-0514"
-      }
-    },
-    {
-      "organization": "ORD",
-      "name": "introR",
-      "description": "Introductory R Training materials for workshop given Jan 14-15,2015 at USEPA Gulf Ecology Division and Jan 7-8, 2015 and Jan 22-23, 2105 at USEPA Atlantic Ecology Division.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Jeff Hollister",
-        "email": "Hollister.Jeff@epa.gov",
-        "phone": "(401) 782-9655"
-      }
-    },
-    {
-      "organization": "ORD",
-      "name": "cerf_r",
-      "description": "This repository contains materials for the R workshops to be held at the 2017 CERF meeting in Providence, RI.",
-      "license": null,
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": null,
-      "contact": {
-        "name": "Jeff Hollister",
-        "email": "Hollister.Jeff@epa.gov",
-        "phone": "(401) 782-9655"
-      }
-    },
-    {
-      "organization": "ORD",
-      "name": "BenMAP-CE",
-      "description": "BenMAP-CE",
-      "license": null,
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": null,
-      "contact": {
-        "name": "Julia Ortiz",
-        "email": "Ortiz.Julia@epa.gov",
-        "phone": "(202) 564-1931"
-      }
-    },
-    {
-      "organization": "OLEM",
-      "name": "CIMC Services Monitoring Script",
-      "description": "The Cleanups in My Community (CIMC) team has developed a services monitor script for the CIMC application.  This is a Python script that reads a CSV list of services required by the CIMC application.  For each service URL in the CSV, the script cycles through each data layer, and queries the map service to test that results are being returned.  If no results are returned, the script will email a list of services that did not respond to the query.  \r\n\r\nThe main requirements for this script are Python and an SMTP mail server connection.  Ideally the script would run every 2-3 hours to check the services availability.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Lisa Jenkins",
-        "email": "Jenkins.Lisa@epa.gov",
-        "phone": "(202) 566-1941"
-      }
-    },
-    {
-      "organization": "ORD",
-      "name": "EPA-Metadata-Editor-3",
-      "description": "EPA-Metadata-Editor-3",
-      "license": null,
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": null,
-      "contact": {
-        "name": "Julia Ortiz",
-        "email": "Ortiz.Julia@epa.gov",
-        "phone": "(202) 564-1931"
-      }
-    },
-    {
-      "organization": "OEI",
-      "name": "elpaso widget js",
-      "description": "Viewing images for a given location from multiple sources. Simply click on the map, and you can have four popup windows to view images from different sources. This widget works with the release version of Esri Web AppBuilder.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Jessica Orquina",
-        "email": "Orquina.Jessica@epa.gov",
-        "phone": "(202) 564-0446"
-      }
-    },
-    {
-      "organization": "ORD",
-      "name": "HEDS",
-      "description": "Human Exposure Data from historic studies dating 1994-2005.",
-      "license": null,
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": null,
-      "contact": {
-        "name": "Carry Croghan",
-        "email": "Croghan.Carry@epa.gov",
-        "phone": "(919) 541-3184"
-      }
-    },
-    {
-      "organization": "ORD",
-      "name": "gis r demo",
-      "description": "The purpose of this lightning demo is to provide a small taste of GIS capabilities that are available in R. I will run through the set-up required to get going, show examples of reading in and exploring both raster and vector, show some visualization options, and do some simple analysis. Additionally, this demo assumes a minimum level of familiarity with R. If you are new to R and would like to learn more, a fun place to start is rforcats.net.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Jeff Hollister",
-        "email": "Hollister.Jeff@epa.gov",
-        "phone": "(401) 782-9655"
-      }
-    },
-    {
-      "organization": "IESD",
-      "name": "TCO_Megahack_eRules_Search_Engine_Frontend",
-      "description": "Search engine front end.",
-      "license": null,
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": null,
-      "contact": {
-        "name": "Lico Galindo",
-        "email": "galindo.lico@epa.gov",
-        "phone": "(202) 566-1252"
-      }
-    },
-    {
-      "organization": "ORD",
-      "name": "GIFMod",
-      "description": "GIFMod",
-      "license": null,
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": null,
-      "contact": {
-        "name": "Julia Ortiz",
-        "email": "Ortiz.Julia@epa.gov",
-        "phone": "(202) 564-1931"
-      }
-    },
-    {
-      "organization": "ORD",
-      "name": "usepa-harmonization",
-      "description": "Codebase for the LCA Harmonization Tool ( a RCP/RAP Java application)\r\n\r\nThis repo contains the latest stable version of the EPA / USDA Life Cycle Assessment (LCA) Harmonization Tool (HT). This tool is in beta state. Primary authors are Tom Transue and Tommy Cathey, Lockheed Martin contractors supporting US EPA efforts. The vision and technical direction were provided by Wesley Ingwersen and others in the US EPA Life Cycle Assessment Center for Excellence.",
-      "license": null,
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": null,
-      "contact": {
-        "name": "Wesley Ingwersen",
-        "email": "Ingwersen.Wesley@epa.gov",
-        "phone": "(513) 569-7602"
-      }
-    },
-    {
-      "organization": "NCEA",
-      "name": "SSNM-CIMEK",
-      "description": "Spatial stream network modeling to make spatial predictions of water quality throughout a watershed's stream network.  This uses the R SSN package.",
-      "license": null,
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": null,
-      "contact": {
-        "name": "Michael McManus",
-        "email": "McManus.Michael@epa.gov",
-        "phone": "(513) 569-7994"
-      }
-    },
-    {
-      "organization": "ORD",
-      "name": "EPA-Metadata-Editor-4",
-      "description": "EPA-Metadata-Editor-4",
-      "license": null,
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": null,
-      "contact": {
-        "name": "Julia Ortiz",
-        "email": "Ortiz.Julia@epa.gov",
-        "phone": "(202) 564-1931"
-      }
-    },
-    {
-      "organization": "ORD",
-      "name": "github_101",
-      "description": "This repository contains introductory presentation materials on Git and Github. The two presentaitons provide a high level conceptual overview of version control with Git, basic concepts of Github, and a more hands-on example walking through the CMAQ repository and how Git and GitHub are used to manage open source development of the CMAQ models.",
-      "license": null,
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": null,
-      "contact": {
-        "name": "Jeff Hollister",
-        "email": "Hollister.Jeff@epa.gov",
-        "phone": "(401) 782-9655"
-      }
-    },
-    {
-      "organization": "ORD",
-      "name": "EPA-Metadata-Editor-5",
-      "description": "EPA-Metadata-Editor-5",
-      "license": null,
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": null,
-      "contact": {
-        "name": "Julia Ortiz",
-        "email": "Ortiz.Julia@epa.gov",
-        "phone": "(202) 564-1931"
-      }
-    },
-    {
-      "organization": "USEPA",
-      "name": "QA-SDMP-Project",
-      "description": "QA Tracking and Scientific Data Management Planning System. Code management @ GitHub",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "David Lyons",
-        "email": "Lyons.David@epa.gov",
-        "phone": "(919) 541-4871"
-      }
-    },
-    {
-      "organization": "ORD",
-      "name": "ORD Applications Integration and Modernization GitHub repository",
-      "description": "ORD is using this GitHub repository to share code with contractors supporting the OAIM project.  The contractors will also post their code on this repository.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Ann Vega",
-        "email": "Vega.Ann@epa.gov",
-        "phone": "(513) 569-7635"
-      }
-    },
-    {
-      "organization": "USEPA",
-      "name": "Coding Advanced EPA Search Pages Sample",
-      "description": "Offers all the options of standard search plus searching for specific fields and applying boolean operators",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": null,
-        "email": null,
-        "phone": null
-      }
-    },
-    {
-      "organization": "USEPA / Region 1",
-      "name": "aed r",
-      "description": "This repository contains the materials for the Atlantic Ecology Division's R (and friends) data science study group. The purpose of this group is to work together to learn new skills, languages, data science practices, etc. as they relate to our research in environmental science. The primary focus will likely be R, but the topics we cover will by no means be limited to that and other languages and tools are very much encouraged.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Jeff Hollister",
-        "email": "Hollister.Jeff@epa.gov",
-        "phone": "(401) 782-9655"
-      }
-    },
-    {
-      "organization": "USEPA",
-      "name": "Drupal WebCMS GitHub Repository",
-      "description": "The codebase for One EPA Drupal WebCMS is being stored in a private GitHub repository. We are not using GitHub for development, per se, but rather as a backup and as a read-only option for interested third-party developers.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Michael Hessling",
-        "email": "Hessling.Michael@epa.gov",
-        "phone": "(202) 566-0419"
-      }
-    },
+  "measurementType": {
+    "method": "projects"
+  },
+  "releases": [
     {
       "organization": "NRMRL",
-      "name": "TEST (Toxicity Estimation Software Tool)",
-      "description": "This is a downloadable, standalone Java based software tool. Its purpose is to estimate physical properties and toxicity values for organic chemicals from their molecular structure. It is being developed in GitHub",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
+      "name": "GMAP Data Analysis GitHub repo",
+      "description": "This repository contains R and python code used to analyze data collected through the ORD GMAP program. This code is being stored in a GitHub repository iin order to make the research reproducible.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "GMAP-data-analysis",
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "data",
+        "analysis"
+      ],
       "contact": {
-        "name": "Todd Martin",
-        "email": "Martin.Todd@epa.gov",
-        "phone": "(513) 569-7682"
-      }
-    },
-    {
-      "organization": "AMAD",
-      "name": "CMAQ-Tools",
-      "description": "GitHub repository for scripts (Fortran and R code) for post-processing and evaluating model output from the EPA's Community Multiscale Air Quality Model (CMAQ).",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Kristen Foley",
-        "email": "Foley.Kristen@epa.gov",
-        "phone": "(919) 541-5367"
-      }
-    },
-    {
-      "organization": "ORD",
-      "name": "Open Modelling Environment",
-      "description": "The Open Modeling Environment (OME) is a cross-platform, open source System Dynamics modeling engine that emphasizes modularity and explicit spatial representation as core design features.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Vladimir Predovic",
-        "email": "Predovic.Vladimir@epa.gov",
-        "phone": "(541) 754-0000"
-      }
-    },
-    {
-      "organization": "ORD",
-      "name": "Public Web AppBuilder",
-      "description": "A full guidance document describing the Web Application Builder Oversight Team (WABOT), GitHub roles and responsibilities, the collaborator account request process, and workflows for the private version of this repository is available on the EPA SharePoint site here: https://usepa.sharepoint.com/sites/oei/GISWORKGROUP/Developer (EPA SharePoint login is required.)",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "David Yarnell",
-        "email": "Yarnell.David@epa.gov",
-        "phone": "(208) 610-9981"
-      }
-    },
-    {
-      "organization": "USEPA / Region 6",
-      "name": "SDE Layer Menu Add-in to ArcGIS 10",
-      "description": "An add-in to ArcGIS 10 that allows ArcMap users to turn on GIS layers stored in SDE by simply checking boxes next to layers listed on a pop up menu.  Adding layers is quick and easy as the user does not have to manually hunt for layers in SDE.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Jeff Danielson",
-        "email": "Danielson.Jeff@epa.gov",
-        "phone": "(000) 000-0000"
-      }
-    },
-    {
-      "organization": "ORD",
-      "name": "SWMM-EPANET User Interface",
-      "description": "This is the official SWMM source code repository maintained by US EPA ORD, NRMRL, Water Supply and Water Resources Division located in Cincinnati, Ohio. SWMM is a dynamic hydrology-hydraulic water quality simulation model. It is used for single event or long-term (continuous) simulation of runoff quantity and quality from primarily urban areas. SWMM source code is written in the C Programming Language and released in the Public Domain.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Tong Zhai",
-        "email": " tong.zhai@respec.com",
-        "phone": null
-      }
-    },
-    {
-      "organization": "OW",
-      "name": "Create public APEX Page",
-      "description": "Create public APEX page that will take the ID as parameter and a process to look up the the CDX data and token values and pass the user through APEX authentication if token checks out.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Harold Valle",
-        "email": "Valle.Harold@epa.gov",
-        "phone": "(202) 564-6593"
-      }
-    },
-    {
-      "organization": "USEPA / Region 1",
-      "name": "quickmapr",
-      "description": "There are many packages that already exist or are in active development that support the visualization of spatial data in R. However, there seems to be a gap for those that need to quickly view, compare, and explore the results of a given spatial analysis. The current thinking behind quickmapr is to allow for quick visualization of sp and raster objects.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Jeff Hollister",
-        "email": "Hollister.Jeff@epa.gov",
-        "phone": "(401) 782-9655"
-      }
-    },
-    {
-      "organization": "OW",
-      "name": "Javascript Code for ARCS APEX tool",
-      "description": "Javascript code ARCS APEX tool",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Harold Valle",
-        "email": "Valle.Harold@epa.gov",
-        "phone": "(202) 564-6593"
-      }
-    },
-    {
-      "organization": "OEI",
-      "name": "E-Enterprise Portal",
-      "description": "E-Enterprise is a transformative approach to make environmental information and data more accessible, efficient, and evidence-based through advances in monitoring, reporting, and information technology. The Portal is designed to be a modern and efficient interface for environmental transactions. This includes easier access to information and making transactions with environmental agencies as efficient and effective as possible.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Christian Manalansan",
-        "email": "christian.manalansan@cgifederal.com",
-        "phone": "(703) 227-6100"
+        "name": "Halley Brantley",
+        "email": "Brantley.Halley@epa.gov",
+        "phone": "(919) 541-5662"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
       }
     },
     {
       "organization": "AED",
       "name": "CityWaterBalance",
       "description": "R package for modeling flows of water in an urban environment",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "model",
+        "water"
+      ],
       "contact": {
         "name": "Laura Erban",
         "email": "Erban.Laura@epa.gov",
         "phone": "(401) 782-3140"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
       }
     },
     {
       "organization": "ORD",
-      "name": "StreamCat",
-      "description": "The StreamCat Dataset (http://www2.epa.gov/national-aquatic-resource-surveys/streamcat) provides summaries of natural and anthropogenic landscape features for approximately 2.65 million streams, and their associated catchments, within the conterminous USA. This repo contains code used in StreamCat to process a suite of landscape rasters to watersheds for streams and their associated catchments (local reach contributing area) within the conterminous USA using the NHDPlus Version 2 as the geospatial framework.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
+      "name": "cerf_r",
+      "description": "This repository contains materials for the R workshops to be held at the 2017 CERF meeting in Providence, RI.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "workshop"
+      ],
       "contact": {
-        "name": "Rick Debbout",
-        "email": "Debbout.Rick@epa.gov",
-        "phone": "(541) 754-0000"
+        "name": "Jeff Hollister",
+        "email": "Hollister.Jeff@epa.gov",
+        "phone": "(401) 782-9655"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
       }
     },
     {
-      "organization": "USEPA",
-      "name": "XCode Data Sample for Envirofacts API, Using RadNet Data",
-      "description": "This sample will provide the steps to create a simple iOS application that can consume Radiation (RadNet) Data. The Envirofacts RadNet database contains sample results for a variety of radionuclides and radiation types from 200 monitoring stations across all 50 states and the American Territories.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
+      "organization": "AMAD",
+      "name": "CMAQ-Tools",
+      "description": "GitHub repository for scripts (Fortran and R code) for post-processing and evaluating model output from the EPA's Community Multiscale Air Quality Model (CMAQ).",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "script",
+        "tool"
+      ],
       "contact": {
-        "name": null,
-        "email": null,
-        "phone": null
+        "name": "Kristen Foley",
+        "email": "Foley.Kristen@epa.gov",
+        "phone": "(919) 541-5367"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "LCI-Primer",
+      "description": "Data Mining LCI Primer for EPA Datasources",
+      "usageType": "openSource",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [],
+      "laborHours": 0,
+      "tags": [],
+      "contact": {
+        "name": "Lico Galindo",
+        "email": "galindo.lico@epa.gov",
+        "phone": "(202) 566-1252"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
       }
     },
     {
       "organization": "USEPA",
       "name": "My Right to Know (MyRTK)",
       "description": "Source code and documentation for MyRTK.  \r\n  \r\nMyRTK is an EPA Web application designed for mobile devices. For any location or address, MyRTK maps nearby facilities that report to the Toxics Release Inventory (TRI), as well as large permit holders in EPA's Air, Water, or Hazardous Waste programs that are expected to produce, manage, or release TRI-reportable chemicals.  \r\n  \r\nThis application compares toxic chemical releases from individual facilities to releases from other facilities in the same county, as well as to releases from other facilities in the same industry sector. MyRTK also identifies the most serious facility non-compliance across the twelve most recent quarters of data for the three main United States environmental statutes: the Clean Air Act, the Clean Water Act, and the Resource Conservation and Recovery Act.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://GitHub.com/USEPA/My-Right-To-Know-MyRTK-",
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "right",
+        "know",
+        "appplication"
+      ],
+      "contact": {},
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "DMSD",
+      "name": "EPA Environmental Dataset Gateway",
+      "description": "Source code for the EPA Environmental Dataset Gateway (EDG), an open-source metadata catalog built on Esri's Geoportal Server.",
+      "usageType": "openSource",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "USEPA",
+      "languages": [],
+      "laborHours": 0,
+      "tags": [],
       "contact": {
-        "name": null,
-        "email": null,
-        "phone": null
+        "name": "Ana Greene",
+        "email": "Greene.Ana@epa.gov",
+        "phone": "(202) 566-2132"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
       }
     },
     {
       "organization": "ORD",
-      "name": "mulitResSurvey",
-      "description": "Code used for the design and analysis of reservoir (i.e., water impoundments) surveys.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
+      "name": "github_101",
+      "description": "This repository contains introductory presentation materials on Git and Github. The two presentaitons provide a high level conceptual overview of version control with Git, basic concepts of Github, and a more hands-on example walking through the CMAQ repository and how Git and GitHub are used to manage open source development of the CMAQ models.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [
+        "R"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "sample",
+        "intro"
+      ],
       "contact": {
-        "name": "Jake Beaulieu",
-        "email": "Beaulieu.Jake@epa.gov",
-        "phone": "(513) 569-7842"
+        "name": "Jeff Hollister",
+        "email": "Hollister.Jeff@epa.gov",
+        "phone": "(401) 782-9655"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
       }
     },
     {
-      "organization": "ORD",
-      "name": "share no cookies",
-      "description": "Share no cookies is a pure JavaScript solution that allows you to easily share your page without any invasive tracking cookies. Includes posting to Facebook, Google+, Pinterest, and Twitter, as well as an explanatory page, \"What is this?\"",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
+      "organization": "NCEA",
+      "name": "SSNM-CIMEK",
+      "description": "Spatial stream network modeling to make spatial predictions of water quality throughout a watershed's stream network.  This uses the R SSN package.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/SSNM-CIMEK.git",
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "spatial",
+        "stream",
+        "model"
+      ],
       "contact": {
-        "name": "Michael Hessling",
-        "email": "Hessling.Michael@epa.gov",
-        "phone": "(202) 566-0419"
+        "name": "Michael McManus",
+        "email": "McManus.Michael@epa.gov",
+        "phone": "(513) 569-7994"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "OW",
+      "name": "Javascript Code for ARCS APEX tool",
+      "description": "Javascript code ARCS APEX tool",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "",
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "arcs",
+        "apex",
+        "tool"
+      ],
+      "contact": {
+        "name": "Harold Valle",
+        "email": "Valle.Harold@epa.gov",
+        "phone": "(202) 564-6593"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
       }
     },
     {
       "organization": "USEPA",
       "name": "Bioinformatics Module Development",
       "description": "This will house modules built in Ruby, Python, R, and SAS for internal EPA bioinformatics applications. As modules mature and are published, they will be made available to the open source communities supporting those efforts. No stand alone programs will be created, knowledge of the individual development platforms will be needed to use the code. The project is being developed in GitHub.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/CAT.git",
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "module"
+      ],
       "contact": {
         "name": "Stephen Edwards",
         "email": "Edwards.Stephen@epa.gov",
         "phone": "(919) 541-0514"
-      }
-    },
-    {
-      "organization": "OEI",
-      "name": "NET-DfE Data Sample Envirofacts API",
-      "description": "This API data sample will provide the steps to create a simple .Net Web application that can display EPA Design for the Environment (DfE) Data. The Envirofacts DfE data contains products EPA labeled environmentally friendly, so that consumers can easily choose ones that are safer for people and the environment.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Andrew Yuen",
-        "email": "Yuen.Andrew@epa.gov",
-        "phone": "(703) 305-7191"
-      }
-    },
-    {
-      "organization": "OEI",
-      "name": "FRS getfacilities samples",
-      "description": "This repository contains sample HTML/JavaScript code to demonstrate the use of the EPA Facility Registry Service (FRS) GetFacilities REST API. The GetFacilities REST API can be used for a number of different types of applications, whether performing a radial search for EPA regulated facilities, or querying for facility information based on name and location, spatial query by radial search, or other types of scenarios. These have initially been developed to support the 2014 Exchange Network Conference, as simple code samples developed in a few hours and a few dozen lines of JavaScript. An additional resource sheet for the 2014 Exchange Network conference was developed and a MarkDown version is available here: https://github.com/USEPA/FRS-getfacilities-samples/blob/master/EN2014_Resources.md",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "David Smith",
-        "email": "Smith.David@epa.gov",
-        "phone": "(703) 347-8653"
-      }
-    },
-    {
-      "organization": "OEI",
-      "name": "Xcode RadNet Sample Envirofacts API",
-      "description": "This sample will provide the steps to create a simple iOS application that can consume Radiation (RadNet) Data. The Envirofacts RadNet database contains sample results for a variety of radionuclides and radiation types from 200 monitoring stations across all 50 states and the American Territories.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Andrew Yuen",
-        "email": "Yuen.Andrew@epa.gov",
-        "phone": "(703) 305-7191"
-      }
-    },
-    {
-      "organization": "OEI",
-      "name": "ANDROID Multisystem Data Sample Envirofacts API",
-      "description": "This API data sample will provide the steps to create a simple Android application that can consume EPA Envirofacts Multisystem Data. The Envirofacts Multisystem data is comprised of multiple environmental databases for facility information, including toxic chemical releases, water discharge permit compliance, hazardous waste handling processes, Superfund status, and air emission estimates.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Andrew Yuen",
-        "email": "Yuen.Andrew@epa.gov",
-        "phone": "(703) 305-7191"
-      }
-    },
-    {
-      "organization": "ORD",
-      "name": "ORD@workphase2",
-      "description": "Drupal install profile for ORD@work  A functional and complete installation profile will installed  to meet the  needs of most ORD laboratory sites this will include using Organic Groups to provide private content management and allow ad-hoc groups to be created and self-managed, whether it applied to divisions, labs, or specific topics.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": null,
-        "email": null,
-        "phone": null
-      }
-    },
-    {
-      "organization": "ORD",
-      "name": "elevatr",
-      "description": "An R package for accessing elevation data from various sources.\r\nThe elevatr package currently provides access to elevation data from from Mapzen (Mapzen Tile Service for raster digital elevation models. For point elevation data, either the Mapzen Elevation Service or the USGS Elevation Point Query Service) may be used. Additional elevation data sources may be added.",
-      "license": null,
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": null,
-      "contact": {
-        "name": "Jeff Hollister",
-        "email": "Hollister.Jeff@epa.gov",
-        "phone": "(401) 782-9655"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
       }
     },
     {
       "organization": "USEPA",
       "name": "ArcGIS API for JavaScript",
       "description": "Learn More The ArcGIS API for JavaScript (JavaScript API) is a browser based API for developing high performance, easy to use mapping applications. The API allows you to easily embed maps in your Web pages. The JavaScript API is hosted by ESRI on ArcGIS Online and is available for free use, subject to the terms and conditions.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": null,
-        "email": null,
-        "phone": null
-      }
-    },
-    {
-      "organization": "IESD",
-      "name": "Input-Output Model Builder",
-      "description": "iomb is an open source Python library for creating environmentally extended input-output models (EEIO models) from CSV files in a simple data format. It includes functions to calculate different result types (e.g. life cycle assessment results, direct and upstream contributions, etc.) from such models and convert them into JSON-LD data packages that can be imported into openLCA.",
-      "license": null,
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": null,
-      "contact": {
-        "name": "Michael Srocka",
-        "email": "srocka@greendelta.com",
-        "phone": "+49 30 4849 6030"
-      }
-    },
-    {
-      "organization": "USEPA",
-      "name": "Term Lookup Tooltip Example Code",
-      "description": "Example code for how terms should be displayed when using ther term lookup service if displaying the definitions in a tooltip.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": null,
-        "email": null,
-        "phone": null
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "",
+      "languages": [
+        "JavaScript"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "ArcGIS",
+        "api"
+      ],
+      "contact": {},
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
       }
     },
     {
       "organization": "ORD",
-      "name": "Water Network Tool for Resilience",
-      "description": "WNTR is a python package designed to simulate and analyze resilience of water distribution networks. The software includes capability to:\r\n- Generate water network models\r\n- Modify network structure and operations\r\n- Add disruptive events including pipe leaks\r\n- Add response/repair strategies\r\n- Simulate pressure driven demand and demand driven hydraulics\r\n- Simulate water quality\r\n- Evaluate resilience\r\n- Visualize results",
-      "license": null,
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": null,
+      "name": "BenMAP-CE",
+      "description": "BenMAP-CE",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "map"
+      ],
       "contact": {
-        "name": "Regan Murray",
-        "email": "Murray.Regan@epa.gov",
-        "phone": "(513) 569-7031"
+        "name": "Julia Ortiz",
+        "email": "Ortiz.Julia@epa.gov",
+        "phone": "(202) 564-1931"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "EPA-Metadata-Editor-3",
+      "description": "EPA-Metadata-Editor-3",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "metadata",
+        "editor"
+      ],
+      "contact": {
+        "name": "Julia Ortiz",
+        "email": "Ortiz.Julia@epa.gov",
+        "phone": "(202) 564-1931"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "CompTox-Virtual-Tissues-livertox-crt",
+      "description": "This repository contains supporting data, code and analysis for our recent manuscript on predicting rodent hepatotoxicity using chemical structure and bioactivity data (J. Liu, K. Mansouri, R. S. Judson, M. T. Martin, H. Hong, M. Chen, X. Xu, R. S. Thomas, and I. Shah, �??Predicting hepatotoxicity using ToxCast in vitro bioactivity and chemical structure,�?? Chem. Res. Toxicol., vol. 28, no. 4, pp. 738�??751, Apr. 2015). We implemented the machine learning approach described in this manuscript using Python and by relying extensively on the scikit-learn package. The analysis was conducted in an ipython notebook (now called jupyter).",
+      "usageType": "openSource",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [
+        "Python"
+      ],
+      "laborHours": 0,
+      "tags": [],
+      "contact": {
+        "name": "Imran Shah",
+        "email": "Shah.Imran@epa.gov",
+        "phone": "(919) 541-1391"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "usepa-harmonization",
+      "description": "Codebase for the LCA Harmonization Tool ( a RCP/RAP Java application)\r\n\r\nThis repo contains the latest stable version of the EPA / USDA Life Cycle Assessment (LCA) Harmonization Tool (HT). This tool is in beta state. Primary authors are Tom Transue and Tommy Cathey, Lockheed Martin contractors supporting US EPA efforts. The vision and technical direction were provided by Wesley Ingwersen and others in the US EPA Life Cycle Assessment Center for Excellence.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [
+        "Java"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "harmonization",
+        "tool"
+      ],
+      "contact": {
+        "name": "Wesley Ingwersen",
+        "email": "Ingwersen.Wesley@epa.gov",
+        "phone": "(513) 569-7602"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "CompTox-ToxCast-hts-db",
+      "description": "The hts-db is a simple but powerful system for storing and analyzing chemical-bioactivity assay data. The backend is a mongodb NoSQL database with a python mongoengine object-oriented interface. All data analysis and visualization is handled in python using Pandas, numpy, scipy and matplotlib.",
+      "usageType": "openSource",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [
+        "Python"
+      ],
+      "laborHours": 0,
+      "tags": [],
+      "contact": {
+        "name": "Imran Shah",
+        "email": "Shah.Imran@epa.gov",
+        "phone": "(919) 541-1391"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "EPA-Metadata-Editor-4",
+      "description": "EPA-Metadata-Editor-4",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "metadata",
+        "editor"
+      ],
+      "contact": {
+        "name": "Julia Ortiz",
+        "email": "Ortiz.Julia@epa.gov",
+        "phone": "(202) 564-1931"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "EPA-Metadata-Editor-5",
+      "description": "EPA-Metadata-Editor-5",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "metadata",
+        "editor"
+      ],
+      "contact": {
+        "name": "Julia Ortiz",
+        "email": "Ortiz.Julia@epa.gov",
+        "phone": "(202) 564-1931"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "USEPA",
+      "name": "Computational Sustainability",
+      "description": "This is code written primarily in Java as part of the Computational Sustainability Pathfinder Innovation Project. Once completed, it should contain all necessary source code for a stand alone Java application for evaluting sustainability scenarios using models build in the VennSim modeling platform. This project is being developed in GitHub.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/Computational-Sustainability.git",
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "sustainable"
+      ],
+      "contact": {
+        "name": "Stephen Edwards",
+        "email": "Edwards.Stephen@epa.gov",
+        "phone": "(919) 541-0514"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
       }
     },
     {
       "organization": "USEPA",
       "name": "GREENSCOPE Tool",
       "description": "The GREENSCOPE Microsoft Excel and JAVA version   software tools allow for quantifying process sustainability with 139 indicators in four main areas (or bases): Efficiency (26 indicators), Energy (14 indicators), Economics (33 indicators), and Environment (66 indicators). These sets of indicators are capable of transmitting and translating process performance, feedstock, utility, equipment, and output information into a quantifiable sustainability measurement scale. In addition, each indicator is mathematically defined, thus emphasizing realistic usage, and connecting the mathematical formulas for the indicators with their respective data requirements. \r\n \r\nGREENSCOPE can be applied to an entire process, to a piece of equipment or process unit, or at the investigatory bench scale. This versatility allows for a direct comparison between several processes manufacturing the same product but employing different raw materials, reaction processes, separation technologies, or producing different byproducts. In addition, the designer or the researcher can implement this methodology to evaluate the sustainability performance either before or after making process modifications. This resulting sustainability assessment describes quantifiably how well the system under consideration makes use of mass and energy inputs to manufacture a valuable product, at the same time meeting social and environmental needs, all the while maximizing its economic benefit.\r\n  \r\nCurrently, the GREENSCOPE Microsoft Excel version software tool is under clearance in STICS. The JAVA version has been QA approved. A new standalone and web-based version is under development in GitHub (https://github.com/USEPA/greenscope).",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "tool"
+      ],
       "contact": {
         "name": "Gerardo Ruiz-Mercado",
         "email": "Ruiz-Mercado.Gerardo@epa.gov",
         "phone": "(513) 569-7030"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
       }
     },
     {
       "organization": "ORD",
-      "name": "GED Ecosystem Services Project",
-      "description": "A place to work on SIMILE models",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
+      "name": "StreamCat",
+      "description": "The StreamCat Dataset (http://www2.epa.gov/national-aquatic-resource-surveys/streamcat) provides summaries of natural and anthropogenic landscape features for approximately 2.65 million streams, and their associated catchments, within the conterminous USA. This repo contains code used in StreamCat to process a suite of landscape rasters to watersheds for streams and their associated catchments (local reach contributing area) within the conterminous USA using the NHDPlus Version 2 as the geospatial framework.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/StreamCat",
+      "languages": [
+        "Python"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "dataset",
+        "stream"
+      ],
       "contact": {
-        "name": "Marc Russell",
-        "email": "Russell.Marc@epa.gov",
-        "phone": "(850) 934-9344"
-      }
-    },
-    {
-      "organization": "AED",
-      "name": "microcystinchla",
-      "description": "GitHub Repository: Reproducible source (R package) for manuscript entitled \"Associations between chlorophyll *a* and various microcystin-LR health advisory Concentrations\"",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Jeff Hollister",
-        "email": "Hollister.Jeff@epa.gov",
-        "phone": "(401) 782-9655"
-      }
-    },
-    {
-      "organization": "HPAG",
-      "name": "BMDS Model Averaging",
-      "description": "This is the source code for BMDS model averaging methods, which are currently being developed and evaluated. Currently this is a private repository; only EPA staff, contractors and external collaborators who are project participants have access to the code.",
-      "license": null,
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": null,
-      "contact": {
-        "name": "Jeff Gift",
-        "email": "Gift.Jeff@epa.gov",
-        "phone": "(919) 541-4828"
-      }
-    },
-    {
-      "organization": "EPA",
-      "name": "IRIS-Trimethylbenzene-PBPK-",
-      "description": "This project will be developed and stored in a GitHub repository. This will include the revisions after peer review to the PBPK model for the trimethylbenzene IRIS assessment.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Lico Galindo",
-        "email": "galindo.lico@epa.gov",
-        "phone": "(202) 566-1252"
-      }
-    },
-    {
-      "organization": "USEPA / Region 4",
-      "name": "LOADING SIMULATION PROGRAM C",
-      "description": "LSPC is the Loading Simulation Program in C++, a watershed modeling system that includes streamlined Hydrologic Simulation Program Fortran (HSPF) algorithms for simulating hydrology, sediment, and general water quality",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Donnie Williams",
-        "email": "Williams.Donnie@epa.gov",
-        "phone": "(404) 562-8046"
-      }
-    },
-    {
-      "organization": "ORD",
-      "name": "intro gis with r",
-      "description": "We will be using R and RStudio for this workshop. This must be installed prior to March 2. Simply email EZTech and request that R and RStudio be installed on your machine. They will push that out usually in a day or so.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Jeff Hollister",
-        "email": "Hollister.Jeff@epa.gov",
-        "phone": "(401) 782-9655"
-      }
-    },
-    {
-      "organization": "USEPA",
-      "name": "ANDROID Data Sample for Envirofacts API, Using Multisystem Data",
-      "description": "This API data sample will provide the steps to create a simple Android application that can consume EPA Envirofacts Multisystem Data. The Envirofacts Multisystem data is comprised of multiple environmental databases for facility information, including toxic chemical releases, water discharge permit compliance, hazardous waste handling processes, Superfund status, and air emission estimates.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Andrew Yuen",
-        "email": "Yuen.Andrew@epa.gov",
-        "phone": "(703) 305-7191"
-      }
-    },
-    {
-      "organization": "OEI",
-      "name": "AddDemographicLayers widget js",
-      "description": "This is a widget developed for Esri Web AppBuilder (WAB) to map the Census demographic layers. It allows mapping a Census demographic layer in the same way as used in EPAs EJSCREEN application.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Vincent Zhuang",
-        "email": "zhuangv@saic.com",
-        "phone": "(703) 676-6699"
-      }
-    },
-    {
-      "organization": "USEPA",
-      "name": "Phytoplankton data analysis project",
-      "description": "R code for the analysis of water resources monioring data.  Code development is done on GitHub (https://github.com/USEPA/Phytoplankton-Data-Analysis)",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Jake Beaulieu",
-        "email": "Beaulieu.Jake@epa.gov",
-        "phone": "(513) 569-7842"
-      }
-    },
-    {
-      "organization": "OEI",
-      "name": "SearchEFbyCity widget js",
-      "description": "Searching EPA's Envirofacts warehouse by city",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Vincent Zhuang",
-        "email": "zhuangv@saic.com",
-        "phone": "(703) 676-6699"
-      }
-    },
-    {
-      "organization": "OEI",
-      "name": "SearhEFbyCounty widget js",
-      "description": "Searching EPA's Envirofacts warehouse by county",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Vincent Zhuang",
-        "email": "zhuangv@saic.com",
-        "phone": "(703) 676-6699"
-      }
-    },
-    {
-      "organization": "OEI",
-      "name": "SearchEFbyState widget js",
-      "description": "Searching EPA's Envirofacts warehouse by state",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Vincent Zhuang",
-        "email": "zhuangv@saic.com",
-        "phone": "(703) 676-6699"
-      }
-    },
-    {
-      "organization": "OEI",
-      "name": "SearchEFbyTribe widget js",
-      "description": "Searching EPA's Envirofacts warehouse by Tribe.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Vincent Zhuang",
-        "email": "zhuangv@saic.com",
-        "phone": "(703) 676-6699"
-      }
-    },
-    {
-      "organization": "NRMRL",
-      "name": "GMAP Data Analysis GitHub repo",
-      "description": "This repository contains R and python code used to analyze data collected through the ORD GMAP program. This code is being stored in a GitHub repository iin order to make the research reproducible.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Halley Brantley",
-        "email": "Brantley.Halley@epa.gov",
-        "phone": "(919) 541-5662"
-      }
-    },
-    {
-      "organization": "OEI",
-      "name": "SearchEFbyZIP widget js",
-      "description": "Searching EPA's Envirofacts warehouse by ZIP",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Vincent Zhuang",
-        "email": "zhuangv@saic.com",
-        "phone": "(703) 676-6699"
+        "name": "Rick Debbout",
+        "email": "Debbout.Rick@epa.gov",
+        "phone": "(541) 754-0000"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
       }
     },
     {
       "organization": "USEPA",
       "name": "Equipment Tracking Module (ETM)",
       "description": "The Equipment Tracking Module (ETM) application allows users to track equioment across all EPA Emergency Response warehouses.  The application shows the status of each piece of equipment and tracks its maintenance and usage history.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "",
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "equipment",
+        "tracking"
+      ],
+      "contact": {},
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "OEI",
+      "name": "E-Enterprise Portal",
+      "description": "E-Enterprise is a transformative approach to make environmental information and data more accessible, efficient, and evidence-based through advances in monitoring, reporting, and information technology. The Portal is designed to be a modern and efficient interface for environmental transactions. This includes easier access to information and making transactions with environmental agencies as efficient and effective as possible.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/E-Enterprise-Portal",
+      "languages": [
+        "php"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "portal"
+      ],
       "contact": {
-        "name": null,
-        "email": null,
-        "phone": null
+        "name": "Christian Manalansan",
+        "email": "christian.manalansan@cgifederal.com",
+        "phone": "(703) 227-6100"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
       }
     },
     {
       "organization": "USEPA",
-      "name": "VIVO Github Repository",
-      "description": "VIVO is an open source semantic web application that enables the discovery of research and scholarship across disciplinary and geographic boundaries. ORD is currently developing a VIVO instance to assist with expertise location within ORD.  This github repository will be used to store ORD VIVO code as well as a means to share it amongst the ORD VIVO team and with other ORD VIVO instance project teams and developers (i.e. Cornell, UFL, USDA, etc.,)",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
+      "name": "ANDROID Data Sample for Envirofacts API, Using Multisystem Data",
+      "description": "This API data sample will provide the steps to create a simple Android application that can consume EPA Envirofacts Multisystem Data. The Envirofacts Multisystem data is comprised of multiple environmental databases for facility information, including toxic chemical releases, water discharge permit compliance, hazardous waste handling processes, Superfund status, and air emission estimates.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/ANDROID-Multisystem-Data-Sample-Envirofacts-API",
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "android",
+        "api"
+      ],
       "contact": {
-        "name": null,
-        "email": null,
-        "phone": null
-      }
-    },
-    {
-      "organization": "USEPA",
-      "name": "Software Design, Development and Implementation QA Tracking Database Model",
-      "description": "The TEST/EXPLORATORY software will be developed to examine feasibility to replace the current Lotus Notes based application 'LIVE QLOG NRMRL' currently used by the NRMRL Division QA Management staff. The new software tool shall be designed to import current QA/QC records from Lotus Notes Database into the most current PostgreSQL database version. The final tool will be delivered via web-based tools using Django, Python, and current web based standards accessible by NRMRL QA staff through a secured login SSL tool. http://qatrack.net/",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
-      "contact": {
-        "name": "Daniel Young",
-        "email": "Young.Daniel@epa.gov",
-        "phone": "(513) 569-7451"
-      }
-    },
-    {
-      "organization": "ORD",
-      "name": "Piscine Stream Community Estimation System",
-      "description": "The Piscine Stream Community Estimation System (PiSCES) provides users with a reasonable fish community for any stream reach in the conterminous United States. PiSCES utilizes distributional information obtained from Nature Serve, the USGS, and the Peterson Field Guide to Freshwater Fishes of North America for over 1,000 native and non-native freshwater fish species. In addition to these geographic distributions, users of PiSCES can filter potential fish assemblages based on species rarity, stream size preferences (as measured by mean stream width), and genera-specific occurrence envelopes for a variety of physicochemical stream properties (pH, conductivity, turbidity, dissolved oxygen, watershed area, mean width, depth, and slope). For a user-specified total number of fishes in the stream reach, PiSCES will create an abundance distribution for the posited community using a size spectrum approach that relates abundance to maximum body size. The PiSCES interface allows users to readily access its database to see ancillary characteristics of each species, such as habitat preferences (e.g., if the species prefers riffles, runs, or pools, sand or gravel substrate, etc.) and HUC-based distribution maps. PiSCES has been used in conjunction with an integrated environmental modeling system to simulate dynamics of stream fish communities in the Coal River, WV watershed.",
-      "license": null,
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": null,
-      "contact": {
-        "name": "Amber Ignatius",
-        "email": "Ignatius.Amber@epa.gov",
-        "phone": "(706) 355-0000"
-      }
-    },
-    {
-      "organization": "ORD",
-      "name": "Rapid-Benefit-Indicators-Tools",
-      "description": "Assessing the Benefits of Wetland Restoration - A Rapid Benefits Indicators Approach for Decision Markers",
-      "license": null,
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": null,
-      "contact": {
-        "name": "Justin Bousquin",
-        "email": "Bousquin.Justin@epa.gov",
-        "phone": "(850) 934-2466"
+        "name": "Andrew Yuen",
+        "email": "Yuen.Andrew@epa.gov",
+        "phone": "(703) 305-7191"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
       }
     },
     {
       "organization": "IESD",
-      "name": "EDG Clip-N-Ship flex",
-      "description": "This is the source code for the EPA's Enterprise Dataset Gateway Clip and Ship Application: https://edg.epa.gov/clipship/",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
+      "name": "Input-Output Model Builder",
+      "description": "iomb is an open source Python library for creating environmentally extended input-output models (EEIO models) from CSV files in a simple data format. It includes functions to calculate different result types (e.g. life cycle assessment results, direct and upstream contributions, etc.) from such models and convert them into JSON-LD data packages that can be imported into openLCA.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [
+        "Python"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "library",
+        "model",
+        "builder"
+      ],
       "contact": {
-        "name": "Torrin Hultgren",
-        "email": "Hultgren.Torrin@epa.gov",
-        "phone": "(703) 922-9090"
+        "name": "Michael Srocka",
+        "email": "srocka@greendelta.com",
+        "phone": "+49 30 4849 6030"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
       }
     },
     {
       "organization": "ORD",
-      "name": "US EPA Region 7 Introduction to R Workshop",
-      "description": "This repository contains materials for an R workshop for USEPA Region 7 New England Regional Staff. The workshop will provide attendees with an introduction to the R Language for statistical computing.",
-      "license": null,
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": null,
+      "name": "elevatr",
+      "description": "An R package for accessing elevation data from various sources.\r\nThe elevatr package currently provides access to elevation data from from Mapzen (Mapzen Tile Service for raster digital elevation models. For point elevation data, either the Mapzen Elevation Service or the USGS Elevation Point Query Service) may be used. Additional elevation data sources may be added.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "elevation"
+      ],
       "contact": {
         "name": "Jeff Hollister",
         "email": "Hollister.Jeff@epa.gov",
         "phone": "(401) 782-9655"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "USEPA",
+      "name": "QA-SDMP-Project",
+      "description": "QA Tracking and Scientific Data Management Planning System. Code management @ GitHub",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/QA-SDMP-Project.git",
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "tracking",
+        "quality",
+        "data"
+      ],
+      "contact": {
+        "name": "David Lyons",
+        "email": "Lyons.David@epa.gov",
+        "phone": "(919) 541-4871"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "USEPA / Region 1",
+      "name": "aed r",
+      "description": "This repository contains the materials for the Atlantic Ecology Division's R (and friends) data science study group. The purpose of this group is to work together to learn new skills, languages, data science practices, etc. as they relate to our research in environmental science. The primary focus will likely be R, but the topics we cover will by no means be limited to that and other languages and tools are very much encouraged.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/aed_r",
+      "languages": [
+        "R"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "atlantic",
+        "ecology"
+      ],
+      "contact": {
+        "name": "Jeff Hollister",
+        "email": "Hollister.Jeff@epa.gov",
+        "phone": "(401) 782-9655"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
       }
     },
     {
       "organization": "ORD",
-      "name": "AddLayerFromWeb widget js",
-      "description": "Allows user to add web-service based map layer to the map. Supported types include ArcGIS Server Web Service, OGC Web Service (WMS), KML/KMZ, and GeoRSS.",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
+      "name": "Water Network Tool for Resilience",
+      "description": "WNTR is a python package designed to simulate and analyze resilience of water distribution networks. The software includes capability to:\r\n- Generate water network models\r\n- Modify network structure and operations\r\n- Add disruptive events including pipe leaks\r\n- Add response/repair strategies\r\n- Simulate pressure driven demand and demand driven hydraulics\r\n- Simulate water quality\r\n- Evaluate resilience\r\n- Visualize results",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "simulation",
+        "analysis",
+        "model",
+        "tool"
+      ],
       "contact": {
-        "name": "Vincent Zhuang",
-        "email": "zhuangv@saic.com",
-        "phone": "(703) 676-6699"
+        "name": "Regan Murray",
+        "email": "Murray.Regan@epa.gov",
+        "phone": "(513) 569-7031"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "HEDS",
+      "description": "Human Exposure Data from historic studies dating 1994-2005.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "human",
+        "exposure"
+      ],
+      "contact": {
+        "name": "Carry Croghan",
+        "email": "Croghan.Carry@epa.gov",
+        "phone": "(919) 541-3184"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "Open Modelling Environment",
+      "description": "The Open Modeling Environment (OME) is a cross-platform, open source System Dynamics modeling engine that emphasizes modularity and explicit spatial representation as core design features.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/OME",
+      "languages": [
+        "C++"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "model",
+        "open"
+      ],
+      "contact": {
+        "name": "Vladimir Predovic",
+        "email": "Predovic.Vladimir@epa.gov",
+        "phone": "(541) 754-0000"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "IESD",
+      "name": "TCO_Megahack_eRules_Search_Engine_Frontend",
+      "description": "Search engine front end.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [
+        "JavaScript, HTML, CSS"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "search",
+        "engine"
+      ],
+      "contact": {
+        "name": "Lico Galindo",
+        "email": "galindo.lico@epa.gov",
+        "phone": "(202) 566-1252"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "Public Web AppBuilder",
+      "description": "A full guidance document describing the Web Application Builder Oversight Team (WABOT), GitHub roles and responsibilities, the collaborator account request process, and workflows for the private version of this repository is available on the EPA SharePoint site here: https://usepa.sharepoint.com/sites/oei/GISWORKGROUP/Developer (EPA SharePoint login is required.)",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/Public_Web_AppBuilder",
+      "languages": [
+        "Javascript"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "guidance",
+        "web",
+        "application"
+      ],
+      "contact": {
+        "name": "David Yarnell",
+        "email": "Yarnell.David@epa.gov",
+        "phone": "(208) 610-9981"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "GED Ecosystem Services Project",
+      "description": "A place to work on SIMILE models",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "ecosystem",
+        "SIMILE"
+      ],
+      "contact": {
+        "name": "Marc Russell",
+        "email": "Russell.Marc@epa.gov",
+        "phone": "(850) 934-9344"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "SWMM-EPANET User Interface",
+      "description": "This is the official SWMM source code repository maintained by US EPA ORD, NRMRL, Water Supply and Water Resources Division located in Cincinnati, Ohio. SWMM is a dynamic hydrology-hydraulic water quality simulation model. It is used for single event or long-term (continuous) simulation of runoff quantity and quality from primarily urban areas. SWMM source code is written in the C Programming Language and released in the Public Domain.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/SWMM-EPANET_User_Interface",
+      "languages": [
+        "HTML"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "interface"
+      ],
+      "contact": {
+        "name": "Tong Zhai",
+        "email": " tong.zhai@respec.com"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "OLEM",
+      "name": "CIMC Services Monitoring Script",
+      "description": "The Cleanups in My Community (CIMC) team has developed a services monitor script for the CIMC application.  This is a Python script that reads a CSV list of services required by the CIMC application.  For each service URL in the CSV, the script cycles through each data layer, and queries the map service to test that results are being returned.  If no results are returned, the script will email a list of services that did not respond to the query.  \r\n\r\nThe main requirements for this script are Python and an SMTP mail server connection.  Ideally the script would run every 2-3 hours to check the services availability.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "",
+      "languages": [
+        "Python"
+      ],
+      "laborHours": 0,
+      "tags": [],
+      "contact": {
+        "name": "Lisa Jenkins",
+        "email": "Jenkins.Lisa@epa.gov",
+        "phone": "(202) 566-1941"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "USEPA / Region 1",
+      "name": "quickmapr",
+      "description": "There are many packages that already exist or are in active development that support the visualization of spatial data in R. However, there seems to be a gap for those that need to quickly view, compare, and explore the results of a given spatial analysis. The current thinking behind quickmapr is to allow for quick visualization of sp and raster objects.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/quickmapr",
+      "languages": [
+        "R"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "map",
+        "package"
+      ],
+      "contact": {
+        "name": "Jeff Hollister",
+        "email": "Hollister.Jeff@epa.gov",
+        "phone": "(401) 782-9655"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "AED",
+      "name": "microcystinchla",
+      "description": "GitHub Repository: Reproducible source (R package) for manuscript entitled \"Associations between chlorophyll *a* and various microcystin-LR health advisory Concentrations\"",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "microcystinchla"
+      ],
+      "contact": {
+        "name": "Jeff Hollister",
+        "email": "Hollister.Jeff@epa.gov",
+        "phone": "(401) 782-9655"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "gis r demo",
+      "description": "The purpose of this lightning demo is to provide a small taste of GIS capabilities that are available in R. I will run through the set-up required to get going, show examples of reading in and exploring both raster and vector, show some visualization options, and do some simple analysis. Additionally, this demo assumes a minimum level of familiarity with R. If you are new to R and would like to learn more, a fun place to start is rforcats.net.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/gis_r_demo",
+      "languages": [
+        "HTML"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "gis",
+        "demo"
+      ],
+      "contact": {
+        "name": "Jeff Hollister",
+        "email": "Hollister.Jeff@epa.gov",
+        "phone": "(401) 782-9655"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "modelling_hab_indices",
+      "description": "Technical documentation of research and code used for models of HAB related indices stored in a github repository (https://github.com/USEPA/modelling_hab_indices",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "hab",
+        "indices",
+        "model"
+      ],
+      "contact": {
+        "name": "Jeff Hollister",
+        "email": "Hollister.Jeff@epa.gov",
+        "phone": "(401) 782-9655"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "OEI",
+      "name": "elpaso widget js",
+      "description": "Viewing images for a given location from multiple sources. Simply click on the map, and you can have four popup windows to view images from different sources. This widget works with the release version of Esri Web AppBuilder.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/elpaso-widget-js",
+      "languages": [
+        "Javascript"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "widget"
+      ],
+      "contact": {
+        "name": "Jessica Orquina",
+        "email": "Orquina.Jessica@epa.gov",
+        "phone": "(202) 564-0446"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "introR",
+      "description": "Introductory R Training materials for workshop given Jan 14-15,2015 at USEPA Gulf Ecology Division and Jan 7-8, 2015 and Jan 22-23, 2105 at USEPA Atlantic Ecology Division.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/introR",
+      "languages": [
+        "R"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "intro",
+        "trainining"
+      ],
+      "contact": {
+        "name": "Jeff Hollister",
+        "email": "Hollister.Jeff@epa.gov",
+        "phone": "(401) 782-9655"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "USEPA",
+      "name": "PHP Data Sample for Envirofacts API, Using Safe Drinking Water Information Systems (SDIWS) Data",
+      "description": "This API data sample will provide the steps to create a simple PHP Web application that can consume Safe Drinking Water Information System (SDWIS) data from EPA's Envirofacts database.   \r\n  \r\nThe Envirofacts SDWIS database contains information about public water systems and their violations of EPA's drinking water regulations, as reported to EPA by the states.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/PHP-SDWIS-Data-Sample-Envirofacts-API",
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "data",
+        "sample",
+        "api"
+      ],
+      "contact": {},
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "USEEIO API",
+      "description": "This projects contains an implementation of the USEEIO API in Go. It is the same RESTful API as provided by the iomb.webapi package. However, the implementation in Go can be compiled to a single binary file which is a full HTTP server that provides the data from one or more input-output models and optionally static files. All data that is is stored in files in a specific folder structure (see also the documentation of the file format).",
+      "usageType": "openSource",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "USEEIO API",
+      "languages": [],
+      "laborHours": 0,
+      "tags": [],
+      "contact": {
+        "name": "Michael Srocka",
+        "email": "srocka@greendelta.com",
+        "phone": "+49 30 4849 6030"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "USEPA / Region 4",
+      "name": "LOADING SIMULATION PROGRAM C",
+      "description": "LSPC is the Loading Simulation Program in C++, a watershed modeling system that includes streamlined Hydrologic Simulation Program Fortran (HSPF) algorithms for simulating hydrology, sediment, and general water quality",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "",
+      "languages": [
+        "C++"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "simulate",
+        "hydrology",
+        "sample"
+      ],
+      "contact": {
+        "name": "Donnie Williams",
+        "email": "Williams.Donnie@epa.gov",
+        "phone": "(404) 562-8046"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "Goatscape",
+      "description": "This repository hosts the development version of the  goatscape  R package. The purpose of  goatscape  is to provide tools to summarize various data sets across an input landscape polygon and provide it in a tidyverse friendly format. This is a common data aggregation step for many ecological studies, yet standarized tools do not exist in R.",
+      "usageType": "openSource",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "Goatscape",
+      "languages": [
+        "R"
+      ],
+      "laborHours": 0,
+      "tags": [],
+      "contact": {
+        "name": "Jeff Hollister",
+        "email": "Hollister.Jeff@epa.gov",
+        "phone": "(401) 782-9655"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
       }
     },
     {
       "organization": "OAR",
       "name": "e-Manifest",
       "description": "The overarching purpose of e-Manifest is to establish a national information technology system that will enable the Agency and the hazardous waste programs industry and state stakeholders to transition the manifest system from one that is paper-intensive and burdensome to a system that is much more efficient, because it will rely on information technology to track hazardous waste shipments",
-      "license": null,
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": null,
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "emanifest"
+      ],
       "contact": {
         "name": "Scott Christian",
         "email": "Christian.Scott@epa.gov",
         "phone": "(703) 308-0023"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
       }
     },
     {
-      "organization": "OEI",
-      "name": "dev_5_watershed_directory",
-      "description": "dev_5_watershed_directory",
-      "license": null,
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": null,
+      "organization": "ORD",
+      "name": "honeybee",
+      "description": "Trello Board to track progress https://trello.com/b/4BS17BEn/honey-i-m-home-mobile-app",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/honeybee",
+      "languages": [
+        "Javascript"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "track",
+        "honeybee"
+      ],
       "contact": {
         "name": "Andrew Yuen",
         "email": "Yuen.Andrew@epa.gov",
         "phone": "(703) 305-7191"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
       }
     },
     {
-      "organization": "OEI",
-      "name": "dev_2_farm_workers",
-      "description": "dev_2_farm_workers",
-      "license": null,
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": null,
+      "organization": "ORD",
+      "name": "US EPA Region 7 Introduction to R Workshop",
+      "description": "This repository contains materials for an R workshop for USEPA Region 7 New England Regional Staff. The workshop will provide attendees with an introduction to the R Language for statistical computing.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [
+        "R"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "intro",
+        "workshop",
+        "r"
+      ],
       "contact": {
-        "name": "Andrew Yuen",
-        "email": "Yuen.Andrew@epa.gov",
-        "phone": "(703) 305-7191"
+        "name": "Jeff Hollister",
+        "email": "Hollister.Jeff@epa.gov",
+        "phone": "(401) 782-9655"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
       }
     },
     {
-      "organization": "IESD",
-      "name": "dev_4_sustainable_purchasing",
-      "description": "This app is built on an R model which calculates impacts across a number of metrics for various industries. The outputs of the R model are then visualized and analyzed using Qlik Sense, and the application was built using bootstrap.js and Qlik Dev Hub.",
-      "license": null,
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": null,
+      "organization": "ORD",
+      "name": "Rapid-Benefit-Indicators-Tools",
+      "description": "Assessing the Benefits of Wetland Restoration - A Rapid Benefits Indicators Approach for Decision Markers",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [
+        "Excel"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "wetland",
+        "restoration",
+        "tool"
+      ],
       "contact": {
-        "name": "Dena Smith",
-        "email": "Smith.Dena@epa.gov",
-        "phone": "(919) 541-2777"
+        "name": "Justin Bousquin",
+        "email": "Bousquin.Justin@epa.gov",
+        "phone": "(850) 934-2466"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
       }
     },
     {
       "organization": "OW",
-      "name": "CDX to ARCS SQL",
-      "description": "CDX to ARCS SQL code",
-      "license": "N/A",
-      "openSourceProject": 0,
-      "governmentWideReuseProject": null,
-      "tags": null,
+      "name": "Water Quality Data Discovery Tool",
+      "description": "The WQP Data Discovery tool is a desktop application that provides an easy to use interface allowing users to query, summarize, QC and display data from the WQP. The tool uses open source R, a statistical programming language and several add-on packages, to visualize the data selected from the portal and to assist users in selecting data they may need for analysis.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/Water-Quality-Data-Discovery-Tool",
+      "languages": [
+        "CSS"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "water",
+        "quality",
+        "tool"
+      ],
       "contact": {
-        "name": "Harold Valle",
-        "email": "Valle.Harold@epa.gov",
-        "phone": "(202) 564-6593"
+        "name": "Samantha Sifleet",
+        "email": "Sifleet.Samantha@epa.gov",
+        "phone": "(000) 000-0000"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "Piscine Stream Community Estimation System",
+      "description": "The Piscine Stream Community Estimation System (PiSCES) provides users with a reasonable fish community for any stream reach in the conterminous United States. PiSCES utilizes distributional information obtained from Nature Serve, the USGS, and the Peterson Field Guide to Freshwater Fishes of North America for over 1,000 native and non-native freshwater fish species. In addition to these geographic distributions, users of PiSCES can filter potential fish assemblages based on species rarity, stream size preferences (as measured by mean stream width), and genera-specific occurrence envelopes for a variety of physicochemical stream properties (pH, conductivity, turbidity, dissolved oxygen, watershed area, mean width, depth, and slope). For a user-specified total number of fishes in the stream reach, PiSCES will create an abundance distribution for the posited community using a size spectrum approach that relates abundance to maximum body size. The PiSCES interface allows users to readily access its database to see ancillary characteristics of each species, such as habitat preferences (e.g., if the species prefers riffles, runs, or pools, sand or gravel substrate, etc.) and HUC-based distribution maps. PiSCES has been used in conjunction with an integrated environmental modeling system to simulate dynamics of stream fish communities in the Coal River, WV watershed.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "piscine",
+        "stream"
+      ],
+      "contact": {
+        "name": "Amber Ignatius",
+        "email": "Ignatius.Amber@epa.gov",
+        "phone": "(706) 355-0000"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "Global SDG Indicators",
+      "description": "Global SDG Indicators",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/Global-SDG-Indicators",
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "indicators",
+        "global"
+      ],
+      "contact": {
+        "name": "Julia Ortiz",
+        "email": "Ortiz.Julia@epa.gov",
+        "phone": "(202) 564-1931"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
       }
     },
     {
       "organization": "ORD",
       "name": "dev_1_fish_advisories",
       "description": "A simple smartphone app that allows user to view advisories relative to her/his location or by searching by body of water",
-      "license": null,
-      "openSourceProject": 0,
-      "governmentWideReuseProject": 0,
-      "tags": null,
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [
+        "HTML, jquery"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "fish",
+        "advisory"
+      ],
       "contact": {
         "name": "Gregory Sayles",
         "email": "Sayles.Gregory@epa.gov",
         "phone": "(513) 569-7607"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "IESD",
+      "name": "dev_4_sustainable_purchasing",
+      "description": "This app is built on an R model which calculates impacts across a number of metrics for various industries. The outputs of the R model are then visualized and analyzed using Qlik Sense, and the application was built using bootstrap.js and Qlik Dev Hub.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [
+        "R"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "sustainable",
+        "purchase"
+      ],
+      "contact": {
+        "name": "Dena Smith",
+        "email": "Smith.Dena@epa.gov",
+        "phone": "(919) 541-2777"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "R micromap package development",
+      "description": "This repository is for development of the USEPA R micromap package. If you would like to contribute to this repository please follow the guidelines in CONTRIBUTING.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/R-micromap-package-development",
+      "languages": [
+        "R"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "map",
+        "package"
+      ],
+      "contact": {
+        "name": "Marc Weber",
+        "email": "Weber.Marc@epa.gov",
+        "phone": "(541) 754-4469"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "OEI",
+      "name": "dev_2_farm_workers",
+      "description": "dev_2_farm_workers",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [
+        "jquery"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "farm"
+      ],
+      "contact": {
+        "name": "Andrew Yuen",
+        "email": "Yuen.Andrew@epa.gov",
+        "phone": "(703) 305-7191"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "MysticRiverWsdRC2015",
+      "description": "N/A",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/MysticRiverWsdRC2015",
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "mystic",
+        "river"
+      ],
+      "contact": {
+        "name": "Julia Ortiz",
+        "email": "Ortiz.Julia@epa.gov",
+        "phone": "(202) 564-1931"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "OEI",
+      "name": "dev_5_watershed_directory",
+      "description": "dev_5_watershed_directory",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "watershed"
+      ],
+      "contact": {
+        "name": "Andrew Yuen",
+        "email": "Yuen.Andrew@epa.gov",
+        "phone": "(703) 305-7191"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "USEPA / Region 1",
+      "name": "region 1 r",
+      "description": "This repository contains materials for an R workshop for USEPA Region 1 New England Regional Staff.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/region1_r",
+      "languages": [
+        "R"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "workshop"
+      ],
+      "contact": {
+        "name": "Jeff Hollister",
+        "email": "Hollister.Jeff@epa.gov",
+        "phone": "(401) 782-9655"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "ORD Applications Integration and Modernization GitHub repository",
+      "description": "ORD is using this GitHub repository to share code with contractors supporting the OAIM project.  The contractors will also post their code on this repository.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/O-AIM",
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "modernization",
+        "share"
+      ],
+      "contact": {
+        "name": "Ann Vega",
+        "email": "Vega.Ann@epa.gov",
+        "phone": "(513) 569-7635"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "hivescience",
+      "description": "The HiveScience mobile App is designed for citizen scientist beekeepers to collect and share data related to the health of their honey bee colonies. Using this App, beekeepers can easily enter hive health and Varroa mite monitoring data on-site and in real-time. These data will help us better understand factors affecting the health of honey bees and their ability to survive the winter. For more info, check out https://www.epa.gov/citizen-science/hivescience",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [
+        "GPL 3.0"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "hive",
+        "app"
+      ],
+      "contact": {
+        "name": "Feroz Daraseng",
+        "email": "Daraseng.Feroz@epa.gov",
+        "phone": "(703) 347-0623"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "OW",
+      "name": "Create public APEX Page",
+      "description": "Create public APEX page that will take the ID as parameter and a process to look up the the CDX data and token values and pass the user through APEX authentication if token checks out.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "",
+      "languages": [
+        "sql"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "apex"
+      ],
+      "contact": {
+        "name": "Harold Valle",
+        "email": "Valle.Harold@epa.gov",
+        "phone": "(202) 564-6593"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "USEPA",
+      "name": "Coding Advanced EPA Search Pages Sample",
+      "description": "Offers all the options of standard search plus searching for specific fields and applying boolean operators",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "",
+      "languages": [
+        "html"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "search",
+        "sample"
+      ],
+      "contact": {},
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "IESD",
+      "name": "EDG Clip-N-Ship flex",
+      "description": "This is the source code for the EPA's Enterprise Dataset Gateway Clip and Ship Application: https://edg.epa.gov/clipship/",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/EDG-Clip-N-Ship-flex",
+      "languages": [
+        "ActionScript"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "edg",
+        "dataset",
+        "gateway"
+      ],
+      "contact": {
+        "name": "Torrin Hultgren",
+        "email": "Hultgren.Torrin@epa.gov",
+        "phone": "(703) 922-9090"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "AddLayerFromWeb widget js",
+      "description": "Allows user to add web-service based map layer to the map. Supported types include ArcGIS Server Web Service, OGC Web Service (WMS), KML/KMZ, and GeoRSS.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/AddLayerFromWeb-widget-js",
+      "languages": [
+        "Javascript"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "map",
+        "layer",
+        "widget"
+      ],
+      "contact": {
+        "name": "Vincent Zhuang",
+        "email": "zhuangv@saic.com",
+        "phone": "(703) 676-6699"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "USEPA",
+      "name": "Phytoplankton data analysis project",
+      "description": "R code for the analysis of water resources monioring data.  Code development is done on GitHub (https://github.com/USEPA/Phytoplankton-Data-Analysis)",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "water",
+        "analysis",
+        "resources"
+      ],
+      "contact": {
+        "name": "Jake Beaulieu",
+        "email": "Beaulieu.Jake@epa.gov",
+        "phone": "(513) 569-7842"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "OW",
+      "name": "CDX to ARCS SQL",
+      "description": "CDX to ARCS SQL code",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "",
+      "languages": [
+        "sql"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "arcs",
+        "cdx",
+        "sql"
+      ],
+      "contact": {
+        "name": "Harold Valle",
+        "email": "Valle.Harold@epa.gov",
+        "phone": "(202) 564-6593"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "GIFMod",
+      "description": "GIFMod",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [
+        "C++"
+      ],
+      "laborHours": 0,
+      "tags": [],
+      "contact": {
+        "name": "Julia Ortiz",
+        "email": "Ortiz.Julia@epa.gov",
+        "phone": "(202) 564-1931"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "OEI",
+      "name": "SearchEFbyState widget js",
+      "description": "Searching EPA's Envirofacts warehouse by state",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/SearchEFbyState-widget-js",
+      "languages": [
+        "Javascript"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "envirofacts"
+      ],
+      "contact": {
+        "name": "Vincent Zhuang",
+        "email": "zhuangv@saic.com",
+        "phone": "(703) 676-6699"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "OEI",
+      "name": "SearhEFbyCounty widget js",
+      "description": "Searching EPA's Envirofacts warehouse by county",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [
+        "Javascript"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "envirofacts"
+      ],
+      "contact": {
+        "name": "Vincent Zhuang",
+        "email": "zhuangv@saic.com",
+        "phone": "(703) 676-6699"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "HPAG",
+      "name": "BMDS Model Averaging",
+      "description": "This is the source code for BMDS model averaging methods, which are currently being developed and evaluated. Currently this is a private repository; only EPA staff, contractors and external collaborators who are project participants have access to the code.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "model"
+      ],
+      "contact": {
+        "name": "Jeff Gift",
+        "email": "Gift.Jeff@epa.gov",
+        "phone": "(919) 541-4828"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "OEI",
+      "name": "SearchEFbyZIP widget js",
+      "description": "Searching EPA's Envirofacts warehouse by ZIP",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/SearchEFbyZIP-widget-js",
+      "languages": [
+        "Javascript"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "envirofacts"
+      ],
+      "contact": {
+        "name": "Vincent Zhuang",
+        "email": "zhuangv@saic.com",
+        "phone": "(703) 676-6699"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "OEI",
+      "name": "SearchEFbyTribe widget js",
+      "description": "Searching EPA's Envirofacts warehouse by Tribe.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/SearchEFbyZIP-widget-js",
+      "languages": [
+        "Javascript"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "envirofacts"
+      ],
+      "contact": {
+        "name": "Vincent Zhuang",
+        "email": "zhuangv@saic.com",
+        "phone": "(703) 676-6699"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "intro gis with r",
+      "description": "We will be using R and RStudio for this workshop. This must be installed prior to March 2. Simply email EZTech and request that R and RStudio be installed on your machine. They will push that out usually in a day or so.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/intro_gis_with_r",
+      "languages": [
+        "R"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "intro",
+        "gis",
+        "training"
+      ],
+      "contact": {
+        "name": "Jeff Hollister",
+        "email": "Hollister.Jeff@epa.gov",
+        "phone": "(401) 782-9655"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "OEI",
+      "name": "SearchEFbyCity widget js",
+      "description": "Searching EPA's Envirofacts warehouse by city",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/SearchEFbyCity-widget-js",
+      "languages": [
+        "Javascript"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "envirofacts"
+      ],
+      "contact": {
+        "name": "Vincent Zhuang",
+        "email": "zhuangv@saic.com",
+        "phone": "(703) 676-6699"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "OEI",
+      "name": "AddDemographicLayers widget js",
+      "description": "This is a widget developed for Esri Web AppBuilder (WAB) to map the Census demographic layers. It allows mapping a Census demographic layer in the same way as used in EPAs EJSCREEN application.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/AddDemographicLayers-widget-js",
+      "languages": [
+        "Javascript"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "layer",
+        "esri",
+        "widget"
+      ],
+      "contact": {
+        "name": "Vincent Zhuang",
+        "email": "zhuangv@saic.com",
+        "phone": "(703) 676-6699"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "mulitResSurvey",
+      "description": "Code used for the design and analysis of reservoir (i.e., water impoundments) surveys.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "code",
+        "analysis",
+        "water",
+        "reservoir"
+      ],
+      "contact": {
+        "name": "Jake Beaulieu",
+        "email": "Beaulieu.Jake@epa.gov",
+        "phone": "(513) 569-7842"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "USEPA",
+      "name": "Software Design, Development and Implementation QA Tracking Database Model",
+      "description": "The TEST/EXPLORATORY software will be developed to examine feasibility to replace the current Lotus Notes based application 'LIVE QLOG NRMRL' currently used by the NRMRL Division QA Management staff. The new software tool shall be designed to import current QA/QC records from Lotus Notes Database into the most current PostgreSQL database version. The final tool will be delivered via web-based tools using Django, Python, and current web based standards accessible by NRMRL QA staff through a secured login SSL tool. http://qatrack.net/",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "feasibility",
+        "test",
+        "quality"
+      ],
+      "contact": {
+        "name": "Daniel Young",
+        "email": "Young.Daniel@epa.gov",
+        "phone": "(513) 569-7451"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "NRMRL",
+      "name": "TEST (Toxicity Estimation Software Tool)",
+      "description": "This is a downloadable, standalone Java based software tool. Its purpose is to estimate physical properties and toxicity values for organic chemicals from their molecular structure. It is being developed in GitHub",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/ORD_TEST",
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "toxicity",
+        "estimate",
+        "tool"
+      ],
+      "contact": {
+        "name": "Todd Martin",
+        "email": "Martin.Todd@epa.gov",
+        "phone": "(513) 569-7682"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "USEPA",
+      "name": "Term Lookup Tooltip Example Code",
+      "description": "Example code for how terms should be displayed when using ther term lookup service if displaying the definitions in a tooltip.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "",
+      "languages": [
+        "HTML, Javascript and CSS"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "term",
+        "code",
+        "sample"
+      ],
+      "contact": {},
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "USEPA",
+      "name": "XCode Data Sample for Envirofacts API, Using RadNet Data",
+      "description": "This sample will provide the steps to create a simple iOS application that can consume Radiation (RadNet) Data. The Envirofacts RadNet database contains sample results for a variety of radionuclides and radiation types from 200 monitoring stations across all 50 states and the American Territories.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/XCode-RadNet-Sample-Data-Envirofacts-API",
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "envirofacts",
+        "sample"
+      ],
+      "contact": {},
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "OEI",
+      "name": "ANDROID Multisystem Data Sample Envirofacts API",
+      "description": "This API data sample will provide the steps to create a simple Android application that can consume EPA Envirofacts Multisystem Data. The Envirofacts Multisystem data is comprised of multiple environmental databases for facility information, including toxic chemical releases, water discharge permit compliance, hazardous waste handling processes, Superfund status, and air emission estimates.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/ANDROID-Multisystem-Data-Sample-Envirofacts-API",
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "api",
+        "android",
+        "envirofacts"
+      ],
+      "contact": {
+        "name": "Andrew Yuen",
+        "email": "Yuen.Andrew@epa.gov",
+        "phone": "(703) 305-7191"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "OEI",
+      "name": "Xcode RadNet Sample Envirofacts API",
+      "description": "This sample will provide the steps to create a simple iOS application that can consume Radiation (RadNet) Data. The Envirofacts RadNet database contains sample results for a variety of radionuclides and radiation types from 200 monitoring stations across all 50 states and the American Territories.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/XCode-RadNet-Sample-Envirofacts-API",
+      "languages": [
+        "Objective-C"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "envirofacts",
+        "api",
+        "sample"
+      ],
+      "contact": {
+        "name": "Andrew Yuen",
+        "email": "Yuen.Andrew@epa.gov",
+        "phone": "(703) 305-7191"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "OEI",
+      "name": "FRS getfacilities samples",
+      "description": "This repository contains sample HTML/JavaScript code to demonstrate the use of the EPA Facility Registry Service (FRS) GetFacilities REST API. The GetFacilities REST API can be used for a number of different types of applications, whether performing a radial search for EPA regulated facilities, or querying for facility information based on name and location, spatial query by radial search, or other types of scenarios. These have initially been developed to support the 2014 Exchange Network Conference, as simple code samples developed in a few hours and a few dozen lines of JavaScript. An additional resource sheet for the 2014 Exchange Network conference was developed and a MarkDown version is available here: https://github.com/USEPA/FRS-getfacilities-samples/blob/master/EN2014_Resources.md",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/FRS-getfacilities-samples",
+      "languages": [
+        "HTML"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "frs",
+        "facility"
+      ],
+      "contact": {
+        "name": "David Smith",
+        "email": "Smith.David@epa.gov",
+        "phone": "(703) 347-8653"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "EPA",
+      "name": "IRIS-Trimethylbenzene-PBPK-",
+      "description": "This project will be developed and stored in a GitHub repository. This will include the revisions after peer review to the PBPK model for the trimethylbenzene IRIS assessment.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/IRIS-Trimethylbenzene-PBPK-Model",
+      "languages": [],
+      "laborHours": 0,
+      "tags": [],
+      "contact": {
+        "name": "Lico Galindo",
+        "email": "galindo.lico@epa.gov",
+        "phone": "(202) 566-1252"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "OEI",
+      "name": "NET-DfE Data Sample Envirofacts API",
+      "description": "This API data sample will provide the steps to create a simple .Net Web application that can display EPA Design for the Environment (DfE) Data. The Envirofacts DfE data contains products EPA labeled environmentally friendly, so that consumers can easily choose ones that are safer for people and the environment.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/.NET-DfE-Data-Sample-Envirofacts-API",
+      "languages": [
+        "ASP"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "envirofacts",
+        "api",
+        "sample"
+      ],
+      "contact": {
+        "name": "Andrew Yuen",
+        "email": "Yuen.Andrew@epa.gov",
+        "phone": "(703) 305-7191"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "share no cookies",
+      "description": "Share no cookies is a pure JavaScript solution that allows you to easily share your page without any invasive tracking cookies. Includes posting to Facebook, Google+, Pinterest, and Twitter, as well as an explanatory page, \"What is this?\"",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/share-no-cookies",
+      "languages": [
+        "Javascript"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "share",
+        "cookie"
+      ],
+      "contact": {
+        "name": "Michael Hessling",
+        "email": "Hessling.Michael@epa.gov",
+        "phone": "(202) 566-0419"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "CompTox-Virtual-Tissues-ml-organ-tox",
+      "description": "Can we use a data-driven approach to predict the target-organ toxicity of chemicals in repeat dose animal testing studies ? This project frame chemical toxicity prediction as a supervised machine learning (ML) problem. Toxicity is assumed to be a categorical outcome, which is defined by histopathology data from legacy repeat-dose animal testing experiments. Chemicals that cause/do not cause histopathological effects in an organ are treated as positive/negative examples of each class.",
+      "usageType": "openSource",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [
+        "Python"
+      ],
+      "laborHours": 0,
+      "tags": [],
+      "contact": {
+        "name": "Imran Shah",
+        "email": "Shah.Imran@epa.gov",
+        "phone": "(919) 541-1391"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "CompTox - Tipping point analysis",
+      "description": "This file is a jupyter notebook describes how to conduct the analysis and recreate the figures given in: Shah I, Setzer RW, Jack J, Houck KA, Judson RS, Knudsen TB, Liu J, Martin MT, Reif DM, Richard AM, Thomas RS, Crofton KM, Dix DJ, Kavlock RJ. 2016. Using ToxCast�?� data to reconstruct dynamic cell state trajectories and estimate toxicological points of departure. Environ Health Perspect 124:910�??919.",
+      "usageType": "openSource",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [
+        "Python"
+      ],
+      "laborHours": 0,
+      "tags": [],
+      "contact": {
+        "name": "Imran Shah",
+        "email": "Shah.Imran@epa.gov",
+        "phone": "(919) 541-1391"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "epa_r_workshop_2017",
+      "description": "",
+      "usageType": "openSource",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [],
+      "laborHours": 0,
+      "tags": [],
+      "contact": {
+        "name": "Jeff Hollister",
+        "email": "Hollister.Jeff@epa.gov",
+        "phone": "(401) 782-9655"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "lakemorpho_manuscript",
+      "description": "repository containing manuscript describing the lakemorpho manuscript",
+      "usageType": "openSource",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [],
+      "laborHours": 0,
+      "tags": [],
+      "contact": {
+        "name": "Jeff Hollister",
+        "email": "Hollister.Jeff@epa.gov",
+        "phone": "(401) 782-9655"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "USEPA",
+      "name": "Drupal WebCMS GitHub Repository",
+      "description": "The codebase for One EPA Drupal WebCMS is being stored in a private GitHub repository. We are not using GitHub for development, per se, but rather as a backup and as a read-only option for interested third-party developers.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "drupal",
+        "webcms"
+      ],
+      "contact": {
+        "name": "Michael Hessling",
+        "email": "Hessling.Michael@epa.gov",
+        "phone": "(202) 566-0419"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "CompTox-cellprofiler",
+      "description": "",
+      "usageType": "openSource",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [],
+      "laborHours": 0,
+      "tags": [],
+      "contact": {
+        "name": "Imran Shah",
+        "email": "Shah.Imran@epa.gov",
+        "phone": "(919) 541-1391"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "CompTox-ToxCast-EDSPsteroidogenesis",
+      "description": "",
+      "usageType": "openSource",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [],
+      "laborHours": 0,
+      "tags": [],
+      "contact": {
+        "name": "Derik Haggard",
+        "email": "Haggard.Derik@epa.gov",
+        "phone": "(919) 541-0745"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "CompTox-ExpoCast-httk",
+      "description": "",
+      "usageType": "openSource",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [],
+      "laborHours": 0,
+      "tags": [],
+      "contact": {
+        "name": "Lico Galindo",
+        "email": "galindo.lico@epa.gov",
+        "phone": "(202) 566-1252"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "Geographic Response Plan Application",
+      "description": "Geographic Response Plan Application",
+      "usageType": "openSource",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [
+        "Python"
+      ],
+      "laborHours": 0,
+      "tags": [],
+      "contact": {
+        "name": "Travis Bock",
+        "email": "Bock.Travis@epa.gov",
+        "phone": "(757) 201-8188"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "2017 US EPA R User Group Workshop",
+      "description": "This repository contains the materials used in the Introduction to Spatial Analysis and GIS in R workshop presented at the 2017 US EPA R User Group Workshop.",
+      "usageType": "openSource",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [],
+      "laborHours": 0,
+      "tags": [],
+      "contact": {
+        "name": "Jeff Hollister",
+        "email": "Hollister.Jeff@epa.gov",
+        "phone": "(401) 782-9655"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "USEPA",
+      "name": "Water Distribution Network Model",
+      "description": "EPANET is useful for modeling potable water distribution networks. EPANET is developed and maintained by the USEPA in Cincinnati, OH and hosted at github.com/USEPA.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/Water-Distribution-Network-Model",
+      "languages": [
+        "C"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "model",
+        "water"
+      ],
+      "contact": {
+        "name": "Michael Tryby",
+        "email": "Tryby.Michael@epa.gov",
+        "phone": "(513) 569-7559"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "EPANET-legacy-user-interface",
+      "description": "This repository contains source code for EPANET2W Delphi Windows application. The code is contained in the following folders:\r\n\r\ncomponents.zip -- Custom Delphi components that must be installed into the Delphi IDE's component palette before working with the GUI code. Files last updated on 7/5/06.\r\n\r\nepanet2w.zip -- Borland Delphi code that comprises the graphical user interface (GUI) for the Windows version of EPANET 2. Should be compiled into an executable named epanet2w.exe for use with the EPANET program. Files last updated on 2/25/08.",
+      "usageType": "openSource",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [],
+      "laborHours": 0,
+      "tags": [],
+      "contact": {
+        "name": "Michael Tryby",
+        "email": "Tryby.Michael@epa.gov",
+        "phone": "(513) 569-7559"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "ORD@workphase2",
+      "description": "Drupal install profile for ORD@work  A functional and complete installation profile will installed  to meet the  needs of most ORD laboratory sites this will include using Organic Groups to provide private content management and allow ad-hoc groups to be created and self-managed, whether it applied to divisions, labs, or specific topics.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "ORD@work",
+        "drupal"
+      ],
+      "contact": {},
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "DMSD",
+      "name": "EPA GeoPlatform Dashboard",
+      "description": "",
+      "usageType": "openSource",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [],
+      "laborHours": 0,
+      "tags": [],
+      "contact": {
+        "name": "David Yarnell",
+        "email": "Yarnell.David@epa.gov",
+        "phone": "(208) 610-9981"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "USEPA / Region 6",
+      "name": "SDE Layer Menu Add-in to ArcGIS 10",
+      "description": "An add-in to ArcGIS 10 that allows ArcMap users to turn on GIS layers stored in SDE by simply checking boxes next to layers listed on a pop up menu.  Adding layers is quick and easy as the user does not have to manually hunt for layers in SDE.",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": "",
+      "languages": [
+        "Visual Basic .NET"
+      ],
+      "laborHours": 0,
+      "tags": [
+        "ArcGIS",
+        "de",
+        "gis"
+      ],
+      "contact": {
+        "name": "Jeff Danielson",
+        "email": "Danielson.Jeff@epa.gov",
+        "phone": "(000) 000-0000"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "USEPA",
+      "name": "VIVO Github Repository",
+      "description": "VIVO is an open source semantic web application that enables the discovery of research and scholarship across disciplinary and geographic boundaries. ORD is currently developing a VIVO instance to assist with expertise location within ORD.  This github repository will be used to store ORD VIVO code as well as a means to share it amongst the ORD VIVO team and with other ORD VIVO instance project teams and developers (i.e. Cornell, UFL, USDA, etc.,)",
+      "permissions": {
+        "licenses": [],
+        "exemptionText": null
+      },
+      "repositoryURL": null,
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "semantic",
+        "web",
+        "application"
+      ],
+      "contact": {},
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
       }
     }
   ]
