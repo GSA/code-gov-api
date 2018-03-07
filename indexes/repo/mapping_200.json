@@ -42,7 +42,7 @@
                             "agencyWidePolicy": {
                                 "type": "float",
                                 "index": "not_analyzed"
-                            }, 
+                            },
                             "openSourceRequirement": {
                                 "type": "float",
                                 "index": "not_analyzed"
@@ -102,7 +102,13 @@
             },
             "name": {
                 "type": "string",
-                "analyzer": "keyword_ci"
+                "analyzer": "keyword_ci",
+                "fields": {
+                    "_fulltext": {
+                        "type": "string",
+                        "analyzer": "englishfulltext"
+                    }
+                }
             },
             "version": {
                 "type": "string",
@@ -110,7 +116,13 @@
             },
             "organization": {
                 "type": "string",
-                "analyzer": "keyword_ci"
+                "analyzer": "keyword_ci",
+                "fields": {
+                    "_fulltext": {
+                        "type": "string",
+                        "analyzer": "englishfulltext"
+                    }
+                }
             },
             "homepageURL": {
                 "type": "string",
@@ -122,13 +134,7 @@
             },
             "description": {
                 "type": "string",
-                "analyzer": "englishfulltext",
-                "fields": {
-                    "_fulltext": {
-                        "type": "string",
-                        "analyzer": "englishfulltext"
-                    }
-                }
+                "analyzer": "englishfulltext"
             },
             "events": {
                 "type": "string",
@@ -266,18 +272,13 @@
                     },
                     "exemptionText": {
                         "type": "string",
-                        "analyzer": "englishfulltext",
-                        "fields": {
-                            "_fulltext": {
-                                "type": "string",
-                                "analyzer": "englishfulltext"
-                            }
-                        }
+                        "analyzer": "englishfulltext"
                     }
                 }
             },
             "laborHours": {
-                "type": "integer"
+                "type": "integer",
+                "index": "not_analyzed"
             },
             "relatedCode": {
                 "type": "nested",
@@ -323,13 +324,7 @@
             },
             "disclaimerText": {
                 "type": "string",
-                "analyzer": "englishfulltext",
-                "fields": {
-                    "_fulltext": {
-                        "type": "string",
-                        "analyzer": "englishfulltext"    
-                    }
-                }
+                "analyzer": "englishfulltext"
             },
             "date": {
                 "type": "nested",
