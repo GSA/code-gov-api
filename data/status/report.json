@@ -1,5 +1,5 @@
 {
-  "timestamp": "Tue Mar 06 2018 17:19:01 GMT-0500 (EST)",
+  "timestamp": "Wed Mar 07 2018 12:20:09 GMT-0500 (EST)",
   "statuses": {
     "USDA": {
       "status": "NOT FULLY COMPLIANT: 52 WARNINGS",
@@ -35986,7 +35986,7 @@
       }
     },
     "EPA": {
-      "status": "NOT FULLY COMPLIANT: 164 ERRORS, 346 WARNINGS",
+      "status": "NOT FULLY COMPLIANT: 164 ERRORS, 434 WARNINGS",
       "issues": [
         {
           "agency": "Environmental Protection Agency",
@@ -35995,6 +35995,15 @@
           "issues": {
             "enhancements": [],
             "warnings": [
+              {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
               {
                 "keyword": "format",
                 "dataPath": ".repositoryURL",
@@ -36053,6 +36062,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -36110,6 +36128,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -36166,6 +36193,15 @@
           "issues": {
             "enhancements": [],
             "warnings": [
+              {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
               {
                 "keyword": "format",
                 "dataPath": ".date.created",
@@ -36290,6 +36326,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -36413,6 +36458,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -36470,6 +36524,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -36517,6 +36580,15 @@
           "issues": {
             "enhancements": [],
             "warnings": [
+              {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
               {
                 "keyword": "format",
                 "dataPath": ".repositoryURL",
@@ -36575,6 +36647,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -36622,6 +36703,15 @@
           "issues": {
             "enhancements": [],
             "warnings": [
+              {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
               {
                 "keyword": "format",
                 "dataPath": ".repositoryURL",
@@ -36689,6 +36779,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -36745,6 +36844,15 @@
           "issues": {
             "enhancements": [],
             "warnings": [
+              {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
               {
                 "keyword": "format",
                 "dataPath": ".date.created",
@@ -36869,6 +36977,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -36992,6 +37109,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -37048,6 +37174,15 @@
           "issues": {
             "enhancements": [],
             "warnings": [
+              {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
               {
                 "keyword": "format",
                 "dataPath": ".date.created",
@@ -37106,6 +37241,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -37153,6 +37297,15 @@
           "issues": {
             "enhancements": [],
             "warnings": [
+              {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
               {
                 "keyword": "format",
                 "dataPath": ".date.created",
@@ -37211,6 +37364,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -37258,6 +37420,15 @@
           "issues": {
             "enhancements": [],
             "warnings": [
+              {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
               {
                 "keyword": "format",
                 "dataPath": ".repositoryURL",
@@ -37325,6 +37496,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -37373,6 +37553,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -37420,6 +37609,15 @@
           "issues": {
             "enhancements": [],
             "warnings": [
+              {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
               {
                 "keyword": "format",
                 "dataPath": ".date.created",
@@ -37478,6 +37676,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -37535,6 +37742,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -37583,6 +37799,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -37630,6 +37855,15 @@
           "issues": {
             "enhancements": [],
             "warnings": [
+              {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
               {
                 "keyword": "format",
                 "dataPath": ".date.created",
@@ -37688,6 +37922,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -37745,6 +37988,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -37792,6 +38044,15 @@
           "issues": {
             "enhancements": [],
             "warnings": [
+              {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
               {
                 "keyword": "format",
                 "dataPath": ".date.created",
@@ -37850,6 +38111,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -37897,6 +38167,15 @@
           "issues": {
             "enhancements": [],
             "warnings": [
+              {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
               {
                 "keyword": "format",
                 "dataPath": ".date.created",
@@ -37955,6 +38234,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -38002,6 +38290,15 @@
           "issues": {
             "enhancements": [],
             "warnings": [
+              {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
               {
                 "keyword": "format",
                 "dataPath": ".repositoryURL",
@@ -38060,6 +38357,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -38107,6 +38413,15 @@
           "issues": {
             "enhancements": [],
             "warnings": [
+              {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
               {
                 "keyword": "format",
                 "dataPath": ".date.created",
@@ -38165,6 +38480,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -38212,6 +38536,15 @@
           "issues": {
             "enhancements": [],
             "warnings": [
+              {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
               {
                 "keyword": "format",
                 "dataPath": ".date.created",
@@ -38270,6 +38603,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -38318,6 +38660,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -38365,6 +38716,15 @@
           "issues": {
             "enhancements": [],
             "warnings": [
+              {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
               {
                 "keyword": "format",
                 "dataPath": ".date.created",
@@ -38489,6 +38849,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".repositoryURL",
                 "schemaPath": "#/properties/repositoryURL/format",
@@ -38612,6 +38981,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -38669,6 +39047,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -38716,6 +39103,15 @@
           "issues": {
             "enhancements": [],
             "warnings": [
+              {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
               {
                 "keyword": "format",
                 "dataPath": ".date.created",
@@ -38774,6 +39170,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -38831,6 +39236,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -38878,6 +39292,15 @@
           "issues": {
             "enhancements": [],
             "warnings": [
+              {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
               {
                 "keyword": "format",
                 "dataPath": ".date.created",
@@ -38936,6 +39359,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -38983,6 +39415,15 @@
           "issues": {
             "enhancements": [],
             "warnings": [
+              {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
               {
                 "keyword": "format",
                 "dataPath": ".date.created",
@@ -39041,6 +39482,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -39098,6 +39548,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -39145,6 +39604,15 @@
           "issues": {
             "enhancements": [],
             "warnings": [
+              {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
               {
                 "keyword": "format",
                 "dataPath": ".date.created",
@@ -39203,6 +39671,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -39250,6 +39727,15 @@
           "issues": {
             "enhancements": [],
             "warnings": [
+              {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
               {
                 "keyword": "format",
                 "dataPath": ".date.created",
@@ -39308,6 +39794,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -39356,6 +39851,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -39403,6 +39907,15 @@
           "issues": {
             "enhancements": [],
             "warnings": [
+              {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
               {
                 "keyword": "format",
                 "dataPath": ".date.created",
@@ -39461,6 +39974,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".repositoryURL",
                 "schemaPath": "#/properties/repositoryURL/format",
@@ -39517,6 +40039,15 @@
           "issues": {
             "enhancements": [],
             "warnings": [
+              {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
               {
                 "keyword": "format",
                 "dataPath": ".repositoryURL",
@@ -39584,6 +40115,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -39632,6 +40172,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -39679,6 +40228,15 @@
           "issues": {
             "enhancements": [],
             "warnings": [
+              {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
               {
                 "keyword": "format",
                 "dataPath": ".date.created",
@@ -39737,6 +40295,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".repositoryURL",
                 "schemaPath": "#/properties/repositoryURL/format",
@@ -39793,6 +40360,15 @@
           "issues": {
             "enhancements": [],
             "warnings": [
+              {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
               {
                 "keyword": "format",
                 "dataPath": ".date.created",
@@ -39851,6 +40427,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -39898,6 +40483,15 @@
           "issues": {
             "enhancements": [],
             "warnings": [
+              {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
               {
                 "keyword": "format",
                 "dataPath": ".date.created",
@@ -39956,6 +40550,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -40013,6 +40616,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -40060,6 +40672,15 @@
           "issues": {
             "enhancements": [],
             "warnings": [
+              {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
               {
                 "keyword": "format",
                 "dataPath": ".date.created",
@@ -40109,6 +40730,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -40156,6 +40786,15 @@
           "issues": {
             "enhancements": [],
             "warnings": [
+              {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
               {
                 "keyword": "format",
                 "dataPath": ".date.created",
@@ -40205,6 +40844,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -40252,6 +40900,15 @@
           "issues": {
             "enhancements": [],
             "warnings": [
+              {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
               {
                 "keyword": "format",
                 "dataPath": ".date.created",
@@ -40310,6 +40967,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -40367,6 +41033,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -40414,6 +41089,15 @@
           "issues": {
             "enhancements": [],
             "warnings": [
+              {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
               {
                 "keyword": "format",
                 "dataPath": ".repositoryURL",
@@ -40481,6 +41165,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -40538,6 +41231,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -40585,6 +41287,15 @@
           "issues": {
             "enhancements": [],
             "warnings": [
+              {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
               {
                 "keyword": "format",
                 "dataPath": ".date.created",
@@ -40634,6 +41345,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -40681,6 +41401,15 @@
           "issues": {
             "enhancements": [],
             "warnings": [
+              {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
               {
                 "keyword": "format",
                 "dataPath": ".date.created",
@@ -40730,6 +41459,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -40777,6 +41515,15 @@
           "issues": {
             "enhancements": [],
             "warnings": [
+              {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
               {
                 "keyword": "format",
                 "dataPath": ".date.created",
@@ -41089,6 +41836,15 @@
           "issues": {
             "enhancements": [],
             "warnings": [
+              {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
               {
                 "keyword": "format",
                 "dataPath": ".date.created",
@@ -41477,6 +42233,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".date.created",
                 "schemaPath": "#/properties/date/properties/created/format",
@@ -41590,6 +42355,15 @@
           "issues": {
             "enhancements": [],
             "warnings": [
+              {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
               {
                 "keyword": "format",
                 "dataPath": ".date.created",
@@ -41723,6 +42497,15 @@
             "enhancements": [],
             "warnings": [
               {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
+              {
                 "keyword": "format",
                 "dataPath": ".repositoryURL",
                 "schemaPath": "#/properties/repositoryURL/format",
@@ -41779,6 +42562,15 @@
           "issues": {
             "enhancements": [],
             "warnings": [
+              {
+                "keyword": "additionalProperties",
+                "dataPath": "",
+                "schemaPath": "#/additionalProperties",
+                "params": {
+                  "additionalProperty": "usageType"
+                },
+                "message": "should NOT have additional properties"
+              },
               {
                 "keyword": "format",
                 "dataPath": ".date.created",
