@@ -109,19 +109,17 @@ class Searcher {
         "multi_match": {
           "query": queryParams.q,
           "fields": [
-            "repoID",
-            "name",
-            "repositoryURL",
-            "homepageURL",
-            "agency.acronym",
-            "agency.name",
-            "contact.name",
-            "contact.email",
-            "partners.name",
-            "partners.email",
-            "description",
+            "name^10",
+            "name._fulltext^10",
+            "description^4",
+            "agency.acronym^5",
+            "agency.name^5",
+            "agency.name._fulltext^5",
+            "permissions.usageType^3",
             "tags",
-            "permissions.licenses.name"
+            "tags._fulltext",
+            "languages",
+            "languages._fulltext"
           ]
         }
       });
@@ -265,7 +263,7 @@ class Searcher {
         }
       });
     } else {
-      body.sort('name', queryParams['sort'] || 'asc');
+      body.sort('_score', queryParams['sort'] || 'desc');
     }
   }
 
@@ -299,7 +297,8 @@ class Searcher {
       }
       let repos = Utils.omitPrivateKeys(
         _.map(elasticSearchResponse.hits.hits, (hit) => {
-          return hit._source;
+          let repo = _.merge({ searchScore: hit._score }, hit._source);
+          return repo;
         })
       );
 
