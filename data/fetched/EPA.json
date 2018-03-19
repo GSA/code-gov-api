@@ -32,9 +32,9 @@
         "phone": "(919) 541-5662"
       },
       "date": {
-        "created": "06-26-2017",
-        "lastModified": "03-01-2017",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2017-06-26",
+        "lastModified": "2017-03-01",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -51,7 +51,7 @@
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "",
       "languages": [],
       "laborHours": 0,
       "tags": [
@@ -76,14 +76,11 @@
       "usageType": "openSource",
       "permissions": {
         "licenses": [
-          {
-            "name": "Creative Commons Zero (CC0)",
-            "URL": "https://path.to/license"
-          }
+          {}
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "https://github.com/USEPA/cerf_r",
       "languages": [],
       "laborHours": 0,
       "tags": [
@@ -95,9 +92,9 @@
         "phone": "(401) 782-9655"
       },
       "date": {
-        "created": "01-31-2018",
-        "lastModified": "01-24-2018",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2018-01-31",
+        "lastModified": "2018-01-24",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -107,14 +104,11 @@
       "usageType": "openSource",
       "permissions": {
         "licenses": [
-          {
-            "name": "Creative Commons Zero (CC0)",
-            "URL": "https://path.to/license"
-          }
+          {}
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "https://github.com/USEPA/CMAQ",
       "languages": [],
       "laborHours": 0,
       "tags": [
@@ -139,14 +133,11 @@
       "usageType": "openSource",
       "permissions": {
         "licenses": [
-          {
-            "name": "Creative Commons Zero (CC0)",
-            "URL": "https://path.to/license"
-          }
+          {}
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "https://github.com/USEPA/LCI-Primer",
       "languages": [],
       "laborHours": 0,
       "tags": [],
@@ -156,9 +147,9 @@
         "phone": "(202) 566-1252"
       },
       "date": {
-        "created": "06-15-2016",
-        "lastModified": "06-15-2016",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2016-06-15",
+        "lastModified": "2016-06-15",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -197,17 +188,19 @@
       "usageType": "openSource",
       "permissions": {
         "licenses": [
-          {
-            "name": "Creative Commons Zero (CC0)",
-            "URL": "https://path.to/license"
-          }
+          {}
         ],
         "exemptionText": null
       },
-      "repositoryURL": "USEPA",
+      "repositoryURL": "https://github.com/USEPA/EPA_Environmental_Dataset_Gateway",
       "languages": [],
       "laborHours": 0,
-      "tags": [],
+      "tags": [
+        "environmental",
+        "data",
+        "dataset",
+        "geospatial"
+      ],
       "contact": {
         "name": "Ana Greene",
         "email": "Greene.Ana@epa.gov",
@@ -226,14 +219,11 @@
       "usageType": "openSource",
       "permissions": {
         "licenses": [
-          {
-            "name": "Creative Commons Zero (CC0)",
-            "URL": "https://path.to/license"
-          }
+          {}
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "https://github.com/USEPA/github_101",
       "languages": [
         "R"
       ],
@@ -248,9 +238,9 @@
         "phone": "(401) 782-9655"
       },
       "date": {
-        "created": "02-09-2017",
-        "lastModified": "10-16-2016",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2017-02-09",
+        "lastModified": "2016-10-16",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -281,9 +271,9 @@
         "phone": "(513) 569-7994"
       },
       "date": {
-        "created": "11-05-2017",
-        "lastModified": "01-04-2017",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2017-11-05",
+        "lastModified": "2017-01-04",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -314,9 +304,9 @@
         "phone": "(202) 564-6593"
       },
       "date": {
-        "created": "01-23-2018",
-        "lastModified": "09-19-2016",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2018-01-23",
+        "lastModified": "2016-09-19",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -345,9 +335,9 @@
         "phone": "(919) 541-0514"
       },
       "date": {
-        "created": "11-14-2017",
-        "lastModified": "03-07-2016",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2017-11-14",
+        "lastModified": "2016-03-07",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -375,9 +365,9 @@
       ],
       "contact": {},
       "date": {
-        "created": "09-26-2017",
-        "lastModified": "09-26-2017",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2017-09-26",
+        "lastModified": "2017-09-26",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -387,14 +377,11 @@
       "usageType": "openSource",
       "permissions": {
         "licenses": [
-          {
-            "name": "Creative Commons Zero (CC0)",
-            "URL": "https://path.to/license"
-          }
+          {}
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "https://github.com/USEPA/BenMAP-CE",
       "languages": [],
       "laborHours": 0,
       "tags": [
@@ -406,9 +393,9 @@
         "phone": "(202) 564-1931"
       },
       "date": {
-        "created": "12-18-2017",
-        "lastModified": "12-19-2016",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2017-12-18",
+        "lastModified": "2016-12-19",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -418,14 +405,11 @@
       "usageType": "openSource",
       "permissions": {
         "licenses": [
-          {
-            "name": "Creative Commons Zero (CC0)",
-            "URL": "https://path.to/license"
-          }
+          {}
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "https://github.com/USEPA/EPA-Metadata-Editor-3",
       "languages": [],
       "laborHours": 0,
       "tags": [
@@ -446,32 +430,31 @@
     {
       "organization": "ORD",
       "name": "CompTox-Virtual-Tissues-livertox-crt",
-      "description": "This repository contains supporting data, code and analysis for our recent manuscript on predicting rodent hepatotoxicity using chemical structure and bioactivity data (J. Liu, K. Mansouri, R. S. Judson, M. T. Martin, H. Hong, M. Chen, X. Xu, R. S. Thomas, and I. Shah, �??Predicting hepatotoxicity using ToxCast in vitro bioactivity and chemical structure,�?? Chem. Res. Toxicol., vol. 28, no. 4, pp. 738�??751, Apr. 2015). We implemented the machine learning approach described in this manuscript using Python and by relying extensively on the scikit-learn package. The analysis was conducted in an ipython notebook (now called jupyter).",
+      "description": "This repository contains supporting data, code and analysis for our recent manuscript on predicting rodent hepatotoxicity using chemical structure and bioactivity data (J. Liu, K. Mansouri, R. S. Judson, M. T. Martin, H. Hong, M. Chen, X. Xu, R. S. Thomas, and I. Shah, â�?�?Predicting hepatotoxicity using ToxCast in vitro bioactivity and chemical structure,â�?�? Chem. Res. Toxicol., vol. 28, no. 4, pp. 738â�?�?751, Apr. 2015). We implemented the machine learning approach described in this manuscript using Python and by relying extensively on the scikit-learn package. The analysis was conducted in an ipython notebook (now called jupyter).",
       "usageType": "openSource",
       "permissions": {
         "licenses": [
-          {
-            "name": "Creative Commons Zero (CC0)",
-            "URL": "https://path.to/license"
-          }
+          {}
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "https://github.com/USEPA/CompTox-Virtual-Tissues-livertox-crt",
       "languages": [
         "Python"
       ],
       "laborHours": 0,
-      "tags": [],
+      "tags": [
+        "comptox"
+      ],
       "contact": {
         "name": "Imran Shah",
         "email": "Shah.Imran@epa.gov",
         "phone": "(919) 541-1391"
       },
       "date": {
-        "created": "02-20-2017",
-        "lastModified": "08-13-2016",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2017-02-20",
+        "lastModified": "2016-08-13",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -488,7 +471,7 @@
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "",
       "languages": [
         "Java"
       ],
@@ -503,9 +486,9 @@
         "phone": "(513) 569-7602"
       },
       "date": {
-        "created": "08-10-2017",
-        "lastModified": "08-10-2017",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2017-08-10",
+        "lastModified": "2017-08-10",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -515,19 +498,18 @@
       "usageType": "openSource",
       "permissions": {
         "licenses": [
-          {
-            "name": "Creative Commons Zero (CC0)",
-            "URL": "https://path.to/license"
-          }
+          {}
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "https://github.com/USEPA/CompTox-ToxCast-hts-db",
       "languages": [
         "Python"
       ],
       "laborHours": 0,
-      "tags": [],
+      "tags": [
+        "comptox"
+      ],
       "contact": {
         "name": "Imran Shah",
         "email": "Shah.Imran@epa.gov",
@@ -546,14 +528,11 @@
       "usageType": "openSource",
       "permissions": {
         "licenses": [
-          {
-            "name": "Creative Commons Zero (CC0)",
-            "URL": "https://path.to/license"
-          }
+          {}
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "https://github.com/USEPA/EPA-Metadata-Editor-4",
       "languages": [],
       "laborHours": 0,
       "tags": [
@@ -578,14 +557,11 @@
       "usageType": "openSource",
       "permissions": {
         "licenses": [
-          {
-            "name": "Creative Commons Zero (CC0)",
-            "URL": "https://path.to/license"
-          }
+          {}
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "https://github.com/USEPA/EPA-Metadata-Editor-5",
       "languages": [],
       "laborHours": 0,
       "tags": [
@@ -610,18 +586,16 @@
       "usageType": "openSource",
       "permissions": {
         "licenses": [
-          {
-            "name": "Creative Commons Zero (CC0)",
-            "URL": "https://path.to/license"
-          }
+          {}
         ],
         "exemptionText": null
       },
-      "repositoryURL": "https://github.com/USEPA/Computational-Sustainability.git",
+      "repositoryURL": "https://github.com/USEPA/https://github.com/USEPA/CompTox-Sustainable-Chemistry-tippingpoint-ehp-2016",
       "languages": [],
       "laborHours": 0,
       "tags": [
-        "sustainable"
+        "sustainable",
+        "comptox"
       ],
       "contact": {
         "name": "Stephen Edwards",
@@ -629,9 +603,9 @@
         "phone": "(919) 541-0514"
       },
       "date": {
-        "created": "06-29-2016",
-        "lastModified": "06-03-2016",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2016-06-29",
+        "lastModified": "2016-06-03",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -648,7 +622,7 @@
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "",
       "languages": [],
       "laborHours": 0,
       "tags": [
@@ -660,9 +634,9 @@
         "phone": "(513) 569-7030"
       },
       "date": {
-        "created": "10-08-2015",
-        "lastModified": "09-14-2015",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2015-10-08",
+        "lastModified": "2015-09-14",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -694,9 +668,9 @@
         "phone": "(541) 754-0000"
       },
       "date": {
-        "created": "04-04-2016",
-        "lastModified": "04-04-2016",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2016-04-04",
+        "lastModified": "2016-04-04",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -755,9 +729,9 @@
         "phone": "(703) 227-6100"
       },
       "date": {
-        "created": "10-27-2017",
-        "lastModified": "10-27-2016",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2017-10-27",
+        "lastModified": "2016-10-27",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -787,9 +761,9 @@
         "phone": "(703) 305-7191"
       },
       "date": {
-        "created": "09-20-2017",
-        "lastModified": "08-21-2017",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2017-09-20",
+        "lastModified": "2017-08-21",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -799,14 +773,11 @@
       "usageType": "openSource",
       "permissions": {
         "licenses": [
-          {
-            "name": "Creative Commons Zero (CC0)",
-            "URL": "https://path.to/license"
-          }
+          {}
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "https://github.com/USEPA/IO-Model-Builder",
       "languages": [
         "Python"
       ],
@@ -834,14 +805,11 @@
       "usageType": "openSource",
       "permissions": {
         "licenses": [
-          {
-            "name": "Creative Commons Zero (CC0)",
-            "URL": "https://path.to/license"
-          }
+          {}
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "https://github.com/USEPA/elevatr",
       "languages": [],
       "laborHours": 0,
       "tags": [
@@ -853,9 +821,9 @@
         "phone": "(401) 782-9655"
       },
       "date": {
-        "created": "07-14-2016",
-        "lastModified": "07-14-2016",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2016-07-14",
+        "lastModified": "2016-07-14",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -920,9 +888,9 @@
         "phone": "(401) 782-9655"
       },
       "date": {
-        "created": "10-27-2016",
-        "lastModified": "10-27-2016",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2016-10-27",
+        "lastModified": "2016-10-27",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -939,7 +907,7 @@
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "",
       "languages": [],
       "laborHours": 0,
       "tags": [
@@ -954,9 +922,9 @@
         "phone": "(513) 569-7031"
       },
       "date": {
-        "created": "04-04-2016",
-        "lastModified": "04-04-2016",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2016-04-04",
+        "lastModified": "2016-04-04",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -966,14 +934,11 @@
       "usageType": "openSource",
       "permissions": {
         "licenses": [
-          {
-            "name": "Creative Commons Zero (CC0)",
-            "URL": "https://path.to/license"
-          }
+          {}
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "https://github.com/USEPA/HEDS",
       "languages": [],
       "laborHours": 0,
       "tags": [
@@ -986,9 +951,9 @@
         "phone": "(919) 541-3184"
       },
       "date": {
-        "created": "04-13-2017",
-        "lastModified": "03-07-2017",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2017-04-13",
+        "lastModified": "2017-03-07",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -1020,9 +985,9 @@
         "phone": "(541) 754-0000"
       },
       "date": {
-        "created": "08-29-2017",
-        "lastModified": "08-29-2017",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2017-08-29",
+        "lastModified": "2017-08-29",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -1039,7 +1004,7 @@
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "",
       "languages": [
         "JavaScript, HTML, CSS"
       ],
@@ -1054,9 +1019,9 @@
         "phone": "(202) 566-1252"
       },
       "date": {
-        "created": "01-03-2014",
-        "lastModified": "01-03-2014",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2014-01-03",
+        "lastModified": "2014-01-03",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -1108,7 +1073,7 @@
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "",
       "languages": [],
       "laborHours": 0,
       "tags": [
@@ -1121,9 +1086,9 @@
         "phone": "(850) 934-9344"
       },
       "date": {
-        "created": "09-08-2017",
-        "lastModified": "08-10-2017",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2017-09-08",
+        "lastModified": "2017-08-10",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -1165,28 +1130,28 @@
       "usageType": "openSource",
       "permissions": {
         "licenses": [
-          {
-            "name": "Creative Commons Zero (CC0)",
-            "URL": "https://path.to/license"
-          }
+          {}
         ],
         "exemptionText": null
       },
-      "repositoryURL": "",
+      "repositoryURL": "https://github.com/USEPA/CIMC-ArcGIS-Services-Monitoring",
       "languages": [
         "Python"
       ],
       "laborHours": 0,
-      "tags": [],
+      "tags": [
+        "monitoring",
+        "script"
+      ],
       "contact": {
         "name": "Lisa Jenkins",
         "email": "Jenkins.Lisa@epa.gov",
         "phone": "(202) 566-1941"
       },
       "date": {
-        "created": "09-18-2016",
-        "lastModified": "01-20-2015",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2016-09-18",
+        "lastModified": "2015-01-20",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -1230,18 +1195,17 @@
       "usageType": "openSource",
       "permissions": {
         "licenses": [
-          {
-            "name": "Creative Commons Zero (CC0)",
-            "URL": "https://path.to/license"
-          }
+          {}
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "https://github.com/USEPA/Microcystinchla",
       "languages": [],
       "laborHours": 0,
       "tags": [
-        "microcystinchla"
+        "microcystinchla",
+        "lake",
+        "assessment"
       ],
       "contact": {
         "name": "Jeff Hollister",
@@ -1249,9 +1213,9 @@
         "phone": "(401) 782-9655"
       },
       "date": {
-        "created": "03-16-2017",
-        "lastModified": "02-28-2017",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2017-03-16",
+        "lastModified": "2017-02-28",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -1302,7 +1266,7 @@
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "",
       "languages": [],
       "laborHours": 0,
       "tags": [
@@ -1316,9 +1280,9 @@
         "phone": "(401) 782-9655"
       },
       "date": {
-        "created": "10-30-2017",
-        "lastModified": "12-21-2015",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2017-10-30",
+        "lastModified": "2015-12-21",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -1383,9 +1347,9 @@
         "phone": "(401) 782-9655"
       },
       "date": {
-        "created": "01-31-2018",
-        "lastModified": "01-19-2017",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2018-01-31",
+        "lastModified": "2017-01-19",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -1412,9 +1376,9 @@
       ],
       "contact": {},
       "date": {
-        "created": "04-18-2017",
-        "lastModified": "01-10-2017",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2017-04-18",
+        "lastModified": "2017-01-10",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -1434,7 +1398,9 @@
       "repositoryURL": "USEEIO API",
       "languages": [],
       "laborHours": 0,
-      "tags": [],
+      "tags": [
+        "API"
+      ],
       "contact": {
         "name": "Michael Srocka",
         "email": "srocka@greendelta.com",
@@ -1488,19 +1454,19 @@
       "usageType": "openSource",
       "permissions": {
         "licenses": [
-          {
-            "name": "Creative Commons Zero (CC0)",
-            "URL": "https://path.to/license"
-          }
+          {}
         ],
         "exemptionText": null
       },
-      "repositoryURL": "Goatscape",
+      "repositoryURL": "https://github.com/USEPA/goatscape",
       "languages": [
         "R"
       ],
       "laborHours": 0,
-      "tags": [],
+      "tags": [
+        "R",
+        "tools"
+      ],
       "contact": {
         "name": "Jeff Hollister",
         "email": "Hollister.Jeff@epa.gov",
@@ -1519,14 +1485,11 @@
       "usageType": "openSource",
       "permissions": {
         "licenses": [
-          {
-            "name": "Creative Commons Zero (CC0)",
-            "URL": "https://path.to/license"
-          }
+          {}
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "https://github.com/USEPA/e-manifest",
       "languages": [],
       "laborHours": 0,
       "tags": [
@@ -1538,9 +1501,9 @@
         "phone": "(703) 308-0023"
       },
       "date": {
-        "created": "03-26-2014",
-        "lastModified": "07-25-2013",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2014-03-26",
+        "lastModified": "2013-07-25",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -1572,9 +1535,9 @@
         "phone": "(703) 305-7191"
       },
       "date": {
-        "created": "07-28-2015",
-        "lastModified": "07-28-2015",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2015-07-28",
+        "lastModified": "2015-07-28",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -1591,7 +1554,7 @@
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "",
       "languages": [
         "R"
       ],
@@ -1619,14 +1582,11 @@
       "usageType": "openSource",
       "permissions": {
         "licenses": [
-          {
-            "name": "Creative Commons Zero (CC0)",
-            "URL": "https://path.to/license"
-          }
+          {}
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "https://github.com/USEPA/Rapid-Benefit-Indicators-Tools",
       "languages": [
         "Excel"
       ],
@@ -1642,9 +1602,9 @@
         "phone": "(850) 934-2466"
       },
       "date": {
-        "created": "05-16-2017",
-        "lastModified": "03-26-2014",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2017-05-16",
+        "lastModified": "2014-03-26",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -1677,9 +1637,9 @@
         "phone": "(000) 000-0000"
       },
       "date": {
-        "created": "02-01-2017",
-        "lastModified": "01-27-2017",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2017-02-01",
+        "lastModified": "2017-01-27",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -1689,14 +1649,11 @@
       "usageType": "openSource",
       "permissions": {
         "licenses": [
-          {
-            "name": "Creative Commons Zero (CC0)",
-            "URL": "https://path.to/license"
-          }
+          {}
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "https://github.com/USEPA/PiSCES",
       "languages": [],
       "laborHours": 0,
       "tags": [
@@ -1760,7 +1717,7 @@
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "",
       "languages": [
         "HTML, jquery"
       ],
@@ -1775,9 +1732,9 @@
         "phone": "(513) 569-7607"
       },
       "date": {
-        "created": "12-14-2017",
-        "lastModified": "10-09-2017",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2017-12-14",
+        "lastModified": "2017-10-09",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -1787,14 +1744,11 @@
       "usageType": "openSource",
       "permissions": {
         "licenses": [
-          {
-            "name": "Creative Commons Zero (CC0)",
-            "URL": "https://path.to/license"
-          }
+          {}
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "https://github.com/USEPA/dev_4_sustainable_purchasing",
       "languages": [
         "R"
       ],
@@ -1809,9 +1763,9 @@
         "phone": "(919) 541-2777"
       },
       "date": {
-        "created": "04-04-2016",
-        "lastModified": "04-04-2016",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2016-04-04",
+        "lastModified": "2016-04-04",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -1843,9 +1797,9 @@
         "phone": "(541) 754-4469"
       },
       "date": {
-        "created": "10-06-2015",
-        "lastModified": "10-06-2015",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2015-10-06",
+        "lastModified": "2015-10-06",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -1862,7 +1816,7 @@
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "",
       "languages": [
         "jquery"
       ],
@@ -1908,9 +1862,9 @@
         "phone": "(202) 564-1931"
       },
       "date": {
-        "created": "07-17-2017",
-        "lastModified": "03-16-2017",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2017-07-17",
+        "lastModified": "2017-03-16",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -1920,14 +1874,11 @@
       "usageType": "openSource",
       "permissions": {
         "licenses": [
-          {
-            "name": "Creative Commons Zero (CC0)",
-            "URL": "https://path.to/license"
-          }
+          {}
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "https://github.com/USEPA/dev_5_watershed_directory",
       "languages": [],
       "laborHours": 0,
       "tags": [
@@ -1937,6 +1888,36 @@
         "name": "Andrew Yuen",
         "email": "Yuen.Andrew@epa.gov",
         "phone": "(703) 305-7191"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "Python CoP",
+      "description": "This GitHub repository will store code developed by members of EPA's Python Community of Practice.",
+      "usageType": "openSource",
+      "permissions": {
+        "licenses": [
+          {
+            "name": "821"
+          }
+        ],
+        "exemptionText": null
+      },
+      "repositoryURL": "",
+      "languages": [
+        "python"
+      ],
+      "laborHours": 0,
+      "tags": [],
+      "contact": {
+        "name": "Sharon Kenny",
+        "email": "Kenny.Sharon@epa.gov",
+        "phone": "(215) 814-3417"
       },
       "date": {
         "created": "",
@@ -1972,9 +1953,9 @@
         "phone": "(401) 782-9655"
       },
       "date": {
-        "created": "02-08-2017",
-        "lastModified": "02-08-2017",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2017-02-08",
+        "lastModified": "2017-02-08",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -2004,9 +1985,9 @@
         "phone": "(513) 569-7635"
       },
       "date": {
-        "created": "04-04-2016",
-        "lastModified": "04-04-2016",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2016-04-04",
+        "lastModified": "2016-04-04",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -2016,14 +1997,11 @@
       "usageType": "openSource",
       "permissions": {
         "licenses": [
-          {
-            "name": "Creative Commons Zero (CC0)",
-            "URL": "https://path.to/license"
-          }
+          {}
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "https://github.com/USEPA/hivescience",
       "languages": [
         "GPL 3.0"
       ],
@@ -2038,9 +2016,9 @@
         "phone": "(703) 347-0623"
       },
       "date": {
-        "created": "02-13-2018",
-        "lastModified": "05-17-2017",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2018-02-13",
+        "lastModified": "2017-05-17",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -2071,9 +2049,9 @@
         "phone": "(202) 564-6593"
       },
       "date": {
-        "created": "10-10-2017",
-        "lastModified": "04-08-2016",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2017-10-10",
+        "lastModified": "2016-04-08",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -2136,9 +2114,9 @@
         "phone": "(703) 922-9090"
       },
       "date": {
-        "created": "10-05-2015",
-        "lastModified": "10-29-2014",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2015-10-05",
+        "lastModified": "2014-10-29",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -2171,9 +2149,9 @@
         "phone": "(703) 676-6699"
       },
       "date": {
-        "created": "09-01-2017",
-        "lastModified": "08-02-2017",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2017-09-01",
+        "lastModified": "2017-08-02",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -2190,7 +2168,7 @@
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "",
       "languages": [],
       "laborHours": 0,
       "tags": [
@@ -2204,9 +2182,9 @@
         "phone": "(513) 569-7842"
       },
       "date": {
-        "created": "06-17-2016",
-        "lastModified": "03-30-2016",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2016-06-17",
+        "lastModified": "2016-03-30",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -2239,9 +2217,37 @@
         "phone": "(202) 564-6593"
       },
       "date": {
-        "created": "05-02-2017",
-        "lastModified": "05-20-2014",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2017-05-02",
+        "lastModified": "2014-05-20",
+        "metadataLastUpdated": "2017-12-01"
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "EnviroAtlas_JSApp",
+      "description": "EnviroAtlas_JSApp",
+      "usageType": "openSource",
+      "permissions": {
+        "licenses": [
+          {}
+        ],
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA/EnviroAtlas_JSApp",
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "enviroatlas"
+      ],
+      "contact": {
+        "name": "Julia Ortiz",
+        "email": "Ortiz.Julia@epa.gov",
+        "phone": "(202) 564-1931"
+      },
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
       }
     },
     {
@@ -2251,28 +2257,29 @@
       "usageType": "openSource",
       "permissions": {
         "licenses": [
-          {
-            "name": "Creative Commons Zero (CC0)",
-            "URL": "https://path.to/license"
-          }
+          {}
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "https://github.com/USEPA/GIFMod",
       "languages": [
         "C++"
       ],
       "laborHours": 0,
-      "tags": [],
+      "tags": [
+        "green",
+        "infrastructure",
+        "model"
+      ],
       "contact": {
         "name": "Julia Ortiz",
         "email": "Ortiz.Julia@epa.gov",
         "phone": "(202) 564-1931"
       },
       "date": {
-        "created": "09-26-2017",
-        "lastModified": "09-26-2017",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2017-09-26",
+        "lastModified": "2017-09-26",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -2322,7 +2329,7 @@
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "",
       "languages": [
         "Javascript"
       ],
@@ -2336,9 +2343,9 @@
         "phone": "(703) 676-6699"
       },
       "date": {
-        "created": "08-10-2017",
-        "lastModified": "06-23-2017",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2017-08-10",
+        "lastModified": "2017-06-23",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -2355,7 +2362,7 @@
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "",
       "languages": [],
       "laborHours": 0,
       "tags": [
@@ -2367,9 +2374,9 @@
         "phone": "(919) 541-4828"
       },
       "date": {
-        "created": "02-07-2018",
-        "lastModified": "09-16-2015",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2018-02-07",
+        "lastModified": "2015-09-16",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -2433,9 +2440,9 @@
         "phone": "(703) 676-6699"
       },
       "date": {
-        "created": "10-25-2017",
-        "lastModified": "02-11-2016",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2017-10-25",
+        "lastModified": "2016-02-11",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -2468,9 +2475,9 @@
         "phone": "(401) 782-9655"
       },
       "date": {
-        "created": "03-27-2015",
-        "lastModified": "02-19-2014",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2015-03-27",
+        "lastModified": "2014-02-19",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -2501,9 +2508,9 @@
         "phone": "(703) 676-6699"
       },
       "date": {
-        "created": "11-22-2017",
-        "lastModified": "08-16-2017",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2017-11-22",
+        "lastModified": "2017-08-16",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -2536,9 +2543,9 @@
         "phone": "(703) 676-6699"
       },
       "date": {
-        "created": "04-04-2016",
-        "lastModified": "04-04-2016",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2016-04-04",
+        "lastModified": "2016-04-04",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -2555,7 +2562,7 @@
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "",
       "languages": [],
       "laborHours": 0,
       "tags": [
@@ -2589,7 +2596,7 @@
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "",
       "languages": [],
       "laborHours": 0,
       "tags": [
@@ -2603,9 +2610,9 @@
         "phone": "(513) 569-7451"
       },
       "date": {
-        "created": "09-26-2017",
-        "lastModified": "09-26-2017",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2017-09-26",
+        "lastModified": "2017-09-26",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -2636,9 +2643,9 @@
         "phone": "(513) 569-7682"
       },
       "date": {
-        "created": "01-23-2018",
-        "lastModified": "09-13-2017",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2018-01-23",
+        "lastModified": "2017-09-13",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -2667,9 +2674,9 @@
       ],
       "contact": {},
       "date": {
-        "created": "07-11-2016",
-        "lastModified": "07-11-2016",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2016-07-11",
+        "lastModified": "2016-07-11",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -2826,9 +2833,9 @@
         "phone": "(202) 566-1252"
       },
       "date": {
-        "created": "02-20-2017",
-        "lastModified": "02-24-2017",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2017-02-20",
+        "lastModified": "2017-02-24",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -2895,9 +2902,9 @@
         "phone": "(202) 566-0419"
       },
       "date": {
-        "created": "01-09-2018",
-        "lastModified": "11-15-2016",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2018-01-09",
+        "lastModified": "2016-11-15",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -2907,28 +2914,28 @@
       "usageType": "openSource",
       "permissions": {
         "licenses": [
-          {
-            "name": "Creative Commons Zero (CC0)",
-            "URL": "https://path.to/license"
-          }
+          {}
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "https://github.com/USEPA/CompTox-Virtual-Tissues-ml-organ-tox",
       "languages": [
         "Python"
       ],
       "laborHours": 0,
-      "tags": [],
+      "tags": [
+        "comptox",
+        "tissues"
+      ],
       "contact": {
         "name": "Imran Shah",
         "email": "Shah.Imran@epa.gov",
         "phone": "(919) 541-1391"
       },
       "date": {
-        "created": "01-24-2018",
-        "lastModified": "08-02-2017",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2018-01-24",
+        "lastModified": "2017-08-02",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -2938,28 +2945,29 @@
       "usageType": "openSource",
       "permissions": {
         "licenses": [
-          {
-            "name": "Creative Commons Zero (CC0)",
-            "URL": "https://path.to/license"
-          }
+          {}
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "https://github.com/USEPA/CompTox-Sustainable-Chemistry-tippingpoint-ehp-2016",
       "languages": [
         "Python"
       ],
       "laborHours": 0,
-      "tags": [],
+      "tags": [
+        "comptox",
+        "analysis",
+        "sustainable"
+      ],
       "contact": {
         "name": "Imran Shah",
         "email": "Shah.Imran@epa.gov",
         "phone": "(919) 541-1391"
       },
       "date": {
-        "created": "10-19-2017",
-        "lastModified": "08-18-2015",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2017-10-19",
+        "lastModified": "2015-08-18",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -2969,26 +2977,25 @@
       "usageType": "openSource",
       "permissions": {
         "licenses": [
-          {
-            "name": "Creative Commons Zero (CC0)",
-            "URL": "https://path.to/license"
-          }
+          {}
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "https://github.com/USEPA/epa_r_workshop_2017",
       "languages": [],
       "laborHours": 0,
-      "tags": [],
+      "tags": [
+        "r"
+      ],
       "contact": {
         "name": "Jeff Hollister",
         "email": "Hollister.Jeff@epa.gov",
         "phone": "(401) 782-9655"
       },
       "date": {
-        "created": "01-23-2018",
-        "lastModified": "05-04-2017",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2018-01-23",
+        "lastModified": "2017-05-04",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -2998,26 +3005,26 @@
       "usageType": "openSource",
       "permissions": {
         "licenses": [
-          {
-            "name": "Creative Commons Zero (CC0)",
-            "URL": "https://path.to/license"
-          }
+          {}
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "https://github.com/USEPA/lakemorpho_manuscript",
       "languages": [],
       "laborHours": 0,
-      "tags": [],
+      "tags": [
+        "lakemorpho",
+        "manuscript"
+      ],
       "contact": {
         "name": "Jeff Hollister",
         "email": "Hollister.Jeff@epa.gov",
         "phone": "(401) 782-9655"
       },
       "date": {
-        "created": "01-03-2018",
-        "lastModified": "09-09-2016",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2018-01-03",
+        "lastModified": "2016-09-09",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -3034,7 +3041,7 @@
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "",
       "languages": [],
       "laborHours": 0,
       "tags": [
@@ -3047,38 +3054,38 @@
         "phone": "(202) 566-0419"
       },
       "date": {
-        "created": "12-01-2016",
-        "lastModified": "09-27-2014",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2016-12-01",
+        "lastModified": "2014-09-27",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
       "organization": "ORD",
       "name": "CompTox-cellprofiler",
-      "description": "",
+      "description": "Cell profiler",
       "usageType": "openSource",
       "permissions": {
         "licenses": [
-          {
-            "name": "Creative Commons Zero (CC0)",
-            "URL": "https://path.to/license"
-          }
+          {}
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "https://github.com/USEPA/CompTox-cellprofiler",
       "languages": [],
       "laborHours": 0,
-      "tags": [],
+      "tags": [
+        "comptox",
+        "profiler"
+      ],
       "contact": {
         "name": "Imran Shah",
         "email": "Shah.Imran@epa.gov",
         "phone": "(919) 541-1391"
       },
       "date": {
-        "created": "10-31-2017",
-        "lastModified": "10-31-2017",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2017-10-31",
+        "lastModified": "2017-09-21",
+        "metadataLastUpdated": "2018-03-09"
       }
     },
     {
@@ -3088,17 +3095,17 @@
       "usageType": "openSource",
       "permissions": {
         "licenses": [
-          {
-            "name": "Creative Commons Zero (CC0)",
-            "URL": "https://path.to/license"
-          }
+          {}
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "https://github.com/USEPA/CompTox-ToxCast-EDSPsteroidogenesis",
       "languages": [],
       "laborHours": 0,
-      "tags": [],
+      "tags": [
+        "comptox",
+        "r"
+      ],
       "contact": {
         "name": "Derik Haggard",
         "email": "Haggard.Derik@epa.gov",
@@ -3117,26 +3124,25 @@
       "usageType": "openSource",
       "permissions": {
         "licenses": [
-          {
-            "name": "Creative Commons Zero (CC0)",
-            "URL": "https://path.to/license"
-          }
+          {}
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "https://github.com/USEPA/CompTox-ExpoCast-httk",
       "languages": [],
       "laborHours": 0,
-      "tags": [],
+      "tags": [
+        "comptox"
+      ],
       "contact": {
         "name": "Lico Galindo",
         "email": "galindo.lico@epa.gov",
         "phone": "(202) 566-1252"
       },
       "date": {
-        "created": "09-26-2017",
-        "lastModified": "09-26-2017",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2017-09-26",
+        "lastModified": "2017-09-26",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -3153,7 +3159,7 @@
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "",
       "languages": [
         "Python"
       ],
@@ -3165,9 +3171,9 @@
         "phone": "(757) 201-8188"
       },
       "date": {
-        "created": "06-27-2017",
-        "lastModified": "07-15-2015",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2017-06-27",
+        "lastModified": "2015-07-15",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -3184,7 +3190,7 @@
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "",
       "languages": [],
       "laborHours": 0,
       "tags": [],
@@ -3194,9 +3200,9 @@
         "phone": "(401) 782-9655"
       },
       "date": {
-        "created": "04-13-2016",
-        "lastModified": "04-07-2016",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2016-04-13",
+        "lastModified": "2016-04-07",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -3228,9 +3234,9 @@
         "phone": "(513) 569-7559"
       },
       "date": {
-        "created": "06-25-2015",
-        "lastModified": "07-11-2012",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2015-06-25",
+        "lastModified": "2012-07-11",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -3247,7 +3253,7 @@
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "",
       "languages": [],
       "laborHours": 0,
       "tags": [],
@@ -3276,7 +3282,7 @@
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "",
       "languages": [],
       "laborHours": 0,
       "tags": [
@@ -3297,26 +3303,26 @@
       "usageType": "openSource",
       "permissions": {
         "licenses": [
-          {
-            "name": "Creative Commons Zero (CC0)",
-            "URL": "https://path.to/license"
-          }
+          {}
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "https://github.com/USEPA/EPA_GeoPlatform_Dashboard",
       "languages": [],
       "laborHours": 0,
-      "tags": [],
+      "tags": [
+        "geospatial",
+        "datasets"
+      ],
       "contact": {
         "name": "David Yarnell",
         "email": "Yarnell.David@epa.gov",
         "phone": "(208) 610-9981"
       },
       "date": {
-        "created": "01-19-2017",
-        "lastModified": "01-19-2017",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2017-01-19",
+        "lastModified": "2017-01-19",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -3349,9 +3355,9 @@
         "phone": "(000) 000-0000"
       },
       "date": {
-        "created": "03-25-2014",
-        "lastModified": "03-25-2014",
-        "metadataLastUpdated": "12-01-2017"
+        "created": "2014-03-25",
+        "lastModified": "2014-03-25",
+        "metadataLastUpdated": "2017-12-01"
       }
     },
     {
@@ -3368,7 +3374,7 @@
         ],
         "exemptionText": null
       },
-      "repositoryURL": null,
+      "repositoryURL": "",
       "languages": [],
       "laborHours": 0,
       "tags": [

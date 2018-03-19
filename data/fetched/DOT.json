@@ -17,6 +17,9 @@
             "name": "null"
           }
         ],
+        "languages": [
+          "PHP"
+        ],
         "usageType": "openSource",
         "exemptiontext": "null"
       },
@@ -43,6 +46,9 @@
             "URL": "",
             "name": "null"
           }
+        ],
+        "languages": [
+          "PHP"
         ],
         "usageType": "openSource",
         "exemptiontext": "null"
@@ -71,6 +77,9 @@
             "name": "null"
           }
         ],
+        "languages": [
+          "PHP"
+        ],
         "usageType": "openSource",
         "exemptiontext": "null"
       },
@@ -97,6 +106,9 @@
             "URL": "",
             "name": "null"
           }
+        ],
+        "languages": [
+          "PHP"
         ],
         "usageType": "openSource",
         "exemptiontext": "null"
@@ -125,6 +137,9 @@
             "name": "null"
           }
         ],
+        "languages": [
+          "PHP"
+        ],
         "usageType": "openSource",
         "exemptiontext": "null"
       },
@@ -151,6 +166,9 @@
             "URL": "",
             "name": "null"
           }
+        ],
+        "languages": [
+          "PHP"
         ],
         "usageType": "openSource",
         "exemptiontext": "null"
@@ -179,6 +197,9 @@
             "name": "null"
           }
         ],
+        "languages": [
+          "PHP"
+        ],
         "usageType": "openSource",
         "exemptiontext": "null"
       },
@@ -205,6 +226,9 @@
             "URL": "",
             "name": "null"
           }
+        ],
+        "languages": [
+          "PHP"
         ],
         "usageType": "openSource",
         "exemptiontext": "null"
@@ -233,6 +257,9 @@
             "name": "null"
           }
         ],
+        "languages": [
+          "PHP"
+        ],
         "usageType": "openSource",
         "exemptiontext": "null"
       },
@@ -259,6 +286,9 @@
             "URL": "",
             "name": "null"
           }
+        ],
+        "languages": [
+          "PHP"
         ],
         "usageType": "openSource",
         "exemptiontext": "null"
@@ -287,6 +317,9 @@
             "name": "null"
           }
         ],
+        "languages": [
+          "PHP"
+        ],
         "usageType": "openSource",
         "exemptiontext": "null"
       },
@@ -313,6 +346,9 @@
             "URL": "",
             "name": "null"
           }
+        ],
+        "languages": [
+          "PHP"
         ],
         "usageType": "openSource",
         "exemptiontext": "null"
@@ -341,6 +377,9 @@
             "name": "null"
           }
         ],
+        "languages": [
+          "PHP"
+        ],
         "usageType": "openSource",
         "exemptiontext": "null"
       },
@@ -367,6 +406,9 @@
             "URL": "",
             "name": "null"
           }
+        ],
+        "languages": [
+          "PHP"
         ],
         "usageType": "openSource",
         "exemptiontext": "null"
@@ -395,6 +437,7 @@
             "name": "null"
           }
         ],
+        "languages": null,
         "usageType": "openSource",
         "exemptiontext": "null"
       },
@@ -422,6 +465,7 @@
             "name": "null"
           }
         ],
+        "languages": null,
         "usageType": "openSource",
         "exemptiontext": "null"
       },
@@ -449,6 +493,7 @@
             "name": "null"
           }
         ],
+        "languages": null,
         "usageType": "openSource",
         "exemptiontext": "null"
       },
@@ -475,6 +520,10 @@
             "URL": "",
             "name": "Oracle PL/SQL, Oracle Developer"
           }
+        ],
+        "languages": [
+          "Oracle PL/SQL",
+          "Oracle Developer"
         ],
         "usageType": "openSource",
         "exemptiontext": "null"
@@ -503,6 +552,9 @@
             "name": "Microsoft"
           }
         ],
+        "languages": [
+          "Microsoft"
+        ],
         "usageType": "exemptByAgencySystem",
         "exemptiontext": "System used to support the internal operations of the agency."
       },
@@ -530,6 +582,9 @@
             "name": "Microsoft"
           }
         ],
+        "languages": [
+          "Microsoft"
+        ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "System containing information and business logic of FTA's stakeholders supports the agency's mission."
       },
@@ -556,6 +611,9 @@
             "URL": "",
             "name": "Microsoft"
           }
+        ],
+        "languages": [
+          "Microsoft"
         ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "System containing information and business logic of FTA's stakeholders supports the agency's mission."
@@ -587,6 +645,9 @@
             "name": "Microsoft"
           }
         ],
+        "languages": [
+          "Microsoft"
+        ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "System containing information and business logic of FTA's stakeholders supports the agency's mission."
       },
@@ -617,6 +678,9 @@
             "name": "Microsoft"
           }
         ],
+        "languages": [
+          "Microsoft"
+        ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "System containing information and business logic of FTA's stakeholders supports the agency's mission."
       },
@@ -638,7 +702,7 @@
     {
       "name": "Contact Us Tool (CUT) - Admin",
       "organization": "FTA",
-      "description": "Web-based application that provides timely responses to inquiries submitted through FTA�s public website. The tool measures FTA�s responsiveness and promotes accountability of FTA staff.  This is for Admin staff.",
+      "description": "Web-based application that provides timely responses to inquiries submitted through FTA’s public website. The tool measures FTA’s responsiveness and promotes accountability of FTA staff.  This is for Admin staff.",
       "repositoryURL": "http://ftanet.ad.dot.gov/ContactUsToolAdmin/",
       "permissions": {
         "licenses": [
@@ -646,6 +710,9 @@
             "URL": "",
             "name": "Microsoft"
           }
+        ],
+        "languages": [
+          "Microsoft"
         ],
         "usageType": "exemptByAgencySystem",
         "exemptiontext": "System used to support the internal operations of the agency."
@@ -668,7 +735,7 @@
     {
       "name": "Contact Us Tool (CUT) - Public",
       "organization": "FTA",
-      "description": "Web-based application that provides timely responses to inquiries submitted through FTA�s public website. The tool measures FTA�s responsiveness and promotes accountability of FTA staff.  This is for the public. ",
+      "description": "Web-based application that provides timely responses to inquiries submitted through FTA’s public website. The tool measures FTA’s responsiveness and promotes accountability of FTA staff.  This is for the public. ",
       "repositoryURL": "https://ftawebprod.fta.dot.gov/ContactUsTool/Public/FAQs.aspx",
       "permissions": {
         "licenses": [
@@ -676,6 +743,9 @@
             "URL": "",
             "name": "Microsoft"
           }
+        ],
+        "languages": [
+          "Microsoft"
         ],
         "usageType": "exemptByAgencySystem",
         "exemptiontext": "System used to support the internal operations of the agency."
@@ -707,6 +777,9 @@
             "name": "Microsoft"
           }
         ],
+        "languages": [
+          "Microsoft"
+        ],
         "usageType": "exemptByAgencySystem",
         "exemptiontext": "System used to support the internal operations of the agency."
       },
@@ -736,6 +809,9 @@
             "URL": "",
             "name": "Microsoft"
           }
+        ],
+        "languages": [
+          "Microsoft"
         ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "System containing information and business logic of FTA's stakeholders supports the agency's mission."
@@ -767,6 +843,9 @@
             "name": "Microsoft"
           }
         ],
+        "languages": [
+          "Microsoft"
+        ],
         "usageType": "exemptByAgencySystem",
         "exemptiontext": "System used to support the internal operations of the agency."
       },
@@ -796,6 +875,9 @@
             "URL": "",
             "name": "Microsoft"
           }
+        ],
+        "languages": [
+          "Microsoft"
         ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "System containing information and business logic of FTA's stakeholders supports the agency's mission."
@@ -827,6 +909,9 @@
             "name": "Open Source"
           }
         ],
+        "languages": [
+          "Open Source"
+        ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "System containing information and business logic of FTA's stakeholders supports the agency's mission."
       },
@@ -856,6 +941,9 @@
             "URL": "",
             "name": "Microsoft"
           }
+        ],
+        "languages": [
+          "Microsoft"
         ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "System containing information and business logic of FTA's stakeholders supports the agency's mission."
@@ -887,6 +975,9 @@
             "name": "Microsoft"
           }
         ],
+        "languages": [
+          "Microsoft"
+        ],
         "usageType": "exemptByAgencySystem",
         "exemptiontext": "System used to support the internal operations of the agency."
       },
@@ -916,6 +1007,9 @@
             "URL": "",
             "name": "Appian Cloud licensing package"
           }
+        ],
+        "languages": [
+          "Appian Cloud licensing package"
         ],
         "usageType": "openSource",
         "exemptiontext": "null"
@@ -947,6 +1041,9 @@
             "name": "Appian Cloud licensing package"
           }
         ],
+        "languages": [
+          "Appian Cloud licensing package"
+        ],
         "usageType": "openSource",
         "exemptiontext": "null"
       },
@@ -976,6 +1073,9 @@
             "URL": "",
             "name": "Serena Licensing"
           }
+        ],
+        "languages": [
+          "Serena Licensing"
         ],
         "usageType": "exemptByAgencySystem",
         "exemptiontext": "System used to support the internal operations of the agency."
@@ -1007,6 +1107,9 @@
             "name": "Appian"
           }
         ],
+        "languages": [
+          "Appian"
+        ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "System containing information and business logic of FTA's stakeholders supports the agency's mission."
       },
@@ -1036,6 +1139,9 @@
             "URL": "",
             "name": "Appian"
           }
+        ],
+        "languages": [
+          "Appian"
         ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "System containing information and business logic of FTA's stakeholders supports the agency's mission."
@@ -1067,6 +1173,9 @@
             "name": "Serena"
           }
         ],
+        "languages": [
+          "Serena"
+        ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "System containing information and business logic of FTA's stakeholders supports the agency's mission."
       },
@@ -1097,6 +1206,9 @@
             "name": "Drupal/PHP"
           }
         ],
+        "languages": [
+          "Drupal/PHP"
+        ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "System containing information and business logic of FTA's stakeholders supports the agency's mission."
       },
@@ -1118,7 +1230,7 @@
     {
       "name": "Change Tracking System (CTS/CMDB/IM)",
       "organization": "FTA",
-      "description": "Change Tracking System (CTS) is a web-based application FTA uses to review and adjudicate all Software Change Requests (SCRs) made to agency applications and Configuration Change Requests (CCRs) that relate to security, infrastructure, and network resources.?",
+      "description": "Change Tracking System (CTS) is a web-based application FTA uses to review and adjudicate all Software Change Requests (SCRs) made to agency applications and Configuration Change Requests (CCRs) that relate to security, infrastructure, and network resources.​",
       "repositoryURL": "https://www.transit.dot.gov/",
       "permissions": {
         "licenses": [
@@ -1126,6 +1238,9 @@
             "URL": "",
             "name": "Drupal/PHP"
           }
+        ],
+        "languages": [
+          "Drupal/PHP"
         ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "System containing information and business logic of FTA's stakeholders supports the agency's mission."
@@ -1157,6 +1272,10 @@
             "name": "Open Source"
           }
         ],
+        "languages": [
+          "C#",
+          "JavaScript"
+        ],
         "usageType": "exemptByAgencySystem",
         "exemptiontext": "Application built to support internal functions specific to internal resources"
       },
@@ -1186,6 +1305,10 @@
             "URL": "",
             "name": "Open Source"
           }
+        ],
+        "languages": [
+          "C#",
+          "JavaScript"
         ],
         "usageType": "exemptByAgencySystem",
         "exemptiontext": "Website for agency specific mission. Built using FRA CMS which has been made available for open source public consumption"
@@ -1217,6 +1340,10 @@
             "name": "Kendo UI"
           }
         ],
+        "languages": [
+          "C#",
+          "JavaScript"
+        ],
         "usageType": "openSource",
         "exemptiontext": "null"
       },
@@ -1243,6 +1370,10 @@
             "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
             "name": "Kendo UI"
           }
+        ],
+        "languages": [
+          "C#",
+          "JavaScript"
         ],
         "usageType": "openSource",
         "exemptiontext": "null"
@@ -1274,6 +1405,10 @@
             "name": "Kendo UI"
           }
         ],
+        "languages": [
+          "C#",
+          "JavaScript"
+        ],
         "usageType": "exemptByAgencySystem",
         "exemptiontext": "Website for FRA specific study and findings. Built using FRA CMS, which is available of ripen source public consumption."
       },
@@ -1303,6 +1438,10 @@
             "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
             "name": "Kendo UI"
           }
+        ],
+        "languages": [
+          "C#",
+          "JavaScript"
         ],
         "usageType": "exemptByAgencySystem",
         "exemptiontext": "Website currently being redesigned in FRA CMS. Current site is outdated code, not ready for public consumption"
@@ -1334,6 +1473,10 @@
             "name": "Open Source"
           }
         ],
+        "languages": [
+          "C#",
+          "JavaScript"
+        ],
         "usageType": "exemptByAgencySystem",
         "exemptiontext": "Component of FRA CMS, not ready to be packaged as standalone application"
       },
@@ -1363,6 +1506,10 @@
             "URL": "",
             "name": "Open Source"
           }
+        ],
+        "languages": [
+          "C#",
+          "JavaScript"
         ],
         "usageType": "exemptByAgencySystem",
         "exemptiontext": "Component of FRA CMS, not ready to be packaged as standalone application"
@@ -1394,6 +1541,10 @@
             "name": "Open Source"
           }
         ],
+        "languages": [
+          "C#",
+          "JavaScript"
+        ],
         "usageType": "exemptByAgencySystem",
         "exemptiontext": "Component of FRA CMS, not ready to be packaged as standalone application"
       },
@@ -1423,6 +1574,9 @@
             "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
             "name": "Foxit PDF"
           }
+        ],
+        "languages": [
+          "Javascript"
         ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "Website for agency specific mission.Built using FRA CMS which has been made available for open source public consumption"
@@ -1454,6 +1608,9 @@
             "name": "Kendo UI"
           }
         ],
+        "languages": [
+          "visual Basic"
+        ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "Dashboard for internal statistical analysis. Not built for public consumption."
       },
@@ -1483,6 +1640,10 @@
             "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
             "name": "Kendo UI"
           }
+        ],
+        "languages": [
+          "C#",
+          "JavaScript"
         ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "Dashboard for internal statistical analysis. Not built for public consumption."
@@ -1514,6 +1675,10 @@
             "name": "Kendo UI"
           }
         ],
+        "languages": [
+          "C#",
+          "JavaScript"
+        ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "Dashboard for internal statistical analysis. Not built for public consumption."
       },
@@ -1543,6 +1708,10 @@
             "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
             "name": "Kendo UI"
           }
+        ],
+        "languages": [
+          "C#",
+          "JavaScript"
         ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "Dashboard for internal statistical analysis. Not built for public consumption."
@@ -1574,6 +1743,10 @@
             "name": "Kendo UI"
           }
         ],
+        "languages": [
+          "C#",
+          "JavaScript"
+        ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "Tracker for internal project or action tracking. Not built for public consumption."
       },
@@ -1603,6 +1776,10 @@
             "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
             "name": "Kendo UI"
           }
+        ],
+        "languages": [
+          "C#",
+          "JavaScript"
         ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "Tracker for internal project or action tracking. Not built for public consumption."
@@ -1634,6 +1811,10 @@
             "name": "Kendo UI"
           }
         ],
+        "languages": [
+          "Objective-C",
+          "Android"
+        ],
         "usageType": "exemptByAgencySystem",
         "exemptiontext": "Mobile application code uses proprietary resources. Not developed for public consumption"
       },
@@ -1663,6 +1844,10 @@
             "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
             "name": "Kendo UI"
           }
+        ],
+        "languages": [
+          "C#",
+          "JavaScript"
         ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "Developed for internal use only."
@@ -1694,6 +1879,10 @@
             "name": "Kendo UI"
           }
         ],
+        "languages": [
+          "C#",
+          "JavaScript"
+        ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "Application contains data proprietary to FRA"
       },
@@ -1723,6 +1912,10 @@
             "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
             "name": "Kendo UI"
           }
+        ],
+        "languages": [
+          "C#",
+          "JavaScript"
         ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "Application not intended for public consumption."
@@ -1754,6 +1947,10 @@
             "name": "Kendo UI"
           }
         ],
+        "languages": [
+          "C#",
+          "JavaScript"
+        ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "Application designed for reporting on FRA specific actions"
       },
@@ -1783,6 +1980,10 @@
             "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
             "name": "Kendo UI"
           }
+        ],
+        "languages": [
+          "C#",
+          "JavaScript"
         ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "Application in final phases of development. Highly specific to FRA mission"
@@ -1814,6 +2015,10 @@
             "name": "Kendo UI"
           }
         ],
+        "languages": [
+          "C#",
+          "JavaScript"
+        ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "Application designed for reporting on FRA specific actions"
       },
@@ -1843,6 +2048,10 @@
             "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
             "name": "Kendo UI"
           }
+        ],
+        "languages": [
+          "C#",
+          "JavaScript"
         ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "Application code specific to FRA organizational structure. Relies on commercial framework."
@@ -1874,6 +2083,10 @@
             "name": "Kendo UI"
           }
         ],
+        "languages": [
+          "C#",
+          "JavaScript"
+        ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "Application designed for reporting on FRA specific legal actions"
       },
@@ -1903,6 +2116,9 @@
             "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
             "name": "Kendo UI"
           }
+        ],
+        "languages": [
+          "Javascript"
         ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "Application specific to FRA resources and personnel"
@@ -1934,6 +2150,10 @@
             "name": "Open Source"
           }
         ],
+        "languages": [
+          "Javascript",
+          "HTML5"
+        ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "Application specific to FRA resources and personnel"
       },
@@ -1963,6 +2183,10 @@
             "URL": "",
             "name": "Open Source"
           }
+        ],
+        "languages": [
+          "Objective-C",
+          "Android"
         ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "Application specific to FRA regulation, resources and personnel"
@@ -1994,6 +2218,9 @@
             "name": "Oracle MySQL"
           }
         ],
+        "languages": [
+          "Visual Basic"
+        ],
         "usageType": "openSource",
         "exemptiontext": "null"
       },
@@ -2023,6 +2250,12 @@
             "URL": "",
             "name": "Oracle MySQL"
           }
+        ],
+        "languages": [
+          "Objective C",
+          "SQLite database",
+          ".NET",
+          "Oracle database"
         ],
         "usageType": "openSource",
         "exemptiontext": "null"
@@ -2054,6 +2287,10 @@
             "name": "Oracle MySQL"
           }
         ],
+        "languages": [
+          "Oracle Business Intelligence",
+          "Oracle 11G database"
+        ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission."
       },
@@ -2083,6 +2320,10 @@
             "URL": "",
             "name": "Oracle MySQL"
           }
+        ],
+        "languages": [
+          "Java",
+          "Oracle Database"
         ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission."
@@ -2114,6 +2355,11 @@
             "name": "Oracle MySQL"
           }
         ],
+        "languages": [
+          "Oracle Middleware",
+          "Oracle 11G database",
+          "ADF Java"
+        ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission."
       },
@@ -2144,6 +2390,11 @@
             "name": "Oracle MySQL"
           }
         ],
+        "languages": [
+          "Oracle Middleware",
+          "Oracle 11G database",
+          "ADF Java"
+        ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission."
       },
@@ -2170,6 +2421,9 @@
             "URL": "",
             "name": "Oracle MySQL"
           }
+        ],
+        "languages": [
+          "OBIE"
         ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission."
@@ -2198,6 +2452,10 @@
             "name": "Oracle MySQL"
           }
         ],
+        "languages": [
+          "Java",
+          "Oracle 11G database"
+        ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission."
       },
@@ -2224,6 +2482,11 @@
             "URL": "",
             "name": "Oracle MySQL"
           }
+        ],
+        "languages": [
+          "Oracle Middleware",
+          "Oracle 11G database",
+          "ADF Java"
         ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission."
@@ -2252,6 +2515,11 @@
             "name": "Oracle MySQL"
           }
         ],
+        "languages": [
+          "Oracle Middleware",
+          "Oracle 11G database",
+          "ADF Java"
+        ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission."
       },
@@ -2278,6 +2546,11 @@
             "URL": "",
             "name": "null"
           }
+        ],
+        "languages": [
+          "Microsoft ASP",
+          ".NET web services",
+          "SQL 2005 database"
         ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission."
@@ -2306,6 +2579,11 @@
             "name": "Oracle MySQL"
           }
         ],
+        "languages": [
+          "Oracle Middleware",
+          "Oracle 11G database",
+          "ADF Java"
+        ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission."
       },
@@ -2332,6 +2610,11 @@
             "URL": "",
             "name": "Oracle MySQL"
           }
+        ],
+        "languages": [
+          ".Net",
+          "Oracle database",
+          "emPower for workflow"
         ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission."
@@ -2360,6 +2643,11 @@
             "name": "Oracle MySQL"
           }
         ],
+        "languages": [
+          ".Net",
+          "Oracle database",
+          "emPower for workflow"
+        ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission."
       },
@@ -2386,6 +2674,11 @@
             "URL": "",
             "name": "Oracle MySQL"
           }
+        ],
+        "languages": [
+          "Oracle Middleware",
+          "Oracle 11G database",
+          "ADF Java"
         ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission."
@@ -2414,6 +2707,11 @@
             "name": "Oracle MySQL"
           }
         ],
+        "languages": [
+          "Oracle Middleware",
+          "Oracle 11G database",
+          "ADF Java"
+        ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission."
       },
@@ -2440,6 +2738,10 @@
             "URL": "",
             "name": "Oracle MySQL"
           }
+        ],
+        "languages": [
+          "ArcGIS",
+          "Oracle database"
         ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission."
@@ -2468,6 +2770,10 @@
             "name": "Oracle MySQL"
           }
         ],
+        "languages": [
+          "ArcGIS",
+          "Oracle database"
+        ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission."
       },
@@ -2494,6 +2800,11 @@
             "URL": "",
             "name": "Oracle MySQL"
           }
+        ],
+        "languages": [
+          "Java",
+          "Spring DAO",
+          "Oracle 11G database"
         ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission."
@@ -2522,6 +2833,11 @@
             "name": "Oracle MySQL"
           }
         ],
+        "languages": [
+          "Oracle Middleware",
+          "Oracle 11G database",
+          "ADF Java"
+        ],
         "usageType": "exemptByAgencyMission",
         "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission."
       },
@@ -2548,6 +2864,10 @@
             "URL": "",
             "name": "null"
           }
+        ],
+        "languages": [
+          ".Net",
+          "Csharp"
         ],
         "usageType": "openSource",
         "exemptiontext": "null"
@@ -2576,6 +2896,10 @@
             "name": "null"
           }
         ],
+        "languages": [
+          ".Net",
+          "Csharp"
+        ],
         "usageType": "openSource",
         "exemptiontext": "null"
       },
@@ -2602,6 +2926,11 @@
             "URL": "",
             "name": "null"
           }
+        ],
+        "languages": [
+          "PHP",
+          "JavaScript",
+          "HTML5"
         ],
         "usageType": "openSource",
         "exemptiontext": "null"
@@ -2630,6 +2959,12 @@
             "name": "null"
           }
         ],
+        "languages": [
+          "Javascript",
+          "HTML5",
+          "Entity Framework",
+          ".Net"
+        ],
         "usageType": "openSource",
         "exemptiontext": "null"
       },
@@ -2656,6 +2991,12 @@
             "URL": "",
             "name": "null"
           }
+        ],
+        "languages": [
+          "Javascript",
+          "HTML5",
+          "Entity Framework",
+          ".Net"
         ],
         "usageType": "openSource",
         "exemptiontext": "null"
@@ -2687,6 +3028,12 @@
             "name": "null"
           }
         ],
+        "languages": [
+          "Javascript",
+          "HTML5",
+          "Entity Framework",
+          ".Net"
+        ],
         "usageType": "openSource",
         "exemptiontext": "null"
       },
@@ -2716,6 +3063,12 @@
             "URL": "",
             "name": "null"
           }
+        ],
+        "languages": [
+          "Javascript",
+          "HTML5",
+          "Entity Framework",
+          ".Net"
         ],
         "usageType": "openSource",
         "exemptiontext": "null"
@@ -2747,6 +3100,12 @@
             "name": "null"
           }
         ],
+        "languages": [
+          "Javascript",
+          "HTML5",
+          "Entity Framework",
+          ".Net"
+        ],
         "usageType": "openSource",
         "exemptiontext": "null"
       },
@@ -2776,6 +3135,10 @@
             "URL": "",
             "name": "null"
           }
+        ],
+        "languages": [
+          ".Net",
+          "Csharp"
         ],
         "usageType": "openSource",
         "exemptiontext": "null"
@@ -2807,6 +3170,10 @@
             "name": "null"
           }
         ],
+        "languages": [
+          ".Net",
+          "Csharp"
+        ],
         "usageType": "openSource",
         "exemptiontext": "null"
       },
@@ -2837,6 +3204,10 @@
             "name": "null"
           }
         ],
+        "languages": [
+          ".Net",
+          "Csharp"
+        ],
         "usageType": "openSource",
         "exemptiontext": "null"
       },
@@ -2863,6 +3234,10 @@
             "URL": "",
             "name": "null"
           }
+        ],
+        "languages": [
+          ".Net",
+          "Csharp"
         ],
         "usageType": "openSource",
         "exemptiontext": "null"
@@ -2894,6 +3269,10 @@
             "name": "null"
           }
         ],
+        "languages": [
+          ".Net",
+          "Csharp"
+        ],
         "usageType": "openSource",
         "exemptiontext": "null"
       },
@@ -2924,6 +3303,10 @@
             "name": "null"
           }
         ],
+        "languages": [
+          ".Net",
+          "Csharp"
+        ],
         "usageType": "openSource",
         "exemptiontext": "null"
       },
@@ -2950,6 +3333,10 @@
             "URL": "",
             "name": "null"
           }
+        ],
+        "languages": [
+          ".Net",
+          "Csharp"
         ],
         "usageType": "openSource",
         "exemptiontext": "null"
@@ -2978,6 +3365,10 @@
             "name": "null"
           }
         ],
+        "languages": [
+          ".Net",
+          "Csharp"
+        ],
         "usageType": "openSource",
         "exemptiontext": "null"
       },
@@ -3005,6 +3396,11 @@
             "name": "null"
           }
         ],
+        "languages": [
+          ".Net",
+          "Csharp",
+          "Angular JS"
+        ],
         "usageType": "openSource",
         "exemptiontext": "null"
       },
@@ -3031,6 +3427,9 @@
             "URL": "",
             "name": "null"
           }
+        ],
+        "languages": [
+          ".Net"
         ],
         "usageType": "openSource",
         "exemptiontext": "null"
@@ -3062,6 +3461,9 @@
             "name": "null"
           }
         ],
+        "languages": [
+          ".Net"
+        ],
         "usageType": "openSource",
         "exemptiontext": "null"
       },
@@ -3092,6 +3494,9 @@
             "name": "null"
           }
         ],
+        "languages": [
+          ".Net"
+        ],
         "usageType": "governmentWideReuse",
         "exemptiontext": "null"
       },
@@ -3119,6 +3524,9 @@
             "name": "null"
           }
         ],
+        "languages": [
+          ".Net"
+        ],
         "usageType": "governmentWideReuse",
         "exemptiontext": "null"
       },
@@ -3140,7 +3548,7 @@
     {
       "name": "SISAME/discontinued",
       "organization": "NHTSA",
-      "description": "NHTSA funded the development of the SISAME program starting in the late 1980�s until the mid 2000�s.  This program provides a very unique capability for mass/spring multibody model extraction from test data.   NHTSA has discontinued support or development for the SISAME program",
+      "description": "NHTSA funded the development of the SISAME program starting in the late 1980’s until the mid 2000’s.  This program provides a very unique capability for mass/spring multibody model extraction from test data.   NHTSA has discontinued support or development for the SISAME program",
       "repositoryURL": "http://www.nhtsa.gov/Research/SISAME-Software-&-Documentation-Downloads",
       "permissions": {
         "licenses": [
@@ -3148,6 +3556,9 @@
             "URL": "",
             "name": "null"
           }
+        ],
+        "languages": [
+          ".Net"
         ],
         "usageType": "openSource",
         "exemptiontext": "null"
@@ -3170,7 +3581,7 @@
     {
       "name": "vPIC-List",
       "organization": "NHTSA",
-      "description": "The NHTSA Product Information Catalog and Vehicle Listing (vPIC) is a consolidated platform that presents data collected within the manufacturer reported data from CFR 49 Parts 551 � 574 for use in a variety of modern tools. NHTSA�s vPIC platform is intended to serve as a centralized source for basic Vehicle Identification Number (VIN) decoding, Manufacturer Information Database (MID), Manufacturer Equipment Plant Identification and associated data.  vPIC is primarily intended for use on Model Years 1995 forward. Data prior to 1995 may be available depending on the manufacturer, which is based on submittals received by NHTSA. This includes passenger vehicles, trucks, buses, trailers / trailer kits, incomplete vehicles, low speed vehicles and motorcycles to name a few as the primary categories. Vehicles within these major categories are further defined by the details provided by the manufacturers in accordance to reporting standards of CFR 49 Part 565 and 566.",
+      "description": "The NHTSA Product Information Catalog and Vehicle Listing (vPIC) is a consolidated platform that presents data collected within the manufacturer reported data from CFR 49 Parts 551 – 574 for use in a variety of modern tools. NHTSA’s vPIC platform is intended to serve as a centralized source for basic Vehicle Identification Number (VIN) decoding, Manufacturer Information Database (MID), Manufacturer Equipment Plant Identification and associated data.  vPIC is primarily intended for use on Model Years 1995 forward. Data prior to 1995 may be available depending on the manufacturer, which is based on submittals received by NHTSA. This includes passenger vehicles, trucks, buses, trailers / trailer kits, incomplete vehicles, low speed vehicles and motorcycles to name a few as the primary categories. Vehicles within these major categories are further defined by the details provided by the manufacturers in accordance to reporting standards of CFR 49 Part 565 and 566.",
       "repositoryURL": "https://vpic.nhtsa.dot.gov/",
       "permissions": {
         "licenses": [
@@ -3179,8 +3590,13 @@
             "name": "null"
           }
         ],
+        "languages": [
+          "MVC",
+          ".Net",
+          "Csharp"
+        ],
         "usageType": "openSource",
-        "exemptiontext": "Product contains sensitive business information that could not be released as a package within the application release.� As a result, any release of application information would require work to parse out what was not tied to the SBU data, which is not work within scope, cost and schedule of the project as it currently stands."
+        "exemptiontext": "null"
       },
       "tags": [
         "transportation",
@@ -3209,8 +3625,12 @@
             "name": "null"
           }
         ],
+        "languages": [
+          ".Net",
+          "Csharp"
+        ],
         "usageType": "openSource",
-        "exemptiontext": "Product is developed in .NET/SQL and requires a Windows / SQL Server.� Code could be packaged in a manner that is releasable by the investment, but would not be usable by a developer without the underlying database, data structure and logic within the applications to utilize the application component."
+        "exemptiontext": "null"
       },
       "tags": [
         "transportation",
@@ -3239,8 +3659,12 @@
             "name": "null"
           }
         ],
+        "languages": [
+          ".Net",
+          "Csharp"
+        ],
         "usageType": "openSource",
-        "exemptiontext": "Product does not exist as a developed application;  Listed in error;  A part of an application (CISSWeb) and is an implementation of a COTS product that is managed by Mi-Co Corporation"
+        "exemptiontext": "null"
       },
       "tags": [
         "transportation",
@@ -3258,16 +3682,19 @@
       }
     },
     {
-      "name": "Intelligent Transportation Systems Operational Data Environment (ITS ODE)",
+      "name": "Intelligent Transportation Systems Public Data Hub",
       "organization": "FHWA",
-      "description": "The ITS ODE is a real-time virtual data router that ingests and processes operational data from various connected devices � including vehicles, infrastructure, and traffic management centers � and distributes it to other devices and subscribing transportation management applications. Using the ITS ODE within intelligent transportation deployments increases data fluidity and interoperability while meeting operational needs and protecting user privacy. The software�s microservices architecture makes it easy to add new capabilities to meet local needs.",
-      "repositoryURL": "https://github.com/usdot-jpo-ode/jpo-ode",
+      "description": "The ITS Public Data Hub (available at www.its.dot.gov/data) provides a single point of entry to discover publicly available USDOT ITS research data. By providing access to these data, the USDOT aims to enable third-party research into the effectiveness of emerging ITS technologies, preliminary development of third-party applications, and harmonization of data across similar collections. ",
+      "repositoryURL": "https://github.com/usdot-its-jpo-data-portal/microsite/",
       "permissions": {
         "licenses": [
           {
-            "URL": "https://github.com/usdot-jpo-ode/jpo-ode/blob/develop/LICENSE",
+            "URL": "https://github.com/usdot-its-jpo-data-portal/microsite/blob/master/LICENSE.txt",
             "name": "Apache 2.0"
           }
+        ],
+        "languages": [
+          "Javascript"
         ],
         "usageType": "openSource",
         "exemptiontext": "null"
@@ -3288,6 +3715,44 @@
       }
     },
     {
+      "name": "Intelligent Transportation Systems Operational Data Environment (ITS ODE)",
+      "organization": "FHWA",
+      "description": "The ITS ODE is a real-time virtual data router that ingests and processes operational data from various connected devices – including vehicles, infrastructure, and traffic management centers – and distributes it to other devices and subscribing transportation management applications. Using the ITS ODE within intelligent transportation deployments increases data fluidity and interoperability while meeting operational needs and protecting user privacy. The software’s microservices architecture makes it easy to add new capabilities to meet local needs.",
+      "repositoryURL": "https://github.com/usdot-jpo-ode/jpo-ode",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/usdot-jpo-ode/jpo-ode/blob/develop/LICENSE",
+            "name": "Apache 2.0"
+          }
+        ],
+        "languages": [
+          "Java",
+          "C/C++",
+          "Python",
+          "Kafka",
+          "Docker"
+        ],
+        "usageType": "openSource",
+        "exemptiontext": "null"
+      },
+      "tags": [
+        "transportation",
+        "code",
+        "Connected Vehicles"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "james.lieu@dot.gov",
+        "name": "James Lieu",
+        "URL": "https://www.its.dot.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "38473"
+      }
+    },
+    {
       "name": "Crypto Service",
       "organization": "FHWA",
       "description": "A web service and windows app that encrypts and decrypts strings",
@@ -3299,35 +3764,9 @@
             "name": "Oracle"
           }
         ],
-        "usageType": "governmentWideReuse",
-        "exemptiontext": "null"
-      },
-      "tags": [
-        "transportation",
-        "code"
-      ],
-      "laborHours": 0,
-      "contact": {
-        "email": "james.lieu@dot.gov",
-        "name": "James Lieu",
-        "URL": "https://www.transportation.gov/",
-        "phone": "2023663000"
-      },
-      "date": {
-        "created": "38473"
-      }
-    },
-    {
-      "name": "eNEPA",
-      "organization": "FHWA",
-      "description": "Electronic NEPA collaboration support tool",
-      "repositoryURL": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
-      "permissions": {
-        "licenses": [
-          {
-            "URL": "",
-            "name": "SQL Server"
-          }
+        "languages": [
+          ".Net",
+          "Csharp"
         ],
         "usageType": "governmentWideReuse",
         "exemptiontext": "null"
@@ -3348,9 +3787,9 @@
       }
     },
     {
-      "name": "FOIA",
+      "name": "eNEPA",
       "organization": "FHWA",
-      "description": "Freedom Of Information Act System manages initial FOIA requests and appeals submitted by the general public.",
+      "description": "Electronic NEPA collaboration support tool",
       "repositoryURL": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
       "permissions": {
         "licenses": [
@@ -3358,6 +3797,10 @@
             "URL": "",
             "name": "SQL Server"
           }
+        ],
+        "languages": [
+          ".Net",
+          "Csharp"
         ],
         "usageType": "governmentWideReuse",
         "exemptiontext": "null"
@@ -3378,9 +3821,9 @@
       }
     },
     {
-      "name": "TFICS",
+      "name": "FOIA",
       "organization": "FHWA",
-      "description": "Transportation Fellows Interns and Contractor System provides interfaces for the individuals and for the educational institutions who are interested to apply for the scholarship and granting programs offering through DOT Office of HR.",
+      "description": "Freedom Of Information Act System manages initial FOIA requests and appeals submitted by the general public.",
       "repositoryURL": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
       "permissions": {
         "licenses": [
@@ -3388,6 +3831,10 @@
             "URL": "",
             "name": "SQL Server"
           }
+        ],
+        "languages": [
+          "C#",
+          "JavaScript"
         ],
         "usageType": "governmentWideReuse",
         "exemptiontext": "null"
@@ -3404,13 +3851,47 @@
         "phone": "2023663000"
       },
       "date": {
-        "created": "37803"
+        "created": "43223"
+      }
+    },
+    {
+      "name": "TFICS",
+      "organization": "FHWA",
+      "description": "Transportation Fellows Interns and Contractor System provides interfaces for the individuals and for the educational institutions who are interested to apply for the scholarship and granting programs offering through DOT Office of HR.",
+      "repositoryURL": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "SQL Server"
+          }
+        ],
+        "languages": [
+          "C#",
+          "JavaScript"
+        ],
+        "usageType": "governmentWideReuse",
+        "exemptiontext": "null"
+      },
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "james.lieu@dot.gov",
+        "name": "James Lieu",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "2015-26-2"
       }
     },
     {
       "name": "SFD",
       "organization": "FMSCA",
-      "description": "The SFD rulemaking is designed to enhance FMCSA�s ability to identify non-compliant motor carriers by using all available agency data",
+      "description": "The SFD rulemaking is designed to enhance FMCSA’s ability to identify non-compliant motor carriers by using all available agency data",
       "repositoryURL": "null",
       "permissions": {
         "licenses": [
@@ -3418,6 +3899,42 @@
             "URL": "",
             "name": "null"
           }
+        ],
+        "languages": [
+          "Java"
+        ],
+        "usageType": "governmentWideReuse",
+        "exemptiontext": "null"
+      },
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "richard.kim@dot.gov",
+        "name": "Richard Kim",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "37803"
+      }
+    },
+    {
+      "name": "D&ADB",
+      "organization": "FMSCA",
+      "description": "Drug and Alcohol Clearinghouse Database will be used to store and transfer information about drug and alcohol program violations and Alpha results",
+      "repositoryURL": "null",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "null"
+          }
+        ],
+        "languages": [
+          "Java"
         ],
         "usageType": "governmentWideReuse",
         "exemptiontext": "null"
@@ -3438,16 +3955,19 @@
       }
     },
     {
-      "name": "D&ADB",
+      "name": "ELD",
       "organization": "FMSCA",
-      "description": "Drug and Alcohol Clearinghouse Database will be used to store and transfer information about drug and alcohol program violations and Alpha results",
+      "description": "Enforcement tool to read and analyze Hours of Service data read from Electronic Logging Devices",
       "repositoryURL": "null",
       "permissions": {
         "licenses": [
           {
             "URL": "",
-            "name": "null"
+            "name": "Oracle, MS .Net Framework"
           }
+        ],
+        "languages": [
+          "Java"
         ],
         "usageType": "governmentWideReuse",
         "exemptiontext": "null"
@@ -3468,36 +3988,6 @@
       }
     },
     {
-      "name": "ELD",
-      "organization": "FMSCA",
-      "description": "Enforcement tool to read and analyze Hours of Service data read from Electronic Logging Devices",
-      "repositoryURL": "null",
-      "permissions": {
-        "licenses": [
-          {
-            "URL": "",
-            "name": "Oracle, MS .Net Framework"
-          }
-        ],
-        "usageType": "governmentWideReuse",
-        "exemptiontext": "null"
-      },
-      "tags": [
-        "transportation",
-        "code"
-      ],
-      "laborHours": 0,
-      "contact": {
-        "email": "richard.kim@dot.gov",
-        "name": "Richard Kim",
-        "URL": "https://www.transportation.gov/",
-        "phone": "2023663000"
-      },
-      "date": {
-        "created": "42064"
-      }
-    },
-    {
       "name": "Aviation Environmental Design Tool",
       "organization": "VOLPE",
       "description": "AEDT is a software system that models aircraft performance in space and time to estimate fuel consumption, emissions, noise, and air quality consequences. ",
@@ -3508,6 +3998,10 @@
             "URL": "",
             "name": "Null"
           }
+        ],
+        "languages": [
+          "C#",
+          "Python"
         ],
         "usageType": "openSource",
         "exemptiontext": "null"
@@ -3524,7 +4018,7 @@
         "phone": "2023663000"
       },
       "date": {
-        "created": "43435"
+        "created": "42064"
       }
     },
     {
@@ -3538,6 +4032,9 @@
             "URL": "",
             "name": "Null"
           }
+        ],
+        "languages": [
+          "Visual Basic for Applications"
         ],
         "usageType": "openSource",
         "exemptiontext": "null"
@@ -3569,6 +4066,10 @@
             "name": "null"
           }
         ],
+        "languages": [
+          "AWS Cloudfront",
+          "AWS MySQL"
+        ],
         "usageType": "exemptByCIO",
         "exemptiontext": "This code was not developed with the expectation that it would be released as Open Source. Preliminary review has identified operational procedures which if made public may expose FAA systems to cyber security attacks. Further review is required to fully analyze and mitigate any security issues which may result from making the code public. This review cannot be completed in the time remaining for the current release schedule."
       },
@@ -3599,8 +4100,46 @@
             "name": "null"
           }
         ],
+        "languages": [
+          "C#"
+        ],
         "usageType": "exemptByCIO",
         "exemptiontext": "This code was not developed with the expectation that it would be released as Open Source. Preliminary review has identified operational procedures which if made public may expose FAA systems to cyber security attacks. Further review is required to fully analyze and mitigate any security issues which may result from making the code public. This review cannot be completed in the time remaining for the current release schedule."
+      },
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "jonathan.beams@dot.gov",
+        "name": "Jonathan Beams",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "43435"
+      }
+    },
+    {
+      "name": "APRA",
+      "organization": "FAA",
+      "description": "Aeronautic Product Release API (APRA) provides the private sector greater access to core FAA data to spur more innovation in the aviation industry, and ultimately advance the FAA’s mission of safety in flight.  Based on stakeholder recommendations, this initiative’s first effort strived to provide both more data and better data for Aeronautical products and information. Solution Delivery developed and deployed web services for several aeronautical products including both information about those products and the ability to automatically download those products which satisfied one of the recommendations.",
+      "repositoryURL": "https://github.com/Federal-Aviation-Administration/APRA.git",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+            "name": "CC0"
+          }
+        ],
+        "languages": [
+          "Java",
+          "XML",
+          "JSON"
+        ],
+        "usageType": "openSource",
+        "exemptiontext": "null"
       },
       "tags": [
         "transportation",
@@ -3618,36 +4157,6 @@
       }
     },
     {
-      "name": "APRA",
-      "organization": "FAA",
-      "description": "Aeronautic Product Release API (APRA) provides the private sector greater access to core FAA data to spur more innovation in the aviation industry, and ultimately advance the FAA�s mission of safety in flight.  Based on stakeholder recommendations, this initiative�s first effort strived to provide both more data and better data for Aeronautical products and information. Solution Delivery developed and deployed web services for several aeronautical products including both information about those products and the ability to automatically download those products which satisfied one of the recommendations.",
-      "repositoryURL": "https://github.com/Federal-Aviation-Administration/APRA.git",
-      "permissions": {
-        "licenses": [
-          {
-            "URL": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
-            "name": "CC0"
-          }
-        ],
-        "usageType": "openSource",
-        "exemptiontext": "null"
-      },
-      "tags": [
-        "transportation",
-        "code"
-      ],
-      "laborHours": 0,
-      "contact": {
-        "email": "jonathan.beams@dot.gov",
-        "name": "Jonathan Beams",
-        "URL": "https://www.transportation.gov/",
-        "phone": "2023663000"
-      },
-      "date": {
-        "created": "41721"
-      }
-    },
-    {
       "name": "EDCS",
       "organization": "FAA",
       "description": "Enterprise Data Control Service - A set of common infrastructure services. Web based common access point.  Fully documented data history enabling trust .  Access control is documented and enforced - Enabled data resources have REST APIs that comply with documentation and dissemination control",
@@ -3658,6 +4167,12 @@
             "URL": "",
             "name": "null"
           }
+        ],
+        "languages": [
+          "ColdFusion",
+          "Java",
+          "MongoDB",
+          "Oracle"
         ],
         "usageType": "exemptByCIO",
         "exemptiontext": "This code was not developed with the expectation that it would be released as Open Source. Preliminary review has identified operational procedures which if made public may expose FAA systems to cyber security attacks. Further review is required to fully analyze and mitigate any security issues which may result from making the code public. This review cannot be completed in the time remaining for the current release schedule."
@@ -3674,7 +4189,7 @@
         "phone": "2023663000"
       },
       "date": {
-        "created": "42339"
+        "created": "41721"
       }
     }
   ]
