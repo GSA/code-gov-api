@@ -334,6 +334,14 @@
               "description": "Specify an offset to return",
               "required": false,
               "type": "number"
+            },
+            {
+              "name": "sort",
+              "in": "query",
+              "description": "Specify an sort by agency name",
+              "required": false,
+              "type": "string",
+              "enum": ["asc", "desc"]
             }
           ],
           "responses": {
