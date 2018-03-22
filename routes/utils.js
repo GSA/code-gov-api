@@ -20,7 +20,7 @@ function readStatusReportFile (config) {
   });
 }
 
-function readAgencyEndpointsFile (config) {
+function readAgencyMetadataFile (config) {
   return new Promise((resolve, reject) => {
     fs.readFile(config.AGENCY_ENDPOINTS_FILE, (err, data) => {
       if (err) {
@@ -52,7 +52,7 @@ function getAgencyTerms (searcher, options) {
 }
 
 function getAgencyData (searcher, config, logger, options) {
-  return readAgencyEndpointsFile(config).then(agenciesData => {
+  return readAgencyMetadataFile(config).then(agenciesData => {
     let agenciesDataHash = {agencyMetaData: {}};
     agenciesData.forEach((agencyData) => {
       agenciesDataHash.agencyMetaData[agencyData.acronym] = agencyData;
@@ -92,11 +92,11 @@ function getAgencyData (searcher, config, logger, options) {
       });
       agencies.sort((a,b) => {
         if (a.name < b.name)
-          return -1;
+          return options.sort === 'asc' ? -1 : 1;
         if (a.name > b.name)
-          return 1;
+          return options.sort === 'asc' ? 1 : -1;
         return 0;
-      })
+      });
       return agencies;
     });
 }
@@ -210,7 +210,7 @@ function getTerms(request, response, searcher) {
 }
 
 function getAgencies(request, searcher, config, logger) {
-  let options = _.pick(request.query, ["size", "from"]);
+  let options = _.pick(request.query, ["size", "from", "sort"]);
   options.agency = request.query.agency;
   return getAgencyData(searcher, config, logger, options)
     .then((agencies) => {
