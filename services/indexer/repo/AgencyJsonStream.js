@@ -68,13 +68,14 @@ class AgencyJsonStream extends Transform {
               `${errorMessage} ${agency.codeUrl} returned ${response.status} and
               Content-Type ${response.headers['Content-Type']}. Using fallback data for indexing.`);
 
+            Reporter.reportFallbackUsed(agency.acronym, true);
             return this._readFallbackData(agency, this.fallbackDir, agency.fallback_file);
           }
+          Reporter.reportFallbackUsed(agency.acronym, false);
           return response.text()
             .then(responseText => JSON.parse( responseText.replace(/^\uFEFF/, '') ));
         })
         .then(jsonData => {
-          Reporter.reportFallbackUsed(agency.acronym, false);
           this._saveFetchedCodeJson(agency.acronym, jsonData)
             .then(() => logger.info(`Saved fetched data for ${agency.acronym}`))
             .catch(error => logger.error(`Could not save fetched data for ${agency.acronym} - ${error}`));
@@ -115,48 +116,50 @@ class AgencyJsonStream extends Transform {
     let resultRepos = [];
     const repos = Utils.getCodeJsonRepos(codeJson);
 
-    if(!repos) {
-      return Promise.reject(`ERROR: ${agency.acronym} code.json has no projects or releaseEvents.`);
-    }
-
-    repos.map(repo => {
-      const repoId = Utils.transformStringToKey([agency.acronym, repo.organization, repo.name].join("_"));
-      const validator = getValidator(codeJson);
-
-      return validator.validateRepo(repo, agency, (error, results) => {
-        if(error) {
-          logger.debug(`Error validating repo with repoID ${repoId}.`);
-        }
-        if(results.issues) {
-          validationTotals.errors += results.issues.errors.length ? results.issues.errors.length : 0;
-          validationTotals.warnings += results.issues.warnings.length ? results.issues.warnings.length : 0;
-          validationTotals.enhancements += results.issues.enhancements.length ? results.issues.enhancements.length : 0;
-
-          Reporter.reportIssues(agency.acronym, results);
-        }
-        validator.cleaner(repo);
-        resultRepos.push(repo);
-      });
-    });
-
-    if(validationTotals.errors) {
-      totalErrors += validationTotals.errors;
-      reportDetails.push(`${validationTotals.errors} ERRORS`);
-    }
-    if(validationTotals.warnings) {
-      totalErrors += validationTotals.warnings;
-      reportDetails.push(`${validationTotals.warnings} WARNINGS`);
-    }
-
-    if(validationTotals.enhancements) {
-      reportDetails.push(`${validationTotals.enhancements} REQUESTED ENHANCEMENTS`);
-    }
-
-    if(totalErrors) {
-      reportString= "NOT FULLY COMPLIANT: ";
+    if(!repos || repos.length < 1) {
+      logger.error(`ERROR: ${agency.acronym} code.json has no projects or releaseEvents.`);
+      reportString = "NOT COMPLIANT: ";
+      reportDetails.push(`Agency has not releases/repositories published.`);
     } else {
-      agency.requirements.schemaFormat = 1;
-      reportString= "FULLY COMPLIANT: ";
+      repos.map(repo => {
+        const repoId = Utils.transformStringToKey([agency.acronym, repo.organization, repo.name].join("_"));
+        const validator = getValidator(codeJson);
+
+        return validator.validateRepo(repo, agency, (error, results) => {
+          if(error) {
+            logger.debug(`Error validating repo with repoID ${repoId}.`);
+          }
+          if(results.issues) {
+            validationTotals.errors += results.issues.errors.length ? results.issues.errors.length : 0;
+            validationTotals.warnings += results.issues.warnings.length ? results.issues.warnings.length : 0;
+            validationTotals.enhancements += results.issues.enhancements.length ? results.issues.enhancements.length : 0;
+
+            Reporter.reportIssues(agency.acronym, results);
+          }
+          validator.cleaner(repo);
+          resultRepos.push(repo);
+        });
+      });
+
+      if(validationTotals.errors) {
+        totalErrors += validationTotals.errors;
+        reportDetails.push(`${validationTotals.errors} ERRORS`);
+      }
+      if(validationTotals.warnings) {
+        totalErrors += validationTotals.warnings;
+        reportDetails.push(`${validationTotals.warnings} WARNINGS`);
+      }
+
+      if(validationTotals.enhancements) {
+        reportDetails.push(`${validationTotals.enhancements} REQUESTED ENHANCEMENTS`);
+      }
+
+      if(totalErrors) {
+        reportString= "NOT FULLY COMPLIANT: ";
+      } else {
+        agency.requirements.schemaFormat = 1;
+        reportString= "FULLY COMPLIANT: ";
+      }
     }
 
     reportString += reportDetails.join(", ");
