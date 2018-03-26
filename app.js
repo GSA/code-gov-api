@@ -42,7 +42,7 @@ if( config.ClOUD_GOV_SPACE && config.ClOUD_GOV_SPACE === 'prod') {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use('/api', express.static(path.join(__dirname, 'public')));
+app.use('/', express.static(path.join(__dirname, 'public')));
 app.use(cors());
 app.use(helmet());
 app.use(helmet.hsts({
