@@ -60,7 +60,7 @@ class RepoIndexer extends AbstractIndexer {
   }
 
   static init(adapter, config, callback) {
-    const indexer = new RepoIndexer(adapter, config.AGENCY_ENDPOINTS_FILE, config.FETCHED_DIR, 
+    const indexer = new RepoIndexer(adapter, config.AGENCY_ENDPOINTS_FILE, config.FETCHED_DIR,
       config.FALLBACK_DIR, ES_PARAMS);
 
     indexer.logger.info(`Started indexing (${indexer.esType}) indices.`);
@@ -115,10 +115,8 @@ class RepoIndexer extends AbstractIndexer {
           });
       },
       (response, next) => {
-        Reporter.writeReportToFile(config)
-          .then(response => {
-            next(null, response);
-          })
+        Reporter.indexReport()
+          .then(() => next(null, null))
           .catch(err => {
             indexer.logger.error(err);
           });
