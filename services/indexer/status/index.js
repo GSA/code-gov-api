@@ -31,6 +31,26 @@ class StatusIndexer extends AbstractIndexer {
           "id": idHash,
           "body": JSON.stringify(reporter.report)
         });
+      })
+      .then(() => {
+        this.client.indices.getAlias({
+          name: this.esAlias
+        }, (err, response, status)=> {
+          if(status) {
+            this.logger.debug(`Status: ${status}`);
+          }
+          return response;
+        });
+      })
+      .then((oldStatusIndez) => {
+        this.client.updateAliases({
+          body: {
+            actions: [
+              { remove: { index: oldStatusIndez, alias: this.esAlias } },
+              { add: { index: this.esIndex, alias: this.esAlias } }
+            ]
+          }
+        });
       });
   }
 }
