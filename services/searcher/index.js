@@ -429,6 +429,26 @@ class Searcher {
     });
   }
 
+  searchStatus(callback) {
+    logger.info("Status searching");
+
+    this.client.search({
+      index: 'statuses',
+      type: 'status'
+    }, (error, elasticSearchResponse) => {
+      if(error) {
+        logger.error(error);
+        return callback(error);
+      }
+      let statuses = Utils.omitPrivateKeys(
+        _.map(elasticSearchResponse.hits.hits, (hit) => {
+          return hit._source;
+        })
+      );
+      return callback(null,  { statuses });
+    });
+  }
+
 }
 
 module.exports = Searcher;
