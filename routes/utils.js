@@ -251,9 +251,13 @@ function getRepoJson(response) {
   response.json(repoJson["repo"]["properties"]);
 }
 
-function getStatusData(config){
-  return readStatusReportFile(config)
-    .then(statusData => statusData);
+function getStatusData (searcher){
+  searcher.searchStatus((error, statuses) => {
+    if(error) {
+      return Promise.reject(error);
+    }
+    return Promise.resolve(statuses);
+  });
 }
 
 function getVersion() {
