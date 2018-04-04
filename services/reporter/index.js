@@ -72,9 +72,10 @@ class Reporter {
     this.report.statuses[itemName]["wasFallbackUsed"] = wasFallbackUsed;
   }
 
-  indexReport() {
+  indexReport(index) {
     const params = {
-      "esAlias": "statuses",
+      "esIndex": index ? index : undefined,
+      "esAlias": "repos",
       "esType": "status",
       "esMapping": elasticsearchMappings,
       "esSettings": elasticsearchSettings
