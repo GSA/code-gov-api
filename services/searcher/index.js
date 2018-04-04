@@ -445,7 +445,7 @@ class Searcher {
           return hit._source;
         })
       );
-      return callback(null,  { statuses: data[0].statuses, timestamp: data[0].timestamp });
+      return callback(null,  data);
     });
   }
 
