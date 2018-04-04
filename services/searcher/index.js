@@ -433,19 +433,19 @@ class Searcher {
     logger.info("Status searching");
 
     this.client.search({
-      index: 'statuses',
+      index: 'repos',
       type: 'status'
     }, (error, elasticSearchResponse) => {
       if(error) {
         logger.error(error);
         return callback(error);
       }
-      let statuses = Utils.omitPrivateKeys(
+      const data = Utils.omitPrivateKeys(
         _.map(elasticSearchResponse.hits.hits, (hit) => {
           return hit._source;
         })
       );
-      return callback(null,  { statuses });
+      return callback(null,  { statuses: data[0].statuses, timestamp: data[0].timestamp });
     });
   }
 
