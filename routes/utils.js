@@ -252,11 +252,13 @@ function getRepoJson(response) {
 }
 
 function getStatusData (searcher){
-  searcher.searchStatus((error, statuses) => {
-    if(error) {
-      return Promise.reject(error);
-    }
-    return Promise.resolve(statuses);
+  return new Promise((resolve, reject) => {
+    searcher.searchStatus((error, data) => {
+      if(error) {
+        return reject(error);
+      }
+      return resolve({ timestamp: data[0].timestamp, statuses: data[0].statuses });
+    });
   });
 }
 
