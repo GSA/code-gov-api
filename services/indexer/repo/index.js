@@ -115,7 +115,7 @@ class RepoIndexer extends AbstractIndexer {
           });
       },
       (response, next) => {
-        Reporter.indexReport()
+        Reporter.indexReport(indexer.esIndex)
           .then(() => next(null, null))
           .catch(err => {
             indexer.logger.error(err);
