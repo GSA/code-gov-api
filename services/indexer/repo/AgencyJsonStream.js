@@ -132,7 +132,8 @@ class AgencyJsonStream extends Transform {
           if(results.issues) {
             validationTotals.errors += results.issues.errors.length ? results.issues.errors.length : 0;
             validationTotals.warnings += results.issues.warnings.length ? results.issues.warnings.length : 0;
-            validationTotals.enhancements += results.issues.enhancements.length ? results.issues.enhancements.length : 0;
+            validationTotals.enhancements += results.issues.enhancements.length ?
+              results.issues.enhancements.length : 0;
 
             Reporter.reportIssues(agency.acronym, results);
           }
