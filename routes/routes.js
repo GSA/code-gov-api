@@ -93,7 +93,7 @@ function getApiRoutes(config, searcher, router) {
   });
   router.get(`/status/:agency/issues`, (request, response) => {
     let agency = request.params.agency.toUpperCase();
-    getAgencyIssues(agency, config)
+    getAgencyIssues(agency, searcher)
       .then(issuesData => {
         if (issuesData.statusData) {
           return response.render(`status/agency/issues`, issuesData);
