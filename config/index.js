@@ -9,10 +9,10 @@ function getConfig(env) {
   };
   if (config.prod_envs.includes(env)) {
     config = Object.assign(config, getProductionConfig());
-    config.LOGGER_LEVEL = 'INFO'
+    config.LOGGER_LEVEL = 'INFO';
   } else {
     config = Object.assign(config, getDevelopmentConfig());
-    config.LOGGER_LEVEL = 'DEBUG'
+    config.LOGGER_LEVEL = 'DEBUG';
   }
 
   config.AGENCY_ENDPOINTS_FILE = path.join(path.dirname(__dirname), 'config/agency_metadata.json');
