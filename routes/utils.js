@@ -9,17 +9,6 @@ const repoMapping = require('../indexes/repo/mapping_200.json');
 
 const searchPropsByType = Utils.getFlattenedMappingPropertiesByType(repoMapping["repo"]);
 
-function readStatusReportFile (config) {
-  return new Promise((resolve, reject) => {
-    Jsonfile.readFile(config.REPORT_FILEPATH, (error, data) => {
-      if (error) {
-        reject(error);
-      }
-      resolve(data);
-    });
-  });
-}
-
 function readAgencyMetadataFile (config) {
   return new Promise((resolve, reject) => {
     fs.readFile(config.AGENCY_ENDPOINTS_FILE, (err, data) => {
@@ -278,8 +267,8 @@ function getVersion() {
   });
 }
 
-function getAgencyIssues(agency, config) {
-  return readStatusReportFile(config)
+function getAgencyIssues(agency, searcher) {
+  return getStatusData(searcher)
     .then(statusData => {
       let title = "Code.gov API Status for " + agency;
       return { title, statusData: statusData.statuses[agency] };
@@ -305,7 +294,6 @@ function getRootMessage(response) {
 }
 
 module.exports = {
-  readStatusReportFile,
   getAgencyData,
   queryReposAndSendResponse,
   getFileDataByAgency,
