@@ -126,6 +126,41 @@
       },
       "vcs": "git",
       "homepageURl": "https://github.com/USSBA/oracle2sql"
+    },
+    {
+      "name": "Certify Design System Gem",
+      "repositoryURL": "https://github.com/USSBA/certify_design_system_gem",
+      "description": "Ruby Gem that delivers assets of the Certify Design System to Rails and Jekyll.",
+      "permissions": {
+        "licenses": [
+          {
+            "name": "MIT",
+            "URL": "http://www.opensource.org/licenses/MIT"
+          },
+          {
+            "name": "Creative Commons Attribution 4.0",
+            "URL": "http://creativecommons.org/licenses/by/4.0/legalcode"
+          },
+          {
+            "name": "Creative Commons Zero v1.0 Universal",
+            "URL": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+          },
+          {
+            "name": "SIL Open Font License 1.1",
+            "URL": "http://scripts.sil.org/cms/scripts/page.php?item_id=OFL_web"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "vcs": "git",
+      "laborHours": 0,
+      "tags": [
+        "SBA"
+      ],
+      "contact": {
+        "email": "Andrew.Davy@sba.gov"
+      }
     }
   ]
 }
