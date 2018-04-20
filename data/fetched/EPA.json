@@ -64,8 +64,8 @@
         "phone": "(401) 782-3140"
       },
       "date": {
-        "created": "07-31-2016",
-        "lastModified": "07-31-2016",
+        "created": "2016-07-31",
+        "lastModified": "2016-07-31",
         "metadataLastUpdated": "2017-12-01"
       }
     },
@@ -75,7 +75,10 @@
       "description": "This repository contains materials for the R workshops to be held at the 2017 CERF meeting in Providence, RI.",
       "permissions": {
         "licenses": [
-          {}
+          {
+            "name": "Creative Commons Zero (CC0)",
+            "URL": "https://path.to/license"
+          }
         ],
         "usageType": "openSource",
         "exemptionText": null
@@ -103,7 +106,10 @@
       "description": "GitHub repository for scripts (Fortran and R code) for post-processing and evaluating model output from the EPA's Community Multiscale Air Quality Model (CMAQ).",
       "permissions": {
         "licenses": [
-          {}
+          {
+            "name": "Creative Commons Zero (CC0)",
+            "URL": "https://path.to/license"
+          }
         ],
         "usageType": "openSource",
         "exemptionText": null
@@ -121,8 +127,8 @@
         "phone": "(919) 541-5367"
       },
       "date": {
-        "created": "07-31-2016",
-        "lastModified": "07-31-2016",
+        "created": "2016-07-31",
+        "lastModified": "2016-07-31",
         "metadataLastUpdated": "2018-03-12"
       }
     },
@@ -132,7 +138,10 @@
       "description": "Data Mining LCI Primer for EPA Datasources",
       "permissions": {
         "licenses": [
-          {}
+          {
+            "name": "Creative Commons Zero (CC0)",
+            "URL": "https://path.to/license"
+          }
         ],
         "usageType": "openSource",
         "exemptionText": null
@@ -147,7 +156,7 @@
       ],
       "contact": {
         "name": "Lico Galindo",
-        "email": "galindo.lico@epa.gov",
+        "email": "Galindo.Lico@epa.gov",
         "phone": "(202) 566-1252"
       },
       "date": {
@@ -185,8 +194,8 @@
         "URL": "https://www.epa.gov"
       },
       "date": {
-        "created": "07-31-2016",
-        "lastModified": "07-31-2016",
+        "created": "2016-07-31",
+        "lastModified": "2016-07-31",
         "metadataLastUpdated": "2017-12-01"
       }
     },
@@ -196,7 +205,10 @@
       "description": "Source code for the EPA Environmental Dataset Gateway (EDG), an open-source metadata catalog built on Esri's Geoportal Server.",
       "permissions": {
         "licenses": [
-          {}
+          {
+            "name": "Creative Commons Zero (CC0)",
+            "URL": "https://path.to/license"
+          }
         ],
         "usageType": "openSource",
         "exemptionText": null
@@ -216,8 +228,8 @@
         "phone": "(202) 566-2132"
       },
       "date": {
-        "created": "07-31-2016",
-        "lastModified": "07-31-2016",
+        "created": "2016-07-31",
+        "lastModified": "2016-07-31",
         "metadataLastUpdated": "2018-03-12"
       }
     },
@@ -227,7 +239,10 @@
       "description": "This repository contains introductory presentation materials on Git and Github. The two presentaitons provide a high level conceptual overview of version control with Git, basic concepts of Github, and a more hands-on example walking through the CMAQ repository and how Git and GitHub are used to manage open source development of the CMAQ models.",
       "permissions": {
         "licenses": [
-          {}
+          {
+            "name": "Creative Commons Zero (CC0)",
+            "URL": "https://path.to/license"
+          }
         ],
         "usageType": "openSource",
         "exemptionText": null
@@ -363,7 +378,7 @@
         "usageType": "openSource",
         "exemptionText": null
       },
-      "repositoryURL": "https://github.com/USEPA",
+      "repositoryURL": "https://code.gov/#/explore-code/agencies/EPA/repos/epa_usepa_arcgis_api_for_javascript",
       "languages": [
         "JavaScript"
       ],
@@ -390,7 +405,10 @@
       "description": "BenMAP-CE",
       "permissions": {
         "licenses": [
-          {}
+          {
+            "name": "Creative Commons Zero (CC0)",
+            "URL": "https://path.to/license"
+          }
         ],
         "usageType": "openSource",
         "exemptionText": null
@@ -418,7 +436,10 @@
       "description": "EPA-Metadata-Editor-3",
       "permissions": {
         "licenses": [
-          {}
+          {
+            "name": "Creative Commons Zero (CC0)",
+            "URL": "https://path.to/license"
+          }
         ],
         "usageType": "openSource",
         "exemptionText": null
@@ -436,8 +457,8 @@
         "phone": "(202) 564-1931"
       },
       "date": {
-        "created": "07-31-2016",
-        "lastModified": "07-31-2016",
+        "created": "2016-07-31",
+        "lastModified": "2016-07-31",
         "metadataLastUpdated": "2018-03-14"
       }
     },
@@ -447,7 +468,10 @@
       "description": "This repository contains supporting data, code and analysis for our recent manuscript on predicting rodent hepatotoxicity using chemical structure and bioactivity data (J. Liu, K. Mansouri, R. S. Judson, M. T. Martin, H. Hong, M. Chen, X. Xu, R. S. Thomas, and I. Shah, â�?�?Predicting hepatotoxicity using ToxCast in vitro bioactivity and chemical structure,â�?�? Chem. Res. Toxicol., vol. 28, no. 4, pp. 738â�?�?751, Apr. 2015). We implemented the machine learning approach described in this manuscript using Python and by relying extensively on the scikit-learn package. The analysis was conducted in an ipython notebook (now called jupyter).",
       "permissions": {
         "licenses": [
-          {}
+          {
+            "name": "Creative Commons Zero (CC0)",
+            "URL": "https://path.to/license"
+          }
         ],
         "usageType": "openSource",
         "exemptionText": null
@@ -511,7 +535,10 @@
       "description": "The hts-db is a simple but powerful system for storing and analyzing chemical-bioactivity assay data. The backend is a mongodb NoSQL database with a python mongoengine object-oriented interface. All data analysis and visualization is handled in python using Pandas, numpy, scipy and matplotlib.",
       "permissions": {
         "licenses": [
-          {}
+          {
+            "name": "Creative Commons Zero (CC0)",
+            "URL": "https://path.to/license"
+          }
         ],
         "usageType": "openSource",
         "exemptionText": null
@@ -530,8 +557,8 @@
         "phone": "(919) 541-1391"
       },
       "date": {
-        "created": "07-31-2016",
-        "lastModified": "07-31-2016",
+        "created": "2016-07-31",
+        "lastModified": "2016-07-31",
         "metadataLastUpdated": "2018-03-13"
       }
     },
@@ -541,7 +568,10 @@
       "description": "EPA-Metadata-Editor-4",
       "permissions": {
         "licenses": [
-          {}
+          {
+            "name": "Creative Commons Zero (CC0)",
+            "URL": "https://path.to/license"
+          }
         ],
         "usageType": "openSource",
         "exemptionText": null
@@ -559,8 +589,8 @@
         "phone": "(202) 564-1931"
       },
       "date": {
-        "created": "07-31-2016",
-        "lastModified": "07-31-2016",
+        "created": "2016-07-31",
+        "lastModified": "2016-07-31",
         "metadataLastUpdated": "2018-03-14"
       }
     },
@@ -570,7 +600,10 @@
       "description": "EPA-Metadata-Editor-5",
       "permissions": {
         "licenses": [
-          {}
+          {
+            "name": "Creative Commons Zero (CC0)",
+            "URL": "https://path.to/license"
+          }
         ],
         "usageType": "openSource",
         "exemptionText": null
@@ -588,8 +621,8 @@
         "phone": "(202) 564-1931"
       },
       "date": {
-        "created": "07-31-2016",
-        "lastModified": "07-31-2016",
+        "created": "2016-07-31",
+        "lastModified": "2016-07-31",
         "metadataLastUpdated": "2018-03-13"
       }
     },
@@ -599,7 +632,10 @@
       "description": "This is code written primarily in Java as part of the Computational Sustainability Pathfinder Innovation Project. Once completed, it should contain all necessary source code for a stand alone Java application for evaluting sustainability scenarios using models build in the VennSim modeling platform. This project is being developed in GitHub.",
       "permissions": {
         "licenses": [
-          {}
+          {
+            "name": "Creative Commons Zero (CC0)",
+            "URL": "https://path.to/license"
+          }
         ],
         "usageType": "openSource",
         "exemptionText": null
@@ -715,8 +751,8 @@
         "URL": "https://www.epa.gov"
       },
       "date": {
-        "created": "07-31-2016",
-        "lastModified": "07-31-2016",
+        "created": "2016-07-31",
+        "lastModified": "2016-07-31",
         "metadataLastUpdated": "2017-12-01"
       }
     },
@@ -791,7 +827,10 @@
       "description": "iomb is an open source Python library for creating environmentally extended input-output models (EEIO models) from CSV files in a simple data format. It includes functions to calculate different result types (e.g. life cycle assessment results, direct and upstream contributions, etc.) from such models and convert them into JSON-LD data packages that can be imported into openLCA.",
       "permissions": {
         "licenses": [
-          {}
+          {
+            "name": "Creative Commons Zero (CC0)",
+            "URL": "https://path.to/license"
+          }
         ],
         "usageType": "openSource",
         "exemptionText": null
@@ -812,8 +851,8 @@
         "phone": "+49 30 4849 6030"
       },
       "date": {
-        "created": "07-31-2016",
-        "lastModified": "07-31-2016",
+        "created": "2016-07-31",
+        "lastModified": "2016-07-31",
         "metadataLastUpdated": "2018-03-12"
       }
     },
@@ -823,7 +862,10 @@
       "description": "An R package for accessing elevation data from various sources.\r\nThe elevatr package currently provides access to elevation data from from Mapzen (Mapzen Tile Service for raster digital elevation models. For point elevation data, either the Mapzen Elevation Service or the USGS Elevation Point Query Service) may be used. Additional elevation data sources may be added.",
       "permissions": {
         "licenses": [
-          {}
+          {
+            "name": "Creative Commons Zero (CC0)",
+            "URL": "https://path.to/license"
+          }
         ],
         "usageType": "openSource",
         "exemptionText": null
@@ -873,8 +915,8 @@
         "phone": "(919) 541-4871"
       },
       "date": {
-        "created": "07-31-2016",
-        "lastModified": "07-31-2016",
+        "created": "2016-07-31",
+        "lastModified": "2016-07-31",
         "metadataLastUpdated": "2017-12-01"
       }
     },
@@ -952,7 +994,10 @@
       "description": "Human Exposure Data from historic studies dating 1994-2005.",
       "permissions": {
         "licenses": [
-          {}
+          {
+            "name": "Creative Commons Zero (CC0)",
+            "URL": "https://path.to/license"
+          }
         ],
         "usageType": "openSource",
         "exemptionText": null
@@ -1034,7 +1079,7 @@
       ],
       "contact": {
         "name": "Lico Galindo",
-        "email": "galindo.lico@epa.gov",
+        "email": "Galindo.Lico@epa.gov",
         "phone": "(202) 566-1252"
       },
       "date": {
@@ -1073,8 +1118,8 @@
         "phone": "(208) 610-9981"
       },
       "date": {
-        "created": "07-31-2016",
-        "lastModified": "07-31-2016",
+        "created": "2016-07-31",
+        "lastModified": "2016-07-31",
         "metadataLastUpdated": "2017-12-01"
       }
     },
@@ -1137,8 +1182,8 @@
         "email": " tong.zhai@respec.com"
       },
       "date": {
-        "created": "07-31-2016",
-        "lastModified": "07-31-2016",
+        "created": "2016-07-31",
+        "lastModified": "2016-07-31",
         "metadataLastUpdated": "2017-12-01"
       }
     },
@@ -1148,7 +1193,10 @@
       "description": "The Cleanups in My Community (CIMC) team has developed a services monitor script for the CIMC application.  This is a Python script that reads a CSV list of services required by the CIMC application.  For each service URL in the CSV, the script cycles through each data layer, and queries the map service to test that results are being returned.  If no results are returned, the script will email a list of services that did not respond to the query.  \r\n\r\nThe main requirements for this script are Python and an SMTP mail server connection.  Ideally the script would run every 2-3 hours to check the services availability.",
       "permissions": {
         "licenses": [
-          {}
+          {
+            "name": "Creative Commons Zero (CC0)",
+            "URL": "https://path.to/license"
+          }
         ],
         "usageType": "openSource",
         "exemptionText": null
@@ -1202,8 +1250,8 @@
         "phone": "(401) 782-9655"
       },
       "date": {
-        "created": "07-31-2016",
-        "lastModified": "07-31-2016",
+        "created": "2016-07-31",
+        "lastModified": "2016-07-31",
         "metadataLastUpdated": "2017-12-01"
       }
     },
@@ -1213,7 +1261,10 @@
       "description": "GitHub Repository: Reproducible source (R package) for manuscript entitled \"Associations between chlorophyll *a* and various microcystin-LR health advisory Concentrations\"",
       "permissions": {
         "licenses": [
-          {}
+          {
+            "name": "Creative Commons Zero (CC0)",
+            "URL": "https://path.to/license"
+          }
         ],
         "usageType": "openSource",
         "exemptionText": null
@@ -1266,8 +1317,8 @@
         "phone": "(401) 782-9655"
       },
       "date": {
-        "created": "07-31-2016",
-        "lastModified": "07-31-2016",
+        "created": "2016-07-31",
+        "lastModified": "2016-07-31",
         "metadataLastUpdated": "2017-12-01"
       }
     },
@@ -1332,8 +1383,8 @@
         "phone": "(202) 564-0446"
       },
       "date": {
-        "created": "07-31-2016",
-        "lastModified": "07-31-2016",
+        "created": "2016-07-31",
+        "lastModified": "2016-07-31",
         "metadataLastUpdated": "2017-12-01"
       }
     },
@@ -1431,8 +1482,8 @@
         "phone": "+49 30 4849 6030"
       },
       "date": {
-        "created": "07-31-2016",
-        "lastModified": "07-31-2016",
+        "created": "2016-07-31",
+        "lastModified": "2016-07-31",
         "metadataLastUpdated": "2018-03-13"
       }
     },
@@ -1466,8 +1517,8 @@
         "phone": "(404) 562-8046"
       },
       "date": {
-        "created": "07-31-2016",
-        "lastModified": "07-31-2016",
+        "created": "2016-07-31",
+        "lastModified": "2016-07-31",
         "metadataLastUpdated": "2017-12-01"
       }
     },
@@ -1477,7 +1528,10 @@
       "description": "This repository hosts the development version of the  goatscape  R package. The purpose of  goatscape  is to provide tools to summarize various data sets across an input landscape polygon and provide it in a tidyverse friendly format. This is a common data aggregation step for many ecological studies, yet standarized tools do not exist in R.",
       "permissions": {
         "licenses": [
-          {}
+          {
+            "name": "Creative Commons Zero (CC0)",
+            "URL": "https://path.to/license"
+          }
         ],
         "usageType": "openSource",
         "exemptionText": null
@@ -1497,8 +1551,8 @@
         "phone": "(401) 782-9655"
       },
       "date": {
-        "created": "07-31-2016",
-        "lastModified": "07-31-2016",
+        "created": "2016-07-31",
+        "lastModified": "2016-07-31",
         "metadataLastUpdated": "2018-03-12"
       }
     },
@@ -1508,7 +1562,10 @@
       "description": "The overarching purpose of e-Manifest is to establish a national information technology system that will enable the Agency and the hazardous waste programs industry and state stakeholders to transition the manifest system from one that is paper-intensive and burdensome to a system that is much more efficient, because it will rely on information technology to track hazardous waste shipments",
       "permissions": {
         "licenses": [
-          {}
+          {
+            "name": "Creative Commons Zero (CC0)",
+            "URL": "https://path.to/license"
+          }
         ],
         "usageType": "openSource",
         "exemptionText": null
@@ -1594,8 +1651,8 @@
         "phone": "(401) 782-9655"
       },
       "date": {
-        "created": "07-31-2016",
-        "lastModified": "07-31-2016",
+        "created": "2016-07-31",
+        "lastModified": "2016-07-31",
         "metadataLastUpdated": "2017-12-01"
       }
     },
@@ -1605,7 +1662,10 @@
       "description": "Assessing the Benefits of Wetland Restoration - A Rapid Benefits Indicators Approach for Decision Markers",
       "permissions": {
         "licenses": [
-          {}
+          {
+            "name": "Creative Commons Zero (CC0)",
+            "URL": "https://path.to/license"
+          }
         ],
         "usageType": "openSource",
         "exemptionText": null
@@ -1672,7 +1732,10 @@
       "description": "The Piscine Stream Community Estimation System (PiSCES) provides users with a reasonable fish community for any stream reach in the conterminous United States. PiSCES utilizes distributional information obtained from Nature Serve, the USGS, and the Peterson Field Guide to Freshwater Fishes of North America for over 1,000 native and non-native freshwater fish species. In addition to these geographic distributions, users of PiSCES can filter potential fish assemblages based on species rarity, stream size preferences (as measured by mean stream width), and genera-specific occurrence envelopes for a variety of physicochemical stream properties (pH, conductivity, turbidity, dissolved oxygen, watershed area, mean width, depth, and slope). For a user-specified total number of fishes in the stream reach, PiSCES will create an abundance distribution for the posited community using a size spectrum approach that relates abundance to maximum body size. The PiSCES interface allows users to readily access its database to see ancillary characteristics of each species, such as habitat preferences (e.g., if the species prefers riffles, runs, or pools, sand or gravel substrate, etc.) and HUC-based distribution maps. PiSCES has been used in conjunction with an integrated environmental modeling system to simulate dynamics of stream fish communities in the Coal River, WV watershed.",
       "permissions": {
         "licenses": [
-          {}
+          {
+            "name": "Creative Commons Zero (CC0)",
+            "URL": "https://path.to/license"
+          }
         ],
         "usageType": "openSource",
         "exemptionText": null
@@ -1690,8 +1753,8 @@
         "phone": "(706) 355-0000"
       },
       "date": {
-        "created": "07-31-2016",
-        "lastModified": "07-31-2016",
+        "created": "2016-07-31",
+        "lastModified": "2016-07-31",
         "metadataLastUpdated": "2018-03-14"
       }
     },
@@ -1722,8 +1785,8 @@
         "phone": "(202) 564-1931"
       },
       "date": {
-        "created": "07-31-2016",
-        "lastModified": "07-31-2016",
+        "created": "2016-07-31",
+        "lastModified": "2016-07-31",
         "metadataLastUpdated": "2017-12-01"
       }
     },
@@ -1767,7 +1830,10 @@
       "description": "This app is built on an R model which calculates impacts across a number of metrics for various industries. The outputs of the R model are then visualized and analyzed using Qlik Sense, and the application was built using bootstrap.js and Qlik Dev Hub.",
       "permissions": {
         "licenses": [
-          {}
+          {
+            "name": "Creative Commons Zero (CC0)",
+            "URL": "https://path.to/license"
+          }
         ],
         "usageType": "openSource",
         "exemptionText": null
@@ -1854,8 +1920,8 @@
         "phone": "(703) 305-7191"
       },
       "date": {
-        "created": "07-31-2016",
-        "lastModified": "07-31-2016",
+        "created": "2016-07-31",
+        "lastModified": "2016-07-31",
         "metadataLastUpdated": "2017-12-01"
       }
     },
@@ -1897,7 +1963,10 @@
       "description": "dev_5_watershed_directory",
       "permissions": {
         "licenses": [
-          {}
+          {
+            "name": "Creative Commons Zero (CC0)",
+            "URL": "https://path.to/license"
+          }
         ],
         "usageType": "openSource",
         "exemptionText": null
@@ -1914,8 +1983,8 @@
         "phone": "(703) 305-7191"
       },
       "date": {
-        "created": "07-31-2016",
-        "lastModified": "07-31-2016",
+        "created": "2016-07-31",
+        "lastModified": "2016-07-31",
         "metadataLastUpdated": "2018-03-14"
       }
     },
@@ -1926,7 +1995,8 @@
       "permissions": {
         "licenses": [
           {
-            "name": "821"
+            "URL": "https://path.to/license",
+            "name": "Creative Commons Zero (CC0)"
           }
         ],
         "usageType": "openSource",
@@ -1948,8 +2018,8 @@
         "phone": "(215) 814-3417"
       },
       "date": {
-        "created": "07-31-2016",
-        "lastModified": "07-31-2016",
+        "created": "2016-07-31",
+        "lastModified": "2016-07-31",
         "metadataLastUpdated": "2018-03-07"
       }
     },
@@ -2024,7 +2094,10 @@
       "description": "The HiveScience mobile App is designed for citizen scientist beekeepers to collect and share data related to the health of their honey bee colonies. Using this App, beekeepers can easily enter hive health and Varroa mite monitoring data on-site and in real-time. These data will help us better understand factors affecting the health of honey bees and their ability to survive the winter. For more info, check out https://www.epa.gov/citizen-science/hivescience",
       "permissions": {
         "licenses": [
-          {}
+          {
+            "name": "Creative Commons Zero (CC0)",
+            "URL": "https://path.to/license"
+          }
         ],
         "usageType": "openSource",
         "exemptionText": null
@@ -2112,8 +2185,8 @@
         "URL": "https://www.epa.gov"
       },
       "date": {
-        "created": "07-31-2016",
-        "lastModified": "07-31-2016",
+        "created": "2016-07-31",
+        "lastModified": "2016-07-31",
         "metadataLastUpdated": "2017-12-01"
       }
     },
@@ -2261,7 +2334,10 @@
       "description": "EnviroAtlas_JSApp",
       "permissions": {
         "licenses": [
-          {}
+          {
+            "name": "Creative Commons Zero (CC0)",
+            "URL": "https://path.to/license"
+          }
         ],
         "usageType": "openSource",
         "exemptionText": null
@@ -2278,8 +2354,8 @@
         "phone": "(202) 564-1931"
       },
       "date": {
-        "created": "07-31-2016",
-        "lastModified": "07-31-2016",
+        "created": "2016-07-31",
+        "lastModified": "2016-07-31",
         "metadataLastUpdated": "2018-03-12"
       }
     },
@@ -2289,7 +2365,10 @@
       "description": "GIFMod",
       "permissions": {
         "licenses": [
-          {}
+          {
+            "name": "Creative Commons Zero (CC0)",
+            "URL": "https://path.to/license"
+          }
         ],
         "usageType": "openSource",
         "exemptionText": null
@@ -2343,8 +2422,8 @@
         "phone": "(703) 676-6699"
       },
       "date": {
-        "created": "07-31-2016",
-        "lastModified": "07-31-2016",
+        "created": "2016-07-31",
+        "lastModified": "2016-07-31",
         "metadataLastUpdated": "2017-12-01"
       }
     },
@@ -2440,8 +2519,8 @@
         "phone": "(703) 676-6699"
       },
       "date": {
-        "created": "07-31-2016",
-        "lastModified": "07-31-2016",
+        "created": "2016-07-31",
+        "lastModified": "2016-07-31",
         "metadataLastUpdated": "2017-12-01"
       }
     },
@@ -2610,8 +2689,8 @@
         "phone": "(513) 569-7842"
       },
       "date": {
-        "created": "07-31-2016",
-        "lastModified": "07-31-2016",
+        "created": "2016-07-31",
+        "lastModified": "2016-07-31",
         "metadataLastUpdated": "2017-12-01"
       }
     },
@@ -2745,8 +2824,8 @@
         "URL": "https://www.epa.gov"
       },
       "date": {
-        "created": "07-31-2016",
-        "lastModified": "07-31-2016",
+        "created": "2016-07-31",
+        "lastModified": "2016-07-31",
         "metadataLastUpdated": "2017-12-01"
       }
     },
@@ -2778,8 +2857,8 @@
         "phone": "(703) 305-7191"
       },
       "date": {
-        "created": "07-31-2016",
-        "lastModified": "07-31-2016",
+        "created": "2016-07-31",
+        "lastModified": "2016-07-31",
         "metadataLastUpdated": "2017-12-01"
       }
     },
@@ -2813,8 +2892,8 @@
         "phone": "(703) 305-7191"
       },
       "date": {
-        "created": "07-31-2016",
-        "lastModified": "07-31-2016",
+        "created": "2016-07-31",
+        "lastModified": "2016-07-31",
         "metadataLastUpdated": "2017-12-01"
       }
     },
@@ -2847,8 +2926,8 @@
         "phone": "(703) 347-8653"
       },
       "date": {
-        "created": "07-31-2016",
-        "lastModified": "07-31-2016",
+        "created": "2016-07-31",
+        "lastModified": "2016-07-31",
         "metadataLastUpdated": "2017-12-01"
       }
     },
@@ -2876,7 +2955,7 @@
       ],
       "contact": {
         "name": "Lico Galindo",
-        "email": "galindo.lico@epa.gov",
+        "email": "Galindo.Lico@epa.gov",
         "phone": "(202) 566-1252"
       },
       "date": {
@@ -2915,8 +2994,8 @@
         "phone": "(703) 305-7191"
       },
       "date": {
-        "created": "07-31-2016",
-        "lastModified": "07-31-2016",
+        "created": "2016-07-31",
+        "lastModified": "2016-07-31",
         "metadataLastUpdated": "2017-12-01"
       }
     },
@@ -2960,7 +3039,10 @@
       "description": "Can we use a data-driven approach to predict the target-organ toxicity of chemicals in repeat dose animal testing studies ? This project frame chemical toxicity prediction as a supervised machine learning (ML) problem. Toxicity is assumed to be a categorical outcome, which is defined by histopathology data from legacy repeat-dose animal testing experiments. Chemicals that cause/do not cause histopathological effects in an organ are treated as positive/negative examples of each class.",
       "permissions": {
         "licenses": [
-          {}
+          {
+            "name": "Creative Commons Zero (CC0)",
+            "URL": "https://path.to/license"
+          }
         ],
         "usageType": "openSource",
         "exemptionText": null
@@ -2991,7 +3073,10 @@
       "description": "This file is a jupyter notebook describes how to conduct the analysis and recreate the figures given in: Shah I, Setzer RW, Jack J, Houck KA, Judson RS, Knudsen TB, Liu J, Martin MT, Reif DM, Richard AM, Thomas RS, Crofton KM, Dix DJ, Kavlock RJ. 2016. Using ToxCast�?� data to reconstruct dynamic cell state trajectories and estimate toxicological points of departure. Environ Health Perspect 124:910�??919.",
       "permissions": {
         "licenses": [
-          {}
+          {
+            "name": "Creative Commons Zero (CC0)",
+            "URL": "https://path.to/license"
+          }
         ],
         "usageType": "openSource",
         "exemptionText": null
@@ -3023,7 +3108,10 @@
       "description": "",
       "permissions": {
         "licenses": [
-          {}
+          {
+            "name": "Creative Commons Zero (CC0)",
+            "URL": "https://path.to/license"
+          }
         ],
         "usageType": "openSource",
         "exemptionText": null
@@ -3051,7 +3139,10 @@
       "description": "repository containing manuscript describing the lakemorpho manuscript",
       "permissions": {
         "licenses": [
-          {}
+          {
+            "name": "Creative Commons Zero (CC0)",
+            "URL": "https://path.to/license"
+          }
         ],
         "usageType": "openSource",
         "exemptionText": null
@@ -3112,7 +3203,10 @@
       "description": "Cell profiler",
       "permissions": {
         "licenses": [
-          {}
+          {
+            "name": "Creative Commons Zero (CC0)",
+            "URL": "https://path.to/license"
+          }
         ],
         "usageType": "openSource",
         "exemptionText": null
@@ -3141,7 +3235,10 @@
       "description": "",
       "permissions": {
         "licenses": [
-          {}
+          {
+            "name": "Creative Commons Zero (CC0)",
+            "URL": "https://path.to/license"
+          }
         ],
         "usageType": "openSource",
         "exemptionText": null
@@ -3159,8 +3256,8 @@
         "phone": "(919) 541-0745"
       },
       "date": {
-        "created": "07-31-2016",
-        "lastModified": "07-31-2016",
+        "created": "2016-07-31",
+        "lastModified": "2016-07-31",
         "metadataLastUpdated": "2018-03-13"
       }
     },
@@ -3170,7 +3267,10 @@
       "description": "",
       "permissions": {
         "licenses": [
-          {}
+          {
+            "name": "Creative Commons Zero (CC0)",
+            "URL": "https://path.to/license"
+          }
         ],
         "usageType": "openSource",
         "exemptionText": null
@@ -3183,7 +3283,7 @@
       ],
       "contact": {
         "name": "Lico Galindo",
-        "email": "galindo.lico@epa.gov",
+        "email": "Galindo.Lico@epa.gov",
         "phone": "(202) 566-1252"
       },
       "date": {
@@ -3322,8 +3422,8 @@
         "phone": "(513) 569-7559"
       },
       "date": {
-        "created": "07-31-2016",
-        "lastModified": "07-31-2016",
+        "created": "2016-07-31",
+        "lastModified": "2016-07-31",
         "metadataLastUpdated": "2017-12-01"
       }
     },
@@ -3355,8 +3455,8 @@
         "URL": "https://www.epa.gov"
       },
       "date": {
-        "created": "07-31-2016",
-        "lastModified": "07-31-2016",
+        "created": "2016-07-31",
+        "lastModified": "2016-07-31",
         "metadataLastUpdated": "2017-12-01"
       }
     },
@@ -3366,7 +3466,10 @@
       "description": "",
       "permissions": {
         "licenses": [
-          {}
+          {
+            "name": "Creative Commons Zero (CC0)",
+            "URL": "https://path.to/license"
+          }
         ],
         "usageType": "openSource",
         "exemptionText": null
@@ -3453,8 +3556,8 @@
         "URL": "https://www.epa.gov"
       },
       "date": {
-        "created": "07-31-2016",
-        "lastModified": "07-31-2016",
+        "created": "2016-07-31",
+        "lastModified": "2016-07-31",
         "metadataLastUpdated": "2017-12-01"
       }
     }

@@ -52,7 +52,7 @@
         "licenses": [
           {
             "URL": "https://github.com/NAVADMC/ADSM/blob/master/LICENSE",
-            "name": "BSD-3-Clause"
+            "name": "BSD-2-Clause"
           }
         ],
         "usageType": "openSource"
@@ -75,14 +75,54 @@
       "status": "Beta",
       "vcs": "git",
       "languages": [
-        "C",
         "python"
       ],
       "homepageURL": "https://github.com/NAVADMC/ADSM",
       "date": {
         "created": "",
-        "lastModified": "",
-        "metadataLastUpdated": "2017-05-15"
+        "lastModified": "2018-01-11",
+        "metadataLastUpdated": "2018-03-27"
+      }
+    },
+    {
+      "organization": "APHIS",
+      "name": "Animal Disease Spread Model C-Engine",
+      "description": "The Simulation Backend for the Animal Disease Spread Model (ADSM) Project.",
+      "repositoryURL": "https://github.com/NAVADMC/ADSM-CEngine",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/NAVADMC/ADSM-CEngine/blob/master/LICENSE",
+            "name": "BSD-2-Clause"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": 0,
+      "tags": [
+        "USDA",
+        "source code",
+        "animal",
+        "disease",
+        "herds",
+        "livestock",
+        "simulation",
+        "model"
+      ],
+      "contact": {
+        "email": "Melissa.Schoenbaum@aphis.usda.gov",
+        "name": "Missy Schoenbaum"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "languages": [
+        "C"
+      ],
+      "homepageURL": "https://github.com/NAVADMC/ADSM-CEngine",
+      "date": {
+        "created": "",
+        "lastModified": "2017-04-28",
+        "metadataLastUpdated": "2018-03-27"
       }
     },
     {
