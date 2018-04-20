@@ -20,7 +20,7 @@ const logger = new Logger({ name: "validator" });
 
 /**
  * Return validator for specified schema indicated in the version field found in the codeJson.
- * @param {object} codeJson 
+ * @param {object} codeJson
  */
 function getValidator(codeJson) {
   const version = Utils.getCodeJsonVersion(codeJson);
@@ -29,15 +29,15 @@ function getValidator(codeJson) {
 
 /**
  * Get schema validator functions for a given schema path.
- * @param {string} schemaPath 
+ * @param {string} schemaPath
  */
 function getSchemaValidators(schemaPath) {
   const ajv = new Ajv({ async: true, allErrors: true });
   ajv.addMetaSchema(version4Schema);
 
-  return { 
-    relaxed: ajv.compile(JsonFile.readFileSync(path.join(schemaPath, '/relaxed.json'))), 
-    strict: ajv.compile(JsonFile.readFileSync(path.join(schemaPath, '/strict.json'))), 
+  return {
+    relaxed: ajv.compile(JsonFile.readFileSync(path.join(schemaPath, '/relaxed.json'))),
+    strict: ajv.compile(JsonFile.readFileSync(path.join(schemaPath, '/strict.json'))),
     enhanced: ajv.compile(JsonFile.readFileSync(path.join(schemaPath, '/enhanced.json')))
   };
 }
@@ -64,8 +64,8 @@ class Validator {
 
   /**
    * Validate the passed repo with a relaxed json schema.
-   * @param {object} repo 
-   * @param {object} callback 
+   * @param {object} repo
+   * @param {object} callback
    */
   _validateRepoRelaxed(repo, callback) {
     // validate for errors
@@ -83,8 +83,8 @@ class Validator {
 
   /**
    * Validate the passed repo with a strict json schema.
-   * @param {object} repo 
-   * @param {object} callback 
+   * @param {object} repo
+   * @param {object} callback
    */
   _validateRepoStrict(repo, callback) {
     // validate for warnings
@@ -102,8 +102,8 @@ class Validator {
 
   /**
    * Validate the repo with a enhaced json schema.
-   * @param {object} repo 
-   * @param {object} callback 
+   * @param {object} repo
+   * @param {object} callback
    */
   _validateRepoEnhanced(repo, callback) {
     // validate for enhancements
@@ -122,8 +122,8 @@ class Validator {
 
   /**
    * Remove errors that fall under specific special cases for errors.
-   * @param {object} repo 
-   * @param {object} errors 
+   * @param {object} repo
+   * @param {object} errors
    */
   _removeSpecialCaseErrors(repo, errors) {
     // NOTE: it is possible to handle these case(s) by altering the json-schema,
@@ -133,11 +133,13 @@ class Validator {
     return errors.filter((error) => {
       // if this isn't an open source project, remove warnings due to a missing
       // `repository` field
-      if (!repo.openSourceProject) {
-        if (error.params && error.params.missingProperty === "repository") {
+      if (!repo.permissions.usageType !== 'openSource') {
+        if (error.params && error.params.missingProperty === "repositoryURL") {
           return false;
         }
-
+        if (error.dataPath === '.repositoryURL' && repo.repositoryURL === null) {
+          return false;
+        }
       }
       return true;
     });
@@ -145,8 +147,8 @@ class Validator {
 
   /**
    * Remove errors that fall under specific special cases for warnings.
-   * @param {object} repo 
-   * @param {object} warnings 
+   * @param {object} repo
+   * @param {object} warnings
    */
   _removeSpecialCaseWarnings(repo, warnings) {
     // NOTE: it is possible to handle these case(s) by altering the json-schema,
@@ -156,17 +158,17 @@ class Validator {
     return warnings.filter((warning) => {
       // if this isn't an open source project, remove warnings due to a missing
       // `repository` field
-      if (!repo.openSourceProject) {
-        if (warning.params && warning.params.missingProperty === "repository") {
+      if (!repo.permissions.usageType !== 'openSource') {
+        if (warning.params && warning.params.missingProperty === "repositoryURL") {
           return false;
         }
-        if (warning.dataPath === ".repository" && repo.repository === null) {
+        if (warning.dataPath === ".repositoryURL" && repo.repositoryURL === null) {
           logger("removing warning for closed source repo with license===null");
           return false;
         }
       }
-      if (warning.dataPath === ".license" && repo.license === null) {
-        logger("removing warning for closed source repo with repository===null");
+      if (warning.dataPath === ".permissions.licenses" && repo.permissions.licenses === null) {
+        logger("removing warning for closed source repo with licenses===null");
         return false;
       }
 
@@ -176,8 +178,8 @@ class Validator {
 
   /**
    * Remove errors that fall under specific special cases for enhancements.
-   * @param {object} repo 
-   * @param {object} enhancements 
+   * @param {object} repo
+   * @param {object} enhancements
    */
   _removeSpecialCaseEnhancements(repo, enhancements) {
     // NOTE: it is possible to handle these case(s) by altering the json-schema,
@@ -188,17 +190,15 @@ class Validator {
       // if this isn't an open source project, remove warnings due to a missing
       // `repository` field
       if (!repo.openSourceProject) {
-        if (enhancement.params && enhancement.params.missingProperty === "repository") {
+        if (enhancement.params && enhancement.params.missingProperty === "repositoryURL") {
           return false;
         }
-        //schema v1.0.1 requires the license element but technically allows it to be null, even for OSS.
-        //nudge here to include license info for OSS
-        if (enhancement.dataPath === ".license" && repo.license === null) {
-          logger("removing enhancement request for closed source repo with repository===null");
-          return false;
-        }
-        if (enhancement.dataPath === ".repository" && repo.repository === null) {
+        if (enhancement.dataPath === ".permissions.licenses" && repo.permissions.licenses === null) {
           logger("removing enhancement request for closed source repo with license===null");
+          return false;
+        }
+        if (enhancement.dataPath === ".repositoryURL" && repo.repository === null) {
+          logger("removing enhancement request for closed source repo with repository===null");
           return false;
         }
       }
@@ -209,9 +209,9 @@ class Validator {
 
   /**
    * Validate a given repo's structure.
-   * @param {object} repo 
-   * @param {object} agency 
-   * @param {function} callback 
+   * @param {object} repo
+   * @param {object} agency
+   * @param {function} callback
    */
   validateRepo(repo, agency, callback) {
     logger.debug(`Validating repo data for ${repo.name} (${repo.repoID})...`);
