@@ -430,5 +430,20 @@
       "overallCompliance": null
     },
     "complianceDashboard": false
+  }, {
+    "id": 29,
+    "name": "Executive Office of the President",
+    "acronym": "EOP",
+    "website": "https://www.whitehouse.gov/",
+    "codeUrl": "https://www.whitehouse.gov/code.json",
+    "fallback_file": "EOP.json",
+    "requirements": {
+      "agencyWidePolicy": null,
+      "openSourceRequirement": null,
+      "inventoryRequirement": null,
+      "schemaFormat": null,
+      "overallCompliance": null
+    },
+    "complianceDashboard": false
   }
 ]
