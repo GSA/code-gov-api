@@ -189,7 +189,7 @@ class Validator {
     return enhancements.filter((enhancement) => {
       // if this isn't an open source project, remove warnings due to a missing
       // `repository` field
-      if (!repo.openSourceProject) {
+      if (!repo.permissions.usageType !== 'openSource') {
         if (enhancement.params && enhancement.params.missingProperty === "repositoryURL") {
           return false;
         }
@@ -197,7 +197,7 @@ class Validator {
           logger("removing enhancement request for closed source repo with license===null");
           return false;
         }
-        if (enhancement.dataPath === ".repositoryURL" && repo.repository === null) {
+        if (enhancement.dataPath === ".repositoryURL" && repo.repositoryURL === null) {
           logger("removing enhancement request for closed source repo with repository===null");
           return false;
         }
