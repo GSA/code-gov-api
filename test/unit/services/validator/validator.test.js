@@ -31,8 +31,8 @@ describe('Validator service', function() {
         ]
       };
     });
-    
-    describe('Get Validator', function() {  
+
+    describe('Get Validator', function() {
       it('Should return a Validator for version 1.0.1', function() {
         const validator = getValidator(testCodeJson101);
         validator._version.should.be.equal("1.0.1");
@@ -70,7 +70,7 @@ describe('Validator service', function() {
           results.issues.errors.length.should.be.equal(0)
         });
       });
-  
+
       it('Should return 1 error', function() {
         const validator = getValidator(testCodeJson101);
         const repo = {
@@ -195,11 +195,10 @@ describe('Validator service', function() {
           }
         };
         const errors = validator.validateRepo(repo, agency, (error, results)=> {
-          console.log("results.issues.errors", results.issues.errors);
           results.issues.errors.length.should.be.equal(0)
         });
       });
-  
+
       it('Should return 1 error', function() {
         const validator = getValidator(testCodeJson200);
         const repo = testCodeJson200.releases[1];

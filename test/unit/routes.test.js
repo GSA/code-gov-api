@@ -38,7 +38,6 @@ describe('Testing routes/utils.js', () => {
     mockSearcher = {
       searchStatus: (callback) => {
         const report = require('./test_data/report.json');
-        console.log(report)
         callback(null, [report]);
       },
       searchTerms: (query, callback) => {
