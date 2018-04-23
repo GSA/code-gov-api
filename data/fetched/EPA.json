@@ -19,7 +19,7 @@
         "usageType": "openSource",
         "exemptionText": null
       },
-      "repositoryURL": "GMAP-data-analysis",
+      "repositoryURL": "https://github.com/USEPA/GMAP-data-analysis",
       "languages": [],
       "laborHours": 0,
       "tags": [
@@ -1470,7 +1470,7 @@
         "usageType": "openSource",
         "exemptionText": null
       },
-      "repositoryURL": "USEEIO API",
+      "repositoryURL": "https://github.com/USEPA/USEEIO_API",
       "languages": [],
       "laborHours": 0,
       "tags": [
@@ -1484,7 +1484,7 @@
       "date": {
         "created": "2016-07-31",
         "lastModified": "2016-07-31",
-        "metadataLastUpdated": "2018-03-13"
+        "metadataLastUpdated": "2018-04-20"
       }
     },
     {
