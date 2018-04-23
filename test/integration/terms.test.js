@@ -18,8 +18,9 @@ describe('/terms endpoint', () => {
 
   describe('simple search', () => {
     it('includes a "total" count of at least 13', (done) => {
-      // See supertest documentation for this assertion style
-      request(app).get(`${endpoint}?term_type=agency.acronym`)
+      request(app)
+        .get(`${endpoint}?term_type=agency.acronym`)
+        .expect(200)
         .expect(response => {
           response.body.total.should.be.at.least(20)
         })

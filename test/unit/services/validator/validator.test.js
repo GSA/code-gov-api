@@ -215,7 +215,7 @@ describe('Validator service', function() {
           }
         };
         const errors = validator.validateRepo(repo, agency, (error, results)=> {
-          results.issues.errors.length.should.be.equal(1)
+          results.issues.errors.length.should.be.at.least(1)
         });
       });
     });

@@ -21,8 +21,8 @@ describe('/repos endpoint', () => {
 
   describe('the output JSON structure', () => {
     it('includes a "total" count of at least 2000', (done) => {
-      // See supertest documentation for this assertion style
-      request(app).get(endpoint)
+      request(app)
+        .get(endpoint)
         .expect('Content-Type', /application\/json/)
         .expect(200)
         .expect((res) => {
