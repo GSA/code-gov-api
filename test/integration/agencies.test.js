@@ -23,7 +23,6 @@ describe('/agencies endpoint', () => {
 
   describe('the output JSON structure', () => {
     it('includes an array with agencies data', (done) => {
-      // See supertest documentation for this assertion style
       request(app).get(endpoint)
         .expect((res) => {
           res.body.agencies.length.should.be.at.least(10);
@@ -45,14 +44,15 @@ describe('/agencies endpoint', () => {
 
     describe('the output JSON structure', () => {
       it('includes an object with agency data', (done) => {
-        // See supertest documentation for this assertion style
-        request(app).get(`${endpoint}/${agency}`)
+        request(app)
+          .get(`${endpoint}/${agency}`)
+          .expect(200)
           .expect((res) => {
-            // res.body.agency.should.be.a('object');
-            // res.body.agency.acronym.should.be.equal(agency);
+            res.body.agency.should.be.a('object');
+            res.body.agency.acronym.should.be.equal(agency);
           })
           .end(done);
       });
-    })
+    });
   });
 });
