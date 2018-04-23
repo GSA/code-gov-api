@@ -119,86 +119,48 @@ class Validator {
       callback(null, enhancements);
     }
   }
-
-  /**
-   * Remove errors that fall under specific special cases for errors.
-   * @param {object} repo
-   * @param {object} errors
-   */
-  _removeSpecialCaseErrors(repo, errors) {
-    // NOTE: it is possible to handle these case(s) by altering the json-schema,
-    // but since it would require a lot of duplication of the schema definition
-    // (in some cases), it is more convenient to strip out warning which do not
-    // apply here...
-    return errors.filter((error) => {
-      // if this isn't an open source project, remove warnings due to a missing
-      // `repository` field
-      if (!repo.permissions.usageType !== 'openSource') {
-        if (error.params && error.params.missingProperty === "repositoryURL") {
-          return false;
-        }
-        if (error.dataPath === '.repositoryURL' && repo.repositoryURL === null) {
-          return false;
-        }
-      }
-      return true;
-    });
+  _isNotOpenSource(repo) {
+    if(repo.hasOwnProperty('permissions')) {
+      return repo.permissions.usageType !== 'openSource';
+    }
+    if(repo.hasOwnProperty('openSourceProject')) {
+      return repo.openSourceProject !== 1;
+    }
+    return false;
+  }
+  _propertyMissing(property, obj) {
+    if(obj.params) {
+      return obj.params.missingProperty === property;
+    }
+    return false;
   }
 
   /**
    * Remove errors that fall under specific special cases for warnings.
    * @param {object} repo
-   * @param {object} warnings
+   * @param {object} validationItems
    */
-  _removeSpecialCaseWarnings(repo, warnings) {
-    // NOTE: it is possible to handle these case(s) by altering the json-schema,
-    // but since it would require a lot of duplication of the schema definition
-    // (in some cases), it is more convenient to strip out warning which do not
-    // apply here...
-    return warnings.filter((warning) => {
-      // if this isn't an open source project, remove warnings due to a missing
-      // `repository` field
-      if (!repo.permissions.usageType !== 'openSource') {
-        if (warning.params && warning.params.missingProperty === "repositoryURL") {
-          return false;
-        }
-        if (warning.dataPath === ".repositoryURL" && repo.repositoryURL === null) {
-          logger("removing warning for closed source repo with license===null");
-          return false;
-        }
-      }
-      if (warning.dataPath === ".permissions.licenses" && repo.permissions.licenses === null) {
-        logger("removing warning for closed source repo with licenses===null");
-        return false;
-      }
+  _removeSpecialCases(repo, validationItems) {
 
-      return true;
-    });
-  }
+    return validationItems.filter((validationItem) => {
+      if (this._isNotOpenSource(repo)) {
+        const repoUrlMissingWaring = this._propertyMissing("repositoryURL", validationItem) ||
+          this._propertyMissing("repository", validationItem);
+        if (repoUrlMissingWaring) {
+          return false;
+        }
 
-  /**
-   * Remove errors that fall under specific special cases for enhancements.
-   * @param {object} repo
-   * @param {object} enhancements
-   */
-  _removeSpecialCaseEnhancements(repo, enhancements) {
-    // NOTE: it is possible to handle these case(s) by altering the json-schema,
-    // but since it would require a lot of duplication of the schema definition
-    // (in some cases), it is more convenient to strip out warning which do not
-    // apply here...
-    return enhancements.filter((enhancement) => {
-      // if this isn't an open source project, remove warnings due to a missing
-      // `repository` field
-      if (!repo.permissions.usageType !== 'openSource') {
-        if (enhancement.params && enhancement.params.missingProperty === "repositoryURL") {
+        let dataPath = validationItem.dataPath === '.repositoryURL' || validationItem.dataPath === '.repository';
+        const repositoryUrlNull = repo.repositoryURL || repo.repository;
+        if (dataPath && repositoryUrlNull) {
+          logger.info("removing validation item for closed source repo with license===null");
           return false;
         }
-        if (enhancement.dataPath === ".permissions.licenses" && repo.permissions.licenses === null) {
-          logger("removing enhancement request for closed source repo with license===null");
-          return false;
-        }
-        if (enhancement.dataPath === ".repositoryURL" && repo.repositoryURL === null) {
-          logger("removing enhancement request for closed source repo with repository===null");
+
+        dataPath = validationItem.dataPath === '.permissions.licenses' || validationItem.dataPath === '.license';
+        const missingLicense = (repo.permissions && repo.permissions.licenses) || repo.license;
+        if (dataPath && missingLicense) {
+          logger.info("removing validation item for closed source repo with licenses===null");
           return false;
         }
       }
@@ -233,7 +195,7 @@ class Validator {
         this._validateRepoRelaxed(repo, next);
       },
       (validationErrors, next) => {
-        let errors = this._removeSpecialCaseErrors(repo, validationErrors);
+        let errors = this._removeSpecialCases(repo, validationErrors);
         result.issues.errors = errors;
         this._validateRepoStrict(repo, next);
       },
@@ -241,7 +203,7 @@ class Validator {
         // remove errors from warnings
         let warnings = Utils.removeDupes(validationWarnings, result.issues.errors);
         // remove special case warnings
-        warnings = this._removeSpecialCaseWarnings(repo, warnings);
+        warnings = this._removeSpecialCases(repo, warnings);
 
         result.issues.warnings = warnings;
 
@@ -256,7 +218,7 @@ class Validator {
         enhancements = Utils.removeDupes(enhancements, result.issues.warnings);
 
         // remove special case enhancements
-        enhancements = this._removeSpecialCaseEnhancements(repo, enhancements);
+        enhancements = this._removeSpecialCases(repo, enhancements);
 
         result.issues.enhancements = enhancements;
         next();
