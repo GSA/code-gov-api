@@ -1,4 +1,5 @@
 const bodyParser = require('body-parser');
+const compression = require('compression');
 const getConfig = require("./config");
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
@@ -52,6 +53,8 @@ app.use(helmet.hsts({
     return config.USE_HSTS;
   }
 }));
+
+app.use(compression());
 
 app.use('/api/docs', swaggerUi.serve, swaggerUi.setup(config.SWAGGER_DOCUMENT));
 app.set('views', path.join(__dirname, 'views'));
