@@ -31,6 +31,10 @@ function getConfig(env) {
   config.effortRegEx = /\[effort\]/;
   config.impactRegEx = /\[impact\]/;
   config.featuredRegEx = /\[featured\]/;
+  config.GITHUB_ISSUE_STATE = 'open';
+  config.GITHUB_HELP_WANTED_ISSUE_LABELS = '[help wanted],[code.gov]';
+  config.GITHUB_AUTH_TYPE = 'token';
+  config.GITHUB_TOKEN = process.env.GITHUB_TOKEN || null;
 
   return config;
 }
