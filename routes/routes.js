@@ -52,7 +52,7 @@ function getApiRoutes(config, searcher, router) {
       });
   });
   router.get(`/languages`, (request, response) => {
-    let options
+    let options;
     getLanguages(request, searcher, logger, options)
       .then(results => {
         if (results) {
@@ -68,7 +68,7 @@ function getApiRoutes(config, searcher, router) {
   });
   router.get('/repo.json', (request, response) => getRepoJson(response));
   router.get('/status.json', (request, response) => {
-    getStatusData(config)
+    getStatusData(searcher)
       .then(results => {
         if(results){
           results.statuses = _.omit( results.statuses, config.AGENCIES_TO_OMIT_FROM_STATUS );
@@ -83,7 +83,7 @@ function getApiRoutes(config, searcher, router) {
       });
   });
   router.get(`/status`, (request, response) => {
-    getStatusData(config, logger)
+    getStatusData(searcher)
       .then(results => response.render('status', { title: "Code.gov API Status", statusData: results }))
       .catch(error => {
         logger.error(error);
@@ -93,7 +93,7 @@ function getApiRoutes(config, searcher, router) {
   });
   router.get(`/status/:agency/issues`, (request, response) => {
     let agency = request.params.agency.toUpperCase();
-    getAgencyIssues(agency, config)
+    getAgencyIssues(agency, searcher)
       .then(issuesData => {
         if (issuesData.statusData) {
           return response.render(`status/agency/issues`, issuesData);

@@ -6,7 +6,7 @@ const Logger              = require("../../utils/logger");
 const repoMapping         = require("../../indexes/repo/mapping_200.json");
 
 const DATE_FORMAT = "YYYY-MM-DD";
-const REPO_RESULT_SIZE_MAX = 3000;
+const REPO_RESULT_SIZE_MAX = 10000;
 const REPO_RESULT_SIZE_DEFAULT = 10;
 const TERM_RESULT_SIZE_MAX = 100;
 const TERM_RESULT_SIZE_DEFAULT = 5;
@@ -426,6 +426,26 @@ class Searcher {
       }
       let term = Utils.omitPrivateKeys(res.hits.hits[0]._source);
       return callback(null, term);
+    });
+  }
+
+  searchStatus(callback) {
+    logger.info("Status searching");
+
+    this.client.search({
+      index: 'repos',
+      type: 'status'
+    }, (error, elasticSearchResponse) => {
+      if(error) {
+        logger.error(error);
+        return callback(error);
+      }
+      const data = Utils.omitPrivateKeys(
+        _.map(elasticSearchResponse.hits.hits, (hit) => {
+          return hit._source;
+        })
+      );
+      return callback(null,  data);
     });
   }
 

@@ -48,7 +48,6 @@ block content
       th Fallback Data Used
       th(style="width:400px;") Technical Notes
       th Issues
-      th Discovered
     each data in statusDataArr
       tr
 
@@ -165,8 +164,6 @@ block content
         td
           if data.issues.length
             a(href="status/" + data.metadata.agency.acronym + "/issues") view issues &rarr;
-        td
-          a(href="status/" + data.metadata.agency.acronym + "/discovered") view discovered repos &rarr;
   p(style="text-align: right; padding-right: 10px;")
     i Last Updated:&nbsp;
       =statusData.timestamp

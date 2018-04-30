@@ -8,6 +8,10 @@
 const Jsonfile = require("jsonfile");
 const Logger = require("../../utils/logger");
 const getConfig = require("../../config");
+const StatusIndexer = require("../indexer/status");
+const ElasticsearchAdapter = require("../../utils/search_adapters/elasticsearch_adapter");
+const elasticsearchMappings = require('../../indexes/status/mapping.json');
+const elasticsearchSettings = require('../../indexes/status/settings.json');
 
 class Reporter {
 
@@ -66,6 +70,21 @@ class Reporter {
   reportFallbackUsed(itemName, wasFallbackUsed) {
     this._createReportItemIfDoesntExist(itemName);
     this.report.statuses[itemName]["wasFallbackUsed"] = wasFallbackUsed;
+  }
+
+  indexReport(index) {
+    const params = {
+      "esIndex": index ? index : undefined,
+      "esAlias": "repos",
+      "esType": "status",
+      "esMapping": elasticsearchMappings,
+      "esSettings": elasticsearchSettings
+    };
+    const adapter = new ElasticsearchAdapter(this.config);
+
+    const statusIndexer = new StatusIndexer(adapter, params);
+
+    return statusIndexer.indexStatus(this);
   }
 
   writeReportToFile() {

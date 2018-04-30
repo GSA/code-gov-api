@@ -21,7 +21,7 @@ describe('AgencyJsonStream', function() {
     testDataDir = path.join(path.dirname(path.dirname(path.dirname(__dirname))), '/test_data');
     fallbackDataDir = path.join(testDataDir, '/fallback');
     fetchDataDir = path.join(testDataDir, '/fetched');
-    agency = JsonFile.readFileSync(path.join(testDataDir, 'test_agency_metadata.json'))
+    agency = JsonFile.readFileSync(path.join(testDataDir, 'test_agency_metadata.json'));
     agencyJsonStream = new AgencyJsonStream(fetchDataDir, fallbackDataDir, {
       prod_envs: ['prod', 'production', 'stag', 'staging']
     });
@@ -49,9 +49,7 @@ describe('AgencyJsonStream', function() {
     const codeJson = JsonFile.readFileSync(path.join(fallbackDataDir, '/FAKE.json'));
     const expectedRepos = codeJson.projects;
     return agencyJsonStream._validateAgencyRepos(agency[0], codeJson)
-      .then(result => {
-        result.repos.should.be.deep.equal(expectedRepos);
-      });
+      .then(result => result.repos.should.be.deep.equal(expectedRepos));
   });
 
   it('Should return fomatted repos', function(){

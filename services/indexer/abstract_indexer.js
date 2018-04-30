@@ -18,21 +18,17 @@ class AbstractIndexer {
   }
 
   constructor(adapter, params) {
+    const now = moment();
+    const timestamp = now.format('YYYYMMDD_HHmmss');
+
     this.logger = new Logger({ name: this.LOGGER_NAME });
     this.client = adapter.getClient();
-    this.esAlias = params.esAlias;
+    this.esAlias = params.esAlias ? params.esAlias : undefined;
 
-    // index is based on time stamp
-    // get timestamp to append to alias name
-    let now = moment();
-    let timestamp = now.format('YYYYMMDD_HHmmss');
-
-    // Set the index name to be alias appended with a timestamp.
-    this.esIndex = this.esAlias + timestamp;
-
-    this.esType = params.esType;
-    this.esMapping = params.esMapping;
-    this.esSettings = params.esSettings;
+    this.esIndex = params.esIndex ? params.esIndex : this.esAlias ? this.esAlias + timestamp : undefined;
+    this.esType = params.esType ? params.esType : undefined;
+    this.esMapping = params.esMapping ? params.esMapping : undefined;
+    this.esSettings = params.esSettings ? params.esSettings : undefined;
   }
 
   _toTitleCase(str) {

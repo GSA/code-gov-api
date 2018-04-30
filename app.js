@@ -1,4 +1,5 @@
 const bodyParser = require('body-parser');
+const compression = require('compression');
 const getConfig = require("./config");
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
@@ -42,7 +43,7 @@ if( config.ClOUD_GOV_SPACE && config.ClOUD_GOV_SPACE === 'prod') {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use('/api', express.static(path.join(__dirname, 'public')));
+app.use('/', express.static(path.join(__dirname, 'public')));
 app.use(cors());
 app.use(helmet());
 app.use(helmet.hsts({
@@ -52,6 +53,8 @@ app.use(helmet.hsts({
     return config.USE_HSTS;
   }
 }));
+
+app.use(compression());
 
 app.use('/api/docs', swaggerUi.serve, swaggerUi.setup(config.SWAGGER_DOCUMENT));
 app.set('views', path.join(__dirname, 'views'));
