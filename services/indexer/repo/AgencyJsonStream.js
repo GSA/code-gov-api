@@ -206,7 +206,7 @@ class AgencyJsonStream extends Transform {
   _getGithubData(repo, config) {
     const githubClient = getGithubClient(config.GITHUB_AUTH_TYPE, config.GITHUB_TOKEN);
 
-    return getRepoInformation(githubClient, repo.repositoryURL, 100, config, logger)
+    return getRepoInformation(githubClient, repo.repositoryURL, 100, config, logger);
   }
 
   _transform(agency, enc, callback) {
