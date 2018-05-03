@@ -160,7 +160,7 @@ jobs:
        - run:
           name: install-cf-autopilot
           command: |
-            curl -s https://api.github.com/repos/contraband/autopilot/releases/latest | grep "browser_download_url.*linux" | cut -d : -f 2,3 | tr -d \" | wget -qi -
+            curl -s https://api.github.com/repos/contraband/autopilot/releases/latest |  grep "browser_download_url.*linux" | cut -d ":" -f 2,3 | tr -d \" | wget -qi -
             cf install-plugin autopilot-linux
       - deploy:
           command: |
