@@ -127,10 +127,15 @@ jobs:
             sudo dpkg -i cf-cli_amd64.deb
             cf -v
       - run:
+          name: install-cf-autopilot
+          command: |
+            curl -s https://api.github.com/repos/contraband/autopilot/releases/latest | grep "browser_download_url.*linux" | cut -d : -f 2,3 | tr -d \" | wget -qi -
+            cf install-plugin autopilot-linux
+      - run:
           name: deploy-to-staging
           command: |
             cf login -a ${CF_URL} -u ${CF_STAGING_DEPLOYER} -p ${CF_STAGING_DEPLOYER_PASS} -o ${CF_ORG} -s ${CF_STAGING_SPACE}
-            cf push ${CF_APP} -n code-api-staging.app.cloud.gov
+            cf zero-downtime-push code-api -f manifest-staging.yml
   deploy-production:
     working_directory: ~/code-gov-api
     docker:
@@ -152,11 +157,15 @@ jobs:
             curl -v -L -o cf-cli_amd64.deb 'https://cli.run.pivotal.io/stable?release=debian64&source=github'
             sudo dpkg -i cf-cli_amd64.deb
             cf -v
-      # Production deployment.
+       - run:
+          name: install-cf-autopilot
+          command: |
+            curl -s https://api.github.com/repos/contraband/autopilot/releases/latest | grep "browser_download_url.*linux" | cut -d : -f 2,3 | tr -d \" | wget -qi -
+            cf install-plugin autopilot-linux
       - deploy:
           command: |
               cf login -a ${CF_URL} -u ${CF_PRODUCTION_DEPLOYER} -p ${CF_PRODUCTION_DEPLOYER_PASS} -o ${CF_ORG} -s ${CF_PRODUCTION_SPACE}
-              cf push ${CF_APP} -n code-api.app.cloud.gov
+              cf zero-downtime-push code-api -f manifest.yml
 workflows:
   version: 2
   build-test-deploy:
