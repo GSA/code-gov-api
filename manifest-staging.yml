@@ -6,7 +6,7 @@ applications:
   health-check-type: http
   health-check-http-endpoint: /api
   routes:
-    - route: code-api.app.cloud.gov
+    - route: code-api-staging.app.cloud.gov
   buildpack: https://github.com/cloudfoundry/nodejs-buildpack
   env:
     ES_HEAP_SIZE: 10g
