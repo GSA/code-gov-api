@@ -2,6 +2,7 @@ const path = require('path');
 const getProductionConfig = require('./prod');
 const getDevelopmentConfig = require('./dev');
 const jsonfile = require('jsonfile');
+const dotenv = require('dotenv');
 
 function getConfig(env) {
   let config = {
@@ -13,6 +14,7 @@ function getConfig(env) {
   } else {
     config = Object.assign(config, getDevelopmentConfig());
     config.LOGGER_LEVEL = 'DEBUG';
+    dotenv.config();
   }
 
   config.AGENCY_ENDPOINTS_FILE = path.join(path.dirname(__dirname), 'config/agency_metadata.json');
@@ -32,7 +34,7 @@ function getConfig(env) {
   config.impactRegEx = /\[impact\]/;
   config.featuredRegEx = /\[featured\]/;
   config.GITHUB_ISSUE_STATE = 'open';
-  config.GITHUB_HELP_WANTED_ISSUE_LABELS = '[help wanted],[code.gov]';
+  config.GITHUB_HELP_WANTED_ISSUE_LABELS = 'help wanted';
   config.GITHUB_AUTH_TYPE = 'token';
   config.GITHUB_TOKEN = process.env.GITHUB_TOKEN || null;
 
