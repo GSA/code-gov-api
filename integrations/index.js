@@ -1,3 +1,7 @@
-const { getRepoInformation, getRepoIssues } = require('./github')
+const { getRepoInformation, getGithubClient, isGithubUrl} = require('./github');
 
-module.exports = { getRepoInformation, getRepoIssues };
+module.exports = {
+  getRepoInformation,
+  getGithubClient,
+  isGithubUrl
+};
