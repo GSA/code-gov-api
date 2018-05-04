@@ -1,12 +1,12 @@
 applications:
 - name: code-api
-  memory: 1024M
+  memory: 512M
   instances: 1
-  disk_quota: 1024M
+  disk_quota: 512M
   health-check-type: http
   health-check-http-endpoint: /api
   routes:
-    - route: code-api.app.cloud.gov
+    - route: code-api-dev.app.cloud.gov
   buildpack: https://github.com/cloudfoundry/nodejs-buildpack
   env:
     ES_HEAP_SIZE: 10g
