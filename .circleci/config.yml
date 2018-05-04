@@ -193,7 +193,8 @@ workflows:
             - integration
           filters:
             tags:
-              only: /^v(\d+\.){2}\d+/
+              only: /^v.+/
+              ignore: /.+-rc/
             branches:
               ignore: /.*/
       - deploy-production:
@@ -201,6 +202,7 @@ workflows:
             - deploy-prod-hold
           filters:
             tags:
-              only: /^v(\d+\.){2}\d+/
+              only: /^v.+/
+              ignore: /.+-rc/
             branches:
               ignore: /.*/
