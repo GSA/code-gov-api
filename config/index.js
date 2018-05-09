@@ -1,31 +1,76 @@
+const cfenv = require('cfenv');
 const path = require('path');
-const getProductionConfig = require('./prod');
-const getDevelopmentConfig = require('./dev');
+const dotenv = require('dotenv');
 const jsonfile = require('jsonfile');
+
+function getCloudFoundryEnv() {
+  const appEnv = cfenv.getAppEnv();
+  if(!appEnv.isLocal){
+    const elasticSearchCredentials = appEnv.getServiceCreds("code_gov_elasticsearch");
+
+    return {
+      esAuth: `${elasticSearchCredentials.username}:${elasticSearchCredentials.password}`,
+      esHost: elasticSearchCredentials.hostname,
+      esPort: elasticSearchCredentials.port,
+      spaceName: appEnv.app.space_name,
+      uris: appEnv.app.uris
+    };
+  }
+  return {};
+}
+
+function getAppFilesDirectories() {
+  return {
+    AGENCY_ENDPOINTS_FILE: path.join(path.dirname(__dirname), 'config/agency_metadata.json'),
+    REPORT_FILEPATH: path.join(path.dirname(__dirname), "/data/status/report.json"),
+    DISCOVERED_DIR: path.join(path.dirname(__dirname), "/data/discovered"),
+    FETCHED_DIR: path.join(path.dirname(__dirname), "/data/fetched"),
+    DIFFED_DIR: path.join(path.dirname(__dirname), "/data/diffed"),
+    FALLBACK_DIR: path.join(path.dirname(__dirname), "/data/fallback")
+  };
+}
+
+function getSwaggerConf(spaceName, uri, port) {
+  const SWAGGER_HOST = process.env.SWAGGER_HOST || spaceName === 'prod'
+    ? 'api.code.gov'
+    : uri;
+  const SWAGGER_ENV = process.env.SWAGGER_ENV || spaceName;
+
+  const SWAGGER_DOCUMENT = SWAGGER_ENV === 'prod'
+    ? jsonfile.readFileSync(path.join(path.dirname(__dirname), './swagger-prod.json'))
+    : jsonfile.readFileSync(path.join(path.dirname(__dirname), './swagger.json'));
+  SWAGGER_DOCUMENT.host = SWAGGER_HOST || `0.0.0.0:${port}`;
+}
 
 function getConfig(env) {
   let config = {
     prod_envs: ['prod', 'production', 'stag', 'staging']
   };
-  if (config.prod_envs.includes(env)) {
-    config = Object.assign(config, getProductionConfig());
-    config.LOGGER_LEVEL = 'INFO';
+
+  const dotEnvResult = dotenv.config(path.join(path.dirname(__dirname), '.env'));
+  if(dotEnvResult.error) {
+    console.error('.env file not found or another error: ');
   } else {
-    config = Object.assign(config, getDevelopmentConfig());
-    config.LOGGER_LEVEL = 'DEBUG';
+    console.log('.env file found. YAY!');
   }
 
-  config.AGENCY_ENDPOINTS_FILE = path.join(path.dirname(__dirname), 'config/agency_metadata.json');
-  config.REPORT_FILEPATH = path.join(path.dirname(__dirname), config.REPORT_FILEPATH);
-  config.DISCOVERED_DIR = path.join(path.dirname(__dirname), config.DISCOVERED_DIR);
-  config.FETCHED_DIR = path.join(path.dirname(__dirname), config.FETCHED_DIR);
-  config.DIFFED_DIR = path.join(path.dirname(__dirname), config.DIFFED_DIR);
-  config.FALLBACK_DIR = path.join(path.dirname(__dirname), config.FALLBACK_DIR);
+  const isProd = config.prod_envs.includes(env);
+
+  config.LOGGER_LEVEL = process.env.LOGGER_LEVEL || isProd ? 'INFO' : 'DEBUG';
+  config.USE_HSTS = process.env.USE_HSTS || isProd ? true : false;
+  config.HSTS_MAX_AGE = process.env.HSTS_MAX_AGE || 31536000;
+  config.HSTS_PRELOAD = process.env.HSTS_PRELOAD || false;
   config.PORT = process.env.PORT || 3001;
-  config.SWAGGER_DOCUMENT = config.SWAGGER_ENV === 'prod'
-    ? jsonfile.readFileSync(path.join(path.dirname(__dirname), './swagger-prod.json'))
-    : jsonfile.readFileSync(path.join(path.dirname(__dirname), './swagger.json'));
-  config.SWAGGER_DOCUMENT.host = config.SWAGGER_HOST || `0.0.0.0:${config.PORT}`;
+
+  const cfElasticsearch = getCloudFoundryEnv();
+
+  config.ES_AUTH = `${process.env.ES_USER}:${process.env.ES_PASSWORD}` || cfElasticsearch.esAuth || 'root';
+  config.ES_HOST = process.env.ES_HOST || cfElasticsearch.esHost || 'localhost';
+  config.ES_PORT = process.env.ES_PORT || cfElasticsearch.esPort || 9200;
+
+  Object.assign(config, getAppFilesDirectories());
+  Object.assign(config, getSwaggerConf(cfElasticsearch.spaceName, cfElasticsearch.uri, config.PORT));
+
   return config;
 }
 
