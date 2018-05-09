@@ -6,7 +6,6 @@ const cors = require('cors');
 const express = require("express");
 const { getApiRoutes } = require('./routes');
 const helmet = require('helmet');
-const Indexer = require("./scripts/index/index.js");
 const Logger = require("./utils/logger");
 const path = require("path");
 const RateLimit = require('express-rate-limit');
@@ -22,15 +21,17 @@ const favicon = require('serve-favicon');
 /* ------------------------------------------------------------------ *
                             API CONFIG
  * ------------------------------------------------------------------ */
+const logger = new Logger({name: "code-gov-api"});
 
-// define and configure express
 const config = getConfig(process.env.NODE_ENV);
+
+logger.info(config);
 
 const app = express();
 
 app.set('json escape', true);
 
-if( config.ClOUD_GOV_SPACE && config.ClOUD_GOV_SPACE === 'prod') {
+if( config.USE_RATE_LIMITER) {
   const limiter = new RateLimit({
     windowMs: parseInt(process.env.WINDOW_MS || 60000, 10),
     max: parseInt(process.env.MAX_IP_REQUESTS || 500, 10),
@@ -60,8 +61,6 @@ app.use('/api/docs', swaggerUi.serve, swaggerUi.setup(config.SWAGGER_DOCUMENT));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 app.set('json spaces', 2);
-
-const logger = new Logger({name: "code-gov-api"});
 
 /* ------------------------------------------------------------------ *
                             API ROUTES
@@ -114,16 +113,7 @@ if(!module.parent) {
     require('newrelic');
   }
 
-  app.listen(config.PORT);
-  // schedule the interval at which indexings should happen
-  const indexInterval = config.INDEX_INTERVAL_SECONDS;
-  const indexer = new Indexer(config);
-  if (indexInterval) {
-    indexer.schedule(indexInterval);
-    logger.info(`Production: re-indexing every ${indexInterval} seconds`);
-  }
-
-  logger.info(`Started API server at http://0.0.0.0:${config.PORT}/`);
+  app.listen(config.PORT, () => logger.info(`Started API server at http://0.0.0.0:${config.PORT}/`));
 }
 
 module.exports = app;
