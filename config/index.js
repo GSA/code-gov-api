@@ -47,12 +47,7 @@ function getConfig(env) {
     prod_envs: ['prod', 'production', 'stag', 'staging']
   };
 
-  const dotEnvResult = dotenv.config(path.join(path.dirname(__dirname), '.env'));
-  if(dotEnvResult.error) {
-    console.error('.env file not found or another error: ');
-  } else {
-    console.log('.env file found. YAY!');
-  }
+  dotenv.config(path.join(path.dirname(__dirname), '.env'));
 
   const isProd = config.prod_envs.includes(env);
 
