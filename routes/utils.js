@@ -285,11 +285,22 @@ function getFetchedReposByAgency(agency, config) {
     .then(fetchedData => fetchedData);
 }
 
-function getRootMessage(response) {
-  response.render('index', {
-    filters: [marked],
-    title: "Code.gov API",
-    message: "Welcome to our API. Take a look at our Swagger docs https://api.code.gov/docs."
+function getRootMessage() {
+  return getVersion().then(version => {
+    return {
+      title: 'Code.gov API',
+      api_version: version,
+      swagger_docs_url: 'https://api.code.gov/docs',
+      end_points: [
+        '/repos',
+        '/repos.json',
+        '/status.json',
+        '/terms',
+        '/agencies',
+        '/languages',
+        '/version'
+      ]
+    };
   });
 }
 
