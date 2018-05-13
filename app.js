@@ -25,8 +25,6 @@ const logger = new Logger({name: "code-gov-api"});
 
 const config = getConfig(process.env.NODE_ENV);
 
-logger.info(config);
-
 const app = express();
 
 app.set('json escape', true);
