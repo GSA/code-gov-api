@@ -155,7 +155,10 @@ function getApiRoutes(config, searcher, router) {
       });
   });
 
-  router.get('/', (request, response) => getRootMessage(response));
+  router.get('/', (request, response) =>
+    getRootMessage()
+      .then(rootMessage => response.json(rootMessage))
+  );
   return router;
 
   // router.get(`/status/:agency/diff`, (req, res, next) => {
