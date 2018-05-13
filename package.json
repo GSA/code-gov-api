@@ -8,7 +8,7 @@
     "url": "https://github.com/GSA/code-gov-api.git"
   },
   "scripts": {
-    "start": "NODE_ENV=production node app.js",
+    "start": "node app.js",
     "debug": "NODE_ENV=development nodemon --inspect app.js",
     "index": "NODE_ENV=production node ./scripts/index/index.js",
     "index-debug": "NODE_ENV=development nodemon --inspect ./scripts/index/index.js",
