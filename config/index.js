@@ -53,8 +53,8 @@ function getConfig(env) {
 
   config.LOGGER_LEVEL = process.env.LOGGER_LEVEL || isProd ? 'INFO' : 'DEBUG';
   config.USE_HSTS = process.env.USE_HSTS || isProd ? true : false;
-  config.HSTS_MAX_AGE = process.env.HSTS_MAX_AGE || 31536000;
-  config.HSTS_PRELOAD = process.env.HSTS_PRELOAD || false;
+  config.HSTS_MAX_AGE = parseInt(process.env.HSTS_MAX_AGE) || 31536000;
+  config.HSTS_PRELOAD = false;
   config.PORT = process.env.PORT || 3001;
 
   const cfElasticsearch = getCloudFoundryEnv();
