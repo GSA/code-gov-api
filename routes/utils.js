@@ -3,7 +3,6 @@ const fs = require('fs');
 const git = require("git-rev");
 const pkg = require("../package.json");
 const Jsonfile = require("jsonfile");
-const marked = require('marked');
 const Utils = require('../utils');
 const repoMapping = require('../indexes/repo/mapping_200.json');
 
