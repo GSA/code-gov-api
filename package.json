@@ -49,7 +49,7 @@
     "jsonfile": "^4.0.0",
     "jstransformer-markdown-it": "^2.0.0",
     "latinize": "^0.4.0",
-    "lodash": "^4.17.5",
+    "lodash": "^4.17.10",
     "marked": "^0.3.16",
     "moment": "^2.20.0",
     "nan": "^2.9.2",
