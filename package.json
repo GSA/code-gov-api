@@ -37,6 +37,7 @@
     "cookie-parser": "^1.4.3",
     "cors": "^2.8.4",
     "diff": "^3.1.0",
+    "dotenv": "^5.0.1",
     "dtrace-provider": "^0.8.6",
     "elasticsearch": "^14.2.2",
     "event-stream": "^3.3.4",
