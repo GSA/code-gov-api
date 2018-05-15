@@ -52,6 +52,18 @@ function getConfig(env) {
   const isProd = config.prod_envs.includes(env);
 
   config.LOGGER_LEVEL = process.env.LOGGER_LEVEL || isProd ? 'INFO' : 'DEBUG';
+  config.TERM_TYPES_TO_INDEX = [
+    "name",
+    "agency.name",
+    "agency.acronym",
+    "tags",
+    "languages"];
+  config.TERM_TYPES_TO_SEARCH = [
+    "name",
+    "agency.name",
+    "agency.acronym",
+    "tags",
+    "languages"];
   config.USE_HSTS = process.env.USE_HSTS || isProd ? true : false;
   config.HSTS_MAX_AGE = parseInt(process.env.HSTS_MAX_AGE) || 31536000;
   config.HSTS_PRELOAD = false;
