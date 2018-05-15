@@ -921,7 +921,7 @@
       }
     },
     {
-      "organization": "USEPA / Region 1",
+      "organization": "Region 1",
       "name": "aed r",
       "description": "This repository contains the materials for the Atlantic Ecology Division's R (and friends) data science study group. The purpose of this group is to work together to learn new skills, languages, data science practices, etc. as they relate to our research in environmental science. The primary focus will likely be R, but the topics we cover will by no means be limited to that and other languages and tools are very much encouraged.",
       "permissions": {
@@ -1222,7 +1222,7 @@
       }
     },
     {
-      "organization": "USEPA / Region 1",
+      "organization": "Region 1",
       "name": "quickmapr",
       "description": "There are many packages that already exist or are in active development that support the visualization of spatial data in R. However, there seems to be a gap for those that need to quickly view, compare, and explore the results of a given spatial analysis. The current thinking behind quickmapr is to allow for quick visualization of sp and raster objects.",
       "permissions": {
@@ -1488,7 +1488,7 @@
       }
     },
     {
-      "organization": "USEPA / Region 4",
+      "organization": "Region 4",
       "name": "LOADING SIMULATION PROGRAM C",
       "description": "LSPC is the Loading Simulation Program in C++, a watershed modeling system that includes streamlined Hydrologic Simulation Program Fortran (HSPF) algorithms for simulating hydrology, sediment, and general water quality",
       "permissions": {
@@ -2024,7 +2024,7 @@
       }
     },
     {
-      "organization": "USEPA / Region 1",
+      "organization": "Region 1",
       "name": "region 1 r",
       "description": "This repository contains materials for an R workshop for USEPA Region 1 New England Regional Staff.",
       "permissions": {
@@ -3493,7 +3493,7 @@
       }
     },
     {
-      "organization": "USEPA / Region 6",
+      "organization": "Region 6",
       "name": "SDE Layer Menu Add-in to ArcGIS 10",
       "description": "An add-in to ArcGIS 10 that allows ArcMap users to turn on GIS layers stored in SDE by simply checking boxes next to layers listed on a pop up menu.  Adding layers is quick and easy as the user does not have to manually hunt for layers in SDE.",
       "permissions": {

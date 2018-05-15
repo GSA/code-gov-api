@@ -44,6 +44,115 @@
       }
     },
     {
+      "organization": "OC",
+      "name": "LAP (LAMP without MySQL) on Docker",
+      "description": "Docker LAP/MySQL for Drupal and PHP",
+      "repositoryURL": "https://bitbucket.org/usdawcmaas/gov-drupal",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "http://www.gnu.org/licenses/old-licenses/gpl-2.0.html",
+            "name": "GPL-2.0"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": 480,
+      "tags": [
+        "Docker",
+        "Drupal",
+        "PHP",
+        "DevOps"
+      ],
+      "contact": {
+        "email": "ron.williams@oc.usda.gov",
+        "name": "Ron Williams"
+      },
+      "status": "Production",
+      "vcs": "git",
+      "languages": [
+        "salt"
+      ],
+      "homepageURL": "https://bitbucket.org/usdawcmaas/gov-drupal",
+      "date": {
+        "created": "2015-03-24",
+        "lastModified": "2017-12-22",
+        "metadataLastUpdated": "2018-04-02"
+      }
+    },
+    {
+      "organization": "OC",
+      "name": "USDA WCMaaS Rancher Provisioner",
+      "description": "Salt script for provisioning Rancher for Docker containers.",
+      "repositoryURL": "https://bitbucket.org/usdawcmaas/rancher-salt",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "http://www.gnu.org/licenses/old-licenses/gpl-2.0.html",
+            "name": "GPL-2.0"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": 240,
+      "tags": [
+        "Docker",
+        "Rancher",
+        "DevOps"
+      ],
+      "contact": {
+        "email": "ron.williams@oc.usda.gov",
+        "name": "Ron Williams"
+      },
+      "status": "Production",
+      "vcs": "git",
+      "languages": [
+        "salt"
+      ],
+      "homepageURL": "https://usdawcmaas.atlassian.net/wiki/display/PLATFORM/Platform",
+      "date": {
+        "created": "2016-08-30",
+        "lastModified": "2017-10-12",
+        "metadataLastUpdated": "2018-04-02"
+      }
+    },
+    {
+      "organization": "OC",
+      "name": "USDA WCMaaS Varnish Cache",
+      "description": "Containerization of the high performance web content cache",
+      "repositoryURL": "https://bitbucket.org/usdawcmaas/varnish-cache",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "http://www.gnu.org/licenses/old-licenses/gpl-2.0.html",
+            "name": "GPL-2.0"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": 200,
+      "tags": [
+        "Varnish",
+        "Rancher",
+        "DevOps"
+      ],
+      "contact": {
+        "email": "ron.williams@oc.usda.gov",
+        "name": "Ron Williams"
+      },
+      "status": "Production",
+      "vcs": "git",
+      "languages": [
+        "salt"
+      ],
+      "homepageURL": "https://bitbucket.org/usdawcmaas/varnish-cache",
+      "date": {
+        "created": "2017-01-25",
+        "lastModified": "2017-11-02",
+        "metadataLastUpdated": "2018-04-02"
+      }
+    },
+    {
       "organization": "APHIS",
       "name": "Animal Disease Spread Model",
       "description": "A simulation of disease spread in livestock populations. Includes detection and containment simulation.",
