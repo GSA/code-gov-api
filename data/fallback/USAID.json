@@ -1,0 +1,95 @@
+{
+  "version": "2.0.0",
+  "agency": "USAID",
+  "measurementType": {},
+  "releases": [
+    {
+      "name": "Gmail Imap Pop Disable",
+      "description": "Allows a gmail enterprise to authorize only a limited number of users the ability to connect to Gmail using POP or IMAP. Any other users who configure that option which are not in the authorized list will have the connection disabled.",
+      "tags": [
+        "Gmail",
+        "Imap"
+      ],
+      "contact": {
+        "email": "mdicko@usaid.gov",
+        "name": "Malcolm Dicko",
+        "phone": "703-666-1215"
+      },
+      "repositoryURL": "https://github.com/USAID-MCIO/USAIDGmailImapPopDisable-",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "null",
+            "name": "null"
+          }
+        ],
+        "exemptionText": "null"
+      },
+      "laborHours": 300,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      },
+      "vcs": "",
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
+    },
+    {
+      "name": "Save Gmail",
+      "manifest_version": 2,
+      "description": "USAID Gmail extension to save messages to local disk",
+      "tags": [
+        "SAVE",
+        "GMAIL"
+      ],
+      "contact": {
+        "email": "mdicko@usaid.gov",
+        "name": "Malcolm Dicko",
+        "phone": "703-666-1215"
+      },
+      "repositoryURL": "https://github.com/USAID-MCIO/USAIDGmailSaveMessageExtension-",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "null",
+            "name": "null"
+          }
+        ],
+        "usageType": "governmentWideReuse",
+        "exemptionText": null
+      },
+      "laborHours": 300,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      },
+      "vcs": "",
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
+    }
+  ]
+}

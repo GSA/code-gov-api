@@ -20,16 +20,20 @@
       "downloadURL": "https://github.com/WhiteHouse/fb_messenger_bot/archive/master.zip",
       "homepageURL": "https://github.com/WhiteHouse/fb_messenger_bot",
       "laborHours": 0,
-      "languages": [ "PHP" ],
+      "languages": [
+        "PHP"
+      ],
       "name": "fb_messenger_bot",
       "organization": "Whitehouse",
       "partners": [],
       "permissions": {
         "exemptionText": null,
-        "licenses": [{
-          "name": "CC0",
-          "URL": "https://github.com/WhiteHouse/fb_messenger_bot/blob/master/LICENSE.md"
-        }],
+        "licenses": [
+          {
+            "name": "CC0",
+            "URL": "https://github.com/WhiteHouse/fb_messenger_bot/blob/master/LICENSE.md"
+          }
+        ],
         "usageType": "openSource"
       },
       "relatedCode": [],
@@ -63,17 +67,24 @@
       "homepageURL": "https://github.com/WhiteHouse/fb_messenger_bot",
       "laborHours": 0,
       "languages": [
-        "JavaScript", "PHP", "CSS ", "HTML", "CoffeeScript", "Ruby"
+        "JavaScript",
+        "PHP",
+        "CSS ",
+        "HTML",
+        "CoffeeScript",
+        "Ruby"
       ],
       "name": "petitions",
       "organization": "Whitehouse",
       "partners": [],
       "permissions": {
         "exemptionText": null,
-        "licenses": [{
-          "name": "GPL v2",
-          "URL": "https://github.com/WhiteHouse/petitions#license"
-        }],
+        "licenses": [
+          {
+            "name": "GPL v2",
+            "URL": "https://github.com/WhiteHouse/petitions#license"
+          }
+        ],
         "usageType": "openSource"
       },
       "relatedCode": [],
@@ -109,17 +120,20 @@
       "homepageURL": "https://github.com/WhiteHouse/wh-app-android",
       "laborHours": 0,
       "languages": [
-        "Java", "Javascript"
+        "Java",
+        "Javascript"
       ],
       "name": "wh-app-android",
       "organization": "Whitehouse",
       "partners": [],
       "permissions": {
         "exemptionText": null,
-        "licenses": [{
-          "name": "MIT",
-          "URL": "https://github.com/WhiteHouse/wh-app-android#license"
-        }],
+        "licenses": [
+          {
+            "name": "MIT",
+            "URL": "https://github.com/WhiteHouse/wh-app-android#license"
+          }
+        ],
         "usageType": "openSource"
       },
       "relatedCode": [],

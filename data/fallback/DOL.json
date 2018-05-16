@@ -1,0 +1,4174 @@
+{
+  "version": "2.0.0",
+  "measurementType": {
+    "method": "projects"
+  },
+  "agency": "DOL",
+  "releases": [
+    {
+      "name": "OSHA HEAT SAFETY ANDROID EN",
+      "organization": "OSHA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/OSHA-Heat-Safety-iOS",
+      "description": "This app allows workers and supervisors to calculate the heat index for their worksite, and, based on the heat index, displays a risk level to outdoor workers",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "OSHA",
+        "heat",
+        "Safety",
+        "iOS"
+      ],
+      "contact": {
+        "email": "hatch.mark@dol.gov",
+        "name": " Mark Hatch"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/OSHA-Heat-Safety-iOS/archive/master.zip",
+      "languages": [
+        "Swift"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2013-03-28",
+        "lastModified": "2017-05-31"
+      }
+    },
+    {
+      "name": "Intelligent PERSONAL ASSITANTS",
+      "organization": "HRC",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/Intelligent-Personal-Assistants",
+      "description": "Collaborative space for DOL development towards connecting IPAs with APIs.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "Intelligent",
+        "Personal",
+        "Assitants"
+      ],
+      "contact": {
+        "email": "giancola.thomas@dol.gov",
+        "name": "Thomas Giancola"
+      },
+      "status": "Alpha",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/Intelligent-Personal-Assistants/archive/master.zip",
+      "languages": [
+        "python",
+        "aws",
+        "aws-lambda"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2017-05-16",
+        "lastModified": "2017-05-24"
+      }
+    },
+    {
+      "name": "YAMMERDATADUMP",
+      "organization": "HRC",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/YammerDataDump",
+      "description": "A simple way to download your Yammer content to excel.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "YammerDataDump"
+      ],
+      "contact": {
+        "email": "giancola.thomas@dol.gov",
+        "name": "Thomas Giancola"
+      },
+      "status": "Alpha",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.comUSDepartmentofLabor/YammerDataDump/archive/master.zip",
+      "languages": [
+        "yammer",
+        "visual-basic-net"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2017-05-05",
+        "lastModified": "2017-05-08"
+      }
+    },
+    {
+      "name": "DEVELOPER",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/Developer",
+      "description": "Developer.dol.gov has undergone a redesign and the site is hosted here",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "DEVELOPER"
+      ],
+      "contact": {
+        "email": "Yao.sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/Developer/archive/master.zip",
+      "languages": [
+        "html"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2015-01-05",
+        "lastModified": "2017-10-06"
+      }
+    },
+    {
+      "name": "PHP_DOLDATASDK",
+      "organization": "OCIO",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/PHP_DOLDataSDK",
+      "description": "PHP SDK to ease access to DOL's and other federal agencies' APIs",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "PHP",
+        "DOLDataSDK"
+      ],
+      "contact": {
+        "email": "Yao.sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/PHP_DOLDataSDK/archive/master.zip",
+      "languages": [
+        "PHP"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2012-08-24",
+        "lastModified": "2016-02-16"
+      }
+    },
+    {
+      "name": "CHILD LABOR ANDROID",
+      "organization": "ILAB",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/Child-Labor-Android",
+      "description": "PHP SDK to ease access to DOL's and other federal agencies' APIs",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "Child",
+        "Labor",
+        "Android"
+      ],
+      "contact": {
+        "email": "Yao.sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/Child-Labor-Android/archive/master.zip",
+      "languages": [
+        "Ruby"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2015-10-08",
+        "lastModified": "2016-08-21"
+      }
+    },
+    {
+      "name": "INTERACTIVE CHART MAKER",
+      "organization": "BLS",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/interactive-chart-maker",
+      "description": "App to create interactive charts and maps",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "interactive",
+        "chart",
+        "maker"
+      ],
+      "contact": {
+        "email": "McDaniel.Jay@bls.gov",
+        "name": "Jay McDaniel "
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/interactive-chart-maker/archive/master.zip",
+      "languages": [
+        "html"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2016-11-28",
+        "lastModified": "2016-02-22"
+      }
+    },
+    {
+      "name": "SWIFT FEDERAL DATA SDK",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/Swift-Federal-Data-SDK",
+      "description": "Federal Data SDK built in the Swift programming language",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "Swift",
+        "Federal",
+        "Data",
+        "SDK"
+      ],
+      "contact": {
+        "email": "Yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/Swift-Federal-Data-SDK/archive/master.zip",
+      "languages": [
+        "Swift"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2014-06-23",
+        "lastModified": "2016-11-04"
+      }
+    },
+    {
+      "name": "VETS4212",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/VETS4212",
+      "description": "VETS4212",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "VETS4212"
+      ],
+      "contact": {
+        "email": "Carl.Tom@dol.gov",
+        "name": "Tom Carl"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/VETS4212/archive/master.zip",
+      "languages": [
+        "C#"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2015-05-17",
+        "lastModified": "2016-10-21"
+      }
+    },
+    {
+      "name": "DOL WHD 14C",
+      "organization": "WHD",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/dol-whd-14c",
+      "description": "dol-whd-14c",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "DOL",
+        "whd",
+        "14c"
+      ],
+      "contact": {
+        "email": "Wang.Bin@DOL.GOV",
+        "name": "Michelle Wang"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.comUSDepartmentofLabor/dol-whd-14c/archive/master.zip",
+      "languages": [
+        "html"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2016-09-22",
+        "lastModified": "2016-09-22"
+      }
+    },
+    {
+      "name": "DOL FAQ",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/dolfaq",
+      "description": "Application using the DOL FAQ API dataset",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "dol",
+        "faq"
+      ],
+      "contact": {
+        "email": "Yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/dolfaq/archive/master.zip",
+      "languages": [
+        "CSS"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2016-05-09",
+        "lastModified": "2016-05-09"
+      }
+    },
+    {
+      "name": "Electronic Field Operations Handbook (eFOH)",
+      "organization": "WHD",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/eFOH",
+      "description": "A working prototype of WHD's Field Operations Handbook (FOH) using unverified content",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "eFOH"
+      ],
+      "contact": {
+        "email": "Wang.Bin@DOL.GOV",
+        "name": "Michelle Wang"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/eFOH/archive/master.zip",
+      "language": [],
+      "laborHours": 1,
+      "date": {
+        "created": "2015-04-11",
+        "lastModified": "2015-12-17"
+      }
+    },
+    {
+      "name": "Federal Register API",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/FederalRegister",
+      "description": "App that displays information from the Federal Register's API specific to DOL's agencies",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "FederalRegister"
+      ],
+      "contact": {
+        "email": "Yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/FederalRegister/archive/master.zip",
+      "languages": [
+        "PHP"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2015-04-12",
+        "lastModified": "2015-11-17"
+      }
+    },
+    {
+      "name": "PHP SAMPLE APP",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/PHP-Sample-App",
+      "description": "Sample app and documentation for the PHP Federal SDK",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "PHP",
+        "Sample",
+        "App"
+      ],
+      "contact": {
+        "email": "Yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/PHP-Sample-App/archive/master.zip",
+      "languages": [
+        "PHP"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2013-05-16",
+        "lastModified": "2013-05-16"
+      }
+    },
+    {
+      "name": "PUBLIC DATA LISTING",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/public-data-listing",
+      "description": "The data.json for DOL, including the individual data.json files for each of DOL's organizations.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "public",
+        "data",
+        "listing"
+      ],
+      "contact": {
+        "email": "Yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/public-data-listing/archive/master.zip",
+      "languages": [
+        "null"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2014-10-29",
+        "lastModified": "2015-08-27"
+      }
+    },
+    {
+      "name": "BLACKBERRY_DOLDATASDK",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/BlackBerry_DOLDataSDK",
+      "description": "Blackberry SDK to ease access to DOL's and other federal agencies' APIs.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "Blackberry",
+        "DOLDataSDK"
+      ],
+      "contact": {
+        "email": "Yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/BlackBerry_DOLDataSDK/archive/master.zip",
+      "languages": [
+        "Java"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2012-08-24",
+        "lastModified": "2015-08-13"
+      }
+    },
+    {
+      "name": "RUBY SAMPLE APP",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/Ruby-Sample-App",
+      "description": "A sample app using the Ruby Federal SDK.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "Ruby",
+        "Sample",
+        "App"
+      ],
+      "contact": {
+        "email": "Yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/Ruby-Sample-App/archive/master.zip",
+      "languages": [
+        "Ruby"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2013-05-11",
+        "lastModified": "2015-08-12"
+      }
+    },
+    {
+      "name": "DOL TIMESHEET",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/DOL-Timesheet",
+      "description": "This is a timesheet to record the hours that you work and calculate the amount you may be owed by your employer.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "DOL",
+        "timesheet"
+      ],
+      "contact": {
+        "email": "Yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/DOL-Timesheet/archive/master.zip",
+      "languages": [
+        "Objective-C"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2013-03-28",
+        "lastModified": "2015-08-07"
+      }
+    },
+    {
+      "name": "QUARRY",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/Quarry",
+      "description": "This is a security patch update for Quarry REST.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "Quarry"
+      ],
+      "contact": {
+        "email": "Yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/Quarry/",
+      "languages": [
+        "PHP"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2015-04-10",
+        "lastModified": "2015-06-02"
+      }
+    },
+    {
+      "name": "DOLDataSDK IOS",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/DOLDataSDK-iOS",
+      "description": "iOS SDK to ease access to DOL's and other federal agencies' APIs.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "DOLDataSDK",
+        "iOS"
+      ],
+      "contact": {
+        "email": "Yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "git@github.com:USDepartmentofLabor/DOLDataSDK-iOS/archive/master.zip",
+      "languages": [
+        "Objective-C"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2012-08-23",
+        "lastModified": "2015-06-28"
+      }
+    },
+    {
+      "name": "QUARRY ADMIN",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/Quarry-Admin",
+      "description": "This is a security patch update for Quarry AdminUI.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "Quarry",
+        " Admin"
+      ],
+      "contact": {
+        "email": "Yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/Quarry-Admin/archive/master.zip",
+      "languages": [
+        "PHP"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2015-04-10",
+        "lastModified": "2015-08-02"
+      }
+    },
+    {
+      "name": "ANDROID DOLDATASDK",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/Android_DOLDataSDK",
+      "description": "SDK to ease access to DOL's and other federal agencies' APIs.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "Android",
+        "DOLDataSDK"
+      ],
+      "contact": {
+        "email": "Yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/Android_DOLDataSDK/archive/master.zip",
+      "languages": [
+        "Java"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2012-08-24",
+        "lastModified": "2012-06-22"
+      }
+    },
+    {
+      "name": "DOTNET DOLDATASDK",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/DotNet_DOLDataSDK",
+      "description": "SDK to ease access to DOL's and other federal agencies' APIs.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "Android",
+        "DOLDataSDK"
+      ],
+      "contact": {
+        "email": "Yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/DotNet_DOLDataSDK/archive/master.zip",
+      "languages": [
+        "C#"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2013-04-16",
+        "lastModified": "2012-08-12"
+      }
+    },
+    {
+      "name": "IOS SAMPLE APP",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/iOS-Sample-App",
+      "description": "A sample app using the federal API SDK for iOS.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "iOS",
+        "Sample",
+        "App"
+      ],
+      "contact": {
+        "email": "Yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/iOS-Sample-App/archive/master.zip",
+      "languages": [
+        "Objective-C"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2015-06-16",
+        "lastModified": "2013-05-06"
+      }
+    },
+    {
+      "name": "COLDFUSION FEDERAL SDK",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/ColdFusion-Federal-SDK",
+      "description": "SDK to ease access to federal APIs, including DOL's.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "Coldfusion",
+        "Federal",
+        "SDK"
+      ],
+      "contact": {
+        "email": "Yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/ColdFusion-Federal-SDK/archive/master.zip",
+      "languages": [
+        "Coldfusion"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2013-07-18",
+        "lastModified": "2015-07-05"
+      }
+    },
+    {
+      "name": "WHD PWS EDE Proof of Payment (POP)",
+      "organization": "WHD",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/whd-pws-ede-pop",
+      "description": "Wireframes for a project by 18F Consulting.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "whd",
+        "pws",
+        "ede",
+        "pop"
+      ],
+      "contact": {
+        "email": "Wang.Bin@dol.GOV",
+        "name": "Michelle Wang"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/whd-pws-ede-pop/archive/master.zip",
+      "languages": [
+        "html"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2014-12-05",
+        "lastModified": "2015-05-06"
+      }
+    },
+    {
+      "name": "DOL LOCATIONS",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/DOL_locations",
+      "description": "US Department of Labor Location Map.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "Dol",
+        "Locations"
+      ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/DOL_locations/archive/master.zip",
+      "languages": [
+        "html"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2016-04-12",
+        "lastModified": "2016-04-12"
+      }
+    },
+    {
+      "name": "NODE DOL API",
+      "organization": "ETA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/node-dol-api",
+      "description": "This is a [Node] SDK for accessing the US Department of Labor's data API.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "node",
+        "dol",
+        "api"
+      ],
+      "contact": {
+        "email": "day.eric@dol.gov",
+        "name": "Eric day"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/node-dol-api/archive/master.zip",
+      "languages": [
+        "javascript"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2015-05-01",
+        "lastModified": "2015-05-02"
+      }
+    },
+    {
+      "name": "MOBILE ACCESSIBILITY TEST SCRIPT",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/Mobile-Accessibility-Test-Script",
+      "description": "A selection of test cases used to test accessibility and Section 508 compliance of mobile applications.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "Mobile",
+        "accessibility",
+        "test",
+        "script"
+      ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/Mobile-Accessibility-Test-Script/archive/master.zip",
+      "languages": [
+        "html"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2015-04-01",
+        "lastModified": "2013-04-08"
+      }
+    },
+    {
+      "name": "SWIFT SAMPLE APP",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/Swift-Sample-App",
+      "description": "Sample app using the Swift Federal Data SDK.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "Swift",
+        "Sample",
+        "app"
+      ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.comUSDepartmentofLabor/Swift-Sample-App/archive/master.zip",
+      "languages": [
+        "Swift"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2016-02-19",
+        "lastModified": "2014-06-24"
+      }
+    },
+    {
+      "name": "OPA",
+      "organization": "DOL Department",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/SWXMLHASH",
+      "description": "Simple XML parsing in Swift.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "SWXMLHASH"
+      ],
+      "contact": {
+        "email": "Pulsifer.Michael@dol.gov",
+        "name": "Pulsifer Michael"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/SWXMLHash/archive/master.zip",
+      "languages": [
+        "Swift"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2014-07-08",
+        "lastModified": "2015-02-18"
+      }
+    },
+    {
+      "name": "OSHA HEAT SAFETY SWIFT",
+      "organization": "OSHA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/OSHA-Heat-Safety-Swift",
+      "description": "prototype of a modernization of the OSHA Heat Safety App, built in Swift and employing new features, including a 7-day forecast and wind chill warnings.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "OSHA",
+        "Heat",
+        "Safety",
+        "Swift"
+      ],
+      "contact": {
+        "email": "hatch.mark@dol.gov",
+        "name": " Mark Hatch"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/OSHA-Heat-Safety-Swift/archive/master.zip",
+      "languages": [
+        "Swift"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2015-01-28",
+        "lastModified": "2015-01-28"
+      }
+    },
+    {
+      "name": "PUBLIC DATA LISTING CONSOLIDATOR",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/Public-Data-Listing-Consolidator",
+      "description": "Consolidates public data listing files (data.json) into one department-wide JSON file.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "Public",
+        "Data",
+        "listing",
+        "Consolidator"
+      ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/Public-Data-Listing-Consolidator/archive/master.zip",
+      "languages": [
+        "Swift"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2015-01-02",
+        "lastModified": "2015-01-20"
+      }
+    },
+    {
+      "name": "CALCULATE HEAT INDEX JAVA",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/Calculate-Heat-Index-Java",
+      "description": "Java Class that will calculate the heat index.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "calculate",
+        "heat",
+        "index",
+        "Java"
+      ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/Calculate-Heat-Index-Java/archive/master.zip",
+      "languages": [
+        "Java"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2016-04-12",
+        "lastModified": "2016-04-12"
+      }
+    },
+    {
+      "name": "APIV2",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/APIv2",
+      "description": "The back-end and admin UI code for the next evolution of DOL's open data API.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "APIv2"
+      ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/APIv2/archive/master.zip",
+      "languages": [
+        "PHP"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2014-07-29",
+        "lastModified": "2014-12-17"
+      }
+    },
+    {
+      "name": "APIV2 ADMIN",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/APIv2-Admin",
+      "description": "Admin interface for APIv2.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "APIv2",
+        "Admin"
+      ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/APIv2-Admin/archive/master.zip",
+      "languages": [
+        "PHP"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2014-09-09",
+        "lastModified": "2014-09-11"
+      }
+    },
+    {
+      "name": "API STANDARDS",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/api-standards",
+      "description": "This document captures DOL's view of API best practices and standards as can be applied to the DOL-wide API. We will incorporate these into our work.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "api",
+        "standards"
+      ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/api-standards/archive/master.zip",
+      "languages": [
+        "simpletxt"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2012-12-19",
+        "lastModified": "2014-09-09"
+      }
+    },
+    {
+      "name": "WEATHER",
+      "organization": "OSHA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/Weather",
+      "description": " A Swift object to support the OSHA Heat Safety App.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "Weather"
+      ],
+      "contact": {
+        "email": "hatch.mark@dol.gov",
+        "name": "Mark Hatch"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/Weather/archive/master.zip",
+      "languages": [
+        "Swift"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2014-06-24",
+        "lastModified": "2014-08-20"
+      }
+    },
+    {
+      "name": "CONVERSIONS",
+      "organization": "OSHA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/Conversions",
+      "description": " A class that exposes functions that enable common conversions between US (Imperial) and metric measurements.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "conversions"
+      ],
+      "contact": {
+        "email": "hatch.mark@dol.gov",
+        "name": "Mark Hatch"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/Conversions/archive/master.zip",
+      "languages": [
+        "Swift"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2014-08-04",
+        "lastModified": "2014-08-05"
+      }
+    },
+    {
+      "name": "DOLAPI",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/DOLAPI",
+      "description": " Having trouble using DOL's API? Feel free to use the issues tab. If you are having trouble with any of our SDKs, please see their github pages.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "DOLAPI"
+      ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/DOLAPI/archive/master.zip",
+      "languages": [
+        "javascript"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2012-10-02",
+        "lastModified": "2014-08-05"
+      }
+    },
+    {
+      "name": "OSHA HEAT SAFETY ANDROID ES",
+      "organization": "OSHA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/OAHA-Heat-Safety-Android-Es",
+      "description": " This app allows workers and supervisors to calculate the heat index for their worksite, and, based on the heat index, displays a risk level to outdoor workers.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "OSHA",
+        "Heat",
+        "Safety",
+        "Android",
+        "ES"
+      ],
+      "contact": {
+        "email": "hatch.mark@dol.gov",
+        "name": "Mark Hatch"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/OAHA-Heat-Safety-Android-Es/archive/master.zip",
+      "languages": [
+        "Java"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2016-04-12",
+        "lastModified": "2016-04-12"
+      }
+    },
+    {
+      "name": "OSHA HEAT SAFETY BLACKBERRY",
+      "organization": "OSHA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/OSHA-Heat-Safety-Blackberry",
+      "description": " This app allows workers and supervisors to calculate the heat index for their worksite, and, based on the heat index, displays a risk level to outdoor workers.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "OSHA",
+        "Heat",
+        "Safety",
+        "Blackberry"
+      ],
+      "contact": {
+        "email": "hatch.mark@dol.gov",
+        "name": "Mark Hatch"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/OSHA-Heat-Safety-Blackberry/archive/master.zip",
+      "languages": [
+        "Java"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2013-03-28",
+        "lastModified": "2014-07-29"
+      }
+    },
+    {
+      "name": "LABORSTATS IOS",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/LaborStats-iOS",
+      "description": "Get the latest economic indicators from BLS & ETAs.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "LaborStats",
+        "iOS"
+      ],
+      "contact": {
+        "email": "Pulsifer.Michael@dol.gov",
+        "name": "Pulsifer Michael"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/LaborStats-iOS/archive/master.zip",
+      "languages": [
+        "Objective-C"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2013-03-28",
+        "lastModified": "2014-02-26"
+      }
+    },
+    {
+      "name": "API STATUS",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/API-Status",
+      "description": "A Mac menu bar app that sends a request every 15 minutes to the RESTful web API of your choice and displays a meter and time in ms for the response.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "API",
+        "status"
+      ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/API-Status/archive/master.zip",
+      "languages": [
+        "Objective-C"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2013-11-26",
+        "lastModified": "2013-12-09"
+      }
+    },
+    {
+      "name": "COLDFUSION SAMPLE APP",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/ColdFusion-Sample-App",
+      "description": "A sample app using the federal API SDK for ColdFusion.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "Coldfusion",
+        "Sample",
+        "App"
+      ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/ColdFusion-Sample-App/archive/master.zip",
+      "languages": [
+        "Coldfusion"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2013-07-18",
+        "lastModified": "2013-07-18"
+      }
+    },
+    {
+      "name": "OSHA HEAT SAFETY",
+      "organization": "OSHA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/OSHA-Heat-Safety",
+      "description": "Desktop version of the OSHA Heat Safety Tool, created as a proof of concept by the Office of Public Affairs in response to a suggestion from the public.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "OSHA",
+        "Heat",
+        "Safety"
+      ],
+      "contact": {
+        "email": "hatch.mark@dol.gov",
+        "name": "Mark Hatch"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/OSHA-Heat-Safety/archive/master.zip",
+      "languages": [
+        "Objective-C"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2013-07-12",
+        "lastModified": "2013-07-17"
+      }
+    },
+    {
+      "name": "ANDROID Sample APP",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/Android-Sample-App",
+      "description": "A sample app using the federal API SDK for Android.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "Android",
+        "Sample",
+        "App"
+      ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/Android-Sample-App/archive/master.zip",
+      "languages": [
+        "Java"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2013-06-17",
+        "lastModified": "2013-06-17"
+      }
+    },
+    {
+      "name": "BLACKBERRY SAMPLE APP",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/Blackberry-Sample-App",
+      "description": "Sample app and documentation for the Blackberry Federal SDK.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "Blackberry",
+        "Sample",
+        "App"
+      ],
+      "contact": {
+        "email": "yao.Sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/Blackberry-Sample-App/archive/master.zip",
+      "languages": [
+        "Java"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2013-06-07",
+        "lastModified": "2013-06-14"
+      }
+    },
+    {
+      "name": "JS DASHBOARD",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/JS-Dashboard",
+      "description": "This code illustrates how to create a dashboard that will display graphs using the JIT, FLOT, and jQuery cycle API's in a section of a website.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "JS",
+        "dashboard"
+      ],
+      "contact": {
+        "email": "Pulsifer.Michael@dol.gov",
+        "name": "Pulsifer Michael"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/JS-Dashboard/archive/master.zip",
+      "languages": [
+        "javascript"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2012-11-29",
+        "lastModified": "2013-04-29"
+      }
+    },
+    {
+      "name": "LABOR STATS ANDROID",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/LaborStats-Android",
+      "description": "This code illustrates how to create a dashboard that will display graphs using the JIT, FLOT, and jQuery cycle API's in a section of a website.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "LaborStats",
+        "Android"
+      ],
+      "contact": {
+        "email": "Pulsifer.Michael@dol.gov",
+        "name": "Michael Pulsifer"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/LaborStats-Android/archive/master.zip",
+      "languages": [
+        "Java"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2013-03-28",
+        "lastModified": "2013-03-28"
+      }
+    },
+    {
+      "name": "STRATEGYTRACKERIPAD",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/StrategyTrackeriPad",
+      "description": "This is a sample project using the API SDK for iOS that demonstrates how it can be used for non-DOL APIs.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "StrategyTrackeriPad"
+      ],
+      "contact": {
+        "email": "Pulsifer.Michael@DOL.GOV",
+        "name": "Michael Pulsifer"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/StrategyTrackeriPad/archive/master.zip",
+      "languages": [
+        "Objective-C"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2012-10-24",
+        "lastModified": "2012-11-05"
+      }
+    },
+    {
+      "name": "HELPFULREDIST",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/HelpfulRedist",
+      "description": "The solution begins with the question “Was this page helpful,” which captures the feedback from the user about the page that is displayed on the browser",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "HelpfulRedist"
+      ],
+      "contact": {
+        "email": "Pulsifer.Michael@DOL.GOV",
+        "name": " Michael Pulsifer "
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/HelpfulRedist/archive/master.zip",
+      "languages": [
+        "javascript"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2012-09-14",
+        "lastModified": "2012-09-14"
+      }
+    },
+    {
+      "name": "DEEOIC_RADR",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/DEEOIC_RADR.",
+      "description": "Configuration and ETL scripts for DFEC Risk Assessment Data Repository visualization tool by Elder Research, Inc.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByAgencySystem",
+        "exemptionText": null
+      },
+      "tags": [
+        "DEEOIC_RADR"
+      ],
+      "contact": {
+        "email": "Pulsifer.Michael@DOL.GOV",
+        "name": " Michael Pulsifer"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/DEEOIC_RADR/archive/master.zip",
+      "languages": [
+        "SAS",
+        "HTML"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2017-10-05",
+        "lastModified": "2017-12-11"
+      }
+    },
+    {
+      "name": "WHD Excel Toolkit",
+      "organization": "WHD",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/WHD-Excel-Toolkit",
+      "description": "WHD Investigator Toolkit for Excel - assist with processing BW comps, uploading to WHISARD.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByAgencySystem",
+        "exemptionText": null
+      },
+      "tags": [
+        "WHD",
+        "Excel",
+        "Toolkit",
+        "WHISARD"
+      ],
+      "contact": {
+        "email": "Pulsifer.Michael@DOL.GOV",
+        "name": "Michael Pulsifer"
+      },
+      "laborHours": 1,
+      "date": {
+        "created": "2017-09-21",
+        "lastModified": "2017-09-21"
+      }
+    },
+    {
+      "name": "OFCCP-Complaint-Form",
+      "organization": "OFFCP",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/OFCCP-Complaint-Form",
+      "description": "Complaint Involving Employment Discrimination by a Federal Contractor or Subcontractor.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByAgencySystem",
+        "exemptionText": null
+      },
+      "tags": [
+        "OFCCP",
+        "Complaint",
+        "Form"
+      ],
+      "contact": {
+        "email": "Pulsifer.Michael@DOL.GOV",
+        "name": "Michael Pulsifer"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/OFCCP-Complaint-Form/archive/master.zip",
+      "languages": [
+        "CSS",
+        "ASP",
+        "javascript",
+        "html"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2016-12-07",
+        "lastModified": "2017-07-24"
+      }
+    },
+    {
+      "name": "OFCCP Information System (OFIS)",
+      "organization": "OFFCP",
+      "repositoryURL": "",
+      "description": "https://www.dol.gov/oasam/ocio/programs/PIA/OFCCP/OFCCP-OFIS.htm",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByAgencySystem",
+        "exemptionText": null
+      },
+      "tags": [
+        "OFCCP",
+        "OFIS"
+      ],
+      "contact": {
+        "email": "Zhao.Renee@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "whd-Moderization",
+      "organization": "WHD",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/whd-mod.",
+      "description": "This is the current home for all things WHD Modernization. Currently, we are using it to collaborate on a modernization blueprint, which will include high level goals/objectives, outcomes, and related resources.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByAgencySystem",
+        "exemptionText": null
+      },
+      "tags": [
+        "whd",
+        "mod"
+      ],
+      "contact": {
+        "email": "Pulsifer.Michael@DOL.GOV",
+        "name": "Michael Pulsifer"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/whd-mod/archive/master.zip",
+      "languages": [
+        "HTML"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2017-04-10",
+        "lastModified": "2017-01-24"
+      }
+    },
+    {
+      "name": "innovation-council",
+      "organization": "OASAM",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/innovation-council.",
+      "description": "Innovation Council site This is the code base for the labornet.dol.gov/innovation website. It is not hosted via Git so all merges/changes need to be pushed to OPA.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByAgencySystem",
+        "exemptionText": null
+      },
+      "tags": [
+        "innovation",
+        "council"
+      ],
+      "contact": {
+        "email": "Pulsifer.Michael@DOL.GOV",
+        "name": "Michael Pulsifer"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/innovation-council/archive/master.zip",
+      "languages": [
+        "HTML"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2016-11-01",
+        "lastModified": "2017-03-01"
+      }
+    },
+    {
+      "name": "DOL-Digital-Services",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/DOL-Digital-Services.",
+      "description": "Share ideas and resources and collaborate on content as we hack DOL's technology and processes.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": null
+      },
+      "tags": [
+        "DOL",
+        "Digital",
+        "Services"
+      ],
+      "contact": {
+        "email": "Pulsifer.Michael@DOL.GOV",
+        "name": "Michael Pulsifer"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/DOL-Digital-Servicesl/archive/master.zip",
+      "languages": [
+        "GCC Machine Description"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2016-05-10",
+        "lastModified": "2016-12-09"
+      }
+    },
+    {
+      "name": "DFEC_RADR",
+      "organization": "OWCP",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/DFEC_RADR",
+      "description": "Configuration and ETL scripts for /Division Employess Compensation (DFEC) Risk Assessment Data Repository visualization tool by Elder Research, Inc.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByAgencySystem",
+        "exemptionText": null
+      },
+      "tags": [
+        "DFEC_RADR"
+      ],
+      "contact": {
+        "email": "Pulsifer.Michael@DOL.GOV",
+        "name": "Michael Pulsifer"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/DFEC_RADR/archive/master.zip",
+      "languages": [
+        "SQLPL",
+        "R"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2017-08-08",
+        "lastModified": "2017-12-13"
+      }
+    },
+    {
+      "name": "ITA_Docs",
+      "organization": "OSHA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/ITA_Docs",
+      "description": "ITA_Docs.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByAgencySystem",
+        "exemptionText": null
+      },
+      "tags": [
+        "ITA_Docs"
+      ],
+      "contact": {
+        "email": "Pulsifer.Michael@DOL.GOV",
+        "name": "Michael Pulsifer"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/ITA_Docs/archive/master.zip",
+      "languages": [
+        "HTML"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2016-09-02",
+        "lastModified": "2016-11-17"
+      }
+    },
+    {
+      "name": "geolocation",
+      "organization": "OCIO",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/geolocation",
+      "description": "Need to geocode a small amount of data? Texas A&M will geocode 5,000 points for free with their geocoding service. This is often enough to get started.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": null
+      },
+      "tags": [
+        "geolocation"
+      ],
+      "contact": {
+        "email": "Pulsifer.Michael@DOL.GOV",
+        "name": "Michael Pulsifer"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/geolocation/archive/master.zip",
+      "languages": [
+        "HTML",
+        "javascript"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2012-11-17",
+        "lastModified": "2016-10-19"
+      }
+    },
+    {
+      "name": "BLS-maps",
+      "organization": "BLS",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/BLS-maps",
+      "description": "Interactive geospatial visualization of BLS data using R, Shiny, and Leaflet.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": null
+      },
+      "tags": [
+        "BLS-maps"
+      ],
+      "contact": {
+        "email": "Pulsifer.Michael@DOL.GOV",
+        "name": "Michael Pulsifer"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/BLS-maps/archive/master.zip",
+      "languages": [
+        "CSS",
+        "R"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2015-06-25",
+        "lastModified": "2016-09-14"
+      }
+    },
+    {
+      "name": "DOLTalentRecruitment",
+      "organization": "WHD",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/DOLTalentRecruitment",
+      "description": "This is for WHD DOL Recruitment.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByAgencySystem",
+        "exemptionText": null
+      },
+      "tags": [
+        "DOLTalentRecruitment"
+      ],
+      "contact": {
+        "email": "Pulsifer.Michael@DOL.GOV",
+        "name": "Michael Pulsifer"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/DOLTalentRecruitment/archive/master.zip",
+      "languages": [
+        "html"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2016-09-03",
+        "lastModified": "2016-09-03"
+      }
+    },
+    {
+      "name": "DOL-Data-Library",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/DOL-Data-Library",
+      "description": "This is a list for POC for DOL agencies.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": null
+      },
+      "tags": [
+        "DOL",
+        "Data",
+        "Library"
+      ],
+      "contact": {
+        "email": "Pulsifer.Michael@DOL.GOV",
+        "name": "Michael Pulsifer"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/DOL-Data-Library/archive/master.zip",
+      "languages": [
+        "word"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2016-05-03",
+        "lastModified": "2016-05-03"
+      }
+    },
+    {
+      "name": "playground",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/playground",
+      "description": "A place to test JIRA integration.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": null
+      },
+      "tags": [
+        "playground"
+      ],
+      "contact": {
+        "email": "Pulsifer.Michael@DOL.GOV",
+        "name": "Michael Pulsifer"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/playground/archive/master.zip",
+      "languages": [
+        "word"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2016-02-04",
+        "lastModified": "2016-02-04"
+      }
+    },
+    {
+      "name": "DOL-ILAB",
+      "organization": "ILAB",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/DOL-ILAB",
+      "description": "DOL-ILAB Data Manipulation for Bureau for International Labor Affairs.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": null
+      },
+      "tags": [
+        "DOL",
+        "ILAB"
+      ],
+      "contact": {
+        "email": "Pulsifer.Michael@DOL.GOV",
+        "name": "Michael Pulsifer"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/DOL-ILAB/archive/master.zip",
+      "languages": [
+        "HTML"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2015-03-22",
+        "lastModified": "2015-05-10"
+      }
+    },
+    {
+      "name": "Developer-Hub-List",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/Developer-Hub-List",
+      "description": "Add a list of the developer hubs from across the federal government. It automatically updates based on GSA's list.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": null
+      },
+      "tags": [
+        "Developer",
+        "Hub",
+        "List"
+      ],
+      "contact": {
+        "email": "Pulsifer.Michael@DOL.GOV",
+        "name": "Michael Pulsifer"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/Developer-Hub-List/archive/master.zip",
+      "languages": [
+        "word"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2015-07-14",
+        "lastModified": "2014-07-14"
+      }
+    },
+    {
+      "name": "Browser-Checker",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/Browser-Checker",
+      "description": "Display a message to the user if their unsupported browser's rendering of the page does not degrade gracefully.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": null
+      },
+      "tags": [
+        "Browser",
+        "Checker"
+      ],
+      "contact": {
+        "email": "Pulsifer.Michael@DOL.GOV",
+        "name": "Michael Pulsifer"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/Browser-Checker/archive/master.zip",
+      "languages": [
+        "word"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2013-09-06",
+        "lastModified": "2013-09-26"
+      }
+    },
+    {
+      "name": "HelpfulInclude",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/HelpfulInclude",
+      "description": "The include you can add to your web page header that will implement the Was This Page Helpful? functionality.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": null
+      },
+      "tags": [
+        "HelpfulInclude"
+      ],
+      "contact": {
+        "email": "Pulsifer.Michael@DOL.GOV",
+        "name": "Michael Pulsifer"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/HelpfulInclude/archive/master.zip",
+      "languages": [
+        "word"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2012-10-02",
+        "lastModified": "2012-10-02"
+      }
+    },
+    {
+      "name": "DOLTemplates",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/DOLTemplates",
+      "description": "The information in this file is specifically used for the DOL-AGENCY-HOMEPAGE-TEMPLATE.htm file.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": null
+      },
+      "tags": [
+        "DOLTemplates"
+      ],
+      "contact": {
+        "email": "Pulsifer.Michael@DOL.GOV",
+        "name": "Michael Pulsifer"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/DOLTemplates/archive/master.zip",
+      "languages": [
+        "javascript"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2012-10-10",
+        "lastModified": "2013-05-22"
+      }
+    },
+    {
+      "name": "JSValidation",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/JSValidation",
+      "description": "Client-side validation script.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": null
+      },
+      "tags": [
+        "JSValidation"
+      ],
+      "contact": {
+        "email": "Pulsifer.Michael@DOL.GOV",
+        "name": "Michael Pulsifer"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/JSValidation/archive/master.zip",
+      "languages": [
+        "javascript"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2012-10-11",
+        "lastModified": "2012-10-11"
+      }
+    },
+    {
+      "name": "Closure-App",
+      "organization": "EMC",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/Closure-App",
+      "description": "Closure-Notifier (App), is an iOS app to manage a subscription list of cities of interest to receive notifications from U.S. Department of Labor Emergency Management Center",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "Closure-App"
+      ],
+      "contact": {
+        "email": "Pulsifer.Michael@DOL.GOV",
+        "name": "Michael Pulsifer"
+      },
+      "status": "Release Candidate",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/Closure-App/archive/master.zip",
+      "languages": [
+        "javascript"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2017-12-05",
+        "lastModified": "2017-12-12"
+      }
+    },
+    {
+      "name": "MSHA.gov",
+      "organization": "MSHA",
+      "repositoryURL": "",
+      "description": "MSHA public website",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": "The release was created prior to the M-16-21 policy (August 8, 2016)."
+      },
+      "tags": [
+        "MSHA"
+      ],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "MSHA TS-Laboratory Information Management Systems (LIMS)",
+      "organization": "MSHA",
+      "repositoryURL": "",
+      "description": "Laboratory Information Management Systems",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": "The release was created prior to the M-16-21 policy (August 8, 2016)."
+      },
+      "tags": [
+        "MSHA"
+      ],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "MSHA Standardized Information System (MSIS)",
+      "organization": "MSHA",
+      "repositoryURL": "",
+      "description": "https://www.dol.gov/oasam/ocio/programs/PIA/MSHA/MSHA-MSIS.htm",
+      "permissions": {
+        "licenses": null,
+        "usageType": "governmentWideReuse"
+      },
+      "tags": [
+        "MSHA"
+      ],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "Physical Access Control (PAC) System",
+      "organization": "OASAM",
+      "repositoryURL": "",
+      "description": "Physical Access Control System",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": "The release was created prior to the M-16-21 policy (August 8, 2016)."
+      },
+      "tags": [
+        "OASAM"
+      ],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "New Core Financial Management System (NCFMS)",
+      "organization": "CFO",
+      "repositoryURL": "",
+      "description": "NCFMS is DOL's financial system of record. It is used to create and track financial transactions, pay vendors, and produce financial statements. NCFMS became wholly owned by DOL in FY 2015.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": "The release was created prior to the M-16-21 policy (August 8, 2016)."
+      },
+      "tags": [
+        "CFO"
+      ],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "Abatement Tracking System (ATS) for OSHA",
+      "organization": "OCIO",
+      "repositoryURL": "",
+      "description": "An electronic database used to record and track deficiencies documented during annual on-site reviews of the health and safety programs at Job Corps Centers.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": "The release was created prior to the M-16-21 policy (August 8, 2016)."
+      },
+      "tags": [
+        "OSHA"
+      ],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "Annual Acquisition Plan and Procurement Forecast (AAPPF)",
+      "organization": "OCIO",
+      "repositoryURL": "",
+      "description": "The information provided in the Annual Acquisition Plan (AAP) and Procurement Forecast (PF) is designed to assist small businesses in identifying procurement opportunities and sources from which additional information and guidance can be obtained.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": "The release was created prior to the M-16-21 policy (August 8, 2016)."
+      },
+      "tags": [
+        "OCIO"
+      ],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "Fire Alarm System",
+      "organization": "OCIO",
+      "repositoryURL": "",
+      "description": "Fire alarm system.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": "The release was created prior to the M-16-21 policy (August 8, 2016)."
+      },
+      "tags": [
+        "OCIO"
+      ],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "Parking System",
+      "organization": "OCIO",
+      "repositoryURL": "",
+      "description": "Parking system.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": "The release was created prior to the M-16-21 policy (August 8, 2016)."
+      },
+      "tags": [
+        "OCIO"
+      ],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "Regional Employee Contact Information System (RECIS)",
+      "organization": "OCIO",
+      "repositoryURL": "",
+      "description": "Regional Employee Contact Information System (RECIS)",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": "The release was created prior to the M-16-21 policy (August 8, 2016)."
+      },
+      "tags": [
+        "OCIO"
+      ],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "Women's Bureau Information System (WBIS 2.0)",
+      "organization": "OCIO",
+      "repositoryURL": "",
+      "description": "WBIS IS a web-based information management system used to document and track distributed publications, collect contact and services information of interest groups, and collect information about Women's Initiatives",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": "The release was created prior to the M-16-21 policy (August 8, 2016)."
+      },
+      "tags": [
+        "OSHA"
+      ],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "Data Exchange and Analytics Platform (DEAP)",
+      "organization": "OCIO",
+      "repositoryURL": "",
+      "description": "An open source and COTS system used to evaluate data sets.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "governmentWideReuse"
+      },
+      "tags": [
+        "CEO"
+      ],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "Data Exchange and Analytics Platform (DEAP)",
+      "organization": "OCIO",
+      "repositoryURL": "",
+      "description": "An open source and COTS system used to evaluate data sets.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "governmentWideReuse"
+      },
+      "tags": [
+        "CEO"
+      ],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "Labor OIG Case Activity Tracking System (LOCATS)",
+      "organization": "OIG",
+      "repositoryURL": "",
+      "description": "Case management system for OIG",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByAgencyMission",
+        "exemptionText": "This system contains unclassified but sensitive information used for law enforcement purposes."
+      },
+      "tags": [
+        "OIG"
+      ],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "Electronic Office of Inspector General (e-OIG) System",
+      "organization": "OIG",
+      "repositoryURL": "",
+      "description": "The system documents the lifecycle of allegations, complaints, investigations, inspections and FOIA requests to their final outcome.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByAgencyMission",
+        "exemptionText": "This system is strictly limited to employees on a need-to-know basis."
+      },
+      "tags": [
+        "OIG"
+      ],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "Electronic Office of Inspector General (e-OIG) System",
+      "organization": "OIG",
+      "repositoryURL": "",
+      "description": "The system documents the lifecycle of allegations, complaints, investigations, inspections and FOIA requests to their final outcome.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByAgencyMission",
+        "exemptionText": "This system is strictly limited to employees on a need-to-know basis."
+      },
+      "tags": [
+        "OIG"
+      ],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "OSHA Business Information System (OBIS)",
+      "organization": "OSHA",
+      "repositoryURL": "",
+      "description": "https://www.dol.gov/oasam/ocio/programs/pia/osha/OSHA-OBIS.htm",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": "The release was created prior to the M-16-21 policy (August 8, 2016)."
+      },
+      "tags": [
+        "CEO"
+      ],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "OSHA Information Technology Support System (OITSS)",
+      "organization": "OSHA",
+      "repositoryURL": "",
+      "description": "https://www.dol.gov/oasam/ocio/programs/pia/osha/OSHA-OITTS.htm",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": "The release was created prior to the M-16-21 policy (August 8, 2016)."
+      },
+      "tags": [
+        "CEO"
+      ],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "Automated Support Package (ASP)",
+      "organization": "OWCP",
+      "repositoryURL": "",
+      "description": "https://www.dol.gov/oasam/ocio/programs/PIA/OWCP/OWCP-ASP.htm",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": "The release was created prior to the M-16-21 policy (August 8, 2016)."
+      },
+      "tags": [
+        "OWCP"
+      ],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "Integrated Federal Employees Compensation System (iFECS)",
+      "organization": "OWCP",
+      "repositoryURL": "",
+      "description": "https://www.dol.gov/oasam/ocio/programs/PIA/OWCP/OWCP-iFECS.htm",
+      "permissions": {
+        "licenses": null,
+        "usageType": "governmentWideReuse"
+      },
+      "tags": [
+        "OWCP"
+      ],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "Longshore Disbursement System (LDS)",
+      "organization": "OWCP",
+      "repositoryURL": "",
+      "description": "https://www.dol.gov/oasam/ocio/programs/PIA/OWCP/OWCP-LDS.htm",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": "The release was created prior to the M-16-21 policy (August 8, 2016)."
+      },
+      "tags": [
+        "OWCP"
+      ],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "The Longshore Case Management System (LCMS)",
+      "organization": "OWCP",
+      "repositoryURL": "",
+      "description": "https://www.dol.gov/oasam/ocio/programs/PIA/OWCP/OWCP-LCMS.htm",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": "The release was created prior to the M-16-21 policy (August 8, 2016)."
+      },
+      "tags": [
+        "OWCP"
+      ],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "Energy Compensation System (ECS)",
+      "organization": "OWCP",
+      "repositoryURL": "",
+      "description": "https://www.dol.gov/oasam/ocio/programs/PIA/OWCP/OWCP-ECS.htm",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": "The release was created prior to the M-16-21 policy (August 8, 2016)."
+      },
+      "tags": [
+        "OWCP"
+      ],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "OWCP Workers Compensation System (OWCS)",
+      "organization": "OWCP",
+      "repositoryURL": "",
+      "description": "The Office of Workers' Compensation Programs administers four major disability compensation programs which provide wage replacement benefits, medical treatment, vocational rehabilitation, and other benefits to certain workers or their dependents who experience work-related injury or occupational disease.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "governmentWideReuse"
+      },
+      "tags": [
+        "OWCP"
+      ],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "Wage Determination System (WDS)",
+      "organization": "WHD",
+      "repositoryURL": "",
+      "description": "The Secretary of Labor is tasked with determining locally prevailing wage rates under the Davis Bacon and Related Acts (DBRA) and issuing wage determinations (WD) under the Service Contract Act (SCA). The Wage Determination System (WDS) directly supports these tasks and enables the Wage and Hour Division to achieve and promote compliance with these labor standards.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": "The release was created prior to the M-16-21 policy (August 8, 2016)."
+      },
+      "tags": [
+        "WHD"
+      ],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "Wage Hour Investigative Support and Reporting Database (WHISARD)",
+      "organization": "WHD",
+      "repositoryURL": "",
+      "description": "https://www.dol.gov/oasam/ocio/programs/PIA/WHD/WHD-WHISARD.htm",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": "The release was created prior to the M-16-21 policy (August 8, 2016)."
+      },
+      "tags": [
+        "WHD"
+      ],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "VETS-4212 Reporting",
+      "organization": "VETS",
+      "repositoryURL": "",
+      "description": "https://www.dol.gov/vets/vets4212.htm",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": "The release was created prior to the M-16-21 policy (August 8, 2016)."
+      },
+      "tags": [
+        "VETS"
+      ],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "Case Tracking System (CTS)",
+      "organization": "OALJ",
+      "repositoryURL": "",
+      "description": "https://www.dol.gov/oasam/ocio/programs/PIA/OALJ/OALJ-CTS.htm",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": "The release was created prior to the M-16-21 policy (August 8, 2016)."
+      },
+      "tags": [
+        "VETS"
+      ],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "Enforcement Management System (EMS)",
+      "organization": "EBSA",
+      "repositoryURL": "",
+      "description": "EMS serves as a case tracking system to the Employee Benefits Security Administration (EBSA) Office of Enforcement (OE) for investigation of potentially fraudulent activity in our nation’s pension plans.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "governmentWideReuse"
+      },
+      "tags": [
+        "MSHA"
+      ],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "Technical Assistance & Inquiries System (TAIS)",
+      "organization": "EBSA",
+      "repositoryURL": "",
+      "description": "TAIS serves as an inquiry tracking system to provide service to EBSA's customers by means of outreach, education, and technical assistance related to their pension, health, and other employee benefits.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "governmentWideReuse"
+      },
+      "tags": [
+        "MSHA"
+      ],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "EFAST2",
+      "organization": "EBSA",
+      "repositoryURL": "",
+      "description": "EFAST2 electronically receives, processes, stores, publicly discloses, distributes, and archives approximately 1 million Form 5500 Series filings submitted annually by employers.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "governmentWideReuse"
+      },
+      "tags": [
+        "MSHA"
+      ],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "iCERT",
+      "organization": "ETA",
+      "repositoryURL": "",
+      "description": "The iCERT Portal web site was developed for the Department of Labor (DOL), Employment and Training Administration (ETA), Office of Foreign Labor Certification (OFLC) to provide employers and their representatives (i.e., attorneys/agents) a secure and reliable means to access case information across all of the supported visa type programs (H-1B) and to file Prevailing Wage requests.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [
+        "OFLC",
+        "Coldfusion"
+      ],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "PERM",
+      "organization": "ETA",
+      "repositoryURL": "",
+      "description": "A permanent labor certification issued by the Department of Labor (DOL) allows an employer to hire a foreign worker to work permanently in the United States.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [
+        "OFLC",
+        "Coldfusion"
+      ],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "ETA Grants Management System (EGMS)",
+      "organization": "ETA",
+      "repositoryURL": "",
+      "description": "The Grants management system supporting ETA.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [
+        "OFLC",
+        "Coldfusion"
+      ],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "Enterprise Business Support System (EBSS)",
+      "organization": "ETA",
+      "repositoryURL": "",
+      "description": "EBSS is a Major Application that consists of multiple individual modules that generate management reports for ETA.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [
+        "OFLC",
+        "Coldfusion"
+      ],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "e.LORS",
+      "organization": "OLMS",
+      "repositoryURL": "",
+      "description": "e.LORS was initiated to support the President's Management Agenda to expand electronic government by automating a paper-based reporting and public disclosure system under the Labor Management Reporting and Disclosure Act (LMRDA).",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByPolicyDate",
+        "exemptionText": "The release was created prior to the M-16-21 policy (August 8, 2016)."
+      },
+      "tags": [
+        "e.LORS"
+      ],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "General Management System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The general mangement system for BLS including bls.gov.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "Financial Management System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The financial mangement system for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "Human Capital Management System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The Human Capital Management System for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "Acquisition Management System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The Acquisition Management System for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "Property Management System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The Property Management System for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "CEIS Estimation System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The Estimation subsystem of the Consumer Expenditure and Information System for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "CEIS Publication System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The publication subsystem of the Consumer Expenditure and Information System for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "OSHS Sampling System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The sampling subsystem of the Occupational Safety and Health Statistics (OSHS) Systems for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "OSHS Collection System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The collection subsystem of the Occupational Safety and Health Statistics (OSHS) Systems for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "OSHS Estimation System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The estimation subsystem of the Occupational Safety and Health Statistics (OSHS) Systems for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "OSHS Publication System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The publication subsystem of the Occupational Safety and Health Statistics (OSHS) Systems for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "NCS Sampling System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The sampling subsystem of the National Compensation Survey (NCS) System for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "NCS Collection System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The collection subsystem of the National Compensation Survey (NCS) System for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "NCS Estimation System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The estimation subsystem of the National Compensation Survey (NCS) System for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "NCS Publication System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The publication subsystem of the National Compensation Survey (NCS) System for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "CPI Sampling System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The sampling subsystem of the Consumer Price Index (CPI) software for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "CPI Collection System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The collection subsystem of the Consumer Price Index (CPI) software for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "CPI Estimation System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The estimation subsystem of the Consumer Price Index (CPI) software for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "CPI Publication System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The publication subsystem of the Consumer Price Index (CPI) software for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "IPS Sampling System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The sampling subsystem of the Industrial Prices Systems (IPS) software for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "IPS Collection System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The collection subsystem of the Industrial Prices Systems (IPS) software for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "IPS Estimation System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The estimation subsystem of the Industrial Prices Systems (IPS) software for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "IPS Publication System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The publication subsystem of the Industrial Prices Systems (IPS) software for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "CPS Estimation System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The estimation subsystem of the Current Population Survey (CPS) Maintenance software for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "CPS Publication System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The publication subsystem of the Current Population Survey (CPS) Maintenance software for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "CES Sampling System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The sampling subsystem of the Current Employment Statistics (CES) Maintenance software for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "CES Collection System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The collection subsystem of the Current Employment Statistics (CES) Maintenance software for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "CES Estimation System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The estimation subsystem of the Current Employment Statistics (CES) Maintenance software for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "ATUS Estimation System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The estimation subsystem of the American Time Use Survey Systems software for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "ATUS Publication System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The publication subsystem of the American Time Use Survey Systems software for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "ATUS Publication System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The publication subsystem of the American Time Use Survey Systems software for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "JOLTS Sampling System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The sampling subsystem of the Job Openings and Labor Turnover Statistics Systems software for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "JOLTS Collection System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The collection subsystem of the Job Openings and Labor Turnover Statistics Systems software for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "JOLTS Estimation System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The estimation subsystem of the Job Openings and Labor Turnover Statistics Systems software for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "LAUS Publication System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The publication subsystem of the Local Area Unemployment Statistics System software for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "LAUS Estimation System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The estimation subsystem of the Local Area Unemployment Statistics System software for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "OES Sampling System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The sampling subsystem of the Occupational Employment Statistics System software for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "OES Collection System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The collection subsystem of the Occupational Employment Statistics System software for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "OES Estimation System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The estimation subsystem of the Occupational Employment Statistics System software for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "QCEW Sampling System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The estimation subsystem of the Quarterly Census of Employment and Wages (QCEW) Systems software for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "QCEW Collection System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The collection subsystem of the Quarterly Census of Employment and Wages (QCEW) Systems software for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "QCEW Estimation System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The estimation subsystem of the Quarterly Census of Employment and Wages (QCEW) Systems software for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "QCEW Publication System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The publication subsystem of the Quarterly Census of Employment and Wages (QCEW) Systems software for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "IPS Estimation System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The estimation subsystem of the Productivity and Technology Activities and Systems software for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "IPS Publication System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The publication subsystem of the Productivity and Technology Activities and Systems software for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "IPS Publication System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The publication subsystem of the Productivity and Technology Activities and Systems software for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "MSP Estimation System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The MSP Estimation System software for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "MSP Publication System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The MSP Publication System software for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "LABSTAT Dissemination System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The LABSTAT Dissemination System software for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "DOLPUSHNotifier",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/DolPushNotifier",
+      "description": "Enterprise Web application to send push notifications to your app's on Apple and Android.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "DOL",
+        "PUSH",
+        "Notifier",
+        "Enterprise",
+        "Web Service"
+      ],
+      "contact": {
+        "email": "Yao.sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
+      "status": "Alpha",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/DolPushNotifier/archive/master.zip",
+      "languages": [
+        "Javascript",
+        "Ruby",
+        "CSS"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2018-03-12",
+        "lastModified": "2018-04-30"
+      }
+    },
+    {
+      "name": "EnterpriseNotification-IOS",
+      "organization": "OCIO",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/EnterpriseNotification-IOS",
+      "description": "IOS application for Enterprise Notifications.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "Enterprise",
+        "Notification",
+        "IOS"
+      ],
+      "contact": {
+        "email": "Pulsifer.Michael@dol.gov",
+        "name": "Michael Pulsifer"
+      },
+      "status": "Alpha",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/DolPushNotifier/archive/master.zip",
+      "languages": [
+        "Swift",
+        "Ruby"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2018-04-04",
+        "lastModified": "2018-04-10"
+      }
+    },
+    {
+      "name": "UPUBS Publication System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The UPUBS Publication System software for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    },
+    {
+      "name": "IDCF Collection System",
+      "organization": "BLS",
+      "repositoryURL": "",
+      "description": "The Internet Data Collection Facility (IDCF) software for BLS.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "exemptByCIO",
+        "exemptionText": "The release contains proprietary information that is not suitable for public release."
+      },
+      "tags": [],
+      "contact": {
+        "email": "Zhao.Renee.Y@dol.gov",
+        "name": "Renee Zhao"
+      },
+      "laborHours": 1
+    }
+  ]
+}

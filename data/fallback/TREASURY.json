@@ -1,204 +1,106 @@
 {
+  "agency": "TREASURY",
   "version": "2.0.0",
-  "agency": "",
+  "measurementType": {
+    "method": "modules"
+  },
   "releases": [
     {
-      "status": " ",
-      "vcs": "git",
-      "repoURL": "https://github.com/fedspendingtransparency/data-act-broker-web-app",
       "name": "data-act-broker-web-app",
-      "downloadURL": " ",
-      "description": "",
-      "contact": {
-        "email": " ",
-        "name": " ",
-        "twitter": " ",
-        "phone": " "
-      },
-      "partners": [
-        {
-          "name": " "
-        },
-        {
-          "email": " "
-        }
-      ],
-      "license_name": "CC0",
-      "closedproject": 0,
-      "agency": "TRE",
-      "tags": [
-        "data act",
-        "api"
-      ],
-      "languages": [
-        "JavaScript"
-      ],
-      "id": "TRE/data-act-broker-web-app",
-      "repositoryURL": "git://github.com/fedspendingtransparency/data-act-broker-web-app.git",
-      "homepageURL": "",
+      "description": "The DATA Act broker website is the front-end to the DATA Act broker backend.",
       "permissions": {
-        "licenses": [
-          {
-            "URL": "https://github.com/fedspendingtransparency/data-act-broker-web-app/blob/dev/LICENSE",
-            "name": null
-          }
-        ],
-        "usageType": "openSource",
+        "licenses": null,
+        "usageType": "governmentWideReuse",
         "exemptionText": null
       },
-      "laborHours": null,
-      "date": {
-        "created": "",
-        "lastModified": "",
-        "metadataLastUpdated": "2015-12-02T17:41:07Z"
-      },
-      "disclaimerText": "",
-      "disclaimerURL": "",
-      "relatedCode": [
-        {
-          "codeName": "",
-          "codeURL": "",
-          "isGovernmentRepo": true
-        }
-      ],
-      "reusedCode": [
-        {
-          "name": "",
-          "URL": ""
-        }
-      ]
-    },
-    {
-      "status": " ",
-      "vcs": "git",
-      "repoURL": "https://github.com/fedspendingtransparency/fedspendingtransparency.github.io",
-      "name": "fedspendingtransparency.github.io",
-      "downloadURL": " ",
-      "description": "Federal Spending Transparency ",
-      "contact": {
-        "email": " ",
-        "name": " ",
-        "twitter": " ",
-        "phone": " "
-      },
-      "partners": [
-        {
-          "name": " "
-        },
-        {
-          "email": " "
-        }
-      ],
-      "license_name": "CC0",
-      "closedproject": 0,
-      "agency": "TRE",
       "tags": [
-        "federal spending",
+        "spending",
+        "government",
         "transparency"
       ],
-      "languages": [
-        "CSS"
-      ],
-      "id": "TRE/fedspendingtransparency.github.io",
-      "repositoryURL": "git://github.com/fedspendingtransparency/fedspendingtransparency.github.io.git",
-      "homepageURL": "http://fedspendingtransparency.github.io",
-      "permissions": {
-        "licenses": [
-          {
-            "URL": "https://github.com/fedspendingtransparency/fedspendingtransparency.github.io/blob/master/LICENSE",
-            "name": null
-          }
-        ],
-        "usageType": "openSource",
-        "exemptionText": null
+      "contact": {
+        "email": "Renata.Maziarz@fiscal.treasury.gov"
       },
-      "laborHours": null,
-      "date": {
-        "created": "",
-        "lastModified": "",
-        "metadataLastUpdated": "2014-09-29T19:11:53Z"
-      },
-      "disclaimerText": "",
-      "disclaimerURL": "",
-      "relatedCode": [
-        {
-          "codeName": "",
-          "codeURL": "",
-          "isGovernmentRepo": true
-        }
-      ],
-      "reusedCode": [
-        {
-          "name": "",
-          "URL": ""
-        }
-      ]
+      "repositoryURL": "https://github.com/fedspendingtransparency/data-act-broker-web-app",
+      "laborHours": 0
     },
     {
-      "status": " ",
-      "vcs": "git",
-      "repoURL": "https://github.com/fedspendingtransparency/data-act-broker-backend",
       "name": "data-act-broker-backend",
-      "downloadURL": " ",
-      "description": "",
-      "contact": {
-        "email": " ",
-        "name": " ",
-        "twitter": " ",
-        "phone": " "
-      },
-      "partners": [
-        {
-          "name": " "
-        },
-        {
-          "email": " "
-        }
-      ],
-      "license_name": "CC0",
-      "closedproject": 0,
-      "agency": "TRE",
-      "tags": [
-        "data act",
-        "api"
-      ],
-      "languages": [
-        "Python"
-      ],
-      "id": "TRE/data-act-broker-backend",
-      "repositoryURL": "git://github.com/fedspendingtransparency/data-act-broker-backend.git",
-      "homepageURL": "",
+      "description": "The DATA Act broker backend is a collection of services that power the DATA Act's central data submission platform.",
       "permissions": {
-        "licenses": [
-          {
-            "URL": "https://github.com/fedspendingtransparency/data-act-broker-backend/blob/master/LICENSE.md",
-            "name": null
-          }
-        ],
+        "licenses": null,
         "usageType": "openSource",
         "exemptionText": null
       },
-      "laborHours": null,
-      "date": {
-        "created": "",
-        "lastModified": "",
-        "metadataLastUpdated": "2016-04-28T15:39:36Z"
-      },
-      "disclaimerText": "",
-      "disclaimerURL": "",
-      "relatedCode": [
-        {
-          "codeName": "",
-          "codeURL": "",
-          "isGovernmentRepo": true
-        }
+      "tags": [
+        "spending",
+        "government",
+        "transparency",
+        "broker"
       ],
-      "reusedCode": [
-        {
-          "name": "",
-          "URL": ""
-        }
-      ]
+      "contact": {
+        "email": "Renata.Maziarz@fiscal.treasury.gov"
+      },
+      "repositoryURL": "https://github.com/fedspendingtransparency/data-act-broker-backend",
+      "laborHours": 0
+    },
+    {
+      "name": "federal spending transparency",
+      "description": "This collaboration space is designed to make federal spending data more accessible, searchable, reliable and meet the transparency requirements of the DATA Act.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "spending",
+        "government",
+        "transparency",
+        "Federal"
+      ],
+      "contact": {
+        "email": "Renata.Maziarz@fiscal.treasury.gov"
+      },
+      "repositoryURL": "https://github.com/fedspendingtransparency/fedspendingtransparency.github.io",
+      "laborHours": 0
+    },
+    {
+      "name": "IDES-Data-Preparation-Java",
+      "description": "The IDES Data Preparation Java project repository demonstrates a sample working application developed using Java.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "IRS",
+        "FATCA",
+        "IDES"
+      ],
+      "contact": {
+        "email": "lbi.fatca.ides@irs.gov"
+      },
+      "repositoryURL": "http://irsgov.github.io/IDES-Data-Preparation-Java",
+      "laborHours": 0
+    },
+    {
+      "name": "IDES-Data-Preparation-Dot-Net",
+      "description": "The IDES Data Preparation .NET project repository demonstrates a sample working application developed using .NET",
+      "permissions": {
+        "licenses": null,
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "IRS",
+        "FATCA",
+        "IDES"
+      ],
+      "contact": {
+        "email": "lbi.fatca.ides@irs.gov"
+      },
+      "repositoryURL": "http://irsgov.github.io/IDES-Data-Preparation-Dot-Net",
+      "laborHours": 0
     }
   ]
 }

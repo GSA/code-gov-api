@@ -1,280 +1,197 @@
 {
+  "agency": "VA",
   "version": "2.0.0",
-  "agency": "",
+  "measurementType": {
+    "method": "modules"
+  },
   "releases": [
     {
-      "status": " ",
-      "vcs": "git",
-      "repoURL": "https://github.com/department-of-veterans-affairs/vets-website",
-      "name": "vets-website",
-      "downloadURL": " ",
-      "description": "Beta version of Vets.gov",
-      "contact": {
-        "email": " ",
-        "name": " ",
-        "twitter": "https://twitter.com/DeptVetAffairs/",
-        "phone": " "
+      "name": "Caseflow Certification",
+      "repositoryURL": "https://github.com/department-of-veterans-affairs/caseflow",
+      "description": "Caseflow is a web application tracking and processing appealed claims at theVA Board of Veterans' Appeals.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/department-of-veterans-affairs/caseflow/blob/master/LICENSE.md",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
       },
-      "partners": [
-        {
-          "name": " "
-        },
-        {
-          "email": " "
-        }
-      ],
-      "license_name": "CC0",
-      "closedproject": 0,
-      "agency": "VA",
       "tags": [
-        "beta",
-        "version",
-        "vets",
-        "gov"
+        "VA",
+        "Veteran",
+        "Appeal",
+        "Workflow",
+        "Benefits"
       ],
+      "contact": {
+        "email": "ossoft@va.gov"
+      },
+      "organization": "OIT EPMO",
       "languages": [
-        "JavaScript"
+        "Ruby"
       ],
-      "id": "VA/vets-website",
-      "repositoryURL": "git://github.com/department-of-veterans-affairs/vets-website.git",
-      "homepageURL": "https://www.vets.gov/",
+      "laborHours": 0,
+      "status": "Development",
+      "vcs": "git"
+    },
+    {
+      "name": "Vets.gov",
+      "repositoryURL": "https://github.com/department-of-veterans-affairs/vets-website",
+      "description": "Vets.gov is the consolidation of several critical Veteran-facing applications into a single web-based launchpad.",
       "permissions": {
         "licenses": [
           {
             "URL": "https://github.com/department-of-veterans-affairs/vets-website/blob/master/LICENSE",
-            "name": null
+            "name": "CC0"
           }
         ],
         "usageType": "openSource",
         "exemptionText": null
       },
-      "laborHours": null,
-      "date": {
-        "created": "",
-        "lastModified": "",
-        "metadataLastUpdated": "2015-03-31T18:34:05Z"
-      },
-      "disclaimerText": "",
-      "disclaimerURL": "",
-      "relatedCode": [
-        {
-          "codeName": "",
-          "codeURL": "",
-          "isGovernmentRepo": true
-        }
+      "tags": [
+        "VA",
+        "Veteran",
+        "Benefits"
       ],
-      "reusedCode": [
-        {
-          "name": "",
-          "URL": ""
-        }
-      ]
+      "contact": {
+        "email": "ossoft@va.gov"
+      },
+      "organization": "OIT EPMO",
+      "languages": [
+        "JavaScript"
+      ],
+      "laborHours": 0
     },
     {
-      "status": " ",
-      "vcs": "git",
-      "repoURL": "https://github.com/department-of-veterans-affairs/vets-api",
-      "name": "vets-api",
-      "downloadURL": " ",
-      "description": "API for vets.gov ",
-      "contact": {
-        "email": " ",
-        "name": " ",
-        "twitter": "https://twitter.com/DeptVetAffairs/",
-        "phone": " "
-      },
-      "partners": [
-        {
-          "name": " "
-        },
-        {
-          "email": " "
-        }
-      ],
-      "license_name": "CC0",
-      "closedproject": 0,
-      "agency": "VA",
-      "tags": [
-        "api",
-        "vets",
-        "gov"
-      ],
-      "languages": [
-        "Ruby"
-      ],
-      "id": "VA/vets-api",
-      "repositoryURL": "git://github.com/department-of-veterans-affairs/vets-api.git",
-      "homepageURL": "",
+      "name": "Vets.gov APIs",
+      "repositoryURL": "https://github.com/department-of-veterans-affairs/vets-api",
+      "description": "This project provides common APIs for applications that live on vets.gov.",
       "permissions": {
         "licenses": [
           {
             "URL": "https://github.com/department-of-veterans-affairs/vets-api/blob/master/LICENSE.md",
-            "name": null
+            "name": "CC0"
           }
         ],
         "usageType": "openSource",
         "exemptionText": null
       },
-      "laborHours": null,
-      "date": {
-        "created": "",
-        "lastModified": "",
-        "metadataLastUpdated": "2016-07-01T17:33:19Z"
-      },
-      "disclaimerText": "",
-      "disclaimerURL": "",
-      "relatedCode": [
-        {
-          "codeName": "",
-          "codeURL": "",
-          "isGovernmentRepo": true
-        }
-      ],
-      "reusedCode": [
-        {
-          "name": "",
-          "URL": ""
-        }
-      ]
-    },
-    {
-      "status": " ",
-      "vcs": "git",
-      "repoURL": "https://github.com/department-of-veterans-affairs/sniffybara",
-      "name": "sniffybara",
-      "downloadURL": " ",
-      "description": "Gem that adds automatic 508 accessibility compliance checks into your Capybara specs ",
-      "contact": {
-        "email": " ",
-        "name": " ",
-        "twitter": "https://twitter.com/DeptVetAffairs/",
-        "phone": " "
-      },
-      "partners": [
-        {
-          "name": " "
-        },
-        {
-          "email": " "
-        }
-      ],
-      "license_name": "",
-      "closedproject": 0,
-      "agency": "VA",
       "tags": [
-        "gem",
-        "508",
-        "accessibility",
-        "compliance",
-        "checks",
-        "capybara",
-        "specs"
+        "VA",
+        "Veteran",
+        "Benefits",
+        "api"
       ],
+      "contact": {
+        "email": "ossoft@va.gov"
+      },
+      "organization": "OIT EPMO",
       "languages": [
         "Ruby"
       ],
-      "id": "VA/sniffybara",
-      "repositoryURL": "git://github.com/department-of-veterans-affairs/sniffybara.git",
-      "homepageURL": "",
+      "laborHours": 0
+    },
+    {
+      "name": "Veterans Employment Center",
+      "repositoryURL": "https://github.com/department-of-veterans-affairs/veterans-employment-center",
+      "description": "Veterans Employment Center creates a website of links that assist a Veteran in a job search.",
       "permissions": {
-        "licenses": [
-          {
-            "URL": "https://path.to/license",
-            "name": null
-          }
-        ],
+        "licenses": null,
         "usageType": "openSource",
         "exemptionText": null
       },
-      "laborHours": null,
-      "date": {
-        "created": "",
-        "lastModified": "",
-        "metadataLastUpdated": "2016-02-06T23:12:38Z"
-      },
-      "disclaimerText": "",
-      "disclaimerURL": "",
-      "relatedCode": [
-        {
-          "codeName": "",
-          "codeURL": "",
-          "isGovernmentRepo": true
-        }
-      ],
-      "reusedCode": [
-        {
-          "name": "",
-          "URL": ""
-        }
-      ]
-    },
-    {
-      "status": " ",
-      "vcs": "git",
-      "repoURL": "https://github.com/department-of-veterans-affairs/roadrunner-rails",
-      "name": "roadrunner-rails",
-      "downloadURL": " ",
-      "description": "Base rails project with the VA special sauce. ",
-      "contact": {
-        "email": " ",
-        "name": " ",
-        "twitter": "https://twitter.com/DeptVetAffairs/",
-        "phone": " "
-      },
-      "partners": [
-        {
-          "name": " "
-        },
-        {
-          "email": " "
-        }
-      ],
-      "license_name": "CC0",
-      "closedproject": 0,
-      "agency": "VA",
       "tags": [
-        "ruby",
-        "rails",
-        "project",
-        "roadrunner"
+        "VA",
+        "Veteran",
+        "job"
       ],
+      "contact": {
+        "email": "ossoft@va.gov"
+      },
+      "organization": "OIT EPMO",
       "languages": [
         "Ruby"
       ],
-      "id": "VA/roadrunner-rails",
-      "repositoryURL": "git://github.com/department-of-veterans-affairs/roadrunner-rails.git",
-      "homepageURL": "",
+      "laborHours": 0
+    },
+    {
+      "name": "GIBCT Data Service",
+      "repositoryURL": "https://github.com/department-of-veterans-affairs/gibct-data-service",
+      "description": "GIDS compiles data from federal CSV-formatted sources into institution profiles to provide school metrics to the GI Bill Comparison Tool.",
       "permissions": {
         "licenses": [
           {
-            "URL": "https://github.com/department-of-veterans-affairs/roadrunner-rails/blob/master/LICENSE.md",
-            "name": null
+            "URL": "https://github.com/department-of-veterans-affairs/gibct-data-service/blob/master/LICENSE.md",
+            "name": "CC0"
           }
         ],
         "usageType": "openSource",
         "exemptionText": null
       },
-      "laborHours": null,
-      "date": {
-        "created": "",
-        "lastModified": "",
-        "metadataLastUpdated": "2016-02-02T17:44:07Z"
-      },
-      "disclaimerText": "",
-      "disclaimerURL": "",
-      "relatedCode": [
-        {
-          "codeName": "",
-          "codeURL": "",
-          "isGovernmentRepo": true
-        }
+      "tags": [
+        "GIBCT",
+        "school",
+        "Veteran",
+        "Benefits"
       ],
-      "reusedCode": [
-        {
-          "name": "",
-          "URL": ""
-        }
-      ]
+      "contact": {
+        "email": "ossoft@va.gov"
+      },
+      "organization": "OIT EPMO",
+      "languages": [
+        "Ruby"
+      ],
+      "laborHours": 0
+    },
+    {
+      "name": "GI Bill Comparison Tool",
+      "repositoryURL": "https://github.com/department-of-veterans-affairs/gi-bill-comparison-tool",
+      "description": "The GI Bill Comparison Tool allows a Veteran to compare education benefits among potential schools.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "GIBCT",
+        "school",
+        "Veteran",
+        "Benefits"
+      ],
+      "contact": {
+        "email": "ossoft@va.gov"
+      },
+      "organization": "OIT EPMO",
+      "languages": [
+        "Ruby"
+      ],
+      "laborHours": 0
+    },
+    {
+      "name": "Choice Act Locator",
+      "repositoryURL": "https://github.com/department-of-veterans-affairs/ChoiceActLocator",
+      "description": "This web mapping application provides veterans the ability to search and find Non-VA Care providers through the Choice Act.",
+      "permissions": {
+        "licenses": null,
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "Choice Act",
+        "Veteran",
+        "Benefits"
+      ],
+      "contact": {
+        "email": "ossoft@va.gov"
+      },
+      "organization": "OIT EPMO",
+      "languages": [
+        "JavaScript"
+      ],
+      "laborHours": 0
     }
   ]
 }

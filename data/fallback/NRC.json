@@ -1,10 +1,13 @@
 {
-  "version": "2.0.0",
-  "agency": "",
-  "releases": [
+  "version": "1.0.1",
+  "agency": "NRC",
+  "projects": [
     {
       "name": "Adaptive Case Management",
-      "description": "Utilizing Enterprise Content and Case Management products from Vega and IBM, the NRC's Adaptive Case Management systems automate and streamline processes for public interaction and internal tracking and reporting of workflow activities. These systems leverage the configuration of widgets provided by the platform that can be adapted to meet agency business needs.",
+      "description": "Utilizing Enterprise Content and Case Management products from Vega and IBM, the NRC�s Adaptive Case Management systems automate and streamline processes for public interaction and internal tracking and reporting of workflow activities. These systems leverage the configuration of widgets provided by the platform that can be adapted to meet agency business needs.  Though the code underlying this platform is not for government reuse, the lessons learned an innovative approaches taken are of value across agencies for those seeking to create efficiencies in case and workflow management.",
+      "license": null,
+      "openSourceProject": 0,
+      "governmentWideReuseProject": 0,
       "tags": [
         "Adaptive Case Management",
         "Case Management",
@@ -15,41 +18,7 @@
       ],
       "contact": {
         "email": "kg.golshan@nrc.gov"
-      },
-      "agency": "NRC",
-      "id": "NRC/Adaptive%20Case%20Management",
-      "permissions": {
-        "licenses": [
-          {
-            "URL": null,
-            "name": null
-          }
-        ],
-        "usageType": "governmentWideReuse",
-        "exemptionText": null
-      },
-      "laborHours": null,
-      "date": {
-        "created": "",
-        "lastModified": "",
-        "metadataLastUpdated": ""
-      },
-      "vcs": "",
-      "disclaimerText": "",
-      "disclaimerURL": "",
-      "relatedCode": [
-        {
-          "codeName": "",
-          "codeURL": "",
-          "isGovernmentRepo": true
-        }
-      ],
-      "reusedCode": [
-        {
-          "name": "",
-          "URL": ""
-        }
-      ]
+      }
     }
   ]
 }
