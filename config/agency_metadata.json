@@ -435,7 +435,7 @@
     "name": "Executive Office of the President",
     "acronym": "EOP",
     "website": "https://www.whitehouse.gov/",
-    "codeUrl": "https://www.whitehouse.gov/code.json",
+    "codeUrl": "https://raw.githubusercontent.com/EOP-OMB/code_json/master/code.json",
     "fallback_file": "EOP.json",
     "requirements": {
       "agencyWidePolicy": null,
