@@ -28,6 +28,8 @@ jobs:
     working_directory: ~/code-gov-api
     docker:
       - image: circleci/node:8.9.3-stretch
+    environment:
+      NODE_ENV: "testing"
     steps:
       - checkout
       - run:
@@ -67,6 +69,8 @@ jobs:
     docker:
       - image: circleci/node:8.9.3-stretch
       - image: elasticsearch:2.4
+    environment:
+      NODE_ENV: "testing"
     steps:
       - checkout
       - run:

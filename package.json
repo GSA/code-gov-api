@@ -9,9 +9,9 @@
   },
   "scripts": {
     "start": "node app.js",
-    "debug": "NODE_ENV=development nodemon --inspect app.js",
-    "index": "NODE_ENV=production node ./scripts/index/index.js",
-    "index-debug": "NODE_ENV=development nodemon --inspect ./scripts/index/index.js",
+    "debug": "node --inspect app.js",
+    "index": "node ./scripts/index/index.js",
+    "index-debug": "node --inspect ./scripts/index/index.js",
     "index-repos": "node ./scripts/index/repo/index.js",
     "index-terms": "node ./scripts/index/term/index.js",
     "create-diffs": "node ./scripts/create_diffs/index.js --max_old_space_size=8192",
