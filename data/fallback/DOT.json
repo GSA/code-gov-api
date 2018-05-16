@@ -1,669 +1,4325 @@
 {
   "version": "2.0.0",
-  "agency": "",
+  "agency": "DOT",
+  "measurementType": {
+    "method": "projects"
+  },
   "releases": [
     {
-      "name": "Custom Search DOT",
+      "name": "Air Carrier Traffic",
       "organization": "OST",
-      "description": "Customize the default search, change labels, default texts, ordering, and display content ",
-      "vcs": "Acquia",
-      "status": "Production",
+      "description": "Air Carrier Traffic Statistics Features",
+      "repositoryURL": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/air_carrier_traffic_statistics/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "None - Backend is Open Source"
+          }
+        ]
+      },
+      "languages": [
+        "PHP"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
       "tags": [
         "transportation",
         "code"
       ],
+      "laborHours": 0,
       "contact": {
         "email": "rachael.laporte@dot.gov",
         "name": "Rachael LaPorte",
-        "URL": "https://www.transportation.gov",
+        "URL": "https://www.transportation.gov/",
         "phone": "2023663000"
       },
-      "agency": "DOT",
-      "id": "DOT/Custom%20Search%20DOT",
-      "repositoryURL": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom_search/",
-      "permissions": {
-        "licenses": [
-          {
-            "URL": null,
-            "name": null
-          }
-        ],
-        "usageType": "openSource",
-        "exemptionText": null
-      },
-      "laborHours": null,
       "date": {
-        "created": "",
-        "lastModified": "",
-        "metadataLastUpdated": "2016-11-02T00:00:00.000Z"
-      },
-      "disclaimerText": "",
-      "disclaimerURL": "",
-      "relatedCode": [
-        {
-          "codeName": "",
-          "codeURL": "",
-          "isGovernmentRepo": true
-        }
-      ],
-      "reusedCode": [
-        {
-          "name": "",
-          "URL": ""
-        }
-      ]
+        "created": "42736"
+      }
     },
     {
-      "name": "RITA Book",
+      "name": "Air Travel Price Index",
       "organization": "OST",
-      "description": "This Module will provide additional functionality for uploading html tables into Book ",
-      "vcs": "Acquia",
-      "status": "Production",
+      "description": "Air Travel Price Index (ATPI) Features",
+      "repositoryURL": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/air_travel_price_index/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "None - Backend is Open Source"
+          }
+        ]
+      },
+      "languages": [
+        "PHP"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
       "tags": [
         "transportation",
         "code"
       ],
+      "laborHours": 0,
       "contact": {
         "email": "rachael.laporte@dot.gov",
         "name": "Rachael LaPorte",
-        "URL": "https://www.transportation.gov",
+        "URL": "https://www.transportation.gov/",
         "phone": "2023663000"
       },
-      "agency": "DOT",
-      "id": "DOT/RITA%20Book",
-      "repositoryURL": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/rita_book/",
-      "permissions": {
-        "licenses": [
-          {
-            "URL": null,
-            "name": null
-          }
-        ],
-        "usageType": "openSource",
-        "exemptionText": null
-      },
-      "laborHours": null,
       "date": {
-        "created": "",
-        "lastModified": "",
-        "metadataLastUpdated": "2016-11-02T00:00:00.000Z"
-      },
-      "disclaimerText": "",
-      "disclaimerURL": "",
-      "relatedCode": [
-        {
-          "codeName": "",
-          "codeURL": "",
-          "isGovernmentRepo": true
-        }
-      ],
-      "reusedCode": [
-        {
-          "name": "",
-          "URL": ""
-        }
-      ]
-    },
-    {
-      "name": "Address 2 Abstate",
-      "organization": "OST",
-      "description": "Extend address field module to format US state as two letter abbreviation",
-      "vcs": "Acquia",
-      "status": "Production",
-      "tags": [
-        "transportation",
-        "code"
-      ],
-      "contact": {
-        "email": "rachael.laporte@dot.gov",
-        "name": "Rachael LaPorte",
-        "URL": "https://www.transportation.gov",
-        "phone": "2023663000"
-      },
-      "agency": "DOT",
-      "id": "DOT/Address%202%20Abstate",
-      "repositoryURL": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/addressfield_2abstate/",
-      "permissions": {
-        "licenses": [
-          {
-            "URL": null,
-            "name": null
-          }
-        ],
-        "usageType": "openSource",
-        "exemptionText": null
-      },
-      "laborHours": null,
-      "date": {
-        "created": "",
-        "lastModified": "",
-        "metadataLastUpdated": "2016-11-02T00:00:00.000Z"
-      },
-      "disclaimerText": "",
-      "disclaimerURL": "",
-      "relatedCode": [
-        {
-          "codeName": "",
-          "codeURL": "",
-          "isGovernmentRepo": true
-        }
-      ],
-      "reusedCode": [
-        {
-          "name": "",
-          "URL": ""
-        }
-      ]
+        "created": "42736"
+      }
     },
     {
       "name": "Average Air Fares",
       "organization": "OST",
       "description": "Average Air Fares - Features",
-      "vcs": "Acquia",
-      "status": "Production",
-      "tags": [
-        "transportation",
-        "code"
-      ],
-      "contact": {
-        "email": "rachael.laporte@dot.gov",
-        "name": "Rachael LaPorte",
-        "URL": "https://www.transportation.gov",
-        "phone": "2023663000"
-      },
-      "agency": "DOT",
-      "id": "DOT/Average%20Air%20Fares",
       "repositoryURL": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/average_air_fares/",
       "permissions": {
         "licenses": [
           {
-            "URL": null,
-            "name": null
+            "URL": "",
+            "name": "None - Backend is Open Source"
           }
-        ],
-        "usageType": "openSource",
-        "exemptionText": null
+        ]
       },
-      "laborHours": null,
-      "date": {
-        "created": "",
-        "lastModified": "",
-        "metadataLastUpdated": "2016-11-02T00:00:00.000Z"
-      },
-      "disclaimerText": "",
-      "disclaimerURL": "",
-      "relatedCode": [
-        {
-          "codeName": "",
-          "codeURL": "",
-          "isGovernmentRepo": true
-        }
+      "languages": [
+        "PHP"
       ],
-      "reusedCode": [
-        {
-          "name": "",
-          "URL": ""
-        }
-      ]
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "rachael.laporte@dot.gov",
+        "name": "Rachael LaPorte",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "42736"
+      }
     },
     {
       "name": "BTS Dictionary",
       "organization": "OST",
       "description": "BTS Dictionary - Features",
-      "vcs": "Acquia",
-      "status": "Production",
-      "tags": [
-        "transportation",
-        "code"
-      ],
-      "contact": {
-        "email": "rachael.laporte@dot.gov",
-        "name": "Rachael LaPorte",
-        "URL": "https://www.transportation.gov",
-        "phone": "2023663000"
-      },
-      "agency": "DOT",
-      "id": "DOT/BTS%20Dictionary",
       "repositoryURL": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/bts_dictionary/",
       "permissions": {
         "licenses": [
           {
-            "URL": null,
-            "name": null
+            "URL": "",
+            "name": "None - Backend is Open Source"
           }
-        ],
-        "usageType": "openSource",
-        "exemptionText": null
+        ]
       },
-      "laborHours": null,
-      "date": {
-        "created": "",
-        "lastModified": "",
-        "metadataLastUpdated": "2016-11-02T00:00:00.000Z"
-      },
-      "disclaimerText": "",
-      "disclaimerURL": "",
-      "relatedCode": [
-        {
-          "codeName": "",
-          "codeURL": "",
-          "isGovernmentRepo": true
-        }
+      "languages": [
+        "PHP"
       ],
-      "reusedCode": [
-        {
-          "name": "",
-          "URL": ""
-        }
-      ]
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "rachael.laporte@dot.gov",
+        "name": "Rachael LaPorte",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "42736"
+      }
     },
     {
       "name": "Bulk Delete OST",
       "organization": "OST",
       "description": "This Module will provide interface for deleting nodes that are no longer required",
-      "vcs": "Acquia",
-      "status": "Production",
-      "tags": [
-        "transportation",
-        "code"
-      ],
-      "contact": {
-        "email": "rachael.laporte@dot.gov",
-        "name": "Rachael LaPorte",
-        "URL": "https://www.transportation.gov",
-        "phone": "2023663000"
-      },
-      "agency": "DOT",
-      "id": "DOT/Bulk%20Delete%20OST",
       "repositoryURL": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/bulk_delete/",
       "permissions": {
         "licenses": [
           {
-            "URL": null,
-            "name": null
+            "URL": "",
+            "name": "None - Backend is Open Source"
           }
-        ],
-        "usageType": "openSource",
-        "exemptionText": null
+        ]
       },
-      "laborHours": null,
-      "date": {
-        "created": "",
-        "lastModified": "",
-        "metadataLastUpdated": "2016-11-02T00:00:00.000Z"
-      },
-      "disclaimerText": "",
-      "disclaimerURL": "",
-      "relatedCode": [
-        {
-          "codeName": "",
-          "codeURL": "",
-          "isGovernmentRepo": true
-        }
+      "languages": [
+        "PHP"
       ],
-      "reusedCode": [
-        {
-          "name": "",
-          "URL": ""
-        }
-      ]
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "rachael.laporte@dot.gov",
+        "name": "Rachael LaPorte",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "42736"
+      }
     },
     {
       "name": "Major Pub",
       "organization": "OST",
       "description": "This Module will Import The two major publications without menu",
-      "vcs": "Acquia",
-      "status": "Production",
-      "tags": [
-        "transportation",
-        "code"
-      ],
-      "contact": {
-        "email": "rachael.laporte@dot.gov",
-        "name": "Rachael LaPorte",
-        "URL": "https://www.transportation.gov",
-        "phone": "2023663000"
-      },
-      "agency": "DOT",
-      "id": "DOT/Major%20Pub",
       "repositoryURL": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/major_pub/",
       "permissions": {
         "licenses": [
           {
-            "URL": null,
-            "name": null
+            "URL": "",
+            "name": "None - Backend is Open Source"
           }
-        ],
-        "usageType": "openSource",
-        "exemptionText": null
+        ]
       },
-      "laborHours": null,
-      "date": {
-        "created": "",
-        "lastModified": "",
-        "metadataLastUpdated": "2016-11-02T00:00:00.000Z"
-      },
-      "disclaimerText": "",
-      "disclaimerURL": "",
-      "relatedCode": [
-        {
-          "codeName": "",
-          "codeURL": "",
-          "isGovernmentRepo": true
-        }
+      "languages": [
+        "PHP"
       ],
-      "reusedCode": [
-        {
-          "name": "",
-          "URL": ""
-        }
-      ]
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "rachael.laporte@dot.gov",
+        "name": "Rachael LaPorte",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "42736"
+      }
     },
     {
       "name": "Multi Import OST",
       "organization": "OST",
       "description": "This Module will provide interface for uploading multiple levels html files which are 508 ",
-      "vcs": "Acquia",
-      "status": "Production",
-      "tags": [
-        "transportation",
-        "code"
-      ],
-      "contact": {
-        "email": "rachael.laporte@dot.gov",
-        "name": "Rachael LaPorte",
-        "URL": "https://www.transportation.gov",
-        "phone": "2023663000"
-      },
-      "agency": "DOT",
-      "id": "DOT/Multi%20Import%20OST",
       "repositoryURL": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/multi_import/",
       "permissions": {
         "licenses": [
           {
-            "URL": null,
-            "name": null
+            "URL": "",
+            "name": "None - Backend is Open Source"
           }
-        ],
-        "usageType": "openSource",
-        "exemptionText": null
+        ]
       },
-      "laborHours": null,
-      "date": {
-        "created": "",
-        "lastModified": "",
-        "metadataLastUpdated": "2016-11-02T00:00:00.000Z"
-      },
-      "disclaimerText": "",
-      "disclaimerURL": "",
-      "relatedCode": [
-        {
-          "codeName": "",
-          "codeURL": "",
-          "isGovernmentRepo": true
-        }
+      "languages": [
+        "PHP"
       ],
-      "reusedCode": [
-        {
-          "name": "",
-          "URL": ""
-        }
-      ]
-    },
-    {
-      "name": "Recruisive Impact",
-      "organization": "OST",
-      "description": "This Module will provide interface for uploading multiple levels html files which are 508 ",
-      "vcs": "Acquia",
-      "status": "Production",
+      "usageType": "openSource",
+      "exemptiontext": "null",
       "tags": [
         "transportation",
         "code"
       ],
+      "laborHours": 0,
       "contact": {
         "email": "rachael.laporte@dot.gov",
         "name": "Rachael LaPorte",
-        "URL": "https://www.transportation.gov",
+        "URL": "https://www.transportation.gov/",
         "phone": "2023663000"
       },
-      "agency": "DOT",
-      "id": "DOT/Recruisive%20Impact",
+      "date": {
+        "created": "42736"
+      }
+    },
+    {
+      "name": "Recursive Impact",
+      "organization": "OST",
+      "description": "This Module will provide interface for uploading multiple levels html files which are 508 ",
       "repositoryURL": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/recursive_import/",
       "permissions": {
         "licenses": [
           {
-            "URL": null,
-            "name": null
+            "URL": "",
+            "name": "None - Backend is Open Source"
           }
-        ],
-        "usageType": "openSource",
-        "exemptionText": null
+        ]
       },
-      "laborHours": null,
-      "date": {
-        "created": "",
-        "lastModified": "",
-        "metadataLastUpdated": "2016-11-02T00:00:00.000Z"
-      },
-      "disclaimerText": "",
-      "disclaimerURL": "",
-      "relatedCode": [
-        {
-          "codeName": "",
-          "codeURL": "",
-          "isGovernmentRepo": true
-        }
+      "languages": [
+        "PHP"
       ],
-      "reusedCode": [
-        {
-          "name": "",
-          "URL": ""
-        }
-      ]
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "rachael.laporte@dot.gov",
+        "name": "Rachael LaPorte",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "42736"
+      }
     },
     {
       "name": "Subject Areas DOT ",
       "organization": "OST",
       "description": "This Module will Import all the subject areas under subject areas menu",
-      "vcs": "Acquia",
-      "status": "Production",
-      "tags": [
-        "transportation",
-        "code"
-      ],
-      "contact": {
-        "email": "rachael.laporte@dot.gov",
-        "name": "Rachael LaPorte",
-        "URL": "https://www.transportation.gov",
-        "phone": "2023663000"
-      },
-      "agency": "DOT",
-      "id": "DOT/Subject%20Areas%20DOT%20",
       "repositoryURL": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/subject_areas/",
       "permissions": {
         "licenses": [
           {
-            "URL": null,
-            "name": null
+            "URL": "",
+            "name": "None - Backend is Open Source"
           }
-        ],
-        "usageType": "openSource",
-        "exemptionText": null
+        ]
       },
-      "laborHours": null,
-      "date": {
-        "created": "",
-        "lastModified": "",
-        "metadataLastUpdated": "2016-11-02T00:00:00.000Z"
-      },
-      "disclaimerText": "",
-      "disclaimerURL": "",
-      "relatedCode": [
-        {
-          "codeName": "",
-          "codeURL": "",
-          "isGovernmentRepo": true
-        }
+      "languages": [
+        "PHP"
       ],
-      "reusedCode": [
-        {
-          "name": "",
-          "URL": ""
-        }
-      ]
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "rachael.laporte@dot.gov",
+        "name": "Rachael LaPorte",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "42736"
+      }
     },
     {
       "name": "Subject Areas WOM",
       "organization": "OST",
       "description": "This Module will Import all the subject areas under subject areas without menu",
-      "vcs": "Acquia",
-      "status": "Production",
-      "tags": [
-        "transportation",
-        "code"
-      ],
-      "contact": {
-        "email": "rachael.laporte@dot.gov",
-        "name": "Rachael LaPorte",
-        "URL": "https://www.transportation.gov",
-        "phone": "2023663000"
-      },
-      "agency": "DOT",
-      "id": "DOT/Subject%20Areas%20WOM",
       "repositoryURL": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/subject_areas_wom/",
       "permissions": {
         "licenses": [
           {
-            "URL": null,
-            "name": null
+            "URL": "",
+            "name": "None - Backend is Open Source"
           }
-        ],
-        "usageType": "openSource",
-        "exemptionText": null
+        ]
       },
-      "laborHours": null,
-      "date": {
-        "created": "",
-        "lastModified": "",
-        "metadataLastUpdated": "2016-11-02T00:00:00.000Z"
-      },
-      "disclaimerText": "",
-      "disclaimerURL": "",
-      "relatedCode": [
-        {
-          "codeName": "",
-          "codeURL": "",
-          "isGovernmentRepo": true
-        }
+      "languages": [
+        "PHP"
       ],
-      "reusedCode": [
-        {
-          "name": "",
-          "URL": ""
-        }
-      ]
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "rachael.laporte@dot.gov",
+        "name": "Rachael LaPorte",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "42736"
+      }
     },
     {
       "name": "Transportation Services Index",
       "organization": "OST",
       "description": "Transportation Services Index - Features",
-      "vcs": "Acquia",
-      "status": "Production",
-      "tags": [
-        "transportation",
-        "code"
-      ],
-      "contact": {
-        "email": "rachael.laporte@dot.gov",
-        "name": "Rachael LaPorte",
-        "URL": "https://www.transportation.gov",
-        "phone": "2023663000"
-      },
-      "agency": "DOT",
-      "id": "DOT/Transportation%20Services%20Index",
       "repositoryURL": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/transportation_services_index/",
       "permissions": {
         "licenses": [
           {
-            "URL": null,
-            "name": null
+            "URL": "",
+            "name": "None - Backend is Open Source"
           }
-        ],
-        "usageType": "openSource",
-        "exemptionText": null
+        ]
       },
-      "laborHours": null,
-      "date": {
-        "created": "",
-        "lastModified": "",
-        "metadataLastUpdated": "2016-11-02T00:00:00.000Z"
-      },
-      "disclaimerText": "",
-      "disclaimerURL": "",
-      "relatedCode": [
-        {
-          "codeName": "",
-          "codeURL": "",
-          "isGovernmentRepo": true
-        }
+      "languages": [
+        "PHP"
       ],
-      "reusedCode": [
-        {
-          "name": "",
-          "URL": ""
-        }
-      ]
-    },
-    {
-      "name": "Air Travel Price Index",
-      "organization": "OST",
-      "description": "Air Travel Price Index (ATPI)-Features",
-      "vcs": "Acquia",
-      "status": "Production",
+      "usageType": "openSource",
+      "exemptiontext": "null",
       "tags": [
         "transportation",
         "code"
       ],
+      "laborHours": 0,
       "contact": {
         "email": "rachael.laporte@dot.gov",
         "name": "Rachael LaPorte",
-        "URL": "https://www.transportation.gov",
+        "URL": "https://www.transportation.gov/",
         "phone": "2023663000"
       },
-      "agency": "DOT",
-      "id": "DOT/Air%20Travel%20Price%20Index",
-      "repositoryURL": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/air_travel_price_index/",
+      "date": {
+        "created": "42736"
+      }
+    },
+    {
+      "name": "Custom Search DOT",
+      "organization": "OST",
+      "description": "Customize the default search, change labels, default texts, ordering, and display content ",
+      "repositoryURL": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom_search/",
       "permissions": {
         "licenses": [
           {
-            "URL": null,
-            "name": null
+            "URL": "",
+            "name": "None - Backend is Open Source"
           }
-        ],
-        "usageType": "openSource",
-        "exemptionText": null
+        ]
       },
-      "laborHours": null,
-      "date": {
-        "created": "",
-        "lastModified": "",
-        "metadataLastUpdated": "2016-11-02T00:00:00.000Z"
-      },
-      "disclaimerText": "",
-      "disclaimerURL": "",
-      "relatedCode": [
-        {
-          "codeName": "",
-          "codeURL": "",
-          "isGovernmentRepo": true
-        }
+      "languages": [
+        "PHP"
       ],
-      "reusedCode": [
-        {
-          "name": "",
-          "URL": ""
-        }
-      ]
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "rachael.laporte@dot.gov",
+        "name": "Rachael LaPorte",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "42736"
+      }
+    },
+    {
+      "name": "RITA Book",
+      "organization": "OST",
+      "description": "This Module will provide additional functionality for uploading html tables into Book ",
+      "repositoryURL": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/rita_book/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "None - Backend is Open Source"
+          }
+        ]
+      },
+      "languages": [
+        "PHP"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "rachael.laporte@dot.gov",
+        "name": "Rachael LaPorte",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "42736"
+      }
+    },
+    {
+      "name": "Address 2 Abstate",
+      "organization": "OST",
+      "description": "Extend address field module to format US state as two letter abbreviation",
+      "repositoryURL": "https://svn-1745.prod.hosting.acquia.com/dotrita/trunk/docroot/sites/all/modules/custom/addressfield_2abstate/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "None - Backend is Open Source"
+          }
+        ]
+      },
+      "languages": [
+        "PHP"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "rachael.laporte@dot.gov",
+        "name": "Rachael LaPorte",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "42736"
+      }
+    },
+    {
+      "name": "Multiple Cause Incident Analysis of rail close call incident reports Module 1",
+      "organization": "OST",
+      "description": "Multiple cause analysis of data from confidential program allowing railroad carriers and their employees to report close calls. ",
+      "repositoryURL": "null",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Windows 2012; IIS; Oracle"
+          }
+        ]
+      },
+      "languages": [
+        "Java"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "rachael.laporte@dot.gov",
+        "name": "Rachael LaPorte",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "40544"
+      }
+    },
+    {
+      "name": "Multiple Cause Incident Analysis of rail close call incident reports Module 2",
+      "organization": "OST",
+      "description": "Multiple cause analysis of data from confidential program allowing railroad carriers and their employees to report close calls. ",
+      "repositoryURL": "null",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Windows 2012; IIS; Oracle"
+          }
+        ]
+      },
+      "languages": [
+        "null"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "rachael.laporte@dot.gov",
+        "name": "Rachael LaPorte",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "40544"
+      }
+    },
+    {
+      "name": "Multiple Cause Incident Analysis of rail close call incident reports Module 3",
+      "organization": "OST",
+      "description": "Multiple cause analysis of data from confidential program allowing railroad carriers and their employees to report close calls. ",
+      "repositoryURL": "null",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Windows 2012; IIS; Oracle"
+          }
+        ]
+      },
+      "languages": [
+        "null"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "rachael.laporte@dot.gov",
+        "name": "Rachael LaPorte",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "40544"
+      }
+    },
+    {
+      "name": "R2D2 (Resource Requirement Decision Data)",
+      "organization": "OST",
+      "description": "Budget Submission and Tracking",
+      "repositoryURL": "null",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Windows 2012; Oracle PL/SQL; Oracle Developer"
+          }
+        ]
+      },
+      "languages": [
+        "Oracle PL/SQL",
+        "Oracle Developer"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "rachael.laporte@dot.gov",
+        "name": "Rachael LaPorte",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "39448"
+      }
+    },
+    {
+      "name": "Administrative Management Expense System (AMES)",
+      "organization": "FTA",
+      "description": "AMES is a web-based application which displays the administrative budget execution process electronically.",
+      "repositoryURL": "http://ftanet.ad.dot.gov/ames/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Microsoft"
+          }
+        ]
+      },
+      "languages": [
+        "Microsoft"
+      ],
+      "usageType": "exemptByAgencySystem",
+      "exemptiontext": "System used to support the internal operations of the agency.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "carlos.rivero@dot.gov",
+        "name": "Carlos Rivero",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023662869"
+      },
+      "date": {
+        "created": "38449"
+      }
+    },
+    {
+      "name": "Charter Registration Tool - Admin",
+      "organization": "FTA",
+      "description": "allows FTA to electronically register private charter operators. This allows Allows FTA grant recipients to notify those companies when the grant recipient receives a request for charter service.",
+      "repositoryURL": "http://ftanet.ad.dot.gov/CharterRegistrationAdmin",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Microsoft"
+          }
+        ]
+      },
+      "languages": [
+        "Microsoft"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "System containing information and business logic of FTA's stakeholders supports the agency's mission.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "carlos.rivero@dot.gov",
+        "name": "Carlos Rivero",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023662869"
+      },
+      "date": {
+        "created": "39217"
+      }
+    },
+    {
+      "name": "Charter Registration Tool - Public",
+      "organization": "FTA",
+      "description": "allows FTA to electronically register private charter operators. This allows Allows FTA grant recipients to notify those companies when the grant recipient receives a request for charter service.",
+      "repositoryURL": "http://ftawebprod.fta.dot.gov/CharterRegistration/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Microsoft"
+          }
+        ]
+      },
+      "languages": [
+        "Microsoft"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "System containing information and business logic of FTA's stakeholders supports the agency's mission.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "carlos.rivero@dot.gov",
+        "name": "Carlos Rivero",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023662869"
+      },
+      "date": {
+        "created": "39217"
+      }
+    },
+    {
+      "name": "Charter Reporting Tool - Admin",
+      "organization": "FTA",
+      "description": "Allows charter bus recipients to upload quarterly reports, and allows FTA to review these reports.",
+      "repositoryURL": "https://ftanet.ad.dot.gov/CharterReporting",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Microsoft"
+          }
+        ]
+      },
+      "languages": [
+        "Microsoft"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "System containing information and business logic of FTA's stakeholders supports the agency's mission.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "carlos.rivero@dot.gov",
+        "name": "Carlos Rivero",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023662869"
+      },
+      "date": {
+        "created": "42528"
+      }
+    },
+    {
+      "name": "Charter Reporting Tool - Public",
+      "organization": "FTA",
+      "description": "Allows charter bus recipients to upload quarterly reports, and allows FTA to review these reports.",
+      "repositoryURL": "https://ftawebprod.fta.dot.gov/CharterReporting",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Microsoft"
+          }
+        ]
+      },
+      "languages": [
+        "Microsoft"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "System containing information and business logic of FTA's stakeholders supports the agency's mission.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "carlos.rivero@dot.gov",
+        "name": "Carlos Rivero",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023662869"
+      },
+      "date": {
+        "created": "42528"
+      }
+    },
+    {
+      "name": "Contact Us Tool (CUT) - Admin",
+      "organization": "FTA",
+      "description": "Web-based application that provides timely responses to inquiries submitted through FTA�s public website. The tool measures FTA�s responsiveness and promotes accountability of FTA staff.  This is for Admin staff.",
+      "repositoryURL": "http://ftanet.ad.dot.gov/ContactUsToolAdmin/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Microsoft"
+          }
+        ]
+      },
+      "languages": [
+        "Microsoft"
+      ],
+      "usageType": "exemptByAgencySystem",
+      "exemptiontext": "System used to support the internal operations of the agency.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "carlos.rivero@dot.gov",
+        "name": "Carlos Rivero",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023662869"
+      },
+      "date": {
+        "created": "39393"
+      }
+    },
+    {
+      "name": "Contact Us Tool (CUT) - Public",
+      "organization": "FTA",
+      "description": "Web-based application that provides timely responses to inquiries submitted through FTA�s public website. The tool measures FTA�s responsiveness and promotes accountability of FTA staff.  This is for the public. ",
+      "repositoryURL": "https://ftawebprod.fta.dot.gov/ContactUsTool/Public/FAQs.aspx",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Microsoft"
+          }
+        ]
+      },
+      "languages": [
+        "Microsoft"
+      ],
+      "usageType": "exemptByAgencySystem",
+      "exemptiontext": "System used to support the internal operations of the agency.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "carlos.rivero@dot.gov",
+        "name": "Carlos Rivero",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023662869"
+      },
+      "date": {
+        "created": "39393"
+      }
+    },
+    {
+      "name": "Operational Assets and Security Information System (OASIS)",
+      "organization": "FTA",
+      "description": "Operational Assets and Security Information System - maintaining employee non-PII data; used for On- and Off-boarding Process.",
+      "repositoryURL": "https://ftanet.ad.dot.gov/OASIS/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Microsoft"
+          }
+        ]
+      },
+      "languages": [
+        "Microsoft"
+      ],
+      "usageType": "exemptByAgencySystem",
+      "exemptiontext": "System used to support the internal operations of the agency.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "carlos.rivero@dot.gov",
+        "name": "Carlos Rivero",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023662869"
+      },
+      "date": {
+        "created": "38093"
+      }
+    },
+    {
+      "name": "Oversight Tracking System (OTrak)",
+      "organization": "FTA",
+      "description": "Oversight Tracking - managing oversight program activities, including annual assessment and Oversight reviews.",
+      "repositoryURL": "https://ftawebprod.fta.dot.gov/OTrak/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Microsoft"
+          }
+        ]
+      },
+      "languages": [
+        "Microsoft"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "System containing information and business logic of FTA's stakeholders supports the agency's mission.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "carlos.rivero@dot.gov",
+        "name": "Carlos Rivero",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023662869"
+      },
+      "date": {
+        "created": "38114"
+      }
+    },
+    {
+      "name": "Oversight Tracking System (OTrak) - User Acceptance",
+      "organization": "FTA",
+      "description": "Used for User Acceptance Alpha",
+      "repositoryURL": "https://ftawebprod.fta.dot.gov/Otrak_UA",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Microsoft"
+          }
+        ]
+      },
+      "languages": [
+        "Microsoft"
+      ],
+      "usageType": "exemptByAgencySystem",
+      "exemptiontext": "System used to support the internal operations of the agency.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "carlos.rivero@dot.gov",
+        "name": "Carlos Rivero",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023662869"
+      },
+      "date": {
+        "created": "38114"
+      }
+    },
+    {
+      "name": "Oversight Tracking System (OTrak) - Training",
+      "organization": "FTA",
+      "description": "For training OTrak users",
+      "repositoryURL": "https://ftawebprod.fta.dot.gov/Otraktraining",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Microsoft"
+          }
+        ]
+      },
+      "languages": [
+        "Microsoft"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "System containing information and business logic of FTA's stakeholders supports the agency's mission.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "carlos.rivero@dot.gov",
+        "name": "Carlos Rivero",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023662869"
+      },
+      "date": {
+        "created": "38114"
+      }
+    },
+    {
+      "name": "Phone Directory",
+      "organization": "FTA",
+      "description": "Phone Directory allows users to locate FTA employees and onsite contractors by name, office, or reverse lookup phone number.  ",
+      "repositoryURL": "http://ftanet.ad.dot.gov/PhoneDirectory",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Open Source"
+          }
+        ]
+      },
+      "languages": [
+        "null"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "System containing information and business logic of FTA's stakeholders supports the agency's mission.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "carlos.rivero@dot.gov",
+        "name": "Carlos Rivero",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023662869"
+      },
+      "date": {
+        "created": "39755"
+      }
+    },
+    {
+      "name": "Program Guidance (ProGuide)",
+      "organization": "FTA",
+      "description": "Program Guidance (ProGuide) is a web-based application designed to support FTA's effort to track guidance and ensure it is disseminated consistently throughout FTA. ",
+      "repositoryURL": "http://ftanet.ad.dot.gov/ProgramGuidance/GuidanceRequestSearch.aspx",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Microsoft"
+          }
+        ]
+      },
+      "languages": [
+        "Microsoft"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "System containing information and business logic of FTA's stakeholders supports the agency's mission.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "carlos.rivero@dot.gov",
+        "name": "Carlos Rivero",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023662869"
+      },
+      "date": {
+        "created": "39755"
+      }
+    },
+    {
+      "name": "FTA Coordinating Council for Access & Mobility (CCAM) ",
+      "organization": "FTA",
+      "description": " The website provides information resource on all Federal programs funding human service transportation to the general public.  The site contains information including policy, program and funding, assessment and planning, mobility management strategies, leadership and partnership, technical assistance and training, outreach, and useful practices for coordinating transportation.",
+      "repositoryURL": "https://ftawebapps.fta.dot.gov/apps/DGS/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Microsoft"
+          }
+        ]
+      },
+      "languages": [
+        "Microsoft"
+      ],
+      "usageType": "exemptByAgencySystem",
+      "exemptiontext": "System used to support the internal operations of the agency.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "carlos.rivero@dot.gov",
+        "name": "Carlos Rivero",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023662869"
+      },
+      "date": {
+        "created": "40632"
+      }
+    },
+    {
+      "name": "FTA Coordinating Council for Access & Mobility (CCAM) ",
+      "organization": "FTA",
+      "description": " The website provides information resource on all Federal programs funding human service transportation to the general public.  The site contains information including policy, program and funding, assessment and planning, mobility management strategies, leadership and partnership, technical assistance and training, outreach, and useful practices for coordinating transportation.",
+      "repositoryURL": "https://ftawebapps.fta.dot.gov/apps/FTA_Conference_Calendar",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Appian Cloud licensing package"
+          }
+        ]
+      },
+      "languages": [
+        "Appian Cloud licensing package"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "carlos.rivero@dot.gov",
+        "name": "Carlos Rivero",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023662869"
+      },
+      "date": {
+        "created": "41128"
+      }
+    },
+    {
+      "name": "Discretionary Grants System (DGS)",
+      "organization": "FTA",
+      "description": "DGS is a centralized and secure web-based application that allows FTA to collect and evaluate discretionary grant applications submitted through Grants.gov. The system contains submitted applications and information related to the evaluation process.",
+      "repositoryURL": "http://one10.dot.gov/office/fta/Pages/default.aspx",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Appian Cloud licensing package"
+          }
+        ]
+      },
+      "languages": [
+        "Appian Cloud licensing package"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "carlos.rivero@dot.gov",
+        "name": "Carlos Rivero",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023662869"
+      },
+      "date": {
+        "created": "38538"
+      }
+    },
+    {
+      "name": "FTA Workshop Planning Calendar",
+      "organization": "FTA",
+      "description": "FTA Workshop Planning Calendar is an application that allows all FTA Users to submit conference requests.",
+      "repositoryURL": "http://one10.dot.gov/office/fta/Pages/default.aspx",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Serena Licensing"
+          }
+        ]
+      },
+      "languages": [
+        "Serena Licensing"
+      ],
+      "usageType": "exemptByAgencySystem",
+      "exemptiontext": "System used to support the internal operations of the agency.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "carlos.rivero@dot.gov",
+        "name": "Carlos Rivero",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023662869"
+      },
+      "date": {
+        "created": "2013"
+      }
+    },
+    {
+      "name": "OUR Dashboard",
+      "organization": "FTA",
+      "description": "FTA's collaboration portal built in SharePoint.",
+      "repositoryURL": "https://faces.fta.dot.gov/suite/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Appian"
+          }
+        ]
+      },
+      "languages": [
+        "Appian"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "System containing information and business logic of FTA's stakeholders supports the agency's mission.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "carlos.rivero@dot.gov",
+        "name": "Carlos Rivero",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023662869"
+      },
+      "date": {
+        "created": "42004"
+      }
+    },
+    {
+      "name": "TransPort",
+      "organization": "FTA",
+      "description": "TransPort is FTA's intranet and collaboration portal built in SharePoint.",
+      "repositoryURL": "https://faces.fta.dot.gov/suite/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Appian"
+          }
+        ]
+      },
+      "languages": [
+        "Appian"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "System containing information and business logic of FTA's stakeholders supports the agency's mission.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "carlos.rivero@dot.gov",
+        "name": "Carlos Rivero",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023662869"
+      },
+      "date": {
+        "created": "42405"
+      }
+    },
+    {
+      "name": "National Transit Database (NTD)",
+      "organization": "FTA",
+      "description": "The National Transit Database (NTD) is the Federal Transit Administration's (FTA) statistical data collection and reporting system for the U.S. transit industry, required by 49 U.S.C. Section 5335; data used in statutory formula apportionments.",
+      "repositoryURL": "https://ftanet.ad.dot.gov/tmtrack/tmtrack.dll?",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Serena"
+          }
+        ]
+      },
+      "languages": [
+        "Serena"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "System containing information and business logic of FTA's stakeholders supports the agency's mission.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "carlos.rivero@dot.gov",
+        "name": "Carlos Rivero",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023662869"
+      },
+      "date": {
+        "created": "40332"
+      }
+    },
+    {
+      "name": "Transit Award Management System (TrAMS)",
+      "organization": "FTA",
+      "description": "TrAMS is a grants management application that was implemented in 2016 to replace the current grants management application, TEAM. It supports FTA in its mission to manage the application, review, approval, award, notification, management, and closure of grants and cooperative agreements.",
+      "repositoryURL": "https://www.transit.dot.gov/ccam/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Drupal/PHP"
+          }
+        ]
+      },
+      "languages": [
+        "Drupal/PHP"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "System containing information and business logic of FTA's stakeholders supports the agency's mission.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "carlos.rivero@dot.gov",
+        "name": "Carlos Rivero",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023662869"
+      },
+      "date": {
+        "created": "42199"
+      }
+    },
+    {
+      "name": "Change Tracking System (CTS/CMDB/IM)",
+      "organization": "FTA",
+      "description": "Change Tracking System (CTS) is a web-based application FTA uses to review and adjudicate all Software Change Requests (SCRs) made to agency applications and Configuration Change Requests (CCRs) that relate to security, infrastructure, and network resources.?",
+      "repositoryURL": "https://www.transit.dot.gov/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Drupal/PHP"
+          }
+        ]
+      },
+      "languages": [
+        "Drupal/PHP"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "System containing information and business logic of FTA's stakeholders supports the agency's mission.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "carlos.rivero@dot.gov",
+        "name": "Carlos Rivero",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023662869"
+      },
+      "date": {
+        "created": "42461"
+      }
+    },
+    {
+      "name": "FTA Public Site",
+      "organization": "FRA",
+      "description": "FTA's Public website provides FTA's stakeholders (grantees, transit agencies, Federal/State/Local/Tribal governments, and the public) with a web-based tool facilitating external communications.",
+      "repositoryURL": "http://apps.fra.dot.gov/dataloading/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Open Source"
+          }
+        ]
+      },
+      "languages": [
+        "C#",
+        "JavaScript"
+      ],
+      "usageType": "exemptByAgencySystem",
+      "exemptiontext": "Application built to support internal functions specific to internal resources",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "eric.lovett@dot.gov",
+        "name": "Eric Lovett",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "41640"
+      }
+    },
+    {
+      "name": "FRA Web",
+      "organization": "FRA",
+      "description": "FRA public facing website",
+      "repositoryURL": "www.fra.dot.gov/cms.fra.dot.gov",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Open Source"
+          }
+        ]
+      },
+      "languages": [
+        "C#",
+        "JavaScript"
+      ],
+      "usageType": "exemptByAgencySystem",
+      "exemptiontext": "Website for agency specific mission. Built using FRA CMS which has been made available for open source public consumption",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "eric.lovett@dot.gov",
+        "name": "Eric Lovett",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "41275"
+      }
+    },
+    {
+      "name": "FRA CMS",
+      "organization": "FRA",
+      "description": "Content Management System for FRA Website",
+      "repositoryURL": "https://github.com/USFRA/FRA-CMS",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
+            "name": "Kendo UI"
+          }
+        ]
+      },
+      "languages": [
+        "C#",
+        "JavaScript"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "eric.lovett@dot.gov",
+        "name": "Eric Lovett",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      }
+    },
+    {
+      "name": "Email Application",
+      "organization": "FRA",
+      "description": "Application for sending preformatted html emails to broad audiences",
+      "repositoryURL": "https://github.com/USFRA/Email-Application",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
+            "name": "Kendo UI"
+          }
+        ]
+      },
+      "languages": [
+        "C#",
+        "JavaScript"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "eric.lovett@dot.gov",
+        "name": "Eric Lovett",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "41275"
+      }
+    },
+    {
+      "name": "RGHS",
+      "organization": "FRA",
+      "description": "Railroaders' Guide to Healthy Sleep",
+      "repositoryURL": "www.railroadersleep.org",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
+            "name": "Kendo UI"
+          }
+        ]
+      },
+      "languages": [
+        "C#",
+        "JavaScript"
+      ],
+      "usageType": "exemptByAgencySystem",
+      "exemptiontext": "Website for FRA specific study and findings. Built using FRA CMS, which is available of ripen source public consumption.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "eric.lovett@dot.gov",
+        "name": "Eric Lovett",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "42856"
+      }
+    },
+    {
+      "name": "RSAC",
+      "organization": "FRA",
+      "description": "Railroad Safety Advisory Committee web application",
+      "repositoryURL": "http://rsac.fra.dot.gov",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
+            "name": "Kendo UI"
+          }
+        ]
+      },
+      "languages": [
+        "C#",
+        "JavaScript"
+      ],
+      "usageType": "exemptByAgencySystem",
+      "exemptiontext": "Website currently being redesigned in FRA CMS. Current site is outdated code, not ready for public consumption",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "eric.lovett@dot.gov",
+        "name": "Eric Lovett",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "42370"
+      }
+    },
+    {
+      "name": "Buy America Waiver",
+      "organization": "FRA",
+      "description": "Buy Americ waiver requests commenting",
+      "repositoryURL": "http://www.fra.dot.gov/Page/P0185",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Open Source"
+          }
+        ]
+      },
+      "languages": [
+        "C#",
+        "JavaScript"
+      ],
+      "usageType": "exemptByAgencySystem",
+      "exemptiontext": "Component of FRA CMS, not ready to be packaged as standalone application",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "eric.lovett@dot.gov",
+        "name": "Eric Lovett",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "42005"
+      }
+    },
+    {
+      "name": "Online Quiz",
+      "organization": "FRA",
+      "description": "A platform to support creating and taking online quiz",
+      "repositoryURL": "http://www.fra.dot.gov/onlinetests/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Open Source"
+          }
+        ]
+      },
+      "languages": [
+        "C#",
+        "JavaScript"
+      ],
+      "usageType": "exemptByAgencySystem",
+      "exemptiontext": "Component of FRA CMS, not ready to be packaged as standalone application",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "eric.lovett@dot.gov",
+        "name": "Eric Lovett",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "41334"
+      }
+    },
+    {
+      "name": "SAT Training",
+      "organization": "FRA",
+      "description": "Security Awareness Training",
+      "repositoryURL": "http://www.fra.dot.gov/training/sat",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Open Source"
+          }
+        ]
+      },
+      "languages": [
+        "C#",
+        "JavaScript"
+      ],
+      "usageType": "exemptByAgencySystem",
+      "exemptiontext": "Component of FRA CMS, not ready to be packaged as standalone application",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "eric.lovett@dot.gov",
+        "name": "Eric Lovett",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "41334"
+      }
+    },
+    {
+      "name": "FRA Intranet Portal",
+      "organization": "FRA",
+      "description": "FRA Intranet Portal",
+      "repositoryURL": "http://our.dot.gov/office/fra/Pages/default.aspx",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
+            "name": "Foxit PDF"
+          }
+        ]
+      },
+      "languages": [
+        "Javascript"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "Website for agency specific mission.Built using FRA CMS which has been made available for open source public consumption",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "eric.lovett@dot.gov",
+        "name": "Eric Lovett",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "42522"
+      }
+    },
+    {
+      "name": "PA2 Dashboard",
+      "organization": "FRA",
+      "description": "FRA web analytics dashboard",
+      "repositoryURL": "https://ce.dot.gov/bic/fra/viewer.aspx#id=56",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
+            "name": "Kendo UI"
+          }
+        ]
+      },
+      "languages": [
+        "Visual Basic"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "Dashboard for internal statistical analysis. Not built for public consumption.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "eric.lovett@dot.gov",
+        "name": "Eric Lovett",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "41487"
+      }
+    },
+    {
+      "name": "FedEx Cost Dashboard",
+      "organization": "FRA",
+      "description": "FRA FedEx cost analytics",
+      "repositoryURL": "https://ce.dot.gov/bic/fra/viewer.aspx#id=52",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
+            "name": "Kendo UI"
+          }
+        ]
+      },
+      "languages": [
+        "C#",
+        "JavaScript"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "Dashboard for internal statistical analysis. Not built for public consumption.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "eric.lovett@dot.gov",
+        "name": "Eric Lovett",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "42522"
+      }
+    },
+    {
+      "name": "WCF Dashboard",
+      "organization": "FRA",
+      "description": "Working Capital Fund dashboard",
+      "repositoryURL": "https://ce.dot.gov/bic/fra/viewer.aspx#id=53",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
+            "name": "Kendo UI"
+          }
+        ]
+      },
+      "languages": [
+        "C#",
+        "JavaScript"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "Dashboard for internal statistical analysis. Not built for public consumption.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "eric.lovett@dot.gov",
+        "name": "Eric Lovett",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "41487"
+      }
+    },
+    {
+      "name": "PRISM Dashboard",
+      "organization": "FRA",
+      "description": "Dashboard shows FRA's Purchase requests by account codes. This pulls from PRISM and displays information as requested by the Dashboard owner.",
+      "repositoryURL": "https://ce.dot.gov/bic/fra/viewer.aspx#id=54",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
+            "name": "Kendo UI"
+          }
+        ]
+      },
+      "languages": [
+        "C#",
+        "JavaScript"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "Dashboard for internal statistical analysis. Not built for public consumption.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "eric.lovett@dot.gov",
+        "name": "Eric Lovett",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "41487"
+      }
+    },
+    {
+      "name": "FRA POAM Tracker",
+      "organization": "FRA",
+      "description": "FRA active system tracking",
+      "repositoryURL": "https://ce.dot.gov/bic/fra/viewer.aspx#id=61",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
+            "name": "Kendo UI"
+          }
+        ]
+      },
+      "languages": [
+        "C#",
+        "JavaScript"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "Tracker for internal project or action tracking. Not built for public consumption.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "eric.lovett@dot.gov",
+        "name": "Eric Lovett",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "41487"
+      }
+    },
+    {
+      "name": "FRA Training Tracker",
+      "organization": "FRA",
+      "description": "FRA Security Training Tracking",
+      "repositoryURL": "https://ce.dot.gov/bic/fra/viewer.aspx#id=64",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
+            "name": "Kendo UI"
+          }
+        ]
+      },
+      "languages": [
+        "C#",
+        "JavaScript"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "Tracker for internal project or action tracking. Not built for public consumption.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "eric.lovett@dot.gov",
+        "name": "Eric Lovett",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "41334"
+      }
+    },
+    {
+      "name": "Rail Crossing Locator",
+      "organization": "FRA",
+      "description": "A mobile app for rail crossing lookup",
+      "repositoryURL": "https://www.fra.dot.gov/Page/P0845",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
+            "name": "Kendo UI"
+          }
+        ]
+      },
+      "languages": [
+        "Objective-C",
+        "Android"
+      ],
+      "usageType": "exemptByAgencySystem",
+      "exemptiontext": "Mobile application code uses proprietary resources. Not developed for public consumption",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "eric.lovett@dot.gov",
+        "name": "Eric Lovett",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "42522"
+      }
+    },
+    {
+      "name": "FRA Hoteling",
+      "organization": "FRA",
+      "description": "the purpose of the FRA hoteling space application is to identify available temporary seating while at the Headquarters Building",
+      "repositoryURL": "http://apps.fra.dot.gov/app/Hoteling/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
+            "name": "Kendo UI"
+          }
+        ]
+      },
+      "languages": [
+        "C#",
+        "JavaScript"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "Developed for internal use only.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "eric.lovett@dot.gov",
+        "name": "Eric Lovett",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "41730"
+      }
+    },
+    {
+      "name": "FRA Vacancy Tracker",
+      "organization": "FRA",
+      "description": "HR tracker dashboard to track the status of FRA positions",
+      "repositoryURL": "https://apps.fra.dot.gov/app/vacancies",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
+            "name": "Kendo UI"
+          }
+        ]
+      },
+      "languages": [
+        "C#",
+        "JavaScript"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "Application contains data proprietary to FRA",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "eric.lovett@dot.gov",
+        "name": "Eric Lovett",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "42461"
+      }
+    },
+    {
+      "name": "FRA FAST Act Deliverable Dashboard",
+      "organization": "FRA",
+      "description": "FRA FAST Act Deliverable Dashboard",
+      "repositoryURL": "https://apps.fra.dot.gov/app/FAST",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
+            "name": "Kendo UI"
+          }
+        ]
+      },
+      "languages": [
+        "C#",
+        "JavaScript"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "Application not intended for public consumption.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "eric.lovett@dot.gov",
+        "name": "Eric Lovett",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "42430"
+      }
+    },
+    {
+      "name": "NTSB Dashboard",
+      "organization": "FRA",
+      "description": "NTSB Recommendation tracker Dashboard",
+      "repositoryURL": "http://ce.dot.gov/App/FRA/NTSB",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
+            "name": "Kendo UI"
+          }
+        ]
+      },
+      "languages": [
+        "C#",
+        "JavaScript"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "Application designed for reporting on FRA specific actions",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "eric.lovett@dot.gov",
+        "name": "Eric Lovett",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "42430"
+      }
+    },
+    {
+      "name": "ATS Dashboard",
+      "organization": "FRA",
+      "description": "FRA Audit Tracking System dashboard",
+      "repositoryURL": "http://ce.dot.gov/App/FRA/ATS",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
+            "name": "Kendo UI"
+          }
+        ]
+      },
+      "languages": [
+        "C#",
+        "JavaScript"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "Application in final phases of development. Highly specific to FRA mission",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "eric.lovett@dot.gov",
+        "name": "Eric Lovett",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "42248"
+      }
+    },
+    {
+      "name": "FRAAAB Dashboard",
+      "organization": "FRA",
+      "description": "Accident Analysis Branch Backlog Dashboard",
+      "repositoryURL": "http://apps.fra.dot.gov/app/FRAAAB",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
+            "name": "Kendo UI"
+          }
+        ]
+      },
+      "languages": [
+        "C#",
+        "JavaScript"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "Application designed for reporting on FRA specific actions",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "eric.lovett@dot.gov",
+        "name": "Eric Lovett",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "42644"
+      }
+    },
+    {
+      "name": "FRA Org chart",
+      "organization": "FRA",
+      "description": "FRA Org chart",
+      "repositoryURL": "http://apps.fra.dot.gov/orgchart",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
+            "name": "Kendo UI"
+          }
+        ]
+      },
+      "languages": [
+        "C#",
+        "JavaScript"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "Application code specific to FRA organizational structure. Relies on commercial framework.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "eric.lovett@dot.gov",
+        "name": "Eric Lovett",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "42583"
+      }
+    },
+    {
+      "name": "RLS -LERB  Dashboard",
+      "organization": "FRA",
+      "description": "Dashboard to display current metrics and trend analysis for  LERB/OCRB CASES",
+      "repositoryURL": "https://ce.dot.gov/bic/fra/viewer.aspx#id=16",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
+            "name": "Kendo UI"
+          }
+        ]
+      },
+      "languages": [
+        "C#",
+        "JavaScript"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "Application designed for reporting on FRA specific legal actions",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "eric.lovett@dot.gov",
+        "name": "Eric Lovett",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "42005"
+      }
+    },
+    {
+      "name": "State Laws",
+      "organization": "FRA",
+      "description": "State laws and regulations affecting highway - rail grade crossings",
+      "repositoryURL": "http://www.fra.dot.gov/statelaws",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
+            "name": "Kendo UI"
+          }
+        ]
+      },
+      "languages": [
+        "Javascript"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "Application specific to FRA resources and personnel",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "eric.lovett@dot.gov",
+        "name": "Eric Lovett",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "42005"
+      }
+    },
+    {
+      "name": "Laws & Regs",
+      "organization": "FRA",
+      "description": "A hybrid mobile app for state laws and regulations",
+      "repositoryURL": "https://itunes.apple.com/us/app/laws-regs/id868138071?mt=8",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Open Source"
+          }
+        ]
+      },
+      "languages": [
+        "Javascript",
+        "HTML5"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "Application specific to FRA resources and personnel",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "eric.lovett@dot.gov",
+        "name": "Eric Lovett",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "41730"
+      }
+    },
+    {
+      "name": "HOS",
+      "organization": "FRA",
+      "description": "Hours of service app",
+      "repositoryURL": "http://frahqewas006vg:8080/tfs/DefaultCollection/_git/HoursOfService ",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Open Source"
+          }
+        ]
+      },
+      "languages": [
+        "Objective-C",
+        "Android"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "Application specific to FRA regulation, resources and personnel",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "eric.lovett@dot.gov",
+        "name": "Eric Lovett",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "41334"
+      }
+    },
+    {
+      "name": "EARS",
+      "organization": "PHMSA",
+      "description": "Employee Accountability Reporting System EARS.  EARS allows PHMSA employees to report their current duty location.  This will help supervisors account for employee whereabouts in emergency as well as non emergency situations.",
+      "repositoryURL": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Oracle MySQL"
+          }
+        ]
+      },
+      "languages": [
+        "Visual Basic"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "mai.ho@dot.gov",
+        "name": "Mai Ho",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "42979"
+      }
+    },
+    {
+      "name": "EARS Mobile App",
+      "organization": "PHMSA",
+      "description": "Employee Accountability Reporting System EARS.  EARS allows PHMSA employees to report their current duty location.  This will help supervisors account for employee whereabouts in emergency as well as non emergency situations.",
+      "repositoryURL": "https://phmsa-apps.phmsa.dot.gov/m/ears_cal/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Oracle MySQL"
+          }
+        ]
+      },
+      "languages": [
+        "Objective C",
+        "SQLite database",
+        ".NET",
+        "Oracle database"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "mai.ho@dot.gov",
+        "name": "Mai Ho",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "38353"
+      }
+    },
+    {
+      "name": "HIP",
+      "organization": "PHMSA",
+      "description": "Hazmat Information System (HIP).  HIP is a data warehouse for hazardous incidents for PHMSA.",
+      "repositoryURL": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Oracle MySQL"
+          }
+        ]
+      },
+      "languages": [
+        "Oracle Business Intelligence",
+        "Oracle 11G database"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "mai.ho@dot.gov",
+        "name": "Mai Ho",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "38534"
+      }
+    },
+    {
+      "name": "Online CFR",
+      "organization": "PHMSA",
+      "description": "Online Code of Federal Regulation Manual ",
+      "repositoryURL": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Oracle MySQL"
+          }
+        ]
+      },
+      "languages": [
+        "Java",
+        "Oracle Database"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "mai.ho@dot.gov",
+        "name": "Mai Ho",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      }
+    },
+    {
+      "name": "Special Permits",
+      "organization": "PHMSA",
+      "description": "A PHMSA Portal transactional system used to submit, process and manage hazmat special permit requests.   Requests for new, renewal and modification of special permits can be submitted by the public via the PHMSA Portal and are processed by internal staff.",
+      "repositoryURL": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Oracle MySQL"
+          }
+        ]
+      },
+      "languages": [
+        "Oracle Middleware",
+        "Oracle 11G database",
+        "ADF Java"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "mai.ho@dot.gov",
+        "name": "Mai Ho",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      }
+    },
+    {
+      "name": "Hazmat Registration",
+      "organization": "PHMSA",
+      "description": "A PHMSA Portal system used to submit and process hazmat Registration requests.  Requests for initial, renewal and amendments of hazmat Registration can be submitted by the public via the PHMSA Portal  and are processed by internal staff.",
+      "repositoryURL": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Oracle MySQL"
+          }
+        ]
+      },
+      "languages": [
+        "Oracle Middleware",
+        "Oracle 11G database",
+        "ADF Java"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "mai.ho@dot.gov",
+        "name": "Mai Ho",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      }
+    },
+    {
+      "name": "PDM",
+      "organization": "PHMSA",
+      "description": "Pipeline Data Mart PDM is a data warehouse for Pipeline side of PHMSA.",
+      "repositoryURL": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Oracle MySQL"
+          }
+        ]
+      },
+      "languages": [
+        "OBIE"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "mai.ho@dot.gov",
+        "name": "Mai Ho",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      }
+    },
+    {
+      "name": "SMART",
+      "organization": "PHMSA",
+      "description": "Safety Monitoring and Reporting Tool SMART",
+      "repositoryURL": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Oracle MySQL"
+          }
+        ]
+      },
+      "languages": [
+        "Java",
+        "Oracle 11G database"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "mai.ho@dot.gov",
+        "name": "Mai Ho",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      }
+    },
+    {
+      "name": "FIM",
+      "organization": "PHMSA",
+      "description": "Failure Investigation Module FIM allows pipeline investigator to record and track their Telephonic Investigation of pipeline incidents and accidents.",
+      "repositoryURL": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Oracle MySQL"
+          }
+        ]
+      },
+      "languages": [
+        "Oracle Middleware",
+        "Oracle 11G database",
+        "ADF Java"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "mai.ho@dot.gov",
+        "name": "Mai Ho",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      }
+    },
+    {
+      "name": "PHMSA Portal",
+      "organization": "PHMSA",
+      "description": "A centralized portal for all of PHMSA IT systems",
+      "repositoryURL": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Oracle MySQL"
+          }
+        ]
+      },
+      "languages": [
+        "Oracle Middleware",
+        "Oracle 11G database",
+        "ADF Java"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "mai.ho@dot.gov",
+        "name": "Mai Ho",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      }
+    },
+    {
+      "name": "FedStar",
+      "organization": "PHMSA",
+      "description": "Federal-State Tracking and Reporting FedStar.  The purpose of the system is to automate the PHMSA Office of Pipeline Safety PHP State Program federal and state information exchange. FedSTAR provides grant management and back-office program management capabilities, in addition to providing tools for the State Program federal and state partners to use in conducting the pipeline safety program.  ",
+      "repositoryURL": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "null"
+          }
+        ]
+      },
+      "languages": [
+        "Microsoft ASP",
+        ".NET web services",
+        "SQL 2005 database"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "mai.ho@dot.gov",
+        "name": "Mai Ho",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      }
+    },
+    {
+      "name": "Bank of America Import",
+      "organization": "PHMSA",
+      "description": "Used to verify Hazmat Registration payments made by check.  This function is not currently being used.",
+      "repositoryURL": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Oracle MySQL"
+          }
+        ]
+      },
+      "languages": [
+        "Oracle Middleware",
+        "Oracle 11G database",
+        "ADF Java"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "mai.ho@dot.gov",
+        "name": "Mai Ho",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      }
+    },
+    {
+      "name": "HMIS",
+      "organization": "PHMSA",
+      "description": "A legacy application that consists of multiple modules  used for receiving and managing requests for publication, RAM certification requests, hazmat incidents reports and hazmat registrations.  This application is accessible to DOT employees via single sign on in the PHMSA Portal",
+      "repositoryURL": "https://portal.phmsa.dot.gov/PHMSAPortal2/ ",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Oracle MySQL"
+          }
+        ]
+      },
+      "languages": [
+        ".Net",
+        "Oracle database",
+        "emPower for workflow"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "mai.ho@dot.gov",
+        "name": "Mai Ho",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      }
+    },
+    {
+      "name": "DOT Approvals",
+      "organization": "PHMSA",
+      "description": "A legacy application used to process requests for Hazmat Approvals such as explosives, fireworks and competent authority.  This application is accessible to DOT employees via single sign on in the PHMSA Portal",
+      "repositoryURL": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Oracle MySQL"
+          }
+        ]
+      },
+      "languages": [
+        ".Net",
+        "Oracle database",
+        "emPower for workflow"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "mai.ho@dot.gov",
+        "name": "Mai Ho",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      }
+    },
+    {
+      "name": "Annual Reports",
+      "organization": "PHMSA",
+      "description": "Allows pipeline operators to file annual reports.",
+      "repositoryURL": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Oracle MySQL"
+          }
+        ]
+      },
+      "languages": [
+        "Oracle Middleware",
+        "Oracle 11G database",
+        "ADF Java"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "mai.ho@dot.gov",
+        "name": "Mai Ho",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      }
+    },
+    {
+      "name": "OMS",
+      "organization": "PHMSA",
+      "description": "Operator Management System OMS manages pipeline operator information.",
+      "repositoryURL": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Oracle MySQL"
+          }
+        ]
+      },
+      "languages": [
+        "Oracle Middleware",
+        "Oracle 11G database",
+        "ADF Java"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "mai.ho@dot.gov",
+        "name": "Mai Ho",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      }
+    },
+    {
+      "name": "NPMS",
+      "organization": "PHMSA",
+      "description": "National Pipeline Mapping System NPMS",
+      "repositoryURL": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Oracle MySQL"
+          }
+        ]
+      },
+      "languages": [
+        "ArcGIS",
+        "Oracle database"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "mai.ho@dot.gov",
+        "name": "Mai Ho",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      }
+    },
+    {
+      "name": "PAM",
+      "organization": "PHMSA",
+      "description": "Pipeline Asset Management PAM manages pipeline asset information.",
+      "repositoryURL": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Oracle MySQL"
+          }
+        ]
+      },
+      "languages": [
+        "ArcGIS",
+        "Oracle database"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "mai.ho@dot.gov",
+        "name": "Mai Ho",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      }
+    },
+    {
+      "name": "ODES",
+      "organization": "PHMSA",
+      "description": "ODES allows pipeline operators to submit pipeline incident and accident reports and allows field offices to review the reports.",
+      "repositoryURL": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Oracle MySQL"
+          }
+        ]
+      },
+      "languages": [
+        "Java",
+        "Spring DAO",
+        "Oracle 11G database"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "mai.ho@dot.gov",
+        "name": "Mai Ho",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      }
+    },
+    {
+      "name": "Registration Management",
+      "organization": "PHMSA",
+      "description": "Used to manage Hazmat Registration requests.  This function is not currently used.",
+      "repositoryURL": "https://portal.phmsa.dot.gov/PHMSAPortal2/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Oracle MySQL"
+          }
+        ]
+      },
+      "languages": [
+        "Oracle Middleware",
+        "Oracle 11G database",
+        "ADF Java"
+      ],
+      "usageType": "exemptByAgencyMission",
+      "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "mai.ho@dot.gov",
+        "name": "Mai Ho",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      }
+    },
+    {
+      "name": "Geolocator",
+      "organization": "NHTSA",
+      "description": "This application integrates Microsoft Bing Maps and is used to pin point the location of the crash and collect the Lat/long of the crash location",
+      "repositoryURL": "https://Geolocator.cdan.dot.gov",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "null"
+          }
+        ]
+      },
+      "languages": [
+        ".Net",
+        "Csharp"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "wamique.futuri@dot.gov",
+        "name": "Wamique Futuri",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      }
+    },
+    {
+      "name": "VIN Decoder",
+      "organization": "NHTSA",
+      "description": "This is used to decode the Vehicle Identification Number VIN of a vehicle to produce the vehicle specifications",
+      "repositoryURL": "https://vin.cdan.dot.gov",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "null"
+          }
+        ]
+      },
+      "languages": [
+        ".Net",
+        "Csharp"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "wamique.futuri@dot.gov",
+        "name": "Wamique Futuri",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      }
+    },
+    {
+      "name": "PARSE",
+      "organization": "NHTSA",
+      "description": "Police Accident Report Sampling Engine PARSE is a web application Production within CDAN to collect, manage, store and make available to CDAN data acquisition projects, Police Accident Reports PAR data collected via electronic or physical methods for the purposes of selection within a appropriate NHTSA data collection program.",
+      "repositoryURL": "https://parse.cdan.dot.gov",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "null"
+          }
+        ]
+      },
+      "languages": [
+        "PHP",
+        "JavaScript",
+        "HTML5"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "wamique.futuri@dot.gov",
+        "name": "Wamique Futuri",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      }
+    },
+    {
+      "name": "CISSWeb",
+      "organization": "NHTSA",
+      "description": "Crash Investigation Sampling System CISS Web CISSWeb application consists of motor vehicle crash and injury data collected from Police Accident Reports PARS gathered through a network of remote field sites around the country operated and managed under contract by NHTSA.  CISSWeb is the application that consolidates all the data collected within the lifecycle of the case, regardless of the source. Specific PARs are selected for followup investigation via a sample algorithm designed to target towed late model vehicle, specific injuries and/or crashes of special interest to NHTSA. In addition to PAR and injury data, field Data Technicians collect data by inspecting and recording damage to case vehicles, inspecting and collecting data from crash scenes and enhancing vehicle and scene data with digital imagery. When possible, contractors conduct occupant interviews.  NHTSA uses the CISS data collected to evaluate the conditions present at the time of the crash, injuries resulting from crashes, vehicle crashworthiness, special types of crashes e.g., air bag deployment, and crashes of high public interest e.g., school bus crashes.",
+      "repositoryURL": "https://ciss.cdan.dot.gov",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "null"
+          }
+        ]
+      },
+      "languages": [
+        "Javascript",
+        "HTML5",
+        "Entity Framework",
+        ".Net"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "wamique.futuri@dot.gov",
+        "name": "Wamique Futuri",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      }
+    },
+    {
+      "name": "Toolbox",
+      "organization": "NHTSA",
+      "description": "The CDAN Toolbox is an external authenticate website that supports the CDAN system.  The Toolbox stores items required by the remote users such as coding manuals, hardware manuals, and the like.",
+      "repositoryURL": "https://toolbox.cdan.dot.gov",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "null"
+          }
+        ]
+      },
+      "languages": [
+        "Javascript",
+        "HTML5",
+        "Entity Framework",
+        ".Net"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "wamique.futuri@dot.gov",
+        "name": "Wamique Futuri",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "40909"
+      }
+    },
+    {
+      "name": "Helpdesk",
+      "organization": "NHTSA",
+      "description": "The CDAN Helpdesk is a ticketing solution that supports the CDAN system.",
+      "repositoryURL": "https://helpdesk.cdan.dot.gov",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "null"
+          }
+        ]
+      },
+      "languages": [
+        "Javascript",
+        "HTML5",
+        "Entity Framework",
+        ".Net"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "wamique.futuri@dot.gov",
+        "name": "Wamique Futuri",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "40909"
+      }
+    },
+    {
+      "name": "UPSA",
+      "organization": "NHTSA",
+      "description": "The UPSA is the tool that manages rights and privileges for users of the CDAN system.",
+      "repositoryURL": "https://upsa.cdan.dot.gov",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "null"
+          }
+        ]
+      },
+      "languages": [
+        "Javascript",
+        "HTML5",
+        "Entity Framework",
+        ".Net"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "wamique.futuri@dot.gov",
+        "name": "Wamique Futuri",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "42522"
+      }
+    },
+    {
+      "name": "Variable Repository",
+      "organization": "NHTSA",
+      "description": "The CDAN Variable Repository is the metadata repository that drives the CDAN applications tracks the usage of variables and their attributes as well as providing the data needed to run the CDAN applications.",
+      "repositoryURL": "https://vr.cdan.dot.gov",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "null"
+          }
+        ]
+      },
+      "languages": [
+        "Javascript",
+        "HTML5",
+        "Entity Framework",
+        ".Net"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "wamique.futuri@dot.gov",
+        "name": "Wamique Futuri",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "42522"
+      }
+    },
+    {
+      "name": "MDE",
+      "organization": "NHTSA",
+      "description": "This application is used to code FARS, CRSS and NTS data. ",
+      "repositoryURL": "https://mdecurrent.cdan.dot.gov",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "null"
+          }
+        ]
+      },
+      "languages": [
+        ".Net",
+        "Csharp"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "wamique.futuri@dot.gov",
+        "name": "Wamique Futuri",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "42370"
+      }
+    },
+    {
+      "name": "Intranet",
+      "organization": "NHTSA",
+      "description": "This application has a lot of customer reports which are used for quality and analysis of the coded data for FARS and  CRSS studies",
+      "repositoryURL": "https://gesintranet.cdan.dot.gov",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "null"
+          }
+        ]
+      },
+      "languages": [
+        ".Net",
+        "Csharp"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "wamique.futuri@dot.gov",
+        "name": "Wamique Futuri",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "42370"
+      }
+    },
+    {
+      "name": "Query Tool",
+      "organization": "NHTSA",
+      "description": "This application is used to query data collected in FARS and GES/CRSS studies",
+      "repositoryURL": "https://gesintranet.cdan.dot.gov/query",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "null"
+          }
+        ]
+      },
+      "languages": [
+        ".Net",
+        "Csharp"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "wamique.futuri@dot.gov",
+        "name": "Wamique Futuri",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      }
+    },
+    {
+      "name": "SSO",
+      "organization": "NHTSA",
+      "description": "This is the CDAN Single Sign on Application through which the users can get access to all of the CDAN applications",
+      "repositoryURL": "https://sso.cdan.dot.gov",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "null"
+          }
+        ]
+      },
+      "languages": [
+        ".Net",
+        "Csharp"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "wamique.futuri@dot.gov",
+        "name": "Wamique Futuri",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "42522"
+      }
+    },
+    {
+      "name": "EDT Manager",
+      "organization": "NHTSA",
+      "description": "Using this application, the users will be able to setup their review process for the coded data in FARS and CRSS",
+      "repositoryURL": "https://edtadmin.cdan.dot.gov",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "null"
+          }
+        ]
+      },
+      "languages": [
+        ".Net",
+        "Csharp"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "wamique.futuri@dot.gov",
+        "name": "Wamique Futuri",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "40909"
+      }
+    },
+    {
+      "name": "Case Viewer",
+      "organization": "NHTSA",
+      "description": "The data received through EDT from the States in their data structure and format can be viewed using this application",
+      "repositoryURL": "https://statecaseviewer.cdan.dot.gov",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "null"
+          }
+        ]
+      },
+      "languages": [
+        ".Net",
+        "Csharp"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "wamique.futuri@dot.gov",
+        "name": "Wamique Futuri",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      }
+    },
+    {
+      "name": "FastFARS",
+      "organization": "NHTSA",
+      "description": "This is an Early notification application through which Fatal crashes are immediately notified.",
+      "repositoryURL": "https://en.cdan.dot.gov",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "null"
+          }
+        ]
+      },
+      "languages": [
+        ".Net",
+        "Csharp"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "wamique.futuri@dot.gov",
+        "name": "Wamique Futuri",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      }
+    },
+    {
+      "name": "Report Builder",
+      "organization": "NHTSA",
+      "description": "This is an application built using Microsoft's SSRS through the users can build their own reports.",
+      "repositoryURL": "https://reports.cdan.dot.gov",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "null"
+          }
+        ]
+      },
+      "languages": [
+        ".Net",
+        "Csharp"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "wamique.futuri@dot.gov",
+        "name": "Wamique Futuri",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      }
+    },
+    {
+      "name": "Edit Checks",
+      "organization": "NHTSA",
+      "description": "Data completeness and integrity checks are written and executed on the data collects to ensure good quality of the data. ",
+      "repositoryURL": "https://editchecks.cdan.dot.gov",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "null"
+          }
+        ]
+      },
+      "languages": [
+        ".Net",
+        "Csharp",
+        "Angular JS"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "wamique.futuri@dot.gov",
+        "name": "Wamique Futuri",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      }
+    },
+    {
+      "name": "iREx",
+      "organization": "NHTSA",
+      "description": "iREx integrated Risk Executive is a NHTSAdeveloped  automated Risk Management system for its IT investments. It is compliant to federal regulations implements NIST SP 80037 Risk Management Framework guidance and processes to ensure that Riskbased decision making is a tangible feature of the NHTSA risk management processes. It is collaboratively used by NHTSA's PMO, EA, CPIC and cybersecurity components in riskbased decisioning. iREx ensures that risk mitigation is linked to identifiable combinations of security issues that are recorded and managed in order to address and measure each relevant risk and vulnerability.  iREx is a webbased application with a SQLbased database backend.  It has capabilities to generate Assessment and Analysis reports used to support DOT/NHTSA Risk Posture, and C&A of its IT systems.",
+      "repositoryURL": "https://irex.nhtsa.gov",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "null"
+          }
+        ]
+      },
+      "languages": [
+        ".Net"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "wamique.futuri@dot.gov",
+        "name": "Wamique Futuri",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "42370"
+      }
+    },
+    {
+      "name": "NAF",
+      "organization": "NHTSA",
+      "description": "NAF NHTSA Asset Framework is the NHTSAdeveloped system that serves as its IT Asset metadata management, analysis and reporting platform. This  includes  IT hardware, software assets information in the following contexts: technical specifications, licensing information, SLA management, capital planning, acquisition, and enterprise architecture TRM.",
+      "repositoryURL": "https://naf.nhtsa.gov",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "null"
+          }
+        ]
+      },
+      "languages": [
+        ".Net"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "wamique.futuri@dot.gov",
+        "name": "Wamique Futuri",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "40909"
+      }
+    },
+    {
+      "name": "MR Tool (SDAG)",
+      "organization": "NHTSA",
+      "description": "MR Tool Service Data Architecture Group Metadata Repository is the NHTSAdeveloped DOT standard system that supports  DOT's continuing implementation of OMB M1313 through DOT Order 1351.34 for DOT OA data and information to be disclosed rapidly in forms that the public can readily find and use.  As such, it is tailored as an analysis and reporting system holding metadata  describing DOT OA datasets, and is designed to conform to the latest federal Open Data metadata schema https://projectopendata.cio.gov/v1.1/schema/. ",
+      "repositoryURL": "http://data.nhtsa.gov",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "null"
+          }
+        ]
+      },
+      "languages": [
+        ".Net"
+      ],
+      "usageType": "governmentWideReuse",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "wamique.futuri@dot.gov",
+        "name": "Wamique Futuri",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      }
+    },
+    {
+      "name": "TravelOnTrack",
+      "organization": "NHTSA",
+      "description": "TravelOnTrack is used to track allocated agency travel budgets by office and fiscal year. It manages and tracks submitted travel proposals, plans and completed travel information, including associated budget and overage data. It enables transfer of unused funds in an office as necessary. TravelOnTrack generates summary reports on available funds and usage of approved/proposed travels and other travelrelated reports.  ",
+      "repositoryURL": "http://travelontrack.nhtsa.gov",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "null"
+          }
+        ]
+      },
+      "languages": [
+        ".Net"
+      ],
+      "usageType": "governmentWideReuse",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "wamique.futuri@dot.gov",
+        "name": "Wamique Futuri",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "42370"
+      }
+    },
+    {
+      "name": "SISAME/discontinued",
+      "organization": "NHTSA",
+      "description": "NHTSA funded the development of the SISAME program starting in the late 1980�s until the mid 2000�s.  This program provides a very unique capability for mass/spring multibody model extraction from test data.   NHTSA has discontinued support or development for the SISAME program",
+      "repositoryURL": "http://www.nhtsa.gov/Research/SISAME-Software-&-Documentation-Downloads",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "null"
+          }
+        ]
+      },
+      "languages": [
+        ".Net"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "wamique.futuri@dot.gov",
+        "name": "Wamique Futuri",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "38534"
+      }
+    },
+    {
+      "name": "vPIC-List",
+      "organization": "NHTSA",
+      "description": "The NHTSA Product Information Catalog and Vehicle Listing vPIC is a consolidated platform that presents data collected within the manufacturer reported data from CFR 49 Parts 551 � 574 for use in a variety of modern tools. NHTSA�s vPIC platform is intended to serve as a centralized source for basic Vehicle Identification Number VIN decoding, Manufacturer Information Database MID, Manufacturer Equipment Plant Identification and associated data.  vPIC is primarily intended for use on Model Years 1995 forward. Data prior to 1995 may be available depending on the manufacturer, which is based on submittals received by NHTSA. This includes passenger vehicles, trucks, buses, trailers / trailer kits, incomplete vehicles, low speed vehicles and motorcycles to name a few as the primary categories. Vehicles within these major categories are further defined by the details provided by the manufacturers in accordance to reporting standards of CFR 49 Part 565 and 566.",
+      "repositoryURL": "https://vpic.nhtsa.dot.gov/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "null"
+          }
+        ]
+      },
+      "languages": [
+        "MVC",
+        ".Net",
+        "Csharp"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "wamique.futuri@dot.gov",
+        "name": "Wamique Futuri",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "39934"
+      }
+    },
+    {
+      "name": "Encyclopedia",
+      "organization": "NHTSA",
+      "description": "This is the public website through which FARS traffic safety facts as well as query capability is made available",
+      "repositoryURL": "https://www-fars.nhtsa.dot.gov/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "null"
+          }
+        ]
+      },
+      "languages": [
+        ".Net",
+        "Csharp"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "wamique.futuri@dot.gov",
+        "name": "Wamique Futuri",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "40057"
+      }
+    },
+    {
+      "name": "CISSForm",
+      "organization": "NHTSA",
+      "description": "CISSForm is the CDAN implementation of the commercial software developed by MiCo.  This application is used to perform offline data collection for vehicles involved in motor vehicle crashes within the CISS system.",
+      "repositoryURL": "https://forms.cdan.dot.gov/mfs",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "null"
+          }
+        ]
+      },
+      "languages": [
+        ".Net",
+        "Csharp"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "wamique.futuri@dot.gov",
+        "name": "Wamique Futuri",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "40087"
+      }
+    },
+    {
+      "name": "Privacy Protection Application",
+      "organization": "FHWA",
+      "description": "",
+      "repositoryURL": "https://github.com/usdot-its-jpo-data-portal/privacy-protection-application",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/usdot-its-jpo-data-portal/privacy-protection-application/LICENSE",
+            "name": "Apache 2.0"
+          }
+        ]
+      },
+      "languages": [
+        "C++",
+        "Javascript",
+        "HTML"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "james.lieu@dot.gov",
+        "name": "James Lieu",
+        "URL": "https://www.its.dot.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "32509"
+      }
+    },
+    {
+      "name": "Privacy Protection Module",
+      "organization": "FHWA",
+      "description": "",
+      "repositoryURL": "https://github.com/usdot-jpo-ode/jpo-cvdp",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/usdot-jpo-ode/jpo-cvdp/LICENSE",
+            "name": "Apache 2.0"
+          }
+        ]
+      },
+      "languages": [
+        "C++",
+        "Javascript",
+        "HTML"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "james.lieu@dot.gov",
+        "name": "James Lieu",
+        "URL": "https://www.its.dot.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "38473"
+      }
+    },
+    {
+      "name": "Intelligent Transportation Systems Public Data Hub",
+      "organization": "FHWA",
+      "description": "The ITS Public Data Hub (available at www.its.dot.gov/data) provides a single point of entry to discover publicly available USDOT ITS research data. By providing access to these data, the USDOT aims to enable third-party research into the effectiveness of emerging ITS technologies, preliminary development of third-party applications, and harmonization of data across similar collections. ",
+      "repositoryURL": "https://github.com/usdot-its-jpo-data-portal/microsite/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/usdot-its-jpo-data-portal/microsite/blob/master/LICENSE.txt",
+            "name": "Apache 2.0"
+          }
+        ]
+      },
+      "languages": [
+        "Javascript"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "james.lieu@dot.gov",
+        "name": "James Lieu",
+        "URL": "https://www.its.dot.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "40909"
+      }
+    },
+    {
+      "name": "Intelligent Transportation Systems Operational Data Environment (ITS ODE)",
+      "organization": "FHWA",
+      "description": "The ITS ODE is a real-time virtual data router that ingests and processes operational data from various connected devices � including vehicles, infrastructure, and traffic management centers � and distributes it to other devices and subscribing transportation management applications. Using the ITS ODE within intelligent transportation deployments increases data fluidity and interoperability while meeting operational needs and protecting user privacy. The software�s microservices architecture makes it easy to add new capabilities to meet local needs.",
+      "repositoryURL": "https://github.com/usdot-jpo-ode/jpo-ode",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/usdot-jpo-ode/jpo-ode/blob/develop/LICENSE",
+            "name": "Apache 2.0"
+          }
+        ]
+      },
+      "languages": [
+        "Java",
+        "C/C++",
+        "Python",
+        "Kafka",
+        "Docker"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "james.lieu@dot.gov",
+        "name": "James Lieu",
+        "URL": "https://www.its.dot.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "42370"
+      }
+    },
+    {
+      "name": "Crypto Service",
+      "organization": "FHWA",
+      "description": "A web service and windows app that encrypts and decrypts strings",
+      "repositoryURL": "null",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Oracle"
+          }
+        ]
+      },
+      "languages": [
+        ".Net",
+        "Csharp"
+      ],
+      "usageType": "governmentWideReuse",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "james.lieu@dot.gov",
+        "name": "James Lieu",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "43135"
+      }
+    },
+    {
+      "name": "eNEPA",
+      "organization": "FHWA",
+      "description": "Electronic NEPA collaboration support tool",
+      "repositoryURL": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "SQL Server"
+          }
+        ]
+      },
+      "languages": [
+        ".Net",
+        "Csharp"
+      ],
+      "usageType": "governmentWideReuse",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "james.lieu@dot.gov",
+        "name": "James Lieu",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "42841"
+      }
+    },
+    {
+      "name": "FOIA",
+      "organization": "FHWA",
+      "description": "Freedom Of Information Act System manages initial FOIA requests and appeals submitted by the general public.",
+      "repositoryURL": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "SQL Server"
+          }
+        ]
+      },
+      "languages": [
+        "C#",
+        "JavaScript"
+      ],
+      "usageType": "governmentWideReuse",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "james.lieu@dot.gov",
+        "name": "James Lieu",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "43223"
+      }
+    },
+    {
+      "name": "TFICS",
+      "organization": "FHWA",
+      "description": "Transportation Fellows Interns and Contractor System provides interfaces for the individuals and for the educational institutions who are interested to apply for the scholarship and granting programs offering through DOT Office of HR.",
+      "repositoryURL": "https://fhwaapps.fhwa.dot.gov/upacsp/tm?transName=MenuSystem&action=buildHTML",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "SQL Server"
+          }
+        ]
+      },
+      "languages": [
+        "C#",
+        "JavaScript"
+      ],
+      "usageType": "governmentWideReuse",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "james.lieu@dot.gov",
+        "name": "James Lieu",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "2015-26-2"
+      }
+    },
+    {
+      "name": "SFD",
+      "organization": "FMSCA",
+      "description": "The SFD rulemaking is designed to enhance FMCSA�s ability to identify non-compliant motor carriers by using all available agency data",
+      "repositoryURL": "null",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "null"
+          }
+        ]
+      },
+      "languages": [
+        "Java"
+      ],
+      "usageType": "governmentWideReuse",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "richard.kim@dot.gov",
+        "name": "Richard Kim",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "37803"
+      }
+    },
+    {
+      "name": "D&ADB",
+      "organization": "FMSCA",
+      "description": "Drug and Alcohol Clearinghouse Database will be used to store and transfer information about drug and alcohol program violations and Alpha results",
+      "repositoryURL": "null",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "null"
+          }
+        ]
+      },
+      "languages": [
+        "Java"
+      ],
+      "usageType": "governmentWideReuse",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "richard.kim@dot.gov",
+        "name": "Richard Kim",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "41699"
+      }
+    },
+    {
+      "name": "ELD",
+      "organization": "FMSCA",
+      "description": "Enforcement tool to read and analyze Hours of Service data read from Electronic Logging Devices",
+      "repositoryURL": "null",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Oracle, MS .Net Framework"
+          }
+        ]
+      },
+      "languages": [
+        "Java"
+      ],
+      "usageType": "governmentWideReuse",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "richard.kim@dot.gov",
+        "name": "Richard Kim",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "37469"
+      }
+    },
+    {
+      "name": "Aviation Environmental Design Tool",
+      "organization": "VOLPE",
+      "description": "AEDT is a software system that models aircraft performance in space and time to estimate fuel consumption, emissions, noise, and air quality consequences. ",
+      "repositoryURL": "http://aedt.visualstudio.com",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Null"
+          }
+        ]
+      },
+      "languages": [
+        "C#",
+        "Python"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "maurice.desruisseau@dot.gov",
+        "name": "Maurice Desruisseau",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "42064"
+      }
+    },
+    {
+      "name": "SafetyHAT",
+      "organization": "VOLPE",
+      "description": "Database tool that facilitates implementing the System Theoretic Process Analysis (STPA) method.",
+      "repositoryURL": "https://www.volpe.dot.gov/infrastructure-systems-and-technology/advanced-vehicle-technology/safetyhat-transportation-system",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "Null"
+          }
+        ]
+      },
+      "languages": [
+        "Visual Basic for Applications"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "maurice.desruisseau@dot.gov",
+        "name": "Maurice Desruisseau",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "43435"
+      }
+    },
+    {
+      "name": "UASRS",
+      "organization": "FAA",
+      "description": "Unmanned Aircraft Systems Registration Service (UASRS) is used by the Federal Aviation Administration (FAA) to provide small Unmanned Aircraft System (sUAS) operators/owners a service to register all sUAS for the purpose of Production sUAS in U.S. air space. sUAS are defined as those aircraft that weigh more than 0.55 pounds but less than 55 pounds. This service educates new operators about airspace rules so they can use their unmanned aircraft safely. As part of the registration process, registrants acknowledge that they have read, understand, and intend to follow the safety guidance. The service allows the FAA to identify and take enforcement action against those who intentionally violate the rules or operate unsafely.",
+      "repositoryURL": "null",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "null"
+          }
+        ]
+      },
+      "languages": [
+        "AWS Cloudfront",
+        "AWS MySQL"
+      ],
+      "usageType": "exemptByCIO",
+      "exemptiontext": "This code was not developed with the expectation that it would be released as Open Source. Preliminary review has identified operational procedures which if made public may expose FAA systems to cyber security attacks. Further review is required to fully analyze and mitigate any security issues which may result from making the code public. This review cannot be completed in the time remaining for the current release schedule.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "jonathan.beams@dot.gov",
+        "name": "Jonathan Beams",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "43435"
+      }
+    },
+    {
+      "name": "B4UFly",
+      "organization": "FAA",
+      "description": "B4UFLY is a UAS Mobile Application that enables a small UAS or model aircraft operator the ability to check their current location for conformance with FAA published guidelines prior to flight operations.  This will assist model aircraft users to conform to Public Law 112-95, Section 336: Special Rule for Model Aircraft (FMRA) which outlines what a model aircraft is and how it can be legally operated within the national airspace.",
+      "repositoryURL": "null",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "null"
+          }
+        ]
+      },
+      "languages": [
+        "C#"
+      ],
+      "usageType": "exemptByCIO",
+      "exemptiontext": "This code was not developed with the expectation that it would be released as Open Source. Preliminary review has identified operational procedures which if made public may expose FAA systems to cyber security attacks. Further review is required to fully analyze and mitigate any security issues which may result from making the code public. This review cannot be completed in the time remaining for the current release schedule.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "jonathan.beams@dot.gov",
+        "name": "Jonathan Beams",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "43435"
+      }
+    },
+    {
+      "name": "APRA",
+      "organization": "FAA",
+      "description": "Aeronautic Product Release API (APRA) provides the private sector greater access to core FAA data to spur more innovation in the aviation industry, and ultimately advance the FAA�s mission of safety in flight.  Based on stakeholder recommendations, this initiative�s first effort strived to provide both more data and better data for Aeronautical products and information. Solution Delivery developed and deployed web services for several aeronautical products including both information about those products and the ability to automatically download those products which satisfied one of the recommendations.",
+      "repositoryURL": "https://github.com/Federal-Aviation-Administration/APRA.git",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+            "name": "CC0"
+          }
+        ]
+      },
+      "languages": [
+        "Java",
+        "XML",
+        "JSON"
+      ],
+      "usageType": "openSource",
+      "exemptiontext": "null",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "jonathan.beams@dot.gov",
+        "name": "Jonathan Beams",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "41640"
+      }
+    },
+    {
+      "name": "EDCS",
+      "organization": "FAA",
+      "description": "Enterprise Data Control Service - A set of common infrastructure services. Web based common access point.  Fully documented data history enabling trust .  Access control is documented and enforced - Enabled data resources have REST APIs that comply with documentation and dissemination control",
+      "repositoryURL": "null",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "",
+            "name": "null"
+          }
+        ]
+      },
+      "languages": [
+        "ColdFusion",
+        "Java",
+        "MongoDB",
+        "Oracle"
+      ],
+      "usageType": "exemptByCIO",
+      "exemptiontext": "This code was not developed with the expectation that it would be released as Open Source. Preliminary review has identified operational procedures which if made public may expose FAA systems to cyber security attacks. Further review is required to fully analyze and mitigate any security issues which may result from making the code public. This review cannot be completed in the time remaining for the current release schedule.",
+      "tags": [
+        "transportation",
+        "code"
+      ],
+      "laborHours": 0,
+      "contact": {
+        "email": "jonathan.beams@dot.gov",
+        "name": "Jonathan Beams",
+        "URL": "https://www.transportation.gov/",
+        "phone": "2023663000"
+      },
+      "date": {
+        "created": "41721"
+      }
     }
   ]
 }

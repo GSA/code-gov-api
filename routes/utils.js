@@ -3,7 +3,6 @@ const fs = require('fs');
 const git = require("git-rev");
 const pkg = require("../package.json");
 const Jsonfile = require("jsonfile");
-const marked = require('marked');
 const Utils = require('../utils');
 const repoMapping = require('../indexes/repo/mapping_200.json');
 
@@ -285,11 +284,22 @@ function getFetchedReposByAgency(agency, config) {
     .then(fetchedData => fetchedData);
 }
 
-function getRootMessage(response) {
-  response.render('index', {
-    filters: [marked],
-    title: "Code.gov API",
-    message: "Welcome to our API. Take a look at our Swagger docs https://api.code.gov/docs."
+function getRootMessage() {
+  return getVersion().then(version => {
+    return {
+      title: 'Code.gov API',
+      api_version: version,
+      swagger_docs_url: 'https://api.code.gov/docs',
+      end_points: [
+        '/repos',
+        '/repos.json',
+        '/status.json',
+        '/terms',
+        '/agencies',
+        '/languages',
+        '/version'
+      ]
+    };
   });
 }
 

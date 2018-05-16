@@ -28,6 +28,8 @@ jobs:
     working_directory: ~/code-gov-api
     docker:
       - image: circleci/node:8.9.3-stretch
+    environment:
+      NODE_ENV: "testing"
     steps:
       - checkout
       - run:
@@ -67,6 +69,8 @@ jobs:
     docker:
       - image: circleci/node:8.9.3-stretch
       - image: elasticsearch:2.4
+    environment:
+      NODE_ENV: "testing"
     steps:
       - checkout
       - run:
@@ -193,7 +197,8 @@ workflows:
             - integration
           filters:
             tags:
-              only: /^v(\d+\.){2}\d+/
+              only: /^v.+/
+              ignore: /.+-rc/
             branches:
               ignore: /.*/
       - deploy-production:
@@ -201,6 +206,7 @@ workflows:
             - deploy-prod-hold
           filters:
             tags:
-              only: /^v(\d+\.){2}\d+/
+              only: /^v.+/
+              ignore: /.+-rc/
             branches:
               ignore: /.*/
