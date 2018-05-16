@@ -1,9 +1,13 @@
 {
   "version": "2.0.0",
-  "agency": "",
+  "agency": "HHS",
+  "measurementType": {
+    "method": "projects"
+  },
   "releases": [
     {
       "name": "ckanext-datajson",
+      "version": "0.1",
       "organization": "Department of Health and Human Services",
       "description": "Custom CKAN extension for HealthData.gov",
       "tags": [
@@ -12,47 +16,44 @@
         "open data"
       ],
       "contact": {
-        "email": "ServiceDesk.OCIO.HHS@hhs.gov",
+        "email": "ServiceDesk.OCIO.HHS.OS@hhs.gov",
         "name": "Office of the Chief Information Officer"
       },
       "vcs": "git",
-      "agency": "HHS",
-      "id": "HHS/ckanext-datajson",
       "repositoryURL": "https://github.com/HHS/ckanext-datajson",
+      "languages": [
+        "Python"
+      ],
       "permissions": {
         "licenses": [
           {
             "URL": "http://creativecommons.org/publicdomain/zero/1.0/",
-            "name": null
+            "name": "CC0"
           }
         ],
         "usageType": "openSource",
         "exemptionText": null
       },
-      "laborHours": null,
+      "laborHours": 0,
       "date": {
-        "created": "",
-        "lastModified": "",
-        "metadataLastUpdated": ""
+        "created": "2013-05-28",
+        "lastModified": "2014-11-14",
+        "metadataLastUpdated": "2017-12-08"
       },
-      "disclaimerText": "",
-      "disclaimerURL": "",
       "relatedCode": [
         {
-          "codeName": "",
-          "codeURL": "",
-          "isGovernmentRepo": true
-        }
-      ],
-      "reusedCode": [
+          "name": "ckanext-harvest",
+          "URL": "https://github.com/HHS/ckanext-harvest"
+        },
         {
-          "name": "",
-          "URL": ""
+          "name": "lodestar",
+          "URL": "https://github.com/HHS/lodestar"
         }
       ]
     },
     {
       "name": "ckanext-harvest",
+      "version": "ckan-1.6",
       "organization": "Department of Health and Human Services",
       "description": "CKAN remote harvesting extension",
       "tags": [
@@ -61,42 +62,38 @@
         "open data"
       ],
       "contact": {
-        "email": "ServiceDesk.OCIO.HHS@hhs.gov",
+        "email": "ServiceDesk.OCIO.HHS.OS@hhs.gov",
         "name": "Office of the Chief Information Officer"
       },
       "vcs": "git",
-      "agency": "HHS",
-      "id": "HHS/ckanext-harvest",
       "repositoryURL": "https://github.com/HHS/ckanext-harvest",
+      "languages": [
+        "Python"
+      ],
       "permissions": {
         "licenses": [
           {
-            "URL": null,
-            "name": null
+            "URL": "http://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
           }
         ],
         "usageType": "openSource",
         "exemptionText": null
       },
-      "laborHours": null,
+      "laborHours": 0,
       "date": {
-        "created": "",
-        "lastModified": "",
-        "metadataLastUpdated": ""
+        "created": "2011-05-09",
+        "lastModified": "2017-11-08",
+        "metadataLastUpdated": "2017-12-08"
       },
-      "disclaimerText": "",
-      "disclaimerURL": "",
       "relatedCode": [
         {
-          "codeName": "",
-          "codeURL": "",
-          "isGovernmentRepo": true
-        }
-      ],
-      "reusedCode": [
+          "name": "ckanext-datajson",
+          "URL": "https://github.com/HHS/ckanext-datajson"
+        },
         {
-          "name": "",
-          "URL": ""
+          "name": "lodestar",
+          "URL": "https://github.com/HHS/lodestar"
         }
       ]
     },
@@ -110,42 +107,39 @@
         "open data"
       ],
       "contact": {
-        "email": "ServiceDesk.OCIO.HHS@hhs.gov",
+        "email": "ServiceDesk.OCIO.HHS.OS@hhs.gov",
         "name": "Office of the Chief Information Officer"
       },
       "vcs": "git",
-      "agency": "HHS",
-      "id": "HHS/lodestar",
       "repositoryURL": "https://github.com/HHS/lodestar",
+      "languages": [
+        "Java",
+        "Javascript"
+      ],
       "permissions": {
         "licenses": [
           {
             "URL": "http://www.apache.org/licenses/LICENSE-2.0",
-            "name": null
+            "name": "Apache-2.0"
           }
         ],
         "usageType": "openSource",
         "exemptionText": null
       },
-      "laborHours": null,
+      "laborHours": 0,
       "date": {
-        "created": "",
-        "lastModified": "",
-        "metadataLastUpdated": ""
+        "created": "2013-07-16",
+        "lastModified": "2017-09-08",
+        "metadataLastUpdated": "2017-12-08"
       },
-      "disclaimerText": "",
-      "disclaimerURL": "",
       "relatedCode": [
         {
-          "codeName": "",
-          "codeURL": "",
-          "isGovernmentRepo": true
-        }
-      ],
-      "reusedCode": [
+          "name": "ckanext-datajson",
+          "URL": "https://github.com/HHS/ckanext-datajson"
+        },
         {
-          "name": "",
-          "URL": ""
+          "name": "ckanext-harvest",
+          "URL": "https://github.com/HHS/ckanext-harvest"
         }
       ]
     },
@@ -158,44 +152,31 @@
         "fraud prevention"
       ],
       "contact": {
-        "email": "ServiceDesk.OCIO.HHS@hhs.gov",
+        "email": "ServiceDesk.OCIO.HHS.OS@hhs.gov",
         "name": "Office of the Chief Information Officer"
       },
       "vcs": "git",
-      "agency": "HHS",
-      "id": "HHS/Healthcare%20Fraud%20Prevention",
       "repositoryURL": "https://github.com/HHS/CoECI-CMS-Healthcare-Fraud-Prevention",
+      "languages": [
+        "Java",
+        "Python"
+      ],
       "permissions": {
         "licenses": [
           {
             "URL": "http://www.apache.org/licenses/LICENSE-2.0",
-            "name": null
+            "name": "Apache-2.0"
           }
         ],
         "usageType": "openSource",
         "exemptionText": null
       },
-      "laborHours": null,
+      "laborHours": 0,
       "date": {
-        "created": "",
-        "lastModified": "",
-        "metadataLastUpdated": ""
-      },
-      "disclaimerText": "",
-      "disclaimerURL": "",
-      "relatedCode": [
-        {
-          "codeName": "",
-          "codeURL": "",
-          "isGovernmentRepo": true
-        }
-      ],
-      "reusedCode": [
-        {
-          "name": "",
-          "URL": ""
-        }
-      ]
+        "created": "2013-11-06",
+        "lastModified": "2014-02-07",
+        "metadataLastUpdated": "2017-12-08"
+      }
     },
     {
       "name": "FNMS",
@@ -208,44 +189,26 @@
         "people"
       ],
       "contact": {
-        "email": "ServiceDesk.OCIO.HHS@hhs.gov",
+        "email": "ServiceDesk.OCIO.HHS.OS@hhs.gov",
         "name": "Office of the Chief Information Officer"
       },
-      "status": "Alpha",
-      "agency": "HHS",
-      "id": "HHS/FNMS",
+      "vcs": "git",
+      "repositoryURL": null,
+      "status": "Production",
+      "languages": [
+        "C#"
+      ],
       "permissions": {
-        "licenses": [
-          {
-            "URL": null,
-            "name": null
-          }
-        ],
+        "licenses": null,
         "usageType": "governmentWideReuse",
         "exemptionText": null
       },
-      "laborHours": null,
+      "laborHours": 0,
       "date": {
-        "created": "",
-        "lastModified": "",
-        "metadataLastUpdated": ""
-      },
-      "vcs": "",
-      "disclaimerText": "",
-      "disclaimerURL": "",
-      "relatedCode": [
-        {
-          "codeName": "",
-          "codeURL": "",
-          "isGovernmentRepo": true
-        }
-      ],
-      "reusedCode": [
-        {
-          "name": "",
-          "URL": ""
-        }
-      ]
+        "created": "2017-08-22",
+        "lastModified": "2017-10-31",
+        "metadataLastUpdated": "2017-11-08"
+      }
     },
     {
       "name": "ARAPS",
@@ -257,92 +220,48 @@
         "people"
       ],
       "contact": {
-        "email": "ServiceDesk.OCIO.HHS@hhs.gov",
+        "email": "ServiceDesk.OCIO.HHS.OS@hhs.gov",
         "name": "Office of the Chief Information Officer"
       },
+      "vcs": "git",
+      "repositoryURL": null,
       "status": "Alpha",
-      "agency": "HHS",
-      "id": "HHS/ARAPS",
+      "languages": [
+        "C#"
+      ],
       "permissions": {
-        "licenses": [
-          {
-            "URL": null,
-            "name": null
-          }
-        ],
+        "licenses": null,
         "usageType": "governmentWideReuse",
         "exemptionText": null
       },
-      "laborHours": null,
+      "laborHours": 0,
       "date": {
-        "created": "",
-        "lastModified": "",
-        "metadataLastUpdated": ""
-      },
-      "vcs": "",
-      "disclaimerText": "",
-      "disclaimerURL": "",
-      "relatedCode": [
-        {
-          "codeName": "",
-          "codeURL": "",
-          "isGovernmentRepo": true
-        }
-      ],
-      "reusedCode": [
-        {
-          "name": "",
-          "URL": ""
-        }
-      ]
+        "created": "2017-08-22",
+        "lastModified": "2017-08-22",
+        "metadataLastUpdated": "2017-12-08"
+      }
     },
     {
       "name": "MMS",
       "organization": "Department of Health and Human Services",
-      "description": "Menotoring Matching System",
+      "description": "Mentoring Matching System",
       "tags": [
         "Mentoring",
         "HHSU"
       ],
       "contact": {
-        "email": "ServiceDesk.OCIO.HHS@hhs.gov",
+        "email": "ServiceDesk.OCIO.HHS.OS@hhs.gov",
         "name": "Office of the Chief Information Officer"
       },
-      "status": "Alpha",
-      "agency": "HHS",
-      "id": "HHS/MMS",
+      "repositoryURL": null,
+      "status": "Production",
       "permissions": {
-        "licenses": [
-          {
-            "URL": null,
-            "name": null
-          }
-        ],
+        "licenses": null,
         "usageType": "governmentWideReuse",
         "exemptionText": null
       },
-      "laborHours": null,
-      "date": {
-        "created": "",
-        "lastModified": "",
-        "metadataLastUpdated": ""
-      },
-      "vcs": "",
-      "disclaimerText": "",
-      "disclaimerURL": "",
-      "relatedCode": [
-        {
-          "codeName": "",
-          "codeURL": "",
-          "isGovernmentRepo": true
-        }
-      ],
-      "reusedCode": [
-        {
-          "name": "",
-          "URL": ""
-        }
-      ]
+      "laborHours": 0,
+      "vcs": ""
     }
   ]
 }

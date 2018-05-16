@@ -1,0 +1,1081 @@
+{
+  "version": "2.0.0",
+  "measurementType": {
+    "method": "modules"
+  },
+  "agency": "DOJ",
+  "releases": [
+    {
+      "name": "Better View Pane Args - Drupal Module",
+      "version": "1.0",
+      "repositoryURL": "https://www.drupal.org/project/better_view_pane_args",
+      "description": "​This is a user-interface improvement module designed to help users to interact with contextual filter widgets whenever they are displayed as configuration forms on Views Panes",
+      "laborHours": 40,
+      "tags": [
+        "Drupal",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "organization": "Justice Management Division",
+      "status": "Production",
+      "vcs": "git",
+      "homepageURL": "",
+      "downloadURL": "",
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "languages": [
+        "PHP",
+        "",
+        "",
+        ""
+      ],
+      "partners": [
+        {
+          "name": "",
+          "email": ""
+        }
+      ],
+      "relatedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ],
+      "date": {
+        "metadataLastUpdated": "",
+        "lastModified": "",
+        "created": ""
+      },
+      "contact": {
+        "name": "",
+        "email": "stephen.b.fanning@usdoj.gov",
+        "URL": "",
+        "phone": ""
+      },
+      "permissions": {
+        "licenses": [
+          {
+            "name": "GPLV2",
+            "URL": "https://www.drupal.org/project/better_view_pane_args"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": "​n/a"
+      }
+    },
+    {
+      "name": "Ctools Double Modal Choice - Drupal module",
+      "version": "1.0",
+      "repositoryURL": "https://www.drupal.org/project/ctools_double_modal_choice",
+      "description": "​This module is intended to guard against a rare but unfortunate case where a Ctools modal is triggered from within another Ctools modal. Normally, the first modal simply closes, which can be frustrating for users. This module gives the user the option to open the second modal in a new browser tab.",
+      "laborHours": 40,
+      "tags": [
+        "Drupal",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "organization": "Justice Management Division",
+      "status": "Production",
+      "vcs": "git",
+      "homepageURL": "",
+      "downloadURL": "",
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "languages": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "partners": [
+        {
+          "name": "",
+          "email": ""
+        }
+      ],
+      "relatedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ],
+      "date": {
+        "metadataLastUpdated": "",
+        "lastModified": "",
+        "created": ""
+      },
+      "contact": {
+        "name": "",
+        "email": "stephen.b.fanning@usdoj.gov",
+        "URL": "",
+        "phone": ""
+      },
+      "permissions": {
+        "licenses": [
+          {
+            "name": "GPLv2",
+            "URL": "https://www.gnu.org/licenses/old-licenses/gpl-2.0.html"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": ""
+      }
+    },
+    {
+      "name": "Crumbs Skip Specials - Drupal module",
+      "version": "1.0",
+      "repositoryURL": "https://www.drupal.org/project/crumbs_skip_specials",
+      "description": "​This (very niche) module is for Drupal sites that use both Crumbs and Special Menu Items AND have a need to NOT display the special menu items in the breadcrumbs.",
+      "laborHours": 20,
+      "tags": [
+        "Drupal",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "organization": "Justice Management Division",
+      "status": "Production",
+      "vcs": "git",
+      "homepageURL": "",
+      "downloadURL": "",
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "languages": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "partners": [
+        {
+          "name": "",
+          "email": ""
+        }
+      ],
+      "relatedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ],
+      "date": {
+        "metadataLastUpdated": "",
+        "lastModified": "",
+        "created": ""
+      },
+      "contact": {
+        "name": "",
+        "email": "stephen.b.fanning@usdoj.gov",
+        "URL": "",
+        "phone": ""
+      },
+      "permissions": {
+        "licenses": [
+          {
+            "name": "GPLv2",
+            "URL": "https://www.gnu.org/licenses/old-licenses/gpl-2.0.html"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": ""
+      }
+    },
+    {
+      "name": "Tag No More - Drupal module",
+      "version": "1.0",
+      "repositoryURL": "https://www.drupal.org/project/tag_no_more",
+      "description": "​Use case: You want to have some taxonomy terms on your Drupal site, but you don't want editors to be able to add them to new content. In other words, you would like to just delete the terms, but for whatever reason you can't - so you want to make sure they don't get used any more.",
+      "laborHours": 20,
+      "tags": [
+        "Drupal",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "organization": "Justice Management Division",
+      "status": "Production",
+      "vcs": "git",
+      "homepageURL": "",
+      "downloadURL": "",
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "languages": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "partners": [
+        {
+          "name": "",
+          "email": ""
+        }
+      ],
+      "relatedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ],
+      "date": {
+        "metadataLastUpdated": "",
+        "lastModified": "",
+        "created": ""
+      },
+      "contact": {
+        "name": "",
+        "email": "",
+        "URL": "",
+        "phone": ""
+      },
+      "permissions": {
+        "licenses": [
+          {
+            "name": "GPLv2",
+            "URL": "https://www.gnu.org/licenses/old-licenses/gpl-2.0.html"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": ""
+      }
+    },
+    {
+      "name": "USWDS Paragraphs - Drupal module",
+      "version": "1.0 - Beta",
+      "repositoryURL": "https://www.drupal.org/project/uswds_paragraphs",
+      "description": "​This module provides Paragraph types intended to be used with the U.S. Web Design Standards library. This makes a good companion to the USWDS Drupal theme.",
+      "laborHours": 40,
+      "tags": [
+        "Drupal",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "organization": "Justice Management Division",
+      "status": "Production",
+      "vcs": "git",
+      "homepageURL": "",
+      "downloadURL": "",
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "languages": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "partners": [
+        {
+          "name": "",
+          "email": ""
+        }
+      ],
+      "relatedCode": [
+        {
+          "name": "U.S. Web Design Standards",
+          "URL": "https://github.com/18F/web-design-standards"
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "U.S. Web Design Standards (Drupal theme)",
+          "URL": "https://www.drupal.org/project/uswd"
+        }
+      ],
+      "date": {
+        "metadataLastUpdated": "",
+        "lastModified": "",
+        "created": ""
+      },
+      "contact": {
+        "name": "",
+        "email": "",
+        "URL": "",
+        "phone": ""
+      },
+      "permissions": {
+        "licenses": [
+          {
+            "name": "GPLv2",
+            "URL": "https://www.gnu.org/licenses/old-licenses/gpl-2.0.html"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": ""
+      }
+    },
+    {
+      "name": "Linkit - Organic Groups - Drupal module",
+      "version": "1.0",
+      "repositoryURL": "https://www.drupal.org/project/linkit_og",
+      "description": "​This module limits the autocomplete suggestions of entities in Linkit to those belonging to the user's Organic Groups.",
+      "laborHours": 40,
+      "tags": [
+        "Drupal",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "organization": "Justice Management Division",
+      "status": "Production",
+      "vcs": "vcs,git",
+      "homepageURL": "",
+      "downloadURL": "",
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "languages": [
+        "PHP",
+        "",
+        "",
+        ""
+      ],
+      "partners": [
+        {
+          "name": "",
+          "email": ""
+        }
+      ],
+      "relatedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ],
+      "date": {
+        "metadataLastUpdated": "",
+        "lastModified": "",
+        "created": ""
+      },
+      "contact": {
+        "name": "",
+        "email": "stephen.b.fanning@usdoj.gov",
+        "URL": "",
+        "phone": ""
+      },
+      "permissions": {
+        "licenses": [
+          {
+            "name": "GPLv6",
+            "URL": "https://www.gnu.org/licenses/old-licenses/gpl-2.0.html"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": ""
+      }
+    },
+    {
+      "name": "Code.gov - Drupal module",
+      "version": "1.0",
+      "repositoryURL": "https://www.drupal.org/project/code_gov",
+      "description": "​This module allows a Drupal site to be used to maintain an inventory of open-source software, and outputs that data according to the schema required by code.gov. The output is available at /code.json on the Drupal site itself.",
+      "laborHours": 40,
+      "tags": [
+        "Drupal",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "organization": "Justice Management Division",
+      "status": "Production",
+      "vcs": "git",
+      "homepageURL": "",
+      "downloadURL": "",
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "languages": [
+        "PHP",
+        "",
+        "",
+        ""
+      ],
+      "partners": [
+        {
+          "name": "",
+          "email": ""
+        }
+      ],
+      "relatedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ],
+      "date": {
+        "metadataLastUpdated": "",
+        "lastModified": "",
+        "created": ""
+      },
+      "contact": {
+        "name": "",
+        "email": "stephen.b.fanning@usdoj.gov",
+        "URL": "",
+        "phone": ""
+      },
+      "permissions": {
+        "licenses": [
+          {
+            "name": "GPLv2",
+            "URL": "https://www.gnu.org/licenses/old-licenses/gpl-2.0.html"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": ""
+      }
+    },
+    {
+      "name": "React Single Page Components",
+      "version": "1.0",
+      "repositoryURL": "",
+      "description": "​A collection of Bootstrap form components (text fields, selects, text area, etc…) to be used by a React Single Page Application.",
+      "laborHours": 120,
+      "tags": [
+        "React",
+        "Form",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "organization": "Justice Management Division",
+      "status": "Production",
+      "vcs": "",
+      "homepageURL": "",
+      "downloadURL": "",
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "languages": [
+        "javascript",
+        "",
+        "",
+        ""
+      ],
+      "partners": [
+        {
+          "name": "",
+          "email": ""
+        }
+      ],
+      "relatedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ],
+      "date": {
+        "metadataLastUpdated": "",
+        "lastModified": "",
+        "created": ""
+      },
+      "contact": {
+        "name": "",
+        "email": "",
+        "URL": "",
+        "phone": ""
+      },
+      "permissions": {
+        "licenses": [
+          {
+            "name": "Unlicense",
+            "URL": "http://unlicense.org"
+          }
+        ],
+        "usageType": "exemptByCIO",
+        "exemptionText": "​Awaiting security approval"
+      }
+    },
+    {
+      "name": "Single Table Facets",
+      "version": "1.1.0",
+      "repositoryURL": "https://github.com/usdoj/singletablefacets",
+      "description": "​A simple faceted search solution for single-table data sources.",
+      "laborHours": 80,
+      "tags": [
+        "Facets",
+        "Search",
+        "MySQL",
+        "Twig",
+        "Composer",
+        ""
+      ],
+      "organization": "Justice Management Division",
+      "status": "Production",
+      "vcs": "vcs, git",
+      "homepageURL": "",
+      "downloadURL": "",
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "languages": [
+        "PHP",
+        "SQL",
+        "Javascript",
+        ""
+      ],
+      "partners": [
+        {
+          "name": "",
+          "email": ""
+        }
+      ],
+      "relatedCode": [
+        {
+          "name": "Single Table Importer",
+          "URL": "https://github.com/usdoj/singletableimporter"
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ],
+      "date": {
+        "metadataLastUpdated": "",
+        "lastModified": "",
+        "created": ""
+      },
+      "contact": {
+        "name": "",
+        "email": "stephen.b.fanning@usdoj.gov",
+        "URL": "",
+        "phone": ""
+      },
+      "permissions": {
+        "licenses": [
+          {
+            "name": "Unlicense",
+            "URL": "http://unlicense.org"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": ""
+      }
+    },
+    {
+      "name": "Single Table Pages",
+      "version": "1.0.0",
+      "repositoryURL": "https://github.com/usdoj/singletablepages",
+      "description": "​A simple dynamic page solution for single-table data sources.",
+      "laborHours": 60,
+      "tags": [
+        "Drupal​",
+        "CMS",
+        "MySQL",
+        "Composer",
+        "Twig",
+        ""
+      ],
+      "organization": "Justice Management Division",
+      "status": "Production",
+      "vcs": " git",
+      "homepageURL": "",
+      "downloadURL": "",
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "languages": [
+        "PHP",
+        "SQL",
+        "",
+        ""
+      ],
+      "partners": [
+        {
+          "name": "",
+          "email": ""
+        }
+      ],
+      "relatedCode": [
+        {
+          "name": "Single Table Importer",
+          "URL": "https://github.com/usdoj/singletableimporter"
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ],
+      "date": {
+        "metadataLastUpdated": "",
+        "lastModified": "",
+        "created": ""
+      },
+      "contact": {
+        "name": "",
+        "email": "stephen.b.fanning@usdoj.gov",
+        "URL": "",
+        "phone": ""
+      },
+      "permissions": {
+        "licenses": [
+          {
+            "name": "Unlicense",
+            "URL": "https://github.com/usdoj/singletablepages/blob/master/UNLICENSE"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": ""
+      }
+    },
+    {
+      "name": "Single Table Importer",
+      "version": "1.0.0",
+      "repositoryURL": "https://github.com/usdoj/singletableimporter",
+      "description": "​A class for importing source data into a single MySQL table from Excel or CSV.",
+      "laborHours": 40,
+      "tags": [
+        "Excel",
+        "CSV",
+        "MySQL",
+        "Composer​",
+        "",
+        ""
+      ],
+      "organization": "Justice Management Division",
+      "status": "Production",
+      "vcs": "git",
+      "homepageURL": "",
+      "downloadURL": "",
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "languages": [
+        "PHP",
+        "SQL",
+        "",
+        ""
+      ],
+      "partners": [
+        {
+          "name": "",
+          "email": ""
+        }
+      ],
+      "relatedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ],
+      "date": {
+        "metadataLastUpdated": "",
+        "lastModified": "",
+        "created": ""
+      },
+      "contact": {
+        "name": "",
+        "email": "stephen.b.fanning@usdoj.gov",
+        "URL": "",
+        "phone": ""
+      },
+      "permissions": {
+        "licenses": [
+          {
+            "name": "Unicense",
+            "URL": "https://github.com/usdoj/singletableimporter/blob/master/UNLICENSe"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": ""
+      }
+    },
+    {
+      "name": "U.S. Web Design Standards - Drupal theme",
+      "version": "1.0 - beta 2",
+      "repositoryURL": "https://www.drupal.org/project/uswds",
+      "description": "​Drupal integration of the U.S. Web Design Standards library. This base theme focuses on tweaking Drupal's markup so that it will work with the USWDS library.",
+      "laborHours": 80,
+      "tags": [
+        "Drupal",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "organization": "Justice Management Division",
+      "status": "Production",
+      "vcs": "git",
+      "homepageURL": "",
+      "downloadURL": "",
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "languages": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "partners": [
+        {
+          "name": "",
+          "email": ""
+        }
+      ],
+      "relatedCode": [
+        {
+          "name": "U.S. Web Design Standards",
+          "URL": "https://github.com/18F/web-design-standards"
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ],
+      "date": {
+        "metadataLastUpdated": "",
+        "lastModified": "",
+        "created": ""
+      },
+      "contact": {
+        "name": "",
+        "email": "stephen.b.fanning@usdoj.gov",
+        "URL": "",
+        "phone": ""
+      },
+      "permissions": {
+        "licenses": [
+          {
+            "name": "GPLv2",
+            "URL": "https://www.gnu.org/licenses/old-licenses/gpl-2.0.html"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": ""
+      }
+    },
+    {
+      "name": "Panelizer Usage Report - Drupal module",
+      "version": "1.0",
+      "repositoryURL": "https://www.drupal.org/project/panelizer_usage_report",
+      "description": "​This module provides an administrative page where you can select a certain Panels pane, and list all of the pages where it is being displayed on the site through Panelizer.",
+      "laborHours": 40,
+      "tags": [
+        "Drupal",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "organization": "Justice Management Division",
+      "status": "Production",
+      "vcs": "git",
+      "homepageURL": "",
+      "downloadURL": "",
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "languages": [
+        "PHP",
+        "",
+        "",
+        ""
+      ],
+      "partners": [
+        {
+          "name": "",
+          "email": ""
+        }
+      ],
+      "relatedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ],
+      "date": {
+        "metadataLastUpdated": "",
+        "lastModified": "",
+        "created": ""
+      },
+      "contact": {
+        "name": "",
+        "email": "stephen.b.fanning@usdoj.gov",
+        "URL": "",
+        "phone": ""
+      },
+      "permissions": {
+        "licenses": [
+          {
+            "name": "GPLv2",
+            "URL": "https://www.gnu.org/licenses/old-licenses/gpl-2.0.html"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": ""
+      }
+    },
+    {
+      "name": "Exit Script",
+      "version": "1.1.0",
+      "repositoryURL": "https://github.com/usdoj/exitscript",
+      "description": "​A client-side popup warning for users clicking on non-government external links.",
+      "laborHours": 25,
+      "tags": [
+        "popup",
+        "external",
+        "links",
+        "modal",
+        "",
+        ""
+      ],
+      "organization": "Justice Management Division",
+      "status": "Production",
+      "vcs": "git",
+      "homepageURL": "",
+      "downloadURL": "",
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "languages": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "partners": [
+        {
+          "name": "",
+          "email": ""
+        }
+      ],
+      "relatedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ],
+      "date": {
+        "metadataLastUpdated": "",
+        "lastModified": "",
+        "created": ""
+      },
+      "contact": {
+        "name": "",
+        "email": "stephen.b.fanning@usdoj.gov",
+        "URL": "",
+        "phone": ""
+      },
+      "permissions": {
+        "licenses": [
+          {
+            "name": "Unlicense",
+            "URL": "https://github.com/usdoj/exitscript/blob/master/UNLICENSE"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": ""
+      }
+    },
+    {
+      "name": "DCC / JCAT",
+      "version": "1.1.1",
+      "repositoryURL": "",
+      "description": "A data cataloging system.​",
+      "laborHours": 40,
+      "tags": [
+        "data.json",
+        "data",
+        "catalog",
+        "",
+        "",
+        ""
+      ],
+      "organization": "Justice Management Division",
+      "status": "Production",
+      "vcs": "git",
+      "homepageURL": "",
+      "downloadURL": "",
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "languages": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "partners": [
+        {
+          "name": "",
+          "email": ""
+        }
+      ],
+      "relatedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ],
+      "date": {
+        "metadataLastUpdated": "",
+        "lastModified": "",
+        "created": ""
+      },
+      "contact": {
+        "name": "Mark Brady",
+        "email": "mark.brady@usdoj.gov",
+        "URL": "",
+        "phone": ""
+      },
+      "permissions": {
+        "licenses": [
+          {
+            "name": "Unlicense",
+            "URL": "http://unlicense.org"
+          }
+        ],
+        "usageType": "exemptByCIO",
+        "exemptionText": "​Awaiting sharing decision."
+      }
+    },
+    {
+      "name": "Excel to json Translator",
+      "version": "1.0",
+      "repositoryURL": "",
+      "description": "Excel spreadsheet that creates code.json file​",
+      "laborHours": 40,
+      "tags": [
+        "code sharing",
+        "json",
+        "Excel",
+        "",
+        "",
+        ""
+      ],
+      "organization": "Justice Management Division",
+      "status": "Production",
+      "vcs": "",
+      "homepageURL": "",
+      "downloadURL": "",
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "languages": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "partners": [
+        {
+          "name": "",
+          "email": ""
+        }
+      ],
+      "relatedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ],
+      "date": {
+        "metadataLastUpdated": "",
+        "lastModified": "",
+        "created": ""
+      },
+      "contact": {
+        "name": "Mark Brady",
+        "email": "mark.brady@usdoj.gov",
+        "URL": "",
+        "phone": ""
+      },
+      "permissions": {
+        "licenses": [
+          {
+            "name": "Unlicense",
+            "URL": "http://unlicense.org"
+          }
+        ],
+        "usageType": "exemptByCIO",
+        "exemptionText": "​Awaiting sharing decision"
+      }
+    }
+  ]
+}
