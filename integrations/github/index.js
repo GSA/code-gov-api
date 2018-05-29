@@ -39,7 +39,7 @@ function getGithubClient(type='token', token='') {
 /**
  * Validates if passed url is a well formed Github URL.
  * Eg. https://github.com/GSA/code-gov-api
- * @param {string} url - URL to validate.
+ * @param {string} url URL to validate.
  * @returns {boolean}
  */
 function isGithubUrl(url) {
@@ -117,6 +117,7 @@ async function getRepoInformation(githubClient, repoUrl, perPage, config, logger
       description: repoInfo.description,
       homepage: repoInfo.homepage,
       stargazers_count: repoInfo.stargazers_count,
+      watchers_count: repoInfo.watchers_count,
       issues_url: repoInfo.issues_url,
       license: repoInfo.license,
       repoLanguages: repoInfo.language,
