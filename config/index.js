@@ -64,6 +64,12 @@ function getConfig(env) {
     "agency.acronym",
     "tags",
     "languages"];
+  config.supportedSchemaVersions = [
+    '1.0.0',
+    '1.0.1',
+    '2.0.0'
+  ];
+
   config.USE_HSTS = process.env.USE_HSTS || isProd ? true : false;
   config.HSTS_MAX_AGE = parseInt(process.env.HSTS_MAX_AGE) || 31536000;
   config.HSTS_PRELOAD = false;
