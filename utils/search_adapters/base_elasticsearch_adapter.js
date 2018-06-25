@@ -17,16 +17,16 @@ class BaseElasticsearchAdapter extends AbstractSearchAdapter {
     this.config = config;
   }
 
-  //TODO: We might be able to eliminate all this code and the AbstractSearchAdapter. Something to think about
+  //TODO: use this code! Use it now!
   getHostsFromConfig() {
     let hosts = [];
 
     if (Array.isArray(this.config.ES_HOST)) {
-      this.config.ES_HOST.forEach(host => {
-        hosts.push(`${host}:${this.config.ES_PORT}`);
+      this.config.ES_HOST.forEach(url => {
+        hosts.push(url);
       });
     } else {
-      hosts.push(`${this.config.ES_HOST}:${this.config.ES_PORT}`);
+      hosts.push(this.config.ES_HOST);
     }
 
     return hosts;

@@ -1,7 +1,7 @@
 const ElasticSearch                 = require("elasticsearch");
 const Logger                        = require("../logger");
 // TODO: The use of the BaseElasticsearchAdapter might not be needed.
-const BaseElasticsearchAdapter      = require("./base_elasticsearch_adapter"); 
+const BaseElasticsearchAdapter      = require("./base_elasticsearch_adapter");
 /**
  * A logger to be used by ElasticSearch
  *
@@ -30,8 +30,7 @@ class ElasticsearchAdapter extends BaseElasticsearchAdapter {
     super(config);
 
     this.client = new ElasticSearch.Client({
-      host: `${this.config.ES_HOST}:${this.config.ES_PORT}`,
-      httpAuth: this.config.ES_AUTH,
+      hosts: this.getHostsFromConfig(),
       log: SearchLogger
     });
   }
