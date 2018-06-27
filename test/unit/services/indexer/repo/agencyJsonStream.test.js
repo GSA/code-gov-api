@@ -98,6 +98,10 @@ describe('AgencyJsonStream', function() {
         URL: '',
         name: ''
       }],
+      targetOperatingSystems: ['other'],
+      additionalInformation: {
+        additionalNotes: null
+      },
       date: {
         created: '',
         lastModified: moment('2017-04-11', 'YYYY-MM-DD').utc().toJSON(),
