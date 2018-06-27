@@ -3,22 +3,39 @@ const path = require('path');
 const dotenv = require('dotenv');
 const jsonfile = require('jsonfile');
 
-function getCloudFoundryEnv() {
-  const appEnv = cfenv.getAppEnv();
-  if(!appEnv.isLocal){
-    const elasticSearchCredentials = appEnv.getServiceCreds("code_gov_elasticsearch");
+/**
+ * Get the Elasticsearch service URL. Defaults to `http://localhost:9200`
+ * @param {object} cloudFoundryEnv - Cloud Foundry app environment object.
+ * @returns {string} - The Elasticsearch service URL
+ */
+function getElasticsearchUri(cloudFoundryEnv) {
+  if(!cloudFoundryEnv.isLocal){
+    const elasticSearchCredentials = cloudFoundryEnv.getServiceCreds("code_gov_elasticsearch");
 
-    return {
-      esAuth: `${elasticSearchCredentials.username}:${elasticSearchCredentials.password}`,
-      esHost: elasticSearchCredentials.hostname,
-      esPort: elasticSearchCredentials.port,
-      spaceName: appEnv.app.space_name,
-      uris: appEnv.app.uris
-    };
+    return elasticSearchCredentials.uri
+      ? elasticSearchCredentials.uri
+      : 'http://localhost:9200';
   }
-  return {};
+  return process.env.ES_URI ? process.env.ES_URI : 'http://localhost:9200';
 }
 
+/**
+ * Gets the configured application port. Defaults to 3000
+ * @param {object} cloudFoundryEnv - Cloud Foundry app environment object.
+ * @returns (integer) - The application port.
+ */
+function getPort(cloudFoundryEnv={}) {
+  return process.env.PORT
+    ? process.env.PORT
+    : cloudFoundryEnv.port
+      ? cloudFoundryEnv.port
+      : 3000;
+}
+
+/**
+ * Get the necessary application directories.
+ * @returns {object} - Directory paths needed by the application
+ */
 function getAppFilesDirectories() {
   return {
     AGENCY_ENDPOINTS_FILE: path.join(path.dirname(__dirname), 'config/agency_metadata.json'),
@@ -30,28 +47,44 @@ function getAppFilesDirectories() {
   };
 }
 
-function getSwaggerConf(spaceName, uri, port) {
-  const SWAGGER_HOST = process.env.SWAGGER_HOST || spaceName === 'prod'
-    ? 'api.code.gov'
-    : uri;
-  const SWAGGER_ENV = process.env.SWAGGER_ENV || spaceName;
-
-  const SWAGGER_DOCUMENT = SWAGGER_ENV === 'prod'
+/**
+ * Get the Swagger docs configuration for the current environment.
+ * @param {boolean} isProd - Boolean flag indicating if it is a production environment
+ * @param {string} apiUrl - The configured Code.gov API URL
+ * @returns {object} - Swagger configuration object
+ */
+function getSwaggerConf(isProd, apiUrl) {
+  const SWAGGER_DOCUMENT = isProd
     ? jsonfile.readFileSync(path.join(path.dirname(__dirname), './swagger-prod.json'))
     : jsonfile.readFileSync(path.join(path.dirname(__dirname), './swagger.json'));
-  SWAGGER_DOCUMENT.host = SWAGGER_HOST || `0.0.0.0:${port}`;
+
+  SWAGGER_DOCUMENT.host = apiUrl ? apiUrl : 'api.code.gov';
+  return SWAGGER_DOCUMENT;
 }
 
+/**
+ * Get the application configuration for the supplied environment
+ * @param {string} env - The application environment. This will default to a development environment
+ * @returns {object} - object with all the configuration needed for the environment
+ */
 function getConfig(env) {
   let config = {
     prod_envs: ['prod', 'production', 'stag', 'staging']
   };
 
-  dotenv.config(path.join(path.dirname(__dirname), '.env'));
-
   const isProd = config.prod_envs.includes(env);
+  const cloudFoundryEnv = cfenv.getAppEnv();
 
-  config.LOGGER_LEVEL = process.env.LOGGER_LEVEL || isProd ? 'INFO' : 'DEBUG';
+  if(cloudFoundryEnv.isLocal) {
+    dotenv.config(path.join(path.dirname(__dirname), '.env'));
+  }
+
+  config.LOGGER_LEVEL = process.env.LOGGER_LEVEL
+    ? process.env.LOGGER_LEVEL
+    : isProd
+      ? 'INFO'
+      : 'DEBUG';
+
   config.TERM_TYPES_TO_INDEX = [
     "name",
     "agency.name",
@@ -70,19 +103,20 @@ function getConfig(env) {
     '2.0.0'
   ];
 
-  config.USE_HSTS = process.env.USE_HSTS || isProd ? true : false;
-  config.HSTS_MAX_AGE = parseInt(process.env.HSTS_MAX_AGE) || 31536000;
+  config.USE_HSTS = process.env.USE_HSTS ? process.env.USE_HSTS === 'true' : isProd;
+  config.HSTS_MAX_AGE = process.env.HSTS_MAX_AGE ? parseInt(process.env.HSTS_MAX_AGE) : 31536000;
   config.HSTS_PRELOAD = false;
-  config.PORT = process.env.PORT || 3001;
+  config.PORT = getPort(cloudFoundryEnv);
 
-  const cfElasticsearch = getCloudFoundryEnv();
-
-  config.ES_AUTH = `${process.env.ES_USER}:${process.env.ES_PASSWORD}` || cfElasticsearch.esAuth || 'root';
-  config.ES_HOST = process.env.ES_HOST || cfElasticsearch.esHost || 'localhost';
-  config.ES_PORT = process.env.ES_PORT || cfElasticsearch.esPort || 9200;
+  config.ES_HOST = getElasticsearchUri(cloudFoundryEnv);
 
   Object.assign(config, getAppFilesDirectories());
-  Object.assign(config, getSwaggerConf(cfElasticsearch.spaceName, cfElasticsearch.uri, config.PORT));
+  const apiUrl = process.env.API_URL
+    ? process.env.API_URL
+    : cloudFoundryEnv.app.uris
+      ? `${cloudFoundryEnv.app.uris[0]}/api`
+      : `0.0.0.0:${config.PORT}`;
+  config.SWAGGER_DOCUMENT = getSwaggerConf(isProd, apiUrl);
 
   return config;
 }
