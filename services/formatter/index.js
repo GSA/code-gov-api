@@ -78,7 +78,7 @@ class Formatter {
       : ['other'];
     repo.additionalInformation = repo.additionalInformation
       ? repo.additionalInformation
-      : { additionalNotes: null }
+      : { additionalNotes: null };
   }
   _upgradeToPermissions(repo) {
 
