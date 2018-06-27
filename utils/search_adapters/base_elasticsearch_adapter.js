@@ -17,7 +17,6 @@ class BaseElasticsearchAdapter extends AbstractSearchAdapter {
     this.config = config;
   }
 
-  //TODO: use this code! Use it now!
   getHostsFromConfig() {
     let hosts = [];
 
