@@ -1,72 +1,3 @@
-/******************************************************************************
-
-  FORMATTER: a service which formats json objects, adding new fields and mod-
-  ifying existing ones as necessary for consumption by the API
-
-  There are methods that make extra calls to the GitHub API for repo metadata.
-  However, most of these calls are currently turned off in the code since the
-  number of calls generated exceeds the existing API limits.
-
-  TODO:  Ideally this code should be rewritten to use the new GitHub API v4
-  (GraphQL), which should end up making much fewer calls. At time of writing,
-  the v4 API has no equivalent to the v3 "/contributors" endpoint, and the
-  "/events" endpoint is split over multiple objects based on the subject of
-  the event (issues, forks, pull requests, etc.)
-
-  Also, the GitHub metadata fetching code should be split into a different
-  class with a more meaningful name than "Formatter".
-
-  Once the new events structure is in place, fix indexes/repo/mapping.json
-  to reflect the structure correctly to ElasticSearch.
-
-  Examples of the data structures added to the repo object:
-
-  events: [
-    {
-      "id": "62409417",
-      "name": "department-of-veterans-affairs/vets-api",
-      "type": "Delete",
-      "user": "aub",
-      "time": "2016-11-02T19:06:20Z"
-
-    }, {
-      "id": "62409417",
-      "name": "department-of-veterans-affairs/vets-api",
-      "type": "Push",
-      "user": "aub",
-      "time": "2016-11-02T19:06:19Z",
-      "message": "return the user (#418)",
-      "url": "https://api.github.com/repos/department-of-veterans-affairs/vets-api/commits/e552eb2b81851ff5cdbe7fd7d042edb3014932c5"
-    }, {
-      "id": "62409417",
-      "name": "department-of-veterans-affairs/vets-api",
-      "type": "PullRequest",
-      "user": "aub",
-      "time": "2016-11-02T19:06:18Z",
-      "message": "return the user",
-      "url": "https://api.github.com/repos/department-of-veterans-affairs/vets-api/pulls/418"
-    },
-    ...
-  ]
-  (Note: The "id" and "name" values in the above objects refer to the repo,
-  and are always identical for events in a given repo. We should probably
-  remove these in future work.)
-
-  codeLanguage: [
-    {
-			"language": "CSS"
-		}
-  ]
-  (This should probably be streamlined to a list of strings.)
-
-  license_name: "CC0"
-
-  As for "contributors", there's no code using that yet, so it's fine to
-  replace that with whatever seems best, or leave it unimplemented for the
-  moment.
-
-******************************************************************************/
-
 const JsonFile = require('jsonfile');
 const Logger = require("../../utils/logger");
 const moment = require("moment");
@@ -142,6 +73,12 @@ class Formatter {
       name: '',
       URL: ''
     }];
+    repo.targetOperatingSystems = repo.targetOperatingSystems
+      ? repo.targetOperatingSystems
+      : ['other'];
+    repo.additionalInformation = repo.additionalInformation
+      ? repo.additionalInformation
+      : { additionalNotes: null }
   }
   _upgradeToPermissions(repo) {
 
@@ -220,7 +157,7 @@ class Formatter {
     return new Promise((resolve, reject) => {
       let formattedRepo;
       try {
-        if(schemaVersion === '2.0.0') {
+        if(schemaVersion === '2.0.1') {
           formattedRepo = this._formatRepo(repo);
         } else {
           this._upgradeProject(repo);
