@@ -3,6 +3,10 @@ const latinize                    = require("latinize");
 
 class Utils {
 
+  /**
+   * Transform passed string into RepoId
+   * @param {string} text 
+   */
   static transformStringToKey(text) {
     return latinize(text)
       .toLowerCase()
@@ -14,6 +18,10 @@ class Utils {
       .replace("the_", "");
   }
 
+  /**
+   * Flaten Elasticsearch mappings.
+   * @param {object} mapping 
+   */
   static getFlattenedMappingProperties(mapping) {
     let props = {};
 
@@ -33,6 +41,10 @@ class Utils {
     return props;
   }
 
+  /**
+   * Flaten Elasticsearch mappings by type.
+   * @param {object} mapping 
+   */
   static getFlattenedMappingPropertiesByType(mapping) {
     let props = {};
 
@@ -62,6 +74,11 @@ class Utils {
     return props;
   }
 
+  /**
+   * Delete specified keys from objects in passed collection.
+   * @param {Array[object]} collection - collections of objects to have keys deleted
+   * @param {Array} excludeKeys - List of keys to be deleted.
+   */
   static omitDeepKeys(collection, excludeKeys) {
     const omitFn = (value) => {
       if (value && typeof value === 'object') {
@@ -69,10 +86,14 @@ class Utils {
           delete value[key];
         });
       }
-    }
+    };
     return _.cloneDeepWith(collection, omitFn);
   }
 
+  /**
+   * Delete private object keys ( prefixed with `_` ) from objects in passed collection.
+   * @param {Array[object]} collection - list of objects to have keys deleted
+   */
   static omitPrivateKeys(collection) {
     const omitFn = (value) => {
       if (value && typeof value === 'object') {
@@ -82,14 +103,55 @@ class Utils {
           }
         });
       }
-    }
+    };
     return _.cloneDeepWith(collection, omitFn);
   }
 
+  /**
+   * Remove duplicate items from passed collections.
+   * @param {*} collection1 
+   * @param {*} collection2 
+   */
+  
   static removeDupes(collection1, collection2) {
-    return _.filter(collection1, (obj) => { return !_.find(collection2, obj); });
+    return _.filter(collection1, (obj) => {
+      return !_.find(collection2, obj); 
+    });
   }
 
+  /**
+   * Extract schema version from code.json
+   * @param {object} codeJson 
+   */
+  static getCodeJsonVersion(codeJson) {
+    if(codeJson.version) {
+      return codeJson.version;
+    } else {
+      if(codeJson.agency && codeJson.projects) {
+        return '1.0.1';
+      } else if(codeJson.agency && codeJson.releases) {
+        return '2.0.0';
+      } else {
+        return '1.0.0';
+      }
+    }
+  }
+
+  /**
+   * Extract repositories from code.json by checking the schema version
+   * @param {object} codeJson 
+   * @returns {array} Array with repositories / projects found in the code.json
+   */
+  static getCodeJsonRepos(codeJson) {
+    const version = this.getCodeJsonVersion(codeJson);
+    const version2RegExp = /^2(\.\d+){0,2}$/;
+
+    if(version2RegExp.test(version)) {
+      return codeJson.releases ? codeJson.releases : null;
+    } else {
+      return codeJson.projects ? codeJson.projects : null;
+    }
+  }
 }
 
 module.exports = Utils;

@@ -1,0 +1,9 @@
+{
+    "exclude": [
+        "test/**/*.js"
+    ],
+    "report-dir": "./coverage",
+    "reporter": [
+        "lcov"
+    ]
+}

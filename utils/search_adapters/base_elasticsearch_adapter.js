@@ -1,4 +1,3 @@
-const CONFIG                        = require("../../config");
 const AbstractSearchAdapter         = require("./abstract_search_adapter");
 
 /**
@@ -9,27 +8,28 @@ const AbstractSearchAdapter         = require("./abstract_search_adapter");
  */
 class BaseElasticsearchAdapter extends AbstractSearchAdapter {
 
-    /**
+  /**
      * Creates an instance of SearcherESClient.
      *
      */
-    constructor() {
-        super();
+  constructor(config) {
+    super();
+    this.config = config;
+  }
+
+  getHostsFromConfig() {
+    let hosts = [];
+
+    if (Array.isArray(this.config.ES_HOST)) {
+      this.config.ES_HOST.forEach(url => {
+        hosts.push(url);
+      });
+    } else {
+      hosts.push(this.config.ES_HOST);
     }
 
-    getHostsFromConfig() {
-        let hosts = [];
-
-        if (Array.isArray(CONFIG.ES_HOST)) {
-            CONFIG.ES_HOST.forEach(host => {
-                hosts.push(`${host}:${CONFIG.ES_PORT}`)
-            });
-        } else {
-            hosts.push(`${CONFIG.ES_HOST}:${CONFIG.ES_PORT}`);
-        }
-
-        return hosts;
-    }
+    return hosts;
+  }
 }
 
 module.exports = BaseElasticsearchAdapter;

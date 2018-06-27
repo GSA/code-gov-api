@@ -1,10 +1,5 @@
-const request             = require("request");
-const async               = require("async");
 const _                   = require("lodash");
 const Readable            = require("stream").Readable;
-const JSONStream          = require("JSONStream");
-const moment              = require("moment");
-
 const Logger              = require("./logger");
 
 let logger = new Logger({ name: "search-stream" });
@@ -31,7 +26,7 @@ class SearchStream extends Readable {
         "from": this.from
       }
     });
-    this.logger.info(`Streaming search for:`, searchQuery);
+    this.logger.debug(`Streaming search for:`, searchQuery);
     this.current = this.from;
     this.client.search(searchQuery, (err, res) => {
       if (err) {

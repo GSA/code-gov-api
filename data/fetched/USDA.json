@@ -1,13 +1,25 @@
 {
   "agency": "USDA",
-  "projects": [
+  "version": "2.0.0",
+  "measurementType": {
+    "method": "projects"
+  },
+  "releases": [
     {
-      "organization": "OCIO",
+      "organization": "OC",
       "name": "DigitalGov Analytics",
       "description": "A Drupal Module that implements all features defined within the DAP Implementation Guide",
-      "license": "http: //www.gnu.org/licenses/old-licenses/gpl-2.0.html",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 1,
+      "repositoryURL": "https://www.drupal.org/project/gov_analytics",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "http://www.gnu.org/licenses/old-licenses/gpl-2.0.html",
+            "name": "GPL-2.0"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": 16,
       "tags": [
         "Drupal",
         "DigitalGov",
@@ -15,29 +27,146 @@
         "DAP"
       ],
       "contact": {
-        "email": "rone.williams@oc.usda.gov",
+        "email": "ron.williams@oc.usda.gov",
         "name": "Ron Williams"
       },
       "status": "Production",
-      "homepage": "https://www.drupal.org/project/gov_analytics",
       "vcs": "git",
-      "repository": "https://www.drupal.org/project/gov_analytics",
       "languages": [
         "Drupal",
         "php"
       ],
-      "updated": {
-        "metadataLastUpdated": "2016-12-22",
-        "lastModified": "2015-06-01"
+      "homepageURL": "https://www.drupal.org/project/gov_analytics",
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": "2017-05-15"
+      }
+    },
+    {
+      "organization": "OC",
+      "name": "LAP (LAMP without MySQL) on Docker",
+      "description": "Docker LAP/MySQL for Drupal and PHP",
+      "repositoryURL": "https://bitbucket.org/usdawcmaas/gov-drupal",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "http://www.gnu.org/licenses/old-licenses/gpl-2.0.html",
+            "name": "GPL-2.0"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": 480,
+      "tags": [
+        "Docker",
+        "Drupal",
+        "PHP",
+        "DevOps"
+      ],
+      "contact": {
+        "email": "ron.williams@oc.usda.gov",
+        "name": "Ron Williams"
+      },
+      "status": "Production",
+      "vcs": "git",
+      "languages": [
+        "salt"
+      ],
+      "homepageURL": "https://bitbucket.org/usdawcmaas/gov-drupal",
+      "date": {
+        "created": "2015-03-24",
+        "lastModified": "2017-12-22",
+        "metadataLastUpdated": "2018-04-02"
+      }
+    },
+    {
+      "organization": "OC",
+      "name": "USDA WCMaaS Rancher Provisioner",
+      "description": "Salt script for provisioning Rancher for Docker containers.",
+      "repositoryURL": "https://bitbucket.org/usdawcmaas/rancher-salt",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "http://www.gnu.org/licenses/old-licenses/gpl-2.0.html",
+            "name": "GPL-2.0"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": 240,
+      "tags": [
+        "Docker",
+        "Rancher",
+        "DevOps"
+      ],
+      "contact": {
+        "email": "ron.williams@oc.usda.gov",
+        "name": "Ron Williams"
+      },
+      "status": "Production",
+      "vcs": "git",
+      "languages": [
+        "salt"
+      ],
+      "homepageURL": "https://usdawcmaas.atlassian.net/wiki/display/PLATFORM/Platform",
+      "date": {
+        "created": "2016-08-30",
+        "lastModified": "2017-10-12",
+        "metadataLastUpdated": "2018-04-02"
+      }
+    },
+    {
+      "organization": "OC",
+      "name": "USDA WCMaaS Varnish Cache",
+      "description": "Containerization of the high performance web content cache",
+      "repositoryURL": "https://bitbucket.org/usdawcmaas/varnish-cache",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "http://www.gnu.org/licenses/old-licenses/gpl-2.0.html",
+            "name": "GPL-2.0"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": 200,
+      "tags": [
+        "Varnish",
+        "Rancher",
+        "DevOps"
+      ],
+      "contact": {
+        "email": "ron.williams@oc.usda.gov",
+        "name": "Ron Williams"
+      },
+      "status": "Production",
+      "vcs": "git",
+      "languages": [
+        "salt"
+      ],
+      "homepageURL": "https://bitbucket.org/usdawcmaas/varnish-cache",
+      "date": {
+        "created": "2017-01-25",
+        "lastModified": "2017-11-02",
+        "metadataLastUpdated": "2018-04-02"
       }
     },
     {
       "organization": "APHIS",
       "name": "Animal Disease Spread Model",
       "description": "A simulation of disease spread in livestock populations. Includes detection and containment simulation.",
-      "license": "https: //github.com/NAVADMC/ADSM/blob/master/LICENSE",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 1,
+      "repositoryURL": "https://github.com/NAVADMC/ADSM",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/NAVADMC/ADSM/blob/master/LICENSE",
+            "name": "BSD-2-Clause"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": 2838,
       "tags": [
         "USDA",
         "source code",
@@ -45,86 +174,96 @@
         "disease",
         "herds",
         "livestock",
-        "simulation"
+        "simulation",
+        "model"
       ],
       "contact": {
         "email": "Melissa.Schoenbaum@aphis.usda.gov",
         "name": "Missy Schoenbaum"
       },
       "status": "Beta",
-      "homepage": "https://github.com/NAVADMC/ADSM",
       "vcs": "git",
-      "repository": "https://github.com/NAVADMC/ADSM",
       "languages": [
-        "C",
         "python"
       ],
-      "updated": {
-        "metadataLastUpdated": "2016-12-22",
-        "lastModified": "2016-11-18"
+      "homepageURL": "https://github.com/NAVADMC/ADSM",
+      "date": {
+        "created": "",
+        "lastModified": "2018-01-11",
+        "metadataLastUpdated": "2018-03-27"
       }
     },
     {
-      "organization": "USDA",
-      "name": "USDA-APIs",
-      "description": "Do you have feedback, ideas, or questions for USDA APIs? Use this repository's Issue Tracker to join the discussion. ",
-      "license": "",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 0,
+      "organization": "APHIS",
+      "name": "Animal Disease Spread Model C-Engine",
+      "description": "The Simulation Backend for the Animal Disease Spread Model (ADSM) Project.",
+      "repositoryURL": "https://github.com/NAVADMC/ADSM-CEngine",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/NAVADMC/ADSM-CEngine/blob/master/LICENSE",
+            "name": "BSD-2-Clause"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": 0,
       "tags": [
         "USDA",
-        "API",
-        "APIs"
+        "source code",
+        "animal",
+        "disease",
+        "herds",
+        "livestock",
+        "simulation",
+        "model"
       ],
       "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "Melissa.Schoenbaum@aphis.usda.gov",
+        "name": "Missy Schoenbaum"
       },
-      "status": null,
+      "status": "Beta",
       "vcs": "git",
-      "repository": "https://github.com/USDA/USDA-APIs",
-      "homepage": "www.usda.gov/developer",
-      "downloadURL": "https://github.com/USDA/USDA-APIs/archive/master.zip",
-      "languages": [],
-      "partners": [],
-      "exemption": null,
-      "updated": {
-        "lastCommit": "2013-08-13T17:10:37.000Z",
-        "lastModified": "2016-11-10T13:04:49.000Z",
-        "metadataLastUpdated": "2016-11-29T00:16:44.627Z"
+      "languages": [
+        "C"
+      ],
+      "homepageURL": "https://github.com/NAVADMC/ADSM-CEngine",
+      "date": {
+        "created": "",
+        "lastModified": "2017-04-28",
+        "metadataLastUpdated": "2018-03-27"
       }
     },
     {
       "organization": "USDA",
       "name": "RIDB",
       "description": "Recreation Information Database",
-      "license": "",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 0,
       "tags": [
         "USDA",
         "source code",
         "recreation"
       ],
       "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "source.code@ocio.usda.gov"
       },
-      "status": null,
+      "status": "Production",
       "vcs": "git",
-      "repository": "https://github.com/USDA/RIDB",
-      "homepage": "https://usda.github.io/RIDB",
       "downloadURL": "https://github.com/USDA/RIDB/archive/master.zip",
-      "languages": [],
-      "partners": [],
-      "exemption": null,
-      "updated": {
-        "lastCommit": "2016-09-30T18:04:31.000Z",
-        "lastModified": "2016-11-10T13:04:38.000Z",
+      "repositoryURL": "https://github.com/USDA/RIDB",
+      "homepageURL": "https://usda.github.io/RIDB",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "none",
+            "name": "none"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": 0,
+      "date": {
+        "created": "",
+        "lastModified": "",
         "metadataLastUpdated": "2016-11-29T00:16:44.627Z"
       }
     },
@@ -132,9 +271,6 @@
       "organization": "USDA",
       "name": "data-standards",
       "description": "A collaborative site for official USDA data elements and data standards.",
-      "license": "",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 0,
       "tags": [
         "USDA",
         "source code",
@@ -142,302 +278,175 @@
         "standards"
       ],
       "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "source.code@ocio.usda.gov"
       },
-      "status": null,
+      "status": "Production",
       "vcs": "git",
-      "repository": "https://github.com/USDA/data-standards",
-      "homepage": "https://usda.github.io/data-standards",
       "downloadURL": "https://github.com/USDA/data-standards/archive/master.zip",
-      "languages": [],
-      "partners": [],
-      "exemption": null,
-      "updated": {
-        "lastCommit": "2016-11-08T19:37:54.000Z",
-        "lastModified": "2016-11-10T13:04:44.000Z",
+      "repositoryURL": "https://github.com/USDA/data-standards",
+      "homepageURL": "https://usda.github.io/data-standards",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/USDA/data-standards/blob/gh-pages/LICENSE",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": 0,
+      "date": {
+        "created": "",
+        "lastModified": "",
         "metadataLastUpdated": "2016-11-29T00:16:44.627Z"
       }
     },
     {
       "organization": "ARS-ARGIL",
       "name": "BovineTFBS",
-      "description": "CDH Conserved Transcription Factor Binding Sites",
-      "license": "",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 0,
+      "description": "USDA-ARS Animal Genomics and Improvement Laboratory; CDH Conserved Transcription Factor Binding Sites",
       "tags": [],
       "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "source.code@ocio.usda.gov"
       },
-      "status": null,
+      "status": "Production",
       "vcs": "git",
-      "repository": "https://github.com/USDA-ARS-AGIL/BovineTFBS",
-      "homepage": null,
       "downloadURL": "https://github.com/USDA-ARS-AGIL/BovineTFBS/archive/master.zip",
-      "languages": [],
-      "partners": [],
-      "exemption": null,
-      "updated": {
-        "lastCommit": "2015-06-22T23:35:54.000Z",
-        "lastModified": "2015-06-12T00:39:42.000Z",
+      "repositoryURL": "https://github.com/USDA-ARS-AGIL/BovineTFBS",
+      "homepageURL": "https://github.com/USDA-ARS-AGIL/BovineTFBS",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "none",
+            "name": "none"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": 0,
+      "date": {
+        "created": "",
+        "lastModified": "",
         "metadataLastUpdated": "2016-11-29T00:16:44.627Z"
       }
     },
     {
       "organization": "ARS-ARGIL",
       "name": "cattleCNV",
-      "description": null,
-      "license": "",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 0,
+      "description": "USDA-ARS Animal Genomics and Improvement Laboratory; Cattle Copy Number Variation",
       "tags": [],
       "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "source.code@ocio.usda.gov"
       },
-      "status": null,
+      "status": "Ideation",
       "vcs": "git",
-      "repository": "https://github.com/USDA-ARS-AGIL/cattleCNV",
-      "homepage": null,
       "downloadURL": "https://github.com/USDA-ARS-AGIL/cattleCNV/archive/master.zip",
-      "languages": [],
-      "partners": [],
-      "exemption": null,
-      "updated": {
-        "lastCommit": "2015-06-22T23:26:53.000Z",
-        "lastModified": "2015-06-22T22:15:14.000Z",
-        "metadataLastUpdated": "2016-11-29T00:16:44.628Z"
-      }
-    },
-    {
-      "organization": "ARS-ARGIL",
-      "name": "cattleSD",
-      "description": null,
-      "license": "",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 0,
-      "tags": [],
-      "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+      "repositoryURL": "https://github.com/USDA-ARS-AGIL/cattleCNV",
+      "homepageURL": "https://github.com/USDA-ARS-AGIL/cattleCNV",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "none",
+            "name": "none"
+          }
+        ],
+        "usageType": "openSource"
       },
-      "status": null,
-      "vcs": "git",
-      "repository": "https://github.com/USDA-ARS-AGIL/cattleSD",
-      "homepage": null,
-      "downloadURL": "https://github.com/USDA-ARS-AGIL/cattleSD/archive/master.zip",
-      "languages": [],
-      "partners": [],
-      "exemption": null,
-      "updated": {
-        "lastCommit": "2015-06-12T00:41:19.000Z",
-        "lastModified": "2015-06-12T00:41:19.000Z",
-        "metadataLastUpdated": "2016-11-29T00:16:44.628Z"
-      }
-    },
-    {
-      "organization": "ARS-ARGIL",
-      "name": "Alusite",
-      "description": null,
-      "license": "",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 0,
-      "tags": [],
-      "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
-      },
-      "status": null,
-      "vcs": "git",
-      "repository": "https://github.com/USDA-ARS-AGIL/Alusite",
-      "homepage": null,
-      "downloadURL": "https://github.com/USDA-ARS-AGIL/Alusite/archive/master.zip",
-      "languages": [],
-      "partners": [],
-      "exemption": null,
-      "updated": {
-        "lastCommit": "2015-06-12T00:41:56.000Z",
-        "lastModified": "2015-06-12T00:41:56.000Z",
+      "laborHours": 0,
+      "date": {
+        "created": "",
+        "lastModified": "",
         "metadataLastUpdated": "2016-11-29T00:16:44.628Z"
       }
     },
     {
       "organization": "ARS-ARGIL",
       "name": "tfbsConsSites",
-      "description": null,
-      "license": "",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 0,
+      "description": "USDA-ARS Animal Genomics and Improvement Laboratory; Cattle Genome transcription factor binding sites (TFBS) site prediction",
       "tags": [],
       "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "source.code@ocio.usda.gov"
       },
-      "status": null,
+      "status": "Production",
       "vcs": "git",
-      "repository": "https://github.com/USDA-ARS-AGIL/tfbsConsSites",
-      "homepage": null,
       "downloadURL": "https://github.com/USDA-ARS-AGIL/tfbsConsSites/archive/master.zip",
-      "languages": [],
-      "partners": [],
-      "exemption": null,
-      "updated": {
-        "lastCommit": "2015-06-22T20:53:23.000Z",
-        "lastModified": "2015-06-12T00:42:16.000Z",
-        "metadataLastUpdated": "2016-11-29T00:16:44.628Z"
-      }
-    },
-    {
-      "organization": "ARS-ARGIL",
-      "name": "divergence",
-      "description": null,
-      "license": "",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 0,
-      "tags": [],
-      "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+      "repositoryURL": "https://github.com/USDA-ARS-AGIL/tfbsConsSites",
+      "homepageURL": "https://github.com/USDA-ARS-AGIL/tfbsConsSites",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "none",
+            "name": "none"
+          }
+        ],
+        "usageType": "openSource"
       },
-      "status": null,
-      "vcs": "git",
-      "repository": "https://github.com/USDA-ARS-AGIL/divergence",
-      "homepage": null,
-      "downloadURL": "https://github.com/USDA-ARS-AGIL/divergence/archive/master.zip",
-      "languages": [],
-      "partners": [],
-      "exemption": null,
-      "updated": {
-        "lastCommit": "2015-06-12T00:42:45.000Z",
-        "lastModified": "2015-06-12T00:42:45.000Z",
-        "metadataLastUpdated": "2016-11-29T00:16:44.628Z"
-      }
-    },
-    {
-      "organization": "ARS-ARGIL",
-      "name": "BovineHapMap",
-      "description": null,
-      "license": "",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 0,
-      "tags": [],
-      "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
-      },
-      "status": null,
-      "vcs": "git",
-      "repository": "https://github.com/USDA-ARS-AGIL/BovineHapMap",
-      "homepage": null,
-      "downloadURL": "https://github.com/USDA-ARS-AGIL/BovineHapMap/archive/master.zip",
-      "languages": [],
-      "partners": [],
-      "exemption": null,
-      "updated": {
-        "lastCommit": "2015-06-12T00:44:47.000Z",
-        "lastModified": "2015-06-12T00:44:46.000Z",
-        "metadataLastUpdated": "2016-11-29T00:16:44.628Z"
-      }
-    },
-    {
-      "organization": "ARS-ARGIL",
-      "name": "usda-ars-agil.github.io",
-      "description": null,
-      "license": "",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 0,
-      "tags": [],
-      "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
-      },
-      "status": null,
-      "vcs": "git",
-      "repository": "https://github.com/USDA-ARS-AGIL/usda-ars-agil.github.io",
-      "homepage": null,
-      "downloadURL": "https://github.com/USDA-ARS-AGIL/usda-ars-agil.github.io/archive/master.zip",
-      "languages": [],
-      "partners": [],
-      "exemption": null,
-      "updated": {
-        "lastCommit": "2016-04-29T21:22:25.000Z",
-        "lastModified": "2016-04-29T21:22:26.000Z",
+      "laborHours": 0,
+      "date": {
+        "created": "",
+        "lastModified": "",
         "metadataLastUpdated": "2016-11-29T00:16:44.628Z"
       }
     },
     {
       "organization": "ERS",
       "name": "website-content-api",
-      "description": null,
-      "license": "",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 0,
+      "description": "Programmatic access to the primary content areas of the ERS public website, including Topics, Publications, Amber Waves online magazine, etc.",
       "tags": [],
       "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "source.code@ocio.usda.gov"
       },
-      "status": null,
+      "status": "Production",
       "vcs": "git",
-      "repository": "https://github.com/USDA-ERS/website-content-api",
-      "homepage": null,
       "downloadURL": "https://github.com/USDA-ERS/website-content-api/archive/master.zip",
-      "languages": [],
-      "partners": [],
-      "exemption": null,
-      "updated": {
-        "lastCommit": "2013-12-05T19:03:56.000Z",
-        "lastModified": "2014-06-25T15:46:54.000Z",
+      "repositoryURL": "https://github.com/USDA-ERS/website-content-api",
+      "homepageURL": "https://github.com/USDA-ERS/website-content-api",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "none",
+            "name": "none"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": 0,
+      "date": {
+        "created": "",
+        "lastModified": "",
         "metadataLastUpdated": "2016-11-29T00:16:44.629Z"
-      }
+      },
+      "disclaimerURL": "https://github.com/USDA-ERS/website-content-api/blob/master/API%20Terms%20of%20Service.md"
     },
     {
       "organization": "ERS",
       "name": "widgets",
       "description": "Source code for widgets using ERS APIs.",
-      "license": "",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 0,
       "tags": [],
       "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "source.code@ocio.usda.gov"
       },
-      "status": null,
+      "status": "Production",
       "vcs": "git",
-      "repository": "https://github.com/USDA-ERS/widgets",
-      "homepage": null,
       "downloadURL": "https://github.com/USDA-ERS/widgets/archive/master.zip",
-      "languages": [],
-      "partners": [],
-      "exemption": null,
-      "updated": {
-        "lastCommit": "2013-11-29T20:31:58.000Z",
-        "lastModified": "2014-08-31T09:16:07.000Z",
+      "languages": [
+        "javascript"
+      ],
+      "repositoryURL": "https://github.com/USDA-ERS/widgets",
+      "homepageURL": "https://github.com/USDA-ERS/widgets",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "none",
+            "name": "none"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": 0,
+      "date": {
+        "created": "",
+        "lastModified": "",
         "metadataLastUpdated": "2016-11-29T00:16:44.629Z"
       }
     },
@@ -445,55 +454,64 @@
       "organization": "ERS",
       "name": "data-apis",
       "description": "The Data API provides programmatic access to select data sets.",
-      "license": "",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 0,
       "tags": [],
       "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "source.code@ocio.usda.gov"
       },
-      "status": null,
+      "status": "Production",
       "vcs": "git",
-      "repository": "https://github.com/USDA-ERS/data-apis",
-      "homepage": "http://www.ers.usda.gov/developer/data-apis.aspx",
       "downloadURL": "https://github.com/USDA-ERS/data-apis/archive/master.zip",
-      "languages": [],
+      "languages": [
+        "C#",
+        "jQuery",
+        "python",
+        "ruby"
+      ],
       "partners": [],
-      "exemption": null,
-      "updated": {
-        "lastCommit": "2013-12-12T08:06:27.000Z",
-        "lastModified": "2016-06-16T14:43:46.000Z",
+      "repositoryURL": "https://github.com/USDA-ERS/data-apis",
+      "homepageURL": "http://www.ers.usda.gov/developer/data-apis.aspx",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "none",
+            "name": "none"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": 0,
+      "date": {
+        "created": "",
+        "lastModified": "",
         "metadataLastUpdated": "2016-11-29T00:16:44.629Z"
       }
     },
     {
       "organization": "ERS",
       "name": "geospatial-apis",
-      "description": null,
-      "license": "",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 0,
+      "description": "ERS Geospatial APIs",
       "tags": [],
       "contact": {
-        "email": "eugen2002@gmx.net",
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "source.code@ocio.usda.gov"
       },
-      "status": null,
+      "status": "Production",
       "vcs": "git",
-      "repository": "https://github.com/USDA-ERS/geospatial-apis",
-      "homepage": null,
       "downloadURL": "https://github.com/USDA-ERS/geospatial-apis/archive/master.zip",
-      "languages": [],
-      "partners": [],
-      "exemption": null,
-      "updated": {
-        "lastCommit": "2013-12-12T08:15:08.000Z",
-        "lastModified": "2016-11-21T18:56:59.000Z",
+      "repositoryURL": "https://github.com/USDA-ERS/geospatial-apis",
+      "homepageURL": "https://github.com/USDA-ERS/geospatial-apis",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "none",
+            "name": "none"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": 0,
+      "date": {
+        "created": "",
+        "lastModified": "",
         "metadataLastUpdated": "2016-11-29T00:16:44.629Z"
       }
     },
@@ -501,167 +519,97 @@
       "organization": "FSA",
       "name": "fsa-style",
       "description": "USDA-FSA's VIsual Language and CSS Framework",
-      "license": "",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 0,
       "tags": [],
       "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "source.code@ocio.usda.gov"
       },
-      "status": null,
+      "status": "Production",
       "vcs": "git",
-      "repository": "https://github.com/USDA-FSA/fsa-style",
-      "homepage": "http://usda-fsa.github.io/fsa-style/",
       "downloadURL": "https://github.com/USDA-FSA/fsa-style/archive/master.zip",
       "languages": [],
       "partners": [],
-      "exemption": null,
-      "updated": {
-        "lastCommit": "2016-11-28T22:05:34.000Z",
-        "lastModified": "2016-11-28T00:58:35.000Z",
-        "metadataLastUpdated": "2016-11-29T00:16:44.629Z"
+      "repositoryURL": "https://github.com/USDA-FSA/fsa-style",
+      "homepageURL": "http://usda-fsa.github.io/fsa-style/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "none",
+            "name": "none"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": 0,
+      "date": {
+        "created": "",
+        "lastModified": "2017-07-24",
+        "metadataLastUpdated": "2017-11-06"
       }
     },
     {
       "organization": "FSA",
       "name": "fsa-design-system",
       "description": "Design System site for USDA Farm Service Agency digital products",
-      "license": "",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 0,
       "tags": [],
       "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "source.code@ocio.usda.gov"
       },
-      "status": null,
+      "status": "Production",
       "vcs": "git",
-      "repository": "https://github.com/USDA-FSA/fsa-design-system",
-      "homepage": "http://usda-fsa.github.io/fsa-design-system",
       "downloadURL": "https://github.com/USDA-FSA/fsa-design-system/archive/master.zip",
-      "languages": [],
-      "partners": [],
-      "exemption": null,
-      "updated": {
-        "lastCommit": "2016-11-28T22:52:06.000Z",
-        "lastModified": "2016-11-28T00:58:53.000Z",
-        "metadataLastUpdated": "2016-11-29T00:16:44.629Z"
-      }
-    },
-    {
-      "organization": "FSA",
-      "name": "fsa-design-system-draft-content",
-      "description": "[ARCHIVED] Drafting content for FSA Design System, since migrated to https://github.com/USDA-FSA/fsa-design-system",
-      "license": "",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 0,
-      "tags": [],
-      "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+      "repositoryURL": "https://github.com/USDA-FSA/fsa-design-system",
+      "homepageURL": "http://usda-fsa.github.io/fsa-design-system",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/USDA-FSA/fsa-design-system/blob/gh-pages/LICENSE.md",
+            "name": "CC0"
+          },
+          {
+            "URL": "http://scripts.sil.org/OFL",
+            "name": "SIL Open Font License"
+          },
+          {
+            "URL": "https://github.com/scottjehl/Respond/blob/master/LICENSE-MIT",
+            "name": "MIT"
+          }
+        ],
+        "usageType": "openSource"
       },
-      "status": null,
-      "vcs": "git",
-      "repository": "https://github.com/USDA-FSA/fsa-design-system-draft-content",
-      "homepage": "",
-      "downloadURL": "https://github.com/USDA-FSA/fsa-design-system-draft-content/archive/master.zip",
-      "languages": [],
-      "partners": [],
-      "exemption": null,
-      "updated": {
-        "lastCommit": "2016-08-24T14:28:51.000Z",
-        "lastModified": "2016-10-18T16:12:15.000Z",
-        "metadataLastUpdated": "2016-11-29T00:16:44.629Z"
-      }
-    },
-    {
-      "organization": "FSA",
-      "name": "usda-fsa.github.io",
-      "description": null,
-      "license": "",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 0,
-      "tags": [],
-      "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+      "laborHours": 0,
+      "date": {
+        "created": "",
+        "lastModified": "201-10-24",
+        "metadataLastUpdated": "2017-11-06"
       },
-      "status": null,
-      "vcs": "git",
-      "repository": "https://github.com/USDA-FSA/usda-fsa.github.io",
-      "homepage": "https://usda-fsa.github.io/",
-      "downloadURL": "https://github.com/USDA-FSA/usda-fsa.github.io/archive/master.zip",
-      "languages": [],
-      "partners": [],
-      "exemption": null,
-      "updated": {
-        "lastCommit": "2016-08-15T15:07:47.000Z",
-        "lastModified": "2016-07-11T18:31:39.000Z",
-        "metadataLastUpdated": "2016-11-29T00:16:44.629Z"
-      }
+      "disclaimerURL": "https://github.com/USDA-FSA/fsa-design-system/blob/gh-pages/CONTRIBUTING.md"
     },
     {
       "organization": "FSA",
       "name": "playbook-draft-content",
       "description": "Drafting content for an FSA Playbook",
-      "license": "",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 0,
       "tags": [],
       "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "source.code@ocio.usda.gov"
       },
-      "status": null,
+      "status": "Ideation",
       "vcs": "git",
-      "repository": "https://github.com/USDA-FSA/playbook-draft-content",
-      "homepage": "",
       "downloadURL": "https://github.com/USDA-FSA/playbook-draft-content/archive/master.zip",
-      "languages": [],
-      "partners": [],
-      "exemption": null,
-      "updated": {
-        "lastCommit": "2016-10-20T20:36:46.000Z",
-        "lastModified": "2016-10-18T16:17:35.000Z",
-        "metadataLastUpdated": "2016-11-29T00:16:44.630Z"
-      }
-    },
-    {
-      "organization": "VS",
-      "name": "public",
-      "description": "This repo has moved... https://github.com/USDA-VS",
-      "license": "",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 0,
-      "tags": [],
-      "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+      "repositoryURL": "https://github.com/USDA-FSA/playbook-draft-content",
+      "homepageURL": "https://github.com/USDA-FSA/playbook-draft-content",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/USDA-FSA/playbook-draft-content/blob/master/LICENSE.md",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource"
       },
-      "status": null,
-      "vcs": "git",
-      "repository": "https://github.com/USDA-VS/public",
-      "homepage": "",
-      "downloadURL": "https://github.com/USDA-VS/public/archive/master.zip",
-      "languages": [],
-      "partners": [],
-      "exemption": null,
-      "updated": {
-        "lastCommit": "2016-08-03T14:53:03.000Z",
-        "lastModified": "2016-08-03T14:50:53.000Z",
+      "laborHours": 0,
+      "date": {
+        "created": "",
+        "lastModified": "",
         "metadataLastUpdated": "2016-11-29T00:16:44.630Z"
       }
     },
@@ -669,112 +617,101 @@
       "organization": "VS",
       "name": "reference_guided_assembly",
       "description": "USDA APHIS Veterinary Services (VS) virus, mainly influenza, Kraken / Krona and reference guided assembly.",
-      "license": "",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 0,
       "tags": [],
       "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "source.code@ocio.usda.gov"
       },
-      "status": null,
+      "status": "Production",
       "vcs": "git",
-      "repository": "https://github.com/USDA-VS/reference_guided_assembly",
-      "homepage": null,
       "downloadURL": "https://github.com/USDA-VS/reference_guided_assembly/archive/master.zip",
-      "languages": [],
-      "partners": [],
-      "exemption": null,
-      "updated": {
-        "lastCommit": "2016-11-24T11:08:31.000Z",
-        "lastModified": "2016-11-01T15:28:02.000Z",
-        "metadataLastUpdated": "2016-11-29T00:16:44.630Z"
+      "languages": [
+        "shell",
+        "perl",
+        "python"
+      ],
+      "repositoryURL": "https://github.com/USDA-VS/reference_guided_assembly",
+      "homepageURL": "https://github.com/USDA-VS/reference_guided_assembly",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "none",
+            "name": "none"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": 0,
+      "date": {
+        "created": "",
+        "lastModified": "2017-11-03",
+        "metadataLastUpdated": "2017-11-06"
       }
     },
     {
       "organization": "VS",
       "name": "snp_analysis",
       "description": "USDA APHIS Veterinary Services (VS) Mycobacterium tuberculosis complex, mainly M. bovis, and Brucella sp. genotyping from whole genome sequence (WGS) outputting BAM, VCF, SNP tables and phylogentic trees. ",
-      "license": "",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 0,
       "tags": [],
       "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "source.code@ocio.usda.gov"
       },
-      "status": null,
+      "status": "Production",
       "vcs": "git",
-      "repository": "https://github.com/USDA-VS/snp_analysis",
-      "homepage": null,
       "downloadURL": "https://github.com/USDA-VS/snp_analysis/archive/master.zip",
-      "languages": [],
+      "languages": [
+        "python"
+      ],
       "partners": [],
-      "exemption": null,
-      "updated": {
-        "lastCommit": "2016-11-25T13:58:44.000Z",
-        "lastModified": "2016-10-25T12:07:16.000Z",
-        "metadataLastUpdated": "2016-11-29T00:16:44.630Z"
-      }
-    },
-    {
-      "organization": "VS",
-      "name": "playground",
-      "description": "Tod Stuber's miscellaneous and experimental scripts",
-      "license": "",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 0,
-      "tags": [],
-      "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+      "repositoryURL": "https://github.com/USDA-VS/snp_analysis",
+      "homepageURL": "https://github.com/USDA-VS/snp_analysis",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "none",
+            "name": "none"
+          }
+        ],
+        "usageType": "openSource"
       },
-      "status": null,
-      "vcs": "git",
-      "repository": "https://github.com/USDA-VS/playground",
-      "homepage": "",
-      "downloadURL": "https://github.com/USDA-VS/playground/archive/master.zip",
-      "languages": [],
-      "partners": [],
-      "exemption": null,
-      "updated": {
-        "lastCommit": "2016-11-15T13:50:41.000Z",
-        "lastModified": "2016-10-22T20:42:24.000Z",
-        "metadataLastUpdated": "2016-11-29T00:16:44.630Z"
+      "laborHours": 0,
+      "date": {
+        "created": "",
+        "lastModified": "2017-11-03",
+        "metadataLastUpdated": "2017-11-06"
       }
     },
     {
       "organization": "VS",
       "name": "ksnp",
       "description": "kSNP repository to continue development, provide additional documentation and commenting of source files and collaboration.",
-      "license": "",
-      "openSourceProject": 1,
-      "governmentWideReuseProject": 0,
       "tags": [],
       "contact": {
-        "email": null,
-        "name": null,
-        "URL": null,
-        "phone": null
+        "email": "source.code@ocio.usda.gov"
       },
-      "status": null,
+      "status": "Production",
       "vcs": "git",
-      "repository": "https://github.com/USDA-VS/ksnp",
-      "homepage": "",
       "downloadURL": "https://github.com/USDA-VS/ksnp/archive/master.zip",
-      "languages": [],
-      "partners": [],
-      "exemption": null,
-      "updated": {
-        "lastCommit": "2016-11-28T19:46:48.000Z",
-        "lastModified": "2016-11-28T19:46:49.000Z",
-        "metadataLastUpdated": "2016-11-29T00:16:44.631Z"
+      "languages": [
+        "perl",
+        "shell",
+        "python"
+      ],
+      "repositoryURL": "https://github.com/USDA-VS/ksnp",
+      "homepageURL": "https://github.com/USDA-VS/ksnp",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "none",
+            "name": "none"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": 0,
+      "date": {
+        "created": "",
+        "lastModified": "2016-12-20",
+        "metadataLastUpdated": "2017-11-06"
       }
     }
   ]

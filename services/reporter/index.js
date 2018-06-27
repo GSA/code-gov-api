@@ -5,19 +5,19 @@
 
 ******************************************************************************/
 
-const _                   = require("lodash");
-const fs                  = require("fs");
-const path                = require("path");
-const Jsonfile            = require("jsonfile");
-const Utils               = require("../../utils");
-const Logger              = require("../../utils/logger");
-const config              = require("../../config");
+const Jsonfile = require("jsonfile");
+const Logger = require("../../utils/logger");
+const getConfig = require("../../config");
+const StatusIndexer = require("../indexer/status");
+const ElasticsearchAdapter = require("../../utils/search_adapters/elasticsearch_adapter");
+const elasticsearchMappings = require('../../indexes/status/mapping.json');
+const elasticsearchSettings = require('../../indexes/status/settings.json');
 
 class Reporter {
 
-  constructor() {
-    this.logger = new Logger({ name: "reporter" });
-
+  constructor(config, loggerName) {
+    this.logger = new Logger(loggerName);
+    this.config = config;
     this.report = {
       timestamp: (new Date()).toString(),
       statuses: {}
@@ -47,7 +47,6 @@ class Reporter {
     this.report.statuses[itemName]["issues"].push(issuesObj);
   }
 
-
   reportVersion(itemName, version) {
     this._createReportItemIfDoesntExist(itemName);
     this.report.statuses[itemName]["version"] = version;
@@ -63,21 +62,44 @@ class Reporter {
     this.report.statuses[itemName]["requirements"] = requirements;
   }
 
-  writeReportToFile(callback) {
-    this.logger.info("Writing report to file...");
-    const reportFilepath = path.join(
-      __dirname,
-      "../../",
-      config.REPORT_FILEPATH
-    );
-    Jsonfile.writeFile(reportFilepath, this.report, (err) => {
-      if (err) {
-        this.logger.error(err);
-      }
-      return callback(err);
-    })
+  reportCodeJsonFetchResult(itemName, fetchResult) {
+    this._createReportItemIfDoesntExist(itemName);
+    this.report.statuses[itemName]["fetchResult"] = fetchResult;
   }
 
+  reportFallbackUsed(itemName, wasFallbackUsed) {
+    this._createReportItemIfDoesntExist(itemName);
+    this.report.statuses[itemName]["wasFallbackUsed"] = wasFallbackUsed;
+  }
+
+  indexReport(index) {
+    const params = {
+      "esIndex": index ? index : undefined,
+      "esAlias": "repos",
+      "esType": "status",
+      "esMapping": elasticsearchMappings,
+      "esSettings": elasticsearchSettings
+    };
+    const adapter = new ElasticsearchAdapter(this.config);
+
+    const statusIndexer = new StatusIndexer(adapter, params);
+
+    return statusIndexer.indexStatus(this);
+  }
+
+  writeReportToFile() {
+    return new Promise((fulfill, reject) => {
+      this.logger.info("Writing report to file...");
+      this.report.timestamp = (new Date()).toString();
+
+      Jsonfile.writeFile(this.config.REPORT_FILEPATH, this.report, {spaces: 2}, (err) => {
+        if (err) {
+          reject(err);
+        }
+        fulfill(err);
+      });
+    });
+  }
 }
 
-module.exports = new Reporter();
+module.exports = new Reporter(getConfig(process.env.NODE_ENV), { name: "reporter" });

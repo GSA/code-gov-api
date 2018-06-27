@@ -1,4 +1,4 @@
-var stopwords = [
+let stopwords = [
   "a", "able", "about", "across", "after", "all", "almost",
   "also", "am", "among", "an", "and", "any", "are", "as",
   "at", "be", "because", "been", "but", "by", "can", "cannot",
@@ -29,9 +29,9 @@ var stopwords = [
 
 // removes stopwords from a phrase
 function removeStopWords(phrase) {
-  var common = stopwords;
+  let common = stopwords;
   //var wordArr = phrase.match(/\w+/g),
-  var wordArr = phrase.split(/(?=\w)\b|\W/),
+  let wordArr = phrase.split(/(?=\w)\b|\W/),
     commonObj = {},
     uncommonArr = [],
     word, i;
