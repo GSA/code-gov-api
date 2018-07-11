@@ -1,6 +1,6 @@
 applications:
 - name: code-api
-  memory: 1024M
+  memory: 512M
   instances: 1
   disk_quota: 1024M
   health-check-type: http
