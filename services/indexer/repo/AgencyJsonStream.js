@@ -8,6 +8,7 @@ const { getValidator } = require('../../validator');
 const Formatter = require('../../formatter');
 const Reporter = require("../../reporter");
 const Utils = require("../../../utils");
+const { getRepoInformation, getGithubClient, isGithubUrl} = require('../../../integrations');
 
 const logger = new Logger({name: 'agency-json-stream'});
 
@@ -25,7 +26,6 @@ class AgencyJsonStream extends Transform {
     logger.debug('Entered saveFetchedCodeJson - Agency: ', agencyAcronym);
 
     return new Promise((fulfill, reject) => {
-      Jsonfile.spaces = 2;
       const fetchedFilepath = path.join(this.fetchedDir, `${agencyAcronym}.json`);
 
       try {
@@ -210,6 +210,11 @@ class AgencyJsonStream extends Transform {
       })
     );
   }
+  _getGithubData(repo, config) {
+    const githubClient = getGithubClient(config.GITHUB_AUTH_TYPE, config.GITHUB_TOKEN);
+
+    return getRepoInformation(githubClient, repo.repositoryURL, 100, config, logger);
+  }
 
   _transform(agency, enc, callback) {
     logger.debug('Entered _transform - Agency: ', agency.acronym);
@@ -218,6 +223,24 @@ class AgencyJsonStream extends Transform {
     this._getAgencyCodeJson(agency)
       .then(codeJson => this._validateAgencyRepos(agency, codeJson))
       .then(validatedRepos => this._formatRepos(agency, validatedRepos))
+      .then(formattedRepos => {
+        return Promise.all(
+          formattedRepos.map(repo => {
+            if(isGithubUrl(repo.repositoryURL)) {
+              return this._getGithubData(repo, this.config)
+                .then(githubInfo => {
+                  repo.githubInfo = githubInfo;
+                  return repo;
+                })
+                .catch(error => {
+                  logger.error(error);
+                  return repo;
+                });
+            }
+            return repo;
+          })
+        ).then(values => values);
+      })
       .then(formattedRepos => formattedRepos.forEach(repo => this.push(repo)))
       .then(() => callback())
       .catch(error => {
