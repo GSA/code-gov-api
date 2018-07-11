@@ -133,7 +133,7 @@ module.exports = function () {
     },
     {
       validation: function (target) {
-        if(target['permissions.usageType'].match(/^excempt.*/g)){
+        if(target['permissions.usageType'] && target['permissions.usageType'].match(/^excempt.*/g)){
           return target['permissions.exemptionText'] ? true : false;
         }
         return false;
