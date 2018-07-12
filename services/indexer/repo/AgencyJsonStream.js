@@ -55,7 +55,7 @@ class AgencyJsonStream extends Transform {
   }
 
   _getAgencyCodeJson(agency){
-    logger.info('Entered saveFetchedCodeJson - Agency: ', agency.acronym);
+    logger.info('Entered getAgencyCodeJson - Agency: ', agency.acronym);
 
     if(this.config.prod_envs.includes(process.env.NODE_ENV)) {
       const errorMessage = 'FAILURE: There was an error fetching the code.json:';
