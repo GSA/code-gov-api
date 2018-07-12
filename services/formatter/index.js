@@ -157,7 +157,7 @@ class Formatter {
     return new Promise((resolve, reject) => {
       let formattedRepo;
       try {
-        if(schemaVersion === '2.0.1') {
+        if(schemaVersion === '2.0.0' || schemaVersion === '2.0.1') {
           formattedRepo = this._formatRepo(repo);
         } else {
           this._upgradeProject(repo);
