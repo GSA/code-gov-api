@@ -174,9 +174,9 @@ module.exports = function () {
         let tmpScore = 0;
         if (target['permissions.usageType'] === 'openSource') {
           // we want to give more weight to open source repos
-          tmpScore = 1;
+          tmpScore = Utils.getFieldWeight('repositoryURL') + 1;
         } else {
-          tmpScore = Utils.getFieldWeight('languages');
+          tmpScore = Utils.getFieldWeight('repositoryURL');
         }
 
         target.score = Utils.getScore(target,tmpScore);
