@@ -1,6 +1,5 @@
 const path = require('path');
 const { Transform } = require("stream");
-// const request = require("request");
 const fetch = require('node-fetch');
 const Jsonfile = require("jsonfile");
 const Logger = require('../../../utils/logger');
@@ -8,7 +7,8 @@ const { getValidator } = require('../../validator');
 const Formatter = require('../../formatter');
 const Reporter = require("../../reporter");
 const Utils = require("../../../utils");
-
+const RulesEngine = require('simple-rules-engine');
+const getRules = require('../../validator/rules');
 const logger = new Logger({name: 'agency-json-stream'});
 
 class AgencyJsonStream extends Transform {
@@ -55,12 +55,13 @@ class AgencyJsonStream extends Transform {
   }
 
   _getAgencyCodeJson(agency){
-    logger.info('Entered getAgencyCodeJson - Agency: ', agency.acronym);
+    logger.info('Entered _getAgencyCodeJson - Agency: ', agency.acronym);
 
     if(this.config.prod_envs.includes(process.env.NODE_ENV)) {
       const errorMessage = 'FAILURE: There was an error fetching the code.json:';
       return fetch(agency.codeUrl, {
-        headers: { 'Content-Type': 'application/json', 'User-Agent': 'code.gov' }
+        headers: { 'Content-Type': 'application/json', 'User-Agent': 'code.gov' },
+        timeout: 180000
       })
         .then(response => {
           if(response.status >= 400) {
@@ -218,7 +219,16 @@ class AgencyJsonStream extends Transform {
     this._getAgencyCodeJson(agency)
       .then(codeJson => this._validateAgencyRepos(agency, codeJson))
       .then(validatedRepos => this._formatRepos(agency, validatedRepos))
-      .then(formattedRepos => formattedRepos.forEach(repo => this.push(repo)))
+      .then(formattedRepos => {
+        const engine = new RulesEngine(getRules());
+
+        return Promise.all(
+          formattedRepos.map(repo => {
+            return engine.execute(repo);
+          })
+        );
+      })
+      .then(scoredRepos => scoredRepos.forEach(repo => this.push(repo)))
       .then(() => callback())
       .catch(error => {
         logger.error(error);

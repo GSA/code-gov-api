@@ -1,0 +1,500 @@
+{
+  "repo": {
+    "properties": {
+      "repoID": {
+        "type": "string",
+        "index": "not_analyzed"
+      },
+      "agency": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "analyzer": "keyword_ci",
+            "fields": {
+              "_fulltext": {
+                "type": "string",
+                "analyzer": "englishfulltext"
+              }
+            }
+          },
+          "acronym": {
+            "type": "string",
+            "analyzer": "keyword_ci",
+            "fields": {
+              "_fulltext": {
+                "type": "string",
+                "analyzer": "keyword_ci"
+              }
+            }
+          },
+          "website": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "codeUrl": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "requirements": {
+            "type": "nested",
+            "properties": {
+              "agencyWidePolicy": {
+                "type": "float",
+                "index": "not_analyzed"
+              },
+              "openSourceRequirement": {
+                "type": "float",
+                "index": "not_analyzed"
+              },
+              "inventoryRequirement": {
+                "type": "float",
+                "index": "not_analyzed"
+              },
+              "schemaFormat": {
+                "type": "float",
+                "index": "not_analyzed"
+              },
+              "overallCompliance": {
+                "type": "float",
+                "index": "not_analyzed"
+              }
+            }
+          }
+        }
+      },
+      "measurementType": {
+        "type": "object",
+        "properties": {
+          "method": {
+            "type": "string",
+            "analyzer": "keyword_ci",
+            "fields": {
+              "_fulltext": {
+                "type": "string",
+                "analyzer": "englishfulltext"
+              }
+            }
+          },
+          "ifOther": {
+            "type": "string",
+            "analyzer": "englishfulltext",
+            "fields": {
+              "_fulltext": {
+                "type": "string",
+                "analyzer": "englishfulltext"
+              }
+            }
+          }
+        }
+      },
+      "status": {
+        "type": "string",
+        "analyzer": "keyword_ci"
+      },
+      "vcs": {
+        "type": "string",
+        "analyzer": "keyword_ci"
+      },
+      "repositoryURL": {
+        "type": "string",
+        "analyzer": "keyword_ci"
+      },
+      "targetOperatingSystems": {
+        "type": "string",
+        "analyzer": "keyword_ci"
+      },
+      "name": {
+        "type": "string",
+        "analyzer": "keyword_ci",
+        "fields": {
+          "_fulltext": {
+            "type": "string",
+            "analyzer": "englishfulltext"
+          }
+        }
+      },
+      "version": {
+        "type": "string",
+        "analyzer": "keyword_ci"
+      },
+      "organization": {
+        "type": "string",
+        "analyzer": "keyword_ci",
+        "fields": {
+          "_fulltext": {
+            "type": "string",
+            "analyzer": "englishfulltext"
+          }
+        }
+      },
+      "homepageURL": {
+        "type": "string",
+        "analyzer": "keyword_ci"
+      },
+      "downloadURL": {
+        "type": "string",
+        "index": "not_analyzed"
+      },
+      "description": {
+        "type": "string",
+        "analyzer": "englishfulltext"
+      },
+      "events": {
+        "type": "string",
+        "analyzer": "keyword_ci",
+        "fields": {
+          "_fulltext": {
+            "type": "string",
+            "analyzer": "englishfulltext"
+          }
+        }
+      },
+      "tags": {
+        "type": "string",
+        "analyzer": "keyword_ci",
+        "fields": {
+          "_fulltext": {
+            "type": "string",
+            "analyzer": "englishfulltext"
+          }
+        }
+      },
+      "languages": {
+        "type": "string",
+        "analyzer": "keyword_ci",
+        "fields": {
+          "_fulltext": {
+            "type": "string",
+            "analyzer": "englishfulltext"
+          }
+        }
+      },
+      "contact": {
+        "type": "object",
+        "include_in_root": true,
+        "properties": {
+          "name": {
+            "type": "string",
+            "analyzer": "keyword_ci",
+            "fields": {
+              "_fulltext": {
+                "type": "string",
+                "analyzer": "englishfulltext"
+              }
+            }
+          },
+          "email": {
+            "type": "string",
+            "analyzer": "keyword_ci",
+            "fields": {
+              "_fulltext": {
+                "type": "string",
+                "analyzer": "englishfulltext"
+              }
+            }
+          },
+          "twitter": {
+            "type": "string",
+            "analyzer": "keyword_ci",
+            "fields": {
+              "_fulltext": {
+                "type": "string",
+                "analyzer": "englishfulltext"
+              }
+            }
+          },
+          "phone": {
+            "type": "string",
+            "analyzer": "keyword_ci",
+            "fields": {
+              "_fulltext": {
+                "type": "string",
+                "analyzer": "englishfulltext"
+              }
+            }
+          }
+        }
+      },
+      "partners": {
+        "type": "nested",
+        "include_in_root": true,
+        "properties": {
+          "name": {
+            "type": "string",
+            "analyzer": "keyword_ci",
+            "fields": {
+              "_fulltext": {
+                "type": "string",
+                "analyzer": "englishfulltext"
+              }
+            }
+          },
+          "email": {
+            "type": "string",
+            "analyzer": "keyword_ci",
+            "fields": {
+              "_fulltext": {
+                "type": "string",
+                "analyzer": "englishfulltext"
+              }
+            }
+          }
+        }
+      },
+      "permissions": {
+        "type": "object",
+        "properties": {
+          "licenses": {
+            "type": "nested",
+            "properties": {
+              "name": {
+                "type": "string",
+                "analyzer": "keyword_ci",
+                "fields": {
+                  "_fulltext": {
+                    "type": "string",
+                    "analyzer": "englishfulltext"
+                  }
+                }
+              },
+              "URL": {
+                "type": "string",
+                "index": "not_analyzed"
+              }
+            }
+          },
+          "usageType": {
+            "type": "string",
+            "analyzer": "keyword_ci",
+            "fields": {
+              "_fulltext": {
+                "type": "string",
+                "analyzer": "englishfulltext"
+              }
+            }
+          },
+          "exemptionText": {
+            "type": "string",
+            "analyzer": "englishfulltext"
+          }
+        }
+      },
+      "laborHours": {
+        "type": "integer",
+        "index": "not_analyzed"
+      },
+      "relatedCode": {
+        "type": "nested",
+        "properties": {
+          "name": {
+            "type": "string",
+            "analyzer": "keyword_ci",
+            "fields": {
+              "_fulltext": {
+                "type": "string",
+                "analyzer": "englishfulltext"
+              }
+            }
+          },
+          "URL": {
+            "type": "string",
+            "index": "not_analyzed"
+          }
+        }
+      },
+      "reusedCode": {
+        "type": "nested",
+        "properties": {
+          "name": {
+            "type": "string",
+            "analyzer": "keyword_ci",
+            "fields": {
+              "_fulltext": {
+                "type": "string",
+                "analyzer": "englishfulltext"
+              }
+            }
+          },
+          "URL": {
+            "type": "string",
+            "index": "not_analyzed"
+          }
+        }
+      },
+      "disclaimerURL": {
+        "type": "string",
+        "index": "not_analyzed"
+      },
+      "disclaimerText": {
+        "type": "string",
+        "analyzer": "englishfulltext"
+      },
+      "additionalInformation": {
+        "type": "object",
+        "dynamic": true
+      },
+      "date": {
+        "type": "nested",
+        "include_in_root": true,
+        "properties": {
+          "created": {
+            "type": "date",
+            "ignore_malformed": true
+          },
+          "lastModified": {
+            "type": "date",
+            "ignore_malformed": true
+          },
+          "metadataLastUpdated": {
+            "type": "date",
+            "ignore_malformed": true
+          }
+        }
+      }
+    }
+  },
+  "status": {
+    "properties": {
+      "last_data_harvest": {
+        "type": "date"
+      },
+      "version": {
+        "type": "string",
+        "index": "not_analyzed"
+      },
+      "agency": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "analyzer": "keyword_ci",
+            "fields": {
+              "_fulltext": {
+                "type": "string",
+                "analyzer": "englishfulltext"
+              }
+            }
+          },
+          "acronym": {
+            "type": "string",
+            "analyzer": "keyword_ci",
+            "fields": {
+              "_fulltext": {
+                "type": "string",
+                "analyzer": "keyword_ci"
+              }
+            }
+          },
+          "website": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "codeUrl": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "requirements": {
+            "type": "object",
+            "properties": {
+              "agencyWidePolicy": {
+                "type": "float",
+                "index": "not_analyzed"
+              },
+              "openSourceRequirement": {
+                "type": "float",
+                "index": "not_analyzed"
+              },
+              "inventoryRequirement": {
+                "type": "float",
+                "index": "not_analyzed"
+              },
+              "schemaFormat": {
+                "type": "float",
+                "index": "not_analyzed"
+              },
+              "overallCompliance": {
+                "type": "float",
+                "index": "not_analyzed"
+              }
+            }
+          }
+        }
+      },
+      "issues": {
+        "type": "nested",
+        "properties": {
+          "organization": {
+            "type": "string"
+          },
+          "project_name": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "nested",
+            "properties": {
+              "keyword": {
+                "type": "string"
+              },
+              "dataPath": {
+                "type": "string"
+              },
+              "schemaPath": {
+                "type": "string"
+              },
+              "params": {
+                "type": "object"
+              },
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          "warning": {
+            "type": "nested",
+            "properties": {
+              "keyword": {
+                "type": "string"
+              },
+              "dataPath": {
+                "type": "string"
+              },
+              "schemaPath": {
+                "type": "string"
+              },
+              "params": {
+                "type": "object"
+              },
+              "message": {
+                "type": "string"
+              }
+            }
+          },
+          "enhancements": {
+            "type": "nested",
+            "properties": {
+              "keyword": {
+                "type": "string"
+              },
+              "dataPath": {
+                "type": "string"
+              },
+              "schemaPath": {
+                "type": "string"
+              },
+              "params": {
+                "type": "object"
+              },
+              "message": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "fallback_used": {
+        "type": "boolean"
+      }
+    }
+  }
+}
