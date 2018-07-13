@@ -13,6 +13,7 @@ applications:
     CF_STAGING_TIMEOUT: 15
     CF_STARTUP_TIMEOUT: 15
     CLOUD_GOV: true
+    NODE_ENV: production
   services:
   - code_gov_elasticsearch
   stack: cflinuxfs2
