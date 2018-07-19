@@ -1,7 +1,7 @@
 applications:
 - name: code-api
   memory: 1024M
-  instances: 1
+  instances: 2
   disk_quota: 1024M
   health-check-type: http
   health-check-http-endpoint: /api
@@ -12,7 +12,6 @@ applications:
     ES_HEAP_SIZE: 10g
     CF_STAGING_TIMEOUT: 15
     CF_STARTUP_TIMEOUT: 15
-    CLOUD_GOV: true
     NODE_ENV: production
   services:
   - code_gov_elasticsearch
