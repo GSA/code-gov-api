@@ -1,3 +1,4 @@
+require('newrelic');
 const bodyParser = require('body-parser');
 const compression = require('compression');
 const getConfig = require("./config");
@@ -107,10 +108,6 @@ app.use(function(err, req, res) {
 
 // start the server, but only if we're not in the middle of a test
 if(!module.parent) {
-  if(config.prod_envs.includes(process.env.NODE_ENV)) {
-    require('newrelic');
-  }
-
   app.listen(config.PORT, () => logger.info(`Started API server at http://0.0.0.0:${config.PORT}/`));
 }
 
