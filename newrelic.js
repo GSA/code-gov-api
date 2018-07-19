@@ -10,7 +10,7 @@ exports.config = {
   /**
    * Array of application names.
    */
-  app_name: ['code-api-dev', 'code-api-staging', 'code-api'],
+  app_name: [process.env.NEW_RELIC_APP_NAME, 'code-api'],
   /**
    * Your New Relic license key.
    */
