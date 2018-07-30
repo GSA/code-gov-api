@@ -1,7 +1,7 @@
 applications:
 - name: code-api
   memory: 512M
-  instances: 1
+  instances: 2
   disk_quota: 1024M
   health-check-type: http
   health-check-http-endpoint: /api
@@ -13,7 +13,9 @@ applications:
     CF_STAGING_TIMEOUT: 15
     CF_STARTUP_TIMEOUT: 15
     NODE_ENV: production
+    NEW_RELIC_APP_NAME: code-api-staging
+    ELASTICSEARCH_SERVICE_NAME: code_gov_elasticsearch56
   services:
-  - code_gov_elasticsearch
+  - code_gov_elasticsearch56
   stack: cflinuxfs2
   command: npm start
