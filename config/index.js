@@ -10,7 +10,11 @@ const jsonfile = require('jsonfile');
  */
 function getElasticsearchUri(cloudFoundryEnv) {
   if(!cloudFoundryEnv.isLocal){
-    const elasticSearchCredentials = cloudFoundryEnv.getServiceCreds("code_gov_elasticsearch");
+    const serviceName = process.env.ELASTICSEARCH_SERVICE_NAME
+      ? process.env.ELASTICSEARCH_SERVICE_NAME
+      : 'code_gov_elasticsearch';
+
+    const elasticSearchCredentials = cloudFoundryEnv.getServiceCreds(serviceName);
 
     return elasticSearchCredentials.uri
       ? elasticSearchCredentials.uri
