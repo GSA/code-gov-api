@@ -289,8 +289,6 @@ describe('Testing Utils module', function () {
       Utils.isValidUrl('https://code_gov').should.be.false;
     });
   });
-
-
   describe('removeDupes', function() {
     it('should return collection1 without the duplicates found in collection2', function() {
       const collection1 = [
@@ -349,6 +347,56 @@ describe('Testing Utils module', function () {
 
       Utils.getScore(target1, 1).should.be.equal(24);
       Utils.getScore(target2, 2).should.be.equal(2);
+    });
+  });
+  describe('getLoggerRequestSerializer', function() {
+    it('should return object with x-api-key removed', function() {
+      const fauxRequest = {
+        id: '1',
+        method: 'GET',
+        url: 'http://localhost:3000',
+        headers: {
+          'x-api-key': 'oh-no-tis-a-token',
+          'content-type': 'application/json',
+          'user-agent': 'tests'
+        },
+        connection: {
+          remoteAddress: 'localhost',
+          remotePort: '3000'
+        }
+      };
+      const expected = {
+        id: '1',
+        method: 'GET',
+        url: 'http://localhost:3000',
+        headers: {
+          'content-type': 'application/json',
+          'user-agent': 'tests'
+        },
+        remoteAddress: 'localhost',
+        remotePort: '3000'
+      };
+      Utils.getLoggerRequestSerializer(fauxRequest).should.be.deep.equal(expected);
+    });
+  });
+  describe('getLoggerResponseSerializer', function() {
+    it('should return object with x-api-key removed', function() {
+      const fauxResponse = {
+        statusCode: 200,
+        _header: {
+          'x-api-key': 'oh-no-tis-a-token',
+          'content-type': 'application/json',
+          'user-agent': 'tests'
+        }
+      };
+      const expected = {
+        statusCode: 200,
+        header: {
+          'content-type': 'application/json',
+          'user-agent': 'tests'
+        }
+      };
+      Utils.getLoggerResponseSerializer(fauxResponse).should.be.deep.equal(expected);
     });
   });
 })
