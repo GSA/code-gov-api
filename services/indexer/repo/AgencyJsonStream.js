@@ -3,7 +3,7 @@ const { Transform } = require("stream");
 const fetch = require('node-fetch');
 const Jsonfile = require("jsonfile");
 const Logger = require('../../../utils/logger');
-const { getValidator } = require('../../validator');
+const { getValidator } = require('@code.gov/code-gov-validator');
 const Formatter = require('../../formatter');
 const Reporter = require("../../reporter");
 const Utils = require("../../../utils");
@@ -101,7 +101,7 @@ class AgencyJsonStream extends Transform {
    * @param {object} codeJson Object with the complete code inventory for the supplied agency.
    * @returns {object} Object with schemaVersion of the supplied code.json and an array of it's validated repositories.
    */
-  _validateAgencyRepos(agency, codeJson) {
+  async _validateAgencyRepos(agency, codeJson) {
     logger.debug('Entered _validateAgencyRepos');
 
     let reportDetails = [];
@@ -124,52 +124,47 @@ class AgencyJsonStream extends Transform {
         reportString = "NOT COMPLIANT: ";
         reportDetails.push(`Agency has not releases/repositories published.`);
       } else {
-        repos.map(repo => {
-          const repoId = Utils.transformStringToKey([agency.acronym, repo.organization, repo.name].join("_"));
+        resultRepos = repos.map( repo => {
+          // const repoId = Utils.transformStringToKey([agency.acronym, repo.organization, repo.name].join("_"));
           const validator = getValidator(codeJson);
 
-          return validator.validateRepo(repo, agency, (error, results) => {
-            if(error) {
-              logger.debug(`Error validating repo with repoID ${repoId}.`);
-            }
-            if(results.issues) {
-              validationTotals.errors += results.issues.errors.length ? results.issues.errors.length : 0;
-              validationTotals.warnings += results.issues.warnings.length ? results.issues.warnings.length : 0;
-              validationTotals.enhancements += results.issues.enhancements.length ?
-                results.issues.enhancements.length : 0;
+          validator.validateRepo(repo, agency)
+            .then(results => {
+              validationTotals.errors = results.issues.errors;
+              validationTotals.warnings = results.issues.warnings;
+              validationTotals.enhancements = results.issues.enhancements;
 
+              if(validationTotals.errors) {
+                totalErrors += validationTotals.errors;
+                reportDetails.push(`${validationTotals.errors} ERRORS`);
+              }
+              if(validationTotals.warnings) {
+                totalErrors += validationTotals.warnings;
+                reportDetails.push(`${validationTotals.warnings} WARNINGS`);
+              }
+
+              if(validationTotals.enhancements) {
+                reportDetails.push(`${validationTotals.enhancements} REQUESTED ENHANCEMENTS`);
+              }
+
+              if(totalErrors) {
+                reportString= "NOT FULLY COMPLIANT: ";
+              } else {
+                agency.requirements.schemaFormat = 1;
+                reportString= "FULLY COMPLIANT: ";
+              }
               Reporter.reportIssues(agency.acronym, results);
-            }
-            validator.cleaner(repo);
-            resultRepos.push(repo);
-          });
+            })
+            .catch(error => logger.error(error));
+          validator.cleaner(repo);
+          return repo;
         });
-
-        if(validationTotals.errors) {
-          totalErrors += validationTotals.errors;
-          reportDetails.push(`${validationTotals.errors} ERRORS`);
-        }
-        if(validationTotals.warnings) {
-          totalErrors += validationTotals.warnings;
-          reportDetails.push(`${validationTotals.warnings} WARNINGS`);
-        }
-
-        if(validationTotals.enhancements) {
-          reportDetails.push(`${validationTotals.enhancements} REQUESTED ENHANCEMENTS`);
-        }
-
-        if(totalErrors) {
-          reportString= "NOT FULLY COMPLIANT: ";
-        } else {
-          agency.requirements.schemaFormat = 1;
-          reportString= "FULLY COMPLIANT: ";
-        }
       }
     } else {
       Reporter.reportIssues(agency.acronym, [{
         message: `${codeJson.version} is not a valid schema version`
       }]);
-      reportDetails.push(`1 ERRORS`);
+      reportDetails.push(`1 ERROR`);
     }
 
     reportString += reportDetails.join(", ");
