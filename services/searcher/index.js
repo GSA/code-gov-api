@@ -40,23 +40,23 @@ class Searcher {
 
   // queries on repoID
   getRepoById(id, callback) {
-    logger.info("Getting repo", {id});
+    logger.debug("Entered getRepoId: ", {id});
     this.client.search({
       index: 'repos',
       type: 'repo',
       body: this._searchRepoById(id)
     }, (err, res) => {
       if(err) {
-        logger.error(err);
+        logger.trace(err);
         return callback(err);
       }
       // return callback(null, res);
       if(!res.hits || !res.hits.hits || !res.hits.hits[0]) {
-        logger.info("No hits");
+        logger.debug("No hits", { es_result: res });
         return callback(null, {});
       }
       let repo = Utils.omitPrivateKeys(res.hits.hits[0]._source);
-      //logger.info(repo);
+      logger.debug('Returning repo', repo);
       return callback(null, repo);
     });
   }

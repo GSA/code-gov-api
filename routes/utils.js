@@ -171,29 +171,27 @@ function getFileDataByAgency(agency, directoryPath) {
   });
 }
 
-function getRepoById (request, response, searcher, logger) {
-  let id = request.params.id;
-  searcher.getRepoById(id, (error, repo) => {
-    if (error) {
-      logger.error(error);
-      return response.sendStatus(500);
-    }
-    if (!_.isEmpty(repo)) {
-      response.json(repo);
-    } else {
-      response.sendStatus(404);
-    }
+function getRepoById (id, searcher) {
+  return new Promise((resolve, reject) => {
+    searcher.getRepoById(id, (error, repo) => {
+      if (error) {
+        reject(error);
+      }
+      resolve(repo);
+    });
   });
 }
 
 function getTerms(request, response, searcher) {
-  let query = _.pick(request.query, ["term", "term_type", "size", "from"]);
+  return new Promise((resolve, reject) {
+    let query = _.pick(request.query, ["term", "term_type", "size", "from"]);
 
-  searcher.searchTerms(query, (error, terms) => {
-    if (error) {
-      return response.sendStatus(500);
-    }
-    response.json(terms);
+    searcher.searchTerms(query, (error, terms) => {
+      if (error) {
+        return response.sendStatus(500);
+      }
+      response.json(terms);
+    });
   });
 }
 

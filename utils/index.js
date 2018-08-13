@@ -220,11 +220,12 @@ class Utils {
    * @returns {object} request serializer object used by Bunyan
    */
   static getLoggerRequestSerializer(request) {
+    const cleanHeaders = Utils.omitDeepKeys(request.headers, ['x-api-key']);
     return {
       id: request.id,
       method: request.method,
       url: request.url,
-      headers: this.omitDeepKeys(request.headers, ['x-api-key']),
+      headers: cleanHeaders,
       remoteAddress: request.connection.remoteAddress,
       remotePort: request.connection.remotePort
     };
@@ -238,7 +239,7 @@ class Utils {
   static getLoggerResponseSerializer(response) {
     return {
       statusCode: response.statusCode,
-      header: this.omitDeepKeys(response._header, ['x-api-key'])
+      header: Utils.omitDeepKeys(response._header, ['x-api-key'])
     }
   }
 }
