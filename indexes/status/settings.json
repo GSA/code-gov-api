@@ -1,4 +1,5 @@
 {
+  "index.mapping.total_fields.limit": 2000,
   "analysis": {
     "filter": {
       "english_stop": {

@@ -12,7 +12,10 @@ const StatusIndexer = require("../indexer/status");
 const ElasticsearchAdapter = require("../../utils/search_adapters/elasticsearch_adapter");
 const elasticsearchMappings = require('../../indexes/status/mapping.json');
 const elasticsearchSettings = require('../../indexes/status/settings.json');
-
+const AliasSwapper = require("../indexer/alias_swapper");
+const IndexCleaner = require("../indexer/index_cleaner");
+const IndexOptimizer = require("../indexer/index_optimizer");
+const DAYS_TO_KEEP = 7;
 class Reporter {
 
   constructor(config, loggerName) {
@@ -72,19 +75,29 @@ class Reporter {
     this.report.statuses[itemName]["wasFallbackUsed"] = wasFallbackUsed;
   }
 
-  indexReport(index) {
+  indexReport() {
     const params = {
-      "esIndex": index ? index : undefined,
-      "esAlias": "repos",
+      "esAlias": "status",
       "esType": "status",
       "esMapping": elasticsearchMappings,
       "esSettings": elasticsearchSettings
     };
     const adapter = new ElasticsearchAdapter(this.config);
 
-    const statusIndexer = new StatusIndexer(adapter, params);
-
-    return statusIndexer.indexStatus(this);
+    return StatusIndexer.init(this, adapter, params)
+      .then(indexInfo => {
+        IndexOptimizer.init(adapter, indexInfo);
+        return indexInfo;
+      })
+      .then(indexInfo => {
+        AliasSwapper.init(adapter, indexInfo);
+        return indexInfo;
+      })
+      .then(indexInfo => IndexCleaner.init(adapter, indexInfo.esAlias, DAYS_TO_KEEP))
+      .catch(error => {
+        this.logger.error(error);
+        throw error;
+      });
   }
 
   writeReportToFile() {

@@ -434,7 +434,7 @@ class Searcher {
     logger.info("Status searching");
 
     this.client.search({
-      index: 'repos',
+      index: 'status',
       type: 'status'
     }, (error, elasticSearchResponse) => {
       if(error) {

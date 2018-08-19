@@ -16,12 +16,12 @@
             "URL": "",
             "name": "None - Backend is Open Source"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         "PHP"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -49,12 +49,12 @@
             "URL": "",
             "name": "None - Backend is Open Source"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         "PHP"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -82,12 +82,12 @@
             "URL": "",
             "name": "None - Backend is Open Source"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         "PHP"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -115,12 +115,12 @@
             "URL": "",
             "name": "None - Backend is Open Source"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         "PHP"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -148,12 +148,12 @@
             "URL": "",
             "name": "None - Backend is Open Source"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         "PHP"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -181,12 +181,12 @@
             "URL": "",
             "name": "None - Backend is Open Source"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         "PHP"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -214,12 +214,12 @@
             "URL": "",
             "name": "None - Backend is Open Source"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         "PHP"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -247,12 +247,12 @@
             "URL": "",
             "name": "None - Backend is Open Source"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         "PHP"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -280,12 +280,12 @@
             "URL": "",
             "name": "None - Backend is Open Source"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         "PHP"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -313,12 +313,12 @@
             "URL": "",
             "name": "None - Backend is Open Source"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         "PHP"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -346,12 +346,12 @@
             "URL": "",
             "name": "None - Backend is Open Source"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         "PHP"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -379,12 +379,12 @@
             "URL": "",
             "name": "None - Backend is Open Source"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         "PHP"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -412,12 +412,12 @@
             "URL": "",
             "name": "None - Backend is Open Source"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         "PHP"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -445,12 +445,12 @@
             "URL": "",
             "name": "None - Backend is Open Source"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         "PHP"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -478,12 +478,12 @@
             "URL": "",
             "name": "Windows 2012; IIS; Oracle"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         "Java"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -511,12 +511,12 @@
             "URL": "",
             "name": "Windows 2012; IIS; Oracle"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         "null"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -544,12 +544,12 @@
             "URL": "",
             "name": "Windows 2012; IIS; Oracle"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         "null"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -577,13 +577,13 @@
             "URL": "",
             "name": "Windows 2012; Oracle PL/SQL; Oracle Developer"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         "Oracle PL/SQL",
         "Oracle Developer"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -611,12 +611,12 @@
             "URL": "",
             "name": "Microsoft"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencySystem"
       },
       "languages": [
         "Microsoft"
       ],
-      "usageType": "exemptByAgencySystem",
       "exemptiontext": "System used to support the internal operations of the agency.",
       "tags": [
         "transportation",
@@ -644,12 +644,12 @@
             "URL": "",
             "name": "Microsoft"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "Microsoft"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "System containing information and business logic of FTA's stakeholders supports the agency's mission.",
       "tags": [
         "transportation",
@@ -677,12 +677,12 @@
             "URL": "",
             "name": "Microsoft"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "Microsoft"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "System containing information and business logic of FTA's stakeholders supports the agency's mission.",
       "tags": [
         "transportation",
@@ -710,12 +710,12 @@
             "URL": "",
             "name": "Microsoft"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "Microsoft"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "System containing information and business logic of FTA's stakeholders supports the agency's mission.",
       "tags": [
         "transportation",
@@ -743,12 +743,12 @@
             "URL": "",
             "name": "Microsoft"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "Microsoft"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "System containing information and business logic of FTA's stakeholders supports the agency's mission.",
       "tags": [
         "transportation",
@@ -776,12 +776,12 @@
             "URL": "",
             "name": "Microsoft"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencySystem"
       },
       "languages": [
         "Microsoft"
       ],
-      "usageType": "exemptByAgencySystem",
       "exemptiontext": "System used to support the internal operations of the agency.",
       "tags": [
         "transportation",
@@ -809,12 +809,12 @@
             "URL": "",
             "name": "Microsoft"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencySystem"
       },
       "languages": [
         "Microsoft"
       ],
-      "usageType": "exemptByAgencySystem",
       "exemptiontext": "System used to support the internal operations of the agency.",
       "tags": [
         "transportation",
@@ -842,12 +842,12 @@
             "URL": "",
             "name": "Microsoft"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencySystem"
       },
       "languages": [
         "Microsoft"
       ],
-      "usageType": "exemptByAgencySystem",
       "exemptiontext": "System used to support the internal operations of the agency.",
       "tags": [
         "transportation",
@@ -875,12 +875,12 @@
             "URL": "",
             "name": "Microsoft"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "Microsoft"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "System containing information and business logic of FTA's stakeholders supports the agency's mission.",
       "tags": [
         "transportation",
@@ -908,12 +908,12 @@
             "URL": "",
             "name": "Microsoft"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencySystem"
       },
       "languages": [
         "Microsoft"
       ],
-      "usageType": "exemptByAgencySystem",
       "exemptiontext": "System used to support the internal operations of the agency.",
       "tags": [
         "transportation",
@@ -941,12 +941,12 @@
             "URL": "",
             "name": "Microsoft"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "Microsoft"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "System containing information and business logic of FTA's stakeholders supports the agency's mission.",
       "tags": [
         "transportation",
@@ -974,12 +974,12 @@
             "URL": "",
             "name": "Open Source"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "null"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "System containing information and business logic of FTA's stakeholders supports the agency's mission.",
       "tags": [
         "transportation",
@@ -1007,12 +1007,12 @@
             "URL": "",
             "name": "Microsoft"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "Microsoft"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "System containing information and business logic of FTA's stakeholders supports the agency's mission.",
       "tags": [
         "transportation",
@@ -1040,12 +1040,12 @@
             "URL": "",
             "name": "Microsoft"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencySystem"
       },
       "languages": [
         "Microsoft"
       ],
-      "usageType": "exemptByAgencySystem",
       "exemptiontext": "System used to support the internal operations of the agency.",
       "tags": [
         "transportation",
@@ -1073,12 +1073,12 @@
             "URL": "",
             "name": "Appian Cloud licensing package"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         "Appian Cloud licensing package"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -1106,12 +1106,12 @@
             "URL": "",
             "name": "Appian Cloud licensing package"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         "Appian Cloud licensing package"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -1139,12 +1139,12 @@
             "URL": "",
             "name": "Serena Licensing"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencySystem"
       },
       "languages": [
         "Serena Licensing"
       ],
-      "usageType": "exemptByAgencySystem",
       "exemptiontext": "System used to support the internal operations of the agency.",
       "tags": [
         "transportation",
@@ -1172,12 +1172,12 @@
             "URL": "",
             "name": "Appian"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "Appian"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "System containing information and business logic of FTA's stakeholders supports the agency's mission.",
       "tags": [
         "transportation",
@@ -1205,12 +1205,12 @@
             "URL": "",
             "name": "Appian"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "Appian"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "System containing information and business logic of FTA's stakeholders supports the agency's mission.",
       "tags": [
         "transportation",
@@ -1238,12 +1238,12 @@
             "URL": "",
             "name": "Serena"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "Serena"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "System containing information and business logic of FTA's stakeholders supports the agency's mission.",
       "tags": [
         "transportation",
@@ -1271,12 +1271,12 @@
             "URL": "",
             "name": "Drupal/PHP"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "Drupal/PHP"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "System containing information and business logic of FTA's stakeholders supports the agency's mission.",
       "tags": [
         "transportation",
@@ -1304,12 +1304,12 @@
             "URL": "",
             "name": "Drupal/PHP"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "Drupal/PHP"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "System containing information and business logic of FTA's stakeholders supports the agency's mission.",
       "tags": [
         "transportation",
@@ -1337,13 +1337,13 @@
             "URL": "",
             "name": "Open Source"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencySystem"
       },
       "languages": [
         "C#",
         "JavaScript"
       ],
-      "usageType": "exemptByAgencySystem",
       "exemptiontext": "Application built to support internal functions specific to internal resources",
       "tags": [
         "transportation",
@@ -1371,13 +1371,13 @@
             "URL": "",
             "name": "Open Source"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencySystem"
       },
       "languages": [
         "C#",
         "JavaScript"
       ],
-      "usageType": "exemptByAgencySystem",
       "exemptiontext": "Website for agency specific mission. Built using FRA CMS which has been made available for open source public consumption",
       "tags": [
         "transportation",
@@ -1405,13 +1405,13 @@
             "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
             "name": "Kendo UI"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         "C#",
         "JavaScript"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -1436,13 +1436,13 @@
             "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
             "name": "Kendo UI"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         "C#",
         "JavaScript"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -1470,13 +1470,13 @@
             "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
             "name": "Kendo UI"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencySystem"
       },
       "languages": [
         "C#",
         "JavaScript"
       ],
-      "usageType": "exemptByAgencySystem",
       "exemptiontext": "Website for FRA specific study and findings. Built using FRA CMS, which is available of ripen source public consumption.",
       "tags": [
         "transportation",
@@ -1504,13 +1504,13 @@
             "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
             "name": "Kendo UI"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencySystem"
       },
       "languages": [
         "C#",
         "JavaScript"
       ],
-      "usageType": "exemptByAgencySystem",
       "exemptiontext": "Website currently being redesigned in FRA CMS. Current site is outdated code, not ready for public consumption",
       "tags": [
         "transportation",
@@ -1538,13 +1538,13 @@
             "URL": "",
             "name": "Open Source"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencySystem"
       },
       "languages": [
         "C#",
         "JavaScript"
       ],
-      "usageType": "exemptByAgencySystem",
       "exemptiontext": "Component of FRA CMS, not ready to be packaged as standalone application",
       "tags": [
         "transportation",
@@ -1572,13 +1572,13 @@
             "URL": "",
             "name": "Open Source"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencySystem"
       },
       "languages": [
         "C#",
         "JavaScript"
       ],
-      "usageType": "exemptByAgencySystem",
       "exemptiontext": "Component of FRA CMS, not ready to be packaged as standalone application",
       "tags": [
         "transportation",
@@ -1606,13 +1606,13 @@
             "URL": "",
             "name": "Open Source"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencySystem"
       },
       "languages": [
         "C#",
         "JavaScript"
       ],
-      "usageType": "exemptByAgencySystem",
       "exemptiontext": "Component of FRA CMS, not ready to be packaged as standalone application",
       "tags": [
         "transportation",
@@ -1640,12 +1640,12 @@
             "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
             "name": "Foxit PDF"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "Javascript"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "Website for agency specific mission.Built using FRA CMS which has been made available for open source public consumption",
       "tags": [
         "transportation",
@@ -1673,12 +1673,12 @@
             "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
             "name": "Kendo UI"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "Visual Basic"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "Dashboard for internal statistical analysis. Not built for public consumption.",
       "tags": [
         "transportation",
@@ -1706,13 +1706,13 @@
             "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
             "name": "Kendo UI"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "C#",
         "JavaScript"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "Dashboard for internal statistical analysis. Not built for public consumption.",
       "tags": [
         "transportation",
@@ -1740,13 +1740,13 @@
             "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
             "name": "Kendo UI"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "C#",
         "JavaScript"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "Dashboard for internal statistical analysis. Not built for public consumption.",
       "tags": [
         "transportation",
@@ -1774,13 +1774,13 @@
             "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
             "name": "Kendo UI"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "C#",
         "JavaScript"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "Dashboard for internal statistical analysis. Not built for public consumption.",
       "tags": [
         "transportation",
@@ -1808,13 +1808,13 @@
             "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
             "name": "Kendo UI"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "C#",
         "JavaScript"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "Tracker for internal project or action tracking. Not built for public consumption.",
       "tags": [
         "transportation",
@@ -1842,13 +1842,13 @@
             "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
             "name": "Kendo UI"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "C#",
         "JavaScript"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "Tracker for internal project or action tracking. Not built for public consumption.",
       "tags": [
         "transportation",
@@ -1876,13 +1876,13 @@
             "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
             "name": "Kendo UI"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencySystem"
       },
       "languages": [
         "Objective-C",
         "Android"
       ],
-      "usageType": "exemptByAgencySystem",
       "exemptiontext": "Mobile application code uses proprietary resources. Not developed for public consumption",
       "tags": [
         "transportation",
@@ -1910,13 +1910,13 @@
             "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
             "name": "Kendo UI"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "C#",
         "JavaScript"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "Developed for internal use only.",
       "tags": [
         "transportation",
@@ -1944,13 +1944,13 @@
             "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
             "name": "Kendo UI"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "C#",
         "JavaScript"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "Application contains data proprietary to FRA",
       "tags": [
         "transportation",
@@ -1978,13 +1978,13 @@
             "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
             "name": "Kendo UI"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "C#",
         "JavaScript"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "Application not intended for public consumption.",
       "tags": [
         "transportation",
@@ -2012,13 +2012,13 @@
             "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
             "name": "Kendo UI"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "C#",
         "JavaScript"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "Application designed for reporting on FRA specific actions",
       "tags": [
         "transportation",
@@ -2046,13 +2046,13 @@
             "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
             "name": "Kendo UI"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "C#",
         "JavaScript"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "Application in final phases of development. Highly specific to FRA mission",
       "tags": [
         "transportation",
@@ -2080,13 +2080,13 @@
             "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
             "name": "Kendo UI"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "C#",
         "JavaScript"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "Application designed for reporting on FRA specific actions",
       "tags": [
         "transportation",
@@ -2114,13 +2114,13 @@
             "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
             "name": "Kendo UI"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "C#",
         "JavaScript"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "Application code specific to FRA organizational structure. Relies on commercial framework.",
       "tags": [
         "transportation",
@@ -2148,13 +2148,13 @@
             "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
             "name": "Kendo UI"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "C#",
         "JavaScript"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "Application designed for reporting on FRA specific legal actions",
       "tags": [
         "transportation",
@@ -2182,12 +2182,12 @@
             "URL": "http://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s",
             "name": "Kendo UI"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "Javascript"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "Application specific to FRA resources and personnel",
       "tags": [
         "transportation",
@@ -2215,13 +2215,13 @@
             "URL": "",
             "name": "Open Source"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "Javascript",
         "HTML5"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "Application specific to FRA resources and personnel",
       "tags": [
         "transportation",
@@ -2249,13 +2249,13 @@
             "URL": "",
             "name": "Open Source"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "Objective-C",
         "Android"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "Application specific to FRA regulation, resources and personnel",
       "tags": [
         "transportation",
@@ -2283,12 +2283,12 @@
             "URL": "",
             "name": "Oracle MySQL"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         "Visual Basic"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -2316,7 +2316,8 @@
             "URL": "",
             "name": "Oracle MySQL"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         "Objective C",
@@ -2324,7 +2325,6 @@
         ".NET",
         "Oracle database"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -2352,13 +2352,13 @@
             "URL": "",
             "name": "Oracle MySQL"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "Oracle Business Intelligence",
         "Oracle 11G database"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission.",
       "tags": [
         "transportation",
@@ -2386,13 +2386,13 @@
             "URL": "",
             "name": "Oracle MySQL"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "Java",
         "Oracle Database"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission.",
       "tags": [
         "transportation",
@@ -2417,14 +2417,14 @@
             "URL": "",
             "name": "Oracle MySQL"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "Oracle Middleware",
         "Oracle 11G database",
         "ADF Java"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission.",
       "tags": [
         "transportation",
@@ -2449,14 +2449,14 @@
             "URL": "",
             "name": "Oracle MySQL"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "Oracle Middleware",
         "Oracle 11G database",
         "ADF Java"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission.",
       "tags": [
         "transportation",
@@ -2481,12 +2481,12 @@
             "URL": "",
             "name": "Oracle MySQL"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "OBIE"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission.",
       "tags": [
         "transportation",
@@ -2511,13 +2511,13 @@
             "URL": "",
             "name": "Oracle MySQL"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "Java",
         "Oracle 11G database"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission.",
       "tags": [
         "transportation",
@@ -2542,14 +2542,14 @@
             "URL": "",
             "name": "Oracle MySQL"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "Oracle Middleware",
         "Oracle 11G database",
         "ADF Java"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission.",
       "tags": [
         "transportation",
@@ -2574,14 +2574,14 @@
             "URL": "",
             "name": "Oracle MySQL"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "Oracle Middleware",
         "Oracle 11G database",
         "ADF Java"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission.",
       "tags": [
         "transportation",
@@ -2606,14 +2606,14 @@
             "URL": "",
             "name": "null"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "Microsoft ASP",
         ".NET web services",
         "SQL 2005 database"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission.",
       "tags": [
         "transportation",
@@ -2638,14 +2638,14 @@
             "URL": "",
             "name": "Oracle MySQL"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "Oracle Middleware",
         "Oracle 11G database",
         "ADF Java"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission.",
       "tags": [
         "transportation",
@@ -2670,14 +2670,14 @@
             "URL": "",
             "name": "Oracle MySQL"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         ".Net",
         "Oracle database",
         "emPower for workflow"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission.",
       "tags": [
         "transportation",
@@ -2702,14 +2702,14 @@
             "URL": "",
             "name": "Oracle MySQL"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         ".Net",
         "Oracle database",
         "emPower for workflow"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission.",
       "tags": [
         "transportation",
@@ -2734,14 +2734,14 @@
             "URL": "",
             "name": "Oracle MySQL"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "Oracle Middleware",
         "Oracle 11G database",
         "ADF Java"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission.",
       "tags": [
         "transportation",
@@ -2766,14 +2766,14 @@
             "URL": "",
             "name": "Oracle MySQL"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "Oracle Middleware",
         "Oracle 11G database",
         "ADF Java"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission.",
       "tags": [
         "transportation",
@@ -2798,13 +2798,13 @@
             "URL": "",
             "name": "Oracle MySQL"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "ArcGIS",
         "Oracle database"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission.",
       "tags": [
         "transportation",
@@ -2829,13 +2829,13 @@
             "URL": "",
             "name": "Oracle MySQL"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "ArcGIS",
         "Oracle database"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission.",
       "tags": [
         "transportation",
@@ -2860,14 +2860,14 @@
             "URL": "",
             "name": "Oracle MySQL"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "Java",
         "Spring DAO",
         "Oracle 11G database"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission.",
       "tags": [
         "transportation",
@@ -2892,14 +2892,14 @@
             "URL": "",
             "name": "Oracle MySQL"
           }
-        ]
+        ],
+        "usageType": "exemptByAgencyMission"
       },
       "languages": [
         "Oracle Middleware",
         "Oracle 11G database",
         "ADF Java"
       ],
-      "usageType": "exemptByAgencyMission",
       "exemptiontext": "System containing information and business logic of PHMSA's stakeholders supports the agency's mission.",
       "tags": [
         "transportation",
@@ -2924,13 +2924,13 @@
             "URL": "",
             "name": "null"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         ".Net",
         "Csharp"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -2955,13 +2955,13 @@
             "URL": "",
             "name": "null"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         ".Net",
         "Csharp"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -2986,14 +2986,14 @@
             "URL": "",
             "name": "null"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         "PHP",
         "JavaScript",
         "HTML5"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -3018,7 +3018,8 @@
             "URL": "",
             "name": "null"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         "Javascript",
@@ -3026,7 +3027,6 @@
         "Entity Framework",
         ".Net"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -3051,7 +3051,8 @@
             "URL": "",
             "name": "null"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         "Javascript",
@@ -3059,7 +3060,6 @@
         "Entity Framework",
         ".Net"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -3087,7 +3087,8 @@
             "URL": "",
             "name": "null"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         "Javascript",
@@ -3095,7 +3096,6 @@
         "Entity Framework",
         ".Net"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -3123,7 +3123,8 @@
             "URL": "",
             "name": "null"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         "Javascript",
@@ -3131,7 +3132,6 @@
         "Entity Framework",
         ".Net"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -3159,7 +3159,8 @@
             "URL": "",
             "name": "null"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         "Javascript",
@@ -3167,7 +3168,6 @@
         "Entity Framework",
         ".Net"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -3195,13 +3195,13 @@
             "URL": "",
             "name": "null"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         ".Net",
         "Csharp"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -3229,13 +3229,13 @@
             "URL": "",
             "name": "null"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         ".Net",
         "Csharp"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -3263,13 +3263,13 @@
             "URL": "",
             "name": "null"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         ".Net",
         "Csharp"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -3294,13 +3294,13 @@
             "URL": "",
             "name": "null"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         ".Net",
         "Csharp"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -3328,13 +3328,13 @@
             "URL": "",
             "name": "null"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         ".Net",
         "Csharp"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -3362,13 +3362,13 @@
             "URL": "",
             "name": "null"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         ".Net",
         "Csharp"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -3393,13 +3393,13 @@
             "URL": "",
             "name": "null"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         ".Net",
         "Csharp"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -3424,13 +3424,13 @@
             "URL": "",
             "name": "null"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         ".Net",
         "Csharp"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -3455,14 +3455,14 @@
             "URL": "",
             "name": "null"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         ".Net",
         "Csharp",
         "Angular JS"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -3487,12 +3487,12 @@
             "URL": "",
             "name": "null"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         ".Net"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -3520,12 +3520,12 @@
             "URL": "",
             "name": "null"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         ".Net"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -3553,12 +3553,12 @@
             "URL": "",
             "name": "null"
           }
-        ]
+        ],
+        "usageType": "governmentWideReuse"
       },
       "languages": [
         ".Net"
       ],
-      "usageType": "governmentWideReuse",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -3583,12 +3583,12 @@
             "URL": "",
             "name": "null"
           }
-        ]
+        ],
+        "usageType": "governmentWideReuse"
       },
       "languages": [
         ".Net"
       ],
-      "usageType": "governmentWideReuse",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -3616,12 +3616,12 @@
             "URL": "",
             "name": "null"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         ".Net"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -3649,14 +3649,14 @@
             "URL": "",
             "name": "null"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         "MVC",
         ".Net",
         "Csharp"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -3684,13 +3684,13 @@
             "URL": "",
             "name": "null"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         ".Net",
         "Csharp"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -3718,13 +3718,13 @@
             "URL": "",
             "name": "null"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         ".Net",
         "Csharp"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -3752,14 +3752,14 @@
             "URL": "https://github.com/usdot-its-jpo-data-portal/privacy-protection-application/LICENSE",
             "name": "Apache 2.0"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         "C++",
         "Javascript",
         "HTML"
       ],
-      "usageType": "openSource",
       "exemptiontext": "",
       "tags": [
         "transportation",
@@ -3787,14 +3787,14 @@
             "URL": "https://github.com/usdot-jpo-ode/jpo-cvdp/LICENSE",
             "name": "Apache 2.0"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         "C++",
         "Javascript",
         "HTML"
       ],
-      "usageType": "openSource",
       "exemptiontext": "",
       "tags": [
         "transportation",
@@ -3822,12 +3822,12 @@
             "URL": "https://github.com/usdot-its-jpo-data-portal/microsite/blob/master/LICENSE.txt",
             "name": "Apache 2.0"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         "Javascript"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -3855,7 +3855,8 @@
             "URL": "https://github.com/usdot-jpo-ode/jpo-ode/blob/develop/LICENSE",
             "name": "Apache 2.0"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         "Java",
@@ -3864,7 +3865,6 @@
         "Kafka",
         "Docker"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -3892,13 +3892,13 @@
             "URL": "",
             "name": "Oracle"
           }
-        ]
+        ],
+        "usageType": "governmentWideReuse"
       },
       "languages": [
         ".Net",
         "Csharp"
       ],
-      "usageType": "governmentWideReuse",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -3926,13 +3926,13 @@
             "URL": "",
             "name": "SQL Server"
           }
-        ]
+        ],
+        "usageType": "governmentWideReuse"
       },
       "languages": [
         ".Net",
         "Csharp"
       ],
-      "usageType": "governmentWideReuse",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -3960,13 +3960,13 @@
             "URL": "",
             "name": "SQL Server"
           }
-        ]
+        ],
+        "usageType": "governmentWideReuse"
       },
       "languages": [
         "C#",
         "JavaScript"
       ],
-      "usageType": "governmentWideReuse",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -3994,13 +3994,13 @@
             "URL": "",
             "name": "SQL Server"
           }
-        ]
+        ],
+        "usageType": "governmentWideReuse"
       },
       "languages": [
         "C#",
         "JavaScript"
       ],
-      "usageType": "governmentWideReuse",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -4028,12 +4028,12 @@
             "URL": "",
             "name": "null"
           }
-        ]
+        ],
+        "usageType": "governmentWideReuse"
       },
       "languages": [
         "Java"
       ],
-      "usageType": "governmentWideReuse",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -4061,12 +4061,12 @@
             "URL": "",
             "name": "null"
           }
-        ]
+        ],
+        "usageType": "governmentWideReuse"
       },
       "languages": [
         "Java"
       ],
-      "usageType": "governmentWideReuse",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -4094,12 +4094,12 @@
             "URL": "",
             "name": "Oracle, MS .Net Framework"
           }
-        ]
+        ],
+        "usageType": "governmentWideReuse"
       },
       "languages": [
         "Java"
       ],
-      "usageType": "governmentWideReuse",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -4127,13 +4127,13 @@
             "URL": "",
             "name": "Null"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         "C#",
         "Python"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -4161,12 +4161,12 @@
             "URL": "",
             "name": "Null"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         "Visual Basic for Applications"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -4194,13 +4194,13 @@
             "URL": "",
             "name": "null"
           }
-        ]
+        ],
+        "usageType": "exemptByCIO"
       },
       "languages": [
         "AWS Cloudfront",
         "AWS MySQL"
       ],
-      "usageType": "exemptByCIO",
       "exemptiontext": "This code was not developed with the expectation that it would be released as Open Source. Preliminary review has identified operational procedures which if made public may expose FAA systems to cyber security attacks. Further review is required to fully analyze and mitigate any security issues which may result from making the code public. This review cannot be completed in the time remaining for the current release schedule.",
       "tags": [
         "transportation",
@@ -4228,12 +4228,12 @@
             "URL": "",
             "name": "null"
           }
-        ]
+        ],
+        "usageType": "exemptByCIO"
       },
       "languages": [
         "C#"
       ],
-      "usageType": "exemptByCIO",
       "exemptiontext": "This code was not developed with the expectation that it would be released as Open Source. Preliminary review has identified operational procedures which if made public may expose FAA systems to cyber security attacks. Further review is required to fully analyze and mitigate any security issues which may result from making the code public. This review cannot be completed in the time remaining for the current release schedule.",
       "tags": [
         "transportation",
@@ -4261,14 +4261,14 @@
             "URL": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
             "name": "CC0"
           }
-        ]
+        ],
+        "usageType": "openSource"
       },
       "languages": [
         "Java",
         "XML",
         "JSON"
       ],
-      "usageType": "openSource",
       "exemptiontext": "null",
       "tags": [
         "transportation",
@@ -4296,7 +4296,8 @@
             "URL": "",
             "name": "null"
           }
-        ]
+        ],
+        "usageType": "exemptByCIO"
       },
       "languages": [
         "ColdFusion",
@@ -4304,7 +4305,6 @@
         "MongoDB",
         "Oracle"
       ],
-      "usageType": "exemptByCIO",
       "exemptiontext": "This code was not developed with the expectation that it would be released as Open Source. Preliminary review has identified operational procedures which if made public may expose FAA systems to cyber security attacks. Further review is required to fully analyze and mitigate any security issues which may result from making the code public. This review cannot be completed in the time remaining for the current release schedule.",
       "tags": [
         "transportation",
