@@ -4,7 +4,6 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/c7f588c467b66045efdf/maintainability)](https://codeclimate.com/github/GSA/code-gov-api/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/c7f588c467b66045efdf/test_coverage)](https://codeclimate.com/github/GSA/code-gov-api/test_coverage)
 [![Issue Count](https://codeclimate.com/github/GSA/code-gov-api/badges/issue_count.svg)](https://codeclimate.com/github/GSA/code-gov-api)
-[![Dependency Status](https://gemnasium.com/badges/github.com/GSA/code-gov-api.svg)](https://gemnasium.com/github.com/GSA/code-gov-api)
 
 ## Introduction
 
