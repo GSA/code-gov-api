@@ -8,9 +8,9 @@
     "url": "https://github.com/GSA/code-gov-api.git"
   },
   "scripts": {
-    "start": "node app.js",
+    "start": "node app.js | ./node_modules/.bin/bunyan --color",
     "debug": "node --inspect app.js",
-    "index": "node ./scripts/index/index.js",
+    "index": "node ./scripts/index/index.js | ./node_modules/.bin/bunyan --color",
     "index-debug": "node --inspect ./scripts/index/index.js",
     "index-repos": "node ./scripts/index/repo/index.js",
     "index-terms": "node ./scripts/index/term/index.js",
