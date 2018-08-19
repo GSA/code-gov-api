@@ -6,7 +6,7 @@ const AbstractIndexer = require("../abstract_indexer");
 
 const AgencyJsonStream = require("../repo/AgencyJsonStream");
 const RepoIndexerStream = require("../repo/RepoIndexStream");
-const ES_MAPPING = require("../../../indexes/repo/mapping_200.json");
+const ES_MAPPING = require("../../../indexes/repo/mapping_201.json");
 
 const ES_SETTINGS = require("../../../indexes/repo/settings.json");
 const ES_PARAMS = {
@@ -115,7 +115,7 @@ class RepoIndexer extends AbstractIndexer {
           });
       },
       (response, next) => {
-        Reporter.indexReport(indexer.esIndex)
+        Reporter.indexReport()
           .then(() => next(null, null))
           .catch(err => {
             indexer.logger.error(err);

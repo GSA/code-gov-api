@@ -6,7 +6,7 @@ const getConfig = require('../../../config');
 
 // NOTE: dependent on elasticsearch repos being indexed
 
-const ES_REPO_MAPPING = require("../../../indexes/repo/mapping_200.json");
+const ES_REPO_MAPPING = require("../../../indexes/repo/mapping_201.json");
 const ES_REPO_SETTINGS = require("../../../indexes/repo/settings.json");
 const ES_REPO_PARAMS = {
   "esAlias": "repos",
@@ -47,9 +47,9 @@ class RepoTermIndexerStream extends Writable {
           if (status) {
             this.logger.debug('termIndexer.indexDocument - Status', status);
           }
-        
+
           this.termIndexer.indexCounter++;
-  
+
           resolve(response);
         })
         .catch(err => {
