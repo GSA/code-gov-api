@@ -64,7 +64,7 @@ class IndexOptimizer extends AbstractIndexTool {
    * @param {any} repoIndexInfo Information about the index and alias for repos
    * @param {any} callback
    */
-  static init(adapter, repoIndexInfo, callback) {
+  static init(adapter, repoIndexInfo, callback=undefined) {
 
     let optimizer = new IndexOptimizer(adapter);
     optimizer.logger.info(`Starting index optimization.`);
@@ -74,9 +74,10 @@ class IndexOptimizer extends AbstractIndexTool {
         optimizer.logger.error(err);
       }
       optimizer.logger.info(`Finished optimizing indices.`);
-      return callback(err);
+      if( callback && typeof callback === 'function') {
+        return callback(err);
+      }
     });
-
   }
 
 }
