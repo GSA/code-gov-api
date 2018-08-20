@@ -313,7 +313,7 @@ class Searcher {
     // add query terms (boost when phrase is matched)
     if (queryParams.term) {
       body.query("match", "term_suggest", queryParams.term);
-      body.query("match", "term_suggest", { query: queryParams.term, type: "phrase" });
+      body.query("match_phrase", "term_suggest", { query: queryParams.term });
     }
 
     // set the term types (use defaults if not supplied)
