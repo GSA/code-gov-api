@@ -166,10 +166,10 @@
     "fallback_file": "DOL.json",
     "requirements": {
       "agencyWidePolicy": 1,
-      "openSourceRequirement": 0,
-      "inventoryRequirement": 0,
+      "openSourceRequirement": 1,
+      "inventoryRequirement": 0.5,
       "schemaFormat": 0.5,
-      "overallCompliance": 0
+      "overallCompliance": 0.75
     },
     "complianceDashboard": true
   },
