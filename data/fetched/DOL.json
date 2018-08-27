@@ -119,6 +119,44 @@
       }
     },
     {
+      "name": "News Release Log",
+      "organization": "OPA",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/NewsReleaseLog",
+      "description": "An application to keep track of news releases by all the agencies.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "News",
+        "Release",
+        "Log"
+      ],
+      "contact": {
+        "email": "Yao.sue-li@dol.gov",
+        "name": "Sue-li Yao"
+      },
+      "status": "Beta",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/NewsReleaseLog/archive/master.zip",
+      "languages": [
+        "ruby on rails",
+        "javascript"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2018-07-18",
+        "lastModified": "2018-07-31"
+      }
+    },
+    {
       "name": "DEVELOPER",
       "organization": "OPA",
       "repositoryURL": "https://github.com/USDepartmentofLabor/Developer",
@@ -4096,6 +4134,47 @@
       "date": {
         "created": "2018-03-12",
         "lastModified": "2018-04-30"
+      }
+    },
+    {
+      "name": "Mobile Child Labor Participant Monitoring Application",
+      "organization": "ILAB",
+      "repositoryURL": "https://github.com/USDepartmentofLabor/Mobile-Child-Labor-Participant-Monitoring-Application",
+      "description": "Mobile-Child-Labor-Participant-Monitoring-Application.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "Mobile",
+        "Child",
+        "Labor",
+        "Participant",
+        "Monitoring",
+        "Application"
+      ],
+      "contact": {
+        "email": "Hong.Kevin.C@dol.gov",
+        "name": "Kevin C Hong"
+      },
+      "status": "Alpha",
+      "vcs": "git",
+      "homepage": "https://github.com/USDepartmentofLabor",
+      "downloadURL": "https://github.com/USDepartmentofLabor/Mobile-Child-Labor-Participant-Monitoring-Application/archive/master.zip",
+      "languages": [
+        "C#",
+        "Shell"
+      ],
+      "laborHours": 1,
+      "date": {
+        "created": "2018-05-22",
+        "lastModified": "2018-06-10"
       }
     },
     {

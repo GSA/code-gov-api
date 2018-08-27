@@ -3,7 +3,7 @@ const Bodybuilder         = require("bodybuilder");
 const moment              = require("moment");
 const Utils               = require("../../utils");
 const Logger              = require("../../utils/logger");
-const repoMapping         = require("../../indexes/repo/mapping_200.json");
+const repoMapping         = require("../../indexes/repo/mapping_201.json");
 
 const DATE_FORMAT = "YYYY-MM-DD";
 const REPO_RESULT_SIZE_MAX = 10000;
@@ -100,32 +100,22 @@ class Searcher {
     body.query("bool", "should", query);
   }
 
-  _addFullTextQuery(body, queryParams) {
-    if (queryParams.q) {
-      // need to nest `_fulltext` query as a "must"
-      let ftBody = new Bodybuilder();
+  _addFullTextQuery(body, searchQuery) {
+    const searchFields = [
+      "name^10",
+      "name._fulltext^5",
+      "description^2",
+      "agency.acronym",
+      "agency.name^5",
+      "agency.name._fulltext",
+      "permissions.usageType",
+      "tags^3",
+      "tags._fulltext",
+      "languages^3",
+      "languages._fulltext"
+    ];
 
-      ftBody.query("bool", "should", {
-        "multi_match": {
-          "query": queryParams.q,
-          "fields": [
-            "name^10",
-            "name._fulltext^10",
-            "description^4",
-            "agency.acronym^5",
-            "agency.name^5",
-            "agency.name._fulltext^5",
-            "permissions.usageType^3",
-            "tags",
-            "tags._fulltext",
-            "languages",
-            "languages._fulltext"
-          ]
-        }
-      });
-
-      body.query("bool", "must", ftBody.build("v2")["query"]);
-    }
+    body.query("multi_match", 'fields', searchFields, {"query": searchQuery}, {"type": "best_fields"});
   }
 
   _addStringFilter(body, field, filter) {
@@ -236,6 +226,8 @@ class Searcher {
    * @param {any} queryParams The query parameters a user is searching for
    */
   _addSortOrder(body, queryParams) {
+    body.sort('_score', queryParams['sort'] || 'desc');
+    body.sort('score', 'desc');
     if(queryParams['sort']) {
       const sortValues = [];
       queryParams.sort.split(',').forEach(value => {
@@ -262,19 +254,19 @@ class Searcher {
           body.sort(sortField, 'asc');
         }
       });
-    } else {
-      body.sort('_score', queryParams['sort'] || 'desc');
     }
   }
 
   _searchReposQuery(queryParams) {
     let body = new Bodybuilder();
 
+    if(queryParams.q) {
+      this._addFullTextQuery(body, queryParams.q);
+    }
     this._addFieldFilters(body, queryParams);
     this._addSizeFromParams(body, queryParams);
-    this._addIncludeExclude(body, queryParams);
-    this._addFullTextQuery(body, queryParams);
 
+    this._addIncludeExclude(body, queryParams);
     this._addSortOrder(body, queryParams);
 
     let query = body.build("v2");
@@ -321,7 +313,7 @@ class Searcher {
     // add query terms (boost when phrase is matched)
     if (queryParams.term) {
       body.query("match", "term_suggest", queryParams.term);
-      body.query("match", "term_suggest", { query: queryParams.term, type: "phrase" });
+      body.query("match_phrase", "term_suggest", { query: queryParams.term });
     }
 
     // set the term types (use defaults if not supplied)
@@ -433,7 +425,7 @@ class Searcher {
     logger.info("Status searching");
 
     this.client.search({
-      index: 'repos',
+      index: 'status',
       type: 'status'
     }, (error, elasticSearchResponse) => {
       if(error) {

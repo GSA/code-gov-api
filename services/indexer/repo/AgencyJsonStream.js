@@ -1,6 +1,5 @@
 const path = require('path');
 const { Transform } = require("stream");
-// const request = require("request");
 const fetch = require('node-fetch');
 const Jsonfile = require("jsonfile");
 const Logger = require('../../../utils/logger');
@@ -8,7 +7,8 @@ const { getValidator } = require('../../validator');
 const Formatter = require('../../formatter');
 const Reporter = require("../../reporter");
 const Utils = require("../../../utils");
-
+const RulesEngine = require('simple-rules-engine');
+const getRules = require('../../validator/rules');
 const logger = new Logger({name: 'agency-json-stream'});
 
 class AgencyJsonStream extends Transform {
@@ -55,12 +55,13 @@ class AgencyJsonStream extends Transform {
   }
 
   _getAgencyCodeJson(agency){
-    logger.info('Entered saveFetchedCodeJson - Agency: ', agency.acronym);
+    logger.info('Entered _getAgencyCodeJson - Agency: ', agency.acronym);
 
     if(this.config.prod_envs.includes(process.env.NODE_ENV)) {
       const errorMessage = 'FAILURE: There was an error fetching the code.json:';
       return fetch(agency.codeUrl, {
-        headers: { 'Content-Type': 'application/json', 'User-Agent': 'code.gov' }
+        headers: { 'Content-Type': 'application/json', 'User-Agent': 'code.gov' },
+        timeout: 180000
       })
         .then(response => {
           if(response.status >= 400) {
@@ -116,51 +117,58 @@ class AgencyJsonStream extends Transform {
     let resultRepos = [];
     const repos = Utils.getCodeJsonRepos(codeJson);
 
-    if(!repos || repos.length < 1) {
-      logger.error(`ERROR: ${agency.acronym} code.json has no projects or releaseEvents.`);
-      reportString = "NOT COMPLIANT: ";
-      reportDetails.push(`Agency has not releases/repositories published.`);
-    } else {
-      repos.map(repo => {
-        const repoId = Utils.transformStringToKey([agency.acronym, repo.organization, repo.name].join("_"));
-        const validator = getValidator(codeJson);
-
-        return validator.validateRepo(repo, agency, (error, results) => {
-          if(error) {
-            logger.debug(`Error validating repo with repoID ${repoId}.`);
-          }
-          if(results.issues) {
-            validationTotals.errors += results.issues.errors.length ? results.issues.errors.length : 0;
-            validationTotals.warnings += results.issues.warnings.length ? results.issues.warnings.length : 0;
-            validationTotals.enhancements += results.issues.enhancements.length ?
-              results.issues.enhancements.length : 0;
-
-            Reporter.reportIssues(agency.acronym, results);
-          }
-          validator.cleaner(repo);
-          resultRepos.push(repo);
-        });
-      });
-
-      if(validationTotals.errors) {
-        totalErrors += validationTotals.errors;
-        reportDetails.push(`${validationTotals.errors} ERRORS`);
-      }
-      if(validationTotals.warnings) {
-        totalErrors += validationTotals.warnings;
-        reportDetails.push(`${validationTotals.warnings} WARNINGS`);
-      }
-
-      if(validationTotals.enhancements) {
-        reportDetails.push(`${validationTotals.enhancements} REQUESTED ENHANCEMENTS`);
-      }
-
-      if(totalErrors) {
-        reportString= "NOT FULLY COMPLIANT: ";
+    if(this.config.supportedSchemaVersions.includes(codeJson.version)) {
+      if(!repos || repos.length < 1) {
+        logger.error(`ERROR: ${agency.acronym} code.json has no projects or releaseEvents.`);
+        reportString = "NOT COMPLIANT: ";
+        reportDetails.push(`Agency has not releases/repositories published.`);
       } else {
-        agency.requirements.schemaFormat = 1;
-        reportString= "FULLY COMPLIANT: ";
+        repos.map(repo => {
+          const repoId = Utils.transformStringToKey([agency.acronym, repo.organization, repo.name].join("_"));
+          const validator = getValidator(codeJson);
+
+          return validator.validateRepo(repo, agency, (error, results) => {
+            if(error) {
+              logger.debug(`Error validating repo with repoID ${repoId}.`);
+            }
+            if(results.issues) {
+              validationTotals.errors += results.issues.errors.length ? results.issues.errors.length : 0;
+              validationTotals.warnings += results.issues.warnings.length ? results.issues.warnings.length : 0;
+              validationTotals.enhancements += results.issues.enhancements.length ?
+                results.issues.enhancements.length : 0;
+
+              Reporter.reportIssues(agency.acronym, results);
+            }
+            validator.cleaner(repo);
+            resultRepos.push(repo);
+          });
+        });
+
+        if(validationTotals.errors) {
+          totalErrors += validationTotals.errors;
+          reportDetails.push(`${validationTotals.errors} ERRORS`);
+        }
+        if(validationTotals.warnings) {
+          totalErrors += validationTotals.warnings;
+          reportDetails.push(`${validationTotals.warnings} WARNINGS`);
+        }
+
+        if(validationTotals.enhancements) {
+          reportDetails.push(`${validationTotals.enhancements} REQUESTED ENHANCEMENTS`);
+        }
+
+        if(totalErrors) {
+          reportString= "NOT FULLY COMPLIANT: ";
+        } else {
+          agency.requirements.schemaFormat = 1;
+          reportString= "FULLY COMPLIANT: ";
+        }
       }
+    } else {
+      Reporter.reportIssues(agency.acronym, [{
+        message: `${codeJson.version} is not a valid schema version`
+      }]);
+      reportDetails.push(`1 ERRORS`);
     }
 
     reportString += reportDetails.join(", ");
@@ -211,7 +219,16 @@ class AgencyJsonStream extends Transform {
     this._getAgencyCodeJson(agency)
       .then(codeJson => this._validateAgencyRepos(agency, codeJson))
       .then(validatedRepos => this._formatRepos(agency, validatedRepos))
-      .then(formattedRepos => formattedRepos.forEach(repo => this.push(repo)))
+      .then(formattedRepos => {
+        const engine = new RulesEngine(getRules());
+
+        return Promise.all(
+          formattedRepos.map(repo => {
+            return engine.execute(repo);
+          })
+        );
+      })
+      .then(scoredRepos => scoredRepos.forEach(repo => this.push(repo)))
       .then(() => callback())
       .catch(error => {
         logger.error(error);

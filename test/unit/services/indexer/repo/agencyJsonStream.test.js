@@ -23,7 +23,12 @@ describe('AgencyJsonStream', function() {
     fetchDataDir = path.join(testDataDir, '/fetched');
     agency = JsonFile.readFileSync(path.join(testDataDir, 'test_agency_metadata.json'));
     agencyJsonStream = new AgencyJsonStream(fetchDataDir, fallbackDataDir, {
-      prod_envs: ['prod', 'production', 'stag', 'staging']
+      prod_envs: ['prod', 'production', 'stag', 'staging'],
+      supportedSchemaVersions: [
+        '1.0.0',
+        '1.0.1',
+        '2.0.0'
+      ]
     });
   });
 
@@ -93,6 +98,10 @@ describe('AgencyJsonStream', function() {
         URL: '',
         name: ''
       }],
+      targetOperatingSystems: ['other'],
+      additionalInformation: {
+        additionalNotes: null
+      },
       date: {
         created: '',
         lastModified: moment('2017-04-11', 'YYYY-MM-DD').utc().toJSON(),

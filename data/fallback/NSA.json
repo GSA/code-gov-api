@@ -1,0 +1,1141 @@
+{
+  "version": "2.0.0",
+  "agency": "",
+  "releases": [
+    {
+      "name": "AppLocker-Guidance",
+      "description": "Configuration guidance for implementing application whitelisting with AppLocker",
+      "tags": [
+        "application-whitelisting",
+        "applocker",
+        "microsoft-applocker",
+        "whitelisting",
+        "windows"
+      ],
+      "contact": {
+        "email": "iad_ccc@nsa.gov",
+        "name": "NSA IA Client Contact Center"
+      },
+      "vcs": "git",
+      "downloadUrl": "https://github.com/iadgov/AppLocker-Guidance/archive/master.zip",
+      "languages": [
+        "PowerShell",
+        "Batchfile"
+      ],
+      "status": "Production",
+      "agency": "NSA",
+      "id": "NSA/AppLocker-Guidance",
+      "repositoryURL": "https://github.com/iadgov/AppLocker-Guidance",
+      "homepageURL": "https://github.com/iadgov/AppLocker-Guidance",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/iadgov/AppLocker-Guidance/blob/master/LICENSE.md",
+            "name": null
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": "2017-05-15T22:05:10Z"
+      },
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
+    },
+    {
+      "name": "Certificate-Authority-Situational-Awareness",
+      "description": "Identifies unexpected and prohibited certificate authority certificates on Windows systems",
+      "tags": [
+        "certificate",
+        "certificate-authorities",
+        "certificate-authority",
+        "certificates",
+        "splunk",
+        "windows"
+      ],
+      "contact": {
+        "email": "iad_ccc@nsa.gov",
+        "name": "NSA IA Client Contact Center"
+      },
+      "vcs": "git",
+      "downloadUrl": "https://github.com/iadgov/Certificate-Authority-Situational-Awareness/archive/master.zip",
+      "languages": [
+        "PowerShell",
+        "Batchfile",
+        "CSS"
+      ],
+      "status": "Production",
+      "agency": "NSA",
+      "id": "NSA/Certificate-Authority-Situational-Awareness",
+      "repositoryURL": "https://github.com/iadgov/Certificate-Authority-Situational-Awareness",
+      "homepageURL": "https://github.com/iadgov/Certificate-Authority-Situational-Awareness",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/iadgov/Certificate-Authority-Situational-Awareness/blob/master/LICENSE.md",
+            "name": null
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": "2017-05-15T21:12:27Z"
+      },
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
+    },
+    {
+      "name": "Control-Flow-Integrity",
+      "description": "A proposed hardware-based method for stopping known memory corruption exploitation techniques",
+      "tags": [
+        "control-flow",
+        "control-flow-analysis",
+        "control-flow-integrity"
+      ],
+      "contact": {
+        "email": "control-flow-integrity@nsa.gov",
+        "name": "control-flow-integrity"
+      },
+      "vcs": "git",
+      "downloadUrl": "https://github.com/repos/iadgov/Control-Flow-Integrity/zipball/v1.0.0",
+      "languages": [
+        "C"
+      ],
+      "status": "Beta",
+      "agency": "NSA",
+      "id": "NSA/Control-Flow-Integrity",
+      "repositoryURL": "https://github.com/iadgov/Control-Flow-Integrity",
+      "homepageURL": "https://github.com/iadgov/Control-Flow-Integrity",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/iadgov/Control-Flow-Integrity/blob/master/LICENSE.md",
+            "name": null
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": "2017-05-15T21:13:10Z"
+      },
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
+    },
+    {
+      "name": "Event-Forwarding-Guidance",
+      "description": "Configuration guidance for implementing collection of security relevant Windows Event Log events by using Windows Event Forwarding",
+      "tags": [
+        "event-log",
+        "siem",
+        "windows"
+      ],
+      "contact": {
+        "email": "iad_ccc@nsa.gov",
+        "name": "NSA IA Client Contact Center"
+      },
+      "vcs": "git",
+      "downloadUrl": "https://github.com/iadgov/Event-Forwarding-Guidance/archive/master.zip",
+      "languages": [
+        "PowerShell"
+      ],
+      "status": "Production",
+      "agency": "NSA",
+      "id": "NSA/Event-Forwarding-Guidance",
+      "repositoryURL": "https://github.com/iadgov/Event-Forwarding-Guidance",
+      "homepageURL": "https://github.com/iadgov/Event-Forwarding-Guidance",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/iadgov/Event-Forwarding-Guidance/blob/master/LICENSE.md",
+            "name": null
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": "2017-05-15T21:13:39Z"
+      },
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
+    },
+    {
+      "name": "goSecure",
+      "description": "An easy to use and portable Virtual Private Network (VPN) system built with Linux and a Raspberry Pi",
+      "tags": [
+        "linux",
+        "raspberry-pi",
+        "strongswan",
+        "vpn"
+      ],
+      "contact": {
+        "email": "iad_ccc@nsa.gov",
+        "name": "NSA IA Client Contact Center"
+      },
+      "vcs": "git",
+      "downloadUrl": "https://github.com/iadgov/goSecure/archive/master.zip",
+      "languages": [
+        "OpenEdge ABL",
+        "HTML",
+        "JavaScript",
+        "CSS",
+        "Python"
+      ],
+      "status": "Archival",
+      "agency": "NSA",
+      "id": "NSA/goSecure",
+      "repositoryURL": "https://github.com/iadgov/goSecure",
+      "homepageURL": "https://iadgov.github.io/goSecure/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/iadgov/goSecure/blob/master/LICENSE.md",
+            "name": null
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": "2017-05-18T08:29:07Z"
+      },
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
+    },
+    {
+      "name": "GRASSMARLIN",
+      "description": "Provides situational awareness of Industrial Control Systems (ICS) and Supervisory Control and Data Acquisition (SCADA) networks in support of network security assessments",
+      "tags": [
+        "analysis",
+        "ics",
+        "monitor",
+        "monitoring",
+        "network",
+        "networking",
+        "scada",
+        "visualization"
+      ],
+      "contact": {
+        "email": "iad_ccc@nsa.gov",
+        "name": "NSA IA Client Contact Center"
+      },
+      "vcs": "git",
+      "downloadUrl": "https://github.com/repos/iadgov/GRASSMARLIN/zipball/v3.2.0",
+      "languages": [
+        "HTML",
+        "Java",
+        "ANTLR"
+      ],
+      "status": "Production",
+      "agency": "NSA",
+      "id": "NSA/GRASSMARLIN",
+      "repositoryURL": "https://github.com/iadgov/GRASSMARLIN",
+      "homepageURL": "https://github.com/iadgov/GRASSMARLIN",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/iadgov/GRASSMARLIN/blob/master/LICENSE.md",
+            "name": null
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": "2017-05-16T19:21:22Z"
+      },
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
+    },
+    {
+      "name": "LOCKLEVEL",
+      "description": "A prototype that demonstrates a method for scoring how well Windows systems have implemented some of the top 10 Information Assurance mitigation strategies",
+      "tags": [
+        "assessment",
+        "compliance",
+        "scoring",
+        "windows"
+      ],
+      "contact": {
+        "email": "iad_ccc@nsa.gov",
+        "name": "NSA IA Client Contact Center"
+      },
+      "vcs": "git",
+      "downloadUrl": "https://github.com/iadgov/LOCKLEVEL/archive/master.zip",
+      "languages": [
+        "Objective-C",
+        "CSS",
+        "JavaScript",
+        "HTML",
+        "Python",
+        "C++",
+        "PowerShell",
+        "C",
+        "CMake",
+        "Batchfile"
+      ],
+      "status": "Archival",
+      "agency": "NSA",
+      "id": "NSA/LOCKLEVEL",
+      "repositoryURL": "https://github.com/iadgov/LOCKLEVEL",
+      "homepageURL": "https://github.com/iadgov/LOCKLEVEL",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/iadgov/LOCKLEVEL/blob/master/LICENSE.md",
+            "name": null
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": "2017-05-15T21:16:25Z"
+      },
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
+    },
+    {
+      "name": "Maplesyrup",
+      "description": "Assesses CPU security of embedded devices",
+      "tags": [
+        "arm",
+        "assessment",
+        "audit",
+        "auditing",
+        "cpu",
+        "security"
+      ],
+      "contact": {
+        "email": "iad_ccc@nsa.gov",
+        "name": "NSA IA Client Contact Center"
+      },
+      "vcs": "git",
+      "downloadUrl": "https://github.com/iadgov/Maplesyrup/archive/master.zip",
+      "languages": [
+        "Makefile",
+        "M4",
+        "Objective-C",
+        "Python",
+        "Shell",
+        "C",
+        "Assembly"
+      ],
+      "status": "Archival",
+      "agency": "NSA",
+      "id": "NSA/Maplesyrup",
+      "repositoryURL": "https://github.com/iadgov/Maplesyrup",
+      "homepageURL": "https://github.com/iadgov/Maplesyrup",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/iadgov/Maplesyrup/blob/master/LICENSE.md",
+            "name": null
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": "2017-05-04T21:24:42Z"
+      },
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
+    },
+    {
+      "name": "netfil",
+      "description": "A kernel network manager with monitoring and limiting capabilities for macOS",
+      "tags": [
+        "macos",
+        "macosx",
+        "monitor",
+        "monitoring",
+        "network",
+        "networking"
+      ],
+      "contact": {
+        "email": "iad_ccc@nsa.gov",
+        "name": "NSA IA Client Contact Center"
+      },
+      "vcs": "git",
+      "downloadUrl": "https://github.com/iadgov/netfil/archive/master.zip",
+      "languages": [
+        "C",
+        "Objective-C",
+        "Swift",
+        "Shell"
+      ],
+      "status": "Beta",
+      "agency": "NSA",
+      "id": "NSA/netfil",
+      "repositoryURL": "https://github.com/iadgov/netfil",
+      "homepageURL": "https://github.com/iadgov/netfil",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/iadgov/netfil/blob/master/LICENSE.md",
+            "name": null
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": "2017-05-10T17:28:05Z"
+      },
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
+    },
+    {
+      "name": "netman",
+      "description": "A userland network manager with monitoring and limiting capabilities for macOS",
+      "tags": [
+        "macos",
+        "macosx",
+        "monitor",
+        "monitoring",
+        "network",
+        "networking"
+      ],
+      "contact": {
+        "email": "iad_ccc@nsa.gov",
+        "name": "NSA IA Client Contact Center"
+      },
+      "vcs": "git",
+      "downloadUrl": "https://github.com/iadgov/netman/archive/master.zip",
+      "languages": [
+        "Makefile",
+        "C"
+      ],
+      "status": "Beta",
+      "agency": "NSA",
+      "id": "NSA/netman",
+      "repositoryURL": "https://github.com/iadgov/netman",
+      "homepageURL": "https://github.com/iadgov/netman",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/iadgov/netman/blob/master/LICENSE.md",
+            "name": null
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": "2017-05-18T16:38:06Z"
+      },
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
+    },
+    {
+      "name": "Pass-the-Hash-Guidance",
+      "description": "Configuration guidance for implementing Pass-the-Hash mitigations",
+      "tags": [
+        "pass-the-hash",
+        "pth",
+        "windows"
+      ],
+      "contact": {
+        "email": "iad_ccc@nsa.gov",
+        "name": "NSA IA Client Contact Center"
+      },
+      "vcs": "git",
+      "downloadUrl": "https://github.com/iadgov/Pass-the-Hash-Guidance/archive/master.zip",
+      "languages": [
+        "PowerShell"
+      ],
+      "status": "Production",
+      "agency": "NSA",
+      "id": "NSA/Pass-the-Hash-Guidance",
+      "repositoryURL": "https://github.com/iadgov/Pass-the-Hash-Guidance",
+      "homepageURL": "https://github.com/iadgov/Pass-the-Hash-Guidance",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/iadgov/Pass-the-Hash-Guidance/blob/master/LICENSE.md",
+            "name": null
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": "2017-05-12T23:23:05Z"
+      },
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
+    },
+    {
+      "name": "Secure-Host-Baseline",
+      "description": "Configuration guidance for implementing the Windows 10 and Windows Server 2016 DoD Secure Host Baseline settings",
+      "tags": [
+        "adobe-reader",
+        "applocker",
+        "audit",
+        "auditing",
+        "certificates",
+        "chrome-browser",
+        "compliance",
+        "group-policy",
+        "internet-explorer",
+        "microsoft-office",
+        "nessus",
+        "windows",
+        "windows-10",
+        "windows-firewall",
+        "windows-server",
+        "windows-server-2016"
+      ],
+      "contact": {
+        "email": "iad_ccc@nsa.gov",
+        "name": "NSA IA Client Contact Center"
+      },
+      "vcs": "git",
+      "downloadUrl": "https://github.com/iadgov/Secure-Host-Baseline/archive/master.zip",
+      "languages": [
+        "PowerShell",
+        "HTML"
+      ],
+      "status": "Production",
+      "agency": "NSA",
+      "id": "NSA/Secure-Host-Baseline",
+      "repositoryURL": "https://github.com/iadgov/Secure-Host-Baseline",
+      "homepageURL": "https://github.com/iadgov/Secure-Host-Baseline",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/iadgov/Secure-Host-Baseline/blob/master/LICENSE.md",
+            "name": null
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": "2017-05-22T08:07:22Z"
+      },
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
+    },
+    {
+      "name": "simon-speck",
+      "description": "The SIMON and SPECK families of lightweight block ciphers",
+      "tags": [
+        "cipher",
+        "ciphers",
+        "crypto",
+        "crypto-library",
+        "cryptography",
+        "cryptography-library",
+        "simon",
+        "speck"
+      ],
+      "contact": {
+        "email": "iad_ccc@nsa.gov",
+        "name": "NSA IA Client Contact Center"
+      },
+      "vcs": "git",
+      "downloadUrl": "https://github.com/iadgov/simon-speck/archive/master.zip",
+      "status": "Production",
+      "agency": "NSA",
+      "id": "NSA/simon-speck",
+      "repositoryURL": "https://github.com/iadgov/simon-speck",
+      "homepageURL": "https://iadgov.github.io/simon-speck/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/iadgov/simon-speck/blob/master/LICENSE.md",
+            "name": null
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": "2017-05-13T08:47:47Z"
+      },
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
+    },
+    {
+      "name": "simon-speck-supercop",
+      "description": "Fast implementations of the SIMON and SPECK lightweight block ciphers for the SUPERCOP benchmark toolkit",
+      "tags": [
+        "cipher",
+        "ciphers",
+        "crypto",
+        "crypto-library",
+        "cryptography",
+        "cryptography-library",
+        "simon",
+        "speck",
+        "supercop"
+      ],
+      "contact": {
+        "email": "iad_ccc@nsa.gov",
+        "name": "NSA IA Client Contact Center"
+      },
+      "vcs": "git",
+      "downloadUrl": "https://github.com/iadgov/simon-speck-supercop/archive/master.zip",
+      "languages": [
+        "Makefile",
+        "GDB",
+        "Objective-C",
+        "Shell",
+        "XS",
+        "Emacs Lisp",
+        "SourcePawn",
+        "M4",
+        "Perl",
+        "Python",
+        "Yacc",
+        "Lex",
+        "Protocol Buffer",
+        "TeX",
+        "Fortran",
+        "HTML",
+        "PHP",
+        "C++",
+        "Perl6",
+        "Assembly",
+        "C"
+      ],
+      "status": "Production",
+      "agency": "NSA",
+      "id": "NSA/simon-speck-supercop",
+      "repositoryURL": "https://github.com/iadgov/simon-speck-supercop",
+      "homepageURL": "https://github.com/iadgov/simon-speck-supercop",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/iadgov/simon-speck-supercop/blob/master/LICENSE.md",
+            "name": null
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": "2016-12-03T14:19:01Z"
+      },
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
+    },
+    {
+      "name": "Splunk-Assessment-of-Mitigation-Implementations",
+      "description": "Automatically scores how well Windows systems have implemented some of the top 10 Information Assurance mitigation strategies",
+      "tags": [
+        "assessment",
+        "audit",
+        "auditing",
+        "compliance",
+        "scoring",
+        "splunk",
+        "windows"
+      ],
+      "contact": {
+        "email": "iad_ccc@nsa.gov",
+        "name": "NSA IA Client Contact Center"
+      },
+      "vcs": "git",
+      "downloadUrl": "https://github.com/iadgov/Splunk-Assessment-of-Mitigation-Implementations/archive/master.zip",
+      "languages": [
+        "Batchfile",
+        "JavaScript",
+        "CSS",
+        "Python"
+      ],
+      "status": "Production",
+      "agency": "NSA",
+      "id": "NSA/Splunk-Assessment-of-Mitigation-Implementations",
+      "repositoryURL": "https://github.com/iadgov/Splunk-Assessment-of-Mitigation-Implementations",
+      "homepageURL": "https://github.com/iadgov/Splunk-Assessment-of-Mitigation-Implementations",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/iadgov/Splunk-Assessment-of-Mitigation-Implementations/blob/master/LICENSE.md",
+            "name": null
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": "2017-05-15T21:17:55Z"
+      },
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
+    },
+    {
+      "name": "unfetter",
+      "description": "Identifies defensive gaps in security posture by leveraging Mitre's ATT&CK framework",
+      "tags": "unfetter",
+      "contact": {
+        "email": "iad_ccc@nsa.gov",
+        "name": "NSA IA Client Contact Center"
+      },
+      "vcs": "git",
+      "downloadUrl": "https://github.com/iadgov/unfetter/archive/master.zip",
+      "status": "Beta",
+      "agency": "NSA",
+      "id": "NSA/unfetter",
+      "repositoryURL": "https://github.com/iadgov/unfetter",
+      "homepageURL": "http://unfetter.io/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/iadgov/unfetter/blob/master/LICENSE.md",
+            "name": null
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": "2017-05-13T08:47:42Z"
+      },
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
+    },
+    {
+      "name": "WALKOFF",
+      "description": "An active cyber defense development framework enabling orchestration capabilities to be written once and deployed across WALKOFF-enabled orchestration tools",
+      "tags": [
+        "administration",
+        "automation",
+        "integration",
+        "orchestration",
+        "orchestration-framework",
+        "orchestrator"
+      ],
+      "contact": {
+        "email": "walkoff@nsa.gov",
+        "name": "walkoff"
+      },
+      "vcs": "git",
+      "downloadUrl": "https://github.com/iadgov/WALKOFF/archive/master.zip",
+      "languages": [
+        "Makefile",
+        "CSS",
+        "JavaScript",
+        "HTML",
+        "Python",
+        "PHP",
+        "Batchfile"
+      ],
+      "status": "Beta",
+      "agency": "NSA",
+      "id": "NSA/WALKOFF",
+      "repositoryURL": "https://github.com/iadgov/WALKOFF",
+      "homepageURL": "https://iadgov.github.io/WALKOFF/",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/iadgov/WALKOFF/blob/master/LICENSE.md",
+            "name": null
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": "2017-05-15T19:29:31Z"
+      },
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
+    },
+    {
+      "name": "WALKOFF-Apps",
+      "description": "WALKOFF-enabled applications",
+      "tags": [
+        "administration",
+        "automation",
+        "integration",
+        "orchestration",
+        "orchestration-framework",
+        "orchestrator"
+      ],
+      "contact": {
+        "email": "walkoff@nsa.gov",
+        "name": "walkoff"
+      },
+      "vcs": "git",
+      "downloadUrl": "https://github.com/iadgov/WALKOFF-Apps/archive/master.zip",
+      "languages": [
+        "CSS",
+        "JavaScript",
+        "HTML",
+        "Python",
+        "Shell",
+        "PowerShell"
+      ],
+      "status": "Beta",
+      "agency": "NSA",
+      "id": "NSA/WALKOFF-Apps",
+      "repositoryURL": "https://github.com/iadgov/WALKOFF-Apps",
+      "homepageURL": "https://iadgov.github.io/WALKOFF",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/iadgov/WALKOFF-Apps/blob/master/LICENSE.md",
+            "name": null
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": "2017-05-17T11:09:21Z"
+      },
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
+    },
+    {
+      "name": "Windows-Event-Log-Messages",
+      "description": "Retrieves the definitions of Windows Event Log messages embedded in Windows binaries and provides them in discoverable formats",
+      "tags": [
+        "event-log",
+        "windows"
+      ],
+      "contact": {
+        "email": "iad_ccc@nsa.gov",
+        "name": "NSA IA Client Contact Center"
+      },
+      "vcs": "git",
+      "downloadUrl": "https://github.com/iadgov/Windows-Event-Log-Messages/archive/master.zip",
+      "languages": [
+        "PowerShell",
+        "Batchfile",
+        "C#"
+      ],
+      "status": "Production",
+      "agency": "NSA",
+      "id": "NSA/Windows-Event-Log-Messages",
+      "repositoryURL": "https://github.com/iadgov/Windows-Event-Log-Messages",
+      "homepageURL": "https://github.com/iadgov/Windows-Event-Log-Messages",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/iadgov/Windows-Event-Log-Messages/blob/master/LICENSE.md",
+            "name": null
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "laborHours": null,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": "2017-05-22T01:11:06Z"
+      },
+      "disclaimerText": "",
+      "disclaimerURL": "",
+      "relatedCode": [
+        {
+          "codeName": "",
+          "codeURL": "",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "",
+          "URL": ""
+        }
+      ]
+    }
+  ]
+}

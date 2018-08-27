@@ -168,7 +168,7 @@ class IndexCleaner extends AbstractIndexTool {
    * @param {any} daysToKeep The number of days of indices to keep.
    * @param {any} callback
    */
-  static init(adapter, repoAlias, daysToKeep, callback) {
+  static init(adapter, repoAlias, daysToKeep, callback=undefined) {
 
     let cleaner = new IndexCleaner(adapter);
     cleaner.logger.info(`Starting index cleaning.`);
@@ -178,7 +178,9 @@ class IndexCleaner extends AbstractIndexTool {
         cleaner.logger.error(err);
       }
       cleaner.logger.info(`Finished cleaning indices.`);
-      return callback(err);
+      if(callback && typeof callback === 'function'){
+        return callback(err);
+      }
     });
 
   }
