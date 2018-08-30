@@ -200,7 +200,10 @@ class AgencyJsonStream extends Transform {
     logger.debug('Entered _formatCodeJson - Agency: ', agency.acronym);
 
     const {schemaVersion, repos} = validatedRepos;
-
+    const githubParams = {
+      type: this.config.GITHUB_AUTH_TYPE,
+      token: this.config.GITHUB_TOKEN
+    }
     return Promise.all(
       repos.map(repo => {
         repo.agency = agency;

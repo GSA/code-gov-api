@@ -44,20 +44,17 @@ class Indexer {
         repoIndexInfo = info;
         return next(null);
       },
-      (next) => {
-
-      },
       // optimize the index
-      (info, next) => {
-        IndexOptimizer.init(this.elasticsearchAdapter, info, next);
+      (next) => {
+        IndexOptimizer.init(this.elasticsearchAdapter, repoIndexInfo, next);
       },
       // if all went well, swap aliases
-      (info, next) => {
-        AliasSwapper.init(this.elasticsearchAdapter, info, next);
+      (next) => {
+        AliasSwapper.init(this.elasticsearchAdapter, repoIndexInfo, next);
       },
       // clean up old indices
-      (info, next) => {
-        IndexCleaner.init(this.elasticsearchAdapter, info.esAlias, DAYS_TO_KEEP, next);
+      (next) => {
+        IndexCleaner.init(this.elasticsearchAdapter, repoIndexInfo.esAlias, DAYS_TO_KEEP, next);
       }
     ], (err, status) => {
       if (err) {
