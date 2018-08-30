@@ -106,7 +106,8 @@ function getConfig(env) {
     '1.0.1',
     '2.0.0'
   ];
-
+  config.GITHUB_TOKEN = process.env.GITHUB_TOKEN || null;
+  config.GITHUB_AUTH_TYPE = process.env.GITHUB_AUTH_TYPE || 'token';
   config.USE_HSTS = process.env.USE_HSTS ? process.env.USE_HSTS === 'true' : isProd;
   config.HSTS_MAX_AGE = process.env.HSTS_MAX_AGE ? parseInt(process.env.HSTS_MAX_AGE) : 31536000;
   config.HSTS_PRELOAD = false;

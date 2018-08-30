@@ -5,7 +5,7 @@ class Utils {
 
   /**
    * Transform passed string into RepoId
-   * @param {string} text 
+   * @param {string} text
    */
   static transformStringToKey(text) {
     return latinize(text)
@@ -20,7 +20,7 @@ class Utils {
 
   /**
    * Flaten Elasticsearch mappings.
-   * @param {object} mapping 
+   * @param {object} mapping
    */
   static getFlattenedMappingProperties(mapping) {
     let props = {};
@@ -43,7 +43,7 @@ class Utils {
 
   /**
    * Flaten Elasticsearch mappings by type.
-   * @param {object} mapping 
+   * @param {object} mapping
    */
   static getFlattenedMappingPropertiesByType(mapping) {
     let props = {};
@@ -109,18 +109,18 @@ class Utils {
 
   /**
    * Remove duplicate items from passed collections.
-   * @param {*} collection1 
-   * @param {*} collection2 
+   * @param {*} collection1
+   * @param {*} collection2
    */
   static removeDupes(collection1, collection2) {
     return _.filter(collection1, (obj) => {
-      return !_.find(collection2, obj); 
+      return !_.find(collection2, obj);
     });
   }
 
   /**
    * Extract schema version from code.json
-   * @param {object} codeJson 
+   * @param {object} codeJson
    */
   static getCodeJsonVersion(codeJson) {
     if(codeJson.version) {
@@ -138,7 +138,7 @@ class Utils {
 
   /**
    * Extract repositories from code.json by checking the schema version
-   * @param {object} codeJson 
+   * @param {object} codeJson
    * @returns {array} Array with repositories / projects found in the code.json
    */
   static getCodeJsonRepos(codeJson) {
@@ -165,7 +165,7 @@ class Utils {
   static isValidUrl(url) {
     const urlRegexp = new RegExp(
       /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_+.~#?&//=]*)/, 'g');
-  
+
     return urlRegexp.test(url);
   }
 
@@ -206,12 +206,48 @@ class Utils {
       "target_operating_systems": 0.2,
       "additional_information": 0.1
     };
-  
+
     return fields[field] ? fields[field] : 0;
   }
 
   static getScore(target, value) {
     return target.score ? target.score + value : value;
+  }
+
+  static parseGithubUrl (githubUrl) {
+    if (githubUrl.match(/\/$/)) {
+      githubUrl = githubUrl.replace(/\/$/, '')
+    }
+    if (githubUrl.match(/\.git$/)) {
+      githubUrl = githubUrl.replace(/\.git$/, '')
+    }
+    if (githubUrl.match(/^(https: || http:)\/\/github.com\//)) {
+      githubUrl = githubUrl.replace(/^(https: || http:)\/\/github.com\//, '')
+    }
+    if (githubUrl.match(/^git:\/\/github.com\//)) {
+      githubUrl = githubUrl.replace(/^git:\/\/github.com\//, '')
+    }
+    if (githubUrl.match(/^git@github.com:\//)) {
+      githubUrl = githubUrl.replace(/^git@github.com:\//, '')
+    }
+    const githubOwnerAndRepo = githubUrl.split('/')
+    return {
+      owner: githubOwnerAndRepo[0],
+      repo: githubOwnerAndRepo[1]
+    }
+  }
+
+  static isGithubUrl (repoUrl) {
+    const githubUrlRegEx = /github.com/
+    if (repoUrl) {
+      const match = repoUrl.match(githubUrlRegEx)
+
+      if (match) {
+        return true
+      }
+    }
+
+    return false
   }
 }
 
