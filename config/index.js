@@ -43,7 +43,7 @@ function getPort(cloudFoundryEnv={}) {
 function getAppFilesDirectories() {
   const filePath = process.env.NODE_ENV === 'testing'
     ? path.join(path.dirname(__dirname), 'config/testing_agency_metadata.json')
-    : path.join(path.dirname(__dirname), 'config/agency_metadata.json')
+    : path.join(path.dirname(__dirname), 'config/agency_metadata.json');
 
   return {
     AGENCY_ENDPOINTS_FILE: filePath,
@@ -111,7 +111,8 @@ function getConfig(env='development') {
     '1.0.1',
     '2.0.0'
   ];
-
+  config.GITHUB_TOKEN = process.env.GITHUB_TOKEN || null;
+  config.GITHUB_AUTH_TYPE = process.env.GITHUB_AUTH_TYPE || 'token';
   config.USE_HSTS = process.env.USE_HSTS ? process.env.USE_HSTS === 'true' : config.isProd;
   config.HSTS_MAX_AGE = process.env.HSTS_MAX_AGE ? parseInt(process.env.HSTS_MAX_AGE) : 31536000;
   config.HSTS_PRELOAD = false;

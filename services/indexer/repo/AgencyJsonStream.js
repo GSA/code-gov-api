@@ -10,6 +10,7 @@ const Utils = require("../../../utils");
 const RulesEngine = require('simple-rules-engine');
 const getRules = require('../../validator/rules');
 const logger = new Logger({name: 'agency-json-stream'});
+const { github } = require('@code.gov/code-gov-integrations');
 
 class AgencyJsonStream extends Transform {
   constructor(fetchedDir, fallbackDir, config) {
@@ -199,11 +200,26 @@ class AgencyJsonStream extends Transform {
     logger.debug('Entered _formatCodeJson - Agency: ', agency.acronym);
 
     const {schemaVersion, repos} = validatedRepos;
-
+    const githubParams = {
+      type: this.config.GITHUB_AUTH_TYPE,
+      token: this.config.GITHUB_TOKEN
+    }
     return Promise.all(
       repos.map(repo => {
         repo.agency = agency;
-        return Formatter.formatRepo(schemaVersion, repo);
+        return Formatter.formatRepo(schemaVersion, repo)
+          .then(repo => {
+            if(Utils.isGithubUrl(repo.repositoryURL)) {
+              const results = Utils.parseGithubUrl(repo.repositoryURL);
+
+              return github.getData(results.owner, results.repo, githubParams)
+                .then(data => {
+                  // TODO: handle GH data here
+                });
+            } else {
+              return repo;
+            }
+          });
       })
     );
   }
