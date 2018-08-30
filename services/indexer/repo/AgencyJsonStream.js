@@ -200,14 +200,26 @@ class AgencyJsonStream extends Transform {
     logger.debug('Entered _formatCodeJson - Agency: ', agency.acronym);
 
     const {schemaVersion, repos} = validatedRepos;
-
+    const githubParams = {
+      type: this.config.GITHUB_AUTH_TYPE,
+      token: this.config.GITHUB_TOKEN
+    }
     return Promise.all(
       repos.map(repo => {
         repo.agency = agency;
-        if(repo.repositoryURL && Utils.isGithubUrl(repo.repositoryURL)) {
-          repo.remoteVcs = 'github';
-        }
-        return Formatter.formatRepo(schemaVersion, repo);
+        return Formatter.formatRepo(schemaVersion, repo)
+          .then(repo => {
+            if(Utils.isGithubUrl(repo.repositoryURL)) {
+              const results = Utils.parseGithubUrl(repo.repositoryURL);
+
+              return github.getData(results.owner, results.repo, githubParams)
+                .then(data => {
+                  // TODO: handle GH data here
+                });
+            } else {
+              return repo;
+            }
+          });
       })
     );
   }

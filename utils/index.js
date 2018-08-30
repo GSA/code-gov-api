@@ -214,68 +214,40 @@ class Utils {
     return target.score ? target.score + value : value;
   }
 
-  /**
-   * Bunyan request serializer that prevents API tokens from leaking into the logs
-   * @param {object} request - Expressjs request object
-   * @returns {object} request serializer object used by Bunyan
-   */
-  static getLoggerRequestSerializer(request) {
-    const cleanHeaders = Utils.omitDeepKeys(request.headers, ['x-api-key']);
-    return {
-      id: request.id,
-      method: request.method,
-      url: request.url,
-      headers: cleanHeaders,
-      remoteAddress: request.connection.remoteAddress,
-      remotePort: request.connection.remotePort
-    };
-  }
-
-  /**
-   * Bunyan response serializer that prevents API tokens from leaking into the logs
-   * @param {object} response - Expressjs response object
-   * @returns {object} response serializer object used by Bunyan
-   */
-  static getLoggerResponseSerializer(response) {
-    return {
-      statusCode: response.statusCode,
-      header: Utils.omitDeepKeys(response._header, ['x-api-key'])
-    };
-  }
   static parseGithubUrl (githubUrl) {
     if (githubUrl.match(/\/$/)) {
-      githubUrl = githubUrl.replace(/\/$/, '');
+      githubUrl = githubUrl.replace(/\/$/, '')
     }
     if (githubUrl.match(/\.git$/)) {
-      githubUrl = githubUrl.replace(/\.git$/, '');
+      githubUrl = githubUrl.replace(/\.git$/, '')
     }
     if (githubUrl.match(/^(https: || http:)\/\/github.com\//)) {
-      githubUrl = githubUrl.replace(/^(https: || http:)\/\/github.com\//, '');
+      githubUrl = githubUrl.replace(/^(https: || http:)\/\/github.com\//, '')
     }
     if (githubUrl.match(/^git:\/\/github.com\//)) {
-      githubUrl = githubUrl.replace(/^git:\/\/github.com\//, '');
+      githubUrl = githubUrl.replace(/^git:\/\/github.com\//, '')
     }
     if (githubUrl.match(/^git@github.com:\//)) {
-      githubUrl = githubUrl.replace(/^git@github.com:\//, '');
+      githubUrl = githubUrl.replace(/^git@github.com:\//, '')
     }
-    const githubOwnerAndRepo = githubUrl.split('/');
+    const githubOwnerAndRepo = githubUrl.split('/')
     return {
       owner: githubOwnerAndRepo[0],
       repo: githubOwnerAndRepo[1]
-    };
+    }
   }
 
   static isGithubUrl (repoUrl) {
-    const githubUrlRegEx = /github.com/;
+    const githubUrlRegEx = /github.com/
     if (repoUrl) {
-      const match = repoUrl.match(githubUrlRegEx);
+      const match = repoUrl.match(githubUrlRegEx)
 
       if (match) {
-        return true;
+        return true
       }
     }
 
-    return false;
+    return false
   }
 }
 
