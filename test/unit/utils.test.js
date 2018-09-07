@@ -14,7 +14,7 @@ describe('Testing Utils module', function () {
   describe('flatten mapping properties', function () {
     let mappings;
     before(function () {
-      mappings = require('./test_data/mappings/mapping_201.json');
+      mappings = require('./test_data/mappings/mapping.json');
     })
     it('should return a flattened versions of the passed mapping object using getFlattenedMappingProperties', function () {
       const expected = {

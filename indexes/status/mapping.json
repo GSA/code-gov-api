@@ -5,62 +5,54 @@
         "type": "date"
       },
       "version": {
-        "type": "string",
-        "index": "not_analyzed"
+        "type": "keyword"
       },
       "agency": {
         "type": "object",
         "properties": {
           "name": {
-            "type": "string",
+            "type": "text",
             "analyzer": "keyword_ci",
             "fields": {
               "_fulltext": {
-                "type": "string",
+                "type": "text",
                 "analyzer": "englishfulltext"
               }
             }
           },
           "acronym": {
-            "type": "string",
+            "type": "text",
             "analyzer": "keyword_ci",
             "fields": {
               "_fulltext": {
-                "type": "string",
+                "type": "text",
                 "analyzer": "keyword_ci"
               }
             }
           },
           "website": {
-            "type": "string",
-            "index": "not_analyzed"
+            "type": "text"
           },
           "codeUrl": {
-            "type": "string",
-            "index": "not_analyzed"
+            "type": "text"
           },
           "requirements": {
             "type": "object",
             "properties": {
               "agencyWidePolicy": {
-                "type": "float",
-                "index": "not_analyzed"
+                "type": "float"
               },
               "openSourceRequirement": {
-                "type": "float",
-                "index": "not_analyzed"
+                "type": "float"
               },
               "inventoryRequirement": {
-                "type": "float",
-                "index": "not_analyzed"
+                "type": "float"
               },
               "schemaFormat": {
-                "type": "float",
-                "index": "not_analyzed"
+                "type": "float"
               },
               "overallCompliance": {
-                "type": "float",
-                "index": "not_analyzed"
+                "type": "float"
               }
             }
           }
@@ -70,28 +62,28 @@
         "type": "nested",
         "properties": {
           "organization": {
-            "type": "string"
+            "type": "text"
           },
           "project_name": {
-            "type": "string"
+            "type": "text"
           },
           "errors": {
             "type": "nested",
             "properties": {
               "keyword": {
-                "type": "string"
+                "type": "text"
               },
               "dataPath": {
-                "type": "string"
+                "type": "text"
               },
               "schemaPath": {
-                "type": "string"
+                "type": "text"
               },
               "params": {
                 "type": "object"
               },
               "message": {
-                "type": "string"
+                "type": "text"
               }
             }
           },
@@ -99,19 +91,19 @@
             "type": "nested",
             "properties": {
               "keyword": {
-                "type": "string"
+                "type": "text"
               },
               "dataPath": {
-                "type": "string"
+                "type": "text"
               },
               "schemaPath": {
-                "type": "string"
+                "type": "text"
               },
               "params": {
                 "type": "object"
               },
               "message": {
-                "type": "string"
+                "type": "text"
               }
             }
           },
@@ -119,19 +111,19 @@
             "type": "nested",
             "properties": {
               "keyword": {
-                "type": "string"
+                "type": "text"
               },
               "dataPath": {
-                "type": "string"
+                "type": "text"
               },
               "schemaPath": {
-                "type": "string"
+                "type": "text"
               },
               "params": {
                 "type": "object"
               },
               "message": {
-                "type": "string"
+                "type": "text"
               }
             }
           }
