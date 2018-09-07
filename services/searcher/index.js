@@ -131,7 +131,12 @@ class Searcher {
 
   _addStringFilters(body, queryParams) {
 
-    searchPropsByType['string'].forEach((field) => {
+    searchPropsByType['text'].forEach((field) => {
+      if(queryParams[field]) {
+        this._addStringFilter(body, field, queryParams[field]);
+      }
+    });
+    searchPropsByType['keyword'].forEach((field) => {
       if(queryParams[field]) {
         this._addStringFilter(body, field, queryParams[field]);
       }
