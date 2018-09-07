@@ -5,6 +5,9 @@
         "type": "keyword",
         "normalizer": "lowercase"
       },
+      "score": {
+        "type": "integer"
+      },
       "agency": {
         "type": "object",
         "properties": {
