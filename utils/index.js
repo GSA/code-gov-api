@@ -216,38 +216,38 @@ class Utils {
 
   static parseGithubUrl (githubUrl) {
     if (githubUrl.match(/\/$/)) {
-      githubUrl = githubUrl.replace(/\/$/, '')
+      githubUrl = githubUrl.replace(/\/$/, '');
     }
     if (githubUrl.match(/\.git$/)) {
-      githubUrl = githubUrl.replace(/\.git$/, '')
+      githubUrl = githubUrl.replace(/\.git$/, '');
     }
-    if (githubUrl.match(/^(https: || http:)\/\/github.com\//)) {
-      githubUrl = githubUrl.replace(/^(https: || http:)\/\/github.com\//, '')
+    if (githubUrl.match(/^(https:||http:)\/\/github.com\//)) {
+      githubUrl = githubUrl.replace(/^(https:||http:)\/\/github.com\//, '');
     }
     if (githubUrl.match(/^git:\/\/github.com\//)) {
-      githubUrl = githubUrl.replace(/^git:\/\/github.com\//, '')
+      githubUrl = githubUrl.replace(/^git:\/\/github.com\//, '');
     }
     if (githubUrl.match(/^git@github.com:\//)) {
-      githubUrl = githubUrl.replace(/^git@github.com:\//, '')
+      githubUrl = githubUrl.replace(/^git@github.com:\//, '');
     }
-    const githubOwnerAndRepo = githubUrl.split('/')
+    const githubOwnerAndRepo = githubUrl.split('/');
     return {
       owner: githubOwnerAndRepo[0],
       repo: githubOwnerAndRepo[1]
-    }
+    };
   }
 
   static isGithubUrl (repoUrl) {
-    const githubUrlRegEx = /github.com/
+    const githubUrlRegEx = /github.com/;
     if (repoUrl) {
-      const match = repoUrl.match(githubUrlRegEx)
+      const match = repoUrl.match(githubUrlRegEx);
 
       if (match) {
-        return true
+        return true;
       }
     }
 
-    return false
+    return false;
   }
 }
 
