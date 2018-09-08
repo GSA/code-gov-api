@@ -36,20 +36,14 @@ function getApiRoutes(config, searcher, router) {
     }
   });
   router.get('/repos', (request, response, next) => {
-    try {
-      const result = queryReposAndSendResponse(searcher, request.query, response, logger);
-      response.json(result);
-    } catch(error) {
-      next(error);
-    }
+    queryReposAndSendResponse(searcher, request.query, logger)
+      .then(result => response.json(result))
+      .catch(error => next(error));
   });
   router.get('/terms', (request, response, next) => {
-    try {
-      const result = getTerms(request, response, searcher);
-      response.json(result);
-    } catch(error) {
-      next(error);
-    }
+    getTerms(request, response, searcher)
+      .then(result => response.json(result))
+      .catch(error => next(error));
   });
   router.get(`/agencies`, (request, response, next) => {
     getAgencies(request, searcher, config, logger)
