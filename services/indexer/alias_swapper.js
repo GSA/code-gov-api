@@ -63,7 +63,7 @@ class AliasSwapper extends AbstractIndexTool {
    * @param {any} repoIndexInfo Information about the index and alias for repos
    * @param {any} callback
    */
-  static init(adapter, repoIndexInfo, callback) {
+  static init(adapter, repoIndexInfo, callback=undefined) {
 
     let swapper = new AliasSwapper(adapter);
     swapper.logger.info(`Starting alias swapping.`);
@@ -117,7 +117,9 @@ class AliasSwapper extends AbstractIndexTool {
         swapper.logger.error(err);
       }
       swapper.logger.info(`Finished swapping aliases.`);
-      return callback(err);
+      if(callback && typeof callback === 'function'){
+        return callback(err);
+      }
     });
   }
 

@@ -46,8 +46,6 @@ class Indexer {
 
 }
 
-// If we are running this module directly from Node this code will execute.
-// This will index all items taking our default input.
 if (require.main === module) {
   const config = getConfig(process.env.NODE_ENV);
   let indexer = new Indexer(config);

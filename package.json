@@ -1,6 +1,6 @@
 {
   "name": "code-gov-api",
-  "version": "2.3.0",
+  "version": "2.4.1",
   "author": "Michael Balint <michael.balint@pif.gov> (https://presidentialinnovationfellows.gov/)",
   "description": "[Code.gov](https://code.gov) is a website promoting good practices in code development, collaboration, and reuse across the U.S.  Government. Code.gov will provide tools and guidance to help agencies implement the [Federal Source Code Policy](https://sourcecode.cio.gov). It will include an inventory of the government's custom code to promote reuse between agencies. And it will provide tools to help government and the public collaborate on open source projects. This repository is home to the code powering code.gov. To learn more about the project, check out the main [Code.gov project README](https://github.com/presidential-innovation-fellows/code-gov-pm/blob/master/README.md)",
   "repository": {
@@ -8,12 +8,12 @@
     "url": "https://github.com/GSA/code-gov-api.git"
   },
   "scripts": {
-    "start": "node app.js | ./node_modules/.bin/bunyan",
-    "debug": "node --inspect app.js | ./node_modules/.bin/bunyan",
-    "index": "node ./scripts/index/index.js | ./node_modules/.bin/bunyan",
-    "index-debug": "node --inspect ./scripts/index/index.js | ./node_modules/.bin/bunyan",
-    "index-repos": "node ./scripts/index/repo/index.js | ./node_modules/.bin/bunyan",
-    "index-terms": "node ./scripts/index/term/index.js | ./node_modules/.bin/bunyan",
+    "start": "node app.js | ./node_modules/.bin/bunyan --color",
+    "debug": "node --inspect app.js | ./node_modules/.bin/bunyan --color",
+    "index": "node ./scripts/index/index.js | ./node_modules/.bin/bunyan --color",
+    "index-debug": "node --inspect ./scripts/index/index.js | ./node_modules/.bin/bunyan --color",
+    "index-repos": "node ./scripts/index/repo/index.js | ./node_modules/.bin/bunyan --color",
+    "index-terms": "node ./scripts/index/term/index.js | ./node_modules/.bin/bunyan --color",
     "create-diffs": "node ./scripts/create_diffs/index.js --max_old_space_size=8192",
     "find-gh-gov-orgs": "node ./scripts/find_gh_gov_orgs/index.js | ./node_modules/.bin/bunyan",
     "find-gh-gov-repos": "node ./scripts/find_gh_gov_repos/index.js | ./node_modules/.bin/bunyan",

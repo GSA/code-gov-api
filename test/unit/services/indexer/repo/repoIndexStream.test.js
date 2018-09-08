@@ -16,7 +16,7 @@ describe('Index given repo', function(done) {
   let indexer;
   let mockAdapter = new MockAdapter();
 
-  const ES_MAPPING = require("../../../../../indexes/repo/mapping_200.json");
+  const ES_MAPPING = require("../../../../../indexes/repo/mapping_201.json");
   const ES_SETTINGS = require("../../../../../indexes/repo/settings.json");
   const ES_PARAMS = {
     "esAlias": "repos",
