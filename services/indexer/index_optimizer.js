@@ -75,7 +75,7 @@ class IndexOptimizer extends AbstractIndexTool {
       }
       optimizer.logger.info(`Finished optimizing indices.`);
       if( callback && typeof callback === 'function') {
-        return callback(err);
+        return callback(repoIndexInfo, err);
       }
     });
   }
