@@ -131,28 +131,29 @@ function getInvalidRepoQueryParams (queryParams) {
   });
 }
 
-function queryReposAndSendResponse (searcher, query, response, logger) {
+function queryReposAndSendResponse (searcher, query, logger) {
   let queryParams = Object.keys(query);
 
-  if(queryParams.length) {
-    // validate query params...
-    let invalidParams = getInvalidRepoQueryParams(queryParams);
-    if (invalidParams.length > 0) {
-      let error = {
-        "Error": "Invalid query params.",
-        "Invalid Params": invalidParams
-      };
-      logger.error(error);
-      return response.status(400).json(error);
+  return new Promise((resolve, reject) => {
+    if(queryParams.length) {
+      let invalidParams = getInvalidRepoQueryParams(queryParams);
+      if (invalidParams.length > 0) {
+        let error = {
+          "Error": "Invalid query params.",
+          "Invalid Params": invalidParams
+        };
+        logger.trace(error);
+        reject(error);
+      }
     }
-  }
 
-  searcher.searchRepos(query, (error, repos) => {
-    if(error) {
-      logger.error(error);
-      return response.sendStatus(500);
-    }
-    response.json(repos);
+    searcher.searchRepos(query, (error, repos) => {
+      if(error) {
+        logger.error(error);
+        reject(error);
+      }
+      resolve(repos);
+    });
   });
 }
 
@@ -183,14 +184,14 @@ function getRepoById (id, searcher) {
 }
 
 function getTerms(request, response, searcher) {
-  return new Promise((resolve, reject) {
+  return new Promise((resolve, reject) => {
     let query = _.pick(request.query, ["term", "term_type", "size", "from"]);
 
     searcher.searchTerms(query, (error, terms) => {
       if (error) {
-        return response.sendStatus(500);
+        reject(error);
       }
-      response.json(terms);
+      resolve(terms);
     });
   });
 }
