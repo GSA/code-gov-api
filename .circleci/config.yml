@@ -33,6 +33,14 @@ jobs:
       - run:
           name: run-security-check
           command: npm run security-check
+      - persist_to_workspace:
+          root: ~/code-gov-api
+          paths: .
+  harvest-data:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/code-gov-api
       - run:
           name: harvest-data
           command: npm run index
@@ -132,9 +140,12 @@ workflows:
       - test:
           requires:
             - build
-      - integration:
+      - harvest-data:
           requires:
             - build
+      - integration:
+          requires:
+            - harvest-data
       - deploy-staging:
           requires:
             - test
