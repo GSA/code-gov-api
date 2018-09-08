@@ -5,7 +5,7 @@ class Utils {
 
   /**
    * Transform passed string into RepoId
-   * @param {string} text 
+   * @param {string} text
    */
   static transformStringToKey(text) {
     return latinize(text)
@@ -20,7 +20,7 @@ class Utils {
 
   /**
    * Flaten Elasticsearch mappings.
-   * @param {object} mapping 
+   * @param {object} mapping
    */
   static getFlattenedMappingProperties(mapping) {
     let props = {};
@@ -43,7 +43,7 @@ class Utils {
 
   /**
    * Flaten Elasticsearch mappings by type.
-   * @param {object} mapping 
+   * @param {object} mapping
    */
   static getFlattenedMappingPropertiesByType(mapping) {
     let props = {};
@@ -109,18 +109,18 @@ class Utils {
 
   /**
    * Remove duplicate items from passed collections.
-   * @param {*} collection1 
-   * @param {*} collection2 
+   * @param {*} collection1
+   * @param {*} collection2
    */
   static removeDupes(collection1, collection2) {
     return _.filter(collection1, (obj) => {
-      return !_.find(collection2, obj); 
+      return !_.find(collection2, obj);
     });
   }
 
   /**
    * Extract schema version from code.json
-   * @param {object} codeJson 
+   * @param {object} codeJson
    */
   static getCodeJsonVersion(codeJson) {
     if(codeJson.version) {
@@ -138,7 +138,7 @@ class Utils {
 
   /**
    * Extract repositories from code.json by checking the schema version
-   * @param {object} codeJson 
+   * @param {object} codeJson
    * @returns {array} Array with repositories / projects found in the code.json
    */
   static getCodeJsonRepos(codeJson) {
@@ -165,7 +165,7 @@ class Utils {
   static isValidUrl(url) {
     const urlRegexp = new RegExp(
       /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_+.~#?&//=]*)/, 'g');
-  
+
     return urlRegexp.test(url);
   }
 
@@ -206,12 +206,41 @@ class Utils {
       "target_operating_systems": 0.2,
       "additional_information": 0.1
     };
-  
+
     return fields[field] ? fields[field] : 0;
   }
 
   static getScore(target, value) {
     return target.score ? target.score + value : value;
+  }
+
+  /**
+   * Bunyan request serializer that prevents API tokens from leaking into the logs
+   * @param {object} request - Expressjs request object
+   * @returns {object} request serializer object used by Bunyan
+   */
+  static getLoggerRequestSerializer(request) {
+    const cleanHeaders = Utils.omitDeepKeys(request.headers, ['x-api-key']);
+    return {
+      id: request.id,
+      method: request.method,
+      url: request.url,
+      headers: cleanHeaders,
+      remoteAddress: request.connection.remoteAddress,
+      remotePort: request.connection.remotePort
+    };
+  }
+
+  /**
+   * Bunyan response serializer that prevents API tokens from leaking into the logs
+   * @param {object} response - Expressjs response object
+   * @returns {object} response serializer object used by Bunyan
+   */
+  static getLoggerResponseSerializer(response) {
+    return {
+      statusCode: response.statusCode,
+      header: Utils.omitDeepKeys(response._header, ['x-api-key'])
+    }
   }
 }
 

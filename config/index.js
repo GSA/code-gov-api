@@ -71,7 +71,7 @@ function getSwaggerConf(isProd, apiUrl) {
  * @param {string} env - The application environment. This will default to a development environment
  * @returns {object} - object with all the configuration needed for the environment
  */
-function getConfig(env) {
+function getConfig(env='development') {
   let config = {
     prod_envs: ['prod', 'production', 'stag', 'staging']
   };

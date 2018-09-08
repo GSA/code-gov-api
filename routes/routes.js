@@ -19,11 +19,33 @@ function getApiRoutes(config, searcher, router) {
 
   const logger = new Logger({ name: 'routes.index', level: config.LOGGER_LEVEL });
 
-  router.get('/repos/:id', (request, response) => getRepoById (request, response, searcher, logger));
-  router.get('/repos', (request, response) => queryReposAndSendResponse(
-    searcher, request.query, response, logger));
-  router.get('/terms', (request, response) => getTerms(request, response, searcher));
-  router.get(`/agencies`, (request, response) => {
+  router.get('/repos/:id', async (request, response, next) => {
+    try {
+      const result = await getRepoById(request.params.id, searcher);
+
+      if(_.isEmpty(result)) {
+        const error = new Error('Not Found');
+        error.status = 404;
+        next(error);
+      }
+
+      response.json(result);
+
+    } catch(error) {
+      next(error);
+    }
+  });
+  router.get('/repos', (request, response, next) => {
+    queryReposAndSendResponse(searcher, request.query, logger)
+      .then(result => response.json(result))
+      .catch(error => next(error));
+  });
+  router.get('/terms', (request, response, next) => {
+    getTerms(request, response, searcher)
+      .then(result => response.json(result))
+      .catch(error => next(error));
+  });
+  router.get(`/agencies`, (request, response, next) => {
     getAgencies(request, searcher, config, logger)
       .then(result => {
         if(result) {
@@ -37,7 +59,7 @@ function getApiRoutes(config, searcher, router) {
         response.sendStatus(404);
       });
   });
-  router.get(`/agencies/:agency_acronym`, (request, response) => {
+  router.get(`/agencies/:agency_acronym`, (request, response, next) => {
     getAgency(request, searcher, config, logger)
       .then(results => {
         if(results) {
@@ -51,7 +73,7 @@ function getApiRoutes(config, searcher, router) {
         response.sendStatus(404);
       });
   });
-  router.get(`/languages`, (request, response) => {
+  router.get(`/languages`, (request, response, next) => {
     let options;
     getLanguages(request, searcher, logger, options)
       .then(results => {
@@ -66,8 +88,8 @@ function getApiRoutes(config, searcher, router) {
         response.sendStatus(404);
       });
   });
-  router.get('/repo.json', (request, response) => getRepoJson(response));
-  router.get('/status.json', (request, response) => {
+  router.get('/repo.json', (request, response, next) => getRepoJson(response));
+  router.get('/status.json', (request, response, next) => {
     getStatusData(searcher)
       .then(results => {
         if(results){
@@ -82,7 +104,7 @@ function getApiRoutes(config, searcher, router) {
         response.sendStatus(404);
       });
   });
-  router.get(`/status`, (request, response) => {
+  router.get(`/status`, (request, response, next) => {
     getStatusData(searcher)
       .then(results => response.render('status', { title: "Code.gov API Status", statusData: results }))
       .catch(error => {
@@ -91,7 +113,7 @@ function getApiRoutes(config, searcher, router) {
       });
 
   });
-  router.get(`/status/:agency/issues`, (request, response) => {
+  router.get(`/status/:agency/issues`, (request, response, next) => {
     let agency = request.params.agency.toUpperCase();
     getAgencyIssues(agency, searcher)
       .then(issuesData => {
@@ -106,27 +128,18 @@ function getApiRoutes(config, searcher, router) {
         response.sendStatus(500);
       });
   });
-  router.get(`/status/:agency/fetched`, (request, response) => {
+  router.get(`/status/:agency/fetched`, async (request, response, next) => {
     const agency = request.params.agency.toUpperCase();
 
-    if(agency) {
-      getFetchedReposByAgency(agency, config)
-        .then(results => {
-          if(results) {
-            response.json(results);
-          } else {
-            response.sendStatus(404);
-          }
-        })
-        .catch(error => {
-          logger.error(error);
-          response.sendStatus(404);
-        });
-    } else {
-      response.sendStatus(400);
+    try {
+      const results = await getFetchedReposByAgency(agency, config);
+      response.json(results);
+    } catch(error) {
+      logger.trace(error);
+      next(error);
     }
   });
-  router.get(`/status/:agency/discovered`, (request, response) => {
+  router.get(`/status/:agency/discovered`, (request, response, next) => {
     const agency = request.params.agency.toUpperCase();
 
     if(agency) {
@@ -146,7 +159,7 @@ function getApiRoutes(config, searcher, router) {
       response.sendStatus(400);
     }
   });
-  router.get('/version', (request, response) => {
+  router.get('/version', (request, response, next) => {
     getVersion(response)
       .then(versionInfo => response.json(versionInfo))
       .catch(error => {
@@ -155,7 +168,7 @@ function getApiRoutes(config, searcher, router) {
       });
   });
 
-  router.get('/', (request, response) =>
+  router.get('/', (request, response, next) =>
     getRootMessage()
       .then(rootMessage => response.json(rootMessage))
   );

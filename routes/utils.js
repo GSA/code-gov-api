@@ -131,28 +131,29 @@ function getInvalidRepoQueryParams (queryParams) {
   });
 }
 
-function queryReposAndSendResponse (searcher, query, response, logger) {
+function queryReposAndSendResponse (searcher, query, logger) {
   let queryParams = Object.keys(query);
 
-  if(queryParams.length) {
-    // validate query params...
-    let invalidParams = getInvalidRepoQueryParams(queryParams);
-    if (invalidParams.length > 0) {
-      let error = {
-        "Error": "Invalid query params.",
-        "Invalid Params": invalidParams
-      };
-      logger.error(error);
-      return response.status(400).json(error);
+  return new Promise((resolve, reject) => {
+    if(queryParams.length) {
+      let invalidParams = getInvalidRepoQueryParams(queryParams);
+      if (invalidParams.length > 0) {
+        let error = {
+          "Error": "Invalid query params.",
+          "Invalid Params": invalidParams
+        };
+        logger.trace(error);
+        reject(error);
+      }
     }
-  }
 
-  searcher.searchRepos(query, (error, repos) => {
-    if(error) {
-      logger.error(error);
-      return response.sendStatus(500);
-    }
-    response.json(repos);
+    searcher.searchRepos(query, (error, repos) => {
+      if(error) {
+        logger.error(error);
+        reject(error);
+      }
+      resolve(repos);
+    });
   });
 }
 
@@ -171,29 +172,27 @@ function getFileDataByAgency(agency, directoryPath) {
   });
 }
 
-function getRepoById (request, response, searcher, logger) {
-  let id = request.params.id;
-  searcher.getRepoById(id, (error, repo) => {
-    if (error) {
-      logger.error(error);
-      return response.sendStatus(500);
-    }
-    if (!_.isEmpty(repo)) {
-      response.json(repo);
-    } else {
-      response.sendStatus(404);
-    }
+function getRepoById (id, searcher) {
+  return new Promise((resolve, reject) => {
+    searcher.getRepoById(id, (error, repo) => {
+      if (error) {
+        reject(error);
+      }
+      resolve(repo);
+    });
   });
 }
 
 function getTerms(request, response, searcher) {
-  let query = _.pick(request.query, ["term", "term_type", "size", "from"]);
+  return new Promise((resolve, reject) => {
+    let query = _.pick(request.query, ["term", "term_type", "size", "from"]);
 
-  searcher.searchTerms(query, (error, terms) => {
-    if (error) {
-      return response.sendStatus(500);
-    }
-    response.json(terms);
+    searcher.searchTerms(query, (error, terms) => {
+      if (error) {
+        reject(error);
+      }
+      resolve(terms);
+    });
   });
 }
 

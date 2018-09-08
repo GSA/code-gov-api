@@ -13,6 +13,7 @@ const RateLimit = require('express-rate-limit');
 const Searcher = require("./services/searcher");
 const ElasticsearchSearcherAdapter = require("./utils/search_adapters/elasticsearch_adapter");
 const swaggerUi = require('swagger-ui-express');
+const addRequestId = require('express-request-id')();
 
 /* eslint-disable */
 const pug = require("pug");
@@ -43,7 +44,6 @@ if( config.USE_RATE_LIMITER) {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use('/', express.static(path.join(__dirname, 'public')));
 app.use(cors());
 app.use(helmet());
 app.use(helmet.hsts({
@@ -54,11 +54,18 @@ app.use(helmet.hsts({
   }
 }));
 
+app.use(addRequestId);
 app.use(compression());
 
+app.use(function(req, res, next) {
+  logger.info({ req: req, res: res });
+  next();
+});
+
 app.use('/api/docs', swaggerUi.serve, swaggerUi.setup(config.SWAGGER_DOCUMENT));
-app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
+app.set('views', path.join(__dirname, 'views'));
+app.use('/static', express.static(path.join(__dirname, 'public')));
 app.set('json spaces', 2);
 
 /* ------------------------------------------------------------------ *
@@ -80,25 +87,12 @@ app.use(function(req, res, next) {
   next(err);
 });
 
-// development error handler (prints stacktrace)
-if (app.get('env') === 'development') {
-  app.use(function(err, req, res) {
-    res.status(err.status || 500);
-    logger.error(err);
-    res.render('error', {
-      message: err.message,
-      error: err
-    });
-  });
-}
-
-// production error handler (prints generic error message)
-app.use(function(err, req, res) {
+app.use(function(err, req, res, next) {
   res.status(err.status || 500);
-  logger.error(err);
-  res.render('error', {
+  logger.error({req: req, res: res, err: err});
+  res.json({
     message: err.message,
-    error: {}
+    error: app.get('env') === 'development' ? err : {}
   });
 });
 

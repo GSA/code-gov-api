@@ -1,4 +1,5 @@
 const bunyan = require("bunyan");
+const Utils = require('../utils');
 
 module.exports = class Logger {
 
@@ -12,7 +13,15 @@ module.exports = class Logger {
         name: this.DEFAULT_LOGGER_NAME
       };
     }
-    let bun = bunyan.createLogger(config);
+    let bun = bunyan.createLogger({
+      name: config.name,
+      level: config.LOGGER_LEVEL || 'info',
+      serializers: {
+        req: Utils.getLoggerRequestSerializer,
+        res: Utils.getLoggerResponseSerializer,
+        err: bunyan.stdSerializers.err
+      }
+    });
     this.error = bun.error.bind(bun);
     this.warning = bun.warn.bind(bun);
     this.info = bun.info.bind(bun);

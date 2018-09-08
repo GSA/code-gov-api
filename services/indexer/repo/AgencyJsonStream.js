@@ -24,22 +24,20 @@ class AgencyJsonStream extends Transform {
   _saveFetchedCodeJson(agencyAcronym, codeJson) {
     logger.debug('Entered saveFetchedCodeJson - Agency: ', agencyAcronym);
 
-    return new Promise((fulfill, reject) => {
-      Jsonfile.spaces = 2;
-      const fetchedFilepath = path.join(this.fetchedDir, `${agencyAcronym}.json`);
+    Jsonfile.spaces = 2;
+    const fetchedFilepath = path.join(this.fetchedDir, `${agencyAcronym}.json`);
 
-      try {
-        Jsonfile.writeFile(fetchedFilepath, codeJson, { spaces: 2 }, (err) => {
-          if (err) {
-            reject(err);
-          } else {
-            fulfill(codeJson);
-          }
-        });
-      } catch(err) {
-        reject(err);
-      }
-    });
+    try {
+      Jsonfile.writeFile(fetchedFilepath, codeJson, { spaces: 2 }, (error) => {
+        if (error) {
+          logger.error(error);
+        } else {
+          logger.debug(`Saved fetched data for ${agencyAcronym}`, fetchedFilepath);
+        }
+      });
+    } catch(err) {
+      logger.error(err);
+    }
   }
 
   _readFallbackData(agency, fallbackDir, fallbackFile) {
@@ -54,40 +52,43 @@ class AgencyJsonStream extends Transform {
     });
   }
 
-  _getAgencyCodeJson(agency){
+  async _getAgencyCodeJson(agency){
     logger.info('Entered _getAgencyCodeJson - Agency: ', agency.acronym);
 
     if(this.config.prod_envs.includes(process.env.NODE_ENV)) {
       const errorMessage = 'FAILURE: There was an error fetching the code.json:';
-      return fetch(agency.codeUrl, {
-        headers: { 'Content-Type': 'application/json', 'User-Agent': 'code.gov' },
-        timeout: 180000
-      })
-        .then(response => {
-          if(response.status >= 400) {
-            logger.warning(
-              `${errorMessage} ${agency.codeUrl} returned ${response.status} and
-              Content-Type ${response.headers['Content-Type']}. Using fallback data for indexing.`);
+      let response;
 
-            Reporter.reportFallbackUsed(agency.acronym, true);
-            return this._readFallbackData(agency, this.fallbackDir, agency.fallback_file);
-          }
-          Reporter.reportFallbackUsed(agency.acronym, false);
-          return response.text()
-            .then(responseText => JSON.parse( responseText.replace(/^\uFEFF/, '') ));
-        })
-        .then(jsonData => {
-          this._saveFetchedCodeJson(agency.acronym, jsonData)
-            .then(() => logger.info(`Saved fetched data for ${agency.acronym}`))
-            .catch(error => logger.error(`Could not save fetched data for ${agency.acronym} - ${error}`));
-
-          return jsonData;
-        })
-        .catch(error => {
-          logger.warning(`${errorMessage} ${agency.codeUrl} - ${error.message}. Using fallback data for indexing.`);
-          Reporter.reportFallbackUsed(agency.acronym, true);
-          return this._readFallbackData(agency, this.fallbackDir, agency.fallback_file);
+      try {
+        response = await fetch(agency.codeUrl, {
+          headers: { 'Content-Type': 'application/json', 'User-Agent': 'code.gov' },
+          timeout: 180000
         });
+      } catch(error) {
+        logger.error(`Could not fetch code.json for agency: ${agency}`, error);
+      }
+
+      if(response && response.status >= 400) {
+        logger.warning(
+          `${errorMessage} ${agency.codeUrl} returned ${response.status} and
+          Content-Type ${response.headers['Content-Type']}. Using fallback data for indexing.`);
+
+        Reporter.reportFallbackUsed(agency.acronym, true);
+        return this._readFallbackData(agency, this.fallbackDir, agency.fallback_file);
+      }
+
+      let jsonData = {};
+      try {
+        const responseText = await response.text();
+        jsonData = JSON.parse(responseText.replace(/^\uFEFF/, ''));
+        this._saveFetchedCodeJson(agency.acronym, jsonData);
+
+        return jsonData;
+      } catch(error) {
+        logger.error(`There was an error parsing JSON for agency: ${agency}`, error);
+        Reporter.reportFallbackUsed(agency.acronym, true);
+        return this._readFallbackData(agency, this.fallbackDir, agency.fallback_file);
+      }
     } else {
       Reporter.reportFallbackUsed(agency.acronym, true);
       return this._readFallbackData(agency, this.fallbackDir, agency.fallback_file);
