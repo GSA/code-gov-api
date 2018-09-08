@@ -37,24 +37,27 @@ class Indexer {
 
     async.waterfall([
       (next) => {
-        RepoIndexer.init(this.elasticsearchAdapter, this.config, next); 
+        RepoIndexer.init(this.elasticsearchAdapter, this.config, next);
       },
       (info, next) => {
         // save out alias and repo index name
         repoIndexInfo = info;
         return next(null);
       },
-      // optimize the index
       (next) => {
-        IndexOptimizer.init(this.elasticsearchAdapter, repoIndexInfo, next); 
+
+      },
+      // optimize the index
+      (info, next) => {
+        IndexOptimizer.init(this.elasticsearchAdapter, info, next);
       },
       // if all went well, swap aliases
-      (next) => {
-        AliasSwapper.init(this.elasticsearchAdapter, repoIndexInfo, next); 
+      (info, next) => {
+        AliasSwapper.init(this.elasticsearchAdapter, info, next);
       },
       // clean up old indices
-      (next) => {
-        IndexCleaner.init(this.elasticsearchAdapter, repoIndexInfo.esAlias, DAYS_TO_KEEP, next); 
+      (info, next) => {
+        IndexCleaner.init(this.elasticsearchAdapter, info.esAlias, DAYS_TO_KEEP, next);
       }
     ], (err, status) => {
       if (err) {
