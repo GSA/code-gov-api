@@ -57,6 +57,11 @@ app.use(helmet.hsts({
 app.use(addRequestId);
 app.use(compression());
 
+app.use(function(req, res, next) {
+  logger.info({ req: req, res: res });
+  next();
+});
+
 app.use('/api/docs', swaggerUi.serve, swaggerUi.setup(config.SWAGGER_DOCUMENT));
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
