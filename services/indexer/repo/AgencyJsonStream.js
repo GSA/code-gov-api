@@ -32,7 +32,7 @@ class AgencyJsonStream extends Transform {
         if (error) {
           logger.error(error);
         } else {
-          logger.debug(`Saved fetched data for ${agency.acronym}`, fetchedFilepath);
+          logger.debug(`Saved fetched data for ${agencyAcronym}`, fetchedFilepath);
         }
       });
     } catch(err) {
