@@ -44,7 +44,6 @@ class Indexer {
         repoIndexInfo = info;
         return next(null);
       },
-      // optimize the index
       (next) => {
         IndexOptimizer.init(this.elasticsearchAdapter, repoIndexInfo, next);
       },
