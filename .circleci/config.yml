@@ -1,11 +1,20 @@
+defaults: &defaults
+  working_directory: ~/code-gov-api
+  docker:
+    - image: circleci/node:8.11.4-stretch
+    - image: docker.elastic.co/elasticsearch/elasticsearch:5.6.11
 version: 2
 jobs:
   build:
-    working_directory: ~/code-gov-api
-    docker:
-      - image: circleci/node:8.9.3-stretch
+    <<: *defaults
     steps:
       - checkout
+      - run:
+          name: download-cc-test-reporter
+          command: curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+      - run:
+          name: make-test-reporter-executable
+          command: chmod +x ./cc-test-reporter
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
@@ -24,34 +33,21 @@ jobs:
       - run:
           name: run-security-check
           command: npm run security-check
+      - run:
+          name: harvest-data
+          command: npm run index
+      - persist_to_workspace:
+          root: ~/code-gov-api
+          paths: .
   test:
-    working_directory: ~/code-gov-api
-    docker:
-      - image: circleci/node:8.9.3-stretch
+    <<: *defaults
     environment:
       NODE_ENV: "testing"
     steps:
-      - checkout
-      - run:
-          name: download-cc-test-reporter
-          command: curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-      - run:
-          name: make-test-reporter-executable
-          command: chmod +x ./cc-test-reporter
+      - attach_workspace:
+          at: ~/code-gov-api
       - run:
           command: ./cc-test-reporter before-build
-      - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
-      - run:
-          name: verify-npm-cache
-          command: npm cache verify
-      - run:
-          name: install-node-modules
-          command: npm install --all
-      - save_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
-          paths:
-            - ./node_modules
       - run:
           name: run-test
           command: npm run unit-test
@@ -60,69 +56,31 @@ jobs:
           command: |
              ./cc-test-reporter after-build -t lcov --exit-code $?
       - store_test_results:
-          path: test-results.xml
+          path: test-results
       - store_artifacts:
           path: coverage
           prefix: coverage
+      - persist_to_workspace:
+          root: ~/code-gov-api
+          paths: .
   integration:
-    working_directory: ~/code-gov-api
-    docker:
-      - image: circleci/node:8.9.3-stretch
-      - image: elasticsearch:2.4
+    <<: *defaults
     environment:
       NODE_ENV: "testing"
     steps:
-      - checkout
-      - run:
-          name: download-cc-test-reporter
-          command: curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-      - run:
-          name: make-test-reporter-executable
-          command: chmod +x ./cc-test-reporter
-      - run:
-          command: ./cc-test-reporter before-build
-      - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
-      - run:
-          name: verify-npm-cache
-          command: npm cache verify
-      - run:
-          name: install-node-modules
-          command: npm install --all
-      - save_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
-          paths:
-            - ./node_modules
-      - run:
-          name: get-data
-          command: npm run index
+      - attach_workspace:
+          at: ~/code-gov-api
       - run:
           name: run-test
           command: npm run integration-test
-      - run:
-          name: upload-test-report
-          command: |
-             ./cc-test-reporter after-build -t lcov --exit-code $?
-      - store_test_results:
-          path: test-results.xml
-      - store_artifacts:
-          path: coverage
-          prefix: coverage
+      - persist_to_workspace:
+          root: ~/code-gov-api
+          paths: .
   deploy-staging:
-    working_directory: ~/code-gov-api
-    docker:
-      - image: circleci/node:8.9.3-stretch
+    <<: *defaults
     steps:
-      - checkout
-      - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
-      - run:
-          name: install-node-modules
-          command: npm install --all
-      - save_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
-          paths:
-            - ./node_modules
+      - attach_workspace:
+          at: ~/code-gov-api
       # Install Cloud Foundry cli (cf) before deploy step. cf is used to push project to Cloud.gov
       - run:
           name: install-cf-cli
@@ -140,21 +98,14 @@ jobs:
           command: |
             cf login -a ${CF_URL} -u ${CF_STAGING_DEPLOYER} -p ${CF_STAGING_DEPLOYER_PASS} -o ${CF_ORG} -s ${CF_STAGING_SPACE}
             cf zero-downtime-push code-api -f manifest-staging.yml
+      - persist_to_workspace:
+          root: ~/code-gov-api
+          paths: .
   deploy-production:
-    working_directory: ~/code-gov-api
-    docker:
-      - image: circleci/node:8.9.3-stretch
+    <<: *defaults
     steps:
-      - checkout
-      - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
-      - run:
-          name: install-node-modules
-          command: npm install --all
-      - save_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
-          paths:
-            - ./node_modules
+      - attach_workspace:
+          at: ~/code-gov-api
       - run:
           name: install-cf-cli
           command: |
@@ -170,6 +121,9 @@ jobs:
           command: |
               cf login -a ${CF_URL} -u ${CF_PRODUCTION_DEPLOYER} -p ${CF_PRODUCTION_DEPLOYER_PASS} -o ${CF_ORG} -s ${CF_PRODUCTION_SPACE}
               cf zero-downtime-push code-api -f manifest.yml
+      - persist_to_workspace:
+          root: ~/code-gov-api
+          paths: .
 workflows:
   version: 2
   build-test-deploy:
@@ -197,8 +151,7 @@ workflows:
             - integration
           filters:
             tags:
-              only: /^v.+/
-              ignore: /.+-rc/
+              only: /^v(\d+\.){2}\d+$/
             branches:
               ignore: /.*/
       - deploy-production:
@@ -206,7 +159,6 @@ workflows:
             - deploy-prod-hold
           filters:
             tags:
-              only: /^v.+/
-              ignore: /.+-rc/
+              only: /^v(\d+\.){2}\d+$/
             branches:
               ignore: /.*/
