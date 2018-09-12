@@ -41,8 +41,12 @@ function getPort(cloudFoundryEnv={}) {
  * @returns {object} - Directory paths needed by the application
  */
 function getAppFilesDirectories() {
+  const filePath = process.env.NODE_ENV === 'testing'
+    ? path.join(path.dirname(__dirname), 'config/testing_agency_metadata.json')
+    : path.join(path.dirname(__dirname), 'config/agency_metadata.json')
+
   return {
-    AGENCY_ENDPOINTS_FILE: path.join(path.dirname(__dirname), 'config/agency_metadata.json'),
+    AGENCY_ENDPOINTS_FILE: filePath,
     REPORT_FILEPATH: path.join(path.dirname(__dirname), "/data/status/report.json"),
     DISCOVERED_DIR: path.join(path.dirname(__dirname), "/data/discovered"),
     FETCHED_DIR: path.join(path.dirname(__dirname), "/data/fetched"),
