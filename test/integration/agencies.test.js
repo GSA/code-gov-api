@@ -25,7 +25,7 @@ describe('/agencies endpoint', () => {
     it('includes an array with agencies data', (done) => {
       request(app).get(endpoint)
         .expect((res) => {
-          res.body.agencies.length.should.be.at.least(10);
+          res.body.agencies.length.should.be.at.least(1);
         })
         .end(done);
     });

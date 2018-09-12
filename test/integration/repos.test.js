@@ -26,7 +26,7 @@ describe('/repos endpoint', () => {
         .expect('Content-Type', /application\/json/)
         .expect(200)
         .expect((res) => {
-          res.body.total.should.be.at.least(2000)
+          res.body.total.should.be.at.least(1000)
         })
         .end(done);
     });

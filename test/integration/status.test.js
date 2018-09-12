@@ -29,7 +29,7 @@ describe('Status.json', () => {
       .expect(200)
       .expect(response => {
         response.body.statuses.should.be.a('object')
-        Object.keys(response.body.statuses).length.should.be.at.least(20);
+        Object.keys(response.body.statuses).length.should.be.at.least(1);
       })
       .end(done);
   });
