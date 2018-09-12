@@ -37,14 +37,14 @@
       "languages": [
         "Swift"
       ],
-      "laborHours": 1,
+      "laborHours": 812592,
       "date": {
         "created": "2013-03-28",
         "lastModified": "2017-05-31"
       }
     },
     {
-      "name": "Intelligent PERSONAL ASSITANTS",
+      "name": "Intelligent Personal Assistants",
       "organization": "HRC",
       "repositoryURL": "https://github.com/USDepartmentofLabor/Intelligent-Personal-Assistants",
       "description": "Collaborative space for DOL development towards connecting IPAs with APIs.",
@@ -76,7 +76,7 @@
         "aws",
         "aws-lambda"
       ],
-      "laborHours": 1,
+      "laborHours": 704824,
       "date": {
         "created": "2017-05-16",
         "lastModified": "2017-05-24"
@@ -112,7 +112,7 @@
         "yammer",
         "visual-basic-net"
       ],
-      "laborHours": 1,
+      "laborHours": 12616,
       "date": {
         "created": "2017-05-05",
         "lastModified": "2017-05-08"
@@ -122,7 +122,7 @@
       "name": "News Release Log",
       "organization": "OPA",
       "repositoryURL": "https://github.com/USDepartmentofLabor/NewsReleaseLog",
-      "description": "An application to keep track of news releases by all the agencies.",
+      "description": "News",
       "permissions": {
         "licenses": [
           {
@@ -134,9 +134,7 @@
         "exemptionText": null
       },
       "tags": [
-        "News",
-        "Release",
-        "Log"
+        "News Release Log"
       ],
       "contact": {
         "email": "Yao.sue-li@dol.gov",
@@ -150,7 +148,7 @@
         "ruby on rails",
         "javascript"
       ],
-      "laborHours": 1,
+      "laborHours": 2570016,
       "date": {
         "created": "2018-07-18",
         "lastModified": "2018-07-31"
@@ -185,7 +183,7 @@
       "languages": [
         "html"
       ],
-      "laborHours": 1,
+      "laborHours": 11022432,
       "date": {
         "created": "2015-01-05",
         "lastModified": "2017-10-06"
@@ -221,7 +219,7 @@
       "languages": [
         "PHP"
       ],
-      "laborHours": 1,
+      "laborHours": 90288,
       "date": {
         "created": "2012-08-24",
         "lastModified": "2016-02-16"
@@ -258,7 +256,7 @@
       "languages": [
         "Ruby"
       ],
-      "laborHours": 1,
+      "laborHours": 12280840,
       "date": {
         "created": "2015-10-08",
         "lastModified": "2016-08-21"
@@ -295,7 +293,7 @@
       "languages": [
         "html"
       ],
-      "laborHours": 1,
+      "laborHours": 407863576,
       "date": {
         "created": "2016-11-28",
         "lastModified": "2016-02-22"
@@ -333,7 +331,7 @@
       "languages": [
         "Swift"
       ],
-      "laborHours": 1,
+      "laborHours": 176624,
       "date": {
         "created": "2014-06-23",
         "lastModified": "2016-11-04"
@@ -368,7 +366,7 @@
       "languages": [
         "C#"
       ],
-      "laborHours": 1,
+      "laborHours": 966872,
       "date": {
         "created": "2015-05-17",
         "lastModified": "2016-10-21"
@@ -441,7 +439,7 @@
       "languages": [
         "CSS"
       ],
-      "laborHours": 1,
+      "laborHours": 653448,
       "date": {
         "created": "2016-05-09",
         "lastModified": "2016-05-09"
@@ -474,7 +472,7 @@
       "homepage": "https://github.com/USDepartmentofLabor",
       "downloadURL": "https://github.com/USDepartmentofLabor/eFOH/archive/master.zip",
       "language": [],
-      "laborHours": 1,
+      "laborHours": 18503872,
       "date": {
         "created": "2015-04-11",
         "lastModified": "2015-12-17"
@@ -509,7 +507,7 @@
       "languages": [
         "PHP"
       ],
-      "laborHours": 1,
+      "laborHours": 11412312,
       "date": {
         "created": "2015-04-12",
         "lastModified": "2015-11-17"
@@ -546,7 +544,7 @@
       "languages": [
         "PHP"
       ],
-      "laborHours": 1,
+      "laborHours": 116280,
       "date": {
         "created": "2013-05-16",
         "lastModified": "2013-05-16"
@@ -583,7 +581,7 @@
       "languages": [
         "null"
       ],
-      "laborHours": 1,
+      "laborHours": 2222848,
       "date": {
         "created": "2014-10-29",
         "lastModified": "2015-08-27"
@@ -619,7 +617,7 @@
       "languages": [
         "Java"
       ],
-      "laborHours": 1,
+      "laborHours": 1696776,
       "date": {
         "created": "2012-08-24",
         "lastModified": "2015-08-13"
@@ -656,7 +654,7 @@
       "languages": [
         "Ruby"
       ],
-      "laborHours": 1,
+      "laborHours": 60040,
       "date": {
         "created": "2013-05-11",
         "lastModified": "2015-08-12"
@@ -692,7 +690,7 @@
       "languages": [
         "Objective-C"
       ],
-      "laborHours": 1,
+      "laborHours": 11707344,
       "date": {
         "created": "2013-03-28",
         "lastModified": "2015-08-07"
@@ -727,7 +725,7 @@
       "languages": [
         "PHP"
       ],
-      "laborHours": 1,
+      "laborHours": 9598496,
       "date": {
         "created": "2015-04-10",
         "lastModified": "2015-06-02"
@@ -763,7 +761,7 @@
       "languages": [
         "Objective-C"
       ],
-      "laborHours": 1,
+      "laborHours": 532456,
       "date": {
         "created": "2012-08-23",
         "lastModified": "2015-06-28"
@@ -799,7 +797,7 @@
       "languages": [
         "PHP"
       ],
-      "laborHours": 1,
+      "laborHours": 22375464,
       "date": {
         "created": "2015-04-10",
         "lastModified": "2015-08-02"
@@ -835,7 +833,7 @@
       "languages": [
         "Java"
       ],
-      "laborHours": 1,
+      "laborHours": 244112,
       "date": {
         "created": "2012-08-24",
         "lastModified": "2012-06-22"
@@ -871,7 +869,7 @@
       "languages": [
         "C#"
       ],
-      "laborHours": 1,
+      "laborHours": 23712,
       "date": {
         "created": "2013-04-16",
         "lastModified": "2012-08-12"
@@ -908,7 +906,7 @@
       "languages": [
         "Objective-C"
       ],
-      "laborHours": 1,
+      "laborHours": 742520,
       "date": {
         "created": "2015-06-16",
         "lastModified": "2013-05-06"
@@ -945,7 +943,7 @@
       "languages": [
         "Coldfusion"
       ],
-      "laborHours": 1,
+      "laborHours": 18292,
       "date": {
         "created": "2013-07-18",
         "lastModified": "2015-07-05"
@@ -983,7 +981,7 @@
       "languages": [
         "html"
       ],
-      "laborHours": 1,
+      "laborHours": 3946072,
       "date": {
         "created": "2014-12-05",
         "lastModified": "2015-05-06"
@@ -1019,7 +1017,7 @@
       "languages": [
         "html"
       ],
-      "laborHours": 1,
+      "laborHours": 2310552,
       "date": {
         "created": "2016-04-12",
         "lastModified": "2016-04-12"
@@ -1056,7 +1054,7 @@
       "languages": [
         "javascript"
       ],
-      "laborHours": 1,
+      "laborHours": 120992,
       "date": {
         "created": "2015-05-01",
         "lastModified": "2015-05-02"
@@ -1094,7 +1092,7 @@
       "languages": [
         "html"
       ],
-      "laborHours": 1,
+      "laborHours": 20520,
       "date": {
         "created": "2015-04-01",
         "lastModified": "2013-04-08"
@@ -1131,7 +1129,7 @@
       "languages": [
         "Swift"
       ],
-      "laborHours": 1,
+      "laborHours": 219032,
       "date": {
         "created": "2016-02-19",
         "lastModified": "2014-06-24"
@@ -1166,7 +1164,7 @@
       "languages": [
         "Swift"
       ],
-      "laborHours": 1,
+      "laborHours": 282416,
       "date": {
         "created": "2014-07-08",
         "lastModified": "2015-02-18"
@@ -1204,7 +1202,7 @@
       "languages": [
         "Swift"
       ],
-      "laborHours": 1,
+      "laborHours": 615144,
       "date": {
         "created": "2015-01-28",
         "lastModified": "2015-01-28"
@@ -1242,7 +1240,7 @@
       "languages": [
         "Swift"
       ],
-      "laborHours": 1,
+      "laborHours": 306280,
       "date": {
         "created": "2015-01-02",
         "lastModified": "2015-01-20"
@@ -1280,7 +1278,7 @@
       "languages": [
         "Java"
       ],
-      "laborHours": 1,
+      "laborHours": 12920,
       "date": {
         "created": "2016-04-12",
         "lastModified": "2016-04-12"
@@ -1315,7 +1313,7 @@
       "languages": [
         "PHP"
       ],
-      "laborHours": 1,
+      "laborHours": 446120,
       "date": {
         "created": "2014-07-29",
         "lastModified": "2014-12-17"
@@ -1351,7 +1349,7 @@
       "languages": [
         "PHP"
       ],
-      "laborHours": 1,
+      "laborHours": 945440,
       "date": {
         "created": "2014-09-09",
         "lastModified": "2014-09-11"
@@ -1387,7 +1385,7 @@
       "languages": [
         "simpletxt"
       ],
-      "laborHours": 1,
+      "laborHours": 29944,
       "date": {
         "created": "2012-12-19",
         "lastModified": "2014-09-09"
@@ -1422,7 +1420,7 @@
       "languages": [
         "Swift"
       ],
-      "laborHours": 1,
+      "laborHours": 59888,
       "date": {
         "created": "2014-06-24",
         "lastModified": "2014-08-20"
@@ -1457,7 +1455,7 @@
       "languages": [
         "Swift"
       ],
-      "laborHours": 1,
+      "laborHours": 12160,
       "date": {
         "created": "2014-08-04",
         "lastModified": "2014-08-05"
@@ -1492,7 +1490,7 @@
       "languages": [
         "javascript"
       ],
-      "laborHours": 1,
+      "laborHours": 4133792,
       "date": {
         "created": "2012-10-02",
         "lastModified": "2014-08-05"
@@ -1531,7 +1529,7 @@
       "languages": [
         "Java"
       ],
-      "laborHours": 1,
+      "laborHours": 1077984,
       "date": {
         "created": "2016-04-12",
         "lastModified": "2016-04-12"
@@ -1569,7 +1567,7 @@
       "languages": [
         "Java"
       ],
-      "laborHours": 1,
+      "laborHours": 900600,
       "date": {
         "created": "2013-03-28",
         "lastModified": "2014-07-29"
@@ -1605,7 +1603,7 @@
       "languages": [
         "Objective-C"
       ],
-      "laborHours": 1,
+      "laborHours": 14546400,
       "date": {
         "created": "2013-03-28",
         "lastModified": "2014-02-26"
@@ -1641,7 +1639,7 @@
       "languages": [
         "Objective-C"
       ],
-      "laborHours": 1,
+      "laborHours": 558752,
       "date": {
         "created": "2013-11-26",
         "lastModified": "2013-12-09"
@@ -1678,7 +1676,7 @@
       "languages": [
         "Coldfusion"
       ],
-      "laborHours": 1,
+      "laborHours": 93480,
       "date": {
         "created": "2013-07-18",
         "lastModified": "2013-07-18"
@@ -1715,7 +1713,7 @@
       "languages": [
         "Objective-C"
       ],
-      "laborHours": 1,
+      "laborHours": 2320888,
       "date": {
         "created": "2013-07-12",
         "lastModified": "2013-07-17"
@@ -1752,7 +1750,7 @@
       "languages": [
         "Java"
       ],
-      "laborHours": 1,
+      "laborHours": 207936,
       "date": {
         "created": "2013-06-17",
         "lastModified": "2013-06-17"
@@ -1789,7 +1787,7 @@
       "languages": [
         "Java"
       ],
-      "laborHours": 1,
+      "laborHours": 236360,
       "date": {
         "created": "2013-06-07",
         "lastModified": "2013-06-14"
@@ -1825,7 +1823,7 @@
       "languages": [
         "javascript"
       ],
-      "laborHours": 1,
+      "laborHours": 102144,
       "date": {
         "created": "2012-11-29",
         "lastModified": "2013-04-29"
@@ -1861,7 +1859,7 @@
       "languages": [
         "Java"
       ],
-      "laborHours": 1,
+      "laborHours": 494304,
       "date": {
         "created": "2013-03-28",
         "lastModified": "2013-03-28"
@@ -1896,7 +1894,7 @@
       "languages": [
         "Objective-C"
       ],
-      "laborHours": 1,
+      "laborHours": 522120,
       "date": {
         "created": "2012-10-24",
         "lastModified": "2012-11-05"
@@ -1931,7 +1929,7 @@
       "languages": [
         "javascript"
       ],
-      "laborHours": 1,
+      "laborHours": 25422760,
       "date": {
         "created": "2012-09-14",
         "lastModified": "2012-09-14"
@@ -1962,7 +1960,7 @@
         "SAS",
         "HTML"
       ],
-      "laborHours": 1,
+      "laborHours": 862600,
       "date": {
         "created": "2017-10-05",
         "lastModified": "2017-12-11"
@@ -2023,7 +2021,7 @@
         "javascript",
         "html"
       ],
-      "laborHours": 1,
+      "laborHours": 14097240,
       "date": {
         "created": "2016-12-07",
         "lastModified": "2017-07-24"
@@ -2047,7 +2045,7 @@
         "email": "Zhao.Renee@dol.gov",
         "name": "Renee Zhao"
       },
-      "laborHours": 1
+      "laborHours": 47773
     },
     {
       "name": "whd-Moderization",
@@ -2074,7 +2072,7 @@
       "languages": [
         "HTML"
       ],
-      "laborHours": 1,
+      "laborHours": 40280,
       "date": {
         "created": "2017-04-10",
         "lastModified": "2017-01-24"
@@ -2105,7 +2103,7 @@
       "languages": [
         "HTML"
       ],
-      "laborHours": 1,
+      "laborHours": 153672,
       "date": {
         "created": "2016-11-01",
         "lastModified": "2017-03-01"
@@ -2137,7 +2135,7 @@
       "languages": [
         "GCC Machine Description"
       ],
-      "laborHours": 1,
+      "laborHours": 164464,
       "date": {
         "created": "2016-05-10",
         "lastModified": "2016-12-09"
@@ -2168,7 +2166,7 @@
         "SQLPL",
         "R"
       ],
-      "laborHours": 1,
+      "laborHours": 8436456,
       "date": {
         "created": "2017-08-08",
         "lastModified": "2017-12-13"
@@ -2198,7 +2196,7 @@
       "languages": [
         "HTML"
       ],
-      "laborHours": 1,
+      "laborHours": 21128,
       "date": {
         "created": "2016-09-02",
         "lastModified": "2016-11-17"
@@ -2229,7 +2227,7 @@
         "HTML",
         "javascript"
       ],
-      "laborHours": 1,
+      "laborHours": 15570880,
       "date": {
         "created": "2012-11-17",
         "lastModified": "2016-10-19"
@@ -2260,7 +2258,7 @@
         "CSS",
         "R"
       ],
-      "laborHours": 1,
+      "laborHours": 66388736,
       "date": {
         "created": "2015-06-25",
         "lastModified": "2016-09-14"
@@ -2322,7 +2320,7 @@
       "languages": [
         "word"
       ],
-      "laborHours": 1,
+      "laborHours": 5320,
       "date": {
         "created": "2016-05-03",
         "lastModified": "2016-05-03"
@@ -2352,7 +2350,7 @@
       "languages": [
         "word"
       ],
-      "laborHours": 1,
+      "laborHours": 304,
       "date": {
         "created": "2016-02-04",
         "lastModified": "2016-02-04"
@@ -2383,7 +2381,7 @@
       "languages": [
         "HTML"
       ],
-      "laborHours": 1,
+      "laborHours": 470530440,
       "date": {
         "created": "2015-03-22",
         "lastModified": "2015-05-10"
@@ -2476,7 +2474,7 @@
       "languages": [
         "word"
       ],
-      "laborHours": 1,
+      "laborHours": 1824,
       "date": {
         "created": "2012-10-02",
         "lastModified": "2012-10-02"
@@ -2511,7 +2509,7 @@
       "languages": [
         "javascript"
       ],
-      "laborHours": 1,
+      "laborHours": 588240,
       "date": {
         "created": "2012-10-10",
         "lastModified": "2013-05-22"
@@ -2541,7 +2539,7 @@
       "languages": [
         "javascript"
       ],
-      "laborHours": 1,
+      "laborHours": 15352,
       "date": {
         "created": "2012-10-11",
         "lastModified": "2012-10-11"
@@ -2576,7 +2574,7 @@
       "languages": [
         "javascript"
       ],
-      "laborHours": 1,
+      "laborHours": 5878752,
       "date": {
         "created": "2017-12-05",
         "lastModified": "2017-12-12"
@@ -2636,7 +2634,7 @@
         "email": "Zhao.Renee.Y@dol.gov",
         "name": "Renee Zhao"
       },
-      "laborHours": 1
+      "laborHours": 1906931
     },
     {
       "name": "Physical Access Control (PAC) System",
@@ -2900,7 +2898,7 @@
         "email": "Zhao.Renee.Y@dol.gov",
         "name": "Renee Zhao"
       },
-      "laborHours": 1
+      "laborHours": 193739
     },
     {
       "name": "OSHA Information Technology Support System (OITSS)",
@@ -2919,7 +2917,7 @@
         "email": "Zhao.Renee.Y@dol.gov",
         "name": "Renee Zhao"
       },
-      "laborHours": 1
+      "laborHours": 151574
     },
     {
       "name": "Automated Support Package (ASP)",
@@ -2938,7 +2936,7 @@
         "email": "Zhao.Renee.Y@dol.gov",
         "name": "Renee Zhao"
       },
-      "laborHours": 1
+      "laborHours": 499624
     },
     {
       "name": "Integrated Federal Employees Compensation System (iFECS)",
@@ -2975,7 +2973,7 @@
         "email": "Zhao.Renee.Y@dol.gov",
         "name": "Renee Zhao"
       },
-      "laborHours": 1
+      "laborHours": 31479
     },
     {
       "name": "The Longshore Case Management System (LCMS)",
@@ -2994,7 +2992,7 @@
         "email": "Zhao.Renee.Y@dol.gov",
         "name": "Renee Zhao"
       },
-      "laborHours": 1
+      "laborHours": 39763
     },
     {
       "name": "Energy Compensation System (ECS)",
@@ -3013,7 +3011,7 @@
         "email": "Zhao.Renee.Y@dol.gov",
         "name": "Renee Zhao"
       },
-      "laborHours": 1
+      "laborHours": 32999
     },
     {
       "name": "OWCP Workers Compensation System (OWCS)",
@@ -3069,7 +3067,7 @@
         "email": "Zhao.Renee.Y@dol.gov",
         "name": "Renee Zhao"
       },
-      "laborHours": 1
+      "laborHours": 157472
     },
     {
       "name": "VETS-4212 Reporting",
@@ -3107,7 +3105,7 @@
         "email": "Zhao.Renee.Y@dol.gov",
         "name": "Renee Zhao"
       },
-      "laborHours": 1
+      "laborHours": 168568
     },
     {
       "name": "Enforcement Management System (EMS)",
@@ -3125,7 +3123,7 @@
         "email": "Zhao.Renee.Y@dol.gov",
         "name": "Renee Zhao"
       },
-      "laborHours": 1
+      "laborHours": 467.2
     },
     {
       "name": "Technical Assistance & Inquiries System (TAIS)",
@@ -3143,7 +3141,7 @@
         "email": "Zhao.Renee.Y@dol.gov",
         "name": "Renee Zhao"
       },
-      "laborHours": 1
+      "laborHours": 412.8
     },
     {
       "name": "EFAST2",
@@ -3181,7 +3179,7 @@
         "email": "Zhao.Renee.Y@dol.gov",
         "name": "Renee Zhao"
       },
-      "laborHours": 1
+      "laborHours": 256545
     },
     {
       "name": "PERM",
@@ -3201,7 +3199,7 @@
         "email": "Zhao.Renee.Y@dol.gov",
         "name": "Renee Zhao"
       },
-      "laborHours": 1
+      "laborHours": 84405
     },
     {
       "name": "ETA Grants Management System (EGMS)",
@@ -3221,7 +3219,7 @@
         "email": "Zhao.Renee.Y@dol.gov",
         "name": "Renee Zhao"
       },
-      "laborHours": 1
+      "laborHours": 648477
     },
     {
       "name": "Enterprise Business Support System (EBSS)",
@@ -3241,7 +3239,7 @@
         "email": "Zhao.Renee.Y@dol.gov",
         "name": "Renee Zhao"
       },
-      "laborHours": 1
+      "laborHours": 396963
     },
     {
       "name": "e.LORS",
@@ -3260,7 +3258,7 @@
         "email": "Zhao.Renee.Y@dol.gov",
         "name": "Renee Zhao"
       },
-      "laborHours": 1
+      "laborHours": 172535
     },
     {
       "name": "General Management System",
@@ -4130,7 +4128,7 @@
         "Ruby",
         "CSS"
       ],
-      "laborHours": 1,
+      "laborHours": 620008,
       "date": {
         "created": "2018-03-12",
         "lastModified": "2018-04-30"
@@ -4209,7 +4207,7 @@
         "Swift",
         "Ruby"
       ],
-      "laborHours": 1,
+      "laborHours": 2117664,
       "date": {
         "created": "2018-04-04",
         "lastModified": "2018-04-10"

@@ -1904,9 +1904,8 @@
       ],
       "laborHours": 0,
       "tags": [
-        "Environment",
-        "code",
-        "source"
+        "python",
+        "code"
       ],
       "contact": {
         "name": "Sharon Kenny",
@@ -2995,6 +2994,40 @@
     },
     {
       "organization": "ORD",
+      "name": "Chlorine_Breakpoint_Curve_Simulator",
+      "description": "chlorine breakthrough curve simulator",
+      "permissions": {
+        "licenses": [
+          {
+            "name": "Creative Commons Zero (CC0)",
+            "URL": "https://path.to/license"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA",
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "chlorine",
+        "breakpoint",
+        "curve",
+        "simulator"
+      ],
+      "contact": {
+        "name": "Reggie Washington",
+        "email": "Washington.Reggie@epa.gov",
+        "phone": "(202) 564-0423"
+      },
+      "date": {
+        "created": "2018-07-30",
+        "lastModified": "2018-07-30",
+        "metadataLastUpdated": "2018-08-22"
+      }
+    },
+    {
+      "organization": "ORD",
       "name": "lakemorpho_manuscript",
       "description": "repository containing manuscript describing the lakemorpho manuscript",
       "permissions": {
@@ -3057,6 +3090,39 @@
         "created": "2018-02-11",
         "lastModified": "2018-06-20",
         "metadataLastUpdated": "2018-07-02"
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "Inorganic_Chloramine_-Formation_and_Decay_Application",
+      "description": "Inorganic_Chloramine_-Formation_and_Decay_Application",
+      "permissions": {
+        "licenses": [
+          {
+            "name": "Creative Commons Zero (CC0)",
+            "URL": "https://path.to/license"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA",
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "chloramine",
+        "decay",
+        "formation"
+      ],
+      "contact": {
+        "name": "Reggie Washington",
+        "email": "Washington.Reggie@epa.gov",
+        "phone": "(202) 564-0423"
+      },
+      "date": {
+        "created": "2018-07-30",
+        "lastModified": "2018-07-30",
+        "metadataLastUpdated": "2018-08-22"
       }
     },
     {
@@ -3153,6 +3219,38 @@
         "created": "2016-07-31",
         "lastModified": "2016-07-31",
         "metadataLastUpdated": "2018-03-13"
+      }
+    },
+    {
+      "organization": "OW",
+      "name": "Tool for the Reduction and Assessment of Chemical and other environmental Impacts.",
+      "description": "Software/Secondary Data and its intended application The EPA National Risk Management Research Laboratory (NRMRL) has developed TRACI â�?�? the Tool for the Reduction and Assessment of Chemical and other environmental Impacts â�?�? to provide the impact assessment framework, methodologies, and associated factors to allow assessment of various impact categories. The impact categories selected for inclusion within TRACI are considered a minimal set that may be expanded with future versions. The associated work will support further development of the basic research underlying the taxonomy of comprehensive impact assessment, the impact assessment methodologies and associated factors, case studies, and normalization.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://path.to/license",
+            "name": "Creative Commons Zero (CC0)"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA",
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "chemical",
+        "environmental"
+      ],
+      "contact": {
+        "name": "Daniel Young",
+        "email": "Young.Daniel@epa.gov",
+        "phone": "(513) 569-7451"
+      },
+      "date": {
+        "created": "2018-08-16",
+        "lastModified": "2018-08-16",
+        "metadataLastUpdated": "2018-08-22"
       }
     },
     {
@@ -3357,6 +3455,39 @@
       }
     },
     {
+      "organization": "OW",
+      "name": "HELP",
+      "description": "Development of an updated Hydrologic Evaluation of Landfill Performance (HELP) Model Software application HELP v3.07 is a DOS executable program, meaning it does not run in a Windows or iOS environment. The 16-bit program will not natively work with 64-bit systems (i.e., most Windows 7 and more recent systems). Therefore, a 3rd party emulator is required. This walkthrough will describe how to use a DOS emulator to install the HELP model. HELP v3.07 will run natively on 32-bit systems, through the Windows Command line. For 32-bit systems, unzip the program and double-click INSTALL.exe, following the walkthrough from Step 7. To check if your PC is 32 or 64-bit, navigate to the Start menu (may be a Windows icon), Click Computer, Click System Properties (or similar). A window with your Windows Edition and System Information will appear. System type will display either 32 or 64-bit Operating System.",
+      "permissions": {
+        "licenses": [
+          {
+            "name": "Creative Commons Zero (CC0)",
+            "URL": "https://path.to/license"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA",
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "hydrologic",
+        "evaluation",
+        "landfill"
+      ],
+      "contact": {
+        "name": "Daniel Young",
+        "email": "Young.Daniel@epa.gov",
+        "phone": "(513) 569-7451"
+      },
+      "date": {
+        "created": "2018-07-27",
+        "lastModified": "2018-07-27",
+        "metadataLastUpdated": "2018-08-22"
+      }
+    },
+    {
       "organization": "ORD",
       "name": "ri_wq_trends",
       "description": "Analysis of WW Lake data for trends",
@@ -3389,6 +3520,39 @@
         "created": "2018-06-03",
         "lastModified": "2018-06-03",
         "metadataLastUpdated": "2018-07-02"
+      }
+    },
+    {
+      "organization": "ORD",
+      "name": "Free_Chlorine_and_Cyanuric_Acid_Simulator",
+      "description": "Free_Chlorine_and_Cyanuric_Acid_Simulator",
+      "permissions": {
+        "licenses": [
+          {
+            "name": "Creative Commons Zero (CC0)",
+            "URL": "https://path.to/license"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA",
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "chlorine",
+        "cyanuric",
+        "simulator"
+      ],
+      "contact": {
+        "name": "Reggie Washington",
+        "email": "Washington.Reggie@epa.gov",
+        "phone": "(202) 564-0423"
+      },
+      "date": {
+        "created": "2018-07-30",
+        "lastModified": "2018-07-30",
+        "metadataLastUpdated": "2018-08-22"
       }
     },
     {
@@ -3465,23 +3629,25 @@
       "permissions": {
         "licenses": [
           {
-            "name": "Creative Commons Zero (CC0)",
-            "URL": "https://path.to/license"
+            "URL": "https://path.to/license",
+            "name": "Creative Commons Zero (CC0)"
           }
         ],
         "usageType": "openSource",
         "exemptionText": null
       },
       "repositoryURL": "https://github.com/USEPA",
-      "languages": [],
+      "languages": [
+        "R"
+      ],
       "laborHours": 0,
       "tags": [
         "analysis"
       ],
       "contact": {
-        "name": "Elisabeth Miller",
-        "email": "Elisabeth.Miller@state.co.us",
-        "phone": "(303) 692-3516"
+        "name": "Elizabeth Miller",
+        "email": "Miller.Elizabeth@epa.gov",
+        "phone": "(919) 541-2054"
       },
       "date": {
         "created": "2018-05-21",
