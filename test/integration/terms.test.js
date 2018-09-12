@@ -22,7 +22,7 @@ describe('/terms endpoint', () => {
         .get(`${endpoint}?term_type=agency.acronym`)
         .expect(200)
         .expect(response => {
-          response.body.total.should.be.at.least(20)
+          response.body.total.should.be.at.least(1)
         })
         .end(done);
     });

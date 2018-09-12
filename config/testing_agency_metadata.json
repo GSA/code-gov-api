@@ -1,0 +1,17 @@
+[{
+    "id": 1,
+    "name": "General Services Administration",
+    "acronym": "GSA",
+    "website": "https://gsa.gov/",
+    "codeUrl": "https://www.gsa.gov/code.json",
+    "fallback_file": "GSA.json",
+    "requirements": {
+      "agencyWidePolicy": 1,
+      "openSourceRequirement": 1,
+      "inventoryRequirement": 1,
+      "schemaFormat": 0.5,
+      "overallCompliance": 0
+    },
+    "complianceDashboard": true
+  }
+]

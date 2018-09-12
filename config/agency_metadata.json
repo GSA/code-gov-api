@@ -445,5 +445,20 @@
       "overallCompliance": null
     },
     "complianceDashboard": false
+  }, {
+    "id": 30,
+    "name": "Federal Elections Commission",
+    "acronym": "FEC",
+    "website": "https://www.fec.gov/",
+    "codeUrl": "https://www.fec.gov/code.json",
+    "fallback_file": "FEC.json",
+    "requirements": {
+      "agencyWidePolicy": null,
+      "openSourceRequirement": null,
+      "inventoryRequirement": null,
+      "schemaFormat": null,
+      "overallCompliance": null
+    },
+    "complianceDashboard": false
   }
 ]
