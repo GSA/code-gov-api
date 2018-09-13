@@ -447,7 +447,7 @@
     "complianceDashboard": false
   }, {
     "id": 30,
-    "name": "Federal Elections Commission",
+    "name": "Federal Election Commission",
     "acronym": "FEC",
     "website": "https://www.fec.gov/",
     "codeUrl": "https://www.fec.gov/code.json",
