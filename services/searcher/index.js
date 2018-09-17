@@ -226,9 +226,10 @@ class Searcher {
    * @param {any} queryParams The query parameters a user is searching for
    */
   _addSortOrder(body, queryParams) {
-    body.sort('_score', queryParams['sort'] || 'desc');
+    body.sort('_score', 'desc');
     body.sort('score', 'desc');
-    if(queryParams['sort']) {
+
+    if(queryParams['sort'] && (queryParams['sort'] !== 'asc' || queryParams['sort'] !== 'desc')) {
       const sortValues = [];
       queryParams.sort.split(',').forEach(value => {
         if(value) {
