@@ -3,7 +3,7 @@ const Bodybuilder         = require("bodybuilder");
 const moment              = require("moment");
 const Utils               = require("../../utils");
 const Logger              = require("../../utils/logger");
-const repoMapping         = require("../../indexes/repo/mapping_201.json");
+const repoMapping         = require("../../indexes/repo/mapping.json");
 
 const DATE_FORMAT = "YYYY-MM-DD";
 const REPO_RESULT_SIZE_MAX = 10000;

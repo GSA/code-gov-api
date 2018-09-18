@@ -4,7 +4,7 @@ const git = require("git-rev");
 const pkg = require("../package.json");
 const Jsonfile = require("jsonfile");
 const Utils = require('../utils');
-const repoMapping = require('../indexes/repo/mapping_201.json');
+const repoMapping = require('../indexes/repo/mapping.json');
 
 const searchPropsByType = Utils.getFlattenedMappingPropertiesByType(repoMapping["repo"]);
 
