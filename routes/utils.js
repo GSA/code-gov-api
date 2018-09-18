@@ -119,7 +119,9 @@ function getInvalidRepoQueryParams (queryParams) {
   let without = _.without(queryParams, "from", "size", "sort", "q", "include", "exclude");
 
   return without.filter((queryParam) => {
-    if (_.includes(searchPropsByType["string"], queryParam)) {
+    if (_.includes(searchPropsByType["keyword"], queryParam)) {
+      return false;
+    } else if (_.includes(searchPropsByType["text"], queryParam)) {
       return false;
     } else if (queryParam.endsWith("_gte") || queryParam.endsWith("_lte")) {
       let paramWithoutOp = queryParam.substring(0, queryParam.length - 4);

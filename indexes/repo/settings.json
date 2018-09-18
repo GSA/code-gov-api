@@ -1,5 +1,12 @@
 {
   "analysis": {
+    "normalizer": {
+      "lowercase": {
+        "type": "custom",
+        "char_filter": [],
+        "filter": ["lowercase"]
+      }
+    },
     "filter": {
       "english_stop": {
         "type": "stop",
@@ -25,10 +32,6 @@
       }
     },
     "analyzer": {
-      "keyword_ci": {
-        "filter": "lowercase",
-        "tokenizer": "keyword"
-      },
       "englishhtml": {
         "tokenizer": "standard",
         "char_filter": ["html_strip"],

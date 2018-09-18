@@ -102,17 +102,17 @@ class Searcher {
 
   _addFullTextQuery(body, searchQuery) {
     const searchFields = [
-      "name^10",
-      "name._fulltext^5",
+      "name^5",
+      "name.keyword^10",
       "description^2",
       "agency.acronym",
-      "agency.name^5",
-      "agency.name._fulltext",
+      "agency.name",
+      "agency.name.keyword^5",
       "permissions.usageType",
       "tags^3",
-      "tags._fulltext",
-      "languages^3",
-      "languages._fulltext"
+      "tags.keyword^3",
+      "languages",
+      "languages.keyword^3"
     ];
 
     body.query("multi_match", 'fields', searchFields, {"query": searchQuery}, {"type": "best_fields"});
@@ -122,16 +122,16 @@ class Searcher {
     if (filter instanceof Array) {
       filter.forEach((filterElement) => {
         logger.info(filterElement);
-        body.orFilter("term", field, filterElement.toLowerCase());
+        body.orFilter("term", `${field}.keyword`, filterElement.toLowerCase());
       });
     } else {
-      body.filter("term", field, filter.toLowerCase());
+      body.filter("term", `${field}.keyword`, filter.toLowerCase());
     }
   }
 
   _addStringFilters(body, queryParams) {
 
-    searchPropsByType['string'].forEach((field) => {
+    searchPropsByType['keyword'].forEach((field) => {
       if(queryParams[field]) {
         this._addStringFilter(body, field, queryParams[field]);
       }
@@ -250,9 +250,9 @@ class Searcher {
               sortOptions.mode = item;
             }
           });
-          body.sort(sortField, sortOptions);
+          body.sort(`${sortField}.keyword`, sortOptions);
         } else {
-          body.sort(sortField, 'asc');
+          body.sort(`${sortField}.keyword`, 'asc');
         }
       });
     }
