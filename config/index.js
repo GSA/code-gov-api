@@ -77,11 +77,12 @@ function getSwaggerConf(isProd, apiUrl) {
  */
 function getConfig(env='development') {
   let config = {
-    prod_envs: ['prod', 'production', 'stag', 'staging']
+    prod_envs: ['prod', 'production']
   };
 
-  const isProd = config.prod_envs.includes(env);
   const cloudFoundryEnv = cfenv.getAppEnv();
+
+  config.isProd = config.prod_envs.includes(env);
 
   if(cloudFoundryEnv.isLocal) {
     dotenv.config(path.join(path.dirname(__dirname), '.env'));
@@ -89,7 +90,7 @@ function getConfig(env='development') {
 
   config.LOGGER_LEVEL = process.env.LOGGER_LEVEL
     ? process.env.LOGGER_LEVEL
-    : isProd
+    : config.isProd
       ? 'INFO'
       : 'DEBUG';
 
@@ -111,7 +112,7 @@ function getConfig(env='development') {
     '2.0.0'
   ];
 
-  config.USE_HSTS = process.env.USE_HSTS ? process.env.USE_HSTS === 'true' : isProd;
+  config.USE_HSTS = process.env.USE_HSTS ? process.env.USE_HSTS === 'true' : config.isProd;
   config.HSTS_MAX_AGE = process.env.HSTS_MAX_AGE ? parseInt(process.env.HSTS_MAX_AGE) : 31536000;
   config.HSTS_PRELOAD = false;
   config.PORT = getPort(cloudFoundryEnv);
@@ -124,8 +125,9 @@ function getConfig(env='development') {
     : cloudFoundryEnv.app.uris
       ? `${cloudFoundryEnv.app.uris[0]}/api`
       : `0.0.0.0:${config.PORT}`;
-  config.SWAGGER_DOCUMENT = getSwaggerConf(isProd, apiUrl);
+  config.SWAGGER_DOCUMENT = getSwaggerConf(config.isProd, apiUrl);
 
+  config.ALLOWED_DOMAINS = config.isProd ? ['https://api.data.gov'] : ['*'];
   return config;
 }
 

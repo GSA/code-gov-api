@@ -44,7 +44,17 @@ if( config.USE_RATE_LIMITER) {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(cors());
+app.use(cors({
+  origin: (origin, callback) => {
+    if(config.ALLOWED_DOMAINS.includes(origin) || config.ALLOWED_DOMAINS.includes('*')) {
+      callback(null, true);
+    } else {
+      let error = new Error('Not allowed by CORS');
+      error.status = 403;
+      callback(error);
+    }
+  }
+}));
 app.use(helmet());
 app.use(helmet.hsts({
   maxAge: config.HSTS_MAX_AGE,
@@ -88,12 +98,13 @@ app.use(function(req, res, next) {
 });
 
 app.use(function(err, req, res, next) {
-  res.status(err.status || 500);
   logger.error({req: req, res: res, err: err});
-  res.json({
-    message: err.message,
-    error: app.get('env') === 'development' ? err : {}
-  });
+  res
+    .status(err.status || 500)
+    .json({
+      message: err.message,
+      error: app.get('env') === 'development' ? err : {}
+    });
 });
 
 /* ------------------------------------------------------------------ *
