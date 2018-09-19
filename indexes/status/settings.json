@@ -1,6 +1,13 @@
 {
   "index.mapping.total_fields.limit": 2000,
   "analysis": {
+    "normalizer": {
+      "lowercase": {
+        "type": "custom",
+        "char_filter": [],
+        "filter": ["lowercase"]
+      }
+    },
     "filter": {
       "english_stop": {
         "type": "stop",
