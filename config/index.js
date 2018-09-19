@@ -127,7 +127,13 @@ function getConfig(env='development') {
       : `0.0.0.0:${config.PORT}`;
   config.SWAGGER_DOCUMENT = getSwaggerConf(config.isProd, apiUrl);
 
-  config.ALLOWED_DOMAINS = config.isProd ? ['https://api.data.gov'] : ['*'];
+  config.ALLOWED_DOMAINS = [
+    `http://localhost:${config.PORT}`,
+    `http://127.0.0.1:${config.PORT}`
+  ];
+
+  config.ALLOWED_DOMAINS.push(config.isProd ? 'https://api.data.gov' : '*');
+
   return config;
 }
 
