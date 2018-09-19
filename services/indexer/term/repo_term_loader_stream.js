@@ -28,7 +28,6 @@ class RepoTermLoaderStream extends Transform {
     this.logger.debug(`Loading terms from repo (${repo.repoID})...`);
 
     const _loadTerm = (termType, termVal) => {
-      termVal = termVal.toLowerCase();
       if (this.terms[termType][termVal] === undefined) {
         this.terms[termType][termVal] = 1;
       } else {
