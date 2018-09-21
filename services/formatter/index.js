@@ -15,15 +15,18 @@ class Formatter {
 
   _formatDates(repo) {
     if (repo.date) {
-      if (repo.date.lastModified) {
-        repo.date.lastModified = this._formatDate(repo.date.lastModified);
-      }
-      if (repo.date.metadataLastUpdated) {
-        repo.date.metadataLastUpdated = this._formatDate(repo.date.metadataLastUpdated);
-      }
-      if (repo.date.created) {
-        repo.date.created = this._formatDate(repo.date.created);
-      }
+      repo.date.lastModified = repo.date.lastModified
+        ? this._formatDate(repo.date.lastModified)
+        : null;
+
+      repo.date.metadataLastUpdated = repo.date.metadataLastUpdated
+        ? this._formatDate(repo.date.metadataLastUpdated)
+        : null;
+
+
+      repo.date.created = repo.date.created
+        ? this._formatDate(repo.date.created)
+        : null;
     }
   }
 
@@ -116,8 +119,8 @@ class Formatter {
 
     repo.date = {
       created: '',
-      lastModified: lastModified,
-      metadataLastUpdated: metadataLastUpdated
+      lastModified: lastModified || null,
+      metadataLastUpdated: metadataLastUpdated || null
     };
   }
   _upgradeProject(repo) {
