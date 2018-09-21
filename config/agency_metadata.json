@@ -102,7 +102,7 @@
     "codeUrl": "https://www.hud.gov/code.json",
     "fallback_file": "HUD.json",
     "requirements": {
-      "agencyWidePolicy": 0.75,
+      "agencyWidePolicy": 1,
       "openSourceRequirement": 0,
       "inventoryRequirement": 1,
       "schemaFormat": 0.5,
