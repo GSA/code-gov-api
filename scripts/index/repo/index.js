@@ -5,9 +5,15 @@ const AliasSwapper = require("../../../services/indexer/alias_swapper");
 const IndexCleaner = require("../../../services/indexer/index_cleaner");
 const IndexOptimizer = require("../../../services/indexer/index_optimizer");
 const Logger = require("../../../utils/logger");
-const ElasticsearchAdapter = require("../../../utils/search_adapters/elasticsearch_adapter");
+// const ElasticsearchAdapter = require("../../../utils/search_adapters/elasticsearch_adapter");
+const adapters = require('@code.gov/code-gov-adapter');
 
 const DAYS_TO_KEEP = process.env.DAYS_TO_KEEP || 2;
+class ElasticSearchLogger extends Logger {
+  get DEFAULT_LOGGER_NAME() {
+    return "elasticsearch";
+  }
+}
 
 /**
  * Defines the class responsible for creating and managing the elasticsearch indexes
@@ -23,7 +29,8 @@ class Indexer {
   constructor(config) {
     this.logger = new Logger({name: "repo-index-script"});
     this.config = config;
-    this.elasticsearchAdapter = new ElasticsearchAdapter(this.config);
+
+    this.elasticsearchAdapter = new adapters.elasticsearch.ElasticsearchAdapter({ hosts: this.config.ES_HOST, logger: ElasticSearchLogger });
   }
 
   /**
