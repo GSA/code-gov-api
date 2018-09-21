@@ -30,7 +30,10 @@ class Indexer {
     this.logger = new Logger({name: "repo-index-script"});
     this.config = config;
 
-    this.elasticsearchAdapter = new adapters.elasticsearch.ElasticsearchAdapter({ hosts: this.config.ES_HOST, logger: ElasticSearchLogger });
+    this.elasticsearchAdapter = new adapters.elasticsearch.ElasticsearchAdapter({
+      hosts: this.config.ES_HOST,
+      logger: ElasticSearchLogger
+    });
   }
 
   /**
