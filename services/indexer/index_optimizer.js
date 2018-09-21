@@ -15,7 +15,7 @@ class ElasticSearchLogger extends Logger {
  *
  * @class AliasSwapper
  */
-class IndexOptimizer extends AbstractIndexTool {
+class IndexOptimizer {
 
   get LOGGER_NAME() {
     return "index-optimizer";
@@ -27,7 +27,8 @@ class IndexOptimizer extends AbstractIndexTool {
    * @param {any} adapter The search adapter to use for connecting to ElasticSearch
    */
   constructor(adapter) {
-    super(adapter);
+    this.adapter = adapter;
+    this.logger = new Logger({ name: 'index-optimizer'});
   }
 
   /**
@@ -39,21 +40,15 @@ class IndexOptimizer extends AbstractIndexTool {
    * @param {any} callback
    */
   forceMerge(indexName, callback) {
-    this.logger.info(
-      `Optimizing Index (${indexName})`);
-    this.client.indices.forcemerge({
+    this.logger.info(`Optimizing Index (${indexName})`);
+
+    this.adapter.forceMerge({
       maxNumSegments: 1,
       index: indexName,
       requestTimeout: 90000
-    }, (err, response, status) => {
-      if(err) {
-        this.logger.error(err);
-      }
-      if (status) {
-        this.logger.debug('Status', status);
-      }
-      return callback(err, response);
-    });
+    })
+      .then(callback(null))
+      .catch(error => callback(error));
   }
 
   /**
