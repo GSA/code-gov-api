@@ -2,36 +2,38 @@
   "repo": {
     "properties": {
       "repoID": {
-        "type": "keyword"
+        "type": "keyword",
+        "normalizer": "lowercase"
       },
       "agency": {
         "type": "object",
         "properties": {
           "name": {
             "type": "text",
-            "analyzer": "keyword_ci",
+            "analyzer": "englishfulltext",
             "fields": {
-              "_fulltext": {
-                "type": "text",
-                "analyzer": "englishfulltext"
+              "keyword": {
+                "type": "keyword",
+                "normalizer": "lowercase"
               }
             }
           },
           "acronym": {
-            "type": "text",
-            "analyzer": "keyword_ci",
+            "type": "keyword",
             "fields": {
-              "_fulltext": {
-                "type": "text",
-                "analyzer": "keyword_ci"
+              "keyword": {
+                "type": "keyword",
+                "normalizer": "lowercase"
               }
             }
           },
           "website": {
-            "type": "keyword"
+            "type": "keyword",
+            "normalizer": "lowercase"
           },
           "codeUrl": {
-            "type": "keyword"
+            "type": "keyword",
+            "normalizer": "lowercase"
           },
           "requirements": {
             "type": "nested",
@@ -59,77 +61,66 @@
         "type": "object",
         "properties": {
           "method": {
-            "type": "text",
-            "analyzer": "keyword_ci",
-            "fields": {
-              "_fulltext": {
-                "type": "text",
-                "analyzer": "englishfulltext"
-              }
-            }
+            "type": "keyword"
           },
           "ifOther": {
             "type": "text",
             "analyzer": "englishfulltext",
             "fields": {
-              "_fulltext": {
-                "type": "text",
-                "analyzer": "englishfulltext"
+              "keyword": {
+                "type": "keyword",
+                "normalizer": "lowercase"
               }
             }
           }
         }
       },
       "status": {
-        "type": "text",
-        "analyzer": "keyword_ci"
+        "type": "keyword",
+        "normalizer": "lowercase"
       },
       "vcs": {
-        "type": "text",
-        "analyzer": "keyword_ci"
-      },
-      "remoteVcs": {
-        "type": "text",
-        "analyzer": "keyword_ci"
+        "type": "keyword",
+        "normalizer": "lowercase"
       },
       "repositoryURL": {
-        "type": "text",
-        "analyzer": "keyword_ci"
+        "type": "keyword"
       },
       "targetOperatingSystems": {
-        "type": "text",
-        "analyzer": "keyword_ci"
+        "type": "keyword",
+        "normalizer": "lowercase"
       },
       "name": {
         "type": "text",
-        "analyzer": "keyword_ci",
+        "analyzer": "englishfulltext",
         "fields": {
-          "_fulltext": {
-            "type": "text",
-            "analyzer": "englishfulltext"
+          "keyword": {
+            "type": "keyword",
+            "normalizer": "lowercase"
           }
         }
       },
       "version": {
-        "type": "text",
-        "analyzer": "keyword_ci"
+        "type": "keyword",
+        "normalizer": "lowercase"
       },
       "organization": {
         "type": "text",
-        "analyzer": "keyword_ci",
+        "analyzer": "englishfulltext",
         "fields": {
-          "_fulltext": {
-            "type": "text",
-            "analyzer": "englishfulltext"
+          "keyword": {
+            "type": "keyword",
+            "normalizer": "lowercase"
           }
         }
       },
       "homepageURL": {
-        "type": "text",
-        "analyzer": "keyword_ci"
+        "type": "keyword",
+        "normalizer": "lowercase"
       },
       "downloadURL": {
-        "type": "text"
+        "type": "keyword",
+        "normalizer": "lowercase"
       },
       "description": {
         "type": "text",
@@ -137,31 +128,31 @@
       },
       "events": {
         "type": "text",
-        "analyzer": "keyword_ci",
+        "analyzer": "englishfulltext",
         "fields": {
-          "_fulltext": {
-            "type": "text",
-            "analyzer": "englishfulltext"
+          "keyword": {
+            "type": "keyword",
+            "normalizer": "lowercase"
           }
         }
       },
       "tags": {
         "type": "text",
-        "analyzer": "keyword_ci",
+        "analyzer": "englishfulltext",
         "fields": {
-          "_fulltext": {
-            "type": "text",
-            "analyzer": "englishfulltext"
+          "keyword": {
+            "type": "keyword",
+            "normalizer": "lowercase"
           }
         }
       },
       "languages": {
         "type": "text",
-        "analyzer": "keyword_ci",
+        "analyzer": "englishfulltext",
         "fields": {
           "_fulltext": {
-            "type": "text",
-            "analyzer": "englishfulltext"
+            "type": "keyword",
+            "normalizer": "lowercase"
           }
         }
       },
@@ -171,41 +162,41 @@
         "properties": {
           "name": {
             "type": "text",
-            "analyzer": "keyword_ci",
+            "analyzer": "englishfulltext",
             "fields": {
-              "_fulltext": {
-                "type": "text",
-                "analyzer": "englishfulltext"
+              "keyword": {
+                "type": "keyword",
+                "normalizer": "lowercase"
               }
             }
           },
           "email": {
             "type": "text",
-            "analyzer": "keyword_ci",
+            "analyzer": "englishfulltext",
             "fields": {
-              "_fulltext": {
-                "type": "text",
-                "analyzer": "englishfulltext"
+              "keyword": {
+                "type": "keyword",
+                "normalizer": "lowercase"
               }
             }
           },
           "twitter": {
             "type": "text",
-            "analyzer": "keyword_ci",
+            "analyzer": "englishfulltext",
             "fields": {
-              "_fulltext": {
-                "type": "text",
-                "analyzer": "englishfulltext"
+              "keyword": {
+                "type": "keyword",
+                "normalizer": "lowercase"
               }
             }
           },
           "phone": {
             "type": "text",
-            "analyzer": "keyword_ci",
+            "analyzer": "englishfulltext",
             "fields": {
-              "_fulltext": {
-                "type": "text",
-                "analyzer": "englishfulltext"
+              "keyword": {
+                "type": "keyword",
+                "normalizer": "lowercase"
               }
             }
           }
@@ -217,21 +208,19 @@
         "properties": {
           "name": {
             "type": "text",
-            "analyzer": "keyword_ci",
+            "analyzer": "englishfulltext",
             "fields": {
-              "_fulltext": {
-                "type": "text",
-                "analyzer": "englishfulltext"
+              "keyword": {
+                "type": "keyword"
               }
             }
           },
           "email": {
             "type": "text",
-            "analyzer": "keyword_ci",
+            "analyzer": "englishfulltext",
             "fields": {
-              "_fulltext": {
-                "type": "text",
-                "analyzer": "englishfulltext"
+              "keyword": {
+                "type": "keyword"
               }
             }
           }
@@ -245,26 +234,27 @@
             "properties": {
               "name": {
                 "type": "text",
-                "analyzer": "keyword_ci",
+                "analyzer": "englishfulltext",
                 "fields": {
-                  "_fulltext": {
-                    "type": "text",
-                    "analyzer": "englishfulltext"
+                  "keyword": {
+                    "type": "keyword",
+                    "normalizer": "lowercase"
                   }
                 }
               },
               "URL": {
-                "type": "text"
+                "type": "keyword",
+                "normalizer": "lowercase"
               }
             }
           },
           "usageType": {
             "type": "text",
-            "analyzer": "keyword_ci",
+            "analyzer": "englishfulltext",
             "fields": {
-              "_fulltext": {
-                "type": "text",
-                "analyzer": "englishfulltext"
+              "keyword": {
+                "type": "keyword",
+                "normalizer": "lowercase"
               }
             }
           },
@@ -282,16 +272,17 @@
         "properties": {
           "name": {
             "type": "text",
-            "analyzer": "keyword_ci",
+            "analyzer": "englishfulltext",
             "fields": {
-              "_fulltext": {
-                "type": "text",
-                "analyzer": "englishfulltext"
+              "keyword": {
+                "type": "keyword",
+                "normalizer": "lowercase"
               }
             }
           },
           "URL": {
-            "type": "text"
+            "type": "keyword",
+            "normalizer": "lowercase"
           }
         }
       },
@@ -300,21 +291,23 @@
         "properties": {
           "name": {
             "type": "text",
-            "analyzer": "keyword_ci",
+            "analyzer": "englishfulltext",
             "fields": {
-              "_fulltext": {
-                "type": "text",
-                "analyzer": "englishfulltext"
+              "keyword": {
+                "type": "keyword",
+                "normalizer": "lowercase"
               }
             }
           },
           "URL": {
-            "type": "text"
+            "type": "keyword",
+            "normalizer": "lowercase"
           }
         }
       },
       "disclaimerURL": {
-        "type": "text"
+        "type": "keyword",
+        "normalizer": "lowercase"
       },
       "disclaimerText": {
         "type": "text",
@@ -341,141 +334,6 @@
             "ignore_malformed": true
           }
         }
-      }
-    }
-  },
-  "status": {
-    "properties": {
-      "last_data_harvest": {
-        "type": "date"
-      },
-      "version": {
-        "type": "text"
-      },
-      "agency": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "text",
-            "analyzer": "keyword_ci",
-            "fields": {
-              "_fulltext": {
-                "type": "text",
-                "analyzer": "englishfulltext"
-              }
-            }
-          },
-          "acronym": {
-            "type": "text",
-            "analyzer": "keyword_ci",
-            "fields": {
-              "_fulltext": {
-                "type": "text",
-                "analyzer": "keyword_ci"
-              }
-            }
-          },
-          "website": {
-            "type": "text"
-          },
-          "codeUrl": {
-            "type": "text"
-          },
-          "requirements": {
-            "type": "object",
-            "properties": {
-              "agencyWidePolicy": {
-                "type": "float"
-              },
-              "openSourceRequirement": {
-                "type": "float"
-              },
-              "inventoryRequirement": {
-                "type": "float"
-              },
-              "schemaFormat": {
-                "type": "float"
-              },
-              "overallCompliance": {
-                "type": "float"
-              }
-            }
-          }
-        }
-      },
-      "issues": {
-        "type": "nested",
-        "properties": {
-          "organization": {
-            "type": "text"
-          },
-          "project_name": {
-            "type": "text"
-          },
-          "errors": {
-            "type": "nested",
-            "properties": {
-              "keyword": {
-                "type": "text"
-              },
-              "dataPath": {
-                "type": "text"
-              },
-              "schemaPath": {
-                "type": "text"
-              },
-              "params": {
-                "type": "object"
-              },
-              "message": {
-                "type": "text"
-              }
-            }
-          },
-          "warning": {
-            "type": "nested",
-            "properties": {
-              "keyword": {
-                "type": "text"
-              },
-              "dataPath": {
-                "type": "text"
-              },
-              "schemaPath": {
-                "type": "text"
-              },
-              "params": {
-                "type": "object"
-              },
-              "message": {
-                "type": "text"
-              }
-            }
-          },
-          "enhancements": {
-            "type": "nested",
-            "properties": {
-              "keyword": {
-                "type": "text"
-              },
-              "dataPath": {
-                "type": "text"
-              },
-              "schemaPath": {
-                "type": "text"
-              },
-              "params": {
-                "type": "object"
-              },
-              "message": {
-                "type": "text"
-              }
-            }
-          }
-        }
-      },
-      "fallback_used": {
-        "type": "boolean"
       }
     }
   }
