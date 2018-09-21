@@ -3,7 +3,7 @@ const Bodybuilder         = require("bodybuilder");
 const moment              = require("moment");
 const Utils               = require("../../utils");
 const Logger              = require("../../utils/logger");
-const repoMapping         = require("../../indexes/repo/mapping_201.json");
+const repoMapping         = require("../../indexes/repo/mapping.json");
 
 const DATE_FORMAT = "YYYY-MM-DD";
 const REPO_RESULT_SIZE_MAX = 10000;
@@ -102,17 +102,17 @@ class Searcher {
 
   _addFullTextQuery(body, searchQuery) {
     const searchFields = [
-      "name^10",
-      "name._fulltext^5",
+      "name^5",
+      "name.keyword^10",
       "description^2",
       "agency.acronym",
-      "agency.name^5",
-      "agency.name._fulltext",
+      "agency.name",
+      "agency.name.keyword^5",
       "permissions.usageType",
       "tags^3",
-      "tags._fulltext",
-      "languages^3",
-      "languages._fulltext"
+      "tags.keyword^3",
+      "languages",
+      "languages.keyword^3"
     ];
 
     body.query("multi_match", 'fields', searchFields, {"query": searchQuery}, {"type": "best_fields"});
@@ -122,16 +122,16 @@ class Searcher {
     if (filter instanceof Array) {
       filter.forEach((filterElement) => {
         logger.info(filterElement);
-        body.orFilter("term", field, filterElement.toLowerCase());
+        body.orFilter("term", `${field}.keyword`, filterElement.toLowerCase());
       });
     } else {
-      body.filter("term", field, filter.toLowerCase());
+      body.filter("term", `${field}.keyword`, filter.toLowerCase());
     }
   }
 
   _addStringFilters(body, queryParams) {
 
-    searchPropsByType['string'].forEach((field) => {
+    searchPropsByType['keyword'].forEach((field) => {
       if(queryParams[field]) {
         this._addStringFilter(body, field, queryParams[field]);
       }
@@ -226,9 +226,10 @@ class Searcher {
    * @param {any} queryParams The query parameters a user is searching for
    */
   _addSortOrder(body, queryParams) {
-    body.sort('_score', queryParams['sort'] || 'desc');
+    body.sort('_score', 'desc');
     body.sort('score', 'desc');
-    if(queryParams['sort']) {
+
+    if(queryParams['sort'] && (queryParams['sort'] !== 'asc' || queryParams['sort'] !== 'desc')) {
       const sortValues = [];
       queryParams.sort.split(',').forEach(value => {
         if(value) {
@@ -249,9 +250,9 @@ class Searcher {
               sortOptions.mode = item;
             }
           });
-          body.sort(sortField, sortOptions);
+          body.sort(`${sortField}.keyword`, sortOptions);
         } else {
-          body.sort(sortField, 'asc');
+          body.sort(`${sortField}.keyword`, 'asc');
         }
       });
     }

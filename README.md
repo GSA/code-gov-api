@@ -118,6 +118,9 @@ If you only want to build the code-gov-api image you can execute `docker-compose
 
 Here’s how you can help contribute to code.gov:
 
+* Code of Conduct
+  * Community is very important for us. We strive to be welcoming to all. To achive this we have drafted a [Code of Conduct](CODE_OF_CONDUCT.md), please take a look at it and leave us any feedback as a [Github issue](https://github.com/GSA/code-gov-web/issues)
+
 * Source Code Policy
   * To provide feedback on the [Federal Source Code Policy](https://sourcecode.cio.gov/), you should follow [this issue tracker](https://github.com/WhiteHouse/source-code-policy/issues)
 

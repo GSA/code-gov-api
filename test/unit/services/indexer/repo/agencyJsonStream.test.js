@@ -24,7 +24,7 @@ describe('AgencyJsonStream', function() {
     fetchDataDir = path.join(testDataDir, '/fetched');
     agency = JsonFile.readFileSync(path.join(testDataDir, 'test_agency_metadata.json'));
     agencyJsonStream = new AgencyJsonStream(fetchDataDir, fallbackDataDir, {
-      prod_envs: ['prod', 'production', 'stag', 'staging'],
+      isProd: false,
       supportedSchemaVersions: [
         '1.0.0',
         '1.0.1',

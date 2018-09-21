@@ -12,7 +12,7 @@ describe('Load config', function() {
       '2.0.0'
     ];
 
-    config.ES_HOST.should.be.equal('http://localhost:9200');
+    config.ES_HOST.should.be.equal('http://elastic:changeme@localhost:9200');
     config.USE_HSTS.should.be.equal(false);
     config.HSTS_MAX_AGE.should.be.equal(31536000);
     config.HSTS_PRELOAD.should.be.equal(false);

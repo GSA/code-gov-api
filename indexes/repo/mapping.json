@@ -1,0 +1,340 @@
+{
+  "repo": {
+    "properties": {
+      "repoID": {
+        "type": "keyword",
+        "normalizer": "lowercase"
+      },
+      "agency": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "text",
+            "analyzer": "englishfulltext",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "normalizer": "lowercase"
+              }
+            }
+          },
+          "acronym": {
+            "type": "keyword",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "normalizer": "lowercase"
+              }
+            }
+          },
+          "website": {
+            "type": "keyword",
+            "normalizer": "lowercase"
+          },
+          "codeUrl": {
+            "type": "keyword",
+            "normalizer": "lowercase"
+          },
+          "requirements": {
+            "type": "nested",
+            "properties": {
+              "agencyWidePolicy": {
+                "type": "float"
+              },
+              "openSourceRequirement": {
+                "type": "float"
+              },
+              "inventoryRequirement": {
+                "type": "float"
+              },
+              "schemaFormat": {
+                "type": "float"
+              },
+              "overallCompliance": {
+                "type": "float"
+              }
+            }
+          }
+        }
+      },
+      "measurementType": {
+        "type": "object",
+        "properties": {
+          "method": {
+            "type": "keyword"
+          },
+          "ifOther": {
+            "type": "text",
+            "analyzer": "englishfulltext",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "normalizer": "lowercase"
+              }
+            }
+          }
+        }
+      },
+      "status": {
+        "type": "keyword",
+        "normalizer": "lowercase"
+      },
+      "vcs": {
+        "type": "keyword",
+        "normalizer": "lowercase"
+      },
+      "repositoryURL": {
+        "type": "keyword"
+      },
+      "targetOperatingSystems": {
+        "type": "keyword",
+        "normalizer": "lowercase"
+      },
+      "name": {
+        "type": "text",
+        "analyzer": "englishfulltext",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "normalizer": "lowercase"
+          }
+        }
+      },
+      "version": {
+        "type": "keyword",
+        "normalizer": "lowercase"
+      },
+      "organization": {
+        "type": "text",
+        "analyzer": "englishfulltext",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "normalizer": "lowercase"
+          }
+        }
+      },
+      "homepageURL": {
+        "type": "keyword",
+        "normalizer": "lowercase"
+      },
+      "downloadURL": {
+        "type": "keyword",
+        "normalizer": "lowercase"
+      },
+      "description": {
+        "type": "text",
+        "analyzer": "englishfulltext"
+      },
+      "events": {
+        "type": "text",
+        "analyzer": "englishfulltext",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "normalizer": "lowercase"
+          }
+        }
+      },
+      "tags": {
+        "type": "text",
+        "analyzer": "englishfulltext",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "normalizer": "lowercase"
+          }
+        }
+      },
+      "languages": {
+        "type": "text",
+        "analyzer": "englishfulltext",
+        "fields": {
+          "_fulltext": {
+            "type": "keyword",
+            "normalizer": "lowercase"
+          }
+        }
+      },
+      "contact": {
+        "type": "object",
+        "include_in_root": true,
+        "properties": {
+          "name": {
+            "type": "text",
+            "analyzer": "englishfulltext",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "normalizer": "lowercase"
+              }
+            }
+          },
+          "email": {
+            "type": "text",
+            "analyzer": "englishfulltext",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "normalizer": "lowercase"
+              }
+            }
+          },
+          "twitter": {
+            "type": "text",
+            "analyzer": "englishfulltext",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "normalizer": "lowercase"
+              }
+            }
+          },
+          "phone": {
+            "type": "text",
+            "analyzer": "englishfulltext",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "normalizer": "lowercase"
+              }
+            }
+          }
+        }
+      },
+      "partners": {
+        "type": "nested",
+        "include_in_root": true,
+        "properties": {
+          "name": {
+            "type": "text",
+            "analyzer": "englishfulltext",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            }
+          },
+          "email": {
+            "type": "text",
+            "analyzer": "englishfulltext",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            }
+          }
+        }
+      },
+      "permissions": {
+        "type": "object",
+        "properties": {
+          "licenses": {
+            "type": "nested",
+            "properties": {
+              "name": {
+                "type": "text",
+                "analyzer": "englishfulltext",
+                "fields": {
+                  "keyword": {
+                    "type": "keyword",
+                    "normalizer": "lowercase"
+                  }
+                }
+              },
+              "URL": {
+                "type": "keyword",
+                "normalizer": "lowercase"
+              }
+            }
+          },
+          "usageType": {
+            "type": "text",
+            "analyzer": "englishfulltext",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "normalizer": "lowercase"
+              }
+            }
+          },
+          "exemptionText": {
+            "type": "text",
+            "analyzer": "englishfulltext"
+          }
+        }
+      },
+      "laborHours": {
+        "type": "integer"
+      },
+      "relatedCode": {
+        "type": "nested",
+        "properties": {
+          "name": {
+            "type": "text",
+            "analyzer": "englishfulltext",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "normalizer": "lowercase"
+              }
+            }
+          },
+          "URL": {
+            "type": "keyword",
+            "normalizer": "lowercase"
+          }
+        }
+      },
+      "reusedCode": {
+        "type": "nested",
+        "properties": {
+          "name": {
+            "type": "text",
+            "analyzer": "englishfulltext",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "normalizer": "lowercase"
+              }
+            }
+          },
+          "URL": {
+            "type": "keyword",
+            "normalizer": "lowercase"
+          }
+        }
+      },
+      "disclaimerURL": {
+        "type": "keyword",
+        "normalizer": "lowercase"
+      },
+      "disclaimerText": {
+        "type": "text",
+        "analyzer": "englishfulltext"
+      },
+      "additionalInformation": {
+        "type": "object",
+        "dynamic": true
+      },
+      "date": {
+        "type": "nested",
+        "include_in_root": true,
+        "properties": {
+          "created": {
+            "type": "date",
+            "ignore_malformed": true
+          },
+          "lastModified": {
+            "type": "date",
+            "ignore_malformed": true
+          },
+          "metadataLastUpdated": {
+            "type": "date",
+            "ignore_malformed": true
+          }
+        }
+      }
+    }
+  }
+}
