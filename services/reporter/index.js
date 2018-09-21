@@ -9,7 +9,7 @@ const Jsonfile = require("jsonfile");
 const Logger = require("../../utils/logger");
 const getConfig = require("../../config");
 const StatusIndexer = require("../indexer/status");
-const ElasticsearchAdapter = require("../../utils/search_adapters/elasticsearch_adapter");
+const adapters = require('@code.gov/code-gov-adapter');
 const elasticsearchMappings = require('../../indexes/status/mapping.json');
 const elasticsearchSettings = require('../../indexes/status/settings.json');
 const AliasSwapper = require("../indexer/alias_swapper");
@@ -82,7 +82,10 @@ class Reporter {
       "esMapping": elasticsearchMappings,
       "esSettings": elasticsearchSettings
     };
-    const adapter = new ElasticsearchAdapter(this.config);
+    const adapter = new adapters.elasticsearch.ElasticsearchAdapter({
+      hosts: this.config.ES_HOST,
+      logger: Logger
+    });
 
     return StatusIndexer.init(this, adapter, params)
       .then(indexInfo => {

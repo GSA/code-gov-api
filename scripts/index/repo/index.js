@@ -5,7 +5,6 @@ const AliasSwapper = require("../../../services/indexer/alias_swapper");
 const IndexCleaner = require("../../../services/indexer/index_cleaner");
 const IndexOptimizer = require("../../../services/indexer/index_optimizer");
 const Logger = require("../../../utils/logger");
-// const ElasticsearchAdapter = require("../../../utils/search_adapters/elasticsearch_adapter");
 const adapters = require('@code.gov/code-gov-adapter');
 
 const DAYS_TO_KEEP = process.env.DAYS_TO_KEEP || 2;
