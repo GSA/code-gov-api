@@ -70,17 +70,43 @@ function getSwaggerConf(isProd, apiUrl) {
   return SWAGGER_DOCUMENT;
 }
 
+function getAllowedDomains(isProd, isLocal, port, uris=null) {
+  const allowedDomains = [
+    `localhost:${port}`,
+    `127.0.0.1:${port}`,
+    `0.0.0.0:${port}`
+  ];
+
+  if(isProd) {
+    if(isLocal === false) {
+      allowedDomains.push('https://code.gov');
+      allowedDomains.push('https://staging.code.gov');
+      allowedDomains.push('https://api.code.gov');
+      allowedDomains.push('https://api.data.gov');
+      allowedDomains.push(`http://${process.env.CF_INSTANCE_INTERNAL_IP}:${port}`);
+      allowedDomains.push(`http://${process.env.CF_INSTANCE_IP}:${port}`);
+
+      if(uris){
+        uris.forEach(uri => allowedDomains.push(uri));
+      }
+    }
+  } else {
+    allowedDomains.push('*');
+  }
+
+  return allowedDomains;
+}
+
 /**
  * Get the application configuration for the supplied environment
  * @param {string} env - The application environment. This will default to a development environment
  * @returns {object} - object with all the configuration needed for the environment
  */
 function getConfig(env='development') {
+  const cloudFoundryEnv = cfenv.getAppEnv();
   let config = {
     prod_envs: ['prod', 'production']
   };
-
-  const cloudFoundryEnv = cfenv.getAppEnv();
 
   config.isProd = config.prod_envs.includes(env);
 
@@ -88,6 +114,9 @@ function getConfig(env='development') {
     dotenv.config(path.join(path.dirname(__dirname), '.env'));
   }
 
+  config.PORT = getPort(cloudFoundryEnv);
+
+  config.ALLOWED_DOMAINS = getAllowedDomains(config.isProd, config.isLocal, config.PORT)
   config.LOGGER_LEVEL = process.env.LOGGER_LEVEL
     ? process.env.LOGGER_LEVEL
     : config.isProd
@@ -115,7 +144,6 @@ function getConfig(env='development') {
   config.USE_HSTS = process.env.USE_HSTS ? process.env.USE_HSTS === 'true' : config.isProd;
   config.HSTS_MAX_AGE = process.env.HSTS_MAX_AGE ? parseInt(process.env.HSTS_MAX_AGE) : 31536000;
   config.HSTS_PRELOAD = false;
-  config.PORT = getPort(cloudFoundryEnv);
 
   config.ES_HOST = getElasticsearchUri(cloudFoundryEnv);
 
@@ -126,13 +154,6 @@ function getConfig(env='development') {
       ? `${cloudFoundryEnv.app.uris[0]}/api`
       : `0.0.0.0:${config.PORT}`;
   config.SWAGGER_DOCUMENT = getSwaggerConf(config.isProd, apiUrl);
-
-  config.ALLOWED_DOMAINS = [
-    `http://localhost:${config.PORT}`,
-    `http://127.0.0.1:${config.PORT}`
-  ];
-
-  config.ALLOWED_DOMAINS.push(config.isProd ? 'https://api.data.gov' : '*');
 
   return config;
 }
