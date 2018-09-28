@@ -1,6 +1,14 @@
 const _ = require('lodash');
 const Logger = require('../utils/logger');
 const {
+  ElasticsearchAdapter,
+  createFieldSearchQuery,
+  createReposSearchQuery,
+  omitPrivateKeys,
+  parseResponse,
+  searchTermsQuery
+} = require('@code.gov/code-gov-adapter');
+const {
   queryReposAndSendResponse,
   getRepoById,
   getTerms,
@@ -15,21 +23,31 @@ const {
   getFetchedReposByAgency,
   getRootMessage } = require('./utils');
 
-function getApiRoutes(config, searcher, router) {
+const mappings = require('../indexes/repo/mapping.json');
+const settings = require('../indexes/repo/settings.json');
+
+function getApiRoutes(config, router) {
 
   const logger = new Logger({ name: 'routes.index', level: config.LOGGER_LEVEL });
+  const adapter = new ElasticsearchAdapter({ hosts: config.ES_HOST, logger: null, mappings, settings });
 
   router.get('/repos/:id', async (request, response, next) => {
     try {
-      const result = await getRepoById(request.params.id, searcher);
+      const searchQuery = createFieldSearchQuery({
+        queryType: 'match',
+        field: 'repoID',
+        value: request.params.id
+      });
+      const searchResponse = await adapter.search({ index: 'repos', type: 'repo', body: searchQuery });
+      const results = parseResponse(searchResponse);
 
-      if(_.isEmpty(result)) {
+      if(results.hasOwnProperty('data') === false || results.data.length === 0) {
         const error = new Error('Not Found');
         error.status = 404;
         next(error);
       }
 
-      response.json(result);
+      response.json(results.data);
 
     } catch(error) {
       next(error);
