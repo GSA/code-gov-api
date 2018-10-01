@@ -13,8 +13,8 @@ a {
   color: #800;
 }
 
-td.failure {
-  color: black;
+tr.failure {
+  color: white;
   background: #800;
 }
 
@@ -22,9 +22,21 @@ td.failure {
   color: #880;
 }
 
-td.warning {
+tr.warning {
   color: white;
-  background: #DD0;
+  background: #B3A646;
+}
+tr.warning a {
+  color: white;
+}
+
+tr.enhancement {
+  color: white;
+  background: #2b7bba;
+}
+
+tr.enhancement a {
+  color: white;
 }
 
 .success, .green {
