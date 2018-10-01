@@ -4,26 +4,19 @@ const {
   ElasticsearchAdapter,
   createFieldSearchQuery,
   createReposSearchQuery,
-  omitPrivateKeys,
-  parseResponse,
   searchTermsQuery,
-  getQueryByTerm
+  getQueryByTerm,
+  getLanguagesSearchQuery
 } = require('@code.gov/code-gov-adapter').elasticsearch;
 const {
   getInvalidRepoQueryParams,
   getAgencies,
   getAgencyTerms,
-  getAgency,
-  getLanguages,
   getRepoJson,
-  getStatusData,
   getVersion,
-  getAgencyIssues,
-  getDiscoveredReposByAgency,
-  getFetchedReposByAgency,
   getRootMessage,
-  getAgencyMetaData,
-  getAgencyData } = require('./utils');
+  getAgencyMetaData
+} = require('./utils');
 
 const mappings = require('../indexes/repo/mapping.json');
 const settings = require('../indexes/repo/settings.json');
@@ -137,6 +130,7 @@ function getApiRoutes(config, router) {
     }
   });
   router.get(`/agencies/:agency_acronym`, async (request, response, next) => {
+
     try {
       const agenciesMetaData = await getAgencyMetaData(config);
 
@@ -163,24 +157,27 @@ function getApiRoutes(config, router) {
       next(error);
     }
   });
-  // router.get(`/languages`, (request, response, next) => {
-  //   let options;
-  //   getLanguages(request, searcher, logger, options)
-  //     .then(results => {
-  //       if (results) {
-  //         response.json(results);
-  //       } else {
-  //         response.sendStatus(404);
-  //       }
-  //     })
-  //     .catch(error => {
-  //       logger.error(error);
-  //       response.sendStatus(404);
-  //     });
-  // });
+  router.get(`/languages`, async (request, response, next) => {
+    try {
+      const searchQeury = getLanguagesSearchQuery(request.query);
+      const results = await adapter.search({ index: 'terms', type: 'term', body: searchQeury });
+
+      if(results.hasOwnProperty('data') === false || results.data.length === 0) {
+        const error = new Error('Not Found');
+        error.status = 404;
+        next(error);
+      }
+
+      response.json(results);
+
+    } catch(error) {
+      logger.trace(error);
+      next(error);
+    }
+  });
   router.get('/repo.json', (request, response, next) => {
     try{
-      response.json(getRepoJson(response))
+      response.json(getRepoJson(response));
     } catch(error) {
       logger.trace(error);
       next(error);
@@ -199,7 +196,7 @@ function getApiRoutes(config, router) {
     } catch(error) {
       logger.trace(error);
       next(error);
-    };
+    }
   });
   router.get(`/status`, async (request, response, next) => {
     try {
@@ -214,7 +211,7 @@ function getApiRoutes(config, router) {
     } catch(error) {
       logger.trace(error);
       next(error);
-    };
+    }
   });
 
   router.get(`/status/:agency/issues`, async (request, response, next) => {
@@ -225,14 +222,17 @@ function getApiRoutes(config, router) {
       if(results.total > 0){
         const data = _.omit( results.data[0], config.AGENCIES_TO_OMIT_FROM_STATUS );
         const agencyIssues = data.statuses[agency].issues;
-        response.render('status/agency/issues', { title: `Code.gov API Status for ${agency}`, statusData: agencyIssues });
+        response.render('status/agency/issues', {
+          title: `Code.gov API Status for ${agency}`,
+          statusData: agencyIssues
+        });
       } else {
         response.render('status/agency/issues', { title: `Code.gov API Status for ${agency}`, statusData: {} });
       }
     } catch(error) {
       logger.trace(error);
       next(error);
-    };
+    }
   });
   // router.get(`/status/:agency/fetched`, async (request, response, next) => {
   //   const agency = request.params.agency.toUpperCase();
@@ -269,14 +269,18 @@ function getApiRoutes(config, router) {
     getVersion(response)
       .then(versionInfo => response.json(versionInfo))
       .catch(error => {
-        logger.error(error);
-        response.sendStatus(404);
+        logger.trace(error);
+        next(error);
       });
   });
 
   router.get('/', (request, response, next) =>
     getRootMessage()
       .then(rootMessage => response.json(rootMessage))
+      .catch(error => {
+        logger.trace(error);
+        next(error);
+      })
   );
   return router;
 
