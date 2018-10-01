@@ -265,19 +265,19 @@ function getApiRoutes(config, router) {
   //     response.sendStatus(400);
   //   }
   // });
-  // router.get('/version', (request, response, next) => {
-  //   getVersion(response)
-  //     .then(versionInfo => response.json(versionInfo))
-  //     .catch(error => {
-  //       logger.error(error);
-  //       response.sendStatus(404);
-  //     });
-  // });
+  router.get('/version', (request, response, next) => {
+    getVersion(response)
+      .then(versionInfo => response.json(versionInfo))
+      .catch(error => {
+        logger.error(error);
+        response.sendStatus(404);
+      });
+  });
 
-  // router.get('/', (request, response, next) =>
-  //   getRootMessage()
-  //     .then(rootMessage => response.json(rootMessage))
-  // );
+  router.get('/', (request, response, next) =>
+    getRootMessage()
+      .then(rootMessage => response.json(rootMessage))
+  );
   return router;
 
   // router.get(`/status/:agency/diff`, (req, res, next) => {
