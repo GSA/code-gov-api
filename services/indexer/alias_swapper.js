@@ -1,22 +1,13 @@
-const async               = require("async");
-const AbstractIndexTool   = require("./abstract_index_tool");
-const Logger              = require("../../utils/logger");
-
-/* eslint-disable */
-const ElasticSearch       = require("elasticsearch");
-class ElasticSearchLogger extends Logger {
-  get DEFAULT_LOGGER_NAME() {
-    return "elasticsearch";
-  }
-}
-/* eslint-enable */
+const async = require("async");
+const Logger = require("../../utils/logger");
+const _ = require('lodash');
 
 /**
  * Class for Swapping out ElasticSearch Aliases
  *
  * @class AliasSwapper
  */
-class AliasSwapper extends AbstractIndexTool {
+class AliasSwapper {
 
   get LOGGER_NAME() {
     return "alias-swapper";
@@ -28,31 +19,54 @@ class AliasSwapper extends AbstractIndexTool {
    * @param {any} adapter The search adapter to use for connecting to ElasticSearch
    */
   constructor(adapter) {
-    super(adapter);
+    this.adapter = adapter;
   }
 
+  async aliasExists({ name }) {
+    try {
+      return await this.adapter.aliasExists({ name });
+    } catch(error) {
+      this.logger.trace(error);
+      throw error;
+    }
+
+  }
   /**
    * Gets an array of indices that are associated with the alias
    *
    * @param {any} aliasName The alias to check for.
    * @param {any} callback
    */
-  swapAlias(actions, callback) {
-    this.logger.info(
-      `Swapping aliases.`);
-    this.client.indices.updateAliases({
-      body: {
-        actions: actions
-      }
-    }, (err, response, status) => {
-      if(err) {
-        this.logger.error(err);
-      }
-      if (status) {
-        this.logger.debug('Status', status);
-      }
-      return callback(err, response);
-    });
+  async swapAlias(actions) {
+    this.logger.info(`Swapping aliases.`);
+
+    try {
+      const results = await this.adapter.updateAliases({
+        body: {
+          actions: actions
+        }
+      })
+    } catch(error) {
+      this.logger.trace(error);
+      throw error;
+    }
+  }
+
+  async getIndexesForAlias({ alias }) {
+    this.logger.info(`Getting indexes for alias (${alias}).`);
+    let indices = [];
+
+    try {
+      const results = await this.adapter.getIndexesForAlias({ alias });
+      _.forEach(results, function(item, key) {
+        if (_.has(item, ['aliases', alias])) {
+          indices.push(key);
+        }
+      });
+    } catch(error) {
+      this.logger.trace(error);
+      throw error;
+    }
   }
 
   /**
@@ -69,17 +83,19 @@ class AliasSwapper extends AbstractIndexTool {
     swapper.logger.info(`Starting alias swapping.`);
 
     //Find out who is using aliases
-
     async.waterfall([
       //Get indexes for repo alias
       (next) => {
-        swapper.aliasExists(repoIndexInfo.esAlias, next);
+        swapper.aliasExists(repoIndexInfo.esAlias)
+          .then(exists => next(null, exists))
+          .catch(error => next(error, null));
       },
       (exists, next) => {
         if(exists) {
-          swapper.getIndexesForAlias(repoIndexInfo.esAlias, next);
+          swapper.getIndexesForAlias({ alias: repoIndexInfo.esAlias })
+            .then(indexesForAlias => next(null, indexesForAlias))
+            .catch(error => next(error, null));
         } else {
-          //Empty Array of Indexes used by Alias
           next(null, []);
         }
       },
@@ -110,7 +126,9 @@ class AliasSwapper extends AbstractIndexTool {
           });
         });
 
-        swapper.swapAlias(actions, next);
+        swapper.swapAlias(actions)
+          .then(() => next(null))
+          .catch(error => next(error, null));
       }
     ], (err) => {
       if(err) {
@@ -122,7 +140,6 @@ class AliasSwapper extends AbstractIndexTool {
       }
     });
   }
-
 }
 
 module.exports = AliasSwapper;
