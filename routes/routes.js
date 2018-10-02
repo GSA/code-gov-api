@@ -24,7 +24,7 @@ const settings = require('../indexes/repo/settings.json');
 function getApiRoutes(config, router) {
 
   const logger = new Logger({ name: 'routes.index', level: config.LOGGER_LEVEL });
-  const adapter = new ElasticsearchAdapter({ hosts: config.ES_HOST, logger: null, mappings, settings });
+  const adapter = new ElasticsearchAdapter({ hosts: config.ES_HOST, logger: Logger, mappings, settings });
 
   router.get('/repos/:id', async (request, response, next) => {
     try {
