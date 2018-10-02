@@ -20,6 +20,7 @@ class AliasSwapper {
    */
   constructor(adapter) {
     this.adapter = adapter;
+    this.logger = new Logger({ name: this.LOGGER_NAME});
   }
 
   async aliasExists({ name }) {
