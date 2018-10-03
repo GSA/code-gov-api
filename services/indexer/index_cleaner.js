@@ -1,17 +1,13 @@
-const async               = require("async");
-const _                   = require("lodash");
-const AbstractIndexTool   = require("./abstract_index_tool");
-const Logger              = require("../../utils/logger");
+const _ = require("lodash");
+const Logger = require("../../utils/logger");
 const getConfig = require('../../config');
-/* eslint-disable */
-const ElasticSearch       = require("elasticsearch");
-const ElasticsearchAdapter = require('../../utils/search_adapters/elasticsearch_adapter');
+const adapter = require('@code.gov/code-gov-adapter');
+
 class ElasticSearchLogger extends Logger {
   get DEFAULT_LOGGER_NAME() {
     return "elasticsearch";
   }
 }
-/* eslint-enable */
 
 /**
  * Class for cleaning ElasticSearch Indexes
@@ -20,10 +16,6 @@ class ElasticSearchLogger extends Logger {
  */
 class IndexCleaner {
 
-  get LOGGER_NAME() {
-    return "index-cleaner";
-  }
-
   /**
    * Creates an instance of IndexCleaner.
    *
@@ -31,13 +23,13 @@ class IndexCleaner {
    */
   constructor(adapter) {
     this.adapter = adapter;
-    this.logger = new Logger({ name: this.LOGGER_NAME });
+    this.logger = new Logger({ name: 'index-cleaner' });
   }
 
   /**
    * Gets a date in days since epoch
    *
-   * @param {any} date
+   * @param {data} date
    * @returns
    */
   _toDays(date) {
@@ -51,8 +43,9 @@ class IndexCleaner {
    * Gets the indices that begin with an alias name that are older
    * than days to keep.
    *
-   * @param {any} aliasName The alias to clean indices for.
-   * @param {any} callback
+   * @param {string} aliasName The alias to clean indices for.
+   * @param {integer} daysToKeep The amount of days to keep of indices. Defaults to 7.
+   * @returns {Array} An array of indices from today up to the amount of daysToKeep
    */
   async getIndices({ aliasName, daysToKeep=7 }) {
     this.logger.info(`Getting Indices for (${aliasName})`);
@@ -83,13 +76,12 @@ class IndexCleaner {
   /**
    * Removes any indices from a list that are associated with a specific alias.
    *
-   * @param {any} aliasName The alias to check
-   * @param {any} indices A list of indices to filter
-   * @param {any} callback
+   * @param {string} aliasName The alias to check
+   * @param {Array} indices A list of indices to filter
    */
   async filterAliasedIndices({ aliasName, indices=[] }) {
     try {
-      const results = this.adapter.getIndexForAlias({ alias: aliasName });
+      const results = this.adapter.getIndexesForAlias({ alias: aliasName });
       return _.difference(indices, results);
     } catch (error) {
       this.logger.trace(error);
@@ -100,8 +92,7 @@ class IndexCleaner {
   /**
    * Deletes a list of indices from ElasticSearch
    *
-   * @param {any} indices
-   * @param {any} callback
+   * @param {Array} indices
    */
   async deleteIndices(indices) {
     try {
@@ -121,21 +112,19 @@ class IndexCleaner {
   /**
    * Performs all the steps to clean a single alias
    *
-   * @param {any} aliasName
-   * @param {any} callback
+   * @param {string} aliasName
    */
   async cleanIndicesForAlias(aliasName, daysToKeep) {
-    return this.getIndices({ aliasName, daysToKeep })
-      .then(indices => this.filterAliasedIndices({ aliasName, indices}))
-      .then(indices => {
-        if(indices.length > 0) {
-          return this.deleteIndices(indices);
-        }
-      })
-      .catch(error => {
-        this.logger.trace(error);
-        throw error;
-      });
+    try {
+      const indices = await this.getIndices({ aliasName, daysToKeep });
+      if(indices.length > 0) {
+        const deleteResults = await this.deleteIndices(indices);
+        this.logger.trace(deleteResults);
+      }
+    } catch(error) {
+      this.logger.trace(error);
+      throw error;
+    }
   }
 
   /**
@@ -147,29 +136,37 @@ class IndexCleaner {
    * with either alias regardless of age.
    *
    * @static
-   * @param {any} adapter The search adapter to use for making requests to ElasticSearch
-   * @param {any} repoAlias The alias name for clinical repos
-   * @param {any} daysToKeep The number of days of indices to keep.
-   * @param {any} callback
+   * @param {object} adapter The search adapter to use for making requests to ElasticSearch
+   * @param {string} repoAlias The alias name for clinical repos
+   * @param {integer} daysToKeep The number of days of indices to keep.
    */
-  static init(adapter, repoAlias, daysToKeep) {
+  static async init(adapter, repoAlias, daysToKeep) {
 
     let cleaner = new IndexCleaner(adapter);
     cleaner.logger.info(`Starting index cleaning.`);
-
-    return cleaner.cleanIndicesForAlias(repoAlias, daysToKeep);
+    try {
+      return await cleaner.cleanIndicesForAlias(repoAlias, daysToKeep);
+    } catch(error) {
+      cleaner.logger.trace(error);
+      throw error;
+    }
   }
 }
 
 if (require.main === module) {
   const reposAlias = 'repos';
   const numDays = 10;
-  const elasticsearchAdapter = new ElasticsearchAdapter(getConfig(process.env.NODE_ENV));
+  const config = getConfig(process.env.NODE_ENV);
+  const logger = new Logger({ name: 'index-cleaner' });
+  const elasticsearchAdapter = new adapter.elasticsearch.ElasticsearchAdapter({
+    hosts: config.ES_HOST,
+    logger: ElasticSearchLogger
+  });
 
   IndexCleaner.init(elasticsearchAdapter, reposAlias, numDays)
     .then(() => Logger.info("Cleaning Completed."))
     .catch(error => {
-      Logger.trace("Errors Occurred: " + error);
+      logger.trace("Errors Occurred: " + error);
     });
 }
 
