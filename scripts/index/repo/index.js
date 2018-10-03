@@ -54,7 +54,7 @@ class Indexer {
 
         this.logger.info(`Finished indexing repos`);
 
-        callback(null)
+        callback(null);
       } catch(error) {
         this.logger.error(error);
         callback(error);
