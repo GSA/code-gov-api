@@ -8,7 +8,7 @@ class SearchStream extends Readable {
 
   constructor(adapter, searchQuery) {
     super({ objectMode: true });
-    this.client = adapter.getClient();
+    this.client = adapter;
     this.searchQuery = searchQuery;
     this.logger = logger;
     this.from = 0;
@@ -22,34 +22,29 @@ class SearchStream extends Readable {
     }
 
     let searchQuery = _.merge(this.searchQuery, {
-      "body": {
-        "from": this.from
-      }
+      "body": { "from": this.from }
     });
+
     this.logger.debug(`Streaming search for:`, searchQuery);
     this.current = this.from;
-    this.client.search(searchQuery, (err, res) => {
-      if (err) {
-        this.logger.error(err);
+    this.client.search({...searchQuery})
+      .then(({ total, data}) => {
+        if (response.total === 0) {
+          return this.push(null);
+        }
+
+        this.from += total;
+
+        data.forEach((item) => {
+          this.push(item);
+        });
+      })
+      .catch(error => {
+        this.logger.error(error);
         return this.push(null);
-      }
-
-      if (!res.hits || !res.hits.hits || !res.hits.hits.length) {
-        // no results
-        return this.push(null);
-      }
-
-      let results = res.hits.hits.map((result) => {
-        return result._source;
       });
-      this.from += results.length;
-
-      results.forEach((result) => {
-        this.push(result);
-      });
-    });
   }
-
 }
+
 
 module.exports = SearchStream;
