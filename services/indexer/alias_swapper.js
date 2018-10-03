@@ -1,4 +1,3 @@
-const async = require("async");
 const Logger = require("../../utils/logger");
 const _ = require('lodash');
 
@@ -42,11 +41,11 @@ class AliasSwapper {
     this.logger.info(`Swapping aliases.`);
 
     try {
-      const results = await this.adapter.updateAliases({
+      return await this.adapter.updateAliases({
         body: {
           actions: actions
         }
-      })
+      });
     } catch(error) {
       this.logger.trace(error);
       throw error;
@@ -59,11 +58,15 @@ class AliasSwapper {
 
     try {
       const results = await this.adapter.getIndexesForAlias({ alias });
+
       _.forEach(results, function(item, key) {
         if (_.has(item, ['aliases', alias])) {
           indices.push(key);
         }
       });
+
+      return indices;
+
     } catch(error) {
       this.logger.trace(error);
       throw error;
@@ -71,75 +74,55 @@ class AliasSwapper {
   }
 
   /**
+   * Build actions for the alias swapper.
+   * @param {*} param
+   * @param {Array} param.indices A collection of indices to remove an alias from.
+   * @param {object} param.repoIndexInfo The information of the index being created.
+   * @returns {Array} Array with all actions to be perfomed by the alias swapper.
+   */
+  _buildActions({ indices, repoIndexInfo }) {
+    let actions = [];
+    for(let index of indices) {
+      actions.push({
+        "remove": {
+          "index": index,
+          "alias": repoIndexInfo.esAlias
+        }
+      });
+    }
+    actions.push({
+      "add": {
+        "index": repoIndexInfo.esIndex,
+        "alias": repoIndexInfo.esAlias
+      }
+    });
+    return actions;
+  }
+
+  /**
    * Initializes and executes the swapping of aliases for repos
    *
    * @static
-   * @param {any} adapter The search adapter to use for making requests to ElasticSearch
-   * @param {any} repoIndexInfo Information about the index and alias for repos
-   * @param {any} callback
+   * @param {object} adapter The search adapter to use for making requests to ElasticSearch
+   * @param {object} repoIndexInfo Information about the index and alias for repos
    */
-  static init(adapter, repoIndexInfo, callback=undefined) {
+  static async init(adapter, repoIndexInfo) {
 
     let swapper = new AliasSwapper(adapter);
     swapper.logger.info(`Starting alias swapping.`);
+    try {
+      const exists = await swapper.aliasExists({ name: repoIndexInfo.esAlias });
 
-    //Find out who is using aliases
-    async.waterfall([
-      //Get indexes for repo alias
-      (next) => {
-        swapper.aliasExists(repoIndexInfo.esAlias)
-          .then(exists => next(null, exists))
-          .catch(error => next(error, null));
-      },
-      (exists, next) => {
-        if(exists) {
-          swapper.getIndexesForAlias({ alias: repoIndexInfo.esAlias })
-            .then(indexesForAlias => next(null, indexesForAlias))
-            .catch(error => next(error, null));
-        } else {
-          next(null, []);
-        }
-      },
-      (indexesForAlias, next) => {
-        repoIndexInfo.currentAliasIndexes = indexesForAlias;
-        next(null);
-      },
-      // Build the removal and addions.
-      (next) => {
+      if(exists) {
+        const indices = await swapper.getIndexesForAlias({ alias: repoIndexInfo.esAlias });
+        let actions = swapper._buildActions({ indices, repoIndexInfo });
 
-        let actions = [];
-
-        // Loop over the repo indexes and setup the add/removes for this swap.
-        [repoIndexInfo].forEach(indexType => {
-          indexType.currentAliasIndexes.forEach((index) => {
-            actions.push({
-              "remove": {
-                "index": index,
-                "alias": indexType.esAlias
-              }
-            });
-          });
-          actions.push({
-            "add": {
-              "index": indexType.esIndex,
-              "alias": indexType.esAlias
-            }
-          });
-        });
-
-        swapper.swapAlias(actions)
-          .then(() => next(null))
-          .catch(error => next(error, null));
+        return await swapper.swapAlias(actions);
       }
-    ], (err) => {
-      if(err) {
-        swapper.logger.error(err);
-      }
-      swapper.logger.info(`Finished swapping aliases.`);
-      if(callback && typeof callback === 'function'){
-        return callback(err);
-      }
-    });
+    } catch(error) {
+      swapper.logger.trace(error);
+      throw error;
+    }
   }
 }
 
