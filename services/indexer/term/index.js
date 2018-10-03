@@ -99,7 +99,7 @@ class TermIndexer extends AbstractIndexer {
     });
   }
 
-  static init(adapter, callback) {
+  static async init(adapter, callback) {
     let indexer = new TermIndexer(adapter, ES_TERM_PARAMS, getConfig(process.env.NODE_ENV));
     indexer.logger.info(`Started indexing (${indexer.esType}) indices.`);
     indexer.indexExists()
@@ -125,7 +125,6 @@ class TermIndexer extends AbstractIndexer {
         });
       });
   }
-
 }
 
 module.exports = TermIndexer;
