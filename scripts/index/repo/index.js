@@ -1,4 +1,3 @@
-const async = require("async");
 const getConfig = require("../../../config");
 const RepoIndexer = require("../../../services/indexer/repo");
 const AliasSwapper = require("../../../services/indexer/alias_swapper");
@@ -39,35 +38,22 @@ class Indexer {
 
     this.logger.info("Started indexing.");
 
-    let repoIndexInfo = false;
+    RepoIndexer.init(this.elasticsearchAdapter, this.config, async (error, info) => {
+      if(error) {
+        this.logger.error(error);
+        callback(error);
+      }
 
-    async.waterfall([
-      (next) => {
-        RepoIndexer.init(this.elasticsearchAdapter, this.config, next);
-      },
-      (info, next) => {
-        // save out alias and repo index name
-        repoIndexInfo = info;
-        return next(null);
-      },
-      (next) => {
-        IndexOptimizer.init(this.elasticsearchAdapter, repoIndexInfo, next);
-      },
-      // if all went well, swap aliases
-      (next) => {
-        AliasSwapper.init(this.elasticsearchAdapter, repoIndexInfo, next);
-      },
-      // clean up old indices
-      (next) => {
-        IndexCleaner.init(this.elasticsearchAdapter, repoIndexInfo.esAlias, DAYS_TO_KEEP, next);
+      try {
+        await IndexOptimizer.init(this.elasticsearchAdapter, info);
+        await AliasSwapper.init(this.elasticsearchAdapter, info);
+        await IndexCleaner.init(this.elasticsearchAdapter, info.esAlias, DAYS_TO_KEEP);
+
+        this.logger.info(`Finished indexing repos`);
+      } catch(error) {
+        this.logger.error(error);
+        callback(error);
       }
-    ], (err, status) => {
-      if (err) {
-        this.logger.error(err);
-      } else {
-        this.logger.info("Finished indexing:", status);
-      }
-      return callback(err);
     });
   }
 }
