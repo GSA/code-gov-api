@@ -53,6 +53,8 @@ class Indexer {
         await IndexCleaner.init(this.elasticsearchAdapter, info.esAlias, DAYS_TO_KEEP);
 
         this.logger.info(`Finished indexing repos`);
+
+        callback(null)
       } catch(error) {
         this.logger.error(error);
         callback(error);

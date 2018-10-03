@@ -61,7 +61,8 @@ class AbstractIndexer {
       index: this.esIndex,
       type: this.esType,
       id: doc.repoId,
-      document: doc
+      document: doc,
+      requestTimeout: 60000
     });
   }
 
