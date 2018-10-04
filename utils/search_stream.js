@@ -12,6 +12,7 @@ class SearchStream extends Readable {
     this.searchQuery = searchQuery;
     this.logger = logger;
     this.from = 0;
+    this.size = 100;
     this.current = -1;
   }
 
@@ -22,18 +23,18 @@ class SearchStream extends Readable {
     }
 
     let searchQuery = _.merge(this.searchQuery, {
-      "body": { "from": this.from }
+      "body": { "from": this.from, "size": this.size }
     });
 
     this.logger.debug(`Streaming search for:`, searchQuery);
     this.current = this.from;
     this.client.search({...searchQuery})
       .then(({ total, data}) => {
-        if (response.total === 0) {
+        if (total === 0) {
           return this.push(null);
         }
 
-        this.from += total;
+        this.from += data.length;
 
         data.forEach((item) => {
           this.push(item);
