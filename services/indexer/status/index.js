@@ -19,10 +19,10 @@ class StatusIndexer extends AbstractIndexer {
 
     reporter.report.timestamp = (new Date()).toString();
     return this.indexDocument({
-      "index": this.esIndex,
-      "type": this.esType,
-      "id": idHash,
-      "body": JSON.stringify(reporter.report)
+      index: this.esIndex,
+      type: this.esType,
+      id: idHash,
+      document: JSON.stringify(reporter.report)
     });
   }
 
