@@ -25,7 +25,7 @@ class Indexer {
    *
    */
   constructor(config) {
-    this.logger = new Logger({name: "repo-index-script"});
+    this.logger = new Logger({ name: 'repo-index-script' });
     this.config = config;
 
     this.elasticsearchAdapter = new adapters.elasticsearch.ElasticsearchAdapter({
@@ -37,29 +37,24 @@ class Indexer {
   /**
    * Index the repos contained in the agency endpoints file
    */
-  index(callback) {
+  async index() {
 
-    this.logger.info("Started indexing.");
+    this.logger.info('Started indexing.');
 
-    RepoIndexer.init(this.elasticsearchAdapter, this.config, async (error, info) => {
-      if(error) {
-        this.logger.error(error);
-        callback(error);
-      }
+    try {
+      const repoIndexInfo = await RepoIndexer.init(this.elasticsearchAdapter, this.config);
+      // TODO: add github integration here
+      // TODO: add data quality score normalization here
+      await IndexOptimizer.init(this.elasticsearchAdapter, repoIndexInfo);
+      await AliasSwapper.init(this.elasticsearchAdapter, repoIndexInfo);
+      await IndexCleaner.init(this.elasticsearchAdapter, repoIndexInfo.esAlias, DAYS_TO_KEEP);
 
-      try {
-        await IndexOptimizer.init(this.elasticsearchAdapter, info);
-        await AliasSwapper.init(this.elasticsearchAdapter, info);
-        await IndexCleaner.init(this.elasticsearchAdapter, info.esAlias, DAYS_TO_KEEP);
-
-        this.logger.info(`Finished indexing repos`);
-
-        callback(null);
-      } catch(error) {
-        this.logger.error(error);
-        callback(error);
-      }
-    });
+      this.logger.debug(`Finished indexing repos`);
+      return repoIndexInfo;
+    } catch(error) {
+      this.logger.trace(error);
+      throw error;
+    }
   }
 }
 
@@ -67,11 +62,9 @@ class Indexer {
 // This will index all repos taking our default input.
 if (require.main === module) {
   let indexer = new Indexer(getConfig(process.env.NODE_ENV));
-  indexer.index((err) => {
-    if (err) {
-      indexer.logger.error(err);
-    }
-  });
+  indexer.index()
+    .then(() => indexer.logger.debug(`Finished indexing repos`))
+    .catch(error => indexer.logger.error(error));
 }
 
 module.exports = Indexer;
