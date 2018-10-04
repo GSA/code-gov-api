@@ -56,13 +56,13 @@ class AbstractIndexer {
     return this.adapter.indexExists(this.esIndex);
   }
 
-  indexDocument(doc) {
+  indexDocument({ index, type, id=null, document, requestTimeout=30000 }) {
     return this.adapter.indexDocument({
-      index: this.esIndex,
-      type: this.esType,
-      id: doc.repoId,
-      document: doc,
-      requestTimeout: 60000
+      index,
+      type,
+      id,
+      document,
+      requestTimeout
     });
   }
 
