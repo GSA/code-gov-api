@@ -1,5 +1,4 @@
 const Logger = require("../../utils/logger");
-const _ = require('lodash');
 
 /**
  * Class for Swapping out ElasticSearch Aliases
@@ -54,19 +53,9 @@ class AliasSwapper {
 
   async getIndexesForAlias({ alias }) {
     this.logger.info(`Getting indexes for alias (${alias}).`);
-    let indices = [];
 
     try {
-      const results = await this.adapter.getIndexesForAlias({ alias });
-
-      _.forEach(results, function(item, key) {
-        if (_.has(item, ['aliases', alias])) {
-          indices.push(key);
-        }
-      });
-
-      return indices;
-
+      return await this.adapter.getIndexesForAlias({ alias });
     } catch(error) {
       this.logger.trace(error);
       throw error;
@@ -112,13 +101,15 @@ class AliasSwapper {
     swapper.logger.info(`Starting alias swapping.`);
     try {
       const exists = await swapper.aliasExists({ name: repoIndexInfo.esAlias });
+      let indices = [];
 
       if(exists) {
-        const indices = await swapper.getIndexesForAlias({ alias: repoIndexInfo.esAlias });
-        let actions = swapper._buildActions({ indices, repoIndexInfo });
-
-        return await swapper.swapAlias(actions);
+        indices = await swapper.getIndexesForAlias({ alias: repoIndexInfo.esAlias });
       }
+      let actions = swapper._buildActions({ indices, repoIndexInfo });
+
+      return await swapper.swapAlias(actions);
+
     } catch(error) {
       swapper.logger.trace(error);
       throw error;
