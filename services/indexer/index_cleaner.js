@@ -94,11 +94,11 @@ class IndexCleaner {
    *
    * @param {Array} indices
    */
-  async deleteIndices(indices) {
+  async deleteIndices({ indices, requestTimeout=30000 }) {
     try {
       const results = await this.adapter.deleteIndex({
         index: indices,
-        requestTimeout: 90000
+        requestTimeout: requestTimeout
       });
 
       return results;
@@ -118,7 +118,7 @@ class IndexCleaner {
     try {
       const indices = await this.getIndices({ aliasName, daysToKeep });
       if(indices.length > 0) {
-        const deleteResults = await this.deleteIndices(indices);
+        const deleteResults = await this.deleteIndices({ indices, requestTimeout: 90000 });
         this.logger.trace(deleteResults);
       }
     } catch(error) {
