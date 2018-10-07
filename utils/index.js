@@ -249,8 +249,8 @@ class Utils {
     if (githubUrl.match(/\.git$/)) {
       githubUrl = githubUrl.replace(/\.git$/, '');
     }
-    if (githubUrl.match(/^(https: || http:)\/\/github.com\//)) {
-      githubUrl = githubUrl.replace(/^(https: || http:)\/\/github.com\//, '');
+    if (githubUrl.match(/^(https:||http:)\/\/github.com\//)) {
+      githubUrl = githubUrl.replace(/^(https:||http:)\/\/github.com\//, '');
     }
     if (githubUrl.match(/^git:\/\/github.com\//)) {
       githubUrl = githubUrl.replace(/^git:\/\/github.com\//, '');
