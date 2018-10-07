@@ -38,35 +38,37 @@ function getApiRoutes(config, router) {
       if(results.hasOwnProperty('data') === false || results.data.length === 0) {
         const error = new Error('Not Found');
         error.status = 404;
-        next(error);
+        throw error;
       }
 
       response.json(results.data);
 
     } catch(error) {
+      logger.trace(error);
       next(error);
     }
   });
   router.get('/repos', async (request, response, next) => {
     const queryParamKeys = request.query;
 
-    if(queryParamKeys.length) {
-      let invalidParams = getInvalidRepoQueryParams(queryParamKeys);
-      if (invalidParams.length > 0) {
-        logger.trace(error);
-        const error = new Error(`Invalid query parameters: ${invalidParams}`);
-        error.status = 400;
-        next(error);
-      }
-    }
     try {
+      if(queryParamKeys.length) {
+        let invalidParams = getInvalidRepoQueryParams(queryParamKeys);
+
+        if (invalidParams.length > 0) {
+          const error = new Error(`Invalid query parameters: ${invalidParams}`);
+          error.status = 400;
+          throw error;
+        }
+      }
+
       const searchQuery = createReposSearchQuery({ queryParams: request.query, indexMappings: mappings });
       const results = await adapter.search({ index: 'repos', type: 'repo', body: searchQuery });
 
       if(results.hasOwnProperty('data') === false || results.data.length === 0) {
         const error = new Error('Not Found');
         error.status = 404;
-        next(error);
+        throw error;
       }
 
       response.json(results);
@@ -119,11 +121,12 @@ function getApiRoutes(config, router) {
 
       const agencies = getAgencies(agenciesData, request.query, logger);
 
-      if(agencies.total > 0) {
-        response.json(agencies);
-      } else {
-        response.sendStatus(404);
+      if(agencies.total === 0) {
+        const error = new Error('Not Found');
+        error.status = 404;
+        throw error;
       }
+      response.json(agencies);
     } catch(error) {
       logger.trace(error);
       next(error);
@@ -147,11 +150,14 @@ function getApiRoutes(config, router) {
 
       const data = getAgencies(agenciesData, request.query, logger);
 
-      if(data.total > 0) {
-        response.json(data.agencies[0]);
-      } else {
-        response.sendStatus(404);
+      if(data.total === 0) {
+        const error = new Error('Not Found');
+        error.status = 404;
+        throw error;
       }
+
+      response.json(data.agencies[0]);
+
     } catch(error) {
       logger.trace(error);
       next(error);
@@ -165,7 +171,7 @@ function getApiRoutes(config, router) {
       if(results.hasOwnProperty('data') === false || results.data.length === 0) {
         const error = new Error('Not Found');
         error.status = 404;
-        next(error);
+        throw error;
       }
 
       response.json(results);
@@ -187,12 +193,15 @@ function getApiRoutes(config, router) {
     try {
       const results = await adapter.search({ index: 'status', type: 'status' });
 
-      if(results.total > 0){
-        const data = _.omit( results.data[0], config.AGENCIES_TO_OMIT_FROM_STATUS );
-        response.json(data);
-      } else {
-        response.sendStatus(404);
+      if(results.total === 0){
+        const error = new Error('Not Found');
+        error.status = 404;
+        throw error;
       }
+
+      const data = _.omit( results.data[0], config.AGENCIES_TO_OMIT_FROM_STATUS );
+      response.json(data);
+
     } catch(error) {
       logger.trace(error);
       next(error);
@@ -202,12 +211,13 @@ function getApiRoutes(config, router) {
     try {
       const results = await adapter.search({ index: 'status', type: 'status' });
 
-      if(results.total > 0){
-        const data = _.omit( results.data[0], config.AGENCIES_TO_OMIT_FROM_STATUS );
-        response.render('status', { title: "Code.gov API Status", statusData: data });
-      } else {
+      if(results.total === 0){
         response.render('status', { title: "Code.gov API Status", statusData: {} });
       }
+
+      const data = _.omit( results.data[0], config.AGENCIES_TO_OMIT_FROM_STATUS );
+      response.render('status', { title: "Code.gov API Status", statusData: data });
+
     } catch(error) {
       logger.trace(error);
       next(error);
@@ -219,16 +229,17 @@ function getApiRoutes(config, router) {
       let agency = request.params.agency.toUpperCase();
       const results = await adapter.search({ index: 'status', type: 'status' });
 
-      if(results.total > 0){
-        const data = _.omit( results.data[0], config.AGENCIES_TO_OMIT_FROM_STATUS );
-        const agencyIssues = data.statuses[agency].issues;
-        response.render('status/agency/issues', {
-          title: `Code.gov API Status for ${agency}`,
-          statusData: agencyIssues
-        });
-      } else {
+      if(results.total === 0){
         response.render('status/agency/issues', { title: `Code.gov API Status for ${agency}`, statusData: {} });
       }
+
+      const data = _.omit( results.data[0], config.AGENCIES_TO_OMIT_FROM_STATUS );
+      const agencyIssues = data.statuses[agency].issues;
+      response.render('status/agency/issues', {
+        title: `Code.gov API Status for ${agency}`,
+        statusData: agencyIssues
+      });
+
     } catch(error) {
       logger.trace(error);
       next(error);
@@ -265,23 +276,26 @@ function getApiRoutes(config, router) {
   //     response.sendStatus(400);
   //   }
   // });
-  router.get('/version', (request, response, next) => {
-    getVersion(response)
-      .then(versionInfo => response.json(versionInfo))
-      .catch(error => {
-        logger.trace(error);
-        next(error);
-      });
+  router.get('/version', async (request, response, next) => {
+    try {
+      const versionInfo = await getVersion(response);
+      response.json(versionInfo);
+    } catch(error) {
+      logger.trace(error);
+      next(error);
+    }
   });
 
-  router.get('/', (request, response, next) =>
-    getRootMessage()
-      .then(rootMessage => response.json(rootMessage))
-      .catch(error => {
-        logger.trace(error);
-        next(error);
-      })
-  );
+  router.get('/', async (request, response, next) => {
+    try {
+      const rootMessage = await getRootMessage();
+      response.json(rootMessage);
+    } catch(error){
+      logger.trace(error);
+      next(error);
+    }
+  });
+
   return router;
 
   // router.get(`/status/:agency/diff`, (req, res, next) => {
