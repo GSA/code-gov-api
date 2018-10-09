@@ -25,9 +25,8 @@ const favicon = require('serve-favicon');
 /* ------------------------------------------------------------------ *
                             API CONFIG
  * ------------------------------------------------------------------ */
-const logger = new Logger({name: "code-gov-api"});
-
 const config = getConfig(process.env.NODE_ENV);
+const logger = new Logger({name: "code-gov-api", level: config.LOGGER_LEVEL});
 
 const app = express();
 
