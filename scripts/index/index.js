@@ -15,7 +15,7 @@ class Indexer {
    *
    */
   constructor(config) {
-    this.logger = new Logger({ name: "index-script" });
+    this.logger = new Logger({ name: "index-script", level: config.LOGGER_LEVEL });
     this.config = config;
   }
 
