@@ -20,7 +20,7 @@ class Indexer {
    *
    */
   constructor(config) {
-    this.logger = new Logger({name: "term-index-script"});
+    this.logger = new Logger({name: "term-index-script", level: config.LOGGER_LEVEL});
     this.config = config;
     this.elasticsearchAdapter = new adapter.elasticsearch.ElasticsearchAdapter({
       hosts: this.config.ES_HOST,
