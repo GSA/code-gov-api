@@ -25,7 +25,7 @@ class Indexer {
    *
    */
   constructor(config) {
-    this.logger = new Logger({ name: 'repo-index-script' });
+    this.logger = new Logger({ name: 'repo-index-script', level: config.LOGGER_LEVEL });
     this.config = config;
 
     this.elasticsearchAdapter = new adapters.elasticsearch.ElasticsearchAdapter({
