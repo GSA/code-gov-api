@@ -80,23 +80,21 @@ class Reporter {
       "esAlias": "status",
       "esType": "status",
       "esMapping": elasticsearchMappings,
-      "esSettings": elasticsearchSettings
+      "esSettings": elasticsearchSettings,
+      "esHosts": this.config.ES_HOST
     };
-    const adapter = new adapters.elasticsearch.ElasticsearchAdapter({
-      hosts: this.config.ES_HOST,
-      logger: Logger
-    });
+    const adapter = adapters.elasticsearch.ElasticsearchAdapter;
 
     return StatusIndexer.init(this, adapter, params)
       .then(indexInfo => {
-        IndexOptimizer.init(adapter, indexInfo);
+        IndexOptimizer.init(adapter, indexInfo, this.config);
         return indexInfo;
       })
       .then(indexInfo => {
-        AliasSwapper.init(adapter, indexInfo);
+        AliasSwapper.init(adapter, indexInfo, this.config);
         return indexInfo;
       })
-      .then(indexInfo => IndexCleaner.init(adapter, indexInfo.esAlias, DAYS_TO_KEEP))
+      .then(indexInfo => IndexCleaner.init(adapter, indexInfo.esAlias, DAYS_TO_KEEP, this.config))
       .catch(error => {
         this.logger.error(error);
         throw error;
