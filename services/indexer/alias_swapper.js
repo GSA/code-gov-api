@@ -16,8 +16,11 @@ class AliasSwapper {
    *
    * @param {any} adapter The search adapter to use for connecting to ElasticSearch
    */
-  constructor(adapter) {
-    this.adapter = adapter;
+  constructor(adapter, config) {
+    this.adapter = new adapter({
+      hosts: config.ES_HOST,
+      logger: Logger
+    });
     this.logger = new Logger({ name: this.LOGGER_NAME});
   }
 
@@ -95,9 +98,9 @@ class AliasSwapper {
    * @param {object} adapter The search adapter to use for making requests to ElasticSearch
    * @param {object} repoIndexInfo Information about the index and alias for repos
    */
-  static async init(adapter, repoIndexInfo) {
+  static async init(adapter, repoIndexInfo, config) {
 
-    let swapper = new AliasSwapper(adapter);
+    let swapper = new AliasSwapper(adapter, config);
     swapper.logger.info(`Starting alias swapping.`);
     try {
       const exists = await swapper.aliasExists({ name: repoIndexInfo.esAlias });

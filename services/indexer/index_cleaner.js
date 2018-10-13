@@ -21,8 +21,11 @@ class IndexCleaner {
    *
    * @param {any} adapter The search adapter to use for connecting to ElasticSearch
    */
-  constructor(adapter) {
-    this.adapter = adapter;
+  constructor(adapter, config) {
+    this.adapter = new adapter({
+      hosts: config.ES_HOST,
+      logger: ElasticSearchLogger
+    });
     this.logger = new Logger({ name: 'index-cleaner' });
   }
 
@@ -140,9 +143,9 @@ class IndexCleaner {
    * @param {string} repoAlias The alias name for clinical repos
    * @param {integer} daysToKeep The number of days of indices to keep.
    */
-  static async init(adapter, repoAlias, daysToKeep) {
+  static async init(adapter, repoAlias, daysToKeep, config) {
 
-    let cleaner = new IndexCleaner(adapter);
+    let cleaner = new IndexCleaner(adapter, config);
     cleaner.logger.info(`Starting index cleaning.`);
     try {
       return await cleaner.cleanIndicesForAlias(repoAlias, daysToKeep);
