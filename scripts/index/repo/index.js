@@ -28,10 +28,7 @@ class Indexer {
     this.logger = new Logger({ name: 'repo-index-script', level: config.LOGGER_LEVEL });
     this.config = config;
 
-    this.elasticsearchAdapter = new adapters.elasticsearch.ElasticsearchAdapter({
-      hosts: this.config.ES_HOST,
-      logger: ElasticSearchLogger
-    });
+    this.elasticsearchAdapter = adapters.elasticsearch.ElasticsearchAdapter;
   }
 
   /**
@@ -45,9 +42,9 @@ class Indexer {
       const repoIndexInfo = await RepoIndexer.init(this.elasticsearchAdapter, this.config);
       // TODO: add github integration here
       // TODO: add data quality score normalization here
-      await IndexOptimizer.init(this.elasticsearchAdapter, repoIndexInfo);
-      await AliasSwapper.init(this.elasticsearchAdapter, repoIndexInfo);
-      await IndexCleaner.init(this.elasticsearchAdapter, repoIndexInfo.esAlias, DAYS_TO_KEEP);
+      await IndexOptimizer.init(this.elasticsearchAdapter, repoIndexInfo, this.config);
+      await AliasSwapper.init(this.elasticsearchAdapter, repoIndexInfo, this.config);
+      await IndexCleaner.init(this.elasticsearchAdapter, repoIndexInfo.esAlias, DAYS_TO_KEEP, this.config);
 
       this.logger.debug(`Finished indexing repos`);
       return repoIndexInfo;
