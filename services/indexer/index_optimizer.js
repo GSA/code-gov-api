@@ -1,9 +1,9 @@
-const Logger              = require("../../utils/logger");
+const Logger = require("../../utils/logger");
 
 /**
  * Class for optimizing ElasticSearch Indexes
  *
- * @class AliasSwapper
+ * @class IndexOptimizer
  */
 class IndexOptimizer {
 
@@ -12,8 +12,11 @@ class IndexOptimizer {
    *
    * @param {any} adapter The search adapter to use for connecting to ElasticSearch
    */
-  constructor(adapter) {
-    this.adapter = adapter;
+  constructor(adapter, config) {
+    this.adapter = new adapter({
+      hosts: config.ES_HOST,
+      logger: Logger
+    });
     this.logger = new Logger({ name: 'index-optimizer'});
   }
 
@@ -47,9 +50,9 @@ class IndexOptimizer {
    * @param {any} repoIndexInfo Information about the index and alias for repos
    * @param {any} callback
    */
-  static async init(adapter, repoIndexInfo) {
+  static async init(adapter, repoIndexInfo, config) {
 
-    let optimizer = new IndexOptimizer(adapter);
+    let optimizer = new IndexOptimizer(adapter, config);
     optimizer.logger.info(`Starting index optimization.`);
     try {
       await optimizer.forceMerge(repoIndexInfo.esIndex);

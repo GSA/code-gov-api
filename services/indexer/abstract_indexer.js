@@ -6,7 +6,7 @@ const ElasticSearch = require("elasticsearch");
 
 class ElasticSearchLogger extends Logger {
   get DEFAULT_LOGGER_NAME() {
-    return "elasticsearch";
+    return "elasticsearch-adapter";
   }
 }
 /* eslint-enable */
@@ -21,7 +21,10 @@ class AbstractIndexer {
     const now = moment();
     const timestamp = now.format('YYYYMMDD_HHmmss');
 
-    this.adapter = adapter;
+    this.adapter = new adapter({
+      hosts: params.esHosts,
+      logger: ElasticSearchLogger
+    });
 
     this.logger = new Logger({ name: this.LOGGER_NAME });
     this.esAlias = params.esAlias ? params.esAlias : undefined;
