@@ -21,7 +21,7 @@ class RepoIndexer extends AbstractIndexer {
     return "repo-indexer";
   }
 
-  constructor(adapter, agencyEndpointsFile, fetchedFilesDir, fallbackFilesDir=null, params) {
+  constructor({adapter, agencyEndpointsFile, fetchedFilesDir, fallbackFilesDir=null, params}) {
     super(adapter, params);
     this.indexCounter = 0;
     this.agencyEndpointsFile = agencyEndpointsFile;
@@ -59,8 +59,17 @@ class RepoIndexer extends AbstractIndexer {
   }
 
   static async init(adapter, config) {
-    const repoIndexer = new RepoIndexer(adapter, config.AGENCY_ENDPOINTS_FILE, config.FETCHED_DIR,
-      config.FALLBACK_DIR, ES_PARAMS);
+    const params = {
+      esHosts: config.ES_HOST,
+      ...ES_PARAMS
+    }
+    const repoIndexer = new RepoIndexer({
+      adapter,
+      agencyEndpointsFile: config.AGENCY_ENDPOINTS_FILE,
+      fetchedFilesDir: config.FETCHED_DIR,
+      fallbackFilesDir: config.FALLBACK_DIR,
+      params
+    });
 
     repoIndexer.logger.info(`Started indexing (${repoIndexer.esType}) indices.`);
 
@@ -72,7 +81,7 @@ class RepoIndexer extends AbstractIndexer {
       await repoIndexer.initIndex();
       await repoIndexer.initMapping();
       await repoIndexer.indexRepos(config);
-      await Reporter.indexReport();
+      await Reporter.indexReport(config);
 
       repoIndexer.logger.info(`Finished indexing (${repoIndexer.esType}) indices.`);
       return {
