@@ -15,7 +15,7 @@ module.exports = class Logger {
     }
     let bun = bunyan.createLogger({
       name: config.name,
-      level: config.LOGGER_LEVEL || 'info',
+      level: process.env.LOGGER_LEVEL || config.LOGGER_LEVEL || 'info',
       serializers: {
         req: Utils.getLoggerRequestSerializer,
         res: Utils.getLoggerResponseSerializer,
