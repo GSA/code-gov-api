@@ -136,6 +136,11 @@ class Searcher {
         this._addStringFilter(body, field, queryParams[field]);
       }
     });
+    searchPropsByType['text'].forEach((field) => {
+      if(queryParams[field]) {
+        this._addStringFilter(body, field, queryParams[field]);
+      }
+    });
   }
 
   _addDateRangeFilters(body, queryParams) {

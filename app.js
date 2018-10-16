@@ -44,17 +44,7 @@ if( config.USE_RATE_LIMITER) {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(cors({
-  origin: (origin, callback) => {
-    if(config.ALLOWED_DOMAINS.includes(origin) || config.ALLOWED_DOMAINS.includes('*')) {
-      callback(null, true);
-    } else {
-      let error = new Error('Not allowed by CORS');
-      error.status = 403;
-      callback(error);
-    }
-  }
-}));
+app.use(cors());
 app.use(helmet());
 app.use(helmet.hsts({
   maxAge: config.HSTS_MAX_AGE,
