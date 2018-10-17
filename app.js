@@ -88,12 +88,13 @@ app.use(function(req, res, next) {
 });
 
 app.use(function(err, req, res, next) {
-  res.status(err.status || 500);
   logger.error({req: req, res: res, err: err});
-  res.json({
-    message: err.message,
-    error: app.get('env') === 'development' ? err : {}
-  });
+  res
+    .status(err.status || 500)
+    .json({
+      message: err.message,
+      error: app.get('env') === 'development' ? err : {}
+    });
 });
 
 /* ------------------------------------------------------------------ *

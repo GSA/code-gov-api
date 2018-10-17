@@ -1,5 +1,12 @@
 {
   "analysis": {
+    "normalizer": {
+      "lowercase": {
+        "type": "custom",
+        "char_filter": [],
+        "filter": ["lowercase"]
+      }
+    },
     "filter": {
       "autocomplete_filter": {
         "type": "edge_ngram",
@@ -30,10 +37,6 @@
           "lowercase",
           "asciifolding"
         ]
-      },
-      "keyword_ci": {
-        "tokenizer": "keyword",
-        "filter": "lowercase"
       }
     }
   }

@@ -5,62 +5,55 @@
         "type": "date"
       },
       "version": {
-        "type": "string",
-        "index": "not_analyzed"
+        "type": "keyword"
       },
       "agency": {
         "type": "object",
         "properties": {
           "name": {
-            "type": "string",
-            "analyzer": "keyword_ci",
+            "type": "text",
+            "analyzer": "englishfulltext",
             "fields": {
-              "_fulltext": {
-                "type": "string",
-                "analyzer": "englishfulltext"
+              "keyword": {
+                "type": "keyword",
+                "normalizer": "lowercase"
               }
             }
           },
           "acronym": {
-            "type": "string",
-            "analyzer": "keyword_ci",
+            "type": "keyword",
             "fields": {
-              "_fulltext": {
-                "type": "string",
-                "analyzer": "keyword_ci"
+              "keyword": {
+                "type": "keyword",
+                "normalizer": "lowercase"
               }
             }
           },
           "website": {
-            "type": "string",
-            "index": "not_analyzed"
+            "type": "keyword",
+            "normalizer": "lowercase"
           },
           "codeUrl": {
-            "type": "string",
-            "index": "not_analyzed"
+            "type": "keyword",
+            "normalizer": "lowercase"
           },
           "requirements": {
             "type": "object",
             "properties": {
               "agencyWidePolicy": {
-                "type": "float",
-                "index": "not_analyzed"
+                "type": "float"
               },
               "openSourceRequirement": {
-                "type": "float",
-                "index": "not_analyzed"
+                "type": "float"
               },
               "inventoryRequirement": {
-                "type": "float",
-                "index": "not_analyzed"
+                "type": "float"
               },
               "schemaFormat": {
-                "type": "float",
-                "index": "not_analyzed"
+                "type": "float"
               },
               "overallCompliance": {
-                "type": "float",
-                "index": "not_analyzed"
+                "type": "float"
               }
             }
           }
@@ -70,28 +63,43 @@
         "type": "nested",
         "properties": {
           "organization": {
-            "type": "string"
+            "type": "text",
+            "analyzer": "englishfulltext",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "normalizer": "lowercase"
+              }
+            }
           },
           "project_name": {
-            "type": "string"
+            "type": "text",
+            "analyzer": "englishfulltext",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "normalizer": "lowercase"
+              }
+            }
           },
           "errors": {
             "type": "nested",
             "properties": {
               "keyword": {
-                "type": "string"
+                "type": "keyword"
               },
               "dataPath": {
-                "type": "string"
+                "type": "keyword"
               },
               "schemaPath": {
-                "type": "string"
+                "type": "keyword"
               },
               "params": {
                 "type": "object"
               },
               "message": {
-                "type": "string"
+                "type": "text",
+                "analyzer": "englishfulltext"
               }
             }
           },
@@ -99,19 +107,20 @@
             "type": "nested",
             "properties": {
               "keyword": {
-                "type": "string"
+                "type": "keyword"
               },
               "dataPath": {
-                "type": "string"
+                "type": "keyword"
               },
               "schemaPath": {
-                "type": "string"
+                "type": "keyword"
               },
               "params": {
                 "type": "object"
               },
               "message": {
-                "type": "string"
+                "type": "text",
+                "analyzer": "englishfulltext"
               }
             }
           },
@@ -119,19 +128,20 @@
             "type": "nested",
             "properties": {
               "keyword": {
-                "type": "string"
+                "type": "keyword"
               },
               "dataPath": {
-                "type": "string"
+                "type": "keyword"
               },
               "schemaPath": {
-                "type": "string"
+                "type": "keyword"
               },
               "params": {
                 "type": "object"
               },
               "message": {
-                "type": "string"
+                "type": "text",
+                "analyzer": "englishfulltext"
               }
             }
           }
