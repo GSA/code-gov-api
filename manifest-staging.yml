@@ -13,8 +13,6 @@ applications:
     CF_STAGING_TIMEOUT: 15
     CF_STARTUP_TIMEOUT: 15
     NODE_ENV: staging
-    NEW_RELIC_APP_NAME: code-api-staging
-    ELASTICSEARCH_SERVICE_NAME: code_gov_elasticsearch
   services:
   - code_gov_elasticsearch
   stack: cflinuxfs2
