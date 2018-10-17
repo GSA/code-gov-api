@@ -5,6 +5,7 @@ const IndexCleaner = require("../../../services/indexer/index_cleaner");
 const IndexOptimizer = require("../../../services/indexer/index_optimizer");
 const Logger = require("../../../utils/logger");
 const adapters = require('@code.gov/code-gov-adapter');
+const { normalizeRepoScores } = require('../../../services/indexer/repo/dataScoreNormalizer');
 
 const DAYS_TO_KEEP = process.env.DAYS_TO_KEEP || 2;
 class ElasticSearchLogger extends Logger {
@@ -40,8 +41,7 @@ class Indexer {
 
     try {
       const repoIndexInfo = await RepoIndexer.init(this.elasticsearchAdapter, this.config);
-      // TODO: add github integration here
-      // TODO: add data quality score normalization here
+      await normalizeRepoScores(this.elasticsearchAdapter);
       await IndexOptimizer.init(this.elasticsearchAdapter, repoIndexInfo, this.config);
       await AliasSwapper.init(this.elasticsearchAdapter, repoIndexInfo, this.config);
       await IndexCleaner.init(this.elasticsearchAdapter, repoIndexInfo.esAlias, DAYS_TO_KEEP, this.config);
