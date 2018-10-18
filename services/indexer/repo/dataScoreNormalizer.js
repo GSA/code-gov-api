@@ -35,11 +35,15 @@ async function getRepos({from=0, size=100, collection=[], adapter}) {
   }
   from += size;
 
-  return await getRepos({ from, size, collection: collection.concat(normalizedData) });
+  return await getRepos({ from, size, collection: collection.concat(normalizedData), adapter });
 }
 async function normalizeRepoScores(adapter) {
   const elasticSearchAdapter = new adapter({ hosts: config.ES_HOST, logger: Logger });
+  const logger = new Logger({ name: 'data-score-normalizer' });
+
+  logger.info('Fetching repos');
   const {total, data} = await getRepos({from:0, size: 100, adapter: elasticSearchAdapter});
+  logger.debug(`Fetched ${total} repos`);
 
   try {
     for(let repo of data) {
@@ -50,7 +54,7 @@ async function normalizeRepoScores(adapter) {
         document: repo
       });
     }
-    return `Updated ${total} repos`;
+    logger.info(`Updated ${total} repos`);
   } catch(error) {
     throw error;
   }
