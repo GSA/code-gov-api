@@ -1,5 +1,5 @@
-const _                           = require("lodash");
-const latinize                    = require("latinize");
+const _ = require("lodash");
+const latinize = require("latinize");
 
 class Utils {
 
@@ -214,6 +214,34 @@ class Utils {
     return target.score ? target.score + value : value;
   }
 
+  /**
+   * Bunyan request serializer that prevents API tokens from leaking into the logs
+   * @param {object} request - Expressjs request object
+   * @returns {object} request serializer object used by Bunyan
+   */
+  static getLoggerRequestSerializer(request) {
+    const cleanHeaders = Utils.omitDeepKeys(request.headers, ['x-api-key']);
+    return {
+      id: request.id,
+      method: request.method,
+      url: request.url,
+      headers: cleanHeaders,
+      remoteAddress: request.connection.remoteAddress,
+      remotePort: request.connection.remotePort
+    };
+  }
+
+  /**
+   * Bunyan response serializer that prevents API tokens from leaking into the logs
+   * @param {object} response - Expressjs response object
+   * @returns {object} response serializer object used by Bunyan
+   */
+  static getLoggerResponseSerializer(response) {
+    return {
+      statusCode: response.statusCode,
+      header: Utils.omitDeepKeys(response._header, ['x-api-key'])
+    };
+  }
   static parseGithubUrl (githubUrl) {
     if (githubUrl.match(/\/$/)) {
       githubUrl = githubUrl.replace(/\/$/, '');
