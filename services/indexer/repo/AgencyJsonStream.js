@@ -204,23 +204,6 @@ class AgencyJsonStream extends Transform {
     return Promise.all(
       repos.map(async repo => {
         repo.agency = agency;
-        if(repo.repositoryURL && Utils.isGithubUrl(repo.repositoryURL)) {
-          const {owner, repo: ghRepo} = Utils.parseGithubUrl(repo.repositoryURL);
-          const ghClient = integrations.github.getClient({
-            type: this.config.GITHUB_AUTH_TYPE,
-            token: this.config.GITHUB_TOKEN
-          });
-          let ghData = {};
-
-          try {
-            ghData = await integrations.github.getData(owner, ghRepo, ghClient);
-          } catch(error) {
-            logger.trace(error);
-          }
-
-          repo.ghData = ghData;
-          repo.remoteVcs = 'github';
-        }
         return Formatter.formatRepo(schemaVersion, repo);
       })
     );
