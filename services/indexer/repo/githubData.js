@@ -29,7 +29,7 @@ async function getRepos({from=0, size=100, collection=[], adapter}) {
   return await getRepos({ from, size, collection: collection.concat(data), adapter });
 }
 
-async function getGithubData(adapter) {
+async function getGithubData(adapter, repoIndexInfo) {
   const elasticSearchAdapter = new adapter({ hosts: config.ES_HOST, logger: Logger });
   const logger = new Logger({name: 'get-gh-data'});
   const ghClient = integrations.github.getClient({
@@ -53,7 +53,7 @@ async function getGithubData(adapter) {
           ghData = await integrations.github.getData(owner, ghRepo, ghClient);
 
           await elasticSearchAdapter.updateDocument({
-            index: 'repos',
+            index: repoIndexInfo.esIndex,
             type: 'repo',
             id: repo.repoID,
             document: repo
