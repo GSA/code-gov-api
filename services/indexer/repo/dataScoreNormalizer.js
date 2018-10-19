@@ -3,8 +3,6 @@ const Logger = require('../../../utils/logger');
 const BodyBuilder = require('bodybuilder');
 const config = getConfig(process.env.NODE_ENV);
 
-
-
 function getBody(from, size) {
   const bodybuilder = new BodyBuilder();
   return bodybuilder
@@ -17,14 +15,14 @@ function getBody(from, size) {
 function normalizeScores(data, maxScore, minScore) {
   return data.map(item => {
     const normalizedScore = (item.score - minScore) / (maxScore - minScore) * 10;
-    item.score = normalizedScore.toFixed(2);
+    item.score = normalizedScore.toFixed(1);
     return item;
   });
 }
-async function getRepos({from=0, size=100, collection=[], adapter}) {
+async function getRepos({from=0, size=100, collection=[], adapter, index}) {
   let body = getBody(from, size);
 
-  const {total, data, aggregations} = await adapter.search({ index: 'repos', type: 'repo', body});
+  const {total, data, aggregations} = await adapter.search({ index, type: 'repo', body});
 
   const normalizedData = normalizeScores(data, aggregations.max_data_score.value, aggregations.min_data_score.value);
 
@@ -35,20 +33,21 @@ async function getRepos({from=0, size=100, collection=[], adapter}) {
   }
   from += size;
 
-  return await getRepos({ from, size, collection: collection.concat(normalizedData), adapter });
+  return await getRepos({ from, size, collection: collection.concat(normalizedData), adapter, index });
 }
-async function normalizeRepoScores(adapter) {
+async function normalizeRepoScores(adapter, repoIndexInfo) {
   const elasticSearchAdapter = new adapter({ hosts: config.ES_HOST, logger: Logger });
   const logger = new Logger({ name: 'data-score-normalizer' });
+  const index = repoIndexInfo.esIndex;
 
   logger.info('Fetching repos');
-  const {total, data} = await getRepos({from:0, size: 100, adapter: elasticSearchAdapter});
+  const {total, data} = await getRepos({from:0, size: 100, adapter: elasticSearchAdapter, index});
   logger.debug(`Fetched ${total} repos`);
 
   try {
     for(let repo of data) {
       await elasticSearchAdapter.updateDocument({
-        index: 'repos',
+        index,
         type: 'repo',
         id: repo.repoID,
         document: repo
