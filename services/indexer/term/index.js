@@ -78,7 +78,11 @@ class TermIndexer extends AbstractIndexer {
   }
 
   constructor(adapter, params, config) {
+
+    params.esHosts = config.ES_HOST;
+
     super(adapter, params);
+
     let searchQuery = {
       index: ES_REPO_PARAMS.esAlias,
       type: ES_REPO_PARAMS.esType,
