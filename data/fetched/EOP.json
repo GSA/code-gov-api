@@ -1,5 +1,5 @@
 {
-  "version": "2.0.0",
+  "version": "2.0.1",
   "agency": "EOP",
   "releases": [
     {
@@ -188,6 +188,63 @@
       "disclaimerURL": "",
       "relatedCode": null,
       "reusedCode": null
+    },
+    {
+      "organization": "USDS",
+      "name": "U.S. Forms System",
+      "repositoryURL": "https://github.com/usds/us-forms-system",
+      "description": "The U.S Forms System is an open source code library for building complex web-based forms faster using React. This library incorporates the U.S. Web Design System and builds on the Department of VA's extension of React JSON Schema Form.",
+      "tags": [
+        "US Forms System",
+        "USFS",
+        "Forms",
+        "JSON Schema",
+        "RJSF",
+        "USDS"
+      ],
+      "contact": {
+        "email": "forms@usds.lists.gov",
+        "name": "US Forms System"
+      },
+      "status": "Development",
+      "vcs": "git",
+      "languages": [
+        "React",
+        "CSS",
+        "JavaScript"
+      ],
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/usds/us-forms-system/blob/master/LICENSE.md",
+            "name": "CC0"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "relatedCode": [
+        {
+          "name": "US Forms System Starter App",
+          "URL": "https://github.com/usds/us-forms-system-starter-app",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "The U.S. Web Design System",
+          "URL": "https://github.com/uswds/uswds"
+        },
+        {
+          "name": "Vets.gov JSON Schema",
+          "URL": "https://github.com/department-of-veterans-affairs/vets-json-schema"
+        }
+      ],
+      "laborHours": 0,
+      "date": {
+        "created": "2018-09-24",
+        "lastModified": "2018-10-01",
+        "metadataLastUpdated": ""
+      }
     }
   ]
 }

@@ -9,7 +9,7 @@
       "name": "Better View Pane Args - Drupal Module",
       "version": "1.0",
       "repositoryURL": "https://www.drupal.org/project/better_view_pane_args",
-      "description": "?This is a user-interface improvement module designed to help users to interact with contextual filter widgets whenever they are displayed as configuration forms on Views Panes",
+      "description": "​This is a user-interface improvement module designed to help users to interact with contextual filter widgets whenever they are displayed as configuration forms on Views Panes",
       "laborHours": 40,
       "tags": [
         "Drupal",
@@ -69,14 +69,14 @@
           }
         ],
         "usageType": "openSource",
-        "exemptionText": "?n/a"
+        "exemptionText": "​n/a"
       }
     },
     {
       "name": "Ctools Double Modal Choice - Drupal module",
       "version": "1.0",
       "repositoryURL": "https://www.drupal.org/project/ctools_double_modal_choice",
-      "description": "?This module is intended to guard against a rare but unfortunate case where a Ctools modal is triggered from within another Ctools modal. Normally, the first modal simply closes, which can be frustrating for users. This module gives the user the option to open the second modal in a new browser tab.",
+      "description": "​This module is intended to guard against a rare but unfortunate case where a Ctools modal is triggered from within another Ctools modal. Normally, the first modal simply closes, which can be frustrating for users. This module gives the user the option to open the second modal in a new browser tab.",
       "laborHours": 40,
       "tags": [
         "Drupal",
@@ -143,7 +143,7 @@
       "name": "Crumbs Skip Specials - Drupal module",
       "version": "1.0",
       "repositoryURL": "https://www.drupal.org/project/crumbs_skip_specials",
-      "description": "?This (very niche) module is for Drupal sites that use both Crumbs and Special Menu Items AND have a need to NOT display the special menu items in the breadcrumbs.",
+      "description": "​This (very niche) module is for Drupal sites that use both Crumbs and Special Menu Items AND have a need to NOT display the special menu items in the breadcrumbs.",
       "laborHours": 20,
       "tags": [
         "Drupal",
@@ -210,7 +210,7 @@
       "name": "Tag No More - Drupal module",
       "version": "1.0",
       "repositoryURL": "https://www.drupal.org/project/tag_no_more",
-      "description": "?Use case: You want to have some taxonomy terms on your Drupal site, but you don't want editors to be able to add them to new content. In other words, you would like to just delete the terms, but for whatever reason you can't - so you want to make sure they don't get used any more.",
+      "description": "​Use case: You want to have some taxonomy terms on your Drupal site, but you don't want editors to be able to add them to new content. In other words, you would like to just delete the terms, but for whatever reason you can't - so you want to make sure they don't get used any more.",
       "laborHours": 20,
       "tags": [
         "Drupal",
@@ -277,7 +277,7 @@
       "name": "USWDS Paragraphs - Drupal module",
       "version": "1.0 - Beta",
       "repositoryURL": "https://www.drupal.org/project/uswds_paragraphs",
-      "description": "?This module provides Paragraph types intended to be used with the U.S. Web Design Standards library. This makes a good companion to the USWDS Drupal theme.",
+      "description": "​This module provides Paragraph types intended to be used with the U.S. Web Design Standards library. This makes a good companion to the USWDS Drupal theme.",
       "laborHours": 40,
       "tags": [
         "Drupal",
@@ -344,7 +344,7 @@
       "name": "Linkit - Organic Groups - Drupal module",
       "version": "1.0",
       "repositoryURL": "https://www.drupal.org/project/linkit_og",
-      "description": "?This module limits the autocomplete suggestions of entities in Linkit to those belonging to the user's Organic Groups.",
+      "description": "​This module limits the autocomplete suggestions of entities in Linkit to those belonging to the user's Organic Groups.",
       "laborHours": 40,
       "tags": [
         "Drupal",
@@ -411,7 +411,7 @@
       "name": "Code.gov - Drupal module",
       "version": "1.0",
       "repositoryURL": "https://www.drupal.org/project/code_gov",
-      "description": "?This module allows a Drupal site to be used to maintain an inventory of open-source software, and outputs that data according to the schema required by code.gov. The output is available at /code.json on the Drupal site itself.",
+      "description": "​This module allows a Drupal site to be used to maintain an inventory of open-source software, and outputs that data according to the schema required by code.gov. The output is available at /code.json on the Drupal site itself.",
       "laborHours": 40,
       "tags": [
         "Drupal",
@@ -478,7 +478,7 @@
       "name": "React Single Page Components",
       "version": "1.0",
       "repositoryURL": "",
-      "description": "?A collection of Bootstrap form components (text fields, selects, text area, etc�) to be used by a React Single Page Application.",
+      "description": "​A collection of Bootstrap form components (text fields, selects, text area, etc…) to be used by a React Single Page Application.",
       "laborHours": 120,
       "tags": [
         "React",
@@ -538,14 +538,14 @@
           }
         ],
         "usageType": "exemptByCIO",
-        "exemptionText": "?Awaiting security approval"
+        "exemptionText": "​Awaiting security approval"
       }
     },
     {
       "name": "Single Table Facets",
       "version": "1.1.0",
       "repositoryURL": "https://github.com/usdoj/singletablefacets",
-      "description": "?A simple faceted search solution for single-table data sources.",
+      "description": "​A simple faceted search solution for single-table data sources.",
       "laborHours": 80,
       "tags": [
         "Facets",
@@ -612,10 +612,10 @@
       "name": "Single Table Pages",
       "version": "1.0.0",
       "repositoryURL": "https://github.com/usdoj/singletablepages",
-      "description": "?A simple dynamic page solution for single-table data sources.",
+      "description": "​A simple dynamic page solution for single-table data sources.",
       "laborHours": 60,
       "tags": [
-        "Drupal?",
+        "Drupal​",
         "CMS",
         "MySQL",
         "Composer",
@@ -679,13 +679,13 @@
       "name": "Single Table Importer",
       "version": "1.0.0",
       "repositoryURL": "https://github.com/usdoj/singletableimporter",
-      "description": "?A class for importing source data into a single MySQL table from Excel or CSV.",
+      "description": "​A class for importing source data into a single MySQL table from Excel or CSV.",
       "laborHours": 40,
       "tags": [
         "Excel",
         "CSV",
         "MySQL",
-        "Composer?",
+        "Composer​",
         "",
         ""
       ],
@@ -746,7 +746,7 @@
       "name": "U.S. Web Design Standards - Drupal theme",
       "version": "1.0 - beta 2",
       "repositoryURL": "https://www.drupal.org/project/uswds",
-      "description": "?Drupal integration of the U.S. Web Design Standards library. This base theme focuses on tweaking Drupal's markup so that it will work with the USWDS library.",
+      "description": "​Drupal integration of the U.S. Web Design Standards library. This base theme focuses on tweaking Drupal's markup so that it will work with the USWDS library.",
       "laborHours": 80,
       "tags": [
         "Drupal",
@@ -813,7 +813,7 @@
       "name": "Panelizer Usage Report - Drupal module",
       "version": "1.0",
       "repositoryURL": "https://www.drupal.org/project/panelizer_usage_report",
-      "description": "?This module provides an administrative page where you can select a certain Panels pane, and list all of the pages where it is being displayed on the site through Panelizer.",
+      "description": "​This module provides an administrative page where you can select a certain Panels pane, and list all of the pages where it is being displayed on the site through Panelizer.",
       "laborHours": 40,
       "tags": [
         "Drupal",
@@ -880,7 +880,7 @@
       "name": "Exit Script",
       "version": "1.1.0",
       "repositoryURL": "https://github.com/usdoj/exitscript",
-      "description": "?A client-side popup warning for users clicking on non-government external links.",
+      "description": "​A client-side popup warning for users clicking on non-government external links.",
       "laborHours": 25,
       "tags": [
         "popup",
@@ -947,7 +947,7 @@
       "name": "DCC / JCAT",
       "version": "1.1.1",
       "repositoryURL": "",
-      "description": "A data cataloging system.?",
+      "description": "A data cataloging system.​",
       "laborHours": 40,
       "tags": [
         "data.json",
@@ -1007,14 +1007,14 @@
           }
         ],
         "usageType": "exemptByCIO",
-        "exemptionText": "?Awaiting sharing decision."
+        "exemptionText": "​Awaiting sharing decision."
       }
     },
     {
       "name": "Excel to json Translator",
       "version": "1.0",
       "repositoryURL": "",
-      "description": "Excel spreadsheet that creates code.json file?",
+      "description": "Excel spreadsheet that creates code.json file​",
       "laborHours": 40,
       "tags": [
         "code sharing",
@@ -1074,14 +1074,14 @@
           }
         ],
         "usageType": "exemptByCIO",
-        "exemptionText": "?Awaiting sharing decision"
+        "exemptionText": "​Awaiting sharing decision"
       }
     },
     {
       "name": "eTrace",
       "version": "4.2",
       "repositoryURL": "https://devlive.atf.gov:8443/",
-      "description": "?Electronic Tracing System (eTrace) is an internet-based system that allows participating law enforcement agencies to submit firearm traces to the ATF National Tracing Center (NTC). Authorized users can receive firearm trace results via this same internet web site, search a database of all firearms traces submitted by their individual agency, and perform analytical functions. E-Trace uses the Firearms Tracing System (FTS) database to store most of the information.",
+      "description": "​Electronic Tracing System (eTrace) is an internet-based system that allows participating law enforcement agencies to submit firearm traces to the ATF National Tracing Center (NTC). Authorized users can receive firearm trace results via this same internet web site, search a database of all firearms traces submitted by their individual agency, and perform analytical functions. E-Trace uses the Firearms Tracing System (FTS) database to store most of the information.",
       "laborHours": 2000,
       "tags": [
         "gun",
@@ -1140,15 +1140,15 @@
             "URL": "https://nolicense.org"
           }
         ],
-        "usageType": "exemptByCIO",
-        "exemptionText": "  ?Not yet determined."
+        "usageType": "governmentWideReuse",
+        "exemptionText": "  ​Not yet determined. Portions may be reusable."
       }
     },
     {
       "name": "eForms ",
       "version": "",
       "repositoryURL": "https://devlive.atf.gov:8443/",
-      "description": "?eForms system is an application on the ATF Internet that allows registered users to securely submit permit applications for the importation/sale of firearms, ammunition and implements of war. ",
+      "description": "​eForms system is an application on the ATF Internet that allows registered users to securely submit permit applications for the importation/sale of firearms, ammunition and implements of war. ",
       "laborHours": 2000,
       "tags": [
         "form 6",
@@ -1207,15 +1207,15 @@
             "URL": "https://nolicense.org"
           }
         ],
-        "usageType": "exemptByCIO",
-        "exemptionText": "  ?Not determined at this time. "
+        "usageType": "governmentWideReuse",
+        "exemptionText": "  ​Not determined at this time. "
       }
     },
     {
       "name": "FFL ezCheck",
       "version": "3.1.2",
       "repositoryURL": "https://devlive.atf.gov:8443/",
-      "description": "  ?FFL eZ Check is a function of�FLS that allows information on Federal Firearms Licensees to be extracted from the FLS and maintained on the ATF internet site for use by Federal Firearms Licensees to determine the validity of the copies of Federal Firearms Licenses obtained from other FFL's wishing to purchase firearms. FFL eZ Check was designed to aid the firearms industry in preventing the fraudulent use of their licenses by individuals who alter copies of licenses to illegally acquire and supply firearms to criminals and youths.",
+      "description": "  ​FFL eZ Check is a function of FLS that allows information on Federal Firearms Licensees to be extracted from the FLS and maintained on the ATF internet site for use by Federal Firearms Licensees to determine the validity of the copies of Federal Firearms Licenses obtained from other FFL's wishing to purchase firearms. FFL eZ Check was designed to aid the firearms industry in preventing the fraudulent use of their licenses by individuals who alter copies of licenses to illegally acquire and supply firearms to criminals and youths.",
       "laborHours": 720,
       "tags": [
         "expiraiion",
@@ -1274,15 +1274,15 @@
             "URL": "https://nolicense.org"
           }
         ],
-        "usageType": "exemptByCIO",
-        "exemptionText": "  ?not yet determined"
+        "usageType": "governmentWideReuse",
+        "exemptionText": "  ​not yet determined and portions may be reusable."
       }
     },
     {
       "name": "FEL eZCheck",
       "version": "",
       "repositoryURL": "https://devlive.atf.gov:8443/",
-      "description": "FederalExplosives License/Permit Search: The Federal Explosives Licensing eZ Check(FEL eZCheck) system provides a means to quickly validate the status of FederalExplosives Licenses (FEL).� Industry members and ATF field personnel canverify licensing information such as expiration dates.?",
+      "description": "FederalExplosives License/Permit Search: The Federal Explosives Licensing eZ Check(FEL eZCheck) system provides a means to quickly validate the status of FederalExplosives Licenses (FEL).  Industry members and ATF field personnel canverify licensing information such as expiration dates.​",
       "laborHours": 1000,
       "tags": [
         "expiration",
@@ -1341,15 +1341,15 @@
             "URL": "https://nolicense.org"
           }
         ],
-        "usageType": "exemptByCIO",
-        "exemptionText": "  ?Not yet determined. "
+        "usageType": "governmentWideReuse",
+        "exemptionText": "  ​Not yet determined. Portions may be reusable."
       }
     },
     {
       "name": "Bomb Arson Tracking System",
       "version": "",
       "repositoryURL": "https://devlive.atf.gov:8443/",
-      "description": "  Explosives and Arson Incident Management System? for Federal, State and Local Law Enforcement. Managed by US Bomb Data Center.",
+      "description": "  Explosives and Arson Incident Management System​ for Federal, State and Local Law Enforcement. Managed by US Bomb Data Center.",
       "laborHours": 2000,
       "tags": [
         "gun",
@@ -1408,15 +1408,15 @@
             "URL": "https://nolicense.org"
           }
         ],
-        "usageType": "exemptByCIO",
-        "exemptionText": "  ?Not yet determined. "
+        "usageType": "governmentWideReuse",
+        "exemptionText": "  ​Not yet determined. "
       }
     },
     {
       "name": "ATF National Instant Background Check Referral System",
       "version": "",
       "repositoryURL": "https://devlive.atf.gov:8443/",
-      "description": "?The ATF National Instant Background Check Referral System (ANR) receives and processes firearms denials, retrievals, and overturned denials received from the FBI. As authorized by the Brady Handgun Violence Protection Act, ATF receives background checks from the FBI NICS on individuals who have been denied firearms applications, and conducts further investigations on those individuals.",
+      "description": "​The ATF National Instant Background Check Referral System (ANR) receives and processes firearms denials, retrievals, and overturned denials received from the FBI. As authorized by the Brady Handgun Violence Protection Act, ATF receives background checks from the FBI NICS on individuals who have been denied firearms applications, and conducts further investigations on those individuals.",
       "laborHours": 2000,
       "tags": [
         "Denied",
@@ -1475,15 +1475,15 @@
             "URL": "https://notlicensed.org"
           }
         ],
-        "usageType": "exemptByCIO",
-        "exemptionText": "  ?Not determined yet. . This is custom application used by ATF and FBI. It falls under Brady Act"
+        "usageType": "governmentWideReuse",
+        "exemptionText": "  ​Not determined yet. . This is custom application used by ATF and FBI. It falls under Brady Act"
       }
     },
     {
       "name": "Firearms and explosives Imports System",
       "version": "",
       "repositoryURL": "https://devlive.atf.gov:8443/",
-      "description": "?The Firearms and Explosives Imports System (FEIS) is used to process and track firearms and explosives import permit applications for the importation of firearms, ammunition, and implements of war. FEIS also contains a record of the Arms Export Control Act registrants.� ",
+      "description": "​The Firearms and Explosives Imports System (FEIS) is used to process and track firearms and explosives import permit applications for the importation of firearms, ammunition, and implements of war. FEIS also contains a record of the Arms Export Control Act registrants.  ",
       "laborHours": 720,
       "tags": [
         "Status",
@@ -1542,15 +1542,15 @@
             "URL": "https://nolicense.org"
           }
         ],
-        "usageType": "exemptByCIO",
-        "exemptionText": "  ?Not yet determined. "
+        "usageType": "governmentWideReuse",
+        "exemptionText": "  ​Not yet determined. Portions may be reusable."
       }
     },
     {
       "name": "Automated Criminal History Check",
       "version": "",
       "repositoryURL": "https://devlive.atf.gov:8443/",
-      "description": "?The Automated Criminal History Check (ACHC) processes Federal Licensing System (FLS) requests for criminal history checks with the Federal Bureau of Investigation (FBI), Bureau of Customs and Border Protection (CBP), Treasury Enforcement Communications System (TECS) checks, and Department of Justice (DOJ), National Crime Information Check (NCIC), and National Law Enforcement Telecommunication System (NLETS).� The Automated Criminal History Check (ACHC) processes requests for criminal history checks from the Federal Licensing System (FLS). Requests go to the Federal Bureau of Investigation (FBI) for fingerprint card checks, the Bureau of Customs and Border Protection (CBP) for Treasury Enforcement Communication System (TECS) checks, and the Department of Justice (DOJ) for National Crime Information Check (NCIC) and National Law Enforcement Telecommunication System (NLETS) checks.",
+      "description": "​The Automated Criminal History Check (ACHC) processes Federal Licensing System (FLS) requests for criminal history checks with the Federal Bureau of Investigation (FBI), Bureau of Customs and Border Protection (CBP), Treasury Enforcement Communications System (TECS) checks, and Department of Justice (DOJ), National Crime Information Check (NCIC), and National Law Enforcement Telecommunication System (NLETS).  The Automated Criminal History Check (ACHC) processes requests for criminal history checks from the Federal Licensing System (FLS). Requests go to the Federal Bureau of Investigation (FBI) for fingerprint card checks, the Bureau of Customs and Border Protection (CBP) for Treasury Enforcement Communication System (TECS) checks, and the Department of Justice (DOJ) for National Crime Information Check (NCIC) and National Law Enforcement Telecommunication System (NLETS) checks.",
       "laborHours": 720,
       "tags": [
         "Oracle forms",
@@ -1609,15 +1609,15 @@
             "URL": "https://nolicense.org"
           }
         ],
-        "usageType": "exemptByCIO",
-        "exemptionText": "  ?Not yet determined. "
+        "usageType": "governmentWideReuse",
+        "exemptionText": "  ​Not yet determined. "
       }
     },
     {
       "name": "International Trade Data System",
       "version": "IT",
       "repositoryURL": "https://devlive.atf.gov:8443",
-      "description": "The eForms International Trade Data System (ITDS) provides two high-level functionalitiesto the ATF. First it sends ATF Import Permit (ATF Form 6/6A), Export Permits (ATF Form 9), and FLS license data to Customs and Border Protection (CBP) for the purposes of validating manifest records. Second, it will receive manifest information from CBP for notice of when an ATF license or permit was used. CBP applies Business Rules, as defined by ATF, to accept/reject the above data andtransmit the corresponding messages to ATF.?",
+      "description": "The eForms International Trade Data System (ITDS) provides two high-level functionalitiesto the ATF. First it sends ATF Import Permit (ATF Form 6/6A), Export Permits (ATF Form 9), and FLS license data to Customs and Border Protection (CBP) for the purposes of validating manifest records. Second, it will receive manifest information from CBP for notice of when an ATF license or permit was used. CBP applies Business Rules, as defined by ATF, to accept/reject the above data andtransmit the corresponding messages to ATF.​",
       "laborHours": 1240,
       "tags": [
         "Import",
@@ -1677,14 +1677,14 @@
           }
         ],
         "usageType": "governmentWideReuse",
-        "exemptionText": "Not yet determined.. Might be shared with interested govt. �agencies."
+        "exemptionText": "Not yet determined.. Might be shared with interested govt.  agencies."
       }
     },
     {
       "name": "Federal Licensing System",
       "version": "",
       "repositoryURL": "https://devlive.atf.gov:8443",
-      "description": "The Federal Licensing System (FLS) provides the ability to issue, renew, and track licenses and permits for firearm and explosive manufacturers, importers, dealers, and permittees. The system is used to request criminal history checks, and to monitor the status of responsible persons and employee possessors.?",
+      "description": "The Federal Licensing System (FLS) provides the ability to issue, renew, and track licenses and permits for firearm and explosive manufacturers, importers, dealers, and permittees. The system is used to request criminal history checks, and to monitor the status of responsible persons and employee possessors.​",
       "laborHours": 720,
       "tags": [
         "renewal",
@@ -1743,15 +1743,15 @@
             "URL": "https://nolicense.org"
           }
         ],
-        "usageType": "exemptByCIO",
-        "exemptionText": "?Not yet determined"
+        "usageType": "governmentWideReuse",
+        "exemptionText": "​Not yet determined"
       }
     },
     {
       "name": "National Firearms Act System",
       "version": "",
       "repositoryURL": "https://devlive.atf.gov:8443",
-      "description": "  ?The National Firearms Act (NFA) application allows ATF National Firearms Act Branch users to enter and search NFA weapon manufactoring and registration information, process tax payments associated with NFA forms, verify FFL and Special Occupation Tax (SOT) information, request criminal history checks, and view images of NFA forms and materials. ",
+      "description": "  ​The National Firearms Act (NFA) application allows ATF National Firearms Act Branch users to enter and search NFA weapon manufactoring and registration information, process tax payments associated with NFA forms, verify FFL and Special Occupation Tax (SOT) information, request criminal history checks, and view images of NFA forms and materials. ",
       "laborHours": 1000,
       "tags": [
         "Tax status",
@@ -1810,15 +1810,15 @@
             "URL": "https://nolicense.org"
           }
         ],
-        "usageType": "exemptByCIO",
-        "exemptionText": "?Not yet determined."
+        "usageType": "governmentWideReuse",
+        "exemptionText": "  ​Not yet determined. Portions may be reusable."
       }
     },
     {
       "name": "National Firearms Special Occupation Tax",
       "version": "",
       "repositoryURL": "https://devlive.atf.gov:8443/",
-      "description": "  ?System captures data regarding the ATF�responsibility for collection of the National Firearms Act Special Occupational Tax imposed on persons engaged in the business of manufacturing or importing.",
+      "description": "  ​System captures data regarding the ATF responsibility for collection of the National Firearms Act Special Occupational Tax imposed on persons engaged in the business of manufacturing or importing.",
       "laborHours": 720,
       "tags": [
         "EIN",
@@ -1877,15 +1877,15 @@
             "URL": "https://nolicense.org"
           }
         ],
-        "usageType": "exemptByCIO",
-        "exemptionText": "?Sharing exemption has not yet been determined"
+        "usageType": "governmentWideReuse",
+        "exemptionText": "  ​Sharing exemption has not yet been determined. Portions may be reusable."
       }
     },
     {
       "name": "Access 2000 Central Account Management",
       "version": "",
       "repositoryURL": "https://devlive.atf.gov:8443",
-      "description": "  ?The primary objective of the A2K Centralized Account Management (A2K CAM) application, is to centralize the credentials management of A2K users, providing a single location where passwords will be maintained and updated, minimizing the time NTC staff spend on managing passwords and improve their tracing turnaround time. The users will also be able to log on to their assigned servers through the CAM system instead of entering a separate server address for each of their assigned servers.",
+      "description": "  ​The primary objective of the A2K Centralized Account Management (A2K CAM) application, is to centralize the credentials management of A2K users, providing a single location where passwords will be maintained and updated, minimizing the time NTC staff spend on managing passwords and improve their tracing turnaround time. The users will also be able to log on to their assigned servers through the CAM system instead of entering a separate server address for each of their assigned servers.",
       "laborHours": 1000,
       "tags": [
         "Manfacturer Name",
@@ -1944,15 +1944,15 @@
             "URL": "https://nolicense.org"
           }
         ],
-        "usageType": "exemptByCIO",
-        "exemptionText": "?Not yet determined."
+        "usageType": "governmentWideReuse",
+        "exemptionText": "​Not yet determined."
       }
     },
     {
       "name": "Java ADFS SSO",
       "version": "",
       "repositoryURL": "https://www.justice.gov/ust",
-      "description": "Allows Single Sign On (SSO) with custom apps using Active Directory Federated Services (ADFS)?",
+      "description": "Allows Single Sign On (SSO) with custom apps using Active Directory Federated Services (ADFS)​",
       "laborHours": 80,
       "tags": [
         "java",
@@ -2012,14 +2012,14 @@
           }
         ],
         "usageType": "openSource",
-        "exemptionText": "?No exemption"
+        "exemptionText": "​No exemption"
       }
     },
     {
       "name": "Confidential Informant Management and Master Registry ",
       "version": "",
       "repositoryURL": "https://devlive.atf.gov:8443/",
-      "description": "  The ATF Office of Science and Technology (OST) and the Enforcement Support Branch required the development of a web application to replace an existing Microsoft Access front end as well as migrate the existing Confidential Informant (CI) database from Microsoft Access to SQL Server backend in order improve data access control and security, monitor and implement audit capabilities, and satisfy reporting requirements for the business unit.�� This web application shall provide its users data entry capability that adheres to all ISSO/DOJ Data Security measures.  �The system allows ATF Agents to perform intelligence gathering on active and deactivated confidential informants needed for specific investigations. These informants assist ATF by interacting with violent criminals, gangs and organizations that have violated federal laws under ATF jurisdiction. Due to the sensitivity and need for retaining personally identifying information (PII) for informants, security measures must be in place to prohibit the unauthorized access of this data.� A breach of security could pose life threatening circumstances for these informants from the criminals they help ATF investigate and prosecute.  ?",
+      "description": "  The ATF Office of Science and Technology (OST) and the Enforcement Support Branch required the development of a web application to replace an existing Microsoft Access front end as well as migrate the existing Confidential Informant (CI) database from Microsoft Access to SQL Server backend in order improve data access control and security, monitor and implement audit capabilities, and satisfy reporting requirements for the business unit.   This web application shall provide its users data entry capability that adheres to all ISSO/DOJ Data Security measures.   The system allows ATF Agents to perform intelligence gathering on active and deactivated confidential informants needed for specific investigations. These informants assist ATF by interacting with violent criminals, gangs and organizations that have violated federal laws under ATF jurisdiction. Due to the sensitivity and need for retaining personally identifying information (PII) for informants, security measures must be in place to prohibit the unauthorized access of this data.  A breach of security could pose life threatening circumstances for these informants from the criminals they help ATF investigate and prosecute.  ​",
       "laborHours": 720,
       "tags": [
         "html",
@@ -2079,14 +2079,14 @@
           }
         ],
         "usageType": "exemptByCIO",
-        "exemptionText": "?To be determined."
+        "exemptionText": "​To be determined."
       }
     },
     {
       "name": "Error Correction Module",
       "version": "",
       "repositoryURL": "https://devlive.atf.gov:8443/",
-      "description": "?Error Correction Module (ECM) is an Oracle Forms application that allows users to correct traces submitted by the Batch Download that did not pass weapon validation. The variables (translation tables) that control the Batch Download can be set using the ECM application.",
+      "description": "​Error Correction Module (ECM) is an Oracle Forms application that allows users to correct traces submitted by the Batch Download that did not pass weapon validation. The variables (translation tables) that control the Batch Download can be set using the ECM application.",
       "laborHours": 720,
       "tags": [
         "Oracle Forms",
@@ -2145,15 +2145,15 @@
             "URL": "https://nolicense.org"
           }
         ],
-        "usageType": "exemptByCIO",
-        "exemptionText": "?Open Source or Exemption to be determined"
+        "usageType": "governmentWideReuse",
+        "exemptionText": "​Open Source or Exemption to be determined"
       }
     },
     {
       "name": "National Field Office Case Information System ",
       "version": "",
       "repositoryURL": "https://devlive.atf.gov:8443/",
-      "description": "  ?National Field Office Case Information System (NFOCIS) comprises four companion applications: NFORCE, N-QUIRE, N-SPECT, and Text Management System (TMS) for special agents and for industry operations inspectors and N-Force Vault. NFOCIS assists investigators in the gathering, reporting, and accessing of investigative case data with a goal of reducing the amount of time special agents spend on administrative functions. ",
+      "description": "  ​National Field Office Case Information System (NFOCIS) comprises four companion applications: NFORCE, N-QUIRE, N-SPECT, and Text Management System (TMS) for special agents and for industry operations inspectors and N-Force Vault. NFOCIS assists investigators in the gathering, reporting, and accessing of investigative case data with a goal of reducing the amount of time special agents spend on administrative functions. ",
       "laborHours": 3600,
       "tags": [
         "PowerBuilder",
@@ -2212,8 +2212,8 @@
             "URL": "https://nolicense.org"
           }
         ],
-        "usageType": "exemptByCIO",
-        "exemptionText": "?Sharing or Exemption status not yet decided."
+        "usageType": "governmentWideReuse",
+        "exemptionText": "  ​Sharing or Exemption status not yet decided. This will be replaced by Spartan. Portions may be reusable."
       }
     }
   ]
