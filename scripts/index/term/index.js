@@ -35,9 +35,9 @@ class Indexer {
     try {
       const termIndexInfo = await TermIndexer.init(this.elasticsearchAdapter);
 
-      await IndexOptimizer.init(this.elasticsearchAdapter, termIndexInfo);
-      await AliasSwapper.init(this.elasticsearchAdapter, termIndexInfo);
-      await IndexCleaner.init(this.elasticsearchAdapter, termIndexInfo.esAlias, DAYS_TO_KEEP);
+      await IndexOptimizer.init(this.elasticsearchAdapter, termIndexInfo, this.config);
+      await AliasSwapper.init(this.elasticsearchAdapter, termIndexInfo, this.config);
+      await IndexCleaner.init(this.elasticsearchAdapter, termIndexInfo.esAlias, DAYS_TO_KEEP, this.config);
 
       this.logger.debug(`Finished indexing: ${JSON.stringify(termIndexInfo)}`);
       return termIndexInfo;
