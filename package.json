@@ -43,6 +43,7 @@
     "dotenv": "^5.0.1",
     "dtrace-provider": "^0.8.6",
     "elasticsearch": "^15.0.0",
+    "encoding": "^0.1.12",
     "event-stream": "^3.3.4",
     "express": "^4.16.2",
     "express-rate-limit": "^2.9.0",
