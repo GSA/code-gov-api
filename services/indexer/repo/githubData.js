@@ -52,20 +52,34 @@ async function getGithubData(adapter, repoIndexInfo) {
           logger.debug(`Getting github data for ${repo.repoID}`);
           ghData = await integrations.github.getData(owner, ghRepo, ghClient);
 
+          repo.ghDescription = ghData.description;
+          repo.forks = ghData.forks_count;
+          repo.watchers = ghData.watchers_count;
+          repo.stars = ghData.stargazers_count;
+          repo.title = ghData.title;
+          repo.topics = ghData.topics;
+          repo.ghFullName = ghData.full_name;
+          repo.hasIssues = ghData.has_issues;
+          repo.ghOrganization = ghData.organization;
+          repo.sshUrl = ghData.ssh_url;
+          repo.ghCreatedAt = ghData.created_at;
+          repo.ghUpdatedAt = ghData.updated_at;
+          repo.readme = ghData.readme;
+          repo.ghLanguages = ghData.languages;
+          repo.issues = ghData.issues;
+          repo.contributors = ghData.contributors;
+          repo.remoteVcs = 'github';
+
           await elasticSearchAdapter.updateDocument({
             index: repoIndexInfo.esIndex,
             type: 'repo',
             id: repo.repoID,
             document: repo
           });
-
           totalUpdated += 1;
         } catch(error) {
           logger.error(error);
         }
-
-        repo.ghData = ghData;
-        repo.remoteVcs = 'github';
       }
     }
     logger.info(`Updated ${totalUpdated} repos`);
