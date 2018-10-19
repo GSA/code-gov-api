@@ -43,7 +43,7 @@ class Indexer {
     try {
       const repoIndexInfo = await RepoIndexer.init(this.elasticsearchAdapter, this.config);
       await normalizeRepoScores(this.elasticsearchAdapter);
-      await getGithubData(this.elasticsearchAdapter);
+      // await getGithubData(this.elasticsearchAdapter);
       await IndexOptimizer.init(this.elasticsearchAdapter, repoIndexInfo, this.config);
       await AliasSwapper.init(this.elasticsearchAdapter, repoIndexInfo, this.config);
       await IndexCleaner.init(this.elasticsearchAdapter, repoIndexInfo.esAlias, DAYS_TO_KEEP, this.config);
