@@ -1,14 +1,26 @@
-const _                   = require("lodash");
-const Readable            = require("stream").Readable;
-const Logger              = require("./logger");
+const _ = require("lodash");
+const Readable = require("stream").Readable;
+const Logger = require("./logger");
+const getConfig = require('../config');
 
 let logger = new Logger({ name: "search-stream" });
 
+class SearchLogger extends Logger {
+  get LOGGER_NAME() {
+    return 'search-stream';
+  }
+}
 class SearchStream extends Readable {
 
   constructor(adapter, searchQuery) {
     super({ objectMode: true });
-    this.client = adapter;
+    const config = getConfig(process.env.NODE_ENV);
+
+    this.client = new adapter({
+      hosts: config.ES_HOST,
+      logger: SearchLogger
+    });
+
     this.searchQuery = searchQuery;
     this.logger = logger;
     this.from = 0;
