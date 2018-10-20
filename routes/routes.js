@@ -71,7 +71,10 @@ function getApiRoutes(config, router) {
         throw error;
       }
 
-      response.json(results);
+      response.json({
+        total: results.total,
+        repos: results.data
+      });
 
     } catch(error) {
       logger.trace(error);
@@ -97,7 +100,10 @@ function getApiRoutes(config, router) {
         next(error);
       }
 
-      response.json(results);
+      response.json({
+        total: results.total,
+        terms: results.data
+      });
 
     } catch(error) {
       logger.trace(error);
@@ -126,7 +132,10 @@ function getApiRoutes(config, router) {
         error.status = 404;
         throw error;
       }
-      response.json(agencies);
+      response.json({
+        total: results.total,
+        agencies: results.data
+      });
     } catch(error) {
       logger.trace(error);
       next(error);
