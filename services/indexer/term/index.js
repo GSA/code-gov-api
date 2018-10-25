@@ -38,10 +38,10 @@ class RepoTermIndexerStream extends Writable {
 
     return new Promise((resolve, reject) => {
       this.termIndexer.indexDocument({
-        "index": this.termIndexer.esIndex,
-        "type": this.termIndexer.esType,
-        "id": id,
-        "body": term
+        index: this.termIndexer.esIndex,
+        type: this.termIndexer.esType,
+        id: id,
+        document: term
       })
         .then((response, status) => {
           if (status) {
@@ -78,7 +78,11 @@ class TermIndexer extends AbstractIndexer {
   }
 
   constructor(adapter, params, config) {
+
+    params.esHosts = config.ES_HOST;
+
     super(adapter, params);
+
     let searchQuery = {
       index: ES_REPO_PARAMS.esAlias,
       type: ES_REPO_PARAMS.esType,
@@ -99,33 +103,33 @@ class TermIndexer extends AbstractIndexer {
     });
   }
 
-  static init(adapter, callback) {
-    let indexer = new TermIndexer(adapter, ES_TERM_PARAMS, getConfig(process.env.NODE_ENV));
-    indexer.logger.info(`Started indexing (${indexer.esType}) indices.`);
-    indexer.indexExists()
-      .then((exists) => {
-        if(exists) {
-          indexer.deleteIndex();
-        }
-      })
-      .then(() => indexer.initIndex())
-      .then(() => indexer.initMapping())
-      .then(() => indexer.indexTerms())
-      .then(() => {
-        return callback(null, {
-          esIndex: indexer.esIndex,
-          esAlias: indexer.esAlias
-        });
-      })
-      .catch(error => {
-        indexer.logger.error(error);
-        return callback(error, {
-          esIndex: indexer.esIndex,
-          esAlias: indexer.esAlias
-        });
-      });
-  }
+  static async init(adapter) {
+    let termIndexer = new TermIndexer(adapter, ES_TERM_PARAMS, getConfig(process.env.NODE_ENV));
+    termIndexer.logger.info(`Started indexing (${termIndexer.esType}) indices.`);
 
+    try {
+      const exists = await termIndexer.indexExists();
+
+      if(exists) {
+        await termIndexer.deleteIndex();
+      }
+
+      await termIndexer.initIndex();
+      await termIndexer.initMapping();
+      await termIndexer.indexTerms();
+
+      return {
+        esAlias: termIndexer.esAlias,
+        esIndex: termIndexer.esIndex,
+        esType: termIndexer.esType,
+        esMapping: termIndexer.esMapping,
+        esSettings: termIndexer.esSettings
+      };
+    } catch(error) {
+      termIndexer.logger.error(error);
+      throw error;
+    }
+  }
 }
 
 module.exports = TermIndexer;

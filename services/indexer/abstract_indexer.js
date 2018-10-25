@@ -6,7 +6,7 @@ const ElasticSearch = require("elasticsearch");
 
 class ElasticSearchLogger extends Logger {
   get DEFAULT_LOGGER_NAME() {
-    return "elasticsearch";
+    return "elasticsearch-adapter";
   }
 }
 /* eslint-enable */
@@ -21,10 +21,13 @@ class AbstractIndexer {
     const now = moment();
     const timestamp = now.format('YYYYMMDD_HHmmss');
 
-    this.logger = new Logger({ name: this.LOGGER_NAME });
-    this.client = adapter.getClient();
-    this.esAlias = params.esAlias ? params.esAlias : undefined;
+    this.adapter = new adapter({
+      hosts: params.esHosts,
+      logger: ElasticSearchLogger
+    });
 
+    this.logger = new Logger({ name: this.LOGGER_NAME });
+    this.esAlias = params.esAlias ? params.esAlias : undefined;
     this.esIndex = params.esIndex ? params.esIndex : this.esAlias ? this.esAlias + timestamp : undefined;
     this.esType = params.esType ? params.esType : undefined;
     this.esMapping = params.esMapping ? params.esMapping : undefined;
@@ -41,86 +44,38 @@ class AbstractIndexer {
 
   deleteIndex() {
     this.logger.info(`Deleting index (${this.esIndex}).`);
-    return new Promise((fulfill, reject) => {
-      this.client.indices.delete({
-        index: this.esIndex
-      }, (err, response, status) => {
-        if (err) {
-          this.logger.error(err);
-          reject(err);
-        } else {
-          this.logger.debug(status);
-          fulfill(response);
-        }
-      });
-    });
+    return this.adapter.deleteIndex(this.esIndex);
   }
 
   initIndex() {
     this.logger.info(`Creating index (${this.esIndex}).`);
-    return new Promise((fulfill, reject) => {
-      this.client.indices.create({
-        index: this.esIndex,
-        body: this.esSettings
-      }, (err, response, status) => {
-        if(err) {
-          this.logger.error(err);
-          reject(err);
-        } else {
-          this.logger.debug(status);
-          fulfill(response);
-        }
-      });
+    return this.adapter.createIndex({
+      index: this.esIndex,
+      settings: this.esSettings
     });
   }
 
   indexExists() {
-    return new Promise((fulfill, reject) => {
-      this.client.indices.exists({
-        index: this.esIndex
-      }, (err, response, status) => {
-        if(err) {
-          this.logger.error(err);
-          reject(err);
-        } else {
-          this.logger.debug(status);
-          fulfill(response);
-        }
-      });
-    });
+    return this.adapter.indexExists(this.esIndex);
   }
 
-  indexDocument(doc) {
-    return new Promise((fulfill, reject) => {
-      this.client.index(doc, (err, response, status) => {
-        if(err) {
-          this.logger.error(err);
-          reject(err);
-        } else {
-          this.logger.debug(status);
-          fulfill(response);
-        }
-      });
+  indexDocument({ index, type, id=null, document, requestTimeout=30000 }) {
+    return this.adapter.indexDocument({
+      index,
+      type,
+      id,
+      document,
+      requestTimeout
     });
   }
 
   initMapping() {
     this.logger.info(`Updating mapping for index (${this.esIndex}).`);
 
-    return new Promise((fulfill, reject) => {
-      this.client.indices.putMapping({
-        index: this.esIndex,
-        type: this.esType,
-        body: this.esMapping
-      }, (err, response, status) => {
-        if(err) {
-          this.logger.error(err);
-          reject(err);
-        } else {
-          this.logger.debug(status);
-          fulfill(response);
-        }
-      });
+    return this.adapter.initIndexMapping({
+      index: this.esIndex,
+      type: this.esType,
+      body: this.esMapping
     });
   }
 

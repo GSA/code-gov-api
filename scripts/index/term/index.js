@@ -1,11 +1,10 @@
-const async = require("async");
 const getConfig = require('../../../config');
 const TermIndexer = require("../../../services/indexer/term");
 const AliasSwapper = require("../../../services/indexer/alias_swapper");
 const IndexCleaner = require("../../../services/indexer/index_cleaner");
 const IndexOptimizer = require("../../../services/indexer/index_optimizer");
 const Logger = require("../../../utils/logger");
-const ElasticsearchAdapter = require("../../../utils/search_adapters/elasticsearch_adapter");
+const adapter = require('@code.gov/code-gov-adapter');
 
 const DAYS_TO_KEEP = process.env.DAYS_TO_KEEP || 2;
 
@@ -21,49 +20,32 @@ class Indexer {
    *
    */
   constructor(config) {
-    this.logger = new Logger({name: "term-index-script"});
+    this.logger = new Logger({name: "term-index-script", level: config.LOGGER_LEVEL});
     this.config = config;
-    this.elasticsearchAdapter = new ElasticsearchAdapter(this.config);
+    this.elasticsearchAdapter = adapter.elasticsearch.ElasticsearchAdapter;
   }
 
   /**
    * Index the terms contained in the repos core
    */
-  index(callback) {
+  async index() {
 
     this.logger.info("Started indexing.");
 
-    let termIndexInfo = false;
+    try {
+      const termIndexInfo = await TermIndexer.init(this.elasticsearchAdapter);
 
-    async.waterfall([
-      (next) => {
-        TermIndexer.init(this.elasticsearchAdapter, next); 
-      },
-      (info, next) => {
-        // save out alias and term index name
-        termIndexInfo = info;
-        return next(null);
-      },
-      // optimize the index
-      (next) => {
-        IndexOptimizer.init(this.elasticsearchAdapter, termIndexInfo, next); 
-      },
-      // if all went well, swap aliases
-      (next) => {
-        AliasSwapper.init(this.elasticsearchAdapter, termIndexInfo, next); 
-      },
-      // clean up old indices
-      (next) => {
-        IndexCleaner.init(this.elasticsearchAdapter, termIndexInfo.esAlias, DAYS_TO_KEEP, next); 
-      }
-    ], (err, status) => {
-      if (err) {
-        this.logger.error(err);
-      } else {
-        this.logger.info("Finished indexing", status);
-      }
-      return callback(err);
-    });
+      await IndexOptimizer.init(this.elasticsearchAdapter, termIndexInfo, this.config);
+      await AliasSwapper.init(this.elasticsearchAdapter, termIndexInfo, this.config);
+      await IndexCleaner.init(this.elasticsearchAdapter, termIndexInfo.esAlias, DAYS_TO_KEEP, this.config);
+
+      this.logger.debug(`Finished indexing: ${JSON.stringify(termIndexInfo)}`);
+      return termIndexInfo;
+
+    } catch(error) {
+      this.logger.trace(error);
+      throw error;
+    }
   }
 }
 
@@ -71,12 +53,11 @@ class Indexer {
 // This will index all terms taking our default input.
 if (require.main === module) {
   const config = getConfig(process.env.NODE_ENV);
-  let indexer = new Indexer(config);
-  indexer.index((err) => {
-    if (err) {
-      indexer.logger.error(err);
-    }
-  });
+  let termsIndexer = new Indexer(config);
+
+  termsIndexer.index()
+    .then(termIndexInfo => termsIndexer.logger.info(`Finished indexing: ${JSON.stringify(termIndexInfo)}`))
+    .catch(error => termsIndexer.logger.error(error));
 }
 
 module.exports = Indexer;

@@ -1,4 +1,3 @@
-const async = require("async");
 const getConfig = require('../../config');
 const RepoIndexer = require("./repo/index.js");
 const TermIndexer = require("./term/index.js");
@@ -16,23 +15,21 @@ class Indexer {
    *
    */
   constructor(config) {
-    this.logger = new Logger({name: "index-script"});
+    this.logger = new Logger({ name: "index-script", level: config.LOGGER_LEVEL });
     this.config = config;
   }
 
-  index(callback) {
-    async.waterfall([
-      (next) => {
-        let repoIndexer = new RepoIndexer(this.config);
-        repoIndexer.index(next);
-      },
-      (next) => {
-        let termIndexer = new TermIndexer(this.config);
-        termIndexer.index(next);
-      }
-    ], (err) => {
-      return callback(err);
-    });
+  async index() {
+    let repoIndexer = new RepoIndexer(this.config);
+    let termIndexer = new TermIndexer(this.config);
+
+    try {
+      await repoIndexer.index();
+      await termIndexer.index();
+    } catch(error) {
+      this.logger.trace(error);
+      throw error;
+    }
   }
 
   schedule(delayInSeconds) {
@@ -43,17 +40,14 @@ class Indexer {
         }
       });
   }
-
 }
 
 if (require.main === module) {
   const config = getConfig(process.env.NODE_ENV);
   let indexer = new Indexer(config);
-  indexer.index((err) => {
-    if (err) {
-      indexer.logger.error(err);
-    }
-  });
+  indexer.index()
+    .then(() => indexer.logger.info('Indexing process complete'))
+    .catch(error => indexer.logger.error(error));
 }
 
 module.exports = Indexer;

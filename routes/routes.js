@@ -1,177 +1,310 @@
 const _ = require('lodash');
 const Logger = require('../utils/logger');
 const {
-  queryReposAndSendResponse,
-  getRepoById,
-  getTerms,
+  ElasticsearchAdapter,
+  createFieldSearchQuery,
+  createReposSearchQuery,
+  searchTermsQuery,
+  getQueryByTerm,
+  getLanguagesSearchQuery
+} = require('@code.gov/code-gov-adapter').elasticsearch;
+const {
+  getInvalidRepoQueryParams,
   getAgencies,
-  getAgency,
-  getLanguages,
+  getAgencyTerms,
   getRepoJson,
-  getStatusData,
   getVersion,
-  getAgencyIssues,
-  getDiscoveredReposByAgency,
-  getFetchedReposByAgency,
-  getRootMessage } = require('./utils');
+  getRootMessage,
+  getAgencyMetaData
+} = require('./utils');
 
-function getApiRoutes(config, searcher, router) {
+const mappings = require('../indexes/repo/mapping.json');
+const settings = require('../indexes/repo/settings.json');
+
+function getApiRoutes(config, router) {
 
   const logger = new Logger({ name: 'routes.index', level: config.LOGGER_LEVEL });
+  const adapter = new ElasticsearchAdapter({ hosts: config.ES_HOST, logger: Logger, mappings, settings });
 
   router.get('/repos/:id', async (request, response, next) => {
     try {
-      const result = await getRepoById(request.params.id, searcher);
+      const searchQuery = createFieldSearchQuery({
+        queryType: 'match',
+        field: 'repoID',
+        value: request.params.id
+      });
+      const results = await adapter.search({ index: 'repos', type: 'repo', body: searchQuery });
 
-      if(_.isEmpty(result)) {
+      if(results.hasOwnProperty('data') === false || results.data.length === 0) {
         const error = new Error('Not Found');
         error.status = 404;
-        next(error);
+        throw error;
       }
 
-      response.json(result);
+      response.json(results.data);
 
-    } catch(error) {
-      next(error);
-    }
-  });
-  router.get('/repos', (request, response, next) => {
-    queryReposAndSendResponse(searcher, request.query, logger)
-      .then(result => response.json(result))
-      .catch(error => next(error));
-  });
-  router.get('/terms', (request, response, next) => {
-    getTerms(request, response, searcher)
-      .then(result => response.json(result))
-      .catch(error => next(error));
-  });
-  router.get(`/agencies`, (request, response, next) => {
-    getAgencies(request, searcher, config, logger)
-      .then(result => {
-        if(result) {
-          response.json(result);
-        } else {
-          response.sendStatus(404);
-        }
-      })
-      .catch(error => {
-        logger.error(error);
-        response.sendStatus(404);
-      });
-  });
-  router.get(`/agencies/:agency_acronym`, (request, response, next) => {
-    getAgency(request, searcher, config, logger)
-      .then(results => {
-        if(results) {
-          response.json(results);
-        } else {
-          response.sendStatus(404);
-        }
-      })
-      .catch(error => {
-        logger.error(error);
-        response.sendStatus(404);
-      });
-  });
-  router.get(`/languages`, (request, response, next) => {
-    let options;
-    getLanguages(request, searcher, logger, options)
-      .then(results => {
-        if (results) {
-          response.json(results);
-        } else {
-          response.sendStatus(404);
-        }
-      })
-      .catch(error => {
-        logger.error(error);
-        response.sendStatus(404);
-      });
-  });
-  router.get('/repo.json', (request, response, next) => getRepoJson(response));
-  router.get('/status.json', (request, response, next) => {
-    getStatusData(searcher)
-      .then(results => {
-        if(results){
-          results.statuses = _.omit( results.statuses, config.AGENCIES_TO_OMIT_FROM_STATUS );
-          response.json(results);
-        } else {
-          response.sendStatus(404);
-        }
-      })
-      .catch(error => {
-        logger.error(error);
-        response.sendStatus(404);
-      });
-  });
-  router.get(`/status`, (request, response, next) => {
-    getStatusData(searcher)
-      .then(results => response.render('status', { title: "Code.gov API Status", statusData: results }))
-      .catch(error => {
-        logger.error(error);
-        response.sendStatus(404);
-      });
-
-  });
-  router.get(`/status/:agency/issues`, (request, response, next) => {
-    let agency = request.params.agency.toUpperCase();
-    getAgencyIssues(agency, searcher)
-      .then(issuesData => {
-        if (issuesData.statusData) {
-          return response.render(`status/agency/issues`, issuesData);
-        } else {
-          return response.sendStatus(404);
-        }
-      })
-      .catch(error => {
-        logger.error(error);
-        response.sendStatus(500);
-      });
-  });
-  router.get(`/status/:agency/fetched`, async (request, response, next) => {
-    const agency = request.params.agency.toUpperCase();
-
-    try {
-      const results = await getFetchedReposByAgency(agency, config);
-      response.json(results);
     } catch(error) {
       logger.trace(error);
       next(error);
     }
   });
-  router.get(`/status/:agency/discovered`, (request, response, next) => {
-    const agency = request.params.agency.toUpperCase();
+  router.get('/repos', async (request, response, next) => {
+    const queryParamKeys = request.query;
 
-    if(agency) {
-      getDiscoveredReposByAgency(agency, config)
-        .then(results => {
-          if(results) {
-            response.json(results);
-          } else {
-            response.sendStatus(404);
-          }
-        })
-        .catch(error => {
-          logger.error(error);
-          response.sendStatus(404);
-        });
-    } else {
-      response.sendStatus(400);
+    try {
+      if(queryParamKeys.length) {
+        let invalidParams = getInvalidRepoQueryParams(queryParamKeys);
+
+        if (invalidParams.length > 0) {
+          const error = new Error(`Invalid query parameters: ${invalidParams}`);
+          error.status = 400;
+          throw error;
+        }
+      }
+
+      const searchQuery = createReposSearchQuery({ queryParams: request.query, indexMappings: mappings });
+      const results = await adapter.search({ index: 'repos', type: 'repo', body: searchQuery });
+
+      if(results.hasOwnProperty('data') === false || results.data.length === 0) {
+        const error = new Error('Not Found');
+        error.status = 404;
+        throw error;
+      }
+
+      response.json({
+        total: results.total,
+        repos: results.data
+      });
+
+    } catch(error) {
+      logger.trace(error);
+      next(error);
     }
   });
-  router.get('/version', (request, response, next) => {
-    getVersion(response)
-      .then(versionInfo => response.json(versionInfo))
-      .catch(error => {
-        logger.error(error);
-        response.sendStatus(404);
+  router.get('/terms', async (request, response, next) => {
+    try {
+      const searchQuery = searchTermsQuery({
+        queryParams: request.query,
+        termTypesToSearch: config.TERM_TYPES_TO_SEARCH
       });
+
+      const results = await adapter.search({
+        index: 'terms',
+        type: 'term',
+        body: searchQuery
+      });
+
+      if(results.hasOwnProperty('data') === false || results.data.length === 0) {
+        const error = new Error('Not Found');
+        error.status = 404;
+        next(error);
+      }
+
+      response.json({
+        total: results.total,
+        terms: results.data
+      });
+
+    } catch(error) {
+      logger.trace(error);
+      next(error);
+    }
+  });
+  router.get(`/agencies`, async (request, response, next) => {
+    try {
+      const agenciesMetaData = await getAgencyMetaData(config);
+
+      const queryParams = getAgencyTerms(request);
+      const searchQuery = searchTermsQuery({ queryParams, termTypesToSearch: config.TERM_TYPES_TO_SEARCH });
+      const results = await adapter.search({ index: 'terms', type: 'term', body: searchQuery });
+
+      const agenciesData = {
+        agencyTerms: {
+          terms: results.data
+        },
+        agenciesDataHash: agenciesMetaData
+      };
+
+      const agencies = getAgencies(agenciesData, request.query, logger);
+
+      if(agencies.total === 0) {
+        const error = new Error('Not Found');
+        error.status = 404;
+        throw error;
+      }
+      response.json({
+        total: results.total,
+        agencies: results.data
+      });
+    } catch(error) {
+      logger.trace(error);
+      next(error);
+    }
+  });
+  router.get(`/agencies/:agency_acronym`, async (request, response, next) => {
+
+    try {
+      const agenciesMetaData = await getAgencyMetaData(config);
+
+      const queryParams = getAgencyTerms(request);
+      const searchQuery = getQueryByTerm({ term: queryParams.term, termType: queryParams.term_type });
+      const results = await adapter.search({ index: 'terms', type: 'term', body: searchQuery });
+
+      const agenciesData = {
+        agencyTerms: {
+          terms: results.data
+        },
+        agenciesDataHash: agenciesMetaData
+      };
+
+      const data = getAgencies(agenciesData, request.query, logger);
+
+      if(data.total === 0) {
+        const error = new Error('Not Found');
+        error.status = 404;
+        throw error;
+      }
+
+      response.json(data.agencies[0]);
+
+    } catch(error) {
+      logger.trace(error);
+      next(error);
+    }
+  });
+  router.get(`/languages`, async (request, response, next) => {
+    try {
+      const searchQeury = getLanguagesSearchQuery(request.query);
+      const results = await adapter.search({ index: 'terms', type: 'term', body: searchQeury });
+
+      if(results.hasOwnProperty('data') === false || results.data.length === 0) {
+        const error = new Error('Not Found');
+        error.status = 404;
+        throw error;
+      }
+
+      response.json(results);
+
+    } catch(error) {
+      logger.trace(error);
+      next(error);
+    }
+  });
+  router.get('/repo.json', (request, response, next) => {
+    try{
+      response.json(getRepoJson(response));
+    } catch(error) {
+      logger.trace(error);
+      next(error);
+    }
+  });
+  router.get('/status.json', async (request, response, next) => {
+    try {
+      const results = await adapter.search({ index: 'status', type: 'status' });
+
+      if(results.total === 0){
+        const error = new Error('Not Found');
+        error.status = 404;
+        throw error;
+      }
+
+      const data = _.omit( results.data[0], config.AGENCIES_TO_OMIT_FROM_STATUS );
+      response.json(data);
+
+    } catch(error) {
+      logger.trace(error);
+      next(error);
+    }
+  });
+  router.get(`/status`, async (request, response, next) => {
+    try {
+      const results = await adapter.search({ index: 'status', type: 'status' });
+
+      if(results.total === 0){
+        response.render('status', { title: "Code.gov API Status", statusData: {} });
+      }
+
+      const data = _.omit( results.data[0], config.AGENCIES_TO_OMIT_FROM_STATUS );
+      response.render('status', { title: "Code.gov API Status", statusData: data });
+
+    } catch(error) {
+      logger.trace(error);
+      next(error);
+    }
   });
 
-  router.get('/', (request, response, next) =>
-    getRootMessage()
-      .then(rootMessage => response.json(rootMessage))
-  );
+  router.get(`/status/:agency/issues`, async (request, response, next) => {
+    try {
+      let agency = request.params.agency.toUpperCase();
+      const results = await adapter.search({ index: 'status', type: 'status' });
+
+      if(results.total === 0){
+        response.render('status/agency/issues', { title: `Code.gov API Status for ${agency}`, statusData: {} });
+      }
+
+      const data = _.omit( results.data[0], config.AGENCIES_TO_OMIT_FROM_STATUS );
+      const agencyIssues = data.statuses[agency].issues;
+      response.render('status/agency/issues', {
+        title: `Code.gov API Status for ${agency}`,
+        statusData: agencyIssues
+      });
+
+    } catch(error) {
+      logger.trace(error);
+      next(error);
+    }
+  });
+  // router.get(`/status/:agency/fetched`, async (request, response, next) => {
+  //   const agency = request.params.agency.toUpperCase();
+
+  //   try {
+  //     const results = await getFetchedReposByAgency(agency, config);
+  //     response.json(results);
+  //   } catch(error) {
+  //     logger.trace(error);
+  //     next(error);
+  //   }
+  // });
+  // router.get(`/status/:agency/discovered`, (request, response, next) => {
+  //   const agency = request.params.agency.toUpperCase();
+
+  //   if(agency) {
+  //     getDiscoveredReposByAgency(agency, config)
+  //       .then(results => {
+  //         if(results) {
+  //           response.json(results);
+  //         } else {
+  //           response.sendStatus(404);
+  //         }
+  //       })
+  //       .catch(error => {
+  //         logger.error(error);
+  //         response.sendStatus(404);
+  //       });
+  //   } else {
+  //     response.sendStatus(400);
+  //   }
+  // });
+  router.get('/version', async (request, response, next) => {
+    try {
+      const versionInfo = await getVersion(response);
+      response.json(versionInfo);
+    } catch(error) {
+      logger.trace(error);
+      next(error);
+    }
+  });
+
+  router.get('/', async (request, response, next) => {
+    try {
+      const rootMessage = await getRootMessage();
+      response.json(rootMessage);
+    } catch(error){
+      logger.trace(error);
+      next(error);
+    }
+  });
+
   return router;
 
   // router.get(`/status/:agency/diff`, (req, res, next) => {

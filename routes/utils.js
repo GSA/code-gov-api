@@ -20,73 +20,60 @@ function readAgencyMetadataFile (config) {
   });
 }
 
-function getAgencyTerms (searcher, options) {
-  return new Promise((resolve, reject) => {
-    let query = _.pick(options, ["size", "from"]);
+function getAgencyTerms (request) {
+  let query = _.pick(request.query, ["size", "from"]);
 
-    if (options.agency) {
-      query.term = options.agency;
-    }
-    query.term_type = "agency.acronym";
-    query.size = query.size ? query.size : 10;
+  if (request.params.agency) {
+    query.term = request.params.agency;
+  }
+  if (request.params.agency_acronym) {
+    query.term = request.params.agency_acronym;
+  }
+  query.term_type = "agency.acronym";
+  query.size = query.size ? query.size : 10;
 
-    searcher.searchTerms(query, (error, terms) => {
-      if (error) {
-        reject(error);
-      }
-      resolve(terms.terms);
-    });
-  });
+  return query;
 }
 
-function getAgencyData (searcher, config, logger, options) {
-  return readAgencyMetadataFile(config).then(agenciesData => {
-    let agenciesDataHash = {agencyMetaData: {}};
-    agenciesData.forEach((agencyData) => {
-      agenciesDataHash.agencyMetaData[agencyData.acronym] = agencyData;
-    });
-    return agenciesDataHash;
-  })
-    .then(agenciesDataHash => {
-      return getAgencyTerms(searcher, options)
-        .then(agencyTerms => {
-          return {
-            agencyTerms: {
-              terms: agencyTerms
-            },
-            agenciesDataHash: agenciesDataHash
-          };
-        });
-    })
-    .then(agenciesData => {
-      let agencies = [];
-      const terms = agenciesData.agencyTerms.terms;
-      const agenciesDataHash = agenciesData.agenciesDataHash;
+async function getAgencyMetaData(config) {
+  const data = await readAgencyMetadataFile(config);
 
-      terms.forEach((term) => {
-        let acronym = term.term.toUpperCase();
-        let agencyData = agenciesDataHash.agencyMetaData[acronym];
-        if(!agenciesData) {
-          logger.debug(`No data agency data found for ${acronym}`);
-        }
+  let agenciesDataHash = {agencyMetaData: {}};
+  data.forEach((agencyData) => {
+    agenciesDataHash.agencyMetaData[agencyData.acronym] = agencyData;
+  });
+  return agenciesDataHash;
 
-        agencies.push({
-          acronym: acronym,
-          name: agencyData ? agencyData.name : null,
-          website: agencyData ? agencyData.website : null,
-          codeUrl: agencyData ? agencyData.codeUrl : null,
-          numRepos: term.count
-        });
-      });
-      agencies.sort((a,b) => {
-        if (a.name < b.name)
-          return options.sort === 'asc' ? -1 : 1;
-        if (a.name > b.name)
-          return options.sort === 'asc' ? 1 : -1;
-        return 0;
-      });
-      return agencies;
+}
+
+function getAgencyData (agenciesData, logger, options) {
+  let agencies = [];
+  const terms = agenciesData.agencyTerms.terms;
+  const agenciesDataHash = agenciesData.agenciesDataHash;
+
+  terms.forEach((term) => {
+    let acronym = term.term.toUpperCase();
+    let agencyData = agenciesDataHash.agencyMetaData[acronym];
+    if(!agenciesData) {
+      logger.debug(`No data agency data found for ${acronym}`);
+    }
+
+    agencies.push({
+      acronym: acronym,
+      name: agencyData ? agencyData.name : null,
+      website: agencyData ? agencyData.website : null,
+      codeUrl: agencyData ? agencyData.codeUrl : null,
+      numRepos: term.count
     });
+  });
+  agencies.sort((a,b) => {
+    if (a.name < b.name)
+      return options.sort === 'asc' ? -1 : 1;
+    if (a.name > b.name)
+      return options.sort === 'asc' ? 1 : -1;
+    return 0;
+  });
+  return agencies;
 }
 
 function getLanguagesData (searcher, config, logger, options) {
@@ -119,16 +106,21 @@ function getInvalidRepoQueryParams (queryParams) {
   let without = _.without(queryParams, "from", "size", "sort", "q", "include", "exclude");
 
   return without.filter((queryParam) => {
+    if (_.includes(searchPropsByType["text"], queryParam)) {
+      return false;
+    }
+
     if (_.includes(searchPropsByType["keyword"], queryParam)) {
       return false;
-    } else if (_.includes(searchPropsByType["text"], queryParam)) {
-      return false;
-    } else if (queryParam.endsWith("_gte") || queryParam.endsWith("_lte")) {
+    }
+
+    if (queryParam.endsWith("_gte") || queryParam.endsWith("_lte")) {
       let paramWithoutOp = queryParam.substring(0, queryParam.length - 4);
       if (_.includes(searchPropsByType["date"], paramWithoutOp)) {
         return false;
       }
     }
+
     return true;
   });
 }
@@ -198,16 +190,14 @@ function getTerms(request, response, searcher) {
   });
 }
 
-function getAgencies(request, searcher, config, logger) {
-  let options = _.pick(request.query, ["size", "from", "sort"]);
-  options.agency = request.query.agency;
-  return getAgencyData(searcher, config, logger, options)
-    .then((agencies) => {
-      return {
-        total: agencies.length,
-        agencies: agencies
-      };
-    });
+function getAgencies(agenciesData, requestOptions, logger) {
+  let options = _.pick(requestOptions, ["size", "from", "sort"]);
+  const agencies = getAgencyData(agenciesData, logger, options)
+
+  return {
+    total: agencies.length,
+    agencies: agencies
+  };
 }
 
 function getAgency(request, searcher, config, logger) {
@@ -229,15 +219,13 @@ function getLanguages(request, searcher, config, logger) {
     .then(results => results);
 }
 
-function getRepoJson(response) {
+function getRepoJson() {
   let repoJson = Utils.omitPrivateKeys(repoMapping);
   let excludeKeys = [
-    "analyzer", "index",
-    "format", "include_in_root",
-    "include_in_all"
+    "analyzer", "index", "format", "include_in_root", "include_in_all"
   ];
   repoJson = Utils.omitDeepKeys(repoJson, excludeKeys);
-  response.json(repoJson["repo"]["properties"]);
+  return repoJson["repo"]["properties"];
 }
 
 function getStatusData (searcher){
@@ -319,5 +307,9 @@ module.exports = {
   getAgencyIssues,
   getDiscoveredReposByAgency,
   getFetchedReposByAgency,
-  getRootMessage
+  getRootMessage,
+  getInvalidRepoQueryParams,
+  readAgencyMetadataFile,
+  getAgencyMetaData,
+  getAgencyTerms
 };

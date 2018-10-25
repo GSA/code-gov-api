@@ -6,7 +6,6 @@ module.exports = class Logger {
   get DEFAULT_LOGGER_NAME() {
     return "UNKNOWN_LOGGER";
   }
-
   constructor(config) {
     if(!config || !config.name) {
       config = {
@@ -15,7 +14,7 @@ module.exports = class Logger {
     }
     let bun = bunyan.createLogger({
       name: config.name,
-      level: process.env.LOGGER_LEVEL || config.LOGGER_LEVEL || 'info',
+      level: process.env.LOGGER_LEVEL || config.level || 'debug',
       serializers: {
         req: Utils.getLoggerRequestSerializer,
         res: Utils.getLoggerResponseSerializer,
@@ -40,5 +39,4 @@ module.exports = class Logger {
     this.child = bun.child;
     this.close = function () { /* bunyan's loggers do not need to be closed */ };
   }
-
-};
+}

@@ -1,5 +1,4 @@
 const fs = require("fs");
-const async = require("async");
 const JSONStream = require("JSONStream");
 const Reporter = require("../../reporter");
 const AbstractIndexer = require("../abstract_indexer");
@@ -22,7 +21,7 @@ class RepoIndexer extends AbstractIndexer {
     return "repo-indexer";
   }
 
-  constructor(adapter, agencyEndpointsFile, fetchedFilesDir, fallbackFilesDir=null, params) {
+  constructor({adapter, agencyEndpointsFile, fetchedFilesDir, fallbackFilesDir=null, params}) {
     super(adapter, params);
     this.indexCounter = 0;
     this.agencyEndpointsFile = agencyEndpointsFile;
@@ -59,80 +58,44 @@ class RepoIndexer extends AbstractIndexer {
     });
   }
 
-  static init(adapter, config, callback) {
-    const indexer = new RepoIndexer(adapter, config.AGENCY_ENDPOINTS_FILE, config.FETCHED_DIR,
-      config.FALLBACK_DIR, ES_PARAMS);
-
-    indexer.logger.info(`Started indexing (${indexer.esType}) indices.`);
-    async.waterfall([
-      (next) => {
-        indexer.indexExists()
-          .then(response => {
-            next(null, response);
-          })
-          .catch(err => {
-            indexer.logger.error(err);
-          });
-      },
-      (exists, next) => {
-        if(exists) {
-          indexer.deleteIndex()
-            .then(response => {
-              next(null, response);
-            })
-            .catch(err => {
-              indexer.logger.error(err);
-            });
-        } else {
-          next(null, null);
-        }
-      },
-      (response, next) => {
-        indexer.initIndex()
-          .then(response => {
-            next(null, response);
-          })
-          .catch(err => {
-            indexer.logger.error(err);
-          });
-      },
-      (response, next) => {
-        indexer.initMapping()
-          .then(response => {
-            next(null, response);
-          })
-          .catch(err => {
-            indexer.logger.error(err);
-          });
-      },
-      (response, next) => {
-        indexer.indexRepos(config)
-          .then(response => {
-            next(null, response);
-          })
-          .catch(err => {
-            indexer.logger.error(err);
-          });
-      },
-      (response, next) => {
-        Reporter.indexReport()
-          .then(() => next(null, null))
-          .catch(err => {
-            indexer.logger.error(err);
-          });
-      }
-    ], (err) => {
-      if(err) {
-        indexer.logger.error(err);
-      }
-      indexer.logger.info(`Finished indexing (${indexer.esType}) indices.`);
-      return callback(err, {
-        esIndex: indexer.esIndex,
-        esAlias: indexer.esAlias
-      });
+  static async init(adapter, config) {
+    const params = {
+      esHosts: config.ES_HOST,
+      ...ES_PARAMS
+    }
+    const repoIndexer = new RepoIndexer({
+      adapter,
+      agencyEndpointsFile: config.AGENCY_ENDPOINTS_FILE,
+      fetchedFilesDir: config.FETCHED_DIR,
+      fallbackFilesDir: config.FALLBACK_DIR,
+      params
     });
-  }
 
+    repoIndexer.logger.info(`Started indexing (${repoIndexer.esType}) indices.`);
+
+    try {
+      const exists = await repoIndexer.indexExists();
+      if(exists) {
+        await repoIndexer.deleteIndex();
+      }
+      await repoIndexer.initIndex();
+      await repoIndexer.initMapping();
+      await repoIndexer.indexRepos(config);
+      await Reporter.indexReport(config);
+
+      repoIndexer.logger.info(`Finished indexing (${repoIndexer.esType}) indices.`);
+      return {
+        esAlias: repoIndexer.esAlias,
+        esIndex: repoIndexer.esIndex,
+        esType: repoIndexer.esType,
+        esMapping: repoIndexer.esMapping,
+        esSettings: repoIndexer.esSettings
+      };
+    } catch(error) {
+      repoIndexer.logger.error(error);
+      throw error;
+    }
+  }
 }
 
 module.exports = RepoIndexer;

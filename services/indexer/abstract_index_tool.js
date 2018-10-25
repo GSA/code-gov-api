@@ -30,7 +30,7 @@ class AbstractIndexTool {
   constructor(adapter) {
     this.logger = new Logger({name: this.LOGGER_NAME});
 
-    this.client = adapter.getClient();
+    this.client = adapter;
   }
 
   /**

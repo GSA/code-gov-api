@@ -19,7 +19,7 @@
         "usageType": "openSource",
         "exemptionText": ""
       },
-      "laborHours": 0,
+      "laborHours": 1657,
       "tags": [
         "Electronic Sign-in Sheet",
         "ASP.NET Web API",
@@ -44,7 +44,7 @@
         "usageType": "openSource",
         "exemptionText": ""
       },
-      "laborHours": 0,
+      "laborHours": 1642,
       "tags": [
         "accessibility",
         "508",
@@ -2440,7 +2440,7 @@
     },
     {
       "name": "DCE-Document Conversion Engine",
-      "repositoryURL": "",
+      "repositoryURL": "https://github.com/SSAgov/dce-web",
       "description": "DCE UI is a modern web architecture using .NET WebApi2 and React Application acting as an independent front end. DCE UI is a single page web app using ReactJS, React-Router for URL routing, React-Form API for the conversion forms, Fetch API to make calls to the DCE-WebAPI, and Gulp to automate deployments to our DEV environments.",
       "permissions": {
         "licenses": [
@@ -2452,7 +2452,7 @@
         "usageType": "openSource",
         "exemptionText": ""
       },
-      "laborHours": 0,
+      "laborHours": 1140,
       "tags": [
         "DCE",
         "Conversion",
@@ -2467,14 +2467,19 @@
     },
     {
       "name": "data.JSON URL Checker",
-      "repositoryURL": "",
+      "repositoryURL": "https://github.com/SSAgov/data.json-url-checker",
       "description": "For federal government agencies required to deliver data.JSON file, this scripts helps agencies test URLs and make sure that they are valid that are present in their data.JSON files before publishing.",
       "permissions": {
-        "licenses": [],
-        "usageType": "governmentWideReuse",
+        "licenses": [
+          {
+            "URL": "www.apache.org/licenses/LICENSE-2.0",
+            "name": "Apache"
+          }
+        ],
+        "usageType": "openSource",
         "exemptionText": ""
       },
-      "laborHours": 0,
+      "laborHours": 426,
       "tags": [
         "JSON",
         "Java Script Object Notation",
@@ -2488,15 +2493,46 @@
       }
     },
     {
-      "name": "YANKI",
-      "repositoryURL": "",
-      "description": "When certain attributes are used improperly, they can cause issues with screen readers. YANKI can be used to 'yank' the attributes and allow a retest of the page with the attributes removed.",
+      "name": "MongoCodeWrapper",
+      "repositoryURL": "https://github.com/SSAgov/MongoCodeWrapper",
+      "description": "MongoCodeWrapper is a standalone Python library to perform Create, Read, Update, and Delete (CRUD) against MongoDB.",
       "permissions": {
-        "licenses": [],
-        "usageType": "governmentWideReuse",
+        "licenses": [
+          {
+            "URL": "www.apache.org/licenses/LICENSE-2.0",
+            "name": "Apache"
+          }
+        ],
+        "usageType": "openSource",
         "exemptionText": ""
       },
-      "laborHours": 0,
+      "laborHours": 532,
+      "tags": [
+        "MongoDB",
+        "CRUD",
+        "MongoDB Utilities",
+        "Python"
+      ],
+      "contact": {
+        "email": "Open.Source@ssa.gov",
+        "name": "Open Source Administrator"
+      }
+    },
+    {
+      "name": "YANKI",
+      "repositoryURL": "https://github.com/SSAgov/YANKI",
+      "description": "When certain attributes are used improperly, they can cause issues with screen readers. YANKI can be used to 'yank' the attributes and allow a retest of the page with the attributes removed.",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "www.apache.org/licenses/LICENSE-2.0",
+            "name": "Apache"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": ""
+      },
+      "laborHours": 456,
       "tags": [
         "YANKI",
         "attribute",

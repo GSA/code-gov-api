@@ -1,13 +1,19 @@
-const async = require("async");
 const getConfig = require("../../../config");
 const RepoIndexer = require("../../../services/indexer/repo");
 const AliasSwapper = require("../../../services/indexer/alias_swapper");
 const IndexCleaner = require("../../../services/indexer/index_cleaner");
 const IndexOptimizer = require("../../../services/indexer/index_optimizer");
 const Logger = require("../../../utils/logger");
-const ElasticsearchAdapter = require("../../../utils/search_adapters/elasticsearch_adapter");
+const adapters = require('@code.gov/code-gov-adapter');
+const { normalizeRepoScores } = require('../../../services/indexer/repo/dataScoreNormalizer');
+const { getGithubData } = require('../../../services/indexer/repo/githubData');
 
 const DAYS_TO_KEEP = process.env.DAYS_TO_KEEP || 2;
+class ElasticSearchLogger extends Logger {
+  get DEFAULT_LOGGER_NAME() {
+    return "elasticsearch";
+  }
+}
 
 /**
  * Defines the class responsible for creating and managing the elasticsearch indexes
@@ -21,49 +27,33 @@ class Indexer {
    *
    */
   constructor(config) {
-    this.logger = new Logger({name: "repo-index-script"});
+    this.logger = new Logger({ name: 'repo-index-script', level: config.LOGGER_LEVEL });
     this.config = config;
-    this.elasticsearchAdapter = new ElasticsearchAdapter(this.config);
+
+    this.elasticsearchAdapter = adapters.elasticsearch.ElasticsearchAdapter;
   }
 
   /**
    * Index the repos contained in the agency endpoints file
    */
-  index(callback) {
+  async index() {
 
-    this.logger.info("Started indexing.");
+    this.logger.info('Started indexing.');
 
-    let repoIndexInfo = false;
+    try {
+      const repoIndexInfo = await RepoIndexer.init(this.elasticsearchAdapter, this.config);
+      await normalizeRepoScores(this.elasticsearchAdapter, repoIndexInfo);
+      await getGithubData(this.elasticsearchAdapter, repoIndexInfo);
+      await IndexOptimizer.init(this.elasticsearchAdapter, repoIndexInfo, this.config);
+      await AliasSwapper.init(this.elasticsearchAdapter, repoIndexInfo, this.config);
+      await IndexCleaner.init(this.elasticsearchAdapter, repoIndexInfo.esAlias, DAYS_TO_KEEP, this.config);
 
-    async.waterfall([
-      (next) => {
-        RepoIndexer.init(this.elasticsearchAdapter, this.config, next); 
-      },
-      (info, next) => {
-        // save out alias and repo index name
-        repoIndexInfo = info;
-        return next(null);
-      },
-      // optimize the index
-      (next) => {
-        IndexOptimizer.init(this.elasticsearchAdapter, repoIndexInfo, next); 
-      },
-      // if all went well, swap aliases
-      (next) => {
-        AliasSwapper.init(this.elasticsearchAdapter, repoIndexInfo, next); 
-      },
-      // clean up old indices
-      (next) => {
-        IndexCleaner.init(this.elasticsearchAdapter, repoIndexInfo.esAlias, DAYS_TO_KEEP, next); 
-      }
-    ], (err, status) => {
-      if (err) {
-        this.logger.error(err);
-      } else {
-        this.logger.info("Finished indexing:", status);
-      }
-      return callback(err);
-    });
+      this.logger.debug(`Finished indexing repos`);
+      return repoIndexInfo;
+    } catch(error) {
+      this.logger.trace(error);
+      throw error;
+    }
   }
 }
 
@@ -71,11 +61,9 @@ class Indexer {
 // This will index all repos taking our default input.
 if (require.main === module) {
   let indexer = new Indexer(getConfig(process.env.NODE_ENV));
-  indexer.index((err) => {
-    if (err) {
-      indexer.logger.error(err);
-    }
-  });
+  indexer.index()
+    .then(() => indexer.logger.debug(`Finished indexing repos`))
+    .catch(error => indexer.logger.error(error));
 }
 
 module.exports = Indexer;

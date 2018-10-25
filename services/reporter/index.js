@@ -9,7 +9,7 @@ const Jsonfile = require("jsonfile");
 const Logger = require("../../utils/logger");
 const getConfig = require("../../config");
 const StatusIndexer = require("../indexer/status");
-const ElasticsearchAdapter = require("../../utils/search_adapters/elasticsearch_adapter");
+const adapters = require('@code.gov/code-gov-adapter');
 const elasticsearchMappings = require('../../indexes/status/mapping.json');
 const elasticsearchSettings = require('../../indexes/status/settings.json');
 const AliasSwapper = require("../indexer/alias_swapper");
@@ -80,20 +80,21 @@ class Reporter {
       "esAlias": "status",
       "esType": "status",
       "esMapping": elasticsearchMappings,
-      "esSettings": elasticsearchSettings
+      "esSettings": elasticsearchSettings,
+      "esHosts": this.config.ES_HOST
     };
-    const adapter = new ElasticsearchAdapter(this.config);
+    const adapter = adapters.elasticsearch.ElasticsearchAdapter;
 
     return StatusIndexer.init(this, adapter, params)
       .then(indexInfo => {
-        IndexOptimizer.init(adapter, indexInfo);
+        IndexOptimizer.init(adapter, indexInfo, this.config);
         return indexInfo;
       })
       .then(indexInfo => {
-        AliasSwapper.init(adapter, indexInfo);
+        AliasSwapper.init(adapter, indexInfo, this.config);
         return indexInfo;
       })
-      .then(indexInfo => IndexCleaner.init(adapter, indexInfo.esAlias, DAYS_TO_KEEP))
+      .then(indexInfo => IndexCleaner.init(adapter, indexInfo.esAlias, DAYS_TO_KEEP, this.config))
       .catch(error => {
         this.logger.error(error);
         throw error;
