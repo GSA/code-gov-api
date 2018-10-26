@@ -113,10 +113,11 @@ function getConfig(env='development') {
     "tags",
     "languages"];
   config.supportedSchemaVersions = [
-    '1.0.0',
     '1.0.1',
+    '2.0',
     '2.0.0'
   ];
+  config.UPDATE_REPO_REGEX = /(1\.0)(\.\d)?/;
   config.GITHUB_TOKEN = process.env.GITHUB_TOKEN || null;
   config.GITHUB_AUTH_TYPE = process.env.GITHUB_AUTH_TYPE || 'token';
   config.USE_HSTS = process.env.USE_HSTS ? process.env.USE_HSTS === 'true' : config.isProd;

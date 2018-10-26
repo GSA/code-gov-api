@@ -3,10 +3,12 @@ const Logger = require("../../utils/logger");
 const moment = require("moment");
 const path = require('path');
 const Utils = require("../../utils");
+const getConfig = require('../../config');
 
 class Formatter {
-  constructor() {
+  constructor(config) {
     this.logger = new Logger({ name: "formatter" });
+    this.config = config;
   }
 
   _formatDate(date) {
@@ -156,16 +158,15 @@ class Formatter {
     return repo;
   }
 
-  formatRepo(schemaVersion = '1.0.1', repo) {
+  formatRepo(schemaVersion = '2.0.0', repo) {
     return new Promise((resolve, reject) => {
       let formattedRepo;
       try {
-        if(schemaVersion === '2.0.0' || schemaVersion === '2.0.1') {
-          formattedRepo = this._formatRepo(repo);
-        } else {
+        if(schemaVersion.match(this.config.UPDATE_REPO_REGEX)) {
           this._upgradeProject(repo);
-          formattedRepo = this._formatRepo(repo);
         }
+
+        formattedRepo = this._formatRepo(repo);
 
         this.logger.debug('formatted repo', formattedRepo);
       } catch (error) {
@@ -180,4 +181,4 @@ class Formatter {
   }
 }
 
-module.exports = new Formatter();
+module.exports = new Formatter(getConfig(process.env.NODE_ENV));
