@@ -105,6 +105,29 @@
       }
     },
     {
+      "name": "Small Business Voice User Interface",
+      "repositoryURL": "https://github.com/USSBA/sba-gov-vui",
+      "description": "Voice user interface prototype using SBA's Small Business Size Standards API",
+      "permissions": {
+        "licenses": [
+          {
+            "name": "Apache v2",
+            "URL": "https://www.apache.org/licenses/LICENSE-2.0"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "vcs": "git",
+      "laborHours": 0,
+      "tags": [
+        "SBA",
+        "Serverless"
+      ],
+      "contact": {
+        "email": "Andrew.Davy@sba.gov"
+      }
+    },
+    {
       "name": "OracletoSQL",
       "repositoryURL": "https://github.com/USSBA/oracle2sql",
       "description": "A standalone CFM code to move data from Oracle Database to SQL Server Database.",

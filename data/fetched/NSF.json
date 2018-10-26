@@ -29,8 +29,8 @@
       "permissions": {
         "licenses": [
           {
-            "URL": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
-            "name": "NSF"
+            "URL": "https://github.com/nsf-open/nsf-common-ember-components/blob/master/LICENSE",
+            "name": "GPL.v3"
           }
         ],
         "usageType": "openSource"
@@ -68,8 +68,8 @@
       "permissions": {
         "licenses": [
           {
-            "URL": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
-            "name": "NSF"
+            "URL": "https://github.com/nsf-open/nsf-ember-tooltip/blob/master/LICENSE",
+            "name": "GPL.v3"
           }
         ],
         "usageType": "openSource"
@@ -111,7 +111,7 @@
           }
         ],
         "usageType": "exemptByAgencySystem",
-        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+        "exemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
       },
       "laborHours": -1,
       "date": {
@@ -151,7 +151,7 @@
           }
         ],
         "usageType": "exemptByAgencySystem",
-        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+        "exemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
       },
       "laborHours": -1,
       "date": {
@@ -198,7 +198,7 @@
           }
         ],
         "usageType": "exemptByAgencySystem",
-        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+        "exemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
       },
       "laborHours": -1,
       "date": {
@@ -238,7 +238,7 @@
           }
         ],
         "usageType": "exemptByAgencySystem",
-        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+        "exemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
       },
       "laborHours": -1,
       "date": {
@@ -278,7 +278,7 @@
           }
         ],
         "usageType": "exemptByAgencySystem",
-        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+        "exemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
       },
       "laborHours": -1,
       "date": {
@@ -318,7 +318,7 @@
           }
         ],
         "usageType": "exemptByAgencySystem",
-        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+        "exemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
       },
       "laborHours": -1,
       "date": {
@@ -358,7 +358,7 @@
           }
         ],
         "usageType": "exemptByAgencySystem",
-        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+        "exemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
       },
       "laborHours": -1,
       "date": {
@@ -389,16 +389,54 @@
       "languages": [
         "Java"
       ],
-      "repositoryURL": "",
+      "repositoryURL": "https://github.com/nsf-open/rest-service-proposal-data",
       "permissions": {
         "licenses": [
           {
-            "URL": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
-            "name": "NSF"
+            "URL": "https://github.com/nsf-open/rest-service-proposal-data/blob/master/LICENSE",
+            "name": "GPL.v3"
           }
         ],
-        "usageType": "exemptByAgencySystem",
-        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+        "usageType": "openSource"
+      },
+      "laborHours": -1,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      },
+      "vcs": "",
+      "disclaimerText": "",
+      "disclaimerURL": ""
+    },
+    {
+      "name": "nsf-ember-psm",
+      "description": "Contains javascript front-end for NSF's new proposal submission system.",
+      "tags": [
+        "javascript",
+        "government",
+        "ember",
+        "nsf",
+        "psm",
+        "external"
+      ],
+      "contact": {
+        "email": "esivagna@nsf.gov",
+        "name": "Elanchezhian Sivagnanam",
+        "phone": "7032928088"
+      },
+      "languages": [
+        "JavaScript"
+      ],
+      "repositoryURL": "https://github.com/nsf-open/nsf-ember-psm",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/nsf-open/nsf-ember-psm/blob/master/LICENSE",
+            "name": "GPL.v3"
+          }
+        ],
+        "usageType": "openSource"
       },
       "laborHours": -1,
       "date": {
@@ -439,7 +477,7 @@
           }
         ],
         "usageType": "exemptByAgencySystem",
-        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+        "exemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
       },
       "laborHours": -1,
       "date": {
@@ -470,16 +508,15 @@
       "languages": [
         "Java"
       ],
-      "repositoryURL": "",
+      "repositoryURL": "https://github.com/nsf-open/rest-service-solicitation-data",
       "permissions": {
         "licenses": [
           {
-            "URL": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
-            "name": "NSF"
+            "URL": "https://github.com/nsf-open/rest-service-solicitation-data/blob/master/LICENSE",
+            "name": "GPL.v3"
           }
         ],
-        "usageType": "exemptByAgencySystem",
-        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+        "usageType": "openSource"
       },
       "laborHours": -1,
       "date": {
@@ -510,16 +547,15 @@
       "languages": [
         "Java"
       ],
-      "repositoryURL": "",
+      "repositoryURL": "https://github.com/nsf-open/rest-service-proposal-management",
       "permissions": {
         "licenses": [
           {
-            "URL": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
-            "name": "NSF"
+            "URL": "https://github.com/nsf-open/rest-service-proposal-management/blob/master/LICENSE",
+            "name": "GPL.v3"
           }
         ],
-        "usageType": "exemptByAgencySystem",
-        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+        "usageType": "openSource"
       },
       "laborHours": -1,
       "date": {
@@ -560,7 +596,7 @@
           }
         ],
         "usageType": "exemptByAgencySystem",
-        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+        "exemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
       },
       "laborHours": -1,
       "date": {
@@ -601,7 +637,7 @@
           }
         ],
         "usageType": "exemptByAgencySystem",
-        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+        "exemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
       },
       "laborHours": -1,
       "date": {
@@ -639,8 +675,8 @@
       "permissions": {
         "licenses": [
           {
-            "URL": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
-            "name": "NSF"
+            "URL": "https://github.com/nsf-open/rest-service-system-advisory/blob/master/LICENSE",
+            "name": "GPL.v3"
           }
         ],
         "usageType": "openSource"
@@ -680,8 +716,8 @@
       "permissions": {
         "licenses": [
           {
-            "URL": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
-            "name": "NSF"
+            "URL": "https://github.com/nsf-open/rest-service-email/blob/master/LICENSE",
+            "name": "GPL.v3"
           }
         ],
         "usageType": "openSource"
@@ -722,8 +758,8 @@
       "permissions": {
         "licenses": [
           {
-            "URL": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
-            "name": "NSF"
+            "URL": "https://github.com/nsf-open/rest-service-inbox/blob/master/LICENSE",
+            "name": "GPL.v3"
           }
         ],
         "usageType": "openSource"
@@ -766,7 +802,7 @@
           }
         ],
         "usageType": "exemptByAgencySystem",
-        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+        "exemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
       },
       "laborHours": -1,
       "date": {
@@ -804,8 +840,8 @@
       "permissions": {
         "licenses": [
           {
-            "URL": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
-            "name": "NSF"
+            "URL": "https://github.com/nsf-open/rest-service-toggle/blob/master/LICENSE",
+            "name": "GPL.v3"
           }
         ],
         "usageType": "openSource"
@@ -838,16 +874,93 @@
       "languages": [
         "Java"
       ],
-      "repositoryURL": "",
+      "repositoryURL": "https://github.com/nsf-open/rest-service-document-generation",
       "permissions": {
         "licenses": [
           {
-            "URL": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
-            "name": "NSF"
+            "URL": "https://github.com/nsf-open/rest-service-document-generation/blob/master/LICENSE",
+            "name": "GPL.v3"
           }
         ],
-        "usageType": "exemptByAgencySystem",
-        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+        "usageType": "openSource"
+      },
+      "laborHours": -1,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      },
+      "vcs": "",
+      "disclaimerText": "",
+      "disclaimerURL": ""
+    },
+    {
+      "name": "document-compliance-service",
+      "description": "Service retrieves document attributes and metadata for compliance checks.",
+      "tags": [
+        "java",
+        "government",
+        "microservice",
+        "nsf",
+        "psm",
+        "external"
+      ],
+      "contact": {
+        "email": "esivagna@nsf.gov",
+        "name": "Elanchezhian Sivagnanam",
+        "phone": "7032928088"
+      },
+      "languages": [
+        "Java"
+      ],
+      "repositoryURL": "https://github.com/nsf-open/rest-service-document-compliance",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/nsf-open/rest-service-document-compliance/blob/master/LICENSE",
+            "name": "GPL.v3"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "laborHours": -1,
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      },
+      "vcs": "",
+      "disclaimerText": "",
+      "disclaimerURL": ""
+    },
+    {
+      "name": "compliance-validation-service",
+      "description": "Checks proposal compliance to rules and policies",
+      "tags": [
+        "java",
+        "government",
+        "microservice",
+        "nsf",
+        "psm",
+        "external"
+      ],
+      "contact": {
+        "email": "esivagna@nsf.gov",
+        "name": "Elanchezhian Sivagnanam",
+        "phone": "7032928088"
+      },
+      "languages": [
+        "Java"
+      ],
+      "repositoryURL": "https://github.com/nsf-open/rest-service-compliance-validation",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "https://github.com/nsf-open/rest-service-compliance-validation/blob/master/LICENSE",
+            "name": "GPL.v3"
+          }
+        ],
+        "usageType": "openSource"
       },
       "laborHours": -1,
       "date": {
@@ -878,16 +991,15 @@
       "languages": [
         "Java"
       ],
-      "repositoryURL": "",
+      "repositoryURL": "https://github.com/nsf-open/rest-service-file-storage",
       "permissions": {
         "licenses": [
           {
-            "URL": "https://www.nsf.gov/digitalstrategy/Alternative_Analysis_Report_Template_Process.pdf",
-            "name": "NSF"
+            "URL": "https://github.com/nsf-open/rest-service-file-storage/blob/master/LICENSE",
+            "name": "GPL.v3"
           }
         ],
-        "usageType": "exemptByAgencySystem",
-        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+        "usageType": "openSource"
       },
       "laborHours": -1,
       "date": {
@@ -927,7 +1039,7 @@
           }
         ],
         "usageType": "exemptByAgencySystem",
-        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+        "exemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
       },
       "laborHours": -1,
       "date": {
@@ -941,7 +1053,7 @@
     },
     {
       "name": "get-user-data-service",
-      "description": "Service retrieves the user profile attribute and the access details.  By default, the Get User data service returns the given userâ€™s attribute list.  Applications that intend to request the access details (functional organization, associated program elements, role/entitlement etc.) should request the service with a filter org=true as a request parameter. The Access Details object includes the list of functional organizations with their associated program elements and roles for the given user.",
+      "description": "Service retrieves the user profile attribute and the access details.  By default, the Get User data service returns the given userÃ¢â‚¬â„¢s attribute list.  Applications that intend to request the access details (functional organization, associated program elements, role/entitlement etc.) should request the service with a filter org=true as a request parameter. The Access Details object includes the list of functional organizations with their associated program elements and roles for the given user.",
       "tags": [
         "java",
         "government",
@@ -967,7 +1079,7 @@
           }
         ],
         "usageType": "exemptByAgencySystem",
-        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+        "exemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
       },
       "laborHours": -1,
       "date": {
@@ -1007,7 +1119,7 @@
           }
         ],
         "usageType": "exemptByAgencySystem",
-        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+        "exemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
       },
       "laborHours": -1,
       "date": {
@@ -1047,7 +1159,7 @@
           }
         ],
         "usageType": "exemptByAgencySystem",
-        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+        "exemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
       },
       "laborHours": -1,
       "date": {
@@ -1087,7 +1199,7 @@
           }
         ],
         "usageType": "exemptByAgencySystem",
-        "ExemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
+        "exemptionText": "Internal system not suitable for open source. For example, database queries are stored in external stored procedures."
       },
       "laborHours": -1,
       "date": {
