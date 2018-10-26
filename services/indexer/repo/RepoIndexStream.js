@@ -13,10 +13,11 @@ class RepoIndexerStream extends Writable {
 
   _indexRepo(repo) {
     return this.indexer.indexDocument({
-      "index": this.indexer.esIndex,
-      "type": this.indexer.esType,
-      "id": repo.repoID,
-      "body": repo
+      index: this.indexer.esIndex,
+      type: this.indexer.esType,
+      id: repo.repoID,
+      document: repo,
+      requestTimeout: 90000
     });
   }
 
@@ -26,7 +27,7 @@ class RepoIndexerStream extends Writable {
         if (status) {
           logger.debug('indexer.indexDocument - Status', status);
         }
-        
+
         this.indexer.indexCounter++;
 
         return next(null, response);

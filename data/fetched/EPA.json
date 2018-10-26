@@ -233,6 +233,39 @@
       }
     },
     {
+      "organization": "MT",
+      "name": "Montana Data Search Tools - Demo Code",
+      "description": "This is a .zip file containing the codebase, documentation, and deployable front-end code to set up your own app to consume Montana's REST API implementation. The code defaults to the Montana API, but the .zip file includes both the front end code, as well as the API codebase so that you can stand up your own API.",
+      "permissions": {
+        "licenses": [
+          {
+            "name": "Creative Commons Zero (CC0)",
+            "URL": "https://path.to/license"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA",
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "Environment",
+        "code",
+        "source"
+      ],
+      "contact": {
+        "name": "Roy Duelfer",
+        "email": "rduelfer@mt.gov",
+        "phone": "(406) 444-5342"
+      },
+      "date": {
+        "created": "2017-09-21",
+        "lastModified": "2017-09-21",
+        "metadataLastUpdated": "2017-12-01"
+      }
+    },
+    {
       "organization": "ORD",
       "name": "github_101",
       "description": "This repository contains introductory presentation materials on Git and Github. The two presentaitons provide a high level conceptual overview of version control with Git, basic concepts of Github, and a more hands-on example walking through the CMAQ repository and how Git and GitHub are used to manage open source development of the CMAQ models.",
@@ -1397,7 +1430,7 @@
         "usageType": "openSource",
         "exemptionText": null
       },
-      "repositoryURL": "https://github.com/USEPA",
+      "repositoryURL": "http://www.epa.gov/athens/wwqtsc",
       "languages": [
         "C++"
       ],
@@ -1415,7 +1448,7 @@
       "date": {
         "created": "2016-07-31",
         "lastModified": "2016-07-31",
-        "metadataLastUpdated": "2017-12-01"
+        "metadataLastUpdated": "2018-10-10"
       }
     },
     {
@@ -2824,6 +2857,39 @@
       }
     },
     {
+      "organization": "WYDEQ",
+      "name": "Envite - 2.0",
+      "description": "This version of Envite contains some minor changes that help in ease of usability.",
+      "permissions": {
+        "licenses": [
+          {
+            "name": "Creative Commons Zero (CC0)",
+            "URL": "https://path.to/license"
+          }
+        ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "repositoryURL": "https://github.com/USEPA",
+      "languages": [],
+      "laborHours": 0,
+      "tags": [
+        "Environment",
+        "code",
+        "source"
+      ],
+      "contact": {
+        "name": "Heather Kenworthy",
+        "email": "heather.kenworthy@wyo.gov",
+        "phone": "(307) 777-6733"
+      },
+      "date": {
+        "created": "2016-07-31",
+        "lastModified": "2016-07-31",
+        "metadataLastUpdated": "2018-10-10"
+      }
+    },
+    {
       "organization": "ORD",
       "name": "share no cookies",
       "description": "Share no cookies is a pure JavaScript solution that allows you to easily share your page without any invasive tracking cookies. Includes posting to Facebook, Google+, Pinterest, and Twitter, as well as an explanatory page, \"What is this?\"",
@@ -3717,41 +3783,6 @@
         "created": "2018-05-14",
         "lastModified": "2018-05-14",
         "metadataLastUpdated": "2018-07-02"
-      }
-    },
-    {
-      "organization": "Region 6",
-      "name": "SDE Layer Menu Add-in to ArcGIS 10",
-      "description": "An add-in to ArcGIS 10 that allows ArcMap users to turn on GIS layers stored in SDE by simply checking boxes next to layers listed on a pop up menu.  Adding layers is quick and easy as the user does not have to manually hunt for layers in SDE.",
-      "permissions": {
-        "licenses": [
-          {
-            "name": "Creative Commons Zero (CC0)",
-            "URL": "https://path.to/license"
-          }
-        ],
-        "usageType": "openSource",
-        "exemptionText": null
-      },
-      "repositoryURL": "https://github.com/USEPA",
-      "languages": [
-        "Visual Basic .NET"
-      ],
-      "laborHours": 0,
-      "tags": [
-        "ArcGIS",
-        "de",
-        "gis"
-      ],
-      "contact": {
-        "name": "Jeff Danielson",
-        "email": "Danielson.Jeff@epa.gov",
-        "phone": "(000) 000-0000"
-      },
-      "date": {
-        "created": "2014-03-25",
-        "lastModified": "2014-03-25",
-        "metadataLastUpdated": "2017-12-01"
       }
     }
   ]

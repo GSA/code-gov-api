@@ -1,84 +1,49 @@
 extends ../../layout
 
 block content
-  table
-    tr
-      th
-        ="Errors"
-      td(colspan="3")
-        ="These issues will prevent your agency's code from appearing on code.gov and must be resolved to be in compliance with the policy."
-    tr
-      th Organization
-      th Project
-      th Type
-      th Issue
-    each project in statusData.issues
+  each project in statusData
+    table
+      tr
+        th
+          ="Project"
+        td(colspan="3")
+          =project.project_name
+      tr
+        th Organization
+        th Type
+        th Issue
+
       if project.issues.errors
         each error in project.issues.errors
-          tr
+          tr.failure
             td
               =project.organization
-            td
-              =project.project_name
-            td.failure ERROR
+            td ERROR
             td
               pre
                 =JSON.stringify(error, null, 2)
-  br
-  hr
-  br
-  table
-    tr
-      th
-        ="Warnings"
-      td(colspan="3")
-        ="These issues won't prevent your agency's code from appearing on code.gov but must be resolved to be in compliance with the policy."
-    tr
-      th Organization
-      th Project
-      th Type
-      th Issue
-    each project in statusData.issues
       if project.issues.warnings
         each warning in project.issues.warnings
-          tr
+          tr.warning
             td
               =project.organization
-            td
-              =project.project_name
-            td.warning WARNING
+            td WARNING
             td
               pre
                 =JSON.stringify(warning, null, 2)
               br
-              a.item(href="/api/0.1/repo/" + project.repoID)
+              a.item(href="/api/repo/" + project.repoID)
                 View repository information
-  br
-  hr
-  br
-  table
-    tr
-      th
-        ="Requested Enhancements"
-      td(colspan="3")
-        ="These issues don't need to be resolved for compliance purposes but will help make code.gov more useful. These issues are likely to be required in future versions of the metadata schema."
-    tr
-      th Organization
-      th Project
-      th Type
-      th Issue
-    each project in statusData.issues
       if project.issues.enhancements
         each enhancement in project.issues.enhancements
-          tr
+          tr.enhancement
             td
               =project.organization
-            td
-              =project.project_name
-            td.enhancement REQUESTED ENHANCEMENT
+            td REQUESTED ENHANCEMENT
             td
               pre
                 =JSON.stringify(enhancement, null, 2)
               br
-              a.item(href="/api/0.1/repo/" + project.repoID)
+              a.item(href="/api/repo/" + project.repoID)
                 View repository information
+    br

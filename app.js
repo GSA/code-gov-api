@@ -10,8 +10,10 @@ const helmet = require('helmet');
 const Logger = require("./utils/logger");
 const path = require("path");
 const RateLimit = require('express-rate-limit');
-const Searcher = require("./services/searcher");
-const ElasticsearchSearcherAdapter = require("./utils/search_adapters/elasticsearch_adapter");
+
+// const Searcher = require("./services/searcher");
+// const ElasticsearchSearcherAdapter = require("./utils/search_adapters/elasticsearch_adapter");
+
 const swaggerUi = require('swagger-ui-express');
 const addRequestId = require('express-request-id')();
 
@@ -23,9 +25,8 @@ const favicon = require('serve-favicon');
 /* ------------------------------------------------------------------ *
                             API CONFIG
  * ------------------------------------------------------------------ */
-const logger = new Logger({name: "code-gov-api"});
-
 const config = getConfig(process.env.NODE_ENV);
+const logger = new Logger({name: "code-gov-api", level: config.LOGGER_LEVEL});
 
 const app = express();
 
@@ -44,17 +45,7 @@ if( config.USE_RATE_LIMITER) {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(cors({
-  origin: (origin, callback) => {
-    if(config.ALLOWED_DOMAINS.includes(origin) || config.ALLOWED_DOMAINS.includes('*')) {
-      callback(null, true);
-    } else {
-      let error = new Error('Not allowed by CORS');
-      error.status = 403;
-      callback(error);
-    }
-  }
-}));
+app.use(cors());
 app.use(helmet());
 app.use(helmet.hsts({
   maxAge: config.HSTS_MAX_AGE,
@@ -81,9 +72,9 @@ app.set('json spaces', 2);
 /* ------------------------------------------------------------------ *
                             API ROUTES
  * ------------------------------------------------------------------ */
-const searcherAdapter = new ElasticsearchSearcherAdapter(config);
-const searcher = new Searcher(searcherAdapter, config);
-const router = getApiRoutes(config, searcher, new express.Router());
+
+// const searcher = new Searcher(searcherAdapter, config);
+const router = getApiRoutes(config, new express.Router());
 app.use('/api', router);
 
 /* ------------------------------------------------------------------ *

@@ -1,5 +1,5 @@
-const _                           = require("lodash");
-const latinize                    = require("latinize");
+const _ = require("lodash");
+const latinize = require("latinize");
 
 class Utils {
 
@@ -240,7 +240,42 @@ class Utils {
     return {
       statusCode: response.statusCode,
       header: Utils.omitDeepKeys(response._header, ['x-api-key'])
+    };
+  }
+  static parseGithubUrl (githubUrl) {
+    if (githubUrl.match(/\/$/)) {
+      githubUrl = githubUrl.replace(/\/$/, '');
     }
+    if (githubUrl.match(/\.git$/)) {
+      githubUrl = githubUrl.replace(/\.git$/, '');
+    }
+    if (githubUrl.match(/^(https:||http:)\/\/github.com\//)) {
+      githubUrl = githubUrl.replace(/^(https:||http:)\/\/github.com\//, '');
+    }
+    if (githubUrl.match(/^git:\/\/github.com\//)) {
+      githubUrl = githubUrl.replace(/^git:\/\/github.com\//, '');
+    }
+    if (githubUrl.match(/^git@github.com:\//)) {
+      githubUrl = githubUrl.replace(/^git@github.com:\//, '');
+    }
+    const githubOwnerAndRepo = githubUrl.split('/');
+    return {
+      owner: githubOwnerAndRepo[0],
+      repo: githubOwnerAndRepo[1]
+    };
+  }
+
+  static isGithubUrl (repoUrl) {
+    const githubUrlRegEx = /github.com/;
+    if (repoUrl) {
+      const match = repoUrl.match(githubUrlRegEx);
+
+      if (match) {
+        return true;
+      }
+    }
+
+    return false;
   }
 }
 

@@ -10,6 +10,7 @@ const Utils = require("../../../utils");
 const RulesEngine = require('simple-rules-engine');
 const getRules = require('../../validator/rules');
 const logger = new Logger({name: 'agency-json-stream'});
+const encoding = require('encoding');
 
 class AgencyJsonStream extends Transform {
   constructor(fetchedDir, fallbackDir, config) {
@@ -79,13 +80,19 @@ class AgencyJsonStream extends Transform {
 
       let jsonData = {};
       try {
-        const responseText = await response.text();
-        jsonData = JSON.parse(responseText.replace(/^\uFEFF/, ''));
+
+        const responseBuffer = await response.buffer();
+        if(responseBuffer.indexOf('\uFEFF', 0, 'utf16le') === 0) {
+          jsonData = JSON.parse(encoding.convert(responseBuffer, 'utf8', 'utf16le'));
+        } else {
+          jsonData = JSON.parse(responseBuffer.toString());
+        }
+
         this._saveFetchedCodeJson(agency.acronym, jsonData);
 
         return jsonData;
       } catch(error) {
-        logger.error(`There was an error parsing JSON for agency: ${agency}`, error);
+        logger.error(`There was an error parsing JSON for agency: ${agency.acronym}`, error);
         Reporter.reportFallbackUsed(agency.acronym, true);
         return this._readFallbackData(agency, this.fallbackDir, agency.fallback_file);
       }
@@ -201,7 +208,7 @@ class AgencyJsonStream extends Transform {
     const {schemaVersion, repos} = validatedRepos;
 
     return Promise.all(
-      repos.map(repo => {
+      repos.map(async repo => {
         repo.agency = agency;
         return Formatter.formatRepo(schemaVersion, repo);
       })

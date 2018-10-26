@@ -21,7 +21,7 @@ class Searcher {
 
   constructor(adapter, config) {
     this.config = config;
-    this.client = adapter.getClient();
+    this.adapter = adapter;
   }
 
   /***********************************************************************
@@ -41,7 +41,7 @@ class Searcher {
   // queries on repoID
   getRepoById(id, callback) {
     logger.debug("Entered getRepoId: ", {id});
-    this.client.search({
+    this.adapter.search({
       index: 'repos',
       type: 'repo',
       body: this._searchRepoById(id)
@@ -132,6 +132,11 @@ class Searcher {
   _addStringFilters(body, queryParams) {
 
     searchPropsByType['keyword'].forEach((field) => {
+      if(queryParams[field]) {
+        this._addStringFilter(body, field, queryParams[field]);
+      }
+    });
+    searchPropsByType['text'].forEach((field) => {
       if(queryParams[field]) {
         this._addStringFilter(body, field, queryParams[field]);
       }
@@ -279,7 +284,7 @@ class Searcher {
   searchRepos(requestQuery, callback) {
     logger.info("Repo searching", requestQuery);
 
-    this.client.search({
+    this.adapter.search({
       index: 'repos',
       type: 'repo',
       body: this._searchReposQuery(requestQuery)
@@ -368,7 +373,7 @@ class Searcher {
 
   searchTerms(queryParams, callback) {
     // logger.info("Term searching", q);
-    this.client.search({
+    this.adapter.search({
       index: 'terms',
       type: 'term',
       body: this._searchTermsQuery(queryParams)
@@ -404,7 +409,7 @@ class Searcher {
   // queries on term key
   getTermByKey(key, callback) {
     logger.info("Getting term", {key});
-    this.client.search({
+    this.adapter.search({
       index: 'terms',
       type: 'term',
       body: this._searchTermByKey(key)
@@ -425,7 +430,7 @@ class Searcher {
   searchStatus(callback) {
     logger.info("Status searching");
 
-    this.client.search({
+    this.adapter.search({
       index: 'status',
       type: 'status'
     }, (error, elasticSearchResponse) => {

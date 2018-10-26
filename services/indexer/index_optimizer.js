@@ -1,33 +1,23 @@
-const AbstractIndexTool   = require("./abstract_index_tool");
-const Logger              = require("../../utils/logger");
-
-/* eslint-disable */
-const ElasticSearch       = require("elasticsearch");
-class ElasticSearchLogger extends Logger {
-  get DEFAULT_LOGGER_NAME() {
-    return "elasticsearch";
-  }
-}
-/* eslint-enable */
+const Logger = require("../../utils/logger");
 
 /**
  * Class for optimizing ElasticSearch Indexes
  *
- * @class AliasSwapper
+ * @class IndexOptimizer
  */
-class IndexOptimizer extends AbstractIndexTool {
-
-  get LOGGER_NAME() {
-    return "index-optimizer";
-  }
+class IndexOptimizer {
 
   /**
    * Creates an instance of AliasSwapper.
    *
    * @param {any} adapter The search adapter to use for connecting to ElasticSearch
    */
-  constructor(adapter) {
-    super(adapter);
+  constructor(adapter, config) {
+    this.adapter = new adapter({
+      hosts: config.ES_HOST,
+      logger: Logger
+    });
+    this.logger = new Logger({ name: 'index-optimizer'});
   }
 
   /**
@@ -36,24 +26,20 @@ class IndexOptimizer extends AbstractIndexTool {
    * searches.
    *
    * @param {any} indexName The index to optimize.
-   * @param {any} callback
    */
-  forceMerge(indexName, callback) {
-    this.logger.info(
-      `Optimizing Index (${indexName})`);
-    this.client.indices.forcemerge({
-      maxNumSegments: 1,
-      index: indexName,
-      requestTimeout: 90000
-    }, (err, response, status) => {
-      if(err) {
-        this.logger.error(err);
-      }
-      if (status) {
-        this.logger.debug('Status', status);
-      }
-      return callback(err, response);
-    });
+  async forceMerge(indexName) {
+    this.logger.info(`Optimizing Index (${indexName})`);
+
+    try {
+      await this.adapter.forceMerge({
+        maxNumSegments: 1,
+        index: indexName,
+        requestTimeout: 90000
+      });
+    } catch(error) {
+      this.logger.trace(error);
+      throw error;
+    }
   }
 
   /**
@@ -64,20 +50,18 @@ class IndexOptimizer extends AbstractIndexTool {
    * @param {any} repoIndexInfo Information about the index and alias for repos
    * @param {any} callback
    */
-  static init(adapter, repoIndexInfo, callback=undefined) {
+  static async init(adapter, repoIndexInfo, config) {
 
-    let optimizer = new IndexOptimizer(adapter);
+    let optimizer = new IndexOptimizer(adapter, config);
     optimizer.logger.info(`Starting index optimization.`);
-
-    optimizer.forceMerge(repoIndexInfo.esIndex, (err) => {
-      if(err) {
-        optimizer.logger.error(err);
-      }
+    try {
+      await optimizer.forceMerge(repoIndexInfo.esIndex);
       optimizer.logger.info(`Finished optimizing indices.`);
-      if( callback && typeof callback === 'function') {
-        return callback(err);
-      }
-    });
+    } catch(error) {
+      optimizer.logger.trace(error);
+      throw error;
+    }
+
   }
 
 }
