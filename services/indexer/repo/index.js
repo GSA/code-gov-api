@@ -2,6 +2,7 @@ const fs = require("fs");
 const JSONStream = require("JSONStream");
 const Reporter = require("../../reporter");
 const AbstractIndexer = require("../abstract_indexer");
+const fetch = require('node-fetch');
 
 const AgencyJsonStream = require("../repo/AgencyJsonStream");
 const RepoIndexerStream = require("../repo/RepoIndexStream");
@@ -30,8 +31,20 @@ class RepoIndexer extends AbstractIndexer {
 
   }
 
-  indexRepos(config) {
-    const agencyEndpointsStream = fs.createReadStream(this.agencyEndpointsFile);
+  async getMetadata() {
+    let response;
+
+    if(process.env.GET_REMOTE_METADATA) {
+      response = await fetch(this.agencyEndpointsFile);
+      return response.body;
+    }
+
+    return fs.createReadStream(this.agencyEndpointsFile);
+  }
+
+  async indexRepos(config) {
+
+    const agencyEndpointsStream = await this.getMetadata();
     const jsonStream = JSONStream.parse("*");
     const agencyJsonStream = new AgencyJsonStream(this.fetchedFilesDir, this.fallbackFilesDir, config);
     const indexerStream = new RepoIndexerStream(this);

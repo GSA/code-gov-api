@@ -41,9 +41,15 @@ function getPort(cloudFoundryEnv={}) {
  * @returns {object} - Directory paths needed by the application
  */
 function getAppFilesDirectories() {
-  const filePath = process.env.NODE_ENV === 'testing'
-    ? path.join(path.dirname(__dirname), 'config/testing_agency_metadata.json')
-    : path.join(path.dirname(__dirname), 'config/agency_metadata.json');
+  let filePath;
+
+  if(process.env.GET_REMOTE_METADATA && process.env.REMOTE_METADATA_LOCATION) {
+    filePath = process.env.REMOTE_METADATA_LOCATION;
+  } else {
+    filePath = process.env.NODE_ENV === 'testing'
+      ? path.join(path.dirname(__dirname), 'config/testing_agency_metadata.json')
+      : path.join(path.dirname(__dirname), 'config/agency_metadata.json');
+  }
 
   return {
     AGENCY_ENDPOINTS_FILE: filePath,
@@ -118,6 +124,8 @@ function getConfig(env='development') {
   config.HSTS_PRELOAD = false;
   config.PORT = getPort(cloudFoundryEnv);
 
+  config.GET_REMOTE_METADATA = process.env.GET_REMOTE_METADATA && process.env.GET_REMOTE_METADATA === 'true';
+  config.GET_GITHUB_DATA = process.env.GET_GITHUB_DATA && process.env.GET_GITHUB_DATA === 'true';
   config.ES_HOST = getElasticsearchUri(cloudFoundryEnv);
 
   Object.assign(config, getAppFilesDirectories());
