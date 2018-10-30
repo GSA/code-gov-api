@@ -213,7 +213,7 @@ function getAgencies(agenciesData, requestOptions, logger) {
 
   return {
     total: agencies.length,
-    agencies: agencies
+    agencies
   };
 }
 

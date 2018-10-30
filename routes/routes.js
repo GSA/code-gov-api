@@ -125,17 +125,14 @@ function getApiRoutes(config, router) {
         agenciesDataHash: agenciesMetaData
       };
 
-      const agencies = getAgencies(agenciesData, request.query, logger);
+      const {total, agencies} = getAgencies(agenciesData, request.query, logger);
 
-      if(agencies.total === 0) {
+      if(total === 0) {
         const error = new Error('Not Found');
         error.status = 404;
         throw error;
       }
-      response.json({
-        total: results.total,
-        agencies: results.data
-      });
+      response.json({ total, agencies });
     } catch(error) {
       logger.trace(error);
       next(error);
