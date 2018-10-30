@@ -75,7 +75,7 @@ class Reporter {
     this.report.statuses[itemName]["wasFallbackUsed"] = wasFallbackUsed;
   }
 
-  indexReport() {
+  async indexReport() {
     const params = {
       "esAlias": "status",
       "esType": "status",
@@ -84,21 +84,16 @@ class Reporter {
       "esHosts": this.config.ES_HOST
     };
     const adapter = adapters.elasticsearch.ElasticsearchAdapter;
-
-    return StatusIndexer.init(this, adapter, params)
-      .then(indexInfo => {
-        IndexOptimizer.init(adapter, indexInfo, this.config);
-        return indexInfo;
-      })
-      .then(indexInfo => {
-        AliasSwapper.init(adapter, indexInfo, this.config);
-        return indexInfo;
-      })
-      .then(indexInfo => IndexCleaner.init(adapter, indexInfo.esAlias, DAYS_TO_KEEP, this.config))
-      .catch(error => {
-        this.logger.error(error);
-        throw error;
-      });
+    try {
+      const indexInfo = await StatusIndexer.init(this, adapter, params);
+      await IndexOptimizer.init(adapter, indexInfo, this.config);
+      await AliasSwapper.init(adapter, indexInfo, this.config);
+      await IndexCleaner.init(adapter, indexInfo.esAlias, DAYS_TO_KEEP, this.config);
+      return indexInfo;
+    } catch(error) {
+      this.logger.error(error);
+      throw error;
+    }
   }
 
   writeReportToFile() {
