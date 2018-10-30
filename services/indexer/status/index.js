@@ -43,7 +43,7 @@ class StatusIndexer extends AbstractIndexer {
         return { esIndex: indexer.esIndex, esAlias: indexer.esAlias };
       })
       .catch(error => {
-        this.logger.error(error);
+        indexer.logger.error(error);
         throw error;
       });
   }
