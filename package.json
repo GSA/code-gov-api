@@ -26,7 +26,7 @@
     "security-check": "./node_modules/.bin/nsp check"
   },
   "dependencies": {
-    "@code.gov/code-gov-adapter": "^1.1.1",
+    "@code.gov/code-gov-adapter": "^1.1.2",
     "@code.gov/code-gov-integrations": "github:gsa/code-gov-integrations",
     "@code.gov/code-gov-validator": "^1.0.1",
     "JSONStream": "^1.3.5",
