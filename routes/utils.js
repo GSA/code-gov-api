@@ -5,19 +5,30 @@ const pkg = require("../package.json");
 const Jsonfile = require("jsonfile");
 const Utils = require('../utils');
 const repoMapping = require('../indexes/repo/mapping.json');
+const fetch = require('node-fetch');
 
 const searchPropsByType = Utils.getFlattenedMappingPropertiesByType(repoMapping["repo"]);
 
-function readAgencyMetadataFile (config) {
-  return new Promise((resolve, reject) => {
-    fs.readFile(config.AGENCY_ENDPOINTS_FILE, (err, data) => {
-      if (err) {
-        reject(err);
-      }
-      let agencyEndpoints = JSON.parse(data);
-      resolve(agencyEndpoints);
-    });
-  });
+async function readAgencyMetadataFile (config, logger) {
+  let response;
+
+  if(process.env.GET_REMOTE_METADATA) {
+    try {
+      response = await fetch(config.AGENCY_ENDPOINTS_FILE);
+      return response.json();
+    } catch(error) {
+      logger.error(`[ERROR] Reading remote metadata file at ${config.AGENCY_ENDPOINTS_FILE}`, error);
+      throw error;
+    }
+  }
+
+  try {
+    const data = fs.readFileSync(config.AGENCY_ENDPOINTS_FILE);
+    return JSON.parse(data);
+  } catch(error) {
+    logger.error(`[ERROR] Reading local metadata file at ${config.AGENCY_ENDPOINTS_FILE}`, error);
+    throw error;
+  }
 }
 
 function getAgencyTerms (request) {
@@ -35,14 +46,20 @@ function getAgencyTerms (request) {
   return query;
 }
 
-async function getAgencyMetaData(config) {
-  const data = await readAgencyMetadataFile(config);
+async function getAgencyMetaData(config, logger) {
+  try{
+    const data = await readAgencyMetadataFile(config, logger);
+    let agenciesDataHash = {agencyMetaData: {}};
 
-  let agenciesDataHash = {agencyMetaData: {}};
-  data.forEach((agencyData) => {
-    agenciesDataHash.agencyMetaData[agencyData.acronym] = agencyData;
-  });
-  return agenciesDataHash;
+    data.forEach((agencyData) => {
+      agenciesDataHash.agencyMetaData[agencyData.acronym] = agencyData;
+    });
+
+    return agenciesDataHash;
+  } catch(error) {
+    logger.error(error);
+    throw error;
+  }
 
 }
 
