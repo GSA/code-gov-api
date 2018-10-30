@@ -39,7 +39,7 @@
             "normalizer": "lowercase"
           },
           "requirements": {
-            "type": "nested",
+            "type": "object",
             "properties": {
               "agencyWidePolicy": {
                 "type": "float"
@@ -321,7 +321,7 @@
         "dynamic": true
       },
       "date": {
-        "type": "nested",
+        "type": "object",
         "include_in_root": true,
         "properties": {
           "created": {
