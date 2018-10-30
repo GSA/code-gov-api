@@ -112,7 +112,7 @@ function getApiRoutes(config, router) {
   });
   router.get(`/agencies`, async (request, response, next) => {
     try {
-      const agenciesMetaData = await getAgencyMetaData(config);
+      const agenciesMetaData = await getAgencyMetaData(config, logger);
 
       const queryParams = getAgencyTerms(request);
       const searchQuery = searchTermsQuery({ queryParams, termTypesToSearch: config.TERM_TYPES_TO_SEARCH });
@@ -144,7 +144,7 @@ function getApiRoutes(config, router) {
   router.get(`/agencies/:agency_acronym`, async (request, response, next) => {
 
     try {
-      const agenciesMetaData = await getAgencyMetaData(config);
+      const agenciesMetaData = await getAgencyMetaData(config, logger);
 
       const queryParams = getAgencyTerms(request);
       const searchQuery = getQueryByTerm({ term: queryParams.term, termType: queryParams.term_type });
