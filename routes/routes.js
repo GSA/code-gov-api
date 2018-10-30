@@ -52,7 +52,7 @@ function getApiRoutes(config, router) {
     const queryParamKeys = request.query;
 
     try {
-      if(queryParamKeys.length) {
+      if(Object.keys(queryParamKeys).length) {
         let invalidParams = getInvalidRepoQueryParams(queryParamKeys);
 
         if (invalidParams.length > 0) {
