@@ -18,9 +18,9 @@ function getElasticsearchUri(cloudFoundryEnv) {
 
     return elasticSearchCredentials.uri
       ? elasticSearchCredentials.uri
-      : 'http://elastic:changeme@localhost:9200';
+      : 'http://localhost:9200';
   }
-  return process.env.ES_URI ? process.env.ES_URI : 'http://elastic:changeme@localhost:9200';
+  return process.env.ES_URI ? process.env.ES_URI : 'http://localhost:9200';
 }
 
 /**

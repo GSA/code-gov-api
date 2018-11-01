@@ -5,15 +5,8 @@ const IndexCleaner = require("../../../services/indexer/index_cleaner");
 const IndexOptimizer = require("../../../services/indexer/index_optimizer");
 const Logger = require("../../../utils/logger");
 const adapters = require('@code.gov/code-gov-adapter');
-const { normalizeRepoScores } = require('../../../services/indexer/repo/dataScoreNormalizer');
-const { getGithubData } = require('../../../services/indexer/repo/githubData');
 
 const DAYS_TO_KEEP = process.env.DAYS_TO_KEEP || 2;
-class ElasticSearchLogger extends Logger {
-  get DEFAULT_LOGGER_NAME() {
-    return "elasticsearch";
-  }
-}
 
 /**
  * Defines the class responsible for creating and managing the elasticsearch indexes
@@ -42,10 +35,6 @@ class Indexer {
 
     try {
       const repoIndexInfo = await RepoIndexer.init(this.elasticsearchAdapter, this.config);
-      await normalizeRepoScores(this.elasticsearchAdapter, repoIndexInfo);
-      if(this.config.GET_GITHUB_DATA) {
-        await getGithubData(this.elasticsearchAdapter, repoIndexInfo);
-      }
       await IndexOptimizer.init(this.elasticsearchAdapter, repoIndexInfo, this.config);
       await AliasSwapper.init(this.elasticsearchAdapter, repoIndexInfo, this.config);
       await IndexCleaner.init(this.elasticsearchAdapter, repoIndexInfo.esAlias, DAYS_TO_KEEP, this.config);

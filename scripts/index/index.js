@@ -1,6 +1,7 @@
 const getConfig = require('../../config');
 const RepoIndexer = require("./repo/index.js");
 const TermIndexer = require("./term/index.js");
+const {normalizeRepoScores} = require("../../services/indexer/repo/dataScoreNormalizer");
 const Logger = require("../../utils/logger");
 
 /**
@@ -25,6 +26,7 @@ class Indexer {
 
     try {
       await repoIndexer.index();
+      await normalizeRepoScores({ index: 'repos', type: 'repo', config: this.config });
       await termIndexer.index();
     } catch(error) {
       this.logger.trace(error);

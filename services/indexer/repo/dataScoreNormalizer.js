@@ -1,8 +1,12 @@
-const getConfig = require('../../../config');
 const Logger = require('../../../utils/logger');
 const BodyBuilder = require('bodybuilder');
-const config = getConfig(process.env.NODE_ENV);
+const adapters = require('@code.gov/code-gov-adapter');
 
+class ElasticSearchLogger extends Logger {
+  get DEFAULT_LOGGER_NAME() {
+    return "elasticsearch-adapter";
+  }
+}
 function getBody(from, size) {
   const bodybuilder = new BodyBuilder();
   return bodybuilder
@@ -19,10 +23,10 @@ function normalizeScores(data, maxScore, minScore) {
     return item;
   });
 }
-async function getRepos({from=0, size=100, collection=[], adapter, index}) {
+async function getRepos({from=0, size=100, collection=[], adapter, index, type}) {
   let body = getBody(from, size);
 
-  const {total, data, aggregations} = await adapter.search({ index, type: 'repo', body});
+  const {total, data, aggregations} = await adapter.search({ index, type, body });
 
   const normalizedData = normalizeScores(data, aggregations.max_data_score.value, aggregations.min_data_score.value);
 
@@ -33,22 +37,25 @@ async function getRepos({from=0, size=100, collection=[], adapter, index}) {
   }
   from += size;
 
-  return await getRepos({ from, size, collection: collection.concat(normalizedData), adapter, index });
+  return await getRepos({ from, size, collection: collection.concat(normalizedData), adapter, index, type });
 }
-async function normalizeRepoScores(adapter, repoIndexInfo) {
-  const elasticSearchAdapter = new adapter({ hosts: config.ES_HOST, logger: Logger });
+
+async function normalizeRepoScores({index, type, config}) {
+  const elasticSearchAdapter = new adapters.elasticsearch.ElasticsearchAdapter({
+    hosts: config.ES_HOST,
+    logger: ElasticSearchLogger
+  });
   const logger = new Logger({ name: 'data-score-normalizer' });
-  const index = repoIndexInfo.esIndex;
 
   logger.info('Fetching repos');
-  const {total, data} = await getRepos({from:0, size: 100, adapter: elasticSearchAdapter, index});
+  const {total, data} = await getRepos({from:0, size: 100, adapter: elasticSearchAdapter, index, type});
   logger.debug(`Fetched ${total} repos`);
 
   try {
     for(let repo of data) {
       await elasticSearchAdapter.updateDocument({
         index,
-        type: 'repo',
+        type,
         id: repo.repoID,
         document: repo
       });
