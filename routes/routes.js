@@ -62,13 +62,11 @@ function getApiRoutes(config, router) {
         }
       }
 
-      const searchQuery = createReposSearchQuery({ queryParams: request.query, indexMappings: mappings });
+      const searchQuery = createReposSearchQuery({ queryParams: request.query });
       const results = await adapter.search({ index: 'repos', type: 'repo', body: searchQuery });
 
       if(results.hasOwnProperty('data') === false || results.data.length === 0) {
-        const error = new Error('Not Found');
-        error.status = 404;
-        throw error;
+        logger.warning(`No repos data was found for the query params: ${JSON.stringify(request.query)}`);
       }
 
       response.json({
@@ -95,9 +93,7 @@ function getApiRoutes(config, router) {
       });
 
       if(results.hasOwnProperty('data') === false || results.data.length === 0) {
-        const error = new Error('Not Found');
-        error.status = 404;
-        next(error);
+        logger.warning(`No terms data was found for the query params: ${JSON.stringify(request.query)}`);
       }
 
       response.json({
@@ -128,9 +124,7 @@ function getApiRoutes(config, router) {
       const {total, agencies} = getAgencies(agenciesData, request.query, logger);
 
       if(total === 0) {
-        const error = new Error('Not Found');
-        error.status = 404;
-        throw error;
+        logger.warning(`No agencies data was found for the query params: ${JSON.stringify(request.query)}`);
       }
       response.json({ total, agencies });
     } catch(error) {
@@ -157,12 +151,10 @@ function getApiRoutes(config, router) {
       const data = getAgencies(agenciesData, request.query, logger);
 
       if(data.total === 0) {
-        const error = new Error('Not Found');
-        error.status = 404;
-        throw error;
+        logger.warning(`No data for agency: ${request.params.agency_acronym} was found`);
       }
 
-      response.json(data.agencies[0]);
+      response.json(data.agencies[0] || { "total": 0, "agency": {} });
 
     } catch(error) {
       logger.trace(error);
@@ -172,15 +164,13 @@ function getApiRoutes(config, router) {
   router.get(`/languages`, async (request, response, next) => {
     try {
       const searchQeury = getLanguagesSearchQuery(request.query);
-      const results = await adapter.search({ index: 'terms', type: 'term', body: searchQeury });
+      const { total, data } = await adapter.search({ index: 'terms', type: 'term', body: searchQeury });
 
-      if(results.hasOwnProperty('data') === false || results.data.length === 0) {
-        const error = new Error('Not Found');
-        error.status = 404;
-        throw error;
+      if(data || data.length === 0) {
+        logger.warning(`No data for languages was found`);
       }
 
-      response.json(results);
+      response.json({ total, languages: data });
 
     } catch(error) {
       logger.trace(error);
@@ -197,16 +187,14 @@ function getApiRoutes(config, router) {
   });
   router.get('/status.json', async (request, response, next) => {
     try {
-      const results = await adapter.search({ index: 'status', type: 'status' });
+      const { total, data } = await adapter.search({ index: 'status', type: 'status' });
 
-      if(results.total === 0){
-        const error = new Error('Not Found');
-        error.status = 404;
-        throw error;
+      if(total === 0){
+        logger.warning(`No data for statuses was found`);
       }
 
-      const data = _.omit( results.data[0], config.AGENCIES_TO_OMIT_FROM_STATUS );
-      response.json(data);
+      const { timestamp, statuses } = _.omit( data[0], config.AGENCIES_TO_OMIT_FROM_STATUS );
+      response.json({ total, timestamp, statuses });
 
     } catch(error) {
       logger.trace(error);
@@ -215,14 +203,14 @@ function getApiRoutes(config, router) {
   });
   router.get(`/status`, async (request, response, next) => {
     try {
-      const results = await adapter.search({ index: 'status', type: 'status' });
+      const { total, data } = await adapter.search({ index: 'status', type: 'status' });
 
-      if(results.total === 0){
+      if(total === 0){
         response.render('status', { title: "Code.gov API Status", statusData: {} });
       }
 
-      const data = _.omit( results.data[0], config.AGENCIES_TO_OMIT_FROM_STATUS );
-      response.render('status', { title: "Code.gov API Status", statusData: data });
+      const filteredData = _.omit( data[0], config.AGENCIES_TO_OMIT_FROM_STATUS );
+      response.render('status', { title: "Code.gov API Status", statusData: filteredData });
 
     } catch(error) {
       logger.trace(error);
