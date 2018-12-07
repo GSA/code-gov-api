@@ -5,9 +5,8 @@ const pkg = require("../package.json");
 const Jsonfile = require("jsonfile");
 const Utils = require('../utils');
 const repoMapping = require('../indexes/repo/mapping.json');
-const fetch = require('node-fetch');
 
-const searchPropsByType = Utils.getFlattenedMappingPropertiesByType(repoMapping["repo"]);
+const fetch = require('node-fetch');
 
 async function readAgencyMetadataFile (config, logger) {
   let response;
@@ -121,6 +120,7 @@ function getLanguagesData (searcher, config, logger, options) {
 
 function getInvalidRepoQueryParams (queryParams) {
   let without = _.without(queryParams, "from", "size", "sort", "q", "include", "exclude");
+  const searchPropsByType = Utils.getFlattenedMappingPropertiesByType(repoMapping["repo"]);
 
   return without.filter((queryParam) => {
     if (_.includes(searchPropsByType["text"], queryParam)) {
@@ -209,7 +209,7 @@ function getTerms(request, response, searcher) {
 
 function getAgencies(agenciesData, requestOptions, logger) {
   let options = _.pick(requestOptions, ["size", "from", "sort"]);
-  const agencies = getAgencyData(agenciesData, logger, options)
+  const agencies = getAgencyData(agenciesData, logger, options);
 
   return {
     total: agencies.length,
@@ -309,6 +309,53 @@ function getRootMessage() {
   });
 }
 
+function formatIssues(issues) {
+  return issues.map(issue => {
+    const labels = parseLabels(issue.labels);
+    const formattedIssue = {
+      id: issue.issueId,
+      title: issue.title,
+      description: issue.description,
+      languages: issues.languages || [],
+      projectURL: `https://code.gov/projects/${issue.repoId}`,
+      issueURL: issue.url,
+      featured: true,
+      active: true,
+      popular: true,
+      license: issue.license || null,
+      agency: {
+        name: issue.agencyName,
+        acronym: issue.agencyAcronym
+      },
+      date: {
+        lastModified: issue.updated_at
+      }
+    };
+    return Object.assign(formattedIssue, labels);
+  });
+}
+
+function parseLabels(labels) {
+  let processedLabels = {};
+
+  labels.forEach(label => {
+    if(label.match(/\[issue-type\]/)){
+      processedLabels.type = label.split(" ")[1];
+    }
+    if(label.match(/\[skill-level\]/)){
+      processedLabels.skill = label.split(" ")[1];
+    }
+    if(label.match(/\[effort\]/)){
+      processedLabels.effort = label.split(" ")[1];
+    }
+    if(label.match(/\[impact\]/)){
+      processedLabels.impact = label.split(" ")[1];
+    }
+  });
+
+  return processedLabels;
+}
+
 module.exports = {
   getAgencyData,
   queryReposAndSendResponse,
@@ -328,5 +375,7 @@ module.exports = {
   getInvalidRepoQueryParams,
   readAgencyMetadataFile,
   getAgencyMetaData,
-  getAgencyTerms
+  getAgencyTerms,
+  parseLabels,
+  formatIssues
 };
