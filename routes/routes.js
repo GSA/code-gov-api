@@ -15,7 +15,8 @@ const {
   getRepoJson,
   getVersion,
   getRootMessage,
-  getAgencyMetaData
+  getAgencyMetaData,
+  formatIssues
 } = require('./utils');
 
 const mappings = require('../indexes/repo/mapping.json');
@@ -101,6 +102,26 @@ function getApiRoutes(config, router) {
         terms: results.data
       });
 
+    } catch(error) {
+      logger.trace(error);
+      next(error);
+    }
+  });
+  router.get('/open-tasks', async (request, response, next) => {
+    let formattedResults = [];
+    try {
+      const results = await adapter.search({ index: 'issues', type: 'issue' });
+
+      if(results.hasOwnProperty('data') === false || results.data.length === 0) {
+        logger.warning(`No issues data was found for the query params: ${JSON.stringify(request.query)}`);
+      } else {
+        formattedResults = formatIssues(results.data);
+      }
+
+      response.json({
+        total: results.total,
+        items: formattedResults
+      });
     } catch(error) {
       logger.trace(error);
       next(error);
