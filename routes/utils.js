@@ -5,13 +5,13 @@ const pkg = require("../package.json");
 const Jsonfile = require("jsonfile");
 const Utils = require('../utils');
 const repoMapping = require('../indexes/repo/mapping.json');
-
+const { getQueryByTerm } = require('@code.gov/code-gov-adapter').elasticsearch;
 const fetch = require('node-fetch');
 
 async function readAgencyMetadataFile (config, logger) {
   let response;
 
-  if(process.env.GET_REMOTE_METADATA) {
+  if(config.GET_REMOTE_METADATA) {
     try {
       response = await fetch(config.AGENCY_ENDPOINTS_FILE);
       return response.json();
@@ -217,17 +217,27 @@ function getAgencies(agenciesData, requestOptions, logger) {
   };
 }
 
-function getAgency(request, searcher, config, logger) {
-  let options = _.pick(request.query, ["size", "from"]);
-  options.agency = request.params.agency_acronym;
+async function getAgency(request, adapter, config, logger) {
+  const agenciesMetaData = await getAgencyMetaData(config, logger);
 
-  return getAgencyData(searcher, config, logger, options)
-    .then((agencies) => {
-      return {
-        total: agencies.length,
-        agency: agencies[0]
-      };
-    });
+  const queryParams = getAgencyTerms(request);
+  const searchQuery = getQueryByTerm({ term: queryParams.term, termType: queryParams.term_type });
+  const results = await adapter.search({ index: 'terms', type: 'term', body: searchQuery });
+
+  const agenciesData = {
+    agencyTerms: {
+      terms: results.data
+    },
+    agenciesDataHash: agenciesMetaData
+  };
+
+  const {agencies, total} = getAgencies(agenciesData, request.query, logger);
+
+  if(total === 0) {
+    logger.warning(`No data for agency: ${request.params.agency_acronym} was found`);
+  }
+
+  return agencies[0];
 }
 
 function getLanguages(request, searcher, config, logger) {
