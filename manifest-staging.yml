@@ -1,10 +1,9 @@
 applications:
 - name: code-api
-  memory: 512M
+  memory: 100M
   instances: 1
-  disk_quota: 1024M
-  health-check-type: http
-  health-check-http-endpoint: /api
+  disk_quota: 512M
+  health-check-type: process
   routes:
     - route: code-api-staging.app.cloud.gov
   buildpack: https://github.com/cloudfoundry/nodejs-buildpack
@@ -14,6 +13,9 @@ applications:
     CF_STARTUP_TIMEOUT: 15
     NODE_ENV: staging
     NEW_RELIC_APP_NAME: code-api-staging
+    LOGGER_LEVEL: info
+    GET_REMOTE_METADATA: true
+    REMOTE_METADATA_LOCATION: https://raw.githubusercontent.com/GSA/code-gov-data/master/agency_metadata.json
     ELASTICSEARCH_SERVICE_NAME: code_gov_elasticsearch
   services:
   - code_gov_elasticsearch
