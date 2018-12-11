@@ -22,8 +22,7 @@
     "unit-test": "./node_modules/.bin/nyc mocha --reporter mocha-multi-reporters --reporter-options configFile=test/mocha-multi-reporter-config.json test/unit",
     "integration-test": "./node_modules/.bin/nyc mocha --reporter mocha-multi-reporters --reporter-options configFile=test/mocha-multi-reporter-config.json test/integration",
     "lint": "./node_modules/.bin/eslint .",
-    "lint-fix": "./node_modules/.bin/eslint --fix .",
-    "security-check": "./node_modules/.bin/nsp check"
+    "lint-fix": "./node_modules/.bin/eslint --fix ."
   },
   "dependencies": {
     "@code.gov/code-gov-adapter": "^1.1.5",
