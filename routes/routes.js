@@ -264,22 +264,6 @@ function getApiRoutes(config, router) {
   });
 
   return router;
-
-  // router.get(`/status/:agency/diff`, (req, res, next) => {
-  //   let agency = req.params.agency.toUpperCase();
-  //   Jsonfile.readFile(path.join(
-  //     __dirname,
-  //     config.DIFFED_DIR,
-  //     `${agency}.json`
-  //   ), (err, diffChunks) => {
-  //     if (err) {
-  //       logger.error(err);
-  //       return res.sendStatus(500);
-  //     }
-  //     let title = "Code.gov API Diff for " + agency;
-  //     return res.render('status/agency/diff', { title, diffChunks });
-  //   });
-  // });
 }
 
 module.exports = {
