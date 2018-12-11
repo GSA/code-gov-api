@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/code-gov-api
     docker:
-      - image: circleci/node:8.9.3-stretch
+      - image: circleci/node:10.14.1
     steps:
       - checkout
       - restore_cache:
@@ -23,11 +23,11 @@ jobs:
           command: npm run lint
       - run:
           name: run-security-check
-          command: npm run security-check
+          command: npm audit
   test:
     working_directory: ~/code-gov-api
     docker:
-      - image: circleci/node:8.9.3-stretch
+      - image: circleci/node:10.14.1
     environment:
       NODE_ENV: "testing"
     steps:
@@ -67,7 +67,7 @@ jobs:
   integration:
     working_directory: ~/code-gov-api
     docker:
-      - image: circleci/node:8.9.3-stretch
+      - image: circleci/node:10.14.2
       - image: docker.elastic.co/elasticsearch/elasticsearch:5.6.12
     environment:
       NODE_ENV: "testing"
@@ -114,7 +114,7 @@ jobs:
   deploy-staging:
     working_directory: ~/code-gov-api
     docker:
-      - image: circleci/node:8.9.3-stretch
+      - image: circleci/node:10.14.1
     steps:
       - checkout
       - restore_cache:
@@ -146,7 +146,7 @@ jobs:
   deploy-production:
     working_directory: ~/code-gov-api
     docker:
-      - image: circleci/node:8.9.3-stretch
+      - image: circleci/node:10.14.1
     steps:
       - checkout
       - restore_cache:
