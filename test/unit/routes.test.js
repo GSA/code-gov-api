@@ -266,7 +266,6 @@ describe('Testing routes/utils.js', () => {
     it('should return data for all indexed agencies', () => {
       const { total, agencies } = getAgencies(sampleAgencyData, mockSearcher, config, mockLogger);
 
-      console.log(agencies)
       total.should.equal(27);
       agencies.should.be.a('Array');
       agencies.should.deep.equal(agencyEndpointExpectedData);
