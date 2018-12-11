@@ -52,12 +52,7 @@ function getAppFilesDirectories() {
   }
 
   return {
-    AGENCY_ENDPOINTS_FILE: filePath,
-    REPORT_FILEPATH: path.join(path.dirname(__dirname), "/data/status/report.json"),
-    DISCOVERED_DIR: path.join(path.dirname(__dirname), "/data/discovered"),
-    FETCHED_DIR: path.join(path.dirname(__dirname), "/data/fetched"),
-    DIFFED_DIR: path.join(path.dirname(__dirname), "/data/diffed"),
-    FALLBACK_DIR: path.join(path.dirname(__dirname), "/data/fallback")
+    AGENCY_ENDPOINTS_FILE: filePath
   };
 }
 
@@ -116,6 +111,20 @@ function getConfig(env='development') {
     '1.0.1',
     '2.0',
     '2.0.0'
+  ];
+  config.VALID_QUERY_PARAMS = [
+    'license',
+    'name',
+    'agency.name',
+    'permissions.usageType',
+    'agency.acronym',
+    'status',
+    'vcs',
+    'measurementType.method',
+    'language',
+    'created',
+    'lastModified',
+    'metadataLastUpdated'
   ];
   config.UPDATE_REPO_REGEX = /(1\.0)(\.\d)?/;
   config.GITHUB_TOKEN = process.env.GITHUB_TOKEN || null;
