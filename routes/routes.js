@@ -5,7 +5,6 @@ const {
   createFieldSearchQuery,
   createReposSearchQuery,
   searchTermsQuery,
-  getQueryByTerm,
   getLanguagesSearchQuery
 } = require('@code.gov/code-gov-adapter').elasticsearch;
 const {
@@ -16,7 +15,8 @@ const {
   getVersion,
   getRootMessage,
   getAgencyMetaData,
-  formatIssues
+  formatIssues,
+  getAgency
 } = require('./utils');
 
 const mappings = require('../indexes/repo/mapping.json');
@@ -157,27 +157,9 @@ function getApiRoutes(config, router) {
   router.get(`/agencies/:agency_acronym`, async (request, response, next) => {
 
     try {
-      const agenciesMetaData = await getAgencyMetaData(config, logger);
+      const agency = await getAgency(request, adapter, config, logger);
 
-      const queryParams = getAgencyTerms(request);
-      const searchQuery = getQueryByTerm({ term: queryParams.term, termType: queryParams.term_type });
-      const results = await adapter.search({ index: 'terms', type: 'term', body: searchQuery });
-
-      const agenciesData = {
-        agencyTerms: {
-          terms: results.data
-        },
-        agenciesDataHash: agenciesMetaData
-      };
-
-      const data = getAgencies(agenciesData, request.query, logger);
-
-      if(data.total === 0) {
-        logger.warning(`No data for agency: ${request.params.agency_acronym} was found`);
-      }
-
-      response.json(data.agencies[0] || { "total": 0, "agency": {} });
-
+      response.json(agency || {} );
     } catch(error) {
       logger.trace(error);
       next(error);
@@ -261,37 +243,6 @@ function getApiRoutes(config, router) {
       next(error);
     }
   });
-  // router.get(`/status/:agency/fetched`, async (request, response, next) => {
-  //   const agency = request.params.agency.toUpperCase();
-
-  //   try {
-  //     const results = await getFetchedReposByAgency(agency, config);
-  //     response.json(results);
-  //   } catch(error) {
-  //     logger.trace(error);
-  //     next(error);
-  //   }
-  // });
-  // router.get(`/status/:agency/discovered`, (request, response, next) => {
-  //   const agency = request.params.agency.toUpperCase();
-
-  //   if(agency) {
-  //     getDiscoveredReposByAgency(agency, config)
-  //       .then(results => {
-  //         if(results) {
-  //           response.json(results);
-  //         } else {
-  //           response.sendStatus(404);
-  //         }
-  //       })
-  //       .catch(error => {
-  //         logger.error(error);
-  //         response.sendStatus(404);
-  //       });
-  //   } else {
-  //     response.sendStatus(400);
-  //   }
-  // });
   router.get('/version', async (request, response, next) => {
     try {
       const versionInfo = await getVersion(response);
