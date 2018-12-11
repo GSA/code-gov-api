@@ -16,7 +16,7 @@ describe('Load config', function() {
     config.USE_HSTS.should.be.equal(false);
     config.HSTS_MAX_AGE.should.be.equal(31536000);
     config.HSTS_PRELOAD.should.be.equal(false);
-    config.LOGGER_LEVEL.should.be.equal('info');
+    config.LOGGER_LEVEL.should.be.equal('debug');
     should.exist(config.SWAGGER_DOCUMENT);
 
   });
