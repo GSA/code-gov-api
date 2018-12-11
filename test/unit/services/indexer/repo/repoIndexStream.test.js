@@ -1,11 +1,22 @@
 const JsonFile = require('jsonfile');
 const path = require('path');
 
-// TODO: change location of testable_elasticsearch_adapter to the test directory
-const MockAdapter = require('../../../../../utils/search_adapters/testable_elasticsearch_adapter');
 const RepoIndexer = require('../../../../../services/indexer/repo');
 const RepoIndexerStream = require('../../../../../services/indexer/repo/RepoIndexStream')
-
+function MockAdapter() {
+  this._indexRepo = () => {
+    return this.indexDocument();
+  }
+  this.indexDocument = async () => {
+    return {
+      "_id": "1",
+      "_index": "repo",
+      "_type": "repo",
+      "_version": 1,
+      "created": true
+    };
+  }
+}
 
 describe('Index given repo', function(done) {
   let agencyJsonStream;
@@ -14,7 +25,6 @@ describe('Index given repo', function(done) {
   let fetchDataDir;
   let agency;
   let indexer;
-  let mockAdapter = new MockAdapter();
 
   const ES_MAPPING = require("../../../../../indexes/repo/mapping.json");
   const ES_SETTINGS = require("../../../../../indexes/repo/settings.json");
@@ -22,7 +32,8 @@ describe('Index given repo', function(done) {
     "esAlias": "repos",
     "esType": "repo",
     "esMapping": ES_MAPPING,
-    "esSettings": ES_SETTINGS
+    "esSettings": ES_SETTINGS,
+    "esHosts": "http://locahost:9200"
   };
 
   before(function() {
@@ -31,14 +42,13 @@ describe('Index given repo', function(done) {
     fetchDataDir = fallbackDataDir; // Same as abouve, we will not be going through all the file fetch flow.
     agency = JsonFile.readFileSync(path.join(testDataDir, 'test_agency_metadata.json'))
 
-    mockAdapter.setResponse({
-      "_index" : "repo",
-      "_type" : "repo",
-      "_id" : "1",
-      "_version" : 1,
-      "created" : true
+    indexer = new RepoIndexer({
+      adapter: MockAdapter,
+      agencyEndpointsFile: agency,
+      fetchedFilesDir: fetchDataDir,
+      fallbackFilesDir: fallbackDataDir,
+      params: ES_PARAMS
     });
-    indexer = new RepoIndexer(mockAdapter, agency, fetchDataDir, fallbackDataDir, ES_PARAMS);
   });
 
   it('should index repo and return result', function(done) {

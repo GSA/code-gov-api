@@ -16,11 +16,13 @@ const {
   getDiscoveredReposByAgency,
   getFetchedReposByAgency,
   getRootMessage } = require('../../routes/utils');
+const { sampleAgencyData, agencyEndpointExpectedData } = require('./test_data/agency_data');
 const path = require('path');
 
 describe('Testing routes/utils.js', () => {
   let mockLogger;
   let mockSearcher;
+  let agencySearchAdapter;
   let config;
 
   before(() => {
@@ -204,6 +206,7 @@ describe('Testing routes/utils.js', () => {
     }
   });
 
+
   describe('Fetching status report', () => {
     let statusReportFile;
     let agency;
@@ -217,8 +220,6 @@ describe('Testing routes/utils.js', () => {
       return getStatusData(mockSearcher)
         .then(statusData => {
           statusData.should.be.a('object');
-          // statusData.statuses.should.be.a('object');
-          // statusData.statuses[agency].version.should.be.equal('2.0.0');
         });
     });
 
@@ -234,7 +235,24 @@ describe('Testing routes/utils.js', () => {
 
   describe('Get Agency Data', () => {
     let mockRequest;
+    let agencySearchAdapter;
     before(() => {
+      agencySearchAdapter = {
+        search: () => {
+          return {
+            "total":1,
+            "data":[{
+              "searchScore":11.508091,
+              "term_key":"GSA",
+              "term":"GSA",
+              "term_type":"agency.acronym",
+              "count":1743,
+              "count_normalized":1
+            }],
+            "aggregations":[]
+          }
+        }
+      };
       mockRequest = {
         query: {
           size: 20
@@ -246,18 +264,20 @@ describe('Testing routes/utils.js', () => {
     });
 
     it('should return data for all indexed agencies', () => {
-      return getAgencies(mockRequest, mockSearcher, config, mockLogger)
-        .then(result => {
-          result.agencies.should.be.a('array');
-          result.agencies.length.should.be.at.least(20);
-        })
+      const { total, agencies } = getAgencies(sampleAgencyData, mockSearcher, config, mockLogger);
+
+      console.log(agencies)
+      total.should.equal(27);
+      agencies.should.be.a('Array');
+      agencies.should.deep.equal(agencyEndpointExpectedData);
+
     });
 
     it('should return agency data for the requested agency', () => {
-      return getAgency(mockRequest, mockSearcher, config, mockLogger)
+      return getAgency(mockRequest, agencySearchAdapter, config, mockLogger)
         .then(result => {
-          result.agency.should.be.a('object');
-          result.agency.name.should.be.equal('General Services Administration');
+          result.should.be.a('object');
+          result.name.should.be.equal('General Services Administration');
         });
     });
   });
