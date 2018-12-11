@@ -95,23 +95,12 @@ function getConfig(env='development') {
       ? 'INFO'
       : 'DEBUG';
 
-  config.TERM_TYPES_TO_INDEX = [
-    "name",
-    "agency.name",
-    "agency.acronym",
-    "tags",
-    "languages"];
   config.TERM_TYPES_TO_SEARCH = [
     "name",
     "agency.name",
     "agency.acronym",
     "tags",
     "languages"];
-  config.supportedSchemaVersions = [
-    '1.0.1',
-    '2.0',
-    '2.0.0'
-  ];
   config.VALID_QUERY_PARAMS = [
     'license',
     'name',
@@ -127,15 +116,12 @@ function getConfig(env='development') {
     'metadataLastUpdated'
   ];
   config.UPDATE_REPO_REGEX = /(1\.0)(\.\d)?/;
-  config.GITHUB_TOKEN = process.env.GITHUB_TOKEN || null;
-  config.GITHUB_AUTH_TYPE = process.env.GITHUB_AUTH_TYPE || 'token';
   config.USE_HSTS = process.env.USE_HSTS ? process.env.USE_HSTS === 'true' : config.isProd;
   config.HSTS_MAX_AGE = process.env.HSTS_MAX_AGE ? parseInt(process.env.HSTS_MAX_AGE) : 31536000;
   config.HSTS_PRELOAD = false;
   config.PORT = getPort(cloudFoundryEnv);
 
   config.GET_REMOTE_METADATA = process.env.GET_REMOTE_METADATA && process.env.GET_REMOTE_METADATA === 'true';
-  config.GET_GITHUB_DATA = process.env.GET_GITHUB_DATA && process.env.GET_GITHUB_DATA === 'true';
   config.ES_HOST = getElasticsearchUri(cloudFoundryEnv);
 
   Object.assign(config, getAppFilesDirectories());
