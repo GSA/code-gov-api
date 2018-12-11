@@ -110,7 +110,10 @@ function getApiRoutes(config, router) {
   router.get('/open-tasks', async (request, response, next) => {
     let formattedResults = [];
     try {
-      const results = await adapter.search({ index: 'issues', type: 'issue' });
+      const size = request.query.size || 10;
+      const from = request.query.from || 0;
+
+      const results = await adapter.search({ index: 'issues', type: 'issue', body: { size, from } });
 
       if(results.hasOwnProperty('data') === false || results.data.length === 0) {
         logger.warning(`No issues data was found for the query params: ${JSON.stringify(request.query)}`);
@@ -118,10 +121,8 @@ function getApiRoutes(config, router) {
         formattedResults = formatIssues(results.data);
       }
 
-      response.json({
-        total: results.total,
-        items: formattedResults
-      });
+      response.json({ total: results.total, items: formattedResults });
+
     } catch(error) {
       logger.trace(error);
       next(error);
