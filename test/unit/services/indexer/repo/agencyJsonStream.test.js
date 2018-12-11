@@ -101,7 +101,7 @@ describe('AgencyJsonStream', function() {
         additionalNotes: null
       },
       date: {
-        created: '',
+        created: null,
         lastModified: moment('2017-04-11', 'YYYY-MM-DD').utc().toJSON(),
         metadataLastUpdated: moment('2017-04-22', 'YYYY-MM-DD').utc().toJSON()
       },
