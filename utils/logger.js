@@ -39,4 +39,4 @@ module.exports = class Logger {
     this.child = bun.child;
     this.close = function () { /* bunyan's loggers do not need to be closed */ };
   }
-}
+};
