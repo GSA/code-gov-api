@@ -180,6 +180,7 @@ function getApiRoutes(config, router) {
           numRepos: language.count
         };
       });
+
       response.json({ total, languages });
 
     } catch(error) {
