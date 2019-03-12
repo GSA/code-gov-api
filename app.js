@@ -59,6 +59,8 @@ app.use(addRequestId);
 app.use(compression());
 
 app.use(function(req, res, next) {
+  res.removeHeader('Server');
+  res.removeHeader('Via');
   logger.info({ req: req, res: res });
   next();
 });
