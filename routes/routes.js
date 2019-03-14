@@ -205,44 +205,44 @@ function getApiRoutes(config, router) {
       next(error);
     }
   });
-  router.get(`/status`, async (request, response, next) => {
-    try {
-      const { total, data } = await adapter.search({ index: 'status', type: 'status' });
+  // router.get(`/status`, async (request, response, next) => {
+  //   try {
+  //     const { total, data } = await adapter.search({ index: 'status', type: 'status' });
 
-      if(total === 0){
-        response.render('status', { title: "Code.gov API Status", statusData: {} });
-      }
+  //     if(total === 0){
+  //       response.render('status', { title: "Code.gov API Status", statusData: {} });
+  //     }
 
-      const filteredData = _.omit( data[0], config.AGENCIES_TO_OMIT_FROM_STATUS );
-      response.render('status', { title: "Code.gov API Status", statusData: filteredData });
+  //     const filteredData = _.omit( data[0], config.AGENCIES_TO_OMIT_FROM_STATUS );
+  //     response.render('status', { title: "Code.gov API Status", statusData: filteredData });
 
-    } catch(error) {
-      logger.trace(error);
-      next(error);
-    }
-  });
+  //   } catch(error) {
+  //     logger.trace(error);
+  //     next(error);
+  //   }
+  // });
 
-  router.get(`/status/:agency/issues`, async (request, response, next) => {
-    try {
-      let agency = request.params.agency.toUpperCase();
-      const results = await adapter.search({ index: 'status', type: 'status' });
+  // router.get(`/status/:agency/issues`, async (request, response, next) => {
+  //   try {
+  //     let agency = request.params.agency.toUpperCase();
+  //     const results = await adapter.search({ index: 'status', type: 'status' });
 
-      if(results.total === 0){
-        response.render('status/agency/issues', { title: `Code.gov API Status for ${agency}`, statusData: {} });
-      }
+  //     if(results.total === 0){
+  //       response.render('status/agency/issues', { title: `Code.gov API Status for ${agency}`, statusData: {} });
+  //     }
 
-      const data = _.omit( results.data[0], config.AGENCIES_TO_OMIT_FROM_STATUS );
-      const agencyIssues = data.statuses[agency].issues;
-      response.render('status/agency/issues', {
-        title: `Code.gov API Status for ${agency}`,
-        statusData: agencyIssues
-      });
+  //     const data = _.omit( results.data[0], config.AGENCIES_TO_OMIT_FROM_STATUS );
+  //     const agencyIssues = data.statuses[agency].issues;
+  //     response.render('status/agency/issues', {
+  //       title: `Code.gov API Status for ${agency}`,
+  //       statusData: agencyIssues
+  //     });
 
-    } catch(error) {
-      logger.trace(error);
-      next(error);
-    }
-  });
+  //   } catch(error) {
+  //     logger.trace(error);
+  //     next(error);
+  //   }
+  // });
   router.get('/version', async (request, response, next) => {
     try {
       const versionInfo = await getVersion(response);

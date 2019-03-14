@@ -47,6 +47,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(cors());
 app.use(helmet());
+app.use(function(req, res, next) {
+  res.setHeader('Server', '');
+  res.setHeader('Via', '');
+  next();
+});
 app.use(helmet.hsts({
   maxAge: config.HSTS_MAX_AGE,
   preload: config.HSTS_PRELOAD,
@@ -59,8 +64,6 @@ app.use(addRequestId);
 app.use(compression());
 
 app.use(function(req, res, next) {
-  res.removeHeader('Server');
-  res.removeHeader('Via');
   logger.info({ req: req, res: res });
   next();
 });
