@@ -11,9 +11,6 @@ const Logger = require("./utils/logger");
 const path = require("path");
 const RateLimit = require('express-rate-limit');
 
-// const Searcher = require("./services/searcher");
-// const ElasticsearchSearcherAdapter = require("./utils/search_adapters/elasticsearch_adapter");
-
 const swaggerUi = require('swagger-ui-express');
 const addRequestId = require('express-request-id')();
 
@@ -78,7 +75,6 @@ app.set('json spaces', 2);
                             API ROUTES
  * ------------------------------------------------------------------ */
 
-// const searcher = new Searcher(searcherAdapter, config);
 const router = getApiRoutes(config, new express.Router());
 app.use('/api', router);
 
@@ -95,8 +91,7 @@ app.use(function(req, res, next) {
 
 app.use(function(err, req, res, next) {
   logger.error({req: req, res: res, err: err});
-  res
-    .status(err.status || 500)
+  res.status(err.status || 500)
     .json({
       message: err.message,
       error: app.get('env') === 'development' ? err : {}

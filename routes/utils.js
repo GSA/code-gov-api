@@ -290,16 +290,6 @@ function getAgencyIssues(agency, searcher) {
     });
 }
 
-function getDiscoveredReposByAgency(agency, config) {
-  return getFileDataByAgency(agency, config.DISCOVERED_DIR)
-    .then(fetchedData => fetchedData);
-}
-
-function getFetchedReposByAgency(agency, config) {
-  return getFileDataByAgency(agency, config.FETCHED_DIR)
-    .then(fetchedData => fetchedData);
-}
-
 function getRootMessage() {
   return getVersion().then(version => {
     return {
@@ -379,8 +369,6 @@ module.exports = {
   getStatusData,
   getVersion,
   getAgencyIssues,
-  getDiscoveredReposByAgency,
-  getFetchedReposByAgency,
   getRootMessage,
   getInvalidRepoQueryParams,
   readAgencyMetadataFile,
