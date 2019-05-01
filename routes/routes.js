@@ -174,7 +174,14 @@ function getApiRoutes(config, router) {
         logger.warning(`No data for languages was found`);
       }
 
-      response.json({ total, languages: data });
+      const languages = data.map(language => {
+        return {
+          name: language.term,
+          numRepos: language.count
+        };
+      });
+
+      response.json({ total, languages });
 
     } catch(error) {
       logger.trace(error);
