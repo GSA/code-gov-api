@@ -2,100 +2,11 @@ const Utils = require('../../utils');
 const should = require('chai').should();
 
 describe('Testing Utils module', function () {
-  describe('transformStringToKey', function () {
-    it('should return a latinized version of the text', function () {
-      const testData = 'Code Gov API';
-      const expected = 'code_gov_api';
 
-      Utils.transformStringToKey(testData)
-        .should.be.equal(expected);
-    });
-  });
   describe('flatten mapping properties', function () {
     let mappings;
     before(function () {
       mappings = require('./test_data/mappings/mapping.json');
-    })
-    it('should return a flattened versions of the passed mapping object using getFlattenedMappingProperties', function () {
-      const expected = {
-        'repo.repoID': 'string',
-        'repo.agency.name': 'string',
-        'repo.agency.acronym': 'string',
-        'repo.agency.website': 'string',
-        'repo.agency.codeUrl': 'string',
-        'repo.agency.requirements.agencyWidePolicy': 'float',
-        'repo.agency.requirements.openSourceRequirement': 'float',
-        'repo.agency.requirements.inventoryRequirement': 'float',
-        'repo.agency.requirements.schemaFormat': 'float',
-        'repo.agency.requirements.overallCompliance': 'float',
-        'repo.measurementType.method': 'string',
-        'repo.measurementType.ifOther': 'string',
-        'repo.status': 'string',
-        'repo.vcs': 'string',
-        'repo.repositoryURL': 'string',
-        'repo.targetOperatingSystems': 'string',
-        'repo.name': 'string',
-        'repo.version': 'string',
-        'repo.organization': 'string',
-        'repo.homepageURL': 'string',
-        'repo.downloadURL': 'string',
-        'repo.description': 'string',
-        'repo.events': 'string',
-        'repo.tags': 'string',
-        'repo.languages': 'string',
-        'repo.contact.name': 'string',
-        'repo.contact.email': 'string',
-        'repo.contact.twitter': 'string',
-        'repo.contact.phone': 'string',
-        'repo.partners.name': 'string',
-        'repo.partners.email': 'string',
-        'repo.permissions.licenses.name': 'string',
-        'repo.permissions.licenses.URL': 'string',
-        'repo.permissions.usageType': 'string',
-        'repo.permissions.exemptionText': 'string',
-        'repo.laborHours': 'integer',
-        'repo.relatedCode.name': 'string',
-        'repo.relatedCode.URL': 'string',
-        'repo.reusedCode.name': 'string',
-        'repo.reusedCode.URL': 'string',
-        'repo.disclaimerURL': 'string',
-        'repo.disclaimerText': 'string',
-        'repo.additionalInformation': 'object',
-        'repo.date.created': 'date',
-        'repo.date.lastModified': 'date',
-        'repo.date.metadataLastUpdated': 'date',
-        'status.last_data_harvest': 'date',
-        'status.version': 'string',
-        'status.agency.name': 'string',
-        'status.agency.acronym': 'string',
-        'status.agency.website': 'string',
-        'status.agency.codeUrl': 'string',
-        'status.agency.requirements.agencyWidePolicy': 'float',
-        'status.agency.requirements.openSourceRequirement': 'float',
-        'status.agency.requirements.inventoryRequirement': 'float',
-        'status.agency.requirements.schemaFormat': 'float',
-        'status.agency.requirements.overallCompliance': 'float',
-        'status.issues.organization': 'string',
-        'status.issues.project_name': 'string',
-        'status.issues.errors.keyword': 'string',
-        'status.issues.errors.dataPath': 'string',
-        'status.issues.errors.schemaPath': 'string',
-        'status.issues.errors.params': 'object',
-        'status.issues.errors.message': 'string',
-        'status.issues.warning.keyword': 'string',
-        'status.issues.warning.dataPath': 'string',
-        'status.issues.warning.schemaPath': 'string',
-        'status.issues.warning.params': 'object',
-        'status.issues.warning.message': 'string',
-        'status.issues.enhancements.keyword': 'string',
-        'status.issues.enhancements.dataPath': 'string',
-        'status.issues.enhancements.schemaPath': 'string',
-        'status.issues.enhancements.params': 'object',
-        'status.issues.enhancements.message': 'string',
-        'status.fallback_used': 'boolean'
-      }
-      Utils.getFlattenedMappingProperties(mappings)
-        .should.be.deep.equal(expected);
     });
 
     it('should return a flattened versions of the passed mapping object using getFlattenedMappingPropertiesByType', function () {

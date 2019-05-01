@@ -174,7 +174,14 @@ function getApiRoutes(config, router) {
         logger.warning(`No data for languages was found`);
       }
 
-      response.json({ total, languages: data });
+      const languages = data.map(language => {
+        return {
+          name: language.term,
+          numRepos: language.count
+        };
+      });
+
+      response.json({ total, languages });
 
     } catch(error) {
       logger.trace(error);
@@ -264,22 +271,6 @@ function getApiRoutes(config, router) {
   });
 
   return router;
-
-  // router.get(`/status/:agency/diff`, (req, res, next) => {
-  //   let agency = req.params.agency.toUpperCase();
-  //   Jsonfile.readFile(path.join(
-  //     __dirname,
-  //     config.DIFFED_DIR,
-  //     `${agency}.json`
-  //   ), (err, diffChunks) => {
-  //     if (err) {
-  //       logger.error(err);
-  //       return res.sendStatus(500);
-  //     }
-  //     let title = "Code.gov API Diff for " + agency;
-  //     return res.render('status/agency/diff', { title, diffChunks });
-  //   });
-  // });
 }
 
 module.exports = {
