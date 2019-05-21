@@ -1,8 +1,8 @@
 applications:
 - name: code-api
-  memory: 1024M
+  memory: 512M
   instances: 2
-  disk_quota: 1024M
+  disk_quota: 512M
   health-check-type: process
   routes:
     - route: code-api.app.cloud.gov
@@ -19,5 +19,5 @@ applications:
     ELASTICSEARCH_SERVICE_NAME: code_gov_elasticsearch
   services:
   - code_gov_elasticsearch
-  stack: cflinuxfs2
+  stack: cflinuxfs3
   command: npm start

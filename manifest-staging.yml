@@ -19,5 +19,5 @@ applications:
     ELASTICSEARCH_SERVICE_NAME: code_gov_elasticsearch
   services:
   - code_gov_elasticsearch
-  stack: cflinuxfs2
+  stack: cflinuxfs3
   command: npm start
