@@ -214,7 +214,7 @@ Docker compose lets you recreate a complete environment for the code.gov API. Th
 To stand up a Code.gov API environment execute from the root of the project:
 
 ```bash
-docker compose up
+docker-compose up
 ```
 
 This command will build a new code-gov-api image, download an Elasticsearch image, and will run all containers in the correct order. You will see the output of each container in your terminal.
@@ -226,7 +226,7 @@ If you only want to build the code-gov-api image you can execute `docker-compose
 
 Here’s how you can help contribute to code.gov API:
 
-* First, please take some time to read our [contributing document](/docs/CONTRIBUTING.md). To ensure consistency, we have also created a [branching](/docs/BRANCHING.md) doc which describes our git branching strategy and a [styleguide](/docs/STYLEGUIDE.md). 
+* First, please take some time to read our [contributing document](/docs/CONTRIBUTING.md). To ensure consistency, we have also created a [branching](/docs/BRANCHING.md) doc which describes our git branching strategy and a [styleguide](/docs/STYLEGUIDE.md).
 
 * Code of Conduct
   * Community is very important for us. We strive to be welcoming to all. To achive this we have drafted a [Code of Conduct](CODE_OF_CONDUCT.md), please take a look at it and leave us any feedback as a [Github issue](https://github.com/GSA/code-gov-api/issues).
@@ -250,3 +250,11 @@ As stated in our [contributing document](CONTRIBUTING.md):
 This project is in the worldwide public domain (in the public domain within the United States, and copyright and related rights in the work worldwide are waived through the [CC0 1.0 Universal public domain dedication](https://creativecommons.org/publicdomain/zero/1.0/)).
 
 All contributions to this project will be released under the CC0-1.0 dedication. By submitting a pull request, you are agreeing to comply with this waiver of copyright interest.
+
+## Contact Info
+
+* Twitter: [@CodeDotGov](https://twitter.com/CodeDotGov)
+* Email: [code@gsa.gov](mailto:code@gsa.gov)
+* LinkedIn: [code-gov](https://www.linkedin.com/company/code-gov/)
+
+Join our #opensource-public Slack channel: https://chat.18f.gov/
