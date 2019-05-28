@@ -257,4 +257,4 @@ All contributions to this project will be released under the CC0-1.0 dedication.
 * Email: [code@gsa.gov](mailto:code@gsa.gov)
 * LinkedIn: [code-gov](https://www.linkedin.com/company/code-gov/)
 
-Jr #opensource-public Slack channel: https://chat.18f.gov/
+Join our #opensource-public Slack channel: https://chat.18f.gov/
