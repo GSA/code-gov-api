@@ -214,7 +214,7 @@ Docker compose lets you recreate a complete environment for the code.gov API. Th
 To stand up a Code.gov API environment execute from the root of the project:
 
 ```bash
-docker-compose up
+docker compose up
 ```
 
 This command will build a new code-gov-api image, download an Elasticsearch image, and will run all containers in the correct order. You will see the output of each container in your terminal.
@@ -257,4 +257,4 @@ All contributions to this project will be released under the CC0-1.0 dedication.
 * Email: [code@gsa.gov](mailto:code@gsa.gov)
 * LinkedIn: [code-gov](https://www.linkedin.com/company/code-gov/)
 
-Join our #opensource-public Slack channel: https://chat.18f.gov/
+Jr #opensource-public Slack channel: https://chat.18f.gov/
