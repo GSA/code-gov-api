@@ -13,7 +13,6 @@ const {
   getStatusData,
   getVersion,
   getAgencyIssues,
-  getDiscoveredReposByAgency,
   getFetchedReposByAgency,
   getRootMessage } = require('../../routes/utils');
 const { sampleAgencyData, agencyEndpointExpectedData } = require('./test_data/agency_data');
@@ -292,4 +291,3 @@ describe('Testing routes/utils.js', () => {
     });
   });
 });
-

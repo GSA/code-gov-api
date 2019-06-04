@@ -569,37 +569,6 @@
           }
         }
       },
-      "/status/{agencyName}/discovered": {
-        "get": {
-          "tags": [
-            "status"
-          ],
-          "summary": "Get a list of repos by agency",
-          "description": "",
-          "produces": [
-            "application/json"
-          ],
-          "parameters": [{
-              "name": "agencyName",
-              "in": "path",
-              "type": "string",
-              "description": "Agency name",
-              "required": true
-            }
-          ],
-          "responses": {
-            "200": {
-              "description": "successful operation",
-              "schema": {
-                "$ref": "#/definitions/Repo"
-              }
-            },
-            "400": {
-              "description": "Invalid"
-            }
-          }
-        }
-      },
       "/version": {
         "get": {
           "tags": [
