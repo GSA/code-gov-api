@@ -40,7 +40,7 @@
     "helmet": "^3.14.0",
     "jsonfile": "^5.0.0",
     "jstransformer-markdown-it": "^2.1.0",
-    "marked": "^0.5.1",
+    "marked": "^0.6.1",
     "moment": "^2.22.0",
     "nan": "^2.11.1",
     "newrelic": "^4.9.0",
