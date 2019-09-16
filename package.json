@@ -25,7 +25,7 @@
     "bodybuilder": "^2.2.15",
     "bunyan": "^1.8.12",
     "bunyan-middleware": "^0.8.0",
-    "cfenv": "^1.1.0",
+    "cfenv": "^1.2.2",
     "compression": "^1.7.3",
     "cookie-parser": "^1.4.3",
     "cors": "^2.8.4",
@@ -40,7 +40,7 @@
     "helmet": "^3.14.0",
     "jsonfile": "^5.0.0",
     "jstransformer-markdown-it": "^2.1.0",
-    "marked": "^0.6.1",
+    "marked": "^0.7.0",
     "moment": "^2.22.0",
     "nan": "^2.11.1",
     "newrelic": "^4.9.0",
@@ -59,7 +59,7 @@
     "mocha": "^5.2.0",
     "mocha-junit-reporter": "^1.18.0",
     "mocha-multi-reporters": "^1.1.7",
-    "nyc": "^13.3.0",
+    "nyc": "^14.1.1",
     "supertest": "^3.3.0"
   },
   "engines": {
