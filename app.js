@@ -11,7 +11,6 @@ const Logger = require("./utils/logger");
 const path = require("path");
 const RateLimit = require('express-rate-limit');
 
-const swaggerUi = require('swagger-ui-express');
 const addRequestId = require('express-request-id')();
 
 /* eslint-disable */
@@ -65,7 +64,6 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.use('/api/docs', swaggerUi.serve, swaggerUi.setup(config.SWAGGER_DOCUMENT));
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 app.use('/static', express.static(path.join(__dirname, 'public')));

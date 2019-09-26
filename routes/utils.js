@@ -295,7 +295,6 @@ function getRootMessage() {
     return {
       title: 'Code.gov API',
       api_version: version,
-      swagger_docs_url: 'https://api.code.gov/docs',
       end_points: [
         '/repos',
         '/repos.json',
