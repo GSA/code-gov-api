@@ -317,6 +317,7 @@ function formatIssues(issues) {
       description: issue.description,
       languages: issues.languages || [],
       projectURL: `https://code.gov/projects/${issue.repoId}`,
+      repository: issue.repository,
       issueURL: issue.url,
       featured: true,
       active: true,
