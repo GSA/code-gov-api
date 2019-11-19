@@ -51,6 +51,7 @@ app.use(function(req, res, next) {
 app.use(helmet.hsts({
   maxAge: config.HSTS_MAX_AGE,
   preload: config.HSTS_PRELOAD,
+  includeSubDomains: config.HSTS_INC_SUBDOMAINS,
   setIf: function() {
     return config.USE_HSTS;
   }
