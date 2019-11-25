@@ -42,19 +42,20 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(cors());
-app.use(helmet());
+
+if (config.USE_HSTS) {
+  app.use(helmet.hsts({
+    maxAge: config.HSTS_MAX_AGE,
+    preload: config.HSTS_PRELOAD,
+    includeSubDomains: config.HSTS_SUBDOMAINS,
+  }));
+}
+
 app.use(function(req, res, next) {
   res.setHeader('Server', '');
   res.setHeader('Via', '');
   next();
 });
-app.use(helmet.hsts({
-  maxAge: config.HSTS_MAX_AGE,
-  preload: config.HSTS_PRELOAD,
-  setIf: function() {
-    return config.USE_HSTS;
-  }
-}));
 
 app.use(addRequestId);
 app.use(compression());
