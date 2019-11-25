@@ -118,7 +118,8 @@ function getConfig(env='development') {
   config.UPDATE_REPO_REGEX = /(1\.0)(\.\d)?/;
   config.USE_HSTS = process.env.USE_HSTS ? process.env.USE_HSTS === 'true' : config.isProd;
   config.HSTS_MAX_AGE = process.env.HSTS_MAX_AGE ? parseInt(process.env.HSTS_MAX_AGE) : 31536000;
-  config.HSTS_PRELOAD = false;
+  config.HSTS_PRELOAD = process.env.HSTS_PRELOAD && process.env.HSTS_PRELOAD === 'true';
+  config.HSTS_SUBDOMAINS = process.env.HSTS_SUBDOMAINS && process.env.HSTS_SUBDOMAINS === 'true';
   config.PORT = getPort(cloudFoundryEnv);
 
   config.GET_REMOTE_METADATA = process.env.GET_REMOTE_METADATA && process.env.GET_REMOTE_METADATA === 'true';
