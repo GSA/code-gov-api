@@ -6,12 +6,13 @@ const request = require('supertest');
 describe('Dashboard', () => {
   let endpoint;
   before(() => {
-    endpoint = '/api/status';
+    endpoint = '/api/';
   });
+
   it('responds with a 200', (done) => {
     request(app)
       .get(endpoint)
-      .expect('Content-Type', /html/)
+      .expect('Content-Type', /application\/json/)
       .expect(200)
       .end(done);
   });
@@ -22,6 +23,7 @@ describe('Status.json', () => {
   before(() => {
     endpoint = '/api/status.json';
   });
+
   it('responds with a 200', (done) => {
     request(app)
       .get(endpoint)

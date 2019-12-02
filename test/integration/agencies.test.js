@@ -37,7 +37,7 @@ describe('/agencies endpoint', () => {
         .get(`${endpoint}/${agency}`)
         .expect(200)
         .expect(res => {
-          res.body.agency.should.be.a('object');
+          res.body.should.be.a('object');
         })
         .end(done);
     });
@@ -48,11 +48,11 @@ describe('/agencies endpoint', () => {
           .get(`${endpoint}/${agency}`)
           .expect(200)
           .expect((res) => {
-            res.body.agency.should.be.a('object');
-            res.body.agency.acronym.should.be.equal(agency);
+            res.body.should.be.a('object');
+            res.body.acronym.should.be.equal(agency);
           })
           .end(done);
       });
     });
   });
-});
+})
