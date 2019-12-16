@@ -31,6 +31,8 @@ jobs:
     environment:
       NODE_ENV: "testing"
       USE_HSTS: false
+      HSTS_PRELOAD: false
+      HSTS_SUBDOMAINS: false
       NEW_RELIC_NO_CONFIG_FILE: true
       NEW_RELIC_ENABLED: false
     steps:
@@ -75,6 +77,8 @@ jobs:
     environment:
       NODE_ENV: "testing"
       USE_HSTS: false
+      HSTS_PRELOAD: false
+      HSTS_SUBDOMAINS: false
       NEW_RELIC_NO_CONFIG_FILE: true
       NEW_RELIC_ENABLED: false
     steps:
@@ -123,6 +127,9 @@ jobs:
       - image: circleci/node:10.17.0
     environment:
       USE_HSTS: false
+      USE_HSTS: false
+      HSTS_PRELOAD: false
+      HSTS_SUBDOMAINS: false
       NEW_RELIC_NO_CONFIG_FILE: true
       NEW_RELIC_ENABLED: false
     steps:
