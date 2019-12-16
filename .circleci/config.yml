@@ -104,12 +104,6 @@ jobs:
           paths:
             - ./node_modules
       - run:
-          name: get-data
-          command: |
-            set -x
-            sleep 45
-            npm run index
-      - run:
           name: run-test
           command: npm run integration-test
       - run:
