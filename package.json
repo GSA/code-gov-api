@@ -12,9 +12,10 @@
     "start": "node app.js | ./node_modules/.bin/bunyan --color",
     "debug": "node --inspect app.js | ./node_modules/.bin/bunyan --color",
     "test": "./node_modules/.bin/nyc mocha --reporter mocha-multi-reporters --reporter-options configFile=test/mocha-multi-reporter-config.json test",
-    "test-console": "./node_modules/.bin/nyc mocha --opts test/mocha.opts.console test",
+    "test-console": "NEW_RELIC_ENABLED=false ./node_modules/.bin/nyc mocha --opts test/mocha.opts.console test",
     "unit-test": "./node_modules/.bin/nyc mocha --reporter mocha-multi-reporters --reporter-options configFile=test/mocha-multi-reporter-config.json test/unit",
     "integration-test": "./node_modules/.bin/nyc mocha --reporter mocha-multi-reporters --reporter-options configFile=test/mocha-multi-reporter-config.json test/integration",
+    "licenses": "license-checker --json --relativeLicensePath --out dependency_licenses.json",
     "lint": "./node_modules/.bin/eslint .",
     "lint-fix": "./node_modules/.bin/eslint --fix ."
   },
@@ -41,6 +42,7 @@
     "helmet": "^3.21.2",
     "jsonfile": "^5.0.0",
     "jstransformer-markdown-it": "^2.1.0",
+    "license-checker": "^25.0.1",
     "marked": "^0.7.0",
     "moment": "^2.22.0",
     "nan": "^2.11.1",
@@ -60,6 +62,7 @@
     "mocha": "^5.2.0",
     "mocha-junit-reporter": "^1.18.0",
     "mocha-multi-reporters": "^1.1.7",
+    "nock": "^10.0.2",
     "nyc": "^14.1.1",
     "supertest": "^3.3.0"
   },

@@ -1,0 +1,17 @@
+{
+  "title": "Code.gov API",
+  "api_version": {
+    "version": "2.6.4",
+    "git-hash": "",
+    "git-repository": "https://github.com/GSA/code-gov-api.git"
+  },
+  "end_points": [
+    "/repos",
+    "/repos.json",
+    "/status.json",
+    "/terms",
+    "/agencies",
+    "/languages",
+    "/version"
+  ]
+}
