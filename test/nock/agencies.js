@@ -181,8 +181,110 @@ const agency_es_query = {
 	}
 };
 
+const status_response = {
+  took: 3,
+  timed_out: false,
+  _shards: { total: 5, successful: 5, skipped: 0, failed: 0 },
+  hits: {
+    "total": 1,
+    "max_score": 1,
+    "hits": [
+      {
+        "_index": "test",
+        "_type": "status",
+        "_id": "01010101",
+        "_score": 1,
+        "_source": {
+          "timestamp": "Fri Dec 13 2019 14:58:54 GMT-0600 (Central Standard Time)",
+          "statuses": {
+            "USDA": {
+              "status": "",
+              "issues": [
+                {
+                  "agency": "Department of Agriculture",
+                  "organization": "OC",
+                  "project_name": "DigitalGov Analytics",
+                  "issues": {
+                    "enhancements": [
+                      {
+                        "keyword": "format",
+                        "dataPath": ".date.created",
+                        "schemaPath": "#/properties/date/properties/created/format",
+                        "params": {
+                          "format": "date"
+                        },
+                        "message": "should match format \"date\""
+                      },
+                      {
+                        "keyword": "format",
+                        "dataPath": ".date.lastModified",
+                        "schemaPath": "#/properties/date/properties/lastModified/format",
+                        "params": {
+                          "format": "date"
+                        },
+                        "message": "should match format \"date\""
+                      },
+                      {
+                        "keyword": "format",
+                        "dataPath": ".date.metadataLastUpdated",
+                        "schemaPath": "#/properties/date/properties/metadataLastUpdated/format",
+                        "params": {
+                          "format": "date"
+                        },
+                        "message": "should match format \"date\""
+                      }
+                    ],
+                    "warnings": [],
+                    "errors": []
+                  }
+                }
+              ],
+              "version": "2.0.0",
+              "metadata": {
+                "agency": {
+                  "name": "Department of Agriculture",
+                  "acronym": "EOP",
+                  "website": "https://www.doa.gov/",
+                  "codeUrl": "https://raw.githubusercontent.com/example/code_json/master/code.json",
+                  "fallback_file": "EOP.json",
+                  "requirements": {
+                    "agencyWidePolicy": null,
+                    "openSourceRequirement": null,
+                    "inventoryRequirement": null,
+                    "schemaFormat": null,
+                    "overallCompliance": 0
+                  },
+                  "complianceDashboard": false
+                }
+              },
+              "wasFallbackUsed": false,
+              "wasRemoteJsonRetrived": true,
+              "wasRemoteJsonParsed": true,
+              "requirements": {
+                "agencyWidePolicy": null,
+                "openSourceRequirement": null,
+                "inventoryRequirement": null,
+                "schemaFormat": null,
+                "overallCompliance": 0
+              },
+              "counts": {
+                "processed": 2001,
+                "duplicates": 0,
+                "total": 2001,
+                "openSource": 2001
+              }
+            }
+          },
+          "statusID": "01010101"
+        }
+      }
+    ]
+  }
+};
+
 module.exports = {
   agencies_es_response,
   agencies_es_query,
-  agency_es_query
+  agency_es_query,
+  status_response
 }
