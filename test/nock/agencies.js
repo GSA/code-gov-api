@@ -13,14 +13,14 @@ const agencies_es_response = {
 		"hits": [{
 			"_index": "terms20191202_153206",
 			"_type": "term",
-			"_id": "ED_agency.acronym",
+			"_id": "SSA_agency.acronym",
 			"_score": 0,
 			"_source": {
-				"term_key": "ED",
-				"term": "ED",
+				"term_key": "SSA",
+				"term": "SSA",
 				"term_type": "agency.acronym",
-				"count": 50,
-				"count_normalized": 0.024330900243309004
+				"count": 131,
+				"count_normalized": 0.06374695863746958
 			}
 		}, {
 			"_index": "terms20191202_153206",
@@ -85,14 +85,14 @@ const agencies_es_response = {
 		}, {
 			"_index": "terms20191202_153206",
 			"_type": "term",
-			"_id": "SSA_agency.acronym",
+			"_id": "ED_agency.acronym",
 			"_score": 0,
 			"_source": {
-				"term_key": "SSA",
-				"term": "SSA",
+				"term_key": "ED",
+				"term": "ED",
 				"term_type": "agency.acronym",
-				"count": 131,
-				"count_normalized": 0.06374695863746958
+				"count": 50,
+				"count_normalized": 0.024330900243309004
 			}
 		}, {
 			"_index": "terms20191202_153206",
