@@ -121,6 +121,10 @@ jobs:
     working_directory: ~/code-gov-api
     docker:
       - image: circleci/node:10.17.0
+    environment:
+      USE_HSTS: false
+      NEW_RELIC_NO_CONFIG_FILE: true
+      NEW_RELIC_ENABLED: false
     steps:
       - checkout
       - restore_cache:
