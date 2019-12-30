@@ -1,0 +1,36 @@
+{
+  "index": "terms",
+  "type": "term",
+  "body": {
+    "query": {
+      "function_score": {
+        "query": {
+          "bool": {
+            "filter": {
+              "bool": {
+                "should": [ 
+                  {
+                    "term": {
+                      "term_type": "agency.acronym"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "functions": [
+          {
+            "field_value_factor": {
+              "field": "count_normalized",
+              "factor": 0.25
+            }
+          }
+        ],
+        "boost_mode": "multiply"
+      }
+    },
+    "size": 10,
+    "from": 0
+  }
+}

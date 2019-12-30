@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/code-gov-api
     docker:
-      - image: circleci/node:10.14.1
+      - image: circleci/node:10.17.0
     steps:
       - checkout
       - restore_cache:
@@ -27,9 +27,14 @@ jobs:
   test:
     working_directory: ~/code-gov-api
     docker:
-      - image: circleci/node:10.14.1
+      - image: circleci/node:10.17.0
     environment:
       NODE_ENV: "testing"
+      USE_HSTS: false
+      HSTS_PRELOAD: false
+      HSTS_SUBDOMAINS: false
+      NEW_RELIC_NO_CONFIG_FILE: true
+      NEW_RELIC_ENABLED: false
     steps:
       - checkout
       - run:
@@ -67,10 +72,15 @@ jobs:
   integration:
     working_directory: ~/code-gov-api
     docker:
-      - image: circleci/node:10.14.1
+      - image: circleci/node:10.17.0
       - image: docker.elastic.co/elasticsearch/elasticsearch:5.6.12
     environment:
       NODE_ENV: "testing"
+      USE_HSTS: false
+      HSTS_PRELOAD: false
+      HSTS_SUBDOMAINS: false
+      NEW_RELIC_NO_CONFIG_FILE: true
+      NEW_RELIC_ENABLED: false
     steps:
       - checkout
       - run:
@@ -94,12 +104,6 @@ jobs:
           paths:
             - ./node_modules
       - run:
-          name: get-data
-          command: |
-            set -x
-            sleep 45
-            npm run index
-      - run:
           name: run-test
           command: npm run integration-test
       - run:
@@ -114,7 +118,14 @@ jobs:
   deploy-staging:
     working_directory: ~/code-gov-api
     docker:
-      - image: circleci/node:10.14.1
+      - image: circleci/node:10.17.0
+    environment:
+      USE_HSTS: false
+      USE_HSTS: false
+      HSTS_PRELOAD: false
+      HSTS_SUBDOMAINS: false
+      NEW_RELIC_NO_CONFIG_FILE: true
+      NEW_RELIC_ENABLED: false
     steps:
       - checkout
       - restore_cache:
@@ -146,7 +157,7 @@ jobs:
   deploy-production:
     working_directory: ~/code-gov-api
     docker:
-      - image: circleci/node:10.14.1
+      - image: circleci/node:10.17.0
     steps:
       - checkout
       - restore_cache:

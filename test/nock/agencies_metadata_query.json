@@ -1,0 +1,7 @@
+{
+	"queryParams": {
+		"term_type": "agency.acronym",
+		"size": 10
+	},
+	"termTypesToSearch": ["name", "agency.name", "agency.acronym", "tags", "languages"]
+}

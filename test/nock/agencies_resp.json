@@ -1,0 +1,74 @@
+{
+	"total": 10,
+	"agencies": [{
+			"acronym": "SSA",
+			"name": "Social Security Administration",
+			"website": "https://www.ssa.gov",
+			"codeUrl": "https://www.ssa.gov/code.json",
+			"numRepos": 131
+		},
+		{
+			"acronym": "NSF",
+			"name": "National Science Foundation",
+			"website": "https://nsf.gov/",
+			"codeUrl": "https://www.nsf.gov/code.json",
+			"numRepos": 32
+		},
+		{
+			"acronym": "DOJ",
+			"name": "Department of Justice",
+			"website": "https://justice.gov",
+			"codeUrl": "https://www.justice.gov/code.json",
+			"numRepos": 55
+		},
+		{
+			"acronym": "HUD",
+			"name": "Department of Housing and Urban Development",
+			"website": "https://www.hud.gov/",
+			"codeUrl": "https://www.hud.gov/code.json",
+			"numRepos": 172
+		},
+		{
+			"acronym": "HHS",
+			"name": "Department of Health and Human Services",
+			"website": "https://hhs.gov",
+			"codeUrl": "https://www.hhs.gov/code.json",
+			"numRepos": 56
+		},
+		{
+			"acronym": "ED",
+			"name": "Department of Education",
+			"website": "https://ed.gov/",
+			"codeUrl": "https://www.ed.gov/code.json",
+			"numRepos": 50
+		},
+		{
+			"acronym": "DOD",
+			"name": "Department of Defense",
+			"website": "https://www.defense.gov/",
+			"codeUrl": "https://www.code.mil/code.json",
+			"numRepos": 17
+		},
+		{
+			"acronym": "USDA",
+			"name": "Department of Agriculture",
+			"website": "https://usda.gov/",
+			"codeUrl": "https://www.usda.gov/code.json",
+			"numRepos": 27
+		},
+		{
+			"acronym": "CFPB",
+			"name": "Consumer Financial Protection Bureau",
+			"website": "https://consumerfinance.gov/",
+			"codeUrl": "https://consumerfinance.gov/code.json",
+			"numRepos": 261
+		},
+		{
+			"acronym": "USAID",
+			"name": "Agency for International Development",
+			"website": "https://usaid.gov/",
+			"codeUrl": "https://www.usaid.gov/code.json",
+			"numRepos": 2
+		}
+	]
+}
