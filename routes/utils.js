@@ -340,16 +340,16 @@ function parseLabels(labels) {
 
   labels.forEach(label => {
     if(label.match(/\[issue-type\]/)){
-      processedLabels.type = label.split(" ")[1];
+      processedLabels.type = label.replace("[issue-type]","");
     }
     if(label.match(/\[skill-level\]/)){
-      processedLabels.skill = label.split(" ")[1];
+      processedLabels.skill = label.replace("[skill-level]","");
     }
     if(label.match(/\[effort\]/)){
-      processedLabels.effort = label.split(" ")[1];
+      processedLabels.effort = label.replace("[effort]","");
     }
     if(label.match(/\[impact\]/)){
-      processedLabels.impact = label.split(" ")[1];
+      processedLabels.impact = label.replace("[impact]","");
     }
   });
 
