@@ -2,6 +2,7 @@ const chai = require('chai');
 const should = chai.should();
 const expect = chai.expect();
 const routes = require('../../routes/routes');
+const routesUtils = require('../../routes/utils');
 const {
   queryReposAndSendResponse,
   getRepoById,
@@ -277,6 +278,31 @@ describe('Testing routes/utils.js', () => {
           result.should.be.a('object');
           result.name.should.be.equal('General Services Administration');
         });
+    });
+  });
+
+  describe('utils - parseLabels', () => {
+    it('should return full string of matched label', () => {
+      const testLabels = [
+        '[effort] small',
+        '[issue-type] good first issue',
+        '[priority] high',
+        '[skill-level] intermediate',
+        'code.gov',
+        'good first issue',
+        'hacktoberfest',
+        'help wanted'
+      ];
+
+      const expectedResults = {
+        effort: ' small',
+        type: ' good first issue',
+        skill: ' intermediate'
+      };
+
+      const results = routesUtils.parseLabels(testLabels);
+
+      results.should.deep.equal(expectedResults);
     });
   });
 
