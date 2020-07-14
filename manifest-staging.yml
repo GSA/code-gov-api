@@ -1,5 +1,5 @@
 applications:
-- name: code-api
+- name: code-api-v2.6.5
   memory: 100M
   instances: 1
   disk_quota: 512M
@@ -14,7 +14,13 @@ applications:
     NODE_ENV: staging
     NEW_RELIC_APP_NAME: code-api-staging
     LOGGER_LEVEL: info
+    USE_HSTS: true
+    HSTS_MAX_AGE: 31536000
+    HSTS_PRELOAD: true
+    HSTS_SUBDOMAINS: true
     GET_REMOTE_METADATA: true
+    GITHUB_API_KEY: not_a_token
+    NEW_RELIC_LICENSE_KEY: not_a_token
     REMOTE_METADATA_LOCATION: https://raw.githubusercontent.com/GSA/code-gov-data/master/agency_metadata.json
     ELASTICSEARCH_SERVICE_NAME: code_gov_elasticsearch
   services:
