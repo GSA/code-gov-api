@@ -41,7 +41,7 @@
     "git-rev": "^0.2.1",
     "helmet": "^3.21.2",
     "jsonfile": "^5.0.0",
-    "license-checker": "^25.0.1",
+    "license-checker": "github:davglass/license-checker#pull/234/head",
     "marked": "^0.7.0",
     "moment": "^2.22.0",
     "nan": "^2.11.1",
