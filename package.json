@@ -22,7 +22,7 @@
   "dependencies": {
     "@code.gov/code-gov-adapter": "^1.1.6",
     "JSONStream": "^1.3.5",
-    "ajv": "^6.5.4",
+    "ajv": "^6.12.3",
     "body-parser": "^1.18.3",
     "bodybuilder": "^2.2.15",
     "bunyan": "^1.8.12",
