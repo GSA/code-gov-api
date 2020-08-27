@@ -25,7 +25,7 @@
     "ajv": "^6.5.4",
     "body-parser": "^1.18.3",
     "bodybuilder": "^2.2.15",
-    "bunyan": "^1.8.12",
+    "bunyan": "^1.8.13",
     "bunyan-middleware": "^0.8.0",
     "cfenv": "^1.2.2",
     "compression": "^1.7.3",
