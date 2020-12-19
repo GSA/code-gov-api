@@ -44,32 +44,16 @@ testable: true
 #   id: Internal team identifier/user name
 #   role: Team member's role; leads should be designated as 'lead'
 team:
-- github: okamanda
-  id: Olivier Kamanda
+- github: jcastle
+  id: Joseph Castle
   role: Lead
- 
 
-- github: AlvandSalehi
-  id: Alvand Salehi
-  role: client (OMB)
-  
-- github: jlow81
-  id: Jason Lowengrub
-  role: team lead
+- github: seanstar12
+  id: Sean Starnes
+  role: Lead
 
-  
-- github: yozlet
-  id: Yoz Grahame
-  role: ATO Support
-
-- github: froi
-  id: Froilan Irizarry
-  role: Developer
-
-  
 # Partners for whom the project is developed
 partners:
-- OMB
 - GSA
 
 # Organizations or individuals who have adopted the project for their own use
@@ -90,7 +74,7 @@ stack:
 - Elasticsearch
 
 # Brief description of the project's outcomes
-impact: The platform will help shape federal agencies software procurement and creation policies
+impact: The platform will help shape federal agencies software development and procurement processes.
 
 # Services used to supply project status information
 # Items:
