@@ -42,7 +42,7 @@
     "helmet": "^3.21.2",
     "jsonfile": "^5.0.0",
     "license-checker": "github:davglass/license-checker#pull/237/head",
-    "marked": "^1.1.1",
+    "marked": "^2.0.0",
     "moment": "^2.22.0",
     "nan": "^2.11.1",
     "newrelic": "^4.13.1",
