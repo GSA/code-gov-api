@@ -47,7 +47,7 @@
     "nan": "^2.11.1",
     "newrelic": "^4.13.1",
     "node-fetch": "^2.2.0",
-    "pug": "^2.0.3",
+    "pug": "^3.0.1",
     "serve-favicon": "^2.5.0",
     "simple-rules-engine": "^1.0.2",
     "sleep": "^5.2.3",
